@@ -86,7 +86,7 @@ ul.check-box li{ display:flex; align-items:center; column-gap:8px; }
 
 /* 라디오 */
 ul.radio-box input[type="radio"] { border:7.5px solid var(--rc-border); background: var(--white); border-radius: 50%; }
-ul.radio-box input[type="radio"]:checked { background:var(--white); border:7.5px solid var(--rc-active); }
+ul.radio-box input[type="radio"]:checked { background:var(--white); border:7.5px solid var(--primary-light); }
 ul.radio-box input[type="radio"]:disabled { border-color: var(--rc-border-inactive); background-color: var(--rc-bg-inactive);  }
 
 /* 체크박스 */
@@ -140,3 +140,4 @@ div.toggle-box input[type="checkbox"]:checked::before { left:auto; right:3px; }
 .upload-label::before { content:''; position: absolute; width:20px; height:20px; right:15px; top:50%; transform: translateY(-50%); background-color: var(--ipt-file); mask-image: var(--ico-file); mask-repeat:no-repeat; mask-size:19px auto; --webkit-mask-iamge:var(--ico-file); --webkit-mask-repeat:no-repeat; --webkit-mask-size:19px auto; }
 .upload-text.up + .upload-label::before { background-color: var(--active); }
 .upload { display:none; }
+

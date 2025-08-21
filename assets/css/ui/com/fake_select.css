@@ -95,6 +95,7 @@
 /* */
 .se-select[data-stove=select] {
     position: relative;
+    height: 68px;
 }
 
 .se-select[data-stove=select] div.stove-dim {
@@ -141,7 +142,7 @@
 }
 
 .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options {
-    padding: 0 15px;
+    padding: 0 24px;
 }
 
 .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option {
@@ -149,8 +150,7 @@
     min-height: 50px;
     margin-bottom: 10px;
     border: none;
-    border-radius: 10px;
-    margin: 0;
+    border-radius: 4px;
     padding: 15px 20px;
     box-sizing: border-box;
     border:1px solid var(--fk-se-inactive);

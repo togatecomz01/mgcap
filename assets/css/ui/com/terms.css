@@ -7,6 +7,7 @@ ul.check-box.terms li { position: relative; }
 ul.check-box.terms li input[type="checkbox"] { position: absolute; top:50%; left:30px; transform: translateY(-50%); border-radius: 50%; }
 ul.check-box.terms li input[type="checkbox"] + label { padding:21px 30px 22px 75px; width:100%; border:1px solid var(--color-d); border-bottom-width:0; }
 ul.check-box.terms li:last-child input[type="checkbox"] + label { border-bottom-width:1px; }
+
 /* 전체 동의 */
 ul.check-box.terms li.check-all-area { margin-bottom:32px; border:0; }
 ul.check-box.terms li.check-all-area input[type="checkbox"] + label { padding:23px 30px 22px 75px; border-radius:0; background:#F2F5F8; border:0; font-weight:var( --font-w-m);  }

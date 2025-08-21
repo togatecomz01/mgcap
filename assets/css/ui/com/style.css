@@ -30,10 +30,11 @@ body {
     --dim: rgba(0, 0, 0, 0.5);
     --white-dim: rgba(255, 255, 255, 0.5);
 
-    --active: #41C7F4;
+    --active: #2392FF;
 
     --red: #FF0000;
     --white: #FFFFFF;
+
 
     /** 기본 색상 **/
     --primary: #0072BC;
@@ -128,4 +129,3 @@ body {
     --tbl-caption: var(--color-9);
 
 }
-
