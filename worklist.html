@@ -1,421 +1,2689 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Mobile UX/UI worklist</title>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Script-Type" content="text/javascript">
-    <meta http-equiv="Content-Style-Type" content="text/css">
-    <meta name="keywords" content="Mobile UX/UI" />
-	<meta name="description" content="" />
-    <meta name="viewport" content="width=device-width">
-    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>MGƒ≥««≈ª-web worklist</title>
+        <meta charset="euc-kr" />
+        <meta http-equiv="Content-Script-Type" content="text/javascript" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+        <meta name="keywords" content="Mobile UX/UI" />
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
 
-	<!-- ÏùºÎ∞ò Favicon ÏÑ§Ï†ï -->
-	<link rel="icon" type="image/png" href="./assets/icons/favicon-96x96.png" sizes="96x96" />
-	<link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg" />
-	<link rel="shortcut icon" href="./assets/icons/favicon.ico" />
-	<!-- Ïï†Ìîå ÌÑ∞Ïπò ÏïÑÏù¥ÏΩò (iOS) -->
-	<link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png" />
-	<!-- Ïõπ Ïï± Îß§ÎãàÌéòÏä§Ìä∏ (PWA) -->
-	<link rel="manifest" href="./assets/icons/site.webmanifest" />
+        <!-- ¿œπ› Favicon º≥¡§ -->
+        <link rel="icon" type="image/png" href="./assets/icons/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg" />
+        <link rel="shortcut icon" href="./assets/icons/favicon.ico" />
+        <!-- æ÷«√ ≈Õƒ° æ∆¿Ãƒ‹ (iOS) -->
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png" />
+        <!-- ¿• æ€ ∏≈¥œ∆‰Ω∫∆Æ (PWA) -->
+        <link rel="manifest" href="./assets/icons/site.webmanifest" />
 
-	<link rel="stylesheet" type="text/css" href="./guide/css/pub-worklist.css"/>
-    <script src="./guide/js/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="./guide/js/jquery.form.min.js"></script>
-	<style>
-	.header .etc { color:yellowgreen; }
-	.cont table {
-		display: none;
-	}
+        <link rel="stylesheet" type="text/css" href="./guide/css/pub-worklist.css" />
+        <script src="./guide/js/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="./guide/js/jquery.form.min.js"></script>
+        <style>
+            .header .etc {
+                color: yellowgreen;
+            }
+            .cont table {
+                display: none;
+            }
+            .cont .tit {
+                cursor: pointer;
+            }
+            .cont .tit.on ~ table {
+                display: table;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper pc">
+            <section class="ifr_view">
+                <iframe id="iframe" width="100%" height="100%" src="./button.html"></iframe>
+            </section>
+            <section class="container">
+                <div class="header">
+                    <h1>Mobile UX/UI</h1>
+                    <ul class="stateArea">
+                        <li><strong>¡¯«‡ªÛ≈¬ :</strong></li>
+                        <li class="typeCommon"><span>∞¯≈Î</span></li>
+                        <li class="typeIng"><span>¡¯«‡ ¡ﬂ</span></li>
+                        <li class="typeComp"><span>øœ∑·</span></li>
+                        <li class="typeNon"><span>ªË¡¶</span></li>
+                    </ul>
+                    <ul class="stateCnt">
+                        <li>√— <span id="totCnt"></span>∞≥</li>
+                        <li>¿€æ˜¡ﬂ <span id="progressCnt"></span>∞≥</li>
+                        <li>øœ∑· <span id="compCnt"></span>∞≥</li>
+                    </ul>
+                    <ul class="etc">
+                        <li>≈◊¿Ã∫Ì ø≠ ¡¯«‡ ≈¨∑°Ω∫(trø° ¿˚øÎ) : øœ∑· [comp], ∫Ò»∞º∫»≠ [non], øœ∑· [ing] <br />** ui-util.css, ui-utill.js ∞¯≈Î¿∏∑Œ µÈæÓ∞©¥œ¥Ÿ.</li>
+                    </ul>
+                </div>
 
-	.cont .tit {
-		cursor: pointer;
-	}
+                <div class="cont guide">
+                    <h3 class="tit on">example</h3>
+                    <table>
+                        <summary></summary>
+                        <caption></caption>
+                        <colgroup>
+                            <col width="8%" />
+                            <col width="8%" />
+                            <col width="20%" />
+                            <col width="6%" />
+                            <col width="6%" />
+                            <col width="10%" />
+                            <col width="8%" />
+                            <col width="4%" />
+                            <col width="6%" />
+                            <col width="24%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">depth1</th>
+                                <th scope="col">depth2</th>
+                                <th scope="col">depth3</th>
+                                <th scope="col">depth4</th>
+                                <th scope="col">depth5</th>
+                                <th scope="col" class="fileName">»≠∏ÈID</th>
+                                <th scope="col">«¸≈¬</th>
+                                <th scope="col">¥„¥Á</th>
+                                <th scope="col">ªÛ≈¬</th>
+                                <th scope="col">∫Ò∞Ì</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="comp">
+                                <td>[¿¸√º] ∑π¿Ãæ∆øÙ</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/layout.html" target="_blank">layout.html</a></td>
+                                <td></td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>
+                                    [ªÁøÎ º“Ω∫] :: header.js, popup.js<br /><br /><b>*Ω∫≈©∏≥∆Æ ≈¨∑°Ω∫ :: <br />- headerOn</b>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td>∆˘∆Æ</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="" target="_blank">font.html</a></td>
+                                <td></td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>[ªÁøÎ º“Ω∫] :: font.css</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-	.cont .tit.on ~ table {
-		display: table;
-	}
-	</style>
-</head>
-<body>
-	<div class="wrapper pc">
-		<section class="ifr_view">
-			<iframe id="iframe" width="100%" height="100%" src="./button.html"></iframe>
-		</section>
-		<section class="container">
+                <div class="cont page">
+                    <h3 class="tit on">∏ﬁ¿Œ</h3>
+                    <table>
+                        <summary></summary>
+                        <caption></caption>
+                        <colgroup>
+                            <col width="8%" />
+                            <col width="8%" />
+                            <col width="20%" />
+                            <col width="6%" />
+                            <col width="6%" />
+                            <col width="10%" />
+                            <col width="8%" />
+                            <col width="4%" />
+                            <col width="6%" />
+                            <col width="24%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">depth1</th>
+                                <th scope="col">depth2</th>
+                                <th scope="col">depth3</th>
+                                <th scope="col">depth4</th>
+                                <th scope="col">depth5</th>
+                                <th scope="col" class="fileName">»≠∏ÈID</th>
+                                <th scope="col">«¸≈¬</th>
+                                <th scope="col">¥„¥Á</th>
+                                <th scope="col">ªÛ≈¬</th>
+                                <th scope="col">∫Ò∞Ì</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="">
+                                <td>∏ﬁ¿Œ</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆Àæ˜(∑π¿ÃæÓ)</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>ƒ¡≈Ÿ√˜</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>πË≥  ƒ¡≈Ÿ√˜</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-			<div class="header">
-				<h1>Mobile UX/UI</h1>
-				<ul class="stateArea">
-					<li><strong>ÏßÑÌñâÏÉÅÌÖå :</strong></li>
-					<li class="typeCommon"><span>Í≥µÌÜµ</span></li>
-					<li class="typeIng"><span>ÏßÑÌñâ Ï§ë</span></li>
-					<li class="typeComp"><span>ÏôÑÎ£å</span></li>
-					<li class="typeNon"><span>ÏÇ≠Ï†ú</span></li>
-				</ul>
-				<ul class="stateCnt">
-					<li>Ï¥ù <span id="totCnt"></span>Í∞ú</li>
-					<li>ÏûëÏóÖÏ§ë <span id="progressCnt"></span>Í∞ú</li>
-					<li>ÏôÑÎ£å <span id="compCnt"></span>Í∞ú</li>
-				</ul>
-				<ul class="etc">
-					<li>ÌÖåÏù¥Î∏î Ïó¥ ÏßÑÌñâ ÌÅ¥ÎûòÏä§(trÏóê Ï†ÅÏö©) : ÏôÑÎ£å [comp], ÎπÑÌôúÏÑ±Ìôî [non], ÏôÑÎ£å [ing] <br>** ui-util.css, ui-utill.js Í≥µÌÜµÏúºÎ°ú Îì§Ïñ¥Í∞ëÎãàÎã§.</li>
-				</ul>
-			</div>
+                <div class="cont page">
+                    <h3 class="tit on">±›¿∂ªÛ«∞</h3>
+                    <table>
+                        <summary></summary>
+                        <caption></caption>
+                        <colgroup>
+                            <col width="8%" />
+                            <col width="8%" />
+                            <col width="20%" />
+                            <col width="6%" />
+                            <col width="6%" />
+                            <col width="10%" />
+                            <col width="8%" />
+                            <col width="4%" />
+                            <col width="6%" />
+                            <col width="24%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">depth1</th>
+                                <th scope="col">depth2</th>
+                                <th scope="col">depth3</th>
+                                <th scope="col">depth4</th>
+                                <th scope="col">depth5</th>
+                                <th scope="col" class="fileName">»≠∏ÈID</th>
+                                <th scope="col">«¸≈¬</th>
+                                <th scope="col">¥„¥Á</th>
+                                <th scope="col">ªÛ≈¬</th>
+                                <th scope="col">∫Ò∞Ì</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="">
+                                <td>±›¿∂ªÛ«∞</td>
+                                <td>¿œπ›∏ÆΩ∫</td>
+                                <td>∞¯¿€±‚∞Ë</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td></td>
+                                <td>ªÍæ˜¿Á π◊ ¡ﬂ∞ÌªÛøÎ¬˜</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>≈«∏ﬁ¥∫</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>'¿œπ›∏ÆΩ∫' »≠∏È ≥ªø°º≠ ≥ªøÎ ¿¸»Ø</td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td></td>
+                                <td>∆Øºˆ¿Â∫Ò</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>≈«∏ﬁ¥∫</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>'¿œπ›∏ÆΩ∫' »≠∏È ≥ªø°º≠ ≥ªøÎ ¿¸»Ø</td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td></td>
+                                <td>¿«∑·±‚±‚</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>≈«∏ﬁ¥∫</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>'¿œπ›∏ÆΩ∫' »≠∏È ≥ªø°º≠ ≥ªøÎ ¿¸»Ø</td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td>ø¿≈‰∏ÆΩ∫</td>
+                                <td>[«ŸΩ…º≥∏Ìº≠ ¥ŸøÓ∑ŒµÂ] πˆ∆∞</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∏µ≈©</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>≈¨∏Ø Ω√, PDF ∆ƒ¿œ ¥ŸøÓ∑ŒµÂ</td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td>«“∫Œ±›¿∂</td>
+                                <td>∞¯¿€±‚∞Ë</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>'«“∫Œ±›¿∂' »≠∏È ≥ªø°º≠ ≥ªøÎ ¿¸»Ø</td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td></td>
+                                <td>ªÍæ˜¿Á π◊ ¡ﬂ∞ÌªÛøÎ¬˜</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>≈«∏ﬁ¥∫</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>'«“∫Œ±›¿∂' »≠∏È ≥ªø°º≠ ≥ªøÎ ¿¸»Ø</td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td></td>
+                                <td>∆Øºˆ¿Â∫Ò</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>≈«∏ﬁ¥∫</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>'«“∫Œ±›¿∂' »≠∏È ≥ªø°º≠ ≥ªøÎ ¿¸»Ø</td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td></td>
+                                <td>¿«∑·±‚±‚</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>≈«∏ﬁ¥∫</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>'«“∫Œ±›¿∂' »≠∏È ≥ªø°º≠ ≥ªøÎ ¿¸»Ø</td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td></td>
+                                <td>±‚∞¯∑· «“∫Œ</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>≈«∏ﬁ¥∫</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>'«“∫Œ±›¿∂' »≠∏È ≥ªø°º≠ ≥ªøÎ ¿¸»Ø</td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td></td>
+                                <td>ø¿≈‰«“∫Œ</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>≈«∏ﬁ¥∫</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>'«“∫Œ±›¿∂' »≠∏È ≥ªø°º≠ ≥ªøÎ ¿¸»Ø</td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td>±‚æ˜¿œπ›¥Î√‚</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td>¡÷≈√±›¿∂</td>
+                                <td>ªÁæ˜¿⁄¥„∫∏¥Î√‚</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td></td>
+                                <td>ªÁæ˜¿⁄¥Î√‚√§±« ¥„∫∏¥Î√‚</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>≈«∏ﬁ¥∫</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>'¡÷≈√±›¿∂' »≠∏È ≥ªø°º≠ ≥ªøÎ ¿¸»Ø</td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td>Ω∫≈π∑–</td>
+                                <td>¡÷Ωƒ∏≈¿‘¿⁄±›¥Î√‚/¥Î»Ø¥Î√‚</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td></td>
+                                <td>[Ω∫≈π∑– πŸ∑Œ∞°±‚] πˆ∆∞</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∏µ≈©</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>'MGƒ≥««≈ª Ω∫≈π∑–(https://www.mgcap.co.kr/jsp/stockloan/main/main.jsp)' ªÁ¿Ã∆Æ∑Œ ¿Ãµø</td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td></td>
+                                <td>[Ω∫≈π∑– ∞Ë¡¬(¥„∫∏)øÓøÎ ±‘ƒ¢ ¥ŸøÓπﬁ±‚] πˆ∆∞</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∏µ≈©</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>≈¨∏Ø Ω√, PDF ∆ƒ¿œ ¥ŸøÓ∑ŒµÂ</td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td>±‚≈∏±›¿∂ªÛ«∞</td>
+                                <td>∫Œ«∞¥Î∏Æ¡° ±∏∏≈¿⁄±› ¥Î√‚</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td></td>
+                                <td>ø°≥ ¡ˆ ±›¿∂</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>≈«∏ﬁ¥∫</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>'±‚≈∏±›¿∂ªÛ«∞' »≠∏È ≥ªø°º≠ ≥ªøÎ ¿¸»Ø</td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td></td>
+                                <td>∆—≈‰∏µ</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>≈«∏ﬁ¥∫</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>'±‚≈∏±›¿∂ªÛ«∞' »≠∏È ≥ªø°º≠ ≥ªøÎ ¿¸»Ø</td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td>¿Â±‚∑ª≈Õƒ´</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-			<div class="cont guide">
-				<h3 class="tit on">example</h3>
-				<table>
-					<summary></summary>
-					<caption></caption>
-					<colgroup>
-						<col width="8%"><col width="8%"><col width="8%"><col width="6%">
-						<col width="6%"><col width="10%"><col width="8%"><col width="4%">
-						<col width="6%"><col width="*">
-					</colgroup>
-					<thead>
-						<tr>
-							<th scope="col">depth1</th>
-							<th scope="col">depth2</th>
-							<th scope="col">depth3</th>
-							<th scope="col">depth4</th>
-							<th scope="col">depth5</th>
-							<th scope="col" class="fileName">ÌôîÎ©¥ID</th>
-							<th scope="col">ÌòïÌÉú</th>
-							<th scope="col">Îã¥Îãπ</th>
-							<th scope="col">ÏÉÅÌÉú</th>
-							<th scope="col">ÎπÑÍ≥†</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class="comp">
-							<td>[Ï†ÑÏ≤¥] Î†àÏù¥ÏïÑÏõÉ</td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td class="fileName"><a href="./views/common/layout.html" target="_blank">layout.html</a></td>
-							<td></td>
-							<td></td>
-							<td class="state"></td>
-							<td>[ÏÇ¨Ïö© ÏÜåÏä§] :: header.js, popup.js<br><br><b>*Ïä§ÌÅ¨Î¶ΩÌä∏ ÌÅ¥ÎûòÏä§ :: <br>- headerOn</b></td>
-						</tr>
-						<tr class="">
-							<td>Ìè∞Ìä∏</td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td class="fileName"><a href="" target="_blank">font.html</a></td>
-							<td></td>
-							<td></td>
-							<td class="state"></td>
-							<td>[ÏÇ¨Ïö© ÏÜåÏä§] :: font.css</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
+                <div class="cont page">
+                    <h3 class="tit on">ø¬∂Û¿Œº≠∫ÒΩ∫ (only PC)</h3>
+                    <table>
+                        <summary></summary>
+                        <caption></caption>
+                        <colgroup>
+                            <col width="8%" />
+                            <col width="8%" />
+                            <col width="20%" />
+                            <col width="6%" />
+                            <col width="6%" />
+                            <col width="10%" />
+                            <col width="8%" />
+                            <col width="4%" />
+                            <col width="6%" />
+                            <col width="24%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">depth1</th>
+                                <th scope="col">depth2</th>
+                                <th scope="col">depth3</th>
+                                <th scope="col">depth4</th>
+                                <th scope="col">depth5</th>
+                                <th scope="col" class="fileName">»≠∏ÈID</th>
+                                <th scope="col">«¸≈¬</th>
+                                <th scope="col">¥„¥Á</th>
+                                <th scope="col">ªÛ≈¬</th>
+                                <th scope="col">∫Ò∞Ì</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="">
+                                <td>ø¬∂Û¿Œº≠∫ÒΩ∫</td>
+                                <td>¿ÃøÎ«ˆ»≤¡∂»∏</td>
+                                <td>ªÛ«∞¿ÃøÎ≥ªø™</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td></td>
+                                <td>≥≥¿‘≥ªø™</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td></td>
+                                <td>ªÛ»Ø¿œ¡§ ¡∂»∏</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td></td>
+                                <td>∏∏±‚øπ¡§ π◊ ∞·∞˙¡∂»∏</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td>√ª±∏¡§∫∏¡∂»∏</td>
+                                <td>√ª±∏≥ªø™¡∂»∏</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td></td>
+                                <td>ø¨√º≥ªø™¡∂»∏</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td></td>
+                                <td>√ª±∏¡§∫∏∫Ø∞Ê</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td></td>
+                                <td>¿⁄µø¬˜ºº¡∂»∏</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td></td>
+                                <td>π¸ƒ¢±›¡∂»∏</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td>√§±«∞¸∏Æ≈Î¡ˆ«ˆ»≤¡∂»∏</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td>º“∏ÍΩ√»ø øœº∫ø©∫Œ¡∂»∏</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td>Ω≈√ª∞¸∏Æ</td>
+                                <td>¡ﬂµµªÛ»Ø ¡∂»∏/Ω≈√ª</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td></td>
+                                <td>ø¿≈‰∏ÆΩ∫∏∏±‚øπ¡§√≥∏Æ</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td>º≠∑˘πﬂ±ﬁ</td>
+                                <td>±›¿∂∞≈∑°»Æ¿Œº≠</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td></td>
+                                <td>∏∏±‚æ»≥ª¿Â</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td></td>
+                                <td>¡ﬂµµªÛ»Øøœ≥≥¡ı∏Ìº≠</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td></td>
+                                <td>ø¨√ºøœ≥≥»Æ¿Œº≠</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td></td>
+                                <td>æÁµµ»Æ¿Œº≠</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td></td>
+                                <td>¥„∫∏±««ÿ¡ˆΩ≈√ª</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td></td>
+                                <td>øµºˆ¡ı ¡∂»∏</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td>ø¬∂Û¿Œ º≠∑˘¡¶√‚</td>
+                                <td>∫ª¿Œ¿Œ¡ı</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td></td>
+                                <td>¡¶√‚ º≠∑˘ æ˜∑ŒµÂ</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td></td>
+                                <td>¡¶√‚ øœ∑·</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td>¡¶»ﬁæ‡¡§</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td>π˝¿Œ∞Ëæ‡æ‡¡§</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-			<div class="cont page">
-				<h3 class="tit on">common</h3>
-				<table>
-					<summary></summary>
-					<caption></caption>
-					<colgroup>
-						<col width="8%"><col width="8%"><col width="8%"><col width="6%">
-						<col width="6%"><col width="10%"><col width="8%"><col width="4%">
-						<col width="6%"><col width="*">
-					</colgroup>
-					<thead>
-						<tr>
-							<th scope="col">depth1</th>
-							<th scope="col">depth2</th>
-							<th scope="col">depth3</th>
-							<th scope="col">depth4</th>
-							<th scope="col">depth5</th>
-							<th scope="col" class="fileName">ÌôîÎ©¥ID</th>
-							<th scope="col">ÌòïÌÉú</th>
-							<th scope="col">Îã¥Îãπ</th>
-							<th scope="col">ÏÉÅÌÉú</th>
-							<th scope="col">ÎπÑÍ≥†</th>
-						</tr>
-					</thead>
-					<tbody>
-						
-						<tr class="comp">
-							<td>Ìó§Îçî</td>
-							<td>type.1</td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td class="fileName"><a href="./views/common/header_1.html" target="_blank">header_1.html</a></td>
-							<td></td>
-							<td></td>
-							<td class="state"></td>
-							<td>[ÏÇ¨Ïö© ÏÜåÏä§] :: header.js, popup.js, inc_header_1.html<br><br><b>*Ïä§ÌÅ¨Î¶ΩÌä∏ ÌÅ¥ÎûòÏä§ :: <br>- headerOn, onclick</b></td>
-						</tr>
-						<tr class="ing">
-							<td>Ìó§Îçî</td>
-							<td>type.2</td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td class="fileName"><a href="./views/common/header_2.html" target="_blank">header_2.html</a></td>
-							<td></td>
-							<td></td>
-							<td class="state"></td>
-							<td>[ÏÇ¨Ïö© ÏÜåÏä§] :: </td>
-						</tr>
-						<tr class="comp">
-							<td>ÌåùÏóÖ</td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td class="fileName"><a href="./views/common/popup.html" target="_blank">popup.html</a></td>
-							<td></td>
-							<td></td>
-							<td class="state"></td>
-							<td>[ÏÇ¨Ïö© ÏÜåÏä§] :: popup.js<br><br><b>*Ïä§ÌÅ¨Î¶ΩÌä∏ ÌÅ¥ÎûòÏä§ :: <br>- onclick</b></td>
-						</tr>
-						<tr class="comp">
-							<td>ÌåùÏóÖ</td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td class="fileName"><a href="./views/common/fake_select.html" target="_blank">fake_select.html</a></td>
-							<td></td>
-							<td></td>
-							<td class="state"></td>
-							<td>[ÏÇ¨Ïö© ÏÜåÏä§] :: select.css, select.js<br/><br><br>- Ïª§Ïä§ÌÖÄ ÏÖÄÎ†âÌä∏</td>
-						</tr>
-						<tr class="comp">
-							<td>Ïù∏Ìíã</td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td class="fileName"><a href="./views/common/input.html" target="_blank">input.html</a></td>
-							<td></td>
-							<td></td>
-							<td class="state"></td>
-							<td>[ÏÇ¨Ïö© ÏÜåÏä§] :: input.css, input.js</td>
-						</tr>
-						<tr class="ing">
-							<td>Îç∞Ïù¥ÌÑ∞ÌîºÏª§</td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td class="fileName"><a href="./views/common/datepicker.html" target="_blank">datepicker.html</a></td>
-							<td></td>
-							<td></td>
-							<td class="state"></td>
-							<td>[ÏÇ¨Ïö© ÏÜåÏä§] :: datepicker.css, datepicker.js</td>
-						</tr>
-						<tr class="comp">
-							<td>Î≤ÑÌäº</td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td class="fileName"><a href="./views/common/button.html" target="_blank">button.html</a></td>
-							<td></td>
-							<td></td>
-							<td class="state"></td>
-							<td>[ÏÇ¨Ïö© ÏÜåÏä§] :: button.css</td>
-						</tr>
-						<tr class="comp">
-							<td>ÏïΩÍ¥Ä</td>
-							<td>Type.1</td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td class="fileName"><a href="./views/common/terms.html" target="_blank">terms.html</a></td>
-							<td></td>
-							<td></td>
-							<td class="state"></td>
-							<td>[ÏÇ¨Ïö© ÏÜåÏä§] :: terms.css<br><br><b>** Í∞úÎ∞úÏûêÏóêÍ≤å ÎìúÎ¶¥ ÎïåÎäî terms.js Î∞è html ÎîîÏä§ÌÅ¨Î¶ΩÏÖò ÎπºÍ≥† Ï†ÑÎã¨Ìï¥Ï£ºÏÑ∏Ïöî.</b></td>
-						</tr>
-						<tr class="comp">
-							<td>ÏïΩÍ¥Ä</td>
-							<td>Type.2</td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td class="fileName"><a href="./views/common/terms_2.html" target="_blank">terms_2.html</a></td>
-							<td></td>
-							<td></td>
-							<td class="state"></td>
-							<td>[ÏÇ¨Ïö© ÏÜåÏä§] :: terms_2.css<br><br><b>** Í∞úÎ∞úÏûêÏóêÍ≤å ÎìúÎ¶¥ ÎïåÎäî terms.js Î∞è html ÎîîÏä§ÌÅ¨Î¶ΩÏÖò ÎπºÍ≥† Ï†ÑÎã¨Ìï¥Ï£ºÏÑ∏Ïöî.</b></td>
-						</tr>
-						<tr class="ing">
-							<td>ÌÖåÏù¥Î∏î</td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td class="fileName"><a href="./views/common/table.html" target="_blank">table.html</a></td>
-							<td></td>
-							<td></td>
-							<td class="state"></td>
-							<td>[ÏÇ¨Ïö© ÏÜåÏä§] :: table.css</td>
-						</tr>
-						<tr class="comp">
-							<td>ÏïÑÏΩîÎîîÏñ∏</td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td class="fileName"><a href="./views/common/accordion.html" target="_blank">accordion.html</a></td>
-							<td></td>
-							<td></td>
-							<td class="state"></td>
-							<td>[ÏÇ¨Ïö© ÏÜåÏä§] :: accordion.css, accordion.js<b><br><br>*Ïä§ÌÅ¨Î¶ΩÌä∏ ÌÅ¥ÎûòÏä§ :: <br>- accordionToggle</b></td>
-						</tr>
-					
-						<tr class="comp">
-							<td>ÌÉ≠</td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td class="fileName"><a href="./views/common/tab.html" target="_blank">tab.html</a></td>
-							<td></td>
-							<td></td>
-							<td class="state"></td>
-							<td>[ÏÇ¨Ïö© ÏÜåÏä§] :: tab.css, tab.js<b><br><br>*Ïä§ÌÅ¨Î¶ΩÌä∏ ÌÅ¥ÎûòÏä§ :: <br>- jsTab, nestedJsTab</b></td>
-						</tr>
-						
-					</tbody>
-				</table>
-			</div>
-		</section>
-	</div>
+                <div class="cont page">
+                    <h3 class="tit on">∞Ì∞¥ºæ≈Õ</h3>
+                    <table>
+                        <summary></summary>
+                        <caption></caption>
+                        <colgroup>
+                            <col width="8%" />
+                            <col width="8%" />
+                            <col width="20%" />
+                            <col width="6%" />
+                            <col width="6%" />
+                            <col width="10%" />
+                            <col width="8%" />
+                            <col width="4%" />
+                            <col width="6%" />
+                            <col width="24%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">depth1</th>
+                                <th scope="col">depth2</th>
+                                <th scope="col">depth3</th>
+                                <th scope="col">depth4</th>
+                                <th scope="col">depth5</th>
+                                <th scope="col" class="fileName">»≠∏ÈID</th>
+                                <th scope="col">«¸≈¬</th>
+                                <th scope="col">¥„¥Á</th>
+                                <th scope="col">ªÛ≈¬</th>
+                                <th scope="col">∫Ò∞Ì</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>∞Ì∞¥ºæ≈Õ</td>
+                                <td>∞¯¡ˆªÁ«◊</td>
+                                <td>∏Ò∑œ(List)</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>ªÛºº(View)</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>¿⁄¡÷«œ¥¬ ¡˙πÆ</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>º≠Ωƒ/æ‡∞¸ ¡ˆ∑·Ω«</td>
+                                <td>∏Ò∑œ(List)</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>±‚¡∏ °Æ±›¿∂º“∫Ò¿⁄∆˜≈– &gt; ±›¿∂º“∫Ò¿⁄∫∏»£ øÏºˆªÁ∑  &gt; π´∑·º≠Ωƒº≠∫ÒΩ∫°Ø ¿⁄∑· ¿Ã¿¸«œø© ≈Î«’ « ø‰</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>ªÛºº(View)</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>[¥ŸøÓ∑ŒµÂ] πˆ∆∞</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∏µ≈©</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>∞¢ º≠Ωƒ/æ‡∞¸ ∞‘Ω√π∞ø° æ˜∑ŒµÂ µ» πÆº≠ ¥ŸøÓ∑ŒµÂ</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>±›¿∂∞ËªÍ±‚</td>
+                                <td>ø¿≈‰∏ÆΩ∫</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>¿œπ›∏ÆΩ∫</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>≈«∏ﬁ¥∫</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>«“∫Œ</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>≈«∏ﬁ¥∫</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>[ªÛ¥„Ω≈√ª«œ±‚] πˆ∆∞</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∏µ≈©</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>∞¯∞≥∏≈∞¢ ¡§∫∏</td>
+                                <td>∏Ò∑œ(List)</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>∏ﬁ¥∫∏Ì ∫Ø∞Ê(AS-IS °Æ∞¯∞≥∏≈∞¢°Ø)</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>ªÛºº(View)</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>ø¯∞›¡ˆø¯ º≠∫ÒΩ∫</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∏µ≈©</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>∏Æ∏∆Æƒ› ø¯∞›¡ˆø¯(https://113366.com/mgcapital) ∏µ≈©∑Œ ¿Ãµø</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>πÊπÆ∆«∏≈¿Œ∑¬ Ω≈ø¯¡∂»∏</td>
+                                <td>¡∂»∏/∞·∞˙</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>∏¡˝¿Œ ¡∂»∏</td>
+                                <td>[¿∫«‡ø¨«’»∏] ¥Î√‚º∫ ªÛ«∞ ∏¡˝¿Œ ¡∂»∏ πŸ∑Œ∞°±‚ πˆ∆∞</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∏µ≈©</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>±‚¡∏ °Æ∞Ì∞¥ºæ≈Õ &gt; πÊπÆ∆«∏≈¿Œ∑¬ Ω≈ø¯¡∂»∏°Ø ∆‰¿Ã¡ˆø° ¿÷¥¯ «◊∏Ò¿ª ∫∞µµ¿« ∆‰¿Ã¡ˆ∑Œ ∫–∏Æ</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>∏¡˝¿Œ ¿”¡˜ø¯ ¡∂»∏</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>∆‰¿Ã¡ˆ ≥ª ∏µ≈© ¡∏¿Á</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>√§±«√ﬂΩ…¥Á¥Á¿⁄¡∂»∏</td>
+                                <td>¡∂»∏/∞·∞˙</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-	<script>
-		$(document).ready(function () {
-			/*---------------------------------------------
+                <div class="cont page">
+                    <h3 class="tit on">±›¿∂º“∫Ò¿⁄∆˜≈–</h3>
+                    <table>
+                        <summary></summary>
+                        <caption></caption>
+                        <colgroup>
+                            <col width="8%" />
+                            <col width="8%" />
+                            <col width="20%" />
+                            <col width="6%" />
+                            <col width="6%" />
+                            <col width="10%" />
+                            <col width="8%" />
+                            <col width="4%" />
+                            <col width="6%" />
+                            <col width="24%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">depth1</th>
+                                <th scope="col">depth2</th>
+                                <th scope="col">depth3</th>
+                                <th scope="col">depth4</th>
+                                <th scope="col">depth5</th>
+                                <th scope="col" class="fileName">»≠∏ÈID</th>
+                                <th scope="col">«¸≈¬</th>
+                                <th scope="col">¥„¥Á</th>
+                                <th scope="col">ªÛ≈¬</th>
+                                <th scope="col">∫Ò∞Ì</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>±›¿∂º“∫Ò¿⁄∆˜≈–</td>
+                                <td>±›¿∂º“∫Ò¿⁄∫∏»£√º∞Ë</td>
+                                <td>±›¿∂º“∫Ò¿⁄∫∏»£«ˆ¿Â</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>±›¿∂º“∫Ò¿⁄∫∏»£¡∂¡˜</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>ªÛ«∞∞≥πﬂ«¡∑ŒººΩ∫</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>±›¿∂ªÛ«∞ ∆«∏≈ººƒ¢</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>±›¿∂º“∫Ò¿⁄±«∏Æ¡¶µµ</td>
+                                <td>∞Ì∞¥±«∏Æ æ»≥ªπÆ</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>∆‰¿Ã¡ˆ ≥ª ∏µ≈© ¡∏¿Á</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>√ªæ‡√∂»∏±«</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>∆‰¿Ã¡ˆ ≥ª ∏µ≈© ¡∏¿Á</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>±›∏Æ¿Œ«œø‰±∏±«</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>∆‰¿Ã¡ˆ ≥ª ∏µ≈© ¡∏¿Á</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>¿ßπ˝∞Ëæ‡«ÿ¡ˆø‰±∏±«</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>∆‰¿Ã¡ˆ ≥ª ∏µ≈© ¡∏¿Á</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>¿⁄∑·ø≠∂˜ø‰±∏±«</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>∆‰¿Ã¡ˆ ≥ª ∏µ≈© ¡∏¿Á</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>ø¨∂Ù±›¡ˆø‰±∏±«</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>ø¨∂Ù±›¡ˆ ø‰±∏ ¡¢ºˆ ∞·∞˙ ¡∂»∏</td>
+                                <td>¡§∫∏¿‘∑¬</td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>¡∂»∏∞·∞˙</td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>ø¨∂Ù±›¡ˆ ø‰±∏ Ω≈√ª ¡¢ºˆ</td>
+                                <td>¡§∫∏¿‘∑¬</td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>¡¢ºˆøœ∑·</td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>ø¨∂Ù±›¡ˆ ø‰±∏ «ÿ¡¶</td>
+                                <td>¡§∫∏¿‘∑¬</td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>¡¢ºˆøœ∑·</td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>∞≥¿Œ¡§∫∏∫∏»£</td>
+                                <td>æ˜π´¿ß≈ππ◊¡¶3¿⁄¡¶∞¯«ˆ»≤</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>±‚¡∏ '∞Ì∞¥ºæ≈Õ > ∫Œ∞°¡§∫∏' ∏ﬁ¥∫¿« ∆‰¿Ã¡ˆø° ¿÷¥¯ «◊∏Ò¿ª ∫∞µµ¿« ∏ﬁ¥∫∑Œ ∫–∏Æ »ƒ '±›¿∂º“∫Ò¿⁄∆˜≈–' ∏ﬁ¥∫ø° ¿Ã¿¸</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>¿Ã∏ﬁ¿œ¡÷º“π´¥‹ºˆ¡˝∞≈∫Œ</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>∞≥¿Œ¡§∫∏¡∂»∏°§µø¿« æ»≥ªπÆ</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>Ω≈øÎ¡§∫∏ »∞øÎ√º¡¶</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>∫–∏Æ∫∏¡∏µ» ∞≥¿ŒΩ≈øÎ¡§∫∏¿« »∞øÎ æ»≥ª</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>∆‰¿Ã¡ˆ ≥ª ∏µ≈© ¡∏¿Á - Ω≈øÎ¡§∫∏ »∞øÎ√º¡¶(«ÿ¥Á ≈« ≥ªøÎ¿∏∑Œ ¿¸»Ø)</td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td>∞Ì∞¥¿« ±«∏Æ</td>
+                                <td>∫“π˝ √§±«√ﬂΩ… ¥Î¿¿ø‰∑…</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>±‚¡∏ '∞Ì∞¥ºæ≈Õ > ∫Œ∞°¡§∫∏' ∏ﬁ¥∫¿« ∆‰¿Ã¡ˆø° ¿÷¥¯ «◊∏Ò¿ª ∫∞µµ¿« ∏ﬁ¥∫∑Œ ∫–∏Æ »ƒ '±›¿∂º“∫Ò¿⁄∆˜≈–' ∏ﬁ¥∫ø° ¿Ã¿¸</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>∞≥¿ŒΩ≈øÎ∆Ú∞°(¿⁄µø»≠∆Ú∞°) ¥Î¿¿±«</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>∆‰¿Ã¡ˆ ≥ª ∏µ≈© ¡∏¿Á</td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>√§π´¡∂¡§æ»≥ª</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>∆‰¿Ã¡ˆ ≥ª ∏µ≈© ¡∏¿Á</td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td>¿∫«‡ ∞Ì¡ˆªÁ«◊</td>
+                                <td>π˝¿˚∞Ì¡ˆ</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>±‚¡∏ '∞Ì∞¥ºæ≈Õ > ∫Œ∞°¡§∫∏' ∏ﬁ¥∫¿« ∆‰¿Ã¡ˆø° ¿÷¥¯ «◊∏Ò¿ª ∫∞µµ¿« ∏ﬁ¥∫∑Œ ∫–∏Æ »ƒ '±›¿∂º“∫Ò¿⁄∆˜≈–' ∏ﬁ¥∫ø° ¿Ã¿¸</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>∞≥¿Œ¡§∫∏√≥∏ÆπÊƒß</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>∆‰¿Ã¡ˆ ≥ª ∏µ≈© ¡∏¿Á</td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>¿ÃøÎæ‡∞¸</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>øµªÛ¡§∫∏√≥∏Æ±‚±‚ øÓøµ°§∞¸∏Æ πÊƒß</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>∞Ì∞¥»Æ¿Œ¡¶µµ</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>∆‰¿Ã¡ˆ ≥ª ∏µ≈© ¡∏¿Á</td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td>¿Âæ÷¿Œ∞Ì∞¥¡ˆø¯º≠∫ÒΩ∫</td>
+                                <td>¿Âæ÷¿Œ ªÛ¥„ æ»≥ª</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>¿ØøÎ«— ¡§∫∏</td>
+                                <td>∏Ò∑œ(List)</td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>∏ﬁ¥∫∏Ì ∫Ø∞Ê(AS-IS '¡§∫∏±§¿Â')</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>ªÛºº(View)</td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>∞¸∑√ ªÁ¿Ã∆Æ(º’∏ª¿Ã¿Ωºæ≈Õ)</td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∏µ≈©</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>∏Ò∑œ»≠∏È ≥ª ∏µ≈© ¡∏¿Á</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>±›¿∂º“∫Ò¿⁄∫∏»£∞¯Ω√</td>
+                                <td>∏Ò∑œ(List)</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>ªÛºº(View)</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>∞Ì∞¥¿« ∏Òº“∏Æ</td>
+                                <td>πŒø¯√≥∏Æ «¡∑ŒººΩ∫</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>∏ﬁ¥∫∏Ì ∫Ø∞Ê(AS-IS '¿¸¿⁄πŒø¯¡¢ºˆ')</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>πŒø¯ ¡¢ºˆ</td>
+                                <td>¡§∫∏¿‘∑¬</td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>¡¢ºˆøœ∑·</td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>ƒ™¬˘/¡¶æ» ¡¢ºˆ</td>
+                                <td>¡§∫∏¿‘∑¬</td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>¡¢ºˆøœ∑·</td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>∞≥¿Œ(Ω≈øÎ)¡§∫∏ ∞Ì∞¥±«∏Æ Ω≈√ª</td>
+                                <td>¡§∫∏¿‘∑¬</td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>±‚¡∏ '∞Ì∞¥ºæ≈Õ > ∫Œ∞°¡§∫∏' ∆‰¿Ã¡ˆø° ¿÷¥¯ ∏ﬁ¥∫∏¶ ∫∞µµ¿« ∆‰¿Ã¡ˆ∑Œ ∫–∏Æ</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Ω≈√ªøœ∑·</td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>πŒø¯ªÁπ´ ∆Ì∂˜</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>∆‰¿Ã¡ˆ ≥ª ∏µ≈© ¡∏¿Á</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>¿Ø¿Õ«—º“∫Ò¿⁄¡§∫∏</td>
+                                <td>¥Î√‚ªÁ±‚ «««ÿ øππÊ æ»≥ª</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>ø¨√º¿Ã¿⁄¿≤ ∫Ø∞Ê æ»≥ª</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>æ»¿¸∏¡¥Î√‚2°§«ﬁªÏ∑–15</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>±›¿∂∫–¿Ô ¡§∫∏</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>∆‰¿Ã¡ˆ ≥ª ∏µ≈© ¡∏¿Á</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>¿ØøÎ«— ¡§∫∏ ªÁ¿Ã∆Æ</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>∆‰¿Ã¡ˆ ≥ª ∏µ≈© ¡∏¿Á</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>±›¿∂º“∫Ò¿⁄∫∏»£øÏºˆªÁ∑ </td>
+                                <td>∫∏¿ÃΩ∫««ΩÃ øππÊæ»≥ª</td>
+                                <td>∏Ò∑œ(List)</td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>±‚¡∏ '±›¿∂º“∫Ò¿⁄∆˜≈– > ∫∏¿ÃΩ∫««ΩÃ øππÊæ»≥ª' ∏ﬁ¥∫ø°º≠ ¿Ãµø</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>ªÛºº(View)</td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>∑ª≈Õƒ´ «“¿Œº≠∫ÒΩ∫</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>∆‰¿Ã¡ˆ ≥ª ∏µ≈© ¡∏¿Á</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="cont page">
+                    <h3 class="tit on">»∏ªÁº“∞≥</h3>
+                    <table>
+                        <summary></summary>
+                        <caption></caption>
+                        <colgroup>
+                            <col width="8%" />
+                            <col width="8%" />
+                            <col width="20%" />
+                            <col width="6%" />
+                            <col width="6%" />
+                            <col width="10%" />
+                            <col width="8%" />
+                            <col width="4%" />
+                            <col width="6%" />
+                            <col width="24%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">depth1</th>
+                                <th scope="col">depth2</th>
+                                <th scope="col">depth3</th>
+                                <th scope="col">depth4</th>
+                                <th scope="col">depth5</th>
+                                <th scope="col" class="fileName">»≠∏ÈID</th>
+                                <th scope="col">«¸≈¬</th>
+                                <th scope="col">¥„¥Á</th>
+                                <th scope="col">ªÛ≈¬</th>
+                                <th scope="col">∫Ò∞Ì</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>»∏ªÁº“∞≥</td>
+                                <td>CEO ¿ŒªÁ∏ª</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>»∏ªÁ ∞≥ø‰</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>»∏ªÁ ø¨«ı</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>±◊∑ÏªÁ º“∞≥</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>ªÁ»∏∞¯«Â</td>
+                                <td>∞Ì∞¥∞˙ «‘≤≤</td>
+                                <td>∏Ò∑œ(List)</td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>ªÛºº(View)</td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>»∏ªÁ º“Ωƒ</td>
+                                <td>∏Ò∑œ(List)</td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>ªÛºº(View)</td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>¿±∏Æ ∞Êøµ</td>
+                                <td>º∫»Ò∑’ π◊ ∫Œ¡§ ¡¶∫∏ ºæ≈Õ</td>
+                                <td>¡§∫∏¿‘∑¬</td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>¡¢ºˆøœ∑·</td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>¡˜¿Â ≥ª ±´∑”»˚ «««ÿ Ω≈∞Ìºæ≈Õ</td>
+                                <td>¡§∫∏¿‘∑¬</td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>¡¢ºˆøœ∑·</td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>Ω≈∞Ìºæ≈Õ √≥∏Æ«ˆ»≤</td>
+                                <td>¡§∫∏¿‘∑¬</td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>¡∂»∏∞·∞˙</td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>≈ı¿⁄ ¡§∫∏</td>
+                                <td>¿Áπ´¡§∫∏</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>∆‰¿Ã¡ˆ ≥ª ∏µ≈© ¡∏¿Á</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>∞Êøµ∞¯Ω√</td>
+                                <td>∏Ò∑œ(List)</td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>ªÛºº(View)</td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>Ω≈øÎ∆Ú∞°</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>√§øÎ ¡§∫∏</td>
+                                <td>MGƒ≥««≈ª ¿Œ¿ÁªÛ</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>√§øÎæ»≥ª π◊ ¿˝¬˜</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>√§øÎ∞¯∞Ì</td>
+                                <td>¡§±‚∞¯∞Ì</td>
+                                <td>∏Ò∑œ(List)</td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>ªÛºº(View)</td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>ºˆΩ√∞¯∞Ì</td>
+                                <td>∏Ò∑œ(List)</td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>ªÛºº(View)</td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>¿‘ªÁ¡ˆø¯º≠ ºˆ¡§</td>
+                                <td>∏Ò∑œ(List)</td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>ªÛºº(View)</td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>√£æ∆ø¿Ω√¥¬ ±Ê</td>
+                                <td>∫ªªÁ</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>º≠√  √‚¿Âº“</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>≈«∏ﬁ¥∫</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>¥Î±∏¡ˆ¡°</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>≈«∏ﬁ¥∫</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>∫ŒªÍ¡ˆ¡°</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>≈«∏ﬁ¥∫</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="cont page">
+                    <h3 class="tit on">MY∆‰¿Ã¡ˆ</h3>
+                    <table>
+                        <summary></summary>
+                        <caption></caption>
+                        <colgroup>
+                            <col width="8%" />
+                            <col width="8%" />
+                            <col width="20%" />
+                            <col width="6%" />
+                            <col width="6%" />
+                            <col width="10%" />
+                            <col width="8%" />
+                            <col width="4%" />
+                            <col width="6%" />
+                            <col width="24%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">depth1</th>
+                                <th scope="col">depth2</th>
+                                <th scope="col">depth3</th>
+                                <th scope="col">depth4</th>
+                                <th scope="col">depth5</th>
+                                <th scope="col" class="fileName">»≠∏ÈID</th>
+                                <th scope="col">«¸≈¬</th>
+                                <th scope="col">¥„¥Á</th>
+                                <th scope="col">ªÛ≈¬</th>
+                                <th scope="col">∫Ò∞Ì</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>MY∆‰¿Ã¡ˆ</td>
+                                <td>≥ª¡§∫∏ ∫Ø∞Ê</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>∞¯µø¿Œ¡ıº≠ ∞¸∏Æ</td>
+                                <td>∞¯µø¿Œ¡ıº≠ µÓ∑œ «ˆ»≤</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>∞¯µø¿Œ¡ıº≠ µÓ∑œ</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∏µ≈©</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>∞¯µø¿Œ¡ıº≠ º÷∑Áº« »£√‚</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>∞¯µø¿Œ¡ıº≠ ªË¡¶</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∏µ≈©</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>∞¯µø¿Œ¡ıº≠ º÷∑Áº« »£√‚</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>i-Pin ¿Œ¡ı µÓ∑œ</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>±‚¡∏ 'My∆‰¿Ã¡ˆ > ∫ª¿Œ¿Œ¡ı' ∏ﬁ¥∫∏Ì ∫Ø∞Ê</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>≥™¿« ªÛ¥„≥ªø™</td>
+                                <td>∏Ò∑œ(List)</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>ªÛºº(View)</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>∞¯∞≥∏≈∞¢ ¿‘¬˚≥ªø™</td>
+                                <td>∏Ò∑œ(List)</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>ªÛºº(View)</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="cont page">
+                    <h3 class="tit on">∏‚πˆΩ </h3>
+                    <table>
+                        <summary></summary>
+                        <caption></caption>
+                        <colgroup>
+                            <col width="8%" />
+                            <col width="8%" />
+                            <col width="20%" />
+                            <col width="6%" />
+                            <col width="6%" />
+                            <col width="10%" />
+                            <col width="8%" />
+                            <col width="4%" />
+                            <col width="6%" />
+                            <col width="24%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">depth1</th>
+                                <th scope="col">depth2</th>
+                                <th scope="col">depth3</th>
+                                <th scope="col">depth4</th>
+                                <th scope="col">depth5</th>
+                                <th scope="col" class="fileName">»≠∏ÈID</th>
+                                <th scope="col">«¸≈¬</th>
+                                <th scope="col">¥„¥Á</th>
+                                <th scope="col">ªÛ≈¬</th>
+                                <th scope="col">∫Ò∞Ì</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>∏‚πˆΩ </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td></td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>∏ﬁ¥∫ ¡∏ƒ°ø©∫Œ »Æ¿Œ « ø‰(AS-IS »Æ¿Œ ∞·∞˙ ∫∞µµ¿« ∏‚πˆΩ  ∞¸∑√ º≠∫Í ∏ﬁ¥∫ æ¯∞Ì 1Depth ∏ﬁ¥∫∏∏ ¡∏¿Á)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="cont page">
+                    <h3 class="tit on">«Ï¥ıøµø™</h3>
+                    <table>
+                        <summary></summary>
+                        <caption></caption>
+                        <colgroup>
+                            <col width="8%" />
+                            <col width="8%" />
+                            <col width="20%" />
+                            <col width="6%" />
+                            <col width="6%" />
+                            <col width="10%" />
+                            <col width="8%" />
+                            <col width="4%" />
+                            <col width="6%" />
+                            <col width="24%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">depth1</th>
+                                <th scope="col">depth2</th>
+                                <th scope="col">depth3</th>
+                                <th scope="col">depth4</th>
+                                <th scope="col">depth5</th>
+                                <th scope="col" class="fileName">»≠∏ÈID</th>
+                                <th scope="col">«¸≈¬</th>
+                                <th scope="col">¥„¥Á</th>
+                                <th scope="col">ªÛ≈¬</th>
+                                <th scope="col">∫Ò∞Ì</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>«Ï¥ıøµø™</td>
+                                <td>øµæ˜¡°æ»≥ª</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∏µ≈©</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>∞¯µø¿Œ¡ıºæ≈Õ</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∏µ≈©</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td>?https://mapp.mgcap.co.kr/mobsol/ma-krs/krs_export_certificate/jsp/function_relay.jsp' ªÁ¿Ã∆Æ∑Œ ¿Ãµø</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>∑Œ±◊¿Œ/∑Œ±◊æ∆øÙ</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td></td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>»∏ø¯∞°¿‘</td>
+                                <td>æ‡∞¸µø¿« π◊ ∫ª¿Œ¿Œ¡ı</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>¡§∫∏¿‘∑¬</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>∞°¿‘øœ∑·</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>¿¸√º∏ﬁ¥∫(«‹πˆ∞≈ πˆ∆∞)</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆Àæ˜(∑π¿ÃæÓ)</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="cont page">
+                    <h3 class="tit on">«™≈Õøµø™</h3>
+                    <table>
+                        <summary></summary>
+                        <caption></caption>
+                        <colgroup>
+                            <col width="8%" />
+                            <col width="8%" />
+                            <col width="20%" />
+                            <col width="6%" />
+                            <col width="6%" />
+                            <col width="10%" />
+                            <col width="8%" />
+                            <col width="4%" />
+                            <col width="6%" />
+                            <col width="24%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">depth1</th>
+                                <th scope="col">depth2</th>
+                                <th scope="col">depth3</th>
+                                <th scope="col">depth4</th>
+                                <th scope="col">depth5</th>
+                                <th scope="col" class="fileName">»≠∏ÈID</th>
+                                <th scope="col">«¸≈¬</th>
+                                <th scope="col">¥„¥Á</th>
+                                <th scope="col">ªÛ≈¬</th>
+                                <th scope="col">∫Ò∞Ì</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>«™≈Õøµø™</td>
+                                <td>∞≥¿Œ¡§∫∏√≥∏ÆπÊƒß</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∏µ≈©</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Ω≈øÎ¡§∫∏ »∞øÎ√º¡¶</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∏µ≈©</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>π˝¿˚∞Ì¡ˆ</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∏µ≈©</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>∆–π–∏Æ ªÁ¿Ã∆Æ</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∏µ≈©</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="cont page">
+                    <h3 class="tit on">±‚≈∏</h3>
+                    <table>
+                        <summary></summary>
+                        <caption></caption>
+                        <colgroup>
+                            <col width="8%" />
+                            <col width="8%" />
+                            <col width="20%" />
+                            <col width="6%" />
+                            <col width="6%" />
+                            <col width="10%" />
+                            <col width="8%" />
+                            <col width="4%" />
+                            <col width="6%" />
+                            <col width="24%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">depth1</th>
+                                <th scope="col">depth2</th>
+                                <th scope="col">depth3</th>
+                                <th scope="col">depth4</th>
+                                <th scope="col">depth5</th>
+                                <th scope="col" class="fileName">»≠∏ÈID</th>
+                                <th scope="col">«¸≈¬</th>
+                                <th scope="col">¥„¥Á</th>
+                                <th scope="col">ªÛ≈¬</th>
+                                <th scope="col">∫Ò∞Ì</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>±‚≈∏</td>
+                                <td>ªÛ¥„Ω≈√ª</td>
+                                <td>¡§∫∏¿‘∑¬</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>Ω≈√ªøœ∑·</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./views/common/.html" target="_blank">MGCAP</a></td>
+                                <td>∆‰¿Ã¡ˆ</td>
+                                <td></td>
+                                <td class="state"></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                /*---------------------------------------------
 				ready, load
 			---------------------------------------------*/
-			// Î™®Îì† Î¶¨ÏÜåÏä§(Ïù¥ÎØ∏ÏßÄ Îì±)Í∞Ä Î°úÎìúÎêú ÌõÑ fnPreload()Î•º Ìò∏Ï∂úÌïòÏó¨ Ï¥àÍ∏∞Ìôî
-			$(window).on('load', function(){
-				fnPreload();
-			});
-			
-			/*---------------------------------------------
+                // ∏µÁ ∏Æº“Ω∫(¿ÃπÃ¡ˆ µÓ)∞° ∑ŒµÂµ» »ƒ fnPreload()∏¶ »£√‚«œø© √ ±‚»≠
+                $(window).on("load", function () {
+                    fnPreload();
+                });
+
+                /*---------------------------------------------
 				preload, init
 			---------------------------------------------*/
-			/* preload */
-			function fnPreload(){
-				tableStateManager.init();
-			}
+                /* preload */
+                function fnPreload() {
+                    tableStateManager.init();
+                }
 
-			/*---------------------------------------------
-				tableStateManager Î™®Îìà Ï†ïÏùò
+                /*---------------------------------------------
+				tableStateManager ∏µ‚ ¡§¿«
 			---------------------------------------------*/
-			var tableStateManager = (function() {
-				// ÎÇ†Ïßú Í¥ÄÎ†® Î∞∞Ïó¥ (ÌïÑÏöîÏãú ÌôúÏö©)
-				var fromDate = [],
-					toDate   = [],
-					dateGap  = [];
+                var tableStateManager = (function () {
+                    // ≥Ø¬• ∞¸∑√ πËø≠ (« ø‰Ω√ »∞øÎ)
+                    var fromDate = [],
+                        toDate = [],
+                        dateGap = [];
 
-				// ÏÉÅÌÉúÎ≥Ñ Í∞úÏàò Î≥ÄÏàò
-				var progressCnt = 0,   // ÏßÑÌñâ Ï§ë Í∞úÏàò
-					compCnt     = 0,   // ÏôÑÎ£å Í∞úÏàò
-					delCnt      = 0;   // ÏÇ≠Ï†ú Í∞úÏàò
+                    // ªÛ≈¬∫∞ ∞≥ºˆ ∫Øºˆ
+                    var progressCnt = 0, // ¡¯«‡ ¡ﬂ ∞≥ºˆ
+                        compCnt = 0, // øœ∑· ∞≥ºˆ
+                        delCnt = 0; // ªË¡¶ ∞≥ºˆ
 
-				return {
-					// ÌÖåÏù¥Î∏î Í∞Å ÌñâÏùò ÏÉÅÌÉúÎ•º ÏóÖÎç∞Ïù¥Ìä∏ÌïòÎäî Ìï®Ïàò
-					updateStates: function(){
+                    return {
+                        // ≈◊¿Ã∫Ì ∞¢ «‡¿« ªÛ≈¬∏¶ æ˜µ•¿Ã∆Æ«œ¥¬ «‘ºˆ
+                        updateStates: function () {
+                            // »£√‚ Ω√∏∂¥Ÿ ƒ´øÓ∆Æ √ ±‚»≠
+                            progressCnt = 0;
+                            compCnt = 0;
+                            delCnt = 0;
 
-						// Ìò∏Ï∂ú ÏãúÎßàÎã§ Ïπ¥Ïö¥Ìä∏ Ï¥àÍ∏∞Ìôî
-						progressCnt = 0;
-						compCnt = 0;
-						delCnt = 0;
-						
-						$(".cont table tbody tr").each(function() {
-							var $row = $(this);
-							var $stateCell = $row.find(".state");
-							
-							if ($row.hasClass("non")) {
-								$stateCell.html("<span>ÏÇ≠Ï†ú</span>");
-								delCnt++;
-							} else if ($row.hasClass("ing")) {
-								$stateCell.html("<span>ÏßÑÌñâ Ï§ë</span>");
-								progressCnt++;
-							} else if ($row.hasClass("comp")) {
-								$stateCell.html("<span>ÏôÑÎ£å</span>");
-								compCnt++;
-							} else {
-								$stateCell.text("");
-							}
-						});
+                            $(".cont table tbody tr").each(function () {
+                                var $row = $(this);
+                                var $stateCell = $row.find(".state");
 
-					},
+                                if ($row.hasClass("non")) {
+                                    $stateCell.html("<span>ªË¡¶</span>");
+                                    delCnt++;
+                                } else if ($row.hasClass("ing")) {
+                                    $stateCell.html("<span>¡¯«‡ ¡ﬂ</span>");
+                                    progressCnt++;
+                                } else if ($row.hasClass("comp")) {
+                                    $stateCell.html("<span>øœ∑·</span>");
+                                    compCnt++;
+                                } else {
+                                    $stateCell.text("");
+                                }
+                            });
+                        },
 
-					// ÏÉÅÌÉúÎ≥Ñ Ïπ¥Ïö¥Ìä∏Î•º ÏóÖÎç∞Ïù¥Ìä∏
-					updateCounts: function(){
-						var totCnt = $(".page table tbody tr").length; // Ï†ÑÏ≤¥ Ìñâ Í∞úÏàò
-						$("#compCnt").text(compCnt);
-						$("#totCnt").text(totCnt);
-						$("#progressCnt").text(progressCnt);
-					},
-					// Î†àÏù¥ÏïÑÏõÉ(ÎßàÏßÑ) Ï°∞Ï†ï
-					adjustLayout: function(){
-						var headerH = $(".container .header").outerHeight();
-						$(".container .guide").css("margin-top", headerH + "px");
-					},
-				
-					// Ï†ÑÏ≤¥ Ï¥àÍ∏∞Ìôî: ÏÉÅÌÉú ÏóÖÎç∞Ïù¥Ìä∏, Ïπ¥Ïö¥Ìä∏ Í∞±Ïã†, Î†àÏù¥ÏïÑÏõÉ Ï°∞Ï†ï Ïã§Ìñâ
-					init: function() {
-						// Î∞òÌôòÎêú Í∞ùÏ≤¥Ïùò Î©îÏÑúÎìúÎ•º Ìò∏Ï∂ú
-						this.updateStates();
-						this.updateCounts();
-						this.adjustLayout();
-					},
-					// ÏÉÅÌÉúÏôÄ Ïπ¥Ïö¥Ìä∏Îßå Í∞±Ïã†
-					update: function() {
-						this.updateStates();
-						this.updateCounts();
-					}
-				};
-			})();
+                        // ªÛ≈¬∫∞ ƒ´øÓ∆Æ∏¶ æ˜µ•¿Ã∆Æ
+                        updateCounts: function () {
+                            var totCnt = $(".page table tbody tr").length; // ¿¸√º «‡ ∞≥ºˆ
+                            $("#compCnt").text(compCnt);
+                            $("#totCnt").text(totCnt);
+                            $("#progressCnt").text(progressCnt);
+                        },
+                        // ∑π¿Ãæ∆øÙ(∏∂¡¯) ¡∂¡§
+                        adjustLayout: function () {
+                            var headerH = $(".container .header").outerHeight();
+                            $(".container .guide").css("margin-top", headerH + "px");
+                        },
 
-			/**
-			 * #ÌÖåÏù¥Î∏î ÌÜ†Í∏Ä
-			 **/
-			var tableListToggle = function(el) {
-				var $el = $(el);
-				return {
-					open: function() {
-						$el.addClass('on')
-					},
-					close: function() {
-						$el.removeClass('on')
-					},
-					toggle: function() {
-						if ($el.hasClass('on')) {
-							this.close();
-						} else {
-							this.open();
-						}
-					}
-				};
-			};
+                        // ¿¸√º √ ±‚»≠: ªÛ≈¬ æ˜µ•¿Ã∆Æ, ƒ´øÓ∆Æ ∞ªΩ≈, ∑π¿Ãæ∆øÙ ¡∂¡§ Ω««‡
+                        init: function () {
+                            // π›»Øµ» ∞¥√º¿« ∏ﬁº≠µÂ∏¶ »£√‚
+                            this.updateStates();
+                            this.updateCounts();
+                            this.adjustLayout();
+                        },
+                        // ªÛ≈¬øÕ ƒ´øÓ∆Æ∏∏ ∞ªΩ≈
+                        update: function () {
+                            this.updateStates();
+                            this.updateCounts();
+                        },
+                    };
+                })();
 
-			//event
-			$(document).on('click', '.cont .tit', function() {
-				tableListToggle(this).toggle();
-			});
-			
+                /**
+                 * #≈◊¿Ã∫Ì ≈‰±€
+                 **/
+                var tableListToggle = function (el) {
+                    var $el = $(el);
+                    return {
+                        open: function () {
+                            $el.addClass("on");
+                        },
+                        close: function () {
+                            $el.removeClass("on");
+                        },
+                        toggle: function () {
+                            if ($el.hasClass("on")) {
+                                this.close();
+                            } else {
+                                this.open();
+                            }
+                        },
+                    };
+                };
 
-		});
-		</script>
-		
-</body>
+                //event
+                $(document).on("click", ".cont .tit", function () {
+                    tableListToggle(this).toggle();
+                });
+            });
+        </script>
+    </body>
 </html>
