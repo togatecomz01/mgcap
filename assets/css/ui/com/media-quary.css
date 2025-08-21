@@ -96,6 +96,12 @@
     /*div + .form-content  { margin-top:42px; padding:32px 0; border-top:1px solid var(--border); } */
     div.border-b1 ~ [class$="-content"] { margin-top:42px; padding:32px 0 0; } 
 
+    /**안내박스**/
+    .info-content > .info-wrap { padding:20px; }
+    .info-content > .info-wrap h3.info-title { font-size:var(--font20); }
+    .info-content > .info-wrap h3.info-title::before { width:32px; height:32px; background-size:20.8px; }
+    .info-content > .info-wrap p { font-size:var(--font14); }
+
 
 
 
