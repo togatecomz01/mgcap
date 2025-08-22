@@ -21,20 +21,20 @@ table, .table-tit {
 table { table-layout: fixed; word-break: normal; overflow-wrap: break-word; }
 table caption { display: none; }
 /*---------------------------------------------
-    #ë°˜ì‘í˜•
+    #¹ÝÀÀÇü
 ---------------------------------------------*/
-/* ë°ìŠ¤í¬í†± */
+/* µ¥½ºÅ©Åé */
 .table-desktop { display: table; }
 .table-mobile { display: none; }
 
-/* ëª¨ë°”ì¼ */
+/* ¸ð¹ÙÀÏ */
 @media screen and (max-width: 768px) {
   .table-desktop { display: none; }
   .table-mobile { display: block; }
 }
 
 /*---------------------------------------------
-    #í…Œì´ë¸” ê¸°ë³¸ ìŠ¤íƒ€ì¼-PC
+    #Å×ÀÌºí ±âº» ½ºÅ¸ÀÏ-PC
 ---------------------------------------------*/
 th, td { padding: 20px; border-top: 1px solid var(--tbl-border); border-bottom: 1px solid var(--tbl-border); border-left: 1px solid var(--tbl-border); font-size: var( --font16); line-height: 150%; }
 
@@ -49,20 +49,20 @@ tbody tr.tbl-total-row th { background-color: var(--tbl-bg-total-row); color: va
 tbody tr.tbl-total-row td { background-color: var(--tbl-bg-total) }
 
 /*---------------------------------------------
-    #í…Œì´ë¸” ê¸°ë³¸ ìŠ¤íƒ€ì¼-MO
+    #Å×ÀÌºí ±âº» ½ºÅ¸ÀÏ-MO
 ---------------------------------------------*/
 .table-mobile th, td { padding: 14px; font-size: var( --font14); }
 
 .table-mobile thead tr th, .table-mobile tbody tr th { font-weight: var(--font-w-m); }
 
 /*---------------------------------------------
-	#í…Œì´ë¸” ìœ í˜•
+	#Å×ÀÌºí À¯Çü
 ---------------------------------------------*/
 /* table-type 1*/
 .table-type1 { text-align: center; }
 
 /*---------------------------------------------
-	#íƒ€ì´í‹€
+	#Å¸ÀÌÆ²
 ---------------------------------------------*/
 /* table-tit pc */
 .table-tit { padding: 0 0 20px 0; display: flex; justify-content: space-between; align-items: flex-end; }
@@ -70,8 +70,8 @@ tbody tr.tbl-total-row td { background-color: var(--tbl-bg-total) }
 .table-tit span { color: var(--tit-txt); font-size: var(--font16); font-weight: var(--font-w-r); }
 
 /* table-tit mo */
-@media screen and (max-width: 768px) {
-  .table-tit { padding: 0 0 18px 0; }
-  .table-tit h3 { font-size: var(--font18); }
-  .table-tit span { font-size: var(--font12); }
-}
+.table-mobile .table-tit { padding: 38px 0 18px 0; }
+.table-mobile .table-tit h3 { font-size: var(--font18); }
+.table-mobile .table-tit span { font-size: var(--font12); }
+
+.btn-fake-slt>*:not(.placeholder) {display: block;}
