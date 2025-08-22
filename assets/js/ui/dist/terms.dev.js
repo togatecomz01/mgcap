@@ -2,46 +2,46 @@
 
 $(document).ready(function () {
   /**
-   * 약관 동의
+   * �빟愿� �룞�쓽
    */
   var TermsAgreement = function () {
     var $chkAll, $reqChks, $optChks, $consChk, $consChks, $allChks, $submitBtn;
     return {
-      // 초기화
+      // 珥덇린�솕
       init: function init() {
-        $chkAll = $('#chkAll'); // 전체 동의 (부모)
+        $chkAll = $('#chkAll'); // �쟾泥� �룞�쓽 (遺�紐�)
 
-        $reqChks = $('.chkReq'); // 필수 항목
+        $reqChks = $('.chkReq'); // �븘�닔 �빆紐�
 
-        $optChks = $('.chkOpt'); // 선택 항목
+        $optChks = $('.chkOpt'); // �꽑�깮 �빆紐�
 
-        $consChk = $('#chkCons'); // 수신 동의 (부모)
+        $consChk = $('#chkCons'); // �닔�떊 �룞�쓽 (遺�紐�)
 
-        $consChks = $('.chkConsChild'); // 수신 동의 항목 (SMS, 이메일, 광고성)
+        $consChks = $('.chkConsChild'); // �닔�떊 �룞�쓽 �빆紐� (SMS, �씠硫붿씪, 愿묎퀬�꽦)
 
-        $allChks = $('.chkReq, .chkOpt, #chkCons, .chkConsChild'); // 전체 항목
-        // $submitBtn = $('#submitBtn'); // 가입 버튼
+        $allChks = $('.chkReq, .chkOpt, #chkCons, .chkConsChild'); // �쟾泥� �빆紐�
+        // $submitBtn = $('#submitBtn'); // 媛��엯 踰꾪듉
 
         this.bindEvents();
       },
-      // 이벤트
+      // �씠踰ㅽ듃
       bindEvents: function bindEvents() {
-        var self = this; // 전체 동의 (부모)
+        var self = this; // �쟾泥� �룞�쓽 (遺�紐�)
 
         $chkAll.on('change', function () {
           self.toggleAll($(this).prop('checked'));
-        }); // 전체 항목
+        }); // �쟾泥� �빆紐�
 
         $allChks.on('change', function () {
           // self.uptSubmitBtn();
           self.uptAllChk();
-        }); // 수신 동의 (부모)
+        }); // �닔�떊 �룞�쓽 (遺�紐�)
 
         $consChk.on('change', function () {
           var isChecked = $(this).prop('checked');
           $consChks.prop('checked', isChecked);
           self.uptAllChk();
-        }); // 수신 동의 항목
+        }); // �닔�떊 �룞�쓽 �빆紐�
 
         $consChks.on('change', function () {
           self.uptConsAllChk();
@@ -53,16 +53,16 @@ $(document).ready(function () {
 
         this.uptAllChk();
       },
-      // 전체 동의 체크 상태 업데이트 (체크 여부)
+      // �쟾泥� �룞�쓽 泥댄겕 �긽�깭 �뾽�뜲�씠�듃 (泥댄겕 �뿬遺�)
       uptAllChk: function uptAllChk() {
-        var allReqChked = $reqChks.length === $reqChks.filter(':checked').length; // 필수 항목
+        var allReqChked = $reqChks.length === $reqChks.filter(':checked').length; // �븘�닔 �빆紐�
 
-        var allSelChked = $optChks.length === $optChks.filter(':checked').length; // 선택 항목
+        var allSelChked = $optChks.length === $optChks.filter(':checked').length; // �꽑�깮 �빆紐�
 
-        var allConsChked = $consChks.length === $consChks.filter(':checked').length; // 수신 동의
+        var allConsChked = $consChks.length === $consChks.filter(':checked').length; // �닔�떊 �룞�쓽
 
-        var allChecked = $allChks.length === $allChks.filter(':checked').length; // 모든 항목
-        //  필수 + 선택 + 수신 동의 ( 모두 체크 시 전체 동의 체크 활성화 )
+        var allChecked = $allChks.length === $allChks.filter(':checked').length; // 紐⑤뱺 �빆紐�
+        //  �븘�닔 + �꽑�깮 + �닔�떊 �룞�쓽 ( 紐⑤몢 泥댄겕 �떆 �쟾泥� �룞�쓽 泥댄겕 �솢�꽦�솕 )
 
         if (allReqChked && allSelChked && allConsChked) {
           $chkAll.prop('checked', true);
@@ -70,11 +70,11 @@ $(document).ready(function () {
           $chkAll.prop('checked', false);
         }
       },
-      // 수신 동의 항목 (하위 항목 중 하나라도 선택 시)
+      // �닔�떊 �룞�쓽 �빆紐� (�븯�쐞 �빆紐� 以� �븯�굹�씪�룄 �꽑�깮 �떆)
       uptConsAllChk: function uptConsAllChk() {
         var anyConsChked = $consChks.filter(':checked').length > 0;
         $consChk.prop('checked', anyConsChked);
-      } //버튼 활성화 (필수 항목)
+      } //踰꾪듉 �솢�꽦�솕 (�븘�닔 �빆紐�)
       // uptSubmitBtn: function () {
       //     var allReqChked = $reqChks.length === $reqChks.filter(':checked').length;
       //     $submitBtn.prop('disabled', !allReqChked);
@@ -84,5 +84,40 @@ $(document).ready(function () {
   }();
 
   TermsAgreement.init();
+});
+$(function () {
+  var BREAKPOINT = 768; // PC 기준 > 768px
+
+  function removePopupAttrOnPC() {
+    if (window.innerWidth > BREAKPOINT) {
+      $('label[data-popup-open]').removeAttr('data-popup-open');
+    }
+  } // 1) 최초 로드 시
+
+
+  removePopupAttrOnPC(); // 2) 창 크기 변경 시 (디바운스)
+
+  var resizeTimer = null;
+  $(window).on('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(removePopupAttrOnPC, 150);
+  }); // 3) 동적으로 label이 추가되는 경우 대비
+
+  var mo = new MutationObserver(function (mutations) {
+    if (window.innerWidth <= BREAKPOINT) return; // 모바일이면 touch 안 함
+
+    mutations.forEach(function (m) {
+      // 추가된 노드 중 label[data-popup-open] 찾아서 제거
+      var $added = $(m.addedNodes);
+      if (!$added.length) return; // 자신이 label인 경우 + 자식들 중 label 모두 처리
+
+      $added.filter('label[data-popup-open"]').removeAttr('data-popup-open');
+      $added.find && $added.find('label[data-popup-open"]').removeAttr('data-popup-open');
+    });
+  });
+  mo.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
 });
 //# sourceMappingURL=terms.dev.js.map

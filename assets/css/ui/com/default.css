@@ -63,9 +63,9 @@ textarea:-webkit-autofill:hover { -webkit-box-shadow: 0 0 0 1000px #FFFFFF inset
 .flex-col { display:flex; flex-direction:column; }
 .center { display:flex; justify-content:center; }  
 .flex-end { display:flex; justify-content:flex-end; }
-.col { position: relative; width:100%; }
+.col { position: relative; flex:1;}
 
-.col-1 { width: 10%; }
+.col-1 { flex: 1 !important; }
 .col-2 { width: 20%; }
 .col-3 { width: 30%; }
 .col-4 { width: 40%; }
@@ -76,11 +76,17 @@ textarea:-webkit-autofill:hover { -webkit-box-shadow: 0 0 0 1000px #FFFFFF inset
 .col-9 { width: 90%; }
 .col-10 { width: 100%; }
 
+
+
 .gap5 { gap:5px; }
 .gap10 { gap:10px; }
-.gap15 { gap:10px; }
-.gap20 { gap:10px; }
-.gap30 { gap:10px; }
+.gap13 { gap:13px; }
+.gap20 { gap:20px; }
+.gap30 { gap:30px; }
+
+.auth.flex-row > div.col:first-child,
+.auth.flex-row > div.col:last-child { flex: 0 0 152px; }
+.auth.flex-row > div.col:last-child { padding-left:7px; }
 
 
 
