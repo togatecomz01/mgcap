@@ -1,6 +1,6 @@
 @charset "EUC-KR";
 
-table, .table-tit {  
+table, .table-tit, .table-info-content {  
     --tbl-bg: #F4F6F7;
     --tbl-bg-emp: #0072BC;
     --tbl-bg-total-row:#2392FF;
@@ -16,6 +16,9 @@ table, .table-tit {
     --tit-txt: #757575;
 
     --font-w-b: 700;
+
+    --ico-info: url(../../../images/com/ico_info_table.png);
+    --btm-btn-primary: #121212;
 }
 
 table { table-layout: fixed; word-break: normal; overflow-wrap: break-word; }
@@ -74,4 +77,14 @@ tbody tr.tbl-total-row td { background-color: var(--tbl-bg-total) }
 .table-mobile .table-tit h3 { font-size: var(--font18); }
 .table-mobile .table-tit span { font-size: var(--font12); }
 
-.btn-fake-slt>*:not(.placeholder) {display: block;}
+.table-mobile .btn-fake-slt>*:not(.placeholder) {display: block;}
+.table-info-content > .info-wrap h3.info-title::before {width: 61px; height: 61px; background-size: 61px;}
+.table-info-content > .info-wrap {margin-bottom: 100px;}
+.table-info-content .button-content { padding: 0; }
+.table-info-content .btmWrap { display: flex; text-align: start; }
+
+@media screen and (max-width:768px) {
+    .table-info-content .btmWrap { display: block; }
+    .table-info-content .button-wrap { text-align: end; padding-top: 24px; }
+    .table-info-content .button-content .btn, .button-content a, .button-content button { width: auto; font-size: var( --font14); font-weight: var(--font-w-r); height: 45px; line-height: 45px; }
+}
