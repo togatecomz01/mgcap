@@ -35,6 +35,7 @@
         <script type="text/javascript" src="../../assets/js/lib/swiper-bundle.min.js"></script>
         <script type="module" src="../../assets/js/ui/com/ui-util.js"></script>
         <script type="text/javascript" src="../../assets/js/ui/terms.js"></script>
+        <script type="text/javascript" src="../../assets/js/ui/table_temp.js"></script>
     </head>
 
     <body>
@@ -43,23 +44,7 @@
             <header id="headerWrap" class="headerOn"></header>
 
             <main class="contentWrap">
-                <div class="visual-content step">
-                    <div class="tab-content">
-                        <ul class="step">
-                            <li class="acitve">
-                                <p>
-                                    <em>01</em>
-                                    <span>본인인증</span>
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <em>02</em>
-                                    <span>신청완료</span>
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="visual-content">
                     <h2>
                         <em>재무정보</em>
                         <span>MG캐피탈의 경영실적을 제공합니다.</span>
@@ -509,12 +494,22 @@
                                 </tbody>
                             </table>
                         </div>
+
                         <!-- mo -->
                         <div class="table-type1 table-mobile">
-                            <ul class="tab-list">
-                                <li class="tab-item active" data-tab="tab1" title="선택됨"><button type="button">2024년</button></li>
-                                <li class="tab-item" data-tab="tab2"><button type="button">2023년</button></li>
-                            </ul>
+                            <div id="selectCustom" class="se-select" data-stove="select" data-uicase="slide">
+                                <div class="e-hidden-title">TITLE</div>
+                                <select required="" title="" id="yearSelect">
+                                    <option value="tab1" selected>2024년</option>
+                                    <option value="tab2">2023년</option>
+                                    <option value="tab3">2022년</option>
+                                    <option value="tab4">2021년</option>
+                                    <option value="tab5">2020년</option>
+                                    <option value="tab6">2019년</option>
+                                    <option value="tab7">2018년</option>
+                                </select>
+                                <button type="button" class="se-btn btn-fake-slt"><span class="value"></span></button>
+                            </div>
                             <div class="tab-content border-b1">
                                 <div id="tab1" class="tab-panel active">
                                     <!-- 요약재무상태표 -->
@@ -711,8 +706,204 @@
                                     </table>
                                 </div>
                                 <div id="tab2" class="tab-panel">
-                                    <p>준비중2</p>
+                                    <!-- 요약재무상태표 -->
+                                    <div class="table-tit">
+                                        <h3>요약재무상태표</h3>
+                                        <span>단위&#58; 백만원</span>
+                                    </div>
+                                    <table>
+                                        <caption>
+                                            요약재무상태표
+                                        </caption>
+                                        <colgroup>
+                                            <col width="50%" />
+                                            <col width="50%" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">구분</th>
+                                                <th scope="col">2024년</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">현금 및 예치금</th>
+                                                <td>247,133</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">당기손익인식 금융자산</th>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">당기손익&#45;공정가치측정금융자산</th>
+                                                <td>684,522</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">매도가능금융자산</th>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">기타포괄손익&#45;공정가치측정금융자산</th>
+                                                <td>2,732</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">대여금및수취채권</th>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">상각후원가측정 대출채권</th>
+                                                <td>911,160</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">리스 및 렌탈자산</th>
+                                                <td>498,318</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">공동기업 및 관계기업투자주식</th>
+                                                <td>198,742</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">유형자산</th>
+                                                <td>2,085</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">순확정급여자산</th>
+                                                <td>128</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">당기법인세자산</th>
+                                                <td>1,091</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">이연법인세자산</th>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">매각예정자산</th>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">기타자산</th>
+                                                <td>39,653</td>
+                                            </tr>
+                                            <tr class="tbl-total-row">
+                                                <th scope="row">자산총계</th>
+                                                <td>2,585,593</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">당기손익 인식 금융부채</th>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">당기손익&#45;공정가치측정금융부채</th>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">차입금</th>
+                                                <td>467,024</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">사채</th>
+                                                <td>1,214,021</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">유동화차입부채</th>
+                                                <td>152,305</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">순확정급여부채</th>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">충당부채</th>
+                                                <td>178</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">당기법인세부채</th>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">이연법인세부채</th>
+                                                <td>10,773</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">기타부채</th>
+                                                <td>220,117</td>
+                                            </tr>
+                                            <tr class="tbl-total-row">
+                                                <th scope="row">부채총계</th>
+                                                <td>2,585,593</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">자본금</th>
+                                                <td>220,117</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">자본잉여금</th>
+                                                <td>2,064,418</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">자본조정</th>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">기타포괄손익누계액</th>
+                                                <td>10,773</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">이익잉여금</th>
+                                                <td>(2,310)</td>
+                                            </tr>
+                                            <tr class="tbl-total-row">
+                                                <th scope="row">자본총계</th>
+                                                <td>521,175</td>
+                                            </tr>
+                                            <tr class="tbl-total-row">
+                                                <th scope="row">부채및자본총계</th>
+                                                <td>2,585,593</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- 손익계산서 -->
+                                    <div class="table-tit">
+                                        <h3>손익계산서</h3>
+                                        <span>단위&#58; 백만원</span>
+                                    </div>
+                                    <table>
+                                        <caption>
+                                            손익계산서
+                                        </caption>
+                                        <colgroup>
+                                            <col width="50%" />
+                                            <col width="50%" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">구분</th>
+                                                <th scope="col">2024년</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">영업수익</th>
+                                                <td>353,668</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">영업이익</th>
+                                                <td>(79,509)</td>
+                                            </tr>
+                                            <tr class="tbl-total-row">
+                                                <th scope="row">당기순이익</th>
+                                                <td>(74,705)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
+                                <div id="tab3" class="tab-panel"></div>
+                                <div id="tab4" class="tab-panel"></div>
+                                <div id="tab5" class="tab-panel"></div>
+                                <div id="tab6" class="tab-panel"></div>
+                                <div id="tab7" class="tab-panel"></div>
                             </div>
                         </div>
 
