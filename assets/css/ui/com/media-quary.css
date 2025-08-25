@@ -11,6 +11,7 @@
     #skipnavi { display:block; }
 
     /* ÆË¾÷ */
+    
     .layerPopup.full,
     .layerPopup.full.allMenu { display:none; }
     .layerPopup.full.on,
@@ -18,7 +19,7 @@
     .layerPopup.full.allMenu.on,
     .layerPopup.full.allMenu { left:100%; }
     .layerPopup.full .pop-area,
-    .layerPopup.full.allMenu .pop-area { position: fixed; width: 80%; height: 80%; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius:0; }
+    .layerPopup.full.allMenu .pop-area { position: fixed; width: 80%; height: 80%; max-width:800px; max-height:730px; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius:0; }
 
     
     /* ¼¿·ºÆ® */
@@ -156,6 +157,12 @@ body {
     #fake_select.css
     ---------------------------------------------*/ 
     .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option { text-align:center; }
+
+
+    /*---------------------------------------------
+	#content.css
+---------------------------------------------*/
+.product-wrap > .cont > div:last-child { padding-bottom:62px; }
 
 
 }

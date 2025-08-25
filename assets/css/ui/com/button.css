@@ -13,6 +13,8 @@ button.btn:focus-visible{ outline: 1px solid var(--outline);}
 .btn.btn-ipt-clear { background-color: var(--ipt-clear);  mask-image:var(--ico-clear); -webkit-mask-image:var(--ico-clear);  }
 .btn.btn-ipt-clear { display: none; }
 .form-control:not(:placeholder-shown) ~ .ipt-right .btn-ipt-clear { display: block; }
+.btn-link { display:block; padding-right:13px; height:20px; line-height:20px; color:var(--color-6); font-size:var(--font14); } 
+.btn-link::after  { content:""; display:block; width:13px; height:20px; position:absolute; top:0; right:0; background-image:var(--ico-move); background-repeat:no-repeat; background-position:center right; background-size:auto 13px; }
 
 /** 공통 버튼 **/
 .btm-btn-area,
