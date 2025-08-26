@@ -18,7 +18,7 @@
     font-size: var(--font18); 
     color: var(--color-6); 
     line-height: 1.6;
-    max-width: 730px; /* 최대 넓이 설정해서 줄바꿈 제어 */
+    max-width: 800px; /* 최대 넓이 설정해서 줄바꿈 제어 */
 }
 
 
@@ -81,7 +81,7 @@
 
 /* 더보기 버튼 */
 .btn-wrap {
-    padding: 60px 0px 0px 0px;
+    padding: 60px 0px 140px 0px;
     text-align: center;
 }
 
@@ -155,6 +155,6 @@
     }
 
     .btn-wrap {
-        padding-bottom: 0;
+        padding-bottom:71px;
     }
 }
