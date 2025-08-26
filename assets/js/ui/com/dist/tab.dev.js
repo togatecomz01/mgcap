@@ -1,5 +1,10 @@
 "use strict";
 
+// '���õ�' -> \uC120\uD0DD\uB428
+// '����'   -> \uC601\uC5ED
+// '����2'  -> \uC601\uC5ED2
+// '����3'  -> \uC601\uC5ED3
+// '����4'  -> \uC601\uC5ED4
 $(document).ready(function () {
   /**
    *   TAB
@@ -69,5 +74,22 @@ $(document).ready(function () {
     });
     return tabSwiper;
   }();
+});
+/* ----------����Ͽ� tab(select) jquery----------- */
+
+$(document).ready(function () {
+  var $mobileSelect = $('.tab-select-mobile select');
+
+  if ($mobileSelect.length) {
+    $mobileSelect.on('change', function () {
+      var selectedValue = $(this).val();
+      var $tabContainer = $(this).closest('.jsTab');
+      var $targetTab = $tabContainer.find('.tab-item[data-tab="' + selectedValue + '"]');
+
+      if ($targetTab.length) {
+        Tabs.switchTab($targetTab, $tabContainer);
+      }
+    });
+  }
 });
 //# sourceMappingURL=tab.dev.js.map

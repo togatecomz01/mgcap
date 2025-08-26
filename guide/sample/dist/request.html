@@ -24,6 +24,18 @@
   <!-- CSS -->
   <link rel="stylesheet" href="../../assets/css/lib/ui-lib.css">
   <link rel="stylesheet" href="../../assets/css/ui/ui-util.css">
+  <script>
+    (function () {
+      // IE11 Å½Áö
+      var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
+      if (isIE11) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = '../../assets/css/ie11.css';  // IE11 Àü¿ë CSS
+        document.head.appendChild(link);
+      }
+    })();
+  </script>
 
   <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
   <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
