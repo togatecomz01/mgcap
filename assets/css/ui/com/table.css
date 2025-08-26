@@ -1,16 +1,20 @@
 @charset "euc-kr";
 
 /*---------------------------------------------
-    #?…Œ?´ë¸? ê¸°ë³¸ ?Š¤????¼
+    #Å×ÀÌºí ±âº» ½ºÅ¸ÀÏ
 ---------------------------------------------*/
 /* table colgroup { display: table-column-group; unicode-bidi: isolate; } */
-thead tr th { padding: 15px 20px; background-color: var( --tbl-bg); border-top: 1px solid var(--tbl-border); border-bottom: 1px solid var(--tbl-border); border-left: 1px solid var(--tbl-border); font-size: var( --font16); color: var(--tbl-tit); font-weight: 500; }
+table {  table-layout:fixed; }
+thead tr th,
+tbody tr th,
+thead tr td  { padding: 15px 20px; background-color: var( --tbl-bg); border-top: 1px solid var(--tbl-border); border-bottom: 1px solid var(--tbl-border); border-left: 1px solid var(--tbl-border); font-size: var( --font16); color: var(--tbl-tit); font-weight: 500; }
 thead tr th:first-child { border-left: none;}
 tbody tr td { padding: 15px 20px; background-color:  var( --white); border-bottom: 1px solid var(--tbl-border); border-left: 1px solid var(--tbl-border); font-size: var( --font16); color: var( --tbl-txt); font-weight: 400;}
+tbody tr th:first-child,
 tbody tr td:first-child { border-left: none; border-top: none;}
 
 /*---------------------------------------------
-	#?…Œ?´ë¸? ?œ ?˜•
+	#Å×ÀÌºí À¯Çü
 ---------------------------------------------*/
 /* table-type 1*/
 .table-type1 { text-align: center; margin-bottom: 40px;}
@@ -32,7 +36,7 @@ tbody tr td:first-child { border-left: none; border-top: none;}
 .table-type4> div.col dd { width: 50%; display: table-cell; padding: 15px; font-size: var( --font16); color: var( --tbl-txt); font-weight: var(--font-w-r);}
 
 /* table-tit */
-.table-tit { padding: 0 0 20px 0 ;}
+.table-tit { padding: 0 0 16px 0 ;}
 .table-tit h4 { font-size: var( --font18); font-weight: var(--font-w-m); text-align: left; color: var( --tbl-tit); }
 /* table-caption */
 .table-caption { padding-top: 12px;}

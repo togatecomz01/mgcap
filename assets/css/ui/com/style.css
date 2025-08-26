@@ -40,7 +40,7 @@ body {
     --primary: #0072BC;
     --primary-light: #41C7F4;
     --secondary: #BAD1EC;
-    ----default-color:#454545;
+    ----default-color:#757575;
 
     --border:#E5E5EA;
 
@@ -80,7 +80,7 @@ body {
     /* 버튼 */
     --btn-disabled: var(--color-c);
     --btn-txt-disabled: var(--color-2);
-    --btn-primary: var(--primary);
+    --btn-primary: var(--color-2);
     --btn-secondary: var(--secondary);
     /* 버튼_하단 */
     --btm-btn-primary: #6A6A6A;
@@ -127,5 +127,15 @@ body {
     --tbl-tit: var(--color-2);
     --tbl-txt: var(--color-75);
     --tbl-caption: var(--color-9);
+
+}
+
+
+
+@media (max-width: 768px) {
+
+    body {
+        --btn-primary:var(--active);
+    }
 
 }

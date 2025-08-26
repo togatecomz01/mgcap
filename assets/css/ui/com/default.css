@@ -1,6 +1,6 @@
 @charset "euc-kr";
 :root{
-    --default-color: #111111;
+    --default-color: #454545;
     --defalt-color-tr: transparent;
 }
 
@@ -16,7 +16,7 @@ form, fieldset, legend, input, button, textarea, label { color: var(--default-co
 div, img, form, fieldset, button, blockquote, p, hr, select, input { border:0; padding:0; margin:0; font-size:1rem; }
 img, table { width:100%; }
 /* legend, caption { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow: hidden;  border:0; clip:rect(0, 0, 0, 0); white-space: nowrap; } */
-legend, caption { visibility: hidden; }
+legend, caption { visibility: hidden; position:absolute; }
 input, textarea, select, address { font-family: 'Pretendard', 'Spoqa Han Sans Neo', "Apple SD Gothic Neo", sans-serif; }
 input, button, select, textarea { font-family: inherit; }
 input, textarea, select { display:inline-block; vertical-align: middle; color:var(--default-color); }
@@ -31,6 +31,7 @@ a, a:hover, a:focus, a:active { text-decoration: none !important; cursor: pointe
 .tac{ text-align: center !important; }
 .tar{ text-align: right !important; }
 
+p { color:var(--color-75); } 
 /*---------------------------------------------
 	#인풋 리셋
 ---------------------------------------------*/

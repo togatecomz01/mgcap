@@ -1,155 +1,171 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>°øÅë>ÅÇ</title>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="Content-Script-Type" content="text/javascript">
-    <meta http-equiv="Content-Style-Type" content="text/css">
-    <meta name="keywords" content="°øÅëkeywords">
-    <meta name="description" content="°øÅëdescription">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>ï¿½ï¿½ï¿½ï¿½>ï¿½ï¿½</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="keywords" content="ï¿½ï¿½ï¿½ï¿½keywords" />
+    <meta name="description" content="ï¿½ï¿½ï¿½ï¿½description" />
     <!-- <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0, viewport-fit=cover"> -->
-    <meta name="viewport" content="user-scalable=no,width=375">
-    <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img">
-    <meta name="apple-mobile-web-app-status-bar-style" content="white">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta http-equiv="Expires" content="-1">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Cache-Control" content="No-Cache">
+    <meta name="viewport" content="user-scalable=no,width=375" />
+    <meta
+      property="og:image"
+      content="http://gallery2gate.kr/resources/images/common/ui-maeta-img"
+    />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="No-Cache" />
 
-    <!-- ÀÏ¹Ý Favicon ¼³Á¤ -->
-    <link rel="icon" type="image/png" href="../../assets/icons/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg" />
+    <!-- ï¿½Ï¹ï¿½ Favicon ï¿½ï¿½ï¿½ï¿½ -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="../../assets/icons/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../../assets/icons/favicon.svg"
+    />
     <link rel="shortcut icon" href="../../assets/icons/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/icons/apple-touch-icon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../../assets/icons/apple-touch-icon.png"
+    />
     <link rel="manifest" href="../../assets/icons/site.webmanifest" />
 
-    <link rel="stylesheet" href="../../assets/css/lib/ui-lib.css" >
-    <link rel="stylesheet" href="../../assets/css/ui/ui-util.css">
-    
-    <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
-    <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
-    <script type="text/javascript" src="../../assets/js/lib/swiper-bundle.min.js"></script>
-    <script type="module" src="../../assets/js/ui/com/ui-util.js"></script>
-</head>
+    <link rel="stylesheet" href="../../assets/css/lib/ui-lib.css" />
+    <link rel="stylesheet" href="../../assets/css/ui/ui-util.css" />
 
-<body>
-    
+    <script
+      type="text/javascript"
+      src="../../assets/js/lib/jquery-1.12.4.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../../assets/js/lib/jquery-ui.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../../assets/js/lib/ui_plugin.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../../assets/js/lib/swiper-bundle.min.js"
+    ></script>
+    <script type="module" src="../../assets/js/ui/com/ui-util.js"></script>
+  </head>
+
+  <body>
     <!-- S:wrap -->
     <div class="wrap">
+      <!-- S:headerWrap -->
+      <div id="headerWrap" class="headerOn"></div>
+      <!-- E:headerWrap -->
 
-        <!-- S:headerWrap -->
-        <div id="headerWrap" class="headerOn"></div>
-        <!-- E:headerWrap -->
+      <!-- S:contentWrap -->
+      <div class="contentWrap">
+        <div class="contArea">
+          <section class="tit">Tab.Ver1 [ï¿½ï¿½Å©ï¿½ï¿½Æ®]</section>
 
-        <!-- S:contentWrap -->
-        <div class="contentWrap">
-
-            <div class="contArea">
-
-                <section class="tit">
-                    Tab.Ver1 [½ºÅ©¸³Æ®]
-                </section>
-
-                <div class="tab-container jsTab"><!--[D] jsTab Å¬·¡½º :: ½ºÅ©¸³Æ®-->
-                    <ul class="tab-list">
-                        <li class="tab-item active" data-tab="tab1" title="¼±ÅÃµÊ"><button type="button">ÅÇ 1</button></li>
-                        <li class="tab-item" data-tab="tab2"><button type="button">ÅÇ 2</button></li>
-                        <li class="tab-item" data-tab="tab3"><button type="button">ÅÇ 3</button></li>
-                    </ul>
-                    <div class="tab-content">
-                        <div id="tab1" class="tab-panel active">
-                            <p>ÅÇ 1ÀÇ ³»¿ë</p>
-                            <!-- ÅÇ ¾È¿¡ ÅÇ (ÁßÃ¸ ÅÇ) -->
-                            <div class="nested-tab-container nestedJsTab"><!--[D] nestedJsTab Å¬·¡½º :: ½ºÅ©¸³Æ®-->
-                                <ul class="nested-tab-list">
-                                    <li class="nested-tab-item active" data-tab="nested1" title="¼±ÅÃµÊ"><button type="button">¼­ºêÅÇ 1</button></li>
-                                    <li class="nested-tab-item" data-tab="nested2"><button type="button">¼­ºêºêÅÇ 2</button></li>
-                                </ul>
-                                <div class="nested-tab-content">
-                                    <div id="nested1" class="nested-tab-panel active">
-                                        <p>¼­ºê ÅÇ 1ÀÇ ³»¿ë</p>
-                                    </div>
-                                    <div id="nested2" class="nested-tab-panel">
-                                        <p>¼­ºê ÅÇ 2ÀÇ ³»¿ë</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab2" class="tab-panel">
-                            <p>ÅÇ 2ÀÇ ³»¿ë</p>
-                        </div>
-                        <div id="tab3" class="tab-panel">
-                            <p>ÅÇ 3ÀÇ ³»¿ë</p>
-                        </div>
+          <div class="tab-container jsTab">
+            <!--[D] jsTab Å¬ï¿½ï¿½ï¿½ï¿½ :: ï¿½ï¿½Å©ï¿½ï¿½Æ®-->
+            <ul class="tab-list">
+              <li class="tab-item active" data-tab="tab1" title="ï¿½ï¿½ï¿½Ãµï¿½">
+                <button type="button">ï¿½ï¿½ 1</button>
+              </li>
+              <li class="tab-item" data-tab="tab2">
+                <button type="button">ï¿½ï¿½ 2</button>
+              </li>
+              <li class="tab-item" data-tab="tab3">
+                <button type="button">ï¿½ï¿½ 3</button>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div id="tab1" class="tab-panel active">
+                <p>ï¿½ï¿½ 1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½</p>
+                <!-- ï¿½ï¿½ ï¿½È¿ï¿½ ï¿½ï¿½ (ï¿½ï¿½Ã¸ ï¿½ï¿½) -->
+                <div class="nested-tab-container nestedJsTab">
+                  <!--[D] nestedJsTab Å¬ï¿½ï¿½ï¿½ï¿½ :: ï¿½ï¿½Å©ï¿½ï¿½Æ®-->
+                  <ul class="nested-tab-list">
+                    <li
+                      class="nested-tab-item active"
+                      data-tab="nested1"
+                      title="ï¿½ï¿½ï¿½Ãµï¿½"
+                    >
+                      <button type="button">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1</button>
+                    </li>
+                    <li class="nested-tab-item" data-tab="nested2">
+                      <button type="button">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 2</button>
+                    </li>
+                  </ul>
+                  <div class="nested-tab-content">
+                    <div id="nested1" class="nested-tab-panel active">
+                      <p>ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ 1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½</p>
                     </div>
+                    <div id="nested2" class="nested-tab-panel">
+                      <p>ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ 2ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½</p>
+                    </div>
+                  </div>
                 </div>
-
-                <section class="tit">
-                    Tab.Ver2 [½ºÅ©¸³Æ®] :: Swiper
-                </section>
-
-                <section class="tab-container">
-
-                    <div class="tabs tab-area swiper">
-                        
-                        <ul class="swiper-pager tab-list">
-
-                        </ul>
-                        
-                        <div class="swiper-wrapper">
-
-                            <div class="swiper-slide">
-                                È­¸éÈ®ÀÎ¿ë : ½º¿ÍÀÌÆÛ ÄÁÅÙÃ÷ ¿µ¿ª 1
-                            </div>
-
-                            <div class="swiper-slide">
-                                È­¸éÈ®ÀÎ¿ë : ½º¿ÍÀÌÆÛ ÄÁÅÙÃ÷ ¿µ¿ª 2
-                            </div>
-
-                            <div class="swiper-slide">
-                                È­¸éÈ®ÀÎ¿ë : ½º¿ÍÀÌÆÛ ÄÁÅÙÃ÷ ¿µ¿ª 3
-                            </div>
-
-                            <div class="swiper-slide">
-                                È­¸éÈ®ÀÎ¿ë : ½º¿ÍÀÌÆÛ ÄÁÅÙÃ÷ ¿µ¿ª 4
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
+              </div>
+              <div id="tab2" class="tab-panel">
+                <p>ï¿½ï¿½ 2ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½</p>
+              </div>
+              <div id="tab3" class="tab-panel">
+                <p>ï¿½ï¿½ 3ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½</p>
+              </div>
             </div>
-            
-        </div>
-        <!-- E:contentWrap -->
+          </div>
 
-        <!--S:btmWrap-->
-        <div class="btmWrap">
-            
-            <div class="btm-btn-area">
-                <button type="button" class="btn btn-primary">·¹ÀÌ¾Æ¿ô</button>
+          <section class="tit">Tab.Ver2 [ï¿½ï¿½Å©ï¿½ï¿½Æ®] :: Swiper</section>
+
+          <section class="tab-container">
+            <div class="tabs tab-area swiper">
+              <ul class="swiper-pager tab-list"></ul>
+
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">È­ï¿½ï¿½È®ï¿½Î¿ï¿½ : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 1</div>
+
+                <div class="swiper-slide">È­ï¿½ï¿½È®ï¿½Î¿ï¿½ : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 2</div>
+
+                <div class="swiper-slide">È­ï¿½ï¿½È®ï¿½Î¿ï¿½ : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 3</div>
+
+                <div class="swiper-slide">È­ï¿½ï¿½È®ï¿½Î¿ï¿½ : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 4</div>
+              </div>
             </div>
-
-            <!-- s:footerWrap -->
-            <div id="footerWrap"></div>
-            <!-- e:footerWrap-->
-
+          </section>
         </div>
-        <!--E:btmWrap-->
+      </div>
+      <!-- E:contentWrap -->
 
+      <!--S:btmWrap-->
+      <div class="btmWrap">
+        <div class="btm-btn-area">
+          <button type="button" class="btn btn-primary">ï¿½ï¿½ï¿½Ì¾Æ¿ï¿½</button>
+        </div>
+
+        <!-- s:footerWrap -->
+        <div id="footerWrap"></div>
+        <!-- e:footerWrap-->
+      </div>
+      <!--E:btmWrap-->
     </div>
     <!-- E:wrap -->
+  </body>
 
-</body>
-
-<script>
+  <script>
     $(document).ready(function () {
-        $("#headerWrap").load("../include/inc_header.html");
-        $("#footerWrap").load("../include/inc_footer.html");
+      $("#headerWrap").load("../include/inc_header.html");
+      $("#footerWrap").load("../include/inc_footer.html");
     });
-</script>
-
+  </script>
 </html>

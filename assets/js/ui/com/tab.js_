@@ -1,5 +1,4 @@
 
-
 $(document).ready(function(){
 
     /**
@@ -11,7 +10,6 @@ $(document).ready(function(){
                 var $tabContainer = $(container);
                 var $tabs = $tabContainer.find('.tab-item, .nested-tab-item');
                 // var $panels = $tabContainer.find('.tab-panel, .nested-tab-panel');
-
 
                 // 초기 활성 탭
                 $tabs.each(function () {
@@ -54,7 +52,6 @@ $(document).ready(function(){
         };
     })();
 
-
     // 모든 탭 초기화
     $('.jsTab, .nestedJsTab').each(function () {
         Tabs.init(this);
@@ -80,21 +77,6 @@ $(document).ready(function(){
 
         return tabSwiper;
     })();
+
+
 });
-
-
-/* ----------모바일용 tab(select) jquery----------- */
-$(document).ready(function() {
-    var $mobileSelect = $('.tab-select-mobile select');
-    if ($mobileSelect.length) {
-        $mobileSelect.on('change', function() {
-            var selectedValue = $(this).val();
-            var $tabContainer = $(this).closest('.jsTab');
-            var $targetTab = $tabContainer.find('.tab-item[data-tab="' + selectedValue + '"]');
-            if ($targetTab.length) {
-                Tabs.switchTab($targetTab, $tabContainer);
-            }
-        });
-    }
-});
-
