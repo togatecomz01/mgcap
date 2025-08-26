@@ -1,8 +1,4 @@
-// 'ì„ íƒë¨' -> \uC120\uD0DD\uB428
-// 'ì˜ì—­'   -> \uC601\uC5ED
-// 'ì˜ì—­2'  -> \uC601\uC5ED2
-// 'ì˜ì—­3'  -> \uC601\uC5ED3
-// 'ì˜ì—­4'  -> \uC601\uC5ED4
+
 
 $(document).ready(function(){
 
@@ -16,19 +12,14 @@ $(document).ready(function(){
                 var $tabs = $tabContainer.find('.tab-item, .nested-tab-item');
                 // var $panels = $tabContainer.find('.tab-panel, .nested-tab-panel');
 
-
-                // ì´ˆê¸° í™œì„± íƒ­
+                // ÃÊ±â È°¼º ÅÇ
                 $tabs.each(function () {
                     var $tab = $(this);
                     var targetId = $tab.attr('data-tab');
                     var $panel = $('#' + targetId);
 
                     if ($tab.hasClass('active')) {
-
-                      
-
-                        $tab.attr('title', 'ì„ íƒë¨');
-
+                        $tab.attr('title', '¼±ÅÃµÊ');
                         $panel.show();
                     } else {
                         $tab.removeAttr('title');
@@ -47,62 +38,117 @@ $(document).ready(function(){
                 var $targetPanel = $('#' + targetId);
                 var isNested = $clickedTab.hasClass('nested-tab-item');
 
-
-                // ê°™ì€ ê·¸ë£¹ì˜ íƒ­ ì°¾ê¸°
+                // °°Àº ±×·ìÀÇ ÅÇ Ã£±â
                 var $allTabs = isNested ? $tabContainer.find('.nested-tab-item') : $tabContainer.find('.tab-item');
                 var $allPanels = isNested ? $tabContainer.find('.nested-tab-panel') : $tabContainer.find('.tab-panel');
 
-                // ê¸°ì¡´ íƒ­ ì´ˆê¸°í™”
+                // ±âÁ¸ ÅÇ ÃÊ±âÈ­
                 $allTabs.removeClass('active').removeAttr('title');
                 $allPanels.hide();
 
-                // ìƒˆ íƒ­ í™œì„±í™”
-                $clickedTab.addClass('active').attr('title', 'ì„ íƒë¨');
-
+                // »õ ÅÇ È°¼ºÈ­
+                $clickedTab.addClass('active').attr('title', '¼±ÅÃµÊ');
                 $targetPanel.show();
             }
         };
     })();
 
-
-
-    // ëª¨ë“  íƒ­ ì´ˆê¸°í™”
+    // ¸ğµç ÅÇ ÃÊ±âÈ­
     $('.jsTab, .nestedJsTab').each(function () {
         Tabs.init(this);
     });
 
     /**
-     *   TAB Swiper
+     *   TAB Swiper - IE11 È£È¯¼º Ã³¸®
     **/
     var tabSwiperL = (function () {
+        var pager = ['¿µ¿ª', '¿µ¿ª2', '¿µ¿ª3', '¿µ¿ª4'];
+        var tabSwiper = null;
 
-        var pager = ['ì˜ì—­', 'ì˜ì—­2', 'ì˜ì—­3', 'ì˜ì—­4'];
-
-
-        var tabSwiper = new Swiper('.tabs.tab-area.swiper', {
-            spaceBetween: 20,
-            autoHeight: true,
-            pagination: {
-                el: '.tabs ul',
-                clickable: true,
-                renderBullet: function (index, className) {
-                    return '<li class="tab-item ' + className + '">' + pager[index] + '</li>';
-                }
+        // Swiper°¡ Á¸ÀçÇÏ°í IE11ÀÌ ¾Æ´Ñ °æ¿ì¿¡¸¸ ÃÊ±âÈ­
+        if (typeof Swiper !== 'undefined' && !isIE11()) {
+            try {
+                tabSwiper = new Swiper('.tabs.tab-area.swiper', {
+                    spaceBetween: 20,
+                    autoHeight: true,
+                    pagination: {
+                        el: '.tabs ul',
+                        clickable: true,
+                        renderBullet: function (index, className) {
+                            return '<li class="tab-item ' + className + '">' + pager[index] + '</li>';
+                        }
+                    }
+                });
+            } catch (e) {
+                console.log('Swiper ÃÊ±âÈ­ ½ÇÆĞ:', e.message);
+                // Swiper ÃÊ±âÈ­ ½ÇÆĞ ½Ã ±âº» ÅÇ µ¿ÀÛÀ¸·Î Æú¹é
+                initFallbackTabs();
             }
-        });
+        } else {
+            // IE11ÀÌ°Å³ª Swiper°¡ ¾ø´Â °æ¿ì ±âº» ÅÇ µ¿ÀÛÀ¸·Î Æú¹é
+            initFallbackTabs();
+        }
 
         return tabSwiper;
     })();
-    /* ëª¨ë°”ì¼ìš© TAB(SELECT) */
-    var $mobileSelect = $('.tab-select-mobile select');
-        if ($mobileSelect.length) {
-            $mobileSelect.on('change', function() {
-                var selectedValue = $(this).val();
-                var $tabContainer = $(this).closest('.jsTab');
-                var $targetTab = $tabContainer.find('.tab-item[data-tab="' + selectedValue + '"]');
-                if ($targetTab.length) {
-                    Tabs.switchTab($targetTab, $tabContainer);
+
+    /**
+     * IE11 °¨Áö ÇÔ¼ö
+     */
+    function isIE11() {
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf('MSIE ');
+        var msie11 = ua.indexOf('Trident/');
+        return (msie > 0 || msie11 > 0);
+    }
+
+    /**
+     * Swiper ´ë½Å ±âº» ÅÇ µ¿ÀÛÀ¸·Î Æú¹é
+     */
+    function initFallbackTabs() {
+        var $swiperContainer = $('.tabs.tab-area.swiper');
+        if ($swiperContainer.length > 0) {
+            var $tabList = $swiperContainer.find('.swiper-pager.tab-list');
+            var $slides = $swiperContainer.find('.swiper-slide');
+            
+            // ±âº» ÅÇ ½ºÅ¸ÀÏ Àû¿ë
+            $tabList.find('li').each(function(index) {
+                var $tab = $(this);
+                var $slide = $slides.eq(index);
+                
+                // Ã¹ ¹øÂ° ÅÇ¸¸ È°¼ºÈ­
+                if (index === 0) {
+                    $tab.addClass('swiper-pagination-bullet-active');
+                    $slide.show();
+                } else {
+                    $slide.hide();
                 }
+                
+                // ÅÇ Å¬¸¯ ÀÌº¥Æ®
+                $tab.on('click', function() {
+                    $tabList.find('li').removeClass('swiper-pagination-bullet-active');
+                    $tab.addClass('swiper-pagination-bullet-active');
+                    $slides.hide();
+                    $slide.show();
+                });
             });
         }
+    }
+
+     /**
+     * ¸ğ¹ÙÀÏ
+     */
+
+    var $mobileSelect = $('.tab-select-mobile select');
+    if ($mobileSelect.length) {
+        $mobileSelect.on('change', function() {
+            var selectedValue = $(this).val();
+            var $tabContainer = $(this).closest('.jsTab');
+            var $targetTab = $tabContainer.find('.tab-item[data-tab="' + selectedValue + '"]');
+            if ($targetTab.length) {
+                Tabs.switchTab($targetTab, $tabContainer);
+            }
+        });
+    }
+
 });
