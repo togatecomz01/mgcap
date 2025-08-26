@@ -1,0 +1,78 @@
+@media all and (-ms-high-contrast: none) {
+    /* 기본 */
+    body { color: #454545; font-family:"Pretendard"}
+    form, fieldset, legend, input, button, textarea, label { color: #454545; }
+    input, textarea, select { color: #454545; }
+    input.form-control::placeholder,
+    input.form-control::-moz-placeholder,
+    input.form-control::-ms-input-placeholder,
+    textarea::placeholder { color:#999999; }
+
+    /* 공통 */
+    .contentWrap > .visual-content { border-bottom: 1px solid #E5E5EA; }
+
+    h2 > span { font-size: 1rem; color: #757575; }
+    h2 > em { font-size: 2rem; }
+
+    ul.step li > p { background: #E5E5EA; }
+    ul.step li.acitve > p { background: #41C7F4; color: #FFFFFF; }
+    ul.step li > p > em { font-size: 1.111rem; color:#333333; }
+    ul.step li > p > span { font-size: 0.778rem; }
+    ul.step li.acitve > p > em, ul.step li.acitve > p > span { color: #FFFFFF; }
+    ul.step li:before { background: url(../../../images/com/svg/ico_next.svg); }
+
+    h3 { color: #454545; font-size: 1.111rem; font-weight: 500; }
+
+    /* request 페이지 */
+    /* 탭 */
+    .tab-container .tab-item.active button, .nested-tab-container .nested-tab-item.active button { color: #2392FF; border-color: #2392FF; }
+    .tab-container .tab-item button, .nested-tab-container .nested-tab-item button { border: 1px solid #DDDDDD; background: #FFFFFF; }
+
+    /* 약관 */
+    /* 체크박스 */
+    ul.check-box input[type="checkbox"] { position: absolute; opacity: 0; width: 0; height: 0; }
+    ul.check-box label::before { content: ""; position: absolute; left: 30px; border-radius: 50%; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background-color: #DDDDDD; }
+    ul.check-box label::after { content: ""; position: absolute; left: 34.5px; top: 50%; transform: translateY(-50%); width: 13px; height: 10px; background: url(../../../images/com/svg/ico_check_white.svg) no-repeat center center; background-size: 100% 100%; }
+    ul.check-box input[type="checkbox"]:checked + label::before { background: #41C7F4; }
+    ul.check-box.terms li.check-all-area input[type="checkbox"] + label { font-weight: 500; }
+
+    ul.check-box.terms li input[type="checkbox"] + label { border: 1px solid #DDDDDD; }
+    ul.radio-box input[type="radio"] + label, ul.check-box input[type="checkbox"] + label { font-weight: 400; }
+
+    /* 내용보기 버튼 */
+    .form-group .modal { background: #FFFFFF; border: 1px solid #EEEEEE; color: #757575; font-size: 0.889rem; }
+
+    /* 상품구분 */
+    div.border-b1 ~ [class$="-content"]:not([class~="button-content"]) {border-top: 1px solid #E5E5EA;}
+
+    .form-group > label { color: #454545; font-size: 1.111rem; font-weight: 500; }
+    .se-select select { font-weight: 400; border: 1px solid #DDDDDD; background-color: #FFFFFF; background-image: url(../../../images/com/svg/ico_se_arrow.svg); color: #222222; }
+    .se-select select option { color: #222222; }
+    .btn-fake-slt { font-weight: 400; border: 1px solid #DDDDDD; background-color: #FFFFFF; background-image: url(../../../images/com/svg/ico_se_arrow.svg); color: #222222; }
+    .btn-fake-slt .placeholder { color: #999999; }
+    .form-group > label { color: #454545; font-size:1.111rem; font-weight: 500; }
+
+    /* 인풋 */
+    input.form-control:valid, .form-group.user-valid input.form-control { color: #222222; }
+    input.form-control, textarea { font-weight: 400; border: 1px solid #DDDDDD; background-color: #FFFFFF; color: #222222; }
+    .form-content > .form-wrap > .form-group + .form-group { margin-left: 40px; }
+
+    /* 보이스피싱 피해신고 안내 */
+    .info-content > .info-wrap { border: 1px solid #E5E5EA; }
+    .info-content > .info-wrap h3.info-title { font-size: 1.333rem; }
+    .info-content > .info-wrap h3.info-title::before { background-image: url(../../../images/com/svg/ico_info.svg); }
+    .info-content > .info-wrap h3.info-title { font-size: 1.333rem; }
+    .content-link { background: #FFFFFF; border: 1px solid #EEEEEE; color: #999999; font-size: 0.889rem; }
+    .info-content > .info-wrap p { color: #757575; font-size: 0.889rem; }
+    /* ul.radio-box input[type="radio"] { border: 7.5px solid #CCCCCC; background: #FFFFFF; border-radius: 50%; }
+    ul.radio-box input[type="radio"] + label, ul.check-box input[type="checkbox"] + label { font-weight: 400; color: #757575; }
+    ul.radio-box input[type="radio"]:checked { background: #FFFFFF; border: 7.5px solid #41C7F4; } */
+    ul.radio-box input[type="radio"] { position: absolute; opacity: 0; }
+    /* ul.radio-box input[type="radio"] + label { position: relative; padding-left: 30px; cursor: pointer; font-weight: 400; color: #757575; }
+    ul.radio-box input[type="radio"] + label::before { content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; border: 2px solid #ccc; border-radius: 50%; background: #fff; }
+    ul.radio-box input[type="radio"]:checked + label::after { content: ""; position: absolute; left: 4px; top: 50%; transform: translateY(-50%); width: 8px; height: 8px; border-radius: 50%; background: #41C7F4; } */
+
+    /* 버튼 */
+    .button-content .btn-primary { background-color: #6A6A6A; }
+    .btn-primary { color: #FFFFFF; }
+}
