@@ -11,14 +11,14 @@ $(document).ready(function(){
                 var $tabs = $tabContainer.find('.tab-item, .nested-tab-item');
                 // var $panels = $tabContainer.find('.tab-panel, .nested-tab-panel');
 
-                // ì´ˆê¸° í™œì„± íƒ­
+                // ì´ˆê¸° ?™œ?„± ?ƒ­
                 $tabs.each(function () {
                     var $tab = $(this);
                     var targetId = $tab.attr('data-tab');
                     var $panel = $('#' + targetId);
 
                     if ($tab.hasClass('active')) {
-                        $tab.attr('title', 'ì„ íƒë¨');
+                        $tab.attr('title', '?„ ?ƒ?¨');
                         $panel.show();
                     } else {
                         $tab.removeAttr('title');
@@ -37,22 +37,22 @@ $(document).ready(function(){
                 var $targetPanel = $('#' + targetId);
                 var isNested = $clickedTab.hasClass('nested-tab-item');
 
-                // ê°™ì€ ê·¸ë£¹ì˜ íƒ­ ì°¾ê¸°
+                // ê°™ì?? ê·¸ë£¹?˜ ?ƒ­ ì°¾ê¸°
                 var $allTabs = isNested ? $tabContainer.find('.nested-tab-item') : $tabContainer.find('.tab-item');
                 var $allPanels = isNested ? $tabContainer.find('.nested-tab-panel') : $tabContainer.find('.tab-panel');
 
-                // ê¸°ì¡´ íƒ­ ì´ˆê¸°í™”
+                // ê¸°ì¡´ ?ƒ­ ì´ˆê¸°?™”
                 $allTabs.removeClass('active').removeAttr('title');
                 $allPanels.hide();
 
-                // ìƒˆ íƒ­ í™œì„±í™”
-                $clickedTab.addClass('active').attr('title', 'ì„ íƒë¨');
+                // ?ƒˆ ?ƒ­ ?™œ?„±?™”
+                $clickedTab.addClass('active').attr('title', '?„ ?ƒ?¨');
                 $targetPanel.show();
             }
         };
     })();
 
-    // ëª¨ë“  íƒ­ ì´ˆê¸°í™”
+    // ëª¨ë“  ?ƒ­ ì´ˆê¸°?™”
     $('.jsTab, .nestedJsTab').each(function () {
         Tabs.init(this);
     });
@@ -61,7 +61,7 @@ $(document).ready(function(){
      *   TAB Swiper
     **/
     var tabSwiperL = (function () {
-        var pager = ['ì˜ì—­', 'ì˜ì—­2', 'ì˜ì—­3', 'ì˜ì—­4'];
+        var pager = ['?˜?—­', '?˜?—­2', '?˜?—­3', '?˜?—­4'];
 
         var tabSwiper = new Swiper('.tabs.tab-area.swiper', {
             spaceBetween: 20,
@@ -79,4 +79,19 @@ $(document).ready(function(){
     })();
 
 
+});
+
+/* ----------¸ğ¹ÙÀÏ¿ë tab(select) jquery----------- */
+$(document).ready(function() {
+    var $mobileSelect = $('.tab-select-mobile select');
+    if ($mobileSelect.length) {
+        $mobileSelect.on('change', function() {
+            var selectedValue = $(this).val();
+            var $tabContainer = $(this).closest('.jsTab');
+            var $targetTab = $tabContainer.find('.tab-item[data-tab="' + selectedValue + '"]');
+            if ($targetTab.length) {
+                Tabs.switchTab($targetTab, $tabContainer);
+            }
+        });
+    }
 });

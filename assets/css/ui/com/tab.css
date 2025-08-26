@@ -29,7 +29,6 @@
 /* .nested-tab-container .nested-tab-list { border-bottom: 1px solid #ccc; } */
 .nested-tab-container .nested-tab-item button { font-size: 14px; padding: 8px 15px; }
 
-
 /* 스와이퍼 탭  */
 .tab-container .swiper-pagination-bullet { width:auto; height:auto; border-radius:0; background:none; opacity:1; }
 
@@ -51,3 +50,23 @@
 .tab-container .swiper-pager.tab-list li.swiper-pagination-bullet-active { border-color:var(--active); background-color: var(--active); font-weight:700; color:var(--white); }
 .tab-container .swiper-pager.tab-list li.swiper-pagination-bullet-active a { color:var(--white); }
 
+
+/* 라인형 탭 (사회공헌 .line)*/
+.tab-container .tab-list.line .tab-item.active button {
+    background-color: var(--color-f);
+    border-color: var(--color-d); 
+    border-bottom-color: transparent; 
+    border-top: 2px solid var(--active); 
+    color: var(--active);
+    font-weight: 700;
+}
+.tab-container .tab-list.line .tab-item button {
+    background-color: #fdfdfd; /* 따로 변수값 정해둔게 없어서 고정 rgb값 */
+    border-left: none;
+}
+.tab-container .tab-list.line .tab-item:first-child button {
+    border-left: 1px solid var(--color-d);
+}
+.tab-container .tab-list.line .tab-item:hover {
+    background: none; /* 일단 호버 동작이 피그마에 명시되어 있지 않아서 제외 */
+}
