@@ -1,4 +1,8 @@
-
+// 'ì„ íƒë¨' -> \uC120\uD0DD\uB428
+// 'ì˜ì—­'   -> \uC601\uC5ED
+// 'ì˜ì—­2'  -> \uC601\uC5ED2
+// 'ì˜ì—­3'  -> \uC601\uC5ED3
+// 'ì˜ì—­4'  -> \uC601\uC5ED4
 
 $(document).ready(function(){
 
@@ -13,14 +17,18 @@ $(document).ready(function(){
                 // var $panels = $tabContainer.find('.tab-panel, .nested-tab-panel');
 
 
-                // ì´ˆê¸° ?™œ?„± ?ƒ­
+                // ì´ˆê¸° í™œì„± íƒ­
                 $tabs.each(function () {
                     var $tab = $(this);
                     var targetId = $tab.attr('data-tab');
                     var $panel = $('#' + targetId);
 
                     if ($tab.hasClass('active')) {
-                        $tab.attr('title', '?„ ?ƒ?¨');
+
+                      
+
+                        $tab.attr('title', 'ì„ íƒë¨');
+
                         $panel.show();
                     } else {
                         $tab.removeAttr('title');
@@ -39,23 +47,26 @@ $(document).ready(function(){
                 var $targetPanel = $('#' + targetId);
                 var isNested = $clickedTab.hasClass('nested-tab-item');
 
-                // ê°™ì?? ê·¸ë£¹?˜ ?ƒ­ ì°¾ê¸°
+
+                // ê°™ì€ ê·¸ë£¹ì˜ íƒ­ ì°¾ê¸°
                 var $allTabs = isNested ? $tabContainer.find('.nested-tab-item') : $tabContainer.find('.tab-item');
                 var $allPanels = isNested ? $tabContainer.find('.nested-tab-panel') : $tabContainer.find('.tab-panel');
 
-                // ê¸°ì¡´ ?ƒ­ ì´ˆê¸°?™”
+                // ê¸°ì¡´ íƒ­ ì´ˆê¸°í™”
                 $allTabs.removeClass('active').removeAttr('title');
                 $allPanels.hide();
 
-                // ?ƒˆ ?ƒ­ ?™œ?„±?™”
-                $clickedTab.addClass('active').attr('title', '?„ ?ƒ?¨');
+                // ìƒˆ íƒ­ í™œì„±í™”
+                $clickedTab.addClass('active').attr('title', 'ì„ íƒë¨');
+
                 $targetPanel.show();
             }
         };
     })();
 
 
-    // ëª¨ë“  ?ƒ­ ì´ˆê¸°?™”
+
+    // ëª¨ë“  íƒ­ ì´ˆê¸°í™”
     $('.jsTab, .nestedJsTab').each(function () {
         Tabs.init(this);
     });
@@ -64,7 +75,9 @@ $(document).ready(function(){
      *   TAB Swiper
     **/
     var tabSwiperL = (function () {
-        var pager = ['?˜?—­', '?˜?—­2', '?˜?—­3', '?˜?—­4'];
+
+        var pager = ['ì˜ì—­', 'ì˜ì—­2', 'ì˜ì—­3', 'ì˜ì—­4'];
+
 
         var tabSwiper = new Swiper('.tabs.tab-area.swiper', {
             spaceBetween: 20,
@@ -80,7 +93,7 @@ $(document).ready(function(){
 
         return tabSwiper;
     })();
-    /* ¸ğ¹ÙÀÏ¿ë TAB(SELECT) */
+    /* ëª¨ë°”ì¼ìš© TAB(SELECT) */
     var $mobileSelect = $('.tab-select-mobile select');
         if ($mobileSelect.length) {
             $mobileSelect.on('change', function() {
@@ -93,7 +106,3 @@ $(document).ready(function(){
             });
         }
 });
-
-
-
-
