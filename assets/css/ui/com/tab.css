@@ -74,6 +74,7 @@
   font-weight: bold;
 }
 
+
 /* ø  Ÿ */
 .nested-tab-container {
   margin-top: 15px;
@@ -94,6 +95,7 @@
   background: none;
   opacity: 1;
 }
+
 
 .tab-container .swiper-pager {
   background: var(--white);
@@ -123,6 +125,28 @@
   margin-right: 0;
 }
 
+
+/* ������ �� (��ȸ���� .line)*/
+.tab-container .tab-list.line .tab-item.active button {
+    background-color: var(--color-f);
+    border-color: var(--color-d); 
+    border-bottom-color: transparent; 
+    border-top: 2px solid var(--active); 
+    color: var(--active);
+    font-weight: 700;
+}
+.tab-container .tab-list.line .tab-item button {
+    background-color: #fdfdfd; /* ���� ������ ���صа� ��� ���� rgb�� */
+    border-left: none;
+}
+.tab-container .tab-list.line .tab-item:first-child button {
+    border-left: 1px solid var(--color-d);
+}
+.tab-container .tab-list.line .tab-item:hover {
+    background: none; /* �ϴ� ȣ�� ������ �Ǳ׸��� ���õǾ� ���� �ʾƼ� ���� */
+}
+/*라인 끝(250826)*/
+
 .tab-container .swiper-pager.tab-list {
   gap: 10px;
   margin-bottom: 10px;
@@ -143,3 +167,4 @@
 .tab-container .swiper-pager.tab-list li.swiper-pagination-bullet-active a {
   color: var(--white);
 }
+
