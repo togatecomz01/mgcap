@@ -118,7 +118,6 @@
                                 </a>
                             </li>
                         </ul>
-
                         
                         <div class="btn-wrap">
                             <button type="button" class="btn-more">더보기 +</button>
@@ -143,52 +142,6 @@
 
     <!-- S: footer -->
     <footer id="footerWrap"></footer>
-
   </div>
-
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        
-        const tabContainer = document.querySelector('.tab-container');
-        if (!tabContainer) return; 
-
-        const mobileSelect = tabContainer.querySelector('.tab-select-mobile select');
-        const tabPanels = tabContainer.querySelectorAll('.tab-panel');
-        const tabItems = tabContainer.querySelectorAll('.tab-item'); 
-
-        function handleSelectChange() {
-            const selectedValue = mobileSelect.value;
-
-            // 1. 모든 탭 콘텐츠를 직접 숨깁니다. (클래스 대신 스타일 제어)
-            tabPanels.forEach(function(panel) {
-                panel.classList.remove('active');
-                panel.style.display = 'none'; // ★★★★★ 변경점 1 ★★★★★
-            });
-
-            // 2. 데스크탑 탭 버튼의 활성 상태도 모두 제거합니다.
-            tabItems.forEach(function(item) {
-                item.classList.remove('active');
-            });
-
-            // 3. 선택된 값과 일치하는 id를 가진 탭 콘텐츠를 직접 보여줍니다.
-            const targetPanel = document.getElementById(selectedValue);
-            if (targetPanel) {
-                targetPanel.classList.add('active');
-                targetPanel.style.display = 'block'; // ★★★★★ 변경점 2 ★★★★★
-            }
-
-            // 4. 데스크탑 탭 버튼에도 활성 상태를 동기화합니다.
-            const targetTabItem = tabContainer.querySelector('.tab-item[data-tab="' + selectedValue + '"]');
-            if (targetTabItem) {
-                targetTabItem.classList.add('active');
-            }
-        }
-
-        if (mobileSelect) {
-            mobileSelect.addEventListener('change', handleSelectChange);
-        }
-    });
-</script>
 </body>
 </html>
