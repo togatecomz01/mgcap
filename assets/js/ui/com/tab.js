@@ -1,8 +1,8 @@
-// '¼±ÅÃµÊ' -> \uC120\uD0DD\uB428
-// '¿µ¿ª'   -> \uC601\uC5ED
-// '¿µ¿ª2'  -> \uC601\uC5ED2
-// '¿µ¿ª3'  -> \uC601\uC5ED3
-// '¿µ¿ª4'  -> \uC601\uC5ED4
+// 'ì„ íƒë¨' -> \uC120\uD0DD\uB428
+// 'ì˜ì—­'   -> \uC601\uC5ED
+// 'ì˜ì—­2'  -> \uC601\uC5ED2
+// 'ì˜ì—­3'  -> \uC601\uC5ED3
+// 'ì˜ì—­4'  -> \uC601\uC5ED4
 
 $(document).ready(function(){
 
@@ -17,14 +17,18 @@ $(document).ready(function(){
                 // var $panels = $tabContainer.find('.tab-panel, .nested-tab-panel');
 
 
-                // ÃÊ±â È°¼º ÅÇ
+                // ì´ˆê¸° í™œì„± íƒ­
                 $tabs.each(function () {
                     var $tab = $(this);
                     var targetId = $tab.attr('data-tab');
                     var $panel = $('#' + targetId);
 
                     if ($tab.hasClass('active')) {
-                        $tab.attr('title', '¼±ÅÃµÊ');
+
+                      
+
+                        $tab.attr('title', 'ì„ íƒë¨');
+
                         $panel.show();
                     } else {
                         $tab.removeAttr('title');
@@ -43,23 +47,26 @@ $(document).ready(function(){
                 var $targetPanel = $('#' + targetId);
                 var isNested = $clickedTab.hasClass('nested-tab-item');
 
-                // °°Àº ±×·ìÀÇ ÅÇ Ã£±â
+
+                // ê°™ì€ ê·¸ë£¹ì˜ íƒ­ ì°¾ê¸°
                 var $allTabs = isNested ? $tabContainer.find('.nested-tab-item') : $tabContainer.find('.tab-item');
                 var $allPanels = isNested ? $tabContainer.find('.nested-tab-panel') : $tabContainer.find('.tab-panel');
 
-                // ±âÁ¸ ÅÇ ÃÊ±âÈ­
+                // ê¸°ì¡´ íƒ­ ì´ˆê¸°í™”
                 $allTabs.removeClass('active').removeAttr('title');
                 $allPanels.hide();
 
-                // »õ ÅÇ È°¼ºÈ­
-                $clickedTab.addClass('active').attr('title', '¼±ÅÃµÊ');
+                // ìƒˆ íƒ­ í™œì„±í™”
+                $clickedTab.addClass('active').attr('title', 'ì„ íƒë¨');
+
                 $targetPanel.show();
             }
         };
     })();
 
 
-    // ¸ğµç ÅÇ ÃÊ±âÈ­
+
+    // ëª¨ë“  íƒ­ ì´ˆê¸°í™”
     $('.jsTab, .nestedJsTab').each(function () {
         Tabs.init(this);
     });
@@ -68,7 +75,9 @@ $(document).ready(function(){
      *   TAB Swiper
     **/
     var tabSwiperL = (function () {
-        var pager = ['¿µ¿ª', '¿µ¿ª2', '¿µ¿ª3', '¿µ¿ª4'];
+
+        var pager = ['ì˜ì—­', 'ì˜ì—­2', 'ì˜ì—­3', 'ì˜ì—­4'];
+
 
         var tabSwiper = new Swiper('.tabs.tab-area.swiper', {
             spaceBetween: 20,
@@ -84,20 +93,16 @@ $(document).ready(function(){
 
         return tabSwiper;
     })();
-});
-
-
-/* ----------¸ğ¹ÙÀÏ¿ë tab(select) jquery----------- */
-$(document).ready(function() {
+    /* ëª¨ë°”ì¼ìš© TAB(SELECT) */
     var $mobileSelect = $('.tab-select-mobile select');
-    if ($mobileSelect.length) {
-        $mobileSelect.on('change', function() {
-            var selectedValue = $(this).val();
-            var $tabContainer = $(this).closest('.jsTab');
-            var $targetTab = $tabContainer.find('.tab-item[data-tab="' + selectedValue + '"]');
-            if ($targetTab.length) {
-                Tabs.switchTab($targetTab, $tabContainer);
-            }
-        });
-    }
+        if ($mobileSelect.length) {
+            $mobileSelect.on('change', function() {
+                var selectedValue = $(this).val();
+                var $tabContainer = $(this).closest('.jsTab');
+                var $targetTab = $tabContainer.find('.tab-item[data-tab="' + selectedValue + '"]');
+                if ($targetTab.length) {
+                    Tabs.switchTab($targetTab, $tabContainer);
+                }
+            });
+        }
 });

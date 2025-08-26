@@ -113,7 +113,6 @@ main.contentWrap > div > section:last-child { margin-bottom:140px; } /* 250826 ¼
 
 .ar { position:absolute; right:0; top:-34px; }
 
-
 /**title**/
 h2 > em {  display:block; margin-bottom:12px; font-size:var(--font36);  }
 h2 > span { display:block; font-size:var(--font18); font-weight:normal; color:var(--color-75); }
