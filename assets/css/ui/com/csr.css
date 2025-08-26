@@ -49,8 +49,6 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-
-    
     padding-bottom: 10px;
 }
 
@@ -126,12 +124,12 @@
     }
 
     .social-intro h3 {
-        font-size: var(--font22);
+        font-size: var(--font28);
     }
     
     
     .social-list .text-content h4 {
-        font-size: 16px; /* rem이라 고정값 안주면 화면 사이즈에 따라 px값이 변함 (임시로 1부분만 고정, 피드백 받고 전체 수정 or 변수값 그대로 사용) */
+        font-size: 1.143rem; /* rem이라 고정값 안주면 화면 사이즈에 따라 px값이 변함 (임시로 1부분만 고정, 피드백 받고 전체 수정 or 변수값 그대로 사용) */
     }
     .social-list li a {
         flex-direction: column; 
