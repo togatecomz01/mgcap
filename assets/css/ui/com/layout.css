@@ -107,14 +107,12 @@ div.border-b1 ~ [class$="-content"] { margin-top:72px; padding:54px 0 0; border-
 
 main.contentWrap > div > section { margin-top:72px; }
 main.contentWrap > div > section ~ section { margin-top:0; }
-<<<<<<< HEAD
-main.contentWrap > div > section:last-child{ margin-bottom:140px; }
-=======
+
 main.contentWrap > div > section:last-chld { margin-bottom:140px; }
 /*main.contentWrap > div > section div { position:relative; }*/
 
 .ar { position:absolute; right:0; top:-34px; }
->>>>>>> b62c4bf (업로드)
+
 
 
 /**title**/
