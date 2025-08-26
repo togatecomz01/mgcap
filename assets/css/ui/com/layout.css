@@ -176,6 +176,7 @@ ul.step li > p > span { font-size:var(--font14); color:var(--color-45); }
 
 /* 팝업_콘텐츠 */
 .layerPopup .pop-con-wrap { width:auto; height:100%; padding:38px; overflow-y: auto; background-color: var(--white); border-bottom:1px solid var(--border);  }
+.layerPopup .pop-con-wrap > h5 { margin-top: 20px; }
 .layerPopup.on { display:block; visibility: visible;  opacity: 1; }/*스크립트 :: display:block; 방지*/
 .pop-btm-wrap { padding:38px; background:var(--white); }
 .layerPopup .pop-header.on,
