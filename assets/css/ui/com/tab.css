@@ -18,7 +18,7 @@
   border-left-width: none;
   background: var(--color-f);
   margin-right: 0;
-  transition: all 0.3s ease; /* ÀÌ°Å¶§¹®¿¡ border-top ±½±âµµ ´À¸®°Ô º¯ÇØ¼­ all ¼Ó¼º ¸»°í ´Ù¸£°Ô ÇÏ´Â°Ô ÁÁÀ»µí ÇÔ */
+  transition: all 0.3s ease; /* all ¼Ó¼ºÀÌ border-topÂÊ¿¡µµ ¿µÇâÀ» Áà¼­ ¼Ó¼ºÀ» Á» ¼¼ºÎÀûÀ¸·Î °¡¾ßÇÒµí ÇÔ */
 }
 .tab-container .tab-item:first-child button,
 .nested-tab-container .nested-tab-item:first-child button {
@@ -37,7 +37,7 @@
   font-weight: 500;
 }
 
-/* ?ƒ­ ì½˜í…ì¸? ?˜?—­ */
+/* ÅÇ ÄÜÅÙÃ÷ ¿µ¿ª */
 .tab-container .tab-content,
 .nested-tab-container .nested-tab-content {
   padding: 0;
@@ -45,14 +45,14 @@
 }
 .tab-container .tab-panel,
 .nested-tab-container .nested-tab-panel {
-  display: none; /* ê¸°ë³¸? ?œ¼ë¡? ?ˆ¨ê¹? */
+  display: none; /* ±âº»ÀûÀ¸·Î ¼û±è */
 }
 .tab-container .tab-panel.active,
 .nested-tab-container .nested-tab-panel.active {
-  display: block; /* ?™œ?„±?™”?œ ?Œ¨?„ë§? ë³´ì´ê²? ?•¨ */
+  display: block; /* È°¼ºÈ­µÈ ÆĞ³Î¸¸ º¸ÀÌ°Ô ÇÔ */
 }
 
-/* tab_test.html?š© ?Š¤????¼ */
+/* tab_test.html¿ë ½ºÅ¸ÀÏ */
 .tabs .tab-content {
   display: none;
 }
@@ -145,7 +145,7 @@
 .tab-container .tab-list.line .tab-item:hover {
     background: none; /* ï¿½Ï´ï¿½ È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç±×¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÃµÇ¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾Æ¼ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 }
-/*?¼?¸ ?(250826)*/
+/* ¶óÀÎ ³¡(250826) */
 
 .tab-container .swiper-pager.tab-list {
   gap: 10px;
