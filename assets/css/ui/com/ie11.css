@@ -78,13 +78,13 @@
     .info-content > .info-wrap h3.info-title { font-size: 1.333rem; }
     .content-link { background: #FFFFFF; border: 1px solid #EEEEEE; color: #999999; font-size: 0.889rem; }
     .info-content > .info-wrap p { color: #757575; font-size: 0.889rem; }
-    /* ul.radio-box input[type="radio"] { border: 7.5px solid #CCCCCC; background: #FFFFFF; border-radius: 50%; }
-    ul.radio-box input[type="radio"] + label, ul.check-box input[type="checkbox"] + label { font-weight: 400; color: #757575; }
-    ul.radio-box input[type="radio"]:checked { background: #FFFFFF; border: 7.5px solid #41C7F4; } */
+
+    ul.radio-box > li { margin-left: 32px; }
     ul.radio-box input[type="radio"] { position: absolute; opacity: 0; }
-    /* ul.radio-box input[type="radio"] + label { position: relative; padding-left: 30px; cursor: pointer; font-weight: 400; color: #757575; }
-    ul.radio-box input[type="radio"] + label::before { content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; border: 2px solid #ccc; border-radius: 50%; background: #fff; }
-    ul.radio-box input[type="radio"]:checked + label::after { content: ""; position: absolute; left: 4px; top: 50%; transform: translateY(-50%); width: 8px; height: 8px; border-radius: 50%; background: #41C7F4; } */
+    ul.radio-box input[type="radio"] + label { font-weight: 400; color: #757575; line-height: 24px; }
+    ul.radio-box input[type="radio"]:checked + label { color: #454545; }
+    ul.radio-box input[type="radio"] + label::before { content: ""; display: inline-block; vertical-align: middle; width: 24px; height: 24px; border-radius: 50%; box-sizing: border-box; border: 7.5px solid #CCCCCC; background: #fff; margin-right: 8px; }
+    ul.radio-box input[type="radio"]:checked + label::before { border: 7.5px solid #41C7F4; }
 
     /* 버튼 */
     .button-content .btn-primary { background-color: #6A6A6A; }
@@ -103,8 +103,31 @@
     /* 간편인증 */
     .auth-list li { width: calc(25% - 36px); margin-right: 36px; margin-bottom: 36px; }
     .auth-list li:nth-child(4n) { margin-right: 0; }
-    @media (max-width: 768px) {
-        .auth-list li { width: calc(50% - 18px); margin-right: 18px; }
-        .auth-list li:nth-child(2n) { margin-right: 0; }
+}
+
+    @media (max-width: 960px) {
+.se-select[data-stove=select] div.stove-option-layer {background-color: #ffffff; display: block; height: auto;max-height: 100%; /* 필요 시 JS로 높이 계산 */
+}
+
     }
+
+
+    @media (max-width: 768px) {
+        /* 체크박스 */
+        ul.check-box label::before { left: 15px; width: 20px; height: 20px; }
+        ul.check-box label::after { left: 15px; width: 7px; height: 4px; }
+        ul.check-box.terms li input[type="checkbox"] + label::after { background-image: url(../../../images/com/svg/ico_move.svg); background-repeat: no-repeat; background-size: auto 10.4px; top: 50%; right: 16px; transform: translateY(-50%); -webkit-mask-image: url(../../../images/com/svg/ico_move.svg); }
+        
+        /*  */
+        .form-content > .form-wrap > .form-group + .form-group { margin-left: 0; }
+
+        /* 팝업 */
+        .layerPopup .pop-con-wrap { height: 75vh; }
+
+        /* 간편인증 */
+        .auth-list li { width: calc(50% - 9px); margin-right: 18px; }
+        .auth-list li:nth-child(2n) { margin-right: 0; }
+
+        /* 버튼 */
+        .button-content .btn-primary { background-color: #2392FF; }
 }
