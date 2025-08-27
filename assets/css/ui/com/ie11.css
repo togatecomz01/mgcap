@@ -23,12 +23,12 @@
 
     h3 { color: #454545; font-size: 1.111rem; font-weight: 500; }
 
-    /* request ?��?���? */
-    /* ?�� */
+    /* request 페이지 */
+    /* 탭 */
     .tab-container .tab-item.active button, .nested-tab-container .nested-tab-item.active button { color: #2392FF; border-color: #2392FF; }
     .tab-container .tab-item button, .nested-tab-container .nested-tab-item button { border: 1px solid #DDDDDD; background: #FFFFFF; }
 
-    /* ?���? */
+    /* 약관 */
     /* 체크박스 */
     ul.check-box input[type="checkbox"] { position: absolute; opacity: 0; width: 0; height: 0; }
     ul.check-box label::before { content: ""; position: absolute; left: 30px; border-radius: 50%; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background-color: #DDDDDD; }
@@ -39,10 +39,10 @@
     ul.check-box.terms li input[type="checkbox"] + label { border: 1px solid #DDDDDD; }
     ul.radio-box input[type="radio"] + label, ul.check-box input[type="checkbox"] + label { font-weight: 400; }
 
-    /* ?��?��보기 버튼 */
+    /* 내용보기 버튼 */
     .form-group .modal { background: #FFFFFF; border: 1px solid #EEEEEE; color: #757575; font-size: 0.889rem; }
 
-    /* ?��?��구분 */
+    /* 상품구분 */
     div.border-b1 ~ [class$="-content"]:not([class~="button-content"]) {border-top: 1px solid #E5E5EA;}
 
     .form-group > label { color: #454545; font-size: 1.111rem; font-weight: 500; }
@@ -52,12 +52,12 @@
     .btn-fake-slt .placeholder { color: #999999; }
     .form-group > label { color: #454545; font-size:1.111rem; font-weight: 500; }
 
-    /* ?��?�� */
+    /* 인풋 */
     input.form-control:valid, .form-group.user-valid input.form-control { color: #222222; }
     input.form-control, textarea { font-weight: 400; border: 1px solid #DDDDDD; background-color: #FFFFFF; color: #222222; }
     .form-content > .form-wrap > .form-group + .form-group { margin-left: 40px; }
 
-    /* 보이?��?��?�� ?��?��?���? ?��?�� */
+    /* 보이스피싱 */
     .info-content > .info-wrap { border: 1px solid #E5E5EA; }
     .info-content > .info-wrap h3.info-title { font-size: 1.333rem; }
     .info-content > .info-wrap h3.info-title::before { background-image: url(../../../images/com/svg/ico_info.svg); }
@@ -75,215 +75,4 @@
     /* 버튼 */
     .button-content .btn-primary { background-color: #6A6A6A; }
     .btn-primary { color: #FFFFFF; }
-}
-
-/* ============================================= */
-/*       IE11 ȣȯ ��ȸ���� ������ ��Ÿ��         */
-/* ============================================= */
-
-/* IE11�� CSS ����(var)�� �������� �����Ƿ�, ���� ������ ��ü�մϴ�. */
-
-.social-intro {
-    padding-top: 30px;
-    padding-bottom: 72px;
-}
-
-.social-intro h3 {
-    font-size: 1.444rem; /* var(--font26) */
-    font-weight: 500;    /* var(--font-w-m) */
-    color: #222222;      /* var(--color-2) */
-    margin-bottom: 24px;
-    line-height: 1.5;
-}
-.social-intro h3 em {
-    font-weight: 700;
-}
-
-.social-intro p {
-    font-size: 1rem;     /* var(--font18) */
-    color: #666666;      /* var(--color-6) */
-    line-height: 1.6;
-    max-width: 800px;
-}
-
-
-/* ��ȸ���� Ȱ�� ��� */
-.social-list li {
-    border-bottom: 1px solid #E5E5EA; /* var(--border) */
-}
-
-.social-list li a {
-    display: -ms-flexbox; /* IE10, 11�� ���� Flexbox ���λ� */
-    display: flex; 
-    padding: 25px 0;
-    padding-top: 52px;
-    padding-bottom: 10px;
-}
-.social-list li:first-child a {
-    padding-top: 0;
-}
-
-.social-list .thumbnail {
-    -ms-flex: 1; /* IE10 ���λ� */
-    flex: 1;
-    height: 150px;
-    background-color: #f0f0f0;
-    -ms-flex-negative: 0; /* IE11 ���� ������ ���λ� */
-    flex-shrink: 0;
-    /* IE11�� gap�� �������� �����Ƿ�, ������ �������� ������ ��ü�մϴ�. */
-    margin-right: 30px; 
-}
-
-.social-list .text-content {
-    -ms-flex: 1;
-    flex: 1;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    padding-bottom: 10px;
-    /* IE11�� flex auto margin ���׸� �ذ��ϱ� ���� position ����� ���� �������Դϴ�. */
-    position: relative; 
-    min-height: 150px; /* �θ��� ���̸�ŭ �ּ� ���̸� Ȯ���ؾ� position�� ����� �����մϴ�. */
-}
-
-.social-list .text-content h4 {
-    font-size: 1rem;
-    font-weight: 700;
-    color: #222222;
-    margin-top: 10px;
-    margin-bottom: 15px;
-}
-
-.social-list .text-content p {
-    font-size: 1rem;
-    color: #454545;
-    line-height: 1.5;
-    /* IE11�� -webkit-line-clamp�� �������� �����Ƿ�, ���� �������� ��ü�մϴ�. */
-    max-height: 3em; /* line-height * 2�� */
-    overflow: hidden;
-    width: 100%;
-}
-
-.social-list .text-content span {
-    font-size: 0.778rem; /* var(--font14) */
-    color: #999999;     /* var(--color-9) */
-    /* IE11���� �ϴ� ������ ���� ���� �������� ��� */
-    position: absolute;
-    bottom: 10px; /* .text-content�� padding-bottom�� ������ �� */
-    left: 0;
-}
-
-/* ������ ��ư */
-.btn-wrap {
-    padding: 60px 0px 140px 0px;
-    text-align: center;
-}
-
-.btn-more {
-    display: inline-block; /* inline-flex�� IE11���� ���װ� ���� �� ���� */
-    vertical-align: middle;
-    width: auto;
-    min-height: 69px;
-    min-width: 220px;
-    padding: 17px 67px;
-    border: 1.5px solid #6a6a6a;
-    color: #454545;
-    font-size: 1.333rem; /* var(--font24) */
-    font-weight: 400;   /* var(--font-w-r) */
-    line-height: 1.5; /* min-height ������ ���� �߰� */
-}
-
-.btn-more:hover {
-    background-color: #F8F8F8; /* var(--color-f8) */
-}
-
-.tab-select-mobile {
-    display: none;
-}
-
-
-/* ������ (768px ����) */
-@media screen and (max-width: 768px) {
-    .social-intro {
-        padding-bottom: 35px;
-    }
-    /* .tab-container .tab-list {
-        display: none;
-    } */
-
-    .tab-select-mobile {
-        display: block;
-    }
-
-    .social-intro h3 {
-        font-size: 1.222rem; /* var(--font22) */
-    }
-        
-    .social-list .text-content h4 {
-        font-size: 16px;
-    }
-
-    .social-list li a {
-        /* flex-direction�� IE11���� ���װ� �����Ƿ�, block���� ��ȯ�ϴ� ���� �� �������Դϴ�. */
-        display: block;
-    }
-
-    .social-list .thumbnail {
-        width: 100%;
-        height: 180px;
-        margin-right: 0; /* ����ũž���� ��� ���� ���� */
-        margin-bottom: 15px; /* ���� �������� ��ü */
-    }
-
-    .social-list .text-content {
-        padding: 0;
-        min-height: 0; /* ����ũž���� ��� �ּ� ���� ���� */
-        position: static; /* position ���� */
-    }
-
-    .social-list .text-content span {
-        position: static; /* position ���� */
-        margin-top: 10px; 
-        text-align: right;
-        display: block; /* text-align ������ ���� block ��ҷ� ���� */
-    }
-
-    .btn-wrap {
-        padding-bottom:71px;
-    }
-}
-
-.tab-select-mobile select {
-    /* --- 1. ����� OS �⺻ ��Ÿ�� ���� --- */
-    -webkit-appearance: none; /* ũ��, ���ĸ�, ���� �� */
-    -moz-appearance: none;    /* ���̾����� */
-    appearance: none;         /* ǥ�� �Ӽ� */
-    
-    /* --- 2. IE11 ȣȯ ��Ÿ�� (CSS ���� ����) --- */
-    width: 100%;
-    height: auto;
-    padding: 16px 40px 16px 16px; /* IE11������ ���� ������ ���� �е� ���� */
-    border: 1px solid #DDDDDD;     /* var(--ipt-border) */
-    background-color: #FFFFFF;     /* var(--white) */
-    color: #222222;                /* var(--ipt-txt) */
-    
-    /* --- 3. ��Ʈ ũ�� ���� ���� (���� �߿�) --- */
-    /* ����Ͽ��� �ڵ� Ȯ��(Zoom)�� �����ϰ� �������� ���̱� ���� 16px �̻����� ���� */
-    font-size: 1.143rem; /* 16px (����� �⺻ ��Ʈ 14px ����) */
-    font-weight: 400;      /* var(--font-w-r) */
-    line-height: 1.5;      /* ���� �ؽ�Ʈ ���� ������ ���� �߰� */
-    
-    /* --- 4. ȭ��ǥ ������ ���� --- */
-    /* IE11�� background-image���� var()�� �� ���Ƿ� ���� ��θ� �����ؾ� �մϴ�. */
-    /* �Ʒ� url() ���� ��δ� ���� ������Ʈ�� �°� �������ּ���. */
-    background-image: url('../../../images/com/svg/ico_se_arrow.svg'); 
-    background-repeat: no-repeat;
-    background-size: 28px;
-    background-position: right 8px center;
-}
-
-/* IE10, 11 ����: �⺻���� �����Ǵ� ������ ȭ��ǥ�� �����մϴ�. */
-.tab-select-mobile select::-ms-expand {
-    display: none;
 }
