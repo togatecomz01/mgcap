@@ -23,12 +23,12 @@
 
     h3 { color: #454545; font-size: 1.111rem; font-weight: 500; }
 
-    /* request ?Ž˜?´ì§? */
-    /* ?ƒ­ */
+    /* request íŽ˜ì´ì§€ */
+    /* íƒ­ */
     .tab-container .tab-item.active button, .nested-tab-container .nested-tab-item.active button { color: #2392FF; border-color: #2392FF; }
     .tab-container .tab-item button, .nested-tab-container .nested-tab-item button { border: 1px solid #DDDDDD; background: #FFFFFF; }
 
-    /* ?•½ê´? */
+    /* ì•½ê´€ */
     /* ì²´í¬ë°•ìŠ¤ */
     ul.check-box input[type="checkbox"] { position: absolute; opacity: 0; width: 0; height: 0; }
     ul.check-box label::before { content: ""; position: absolute; left: 30px; border-radius: 50%; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background-color: #DDDDDD; }
@@ -39,10 +39,10 @@
     ul.check-box.terms li input[type="checkbox"] + label { border: 1px solid #DDDDDD; }
     ul.radio-box input[type="radio"] + label, ul.check-box input[type="checkbox"] + label { font-weight: 400; }
 
-    /* ?‚´?š©ë³´ê¸° ë²„íŠ¼ */
+    /* ë‚´ìš©ë³´ê¸° ë²„íŠ¼ */
     .form-group .modal { background: #FFFFFF; border: 1px solid #EEEEEE; color: #757575; font-size: 0.889rem; }
 
-    /* ?ƒ?’ˆêµ¬ë¶„ */
+    /* ìƒí’ˆêµ¬ë¶„ */
     div.border-b1 ~ [class$="-content"]:not([class~="button-content"]) {border-top: 1px solid #E5E5EA;}
 
     .form-group > label { color: #454545; font-size: 1.111rem; font-weight: 500; }
@@ -52,12 +52,12 @@
     .btn-fake-slt .placeholder { color: #999999; }
     .form-group > label { color: #454545; font-size:1.111rem; font-weight: 500; }
 
-    /* ?¸?’‹ */
+    /* ì¸í’‹ */
     input.form-control:valid, .form-group.user-valid input.form-control { color: #222222; }
     input.form-control, textarea { font-weight: 400; border: 1px solid #DDDDDD; background-color: #FFFFFF; color: #222222; }
     .form-content > .form-wrap > .form-group + .form-group { margin-left: 40px; }
 
-    /* ë³´ì´?Š¤?”¼?‹± ?”¼?•´?‹ ê³? ?•ˆ?‚´ */
+    /* ë³´ì´ìŠ¤í”¼ì‹± */
     .info-content > .info-wrap { border: 1px solid #E5E5EA; }
     .info-content > .info-wrap h3.info-title { font-size: 1.333rem; }
     .info-content > .info-wrap h3.info-title::before { background-image: url(../../../images/com/svg/ico_info.svg); }

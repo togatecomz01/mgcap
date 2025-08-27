@@ -114,9 +114,9 @@
     .social-intro {
         padding-bottom: 35px;
     }
-    .tab-container .tab-list {
+    /* .tab-container .tab-list {
         display: none;
-    }
+    } */
 
     .tab-select-mobile {
         display: block;
