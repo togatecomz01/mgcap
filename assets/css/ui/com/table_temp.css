@@ -79,9 +79,10 @@ tbody tr.tbl-total-row td { background-color: var(--tbl-bg-total) }
 
 .table-mobile .btn-fake-slt>*:not(.placeholder) {display: block;}
 .table-info-content > .info-wrap h3.info-title::before {width: 61px; height: 61px; background-size: 61px;}
-.table-info-content > .info-wrap {margin-bottom: 100px;}
+.table-info-content > .info-wrap {margin-bottom: 100px; padding: 24px;}
 .table-info-content .button-content { padding: 0; }
-.table-info-content .btmWrap { display: flex; text-align: start; }
+.table-info-content .btmWrap { display: flex; text-align: start; justify-content: space-between;} /* 250827 space-between 추가 */
+.table-info-content .button-wrap .btn-primary {max-width:170px; min-width: auto; padding: 0px 12px; white-space: nowrap; font-size: var(--font16);} /* 250827 선택자 추가 스타일링 */
 
 @media screen and (max-width:768px) {
     .table-info-content .btmWrap { display: block; }
