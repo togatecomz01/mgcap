@@ -1,6 +1,6 @@
 @charset "euc-kr";
 
-/* ï¿½ï¿½ ï¿½ï¿½ï¿½ */
+/* ï¿½ï¿½ ï¿½ï¿½ï¿? */
 .tab-container .tab-list,
 .nested-tab-container .nested-tab-list {
   display: flex;
@@ -18,7 +18,7 @@
   border-left-width: none;
   background: var(--color-f);
   margin-right: 0;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; /* ÀÌ°Å¶§¹®¿¡ border-top ±½±âµµ ´À¸®°Ô º¯ÇØ¼­ all ¼Ó¼º ¸»°í ´Ù¸£°Ô ÇÏ´Â°Ô ÁÁÀ»µí ÇÔ */
 }
 .tab-container .tab-item:first-child button,
 .nested-tab-container .nested-tab-item:first-child button {
@@ -37,7 +37,7 @@
   font-weight: 500;
 }
 
-/* íƒ­ ì½˜í…ì¸  ì˜ì—­ */
+/* ?ƒ­ ì½˜í…ì¸? ?˜?—­ */
 .tab-container .tab-content,
 .nested-tab-container .nested-tab-content {
   padding: 0;
@@ -45,14 +45,14 @@
 }
 .tab-container .tab-panel,
 .nested-tab-container .nested-tab-panel {
-  display: none; /* ê¸°ë³¸ì ìœ¼ë¡œ ìˆ¨ê¹€ */
+  display: none; /* ê¸°ë³¸? ?œ¼ë¡? ?ˆ¨ê¹? */
 }
 .tab-container .tab-panel.active,
 .nested-tab-container .nested-tab-panel.active {
-  display: block; /* í™œì„±í™”ëœ íŒ¨ë„ë§Œ ë³´ì´ê²Œ í•¨ */
+  display: block; /* ?™œ?„±?™”?œ ?Œ¨?„ë§? ë³´ì´ê²? ?•¨ */
 }
 
-/* tab_test.htmlìš© ìŠ¤íƒ€ì¼ */
+/* tab_test.html?š© ?Š¤????¼ */
 .tabs .tab-content {
   display: none;
 }
@@ -145,7 +145,7 @@
 .tab-container .tab-list.line .tab-item:hover {
     background: none; /* ï¿½Ï´ï¿½ È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç±×¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÃµÇ¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾Æ¼ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 }
-/*ë¼ì¸ ë(250826)*/
+/*?¼?¸ ?(250826)*/
 
 .tab-container .swiper-pager.tab-list {
   gap: 10px;

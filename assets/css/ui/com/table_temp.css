@@ -78,8 +78,10 @@ tbody tr.tbl-total-row td { background-color: var(--tbl-bg-total) }
 .table-mobile .table-tit span { font-size: var(--font12); }
 
 .table-mobile .btn-fake-slt>*:not(.placeholder) {display: block;}
+.table-info-content > .info-wrap h3 {color: var(--color-2); font-weight: 700;} /* 250827 선택자 추가 , color, fw 수정*/
 .table-info-content > .info-wrap h3.info-title::before {width: 61px; height: 61px; background-size: 61px;}
 .table-info-content > .info-wrap {margin-bottom: 100px; padding: 24px;}
+.table-info-content > .info-wrap p {letter-spacing: -1px; color: var(--color-45);} /* 250827 letter-spacing 추가 */
 .table-info-content .button-content { padding: 0; }
 .table-info-content .btmWrap { display: flex; text-align: start; justify-content: space-between;} /* 250827 space-between 추가 */
 .table-info-content .button-wrap .btn-primary {max-width:170px; min-width: auto; padding: 0px 12px; white-space: nowrap; font-size: var(--font16);} /* 250827 선택자 추가 스타일링 */

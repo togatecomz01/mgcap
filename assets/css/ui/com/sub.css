@@ -25,11 +25,11 @@
 
 .product-detail h4 {
     margin-top: 38px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     padding-bottom: 20px;
     font-size: var(--font22); 
     font-weight: var(--font-w-b);
-    border-bottom: 1px solid var(--color-d, #ddd);
+    /* border-bottom: 1px solid var(--color-d, #ddd); */
 }
 
 .product-detail p {
@@ -42,6 +42,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    margin-bottom: 20px;
 }
 .product-detail .title-wrap h4 {
     margin: 0;
@@ -180,15 +181,14 @@
         justify-content: space-between;
         align-items: center;
         cursor: pointer;
+        padding-bottom: 18px;
     }
     .accordion-item .accordion-content {
         display: none; 
-        border-top: 1px solid #eee;
-        padding-top: 20px;
     }
     .accordion-item.on .accordion-content {
         display: block;
-        margin-top: 20px;
+
     }
 
     .accordion-item .tit .ic-arr {
