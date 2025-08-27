@@ -1,4 +1,4 @@
-@media all and (-ms-high-contrast: none) {
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     /* 기본 */
     body { color: #454545; font-family:"Pretendard"}
     form, fieldset, legend, input, button, textarea, label { color: #454545; }
@@ -37,12 +37,15 @@
     ul.check-box.terms li.check-all-area input[type="checkbox"] + label { font-weight: 500; }
 
     ul.check-box.terms li input[type="checkbox"] + label { border: 1px solid #DDDDDD; }
+    ul.check-box.terms li.check-all-area input[type="checkbox"] + label { font-weight: 500; }
+    ul.radio-box input[type="radio"] + label, ul.check-box input[type="checkbox"] + label { color: #757575; }
     ul.radio-box input[type="radio"] + label, ul.check-box input[type="checkbox"] + label { font-weight: 400; }
 
     /* 내용보기 버튼 */
     .form-group .modal { background: #FFFFFF; border: 1px solid #EEEEEE; color: #757575; font-size: 0.889rem; }
 
     /* 상품구분 */
+    .form-content:last-of-type { border-top: 1px solid #E5E5EA; }
     div.border-b1 ~ [class$="-content"]:not([class~="button-content"]) {border-top: 1px solid #E5E5EA;}
 
     .form-group > label { color: #454545; font-size: 1.111rem; font-weight: 500; }
@@ -51,11 +54,22 @@
     .btn-fake-slt { font-weight: 400; border: 1px solid #DDDDDD; background-color: #FFFFFF; background-image: url(../../../images/com/svg/ico_se_arrow.svg); color: #222222; }
     .btn-fake-slt .placeholder { color: #999999; }
     .form-group > label { color: #454545; font-size:1.111rem; font-weight: 500; }
+    .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option, .se-select[data-stove=select] div.stove-option-layer.on { background-color: #FFFFFF; font-size: 1rem; }
+    .se-select[data-stove=select] div.stove-option-layer, .se-select[data-stove=select] div.stove-option-layer.on {height: 400px;}
+    .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll { max-height: 100%; }
+
+    .se-select[data-stove=select] div.stove-option-layer { border: 1px solid #DDDDDD; }
+    .se-select[data-stove=select] { position: relative; }
+    .se-select[data-stove=select] div.stove-option-layer, .se-select[data-stove=select] div.stove-option-layer.on { bottom: auto; }
+    .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option:disabled { color: #ABABAB; }
+    .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option.on, .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option:hover { background-color: #EEF2F9; font-weight: 600; }
 
     /* 인풋 */
     input.form-control:valid, .form-group.user-valid input.form-control { color: #222222; }
     input.form-control, textarea { font-weight: 400; border: 1px solid #DDDDDD; background-color: #FFFFFF; color: #222222; }
     .form-content > .form-wrap > .form-group + .form-group { margin-left: 40px; }
+    input::placeholder { color: #999 !important; }
+    input:-ms-input-placeholder { color: #999 !important; }
 
     /* 보이스피싱 */
     .info-content > .info-wrap { border: 1px solid #E5E5EA; }
@@ -75,4 +89,22 @@
     /* 버튼 */
     .button-content .btn-primary { background-color: #6A6A6A; }
     .btn-primary { color: #FFFFFF; }
+
+    /* 팝업 */
+    .layerPopup.full.on::before, .layerPopup.btmSheet.on::before, .layerPopup.modal.on::before { background-color: rgba(0, 0, 0, 0.5); }
+    .layerPopup .pop-header { background-color: #FFFFFF; border-bottom: 1px solid #222222; }
+    .layerPopup .btn.btn-close { background: url(../../../images/com/svg/ico_close.svg) no-repeat 100% / 40px auto; }
+    .layerPopup .pop-con-wrap { background-color: #FFFFFF; border-bottom: 1px solid #E5E5EA; }
+    .pop-btm-wrap { background: #FFFFFF; }
+    .btm-btn-area, .btn-area { background-color: #FFFFFF; }
+    .layerPopup .btm-btn-area .btn { font-size: 1.333rem; }
+    .btn-primary { background-color: #222222; color: #FFFFFF; }
+    .layerPopup .pop-con-wrap { height: 70vh; }
+    /* 간편인증 */
+    .auth-list li { width: calc(25% - 36px); margin-right: 36px; margin-bottom: 36px; }
+    .auth-list li:nth-child(4n) { margin-right: 0; }
+    @media (max-width: 768px) {
+        .auth-list li { width: calc(50% - 18px); margin-right: 18px; }
+        .auth-list li:nth-child(2n) { margin-right: 0; }
+    }
 }
