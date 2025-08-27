@@ -28,6 +28,7 @@
         <link rel="stylesheet" href="../../assets/css/ui/ui-util.css" />
         <!-- 250821: 임시 css -->
         <link rel="stylesheet" href="../../assets/css/ui/com/table_temp.css" />
+        <link rel="stylesheet" href="../../assets/css/ui/com/ie11.css" />
 
         <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
         <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
@@ -36,6 +37,16 @@
         <script type="module" src="../../assets/js/ui/com/ui-util.js"></script>
         <script type="text/javascript" src="../../assets/js/ui/terms.js"></script>
         <script type="text/javascript" src="../../assets/js/ui/table_temp.js"></script>
+
+        <!-- fake select 별도 처리 -->
+        <script>
+            var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
+            if (isIE11) {
+                var s = document.createElement("script");
+                s.src = "../../assets/js/ui/com/fake_select.js";
+                document.head.appendChild(s);
+            }
+        </script>
     </head>
 
     <body>
