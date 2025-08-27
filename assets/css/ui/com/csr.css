@@ -79,7 +79,7 @@
 
 /* 더보기 버튼 */
 .btn-wrap {
-    padding: 60px 0px 140px 0px;
+    padding: 70px 0px 0px 0px;
     text-align: center;
 }
 
@@ -124,12 +124,12 @@
     }
 
     .social-intro h3 {
-        font-size: var(--font28);
+        font-size: var(--font28); /* 250827 , style변수값에 맞춰서 14px기준 rem 조정 */
     }
     
     
     .social-list .text-content h4 {
-        font-size: 1.143rem; /* rem이라 고정값 안주면 화면 사이즈에 따라 px값이 변함 (임시로 1부분만 고정, 피드백 받고 전체 수정 or 변수값 그대로 사용) */
+        font-size: var(--font20); /* 250827 , style변수값에 맞춰서 14px기준 rem 조정 */
     }
     .social-list li a {
         flex-direction: column; 
@@ -150,9 +150,5 @@
     .social-list .text-content span {
         margin-top: 10px; 
         text-align: right;
-    }
-
-    .btn-wrap {
-        padding-bottom:71px;
     }
 }

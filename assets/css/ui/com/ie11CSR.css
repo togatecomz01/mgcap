@@ -75,124 +75,145 @@
     /* 踰꾪듉 */
     .button-content .btn-primary { background-color: #6A6A6A; }
     .btn-primary { color: #FFFFFF; }
-}
 
 /* --------------------------------------------------공통 ie11 style end---------------------------------------------------------------------- */
 
 
 /*       IE11 호환 사회공헌 페이지 스타일         */
-
-.social-intro {
+    .social-intro {
     padding-top: 30px;
     padding-bottom: 72px;
-}
+    }
 
-.social-intro h3 {
-    font-size: 1.444rem; /* var(--font26) */
-    font-weight: 500;    /* var(--font-w-m) */
-    color: #222222;      /* var(--color-2) */
-    margin-bottom: 24px;
-    line-height: 1.5;
-}
-.social-intro h3 em {
-    font-weight: 700;
-}
+    .social-intro h3 {
+        font-size: 1.444rem; /* var(--font26) */
+        font-weight: 500;    /* var(--font-w-m) */
+        color: #222222;      /* var(--color-2) */
+        margin-bottom: 24px;
+        line-height: 1.5;
+    }
+    .social-intro h3 em {
+        font-weight: 700;
+    }
 
-.social-intro p {
-    font-size: 1rem;     /* var(--font18) */
-    color: #666666;      /* var(--color-6) */
-    line-height: 1.6;
-    max-width: 800px;
-}
+    .social-intro p {
+        font-size: 1rem;     /* var(--font18) */
+        color: #666666;      /* var(--color-6) */
+        line-height: 1.6;
+        max-width: 800px;
+    }
 
 
-/* 사회공헌 활동 목록 */
-.social-list li {
-    border-bottom: 1px solid #E5E5EA;
-}
+    /* 사회공헌 활동 목록 */
+    .social-list li {
+        border-bottom: 1px solid #E5E5EA;
+    }
 
-.social-list li a {
-    display: -ms-flexbox; 
-    display: flex; 
-    padding: 25px 0;
-    padding-top: 52px;
-    padding-bottom: 10px;
-}
-.social-list li:first-child a {
-    padding-top: 0;
-}
+    .social-list li a {
+        display: -ms-flexbox; 
+        display: flex; 
+        padding: 25px 0;
+        padding-top: 52px;
+        padding-bottom: 10px;
+    }
+    .social-list li:first-child a {
+        padding-top: 0;
+    }
 
-.social-list .thumbnail {
-    -ms-flex: 1;
-    flex: 1;
-    height: 150px;
-    background-color: #f0f0f0;
-    -ms-flex-negative: 0; 
-    flex-shrink: 0;
-    margin-right: 30px; 
-}
+    .social-list .thumbnail {
+        -ms-flex: 1;
+        flex: 1;
+        height: 150px;
+        background-color: #f0f0f0;
+        -ms-flex-negative: 0; 
+        flex-shrink: 0;
+        margin-right: 30px; 
+    }
 
-.social-list .text-content {
-    -ms-flex: 1;
-    flex: 1;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    padding-bottom: 10px;
-    position: relative; 
-    min-height: 150px; 
-}
+    .social-list .text-content {
+        -ms-flex: 1;
+        flex: 1;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-bottom: 10px;
+        position: relative; 
+        min-height: 150px; 
+    }
 
-.social-list .text-content h4 {
-    font-size: 1rem;
-    font-weight: 700;
-    color: #222222;
-    margin-top: 10px;
-    margin-bottom: 15px;
-}
+    .social-list .text-content h4 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #222222;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
 
-.social-list .text-content p {
-    font-size: 1rem;
-    color: #454545;
-    line-height: 1.5;
-    max-height: 3em; 
-    overflow: hidden;
-    width: 100%;
-}
+    .social-list .text-content p {
+        font-size: 1rem;
+        color: #454545;
+        line-height: 1.5;
+        max-height: 3em; 
+        overflow: hidden;
+        width: 100%;
+    }
 
-.social-list .text-content span {
-    font-size: 0.778rem; 
-    color: #999999;    
+    .social-list .text-content span {
+        font-size: 0.778rem; 
+        color: #999999;    
+        
+        position: absolute;
+        bottom: 10px; 
+        left: 0;
+    }
+
+    /* 더보기 버튼 */
+    .btn-wrap {
+        padding: 70px 0px 0px 0px;
+        text-align: center;
+    }
+
+    .btn-more {
+        display: inline-block;
+        vertical-align: middle;
+        width: auto;
+        min-height: 69px;
+        min-width: 220px;
+        padding: 17px 67px;
+        border: 1.5px solid #6a6a6a;
+        color: #454545;
+        font-size: 1.333rem; 
+        font-weight: 400;   
+        line-height: 1.5;
+        background-color: #ffffff;
+    }
+
+    .tab-select-mobile {
+        display: none;
+    }
     
-    position: absolute;
-    bottom: 10px; 
-    left: 0;
-}
-
-/* 더보기 버튼 */
-.btn-wrap {
-    padding: 60px 0px 140px 0px;
-    text-align: center;
-}
-
-.btn-more {
-    display: inline-block;
-    vertical-align: middle;
-    width: auto;
-    min-height: 69px;
-    min-width: 220px;
-    padding: 17px 67px;
-    border: 1.5px solid #6a6a6a;
-    color: #454545;
-    font-size: 1.333rem; 
-    font-weight: 400;   
-    line-height: 1.5;
-    background-color: #ffffff;
-}
-
-.tab-select-mobile {
-    display: none;
+    .tab-select-mobile select {
+        -webkit-appearance: none; 
+        -moz-appearance: none;   
+        appearance: none;         
+        width: 100%;
+        height: auto;
+        padding: 16px 40px 16px 16px; 
+        border: 1px solid #DDDDDD;     
+        background-color: #FFFFFF;     
+        color: #222222;                
+        font-size: 1.143rem;
+        font-weight: 400;      
+        line-height: 1.5;      
+        background-image: url('../../../images/com/svg/ico_se_arrow.svg'); 
+        background-repeat: no-repeat;
+        background-size: 28px;
+        background-position: right 8px center;
+    }
+    .tab-select-mobile select::-ms-expand {
+        display: none;
+    }
 }
 
 /* 반응형 (768px 이하) */
@@ -219,7 +240,6 @@
     }
 
     .social-list li a {
-        
         display: block;
     }
 
@@ -242,31 +262,8 @@
         text-align: right;
         display: block; 
     }
-
-    .btn-wrap {
-        padding-bottom:71px;
-    }
 }
 
-.tab-select-mobile select {
-    -webkit-appearance: none; 
-    -moz-appearance: none;   
-    appearance: none;         
-    width: 100%;
-    height: auto;
-    padding: 16px 40px 16px 16px; 
-    border: 1px solid #DDDDDD;     
-    background-color: #FFFFFF;     
-    color: #222222;                
-    font-size: 1.143rem;
-    font-weight: 400;      
-    line-height: 1.5;      
-    background-image: url('../../../images/com/svg/ico_se_arrow.svg'); 
-    background-repeat: no-repeat;
-    background-size: 28px;
-    background-position: right 8px center;
-}
-.tab-select-mobile select::-ms-expand {
-    display: none;
-}
+
+
 
