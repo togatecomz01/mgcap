@@ -23,12 +23,12 @@
 
     h3 { color: #454545; font-size: 1.111rem; font-weight: 500; }
 
-    /* request ?Ž˜?´ì§? */
-    /* ?ƒ­ */
+    /* request ?ï¿½ï¿½?ï¿½ï¿½ï¿½? */
+    /* ?ï¿½ï¿½ */
     .tab-container .tab-item.active button, .nested-tab-container .nested-tab-item.active button { color: #2392FF; border-color: #2392FF; }
     .tab-container .tab-item button, .nested-tab-container .nested-tab-item button { border: 1px solid #DDDDDD; background: #FFFFFF; }
 
-    /* ?•½ê´? */
+    /* ?ï¿½ï¿½ï¿½? */
     /* ì²´í¬ë°•ìŠ¤ */
     ul.check-box input[type="checkbox"] { position: absolute; opacity: 0; width: 0; height: 0; }
     ul.check-box label::before { content: ""; position: absolute; left: 30px; border-radius: 50%; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background-color: #DDDDDD; }
@@ -39,10 +39,10 @@
     ul.check-box.terms li input[type="checkbox"] + label { border: 1px solid #DDDDDD; }
     ul.radio-box input[type="radio"] + label, ul.check-box input[type="checkbox"] + label { font-weight: 400; }
 
-    /* ?‚´?š©ë³´ê¸° ë²„íŠ¼ */
+    /* ?ï¿½ï¿½?ï¿½ï¿½ë³´ê¸° ë²„íŠ¼ */
     .form-group .modal { background: #FFFFFF; border: 1px solid #EEEEEE; color: #757575; font-size: 0.889rem; }
 
-    /* ?ƒ?’ˆêµ¬ë¶„ */
+    /* ?ï¿½ï¿½?ï¿½ï¿½êµ¬ë¶„ */
     div.border-b1 ~ [class$="-content"]:not([class~="button-content"]) {border-top: 1px solid #E5E5EA;}
 
     .form-group > label { color: #454545; font-size: 1.111rem; font-weight: 500; }
@@ -52,12 +52,12 @@
     .btn-fake-slt .placeholder { color: #999999; }
     .form-group > label { color: #454545; font-size:1.111rem; font-weight: 500; }
 
-    /* ?¸?’‹ */
+    /* ?ï¿½ï¿½?ï¿½ï¿½ */
     input.form-control:valid, .form-group.user-valid input.form-control { color: #222222; }
     input.form-control, textarea { font-weight: 400; border: 1px solid #DDDDDD; background-color: #FFFFFF; color: #222222; }
     .form-content > .form-wrap > .form-group + .form-group { margin-left: 40px; }
 
-    /* ë³´ì´?Š¤?”¼?‹± ?”¼?•´?‹ ê³? ?•ˆ?‚´ */
+    /* ë³´ì´?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½ ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½ï¿½? ?ï¿½ï¿½?ï¿½ï¿½ */
     .info-content > .info-wrap { border: 1px solid #E5E5EA; }
     .info-content > .info-wrap h3.info-title { font-size: 1.333rem; }
     .info-content > .info-wrap h3.info-title::before { background-image: url(../../../images/com/svg/ico_info.svg); }
@@ -78,10 +78,10 @@
 }
 
 /* ============================================= */
-/*       IE11 È£È¯ »çÈ¸°øÇå ÆäÀÌÁö ½ºÅ¸ÀÏ         */
+/*       IE11 È£È¯ ï¿½ï¿½È¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å¸ï¿½ï¿½         */
 /* ============================================= */
 
-/* IE11Àº CSS º¯¼ö(var)¸¦ Áö¿øÇÏÁö ¾ÊÀ¸¹Ç·Î, ½ÇÁ¦ °ªÀ¸·Î ´ëÃ¼ÇÕ´Ï´Ù. */
+/* IE11ï¿½ï¿½ CSS ï¿½ï¿½ï¿½ï¿½(var)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½Õ´Ï´ï¿½. */
 
 .social-intro {
     padding-top: 30px;
@@ -107,13 +107,13 @@
 }
 
 
-/* »çÈ¸°øÇå È°µ¿ ¸ñ·Ï */
+/* ï¿½ï¿½È¸ï¿½ï¿½ï¿½ï¿½ È°ï¿½ï¿½ ï¿½ï¿½ï¿½ */
 .social-list li {
     border-bottom: 1px solid #E5E5EA; /* var(--border) */
 }
 
 .social-list li a {
-    display: -ms-flexbox; /* IE10, 11À» À§ÇÑ Flexbox Á¢µÎ»ç */
+    display: -ms-flexbox; /* IE10, 11ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Flexbox ï¿½ï¿½ï¿½Î»ï¿½ */
     display: flex; 
     padding: 25px 0;
     padding-top: 52px;
@@ -124,13 +124,13 @@
 }
 
 .social-list .thumbnail {
-    -ms-flex: 1; /* IE10 Á¢µÎ»ç */
+    -ms-flex: 1; /* IE10 ï¿½ï¿½ï¿½Î»ï¿½ */
     flex: 1;
     height: 150px;
     background-color: #f0f0f0;
-    -ms-flex-negative: 0; /* IE11 ¹ö±× ¹æÁö¿ë Á¢µÎ»ç */
+    -ms-flex-negative: 0; /* IE11 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î»ï¿½ */
     flex-shrink: 0;
-    /* IE11Àº gapÀ» Áö¿øÇÏÁö ¾ÊÀ¸¹Ç·Î, ¿À¸¥ÂÊ ¸¶ÁøÀ¸·Î °£°ÝÀ» ´ëÃ¼ÇÕ´Ï´Ù. */
+    /* IE11ï¿½ï¿½ gapï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½Õ´Ï´ï¿½. */
     margin-right: 30px; 
 }
 
@@ -142,9 +142,9 @@
     -ms-flex-direction: column;
     flex-direction: column;
     padding-bottom: 10px;
-    /* IE11ÀÇ flex auto margin ¹ö±×¸¦ ÇØ°áÇÏ±â À§ÇØ position »ç¿ëÀÌ °¡Àå ¾ÈÁ¤ÀûÀÔ´Ï´Ù. */
+    /* IE11ï¿½ï¿½ flex auto margin ï¿½ï¿½ï¿½×¸ï¿½ ï¿½Ø°ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ position ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. */
     position: relative; 
-    min-height: 150px; /* ºÎ¸ðÀÇ ³ôÀÌ¸¸Å­ ÃÖ¼Ò ³ôÀÌ¸¦ È®º¸ÇØ¾ß positionÀÌ Á¦´ë·Î µ¿ÀÛÇÕ´Ï´Ù. */
+    min-height: 150px; /* ï¿½Î¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¸ï¿½Å­ ï¿½Ö¼ï¿½ ï¿½ï¿½ï¿½Ì¸ï¿½ È®ï¿½ï¿½ï¿½Ø¾ï¿½ positionï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½. */
 }
 
 .social-list .text-content h4 {
@@ -159,8 +159,8 @@
     font-size: 1rem;
     color: #454545;
     line-height: 1.5;
-    /* IE11Àº -webkit-line-clamp¸¦ Áö¿øÇÏÁö ¾ÊÀ¸¹Ç·Î, ³ôÀÌ Á¦ÇÑÀ¸·Î ´ëÃ¼ÇÕ´Ï´Ù. */
-    max-height: 3em; /* line-height * 2ÁÙ */
+    /* IE11ï¿½ï¿½ -webkit-line-clampï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½Õ´Ï´ï¿½. */
+    max-height: 3em; /* line-height * 2ï¿½ï¿½ */
     overflow: hidden;
     width: 100%;
 }
@@ -168,20 +168,20 @@
 .social-list .text-content span {
     font-size: 0.778rem; /* var(--font14) */
     color: #999999;     /* var(--color-9) */
-    /* IE11¿¡¼­ ÇÏ´Ü Á¤·ÄÀ» À§ÇÑ °¡Àå ¾ÈÁ¤ÀûÀÎ ¹æ¹ý */
+    /* IE11ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ */
     position: absolute;
-    bottom: 10px; /* .text-contentÀÇ padding-bottom°ú µ¿ÀÏÇÑ °ª */
+    bottom: 10px; /* .text-contentï¿½ï¿½ padding-bottomï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ */
     left: 0;
 }
 
-/* ´õº¸±â ¹öÆ° */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ° */
 .btn-wrap {
     padding: 60px 0px 140px 0px;
     text-align: center;
 }
 
 .btn-more {
-    display: inline-block; /* inline-flex´Â IE11¿¡¼­ ¹ö±×°¡ ÀÖÀ» ¼ö ÀÖÀ½ */
+    display: inline-block; /* inline-flexï¿½ï¿½ IE11ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½×°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
     vertical-align: middle;
     width: auto;
     min-height: 69px;
@@ -191,7 +191,7 @@
     color: #454545;
     font-size: 1.333rem; /* var(--font24) */
     font-weight: 400;   /* var(--font-w-r) */
-    line-height: 1.5; /* min-height ´ëÀÀÀ» À§ÇØ Ãß°¡ */
+    line-height: 1.5; /* min-height ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ */
 }
 
 .btn-more:hover {
@@ -203,14 +203,14 @@
 }
 
 
-/* ¹ÝÀÀÇü (768px ÀÌÇÏ) */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (768px ï¿½ï¿½ï¿½ï¿½) */
 @media screen and (max-width: 768px) {
     .social-intro {
         padding-bottom: 35px;
     }
-    .tab-container .tab-list {
+    /* .tab-container .tab-list {
         display: none;
-    }
+    } */
 
     .tab-select-mobile {
         display: block;
@@ -225,28 +225,28 @@
     }
 
     .social-list li a {
-        /* flex-directionÀº IE11¿¡¼­ ¹ö±×°¡ ¸¹À¸¹Ç·Î, blockÀ¸·Î ÀüÈ¯ÇÏ´Â °ÍÀÌ ´õ ¾ÈÁ¤ÀûÀÔ´Ï´Ù. */
+        /* flex-directionï¿½ï¿½ IE11ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½×°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½, blockï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. */
         display: block;
     }
 
     .social-list .thumbnail {
         width: 100%;
         height: 180px;
-        margin-right: 0; /* µ¥½ºÅ©Å¾¿¡¼­ Áá´ø ¸¶Áø Á¦°Å */
-        margin-bottom: 15px; /* ¼¼·Î °£°ÝÀ¸·Î ´ëÃ¼ */
+        margin-right: 0; /* ï¿½ï¿½ï¿½ï¿½Å©Å¾ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
+        margin-bottom: 15px; /* ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ */
     }
 
     .social-list .text-content {
         padding: 0;
-        min-height: 0; /* µ¥½ºÅ©Å¾¿¡¼­ Áá´ø ÃÖ¼Ò ³ôÀÌ Á¦°Å */
-        position: static; /* position ÇØÁ¦ */
+        min-height: 0; /* ï¿½ï¿½ï¿½ï¿½Å©Å¾ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ö¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
+        position: static; /* position ï¿½ï¿½ï¿½ï¿½ */
     }
 
     .social-list .text-content span {
-        position: static; /* position ÇØÁ¦ */
+        position: static; /* position ï¿½ï¿½ï¿½ï¿½ */
         margin-top: 10px; 
         text-align: right;
-        display: block; /* text-align Àû¿ëÀ» À§ÇØ block ¿ä¼Ò·Î º¯°æ */
+        display: block; /* text-align ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ block ï¿½ï¿½Ò·ï¿½ ï¿½ï¿½ï¿½ï¿½ */
     }
 
     .btn-wrap {
@@ -255,35 +255,35 @@
 }
 
 .tab-select-mobile select {
-    /* --- 1. ¸ð¹ÙÀÏ OS ±âº» ½ºÅ¸ÀÏ Á¦°Å --- */
-    -webkit-appearance: none; /* Å©·Ò, »çÆÄ¸®, ¿§Áö µî */
-    -moz-appearance: none;    /* ÆÄÀÌ¾îÆø½º */
-    appearance: none;         /* Ç¥ÁØ ¼Ó¼º */
+    /* --- 1. ï¿½ï¿½ï¿½ï¿½ï¿½ OS ï¿½âº» ï¿½ï¿½Å¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ --- */
+    -webkit-appearance: none; /* Å©ï¿½ï¿½, ï¿½ï¿½ï¿½Ä¸ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ */
+    -moz-appearance: none;    /* ï¿½ï¿½ï¿½Ì¾ï¿½ï¿½ï¿½ï¿½ï¿½ */
+    appearance: none;         /* Ç¥ï¿½ï¿½ ï¿½Ó¼ï¿½ */
     
-    /* --- 2. IE11 È£È¯ ½ºÅ¸ÀÏ (CSS º¯¼ö Á¦°Å) --- */
+    /* --- 2. IE11 È£È¯ ï¿½ï¿½Å¸ï¿½ï¿½ (CSS ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½) --- */
     width: 100%;
     height: auto;
-    padding: 16px 40px 16px 16px; /* IE11¿¡¼­ÀÇ ¼¼·Î Á¤·ÄÀ» À§ÇØ ÆÐµù Á¶Á¤ */
+    padding: 16px 40px 16px 16px; /* IE11ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ðµï¿½ ï¿½ï¿½ï¿½ï¿½ */
     border: 1px solid #DDDDDD;     /* var(--ipt-border) */
     background-color: #FFFFFF;     /* var(--white) */
     color: #222222;                /* var(--ipt-txt) */
     
-    /* --- 3. ÆùÆ® Å©±â °­Á¦ Àû¿ë (°¡Àå Áß¿ä) --- */
-    /* ¸ð¹ÙÀÏ¿¡¼­ ÀÚµ¿ È®´ë(Zoom)¸¦ ¹æÁöÇÏ°í °¡µ¶¼ºÀ» ³ôÀÌ±â À§ÇØ 16px ÀÌ»óÀ¸·Î ¼³Á¤ */
-    font-size: 1.143rem; /* 16px (¸ð¹ÙÀÏ ±âº» ÆùÆ® 14px ±âÁØ) */
+    /* --- 3. ï¿½ï¿½Æ® Å©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ ï¿½ß¿ï¿½) --- */
+    /* ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ ï¿½Úµï¿½ È®ï¿½ï¿½(Zoom)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì±ï¿½ ï¿½ï¿½ï¿½ï¿½ 16px ï¿½Ì»ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
+    font-size: 1.143rem; /* 16px (ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½âº» ï¿½ï¿½Æ® 14px ï¿½ï¿½ï¿½ï¿½) */
     font-weight: 400;      /* var(--font-w-r) */
-    line-height: 1.5;      /* ³»ºÎ ÅØ½ºÆ® ¼¼·Î Á¤·ÄÀ» À§ÇØ Ãß°¡ */
+    line-height: 1.5;      /* ï¿½ï¿½ï¿½ï¿½ ï¿½Ø½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ */
     
-    /* --- 4. È­»ìÇ¥ ¾ÆÀÌÄÜ ¼³Á¤ --- */
-    /* IE11Àº background-image¿¡¼­ var()¸¦ ¸ø ¾²¹Ç·Î Á÷Á¢ °æ·Î¸¦ ÁöÁ¤ÇØ¾ß ÇÕ´Ï´Ù. */
-    /* ¾Æ·¡ url() ¾ÈÀÇ °æ·Î´Â ½ÇÁ¦ ÇÁ·ÎÁ§Æ®¿¡ ¸Â°Ô ¼öÁ¤ÇØÁÖ¼¼¿ä. */
+    /* --- 4. È­ï¿½ï¿½Ç¥ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ --- */
+    /* IE11ï¿½ï¿½ background-imageï¿½ï¿½ï¿½ï¿½ var()ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ç·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Î¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¾ï¿½ ï¿½Õ´Ï´ï¿½. */
+    /* ï¿½Æ·ï¿½ url() ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Î´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½Â°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½. */
     background-image: url('../../../images/com/svg/ico_se_arrow.svg'); 
     background-repeat: no-repeat;
     background-size: 28px;
     background-position: right 8px center;
 }
 
-/* IE10, 11 Àü¿ë: ±âº»À¸·Î Á¦°øµÇ´Â ¸ø»ý±ä È­»ìÇ¥¸¦ Á¦°ÅÇÕ´Ï´Ù. */
+/* IE10, 11 ï¿½ï¿½ï¿½ï¿½: ï¿½âº»ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È­ï¿½ï¿½Ç¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½. */
 .tab-select-mobile select::-ms-expand {
     display: none;
 }
