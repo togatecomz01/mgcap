@@ -69,7 +69,7 @@
                         <ul class="tab-list">
                             <li class="tab-item active" data-tab="tab1" title="선택됨"><button type="button">휴대전화 인증</button></li>
                             <li class="tab-item" data-tab="tab2"><button type="button">간편인증</button></li>
-                            <li class="tab-item" data-tab="tab3"><button type="button">아이핀인증</button></li>
+                            <!-- <li class="tab-item" data-tab="tab3"><button type="button">아이핀인증</button></li> -->
                         </ul>
                         <div class="tab-content form-content border-b1">
                             <div id="tab1" class="tab-panel active">
@@ -605,45 +605,79 @@
                                         <!--e: 팝업-->
                                     </div>
                                 </form>
-                            </div>
-                            <div id="tab2" class="tab-panel">
-                                <p>준비중2</p>
-                            </div>
-                            <div id="tab3" class="tab-panel">
-                                <p>준비중3</p>
-                            </div>
-                        </div>
-                        <!--//tab-content-->
-                        <div class="form-content">
-                            <div class="form-wrap">
-                                <div class="form-group">
-                                    <label for="selectCustom">상품구분 선택</label>
-                                    <div id="selectCustom" class="se-select" data-stove="select" data-uicase="slide">
-                                        <div class="e-hidden-title">상품구분 선택</div>
-                                        <select required="" title="">
-                                            <option value="" hidden="">상품구분 선택</option>
-                                            <option value="0">option 00</option>
-                                            <option value="1">option 01</option>
-                                            <option value="2">option 02</option>
-                                            <option value="3" disabled="">option 03</option>
-                                            <option value="4" disabled="">option 04</option>
-                                            <option value="9">option 09</option>
-                                            <option value="10">option 10</option>
-                                        </select>
+                                <div class="form-content">
+                                    <div class="form-wrap">
+                                        <div class="form-group">
+                                            <label for="selectCustom">상품구분 선택</label>
+                                            <div id="selectCustom" class="se-select" data-stove="select" data-uicase="slide">
+                                                <div class="e-hidden-title">상품구분 선택</div>
+                                                <select required="" title="">
+                                                    <option value="" hidden="">상품구분 선택</option>
+                                                    <option value="0">option 00</option>
+                                                    <option value="1">option 01</option>
+                                                    <option value="2">option 02</option>
+                                                    <option value="3" disabled="">option 03</option>
+                                                    <option value="4" disabled="">option 04</option>
+                                                    <option value="9">option 09</option>
+                                                    <option value="10">option 10</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-wrap">
+                                        <div class="form-group">
+                                            <label for="password-input">이름</label>
+                                            <input id="password-input" type="text" name="text" class="form-control" placeholder="내용을 입력해주세요" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="password-input">휴대전화번호</label>
+                                            <input id="password-input" type="tel" name="text" class="form-control" placeholder="숫자만 입력해주세요" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-wrap">
-                                <div class="form-group">
-                                    <label for="password-input">이름</label>
-                                    <input id="password-input" type="text" name="text" class="form-control" placeholder="내용을 입력해주세요" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="password-input">휴대전화번호</label>
-                                    <input id="password-input" type="tel" name="text" class="form-control" placeholder="숫자만 입력해주세요" />
+                            <div id="tab2" class="tab-panel">
+                                <div class="form-content">
+                                    <div class="form-group radio">
+                                        <ul class="auth-list">
+                                            <li class="auth1">
+                                                <input type="radio" name="auth" id="auth1" value="" />
+                                                <label for="auth1"><span>공동인증서</span></label>
+                                            </li>
+                                            <li class="auth2">
+                                                <input type="radio" name="auth" id="auth2" value="" />
+                                                <label for="auth2"><span>아이핀 인증</span></label>
+                                            </li>
+                                            <li class="auth3">
+                                                <input type="radio" name="auth" id="auth3" value="" />
+                                                <label for="auth3"><span>PAYCO</span></label>
+                                            </li>
+                                            <li class="auth4">
+                                                <input type="radio" name="auth" id="auth4" value="" />
+                                                <label for="auth4"><span>네이버인증서</span></label>
+                                            </li>
+                                            <li class="auth5">
+                                                <input type="radio" name="auth" id="auth5" value="" />
+                                                <label for="auth5"><span>통신사 PASS</span></label>
+                                            </li>
+                                            <li class="auth6">
+                                                <input type="radio" name="auth" id="auth6" value="" />
+                                                <label for="auth6"><span>카카오인증서</span></label>
+                                            </li>
+                                            <li class="auth7">
+                                                <input type="radio" name="auth" id="auth7" value="" />
+                                                <label for="auth7"><span>토스인증서</span></label>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
+                            <!-- <div id="tab3" class="tab-panel">
+                                <p>준비중3</p>
+                            </div> -->
                         </div>
+                        <!--//tab-content-->
+
                         <!--//form-content-->
                         <div class="info-content">
                             <div class="info-wrap">
