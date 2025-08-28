@@ -92,7 +92,6 @@ $(document).ready(function () {
         var popupId = $(this).data("popup-open");
         if (popupId && window.popupL) {
             window.popupL.openPopup(popupId);
-            console.log("Label clicked - popup opened:", popupId);
         }
     });
 });
