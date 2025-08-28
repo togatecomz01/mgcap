@@ -134,6 +134,9 @@
     /* 체크박스 */
     ul.check-box label::before { left: 15px; width: 20px; height: 20px; }
     ul.check-box label::after { display: block; left: 17px; width: 7px; height: 4px; background-size: 80% auto; }
+    ul.check-box > li.check-all-area > label::before { content: ""; background-image: url("../../../images/com/svg/ico_check_white.svg"); background-repeat: no-repeat; background-position: center center; background-size: 65% auto; }
+    ul.check-box > li.check-all-area > input[type="checkbox"]:checked + label::before { content: ""; background-image: url("../../../images/com/svg/ico_check_white.svg"); background-repeat: no-repeat; background-position: center center; background-size: 65% auto; }
+
     ul.check-box.terms li .modal { display: block; position: absolute; padding: 0 3px 3px 0; right: 16px; width: 10px; height: 10px; background: url('../../../images/com/svg/ico_move.svg') no-repeat center center; background-size: contain; border: none; color: transparent; font-size: 0; line-height: 0; }
 
     /*  */

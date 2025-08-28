@@ -157,12 +157,12 @@ $(document).ready(function () {
             var $openBtn = $target.closest("[data-popup-open]");
             if ($openBtn.length) return popupL.openPopup($openBtn.data("popup-open"));
             // 라벨 클릭 시 팝업 열기
-            $(document).on("change", function () {
-                var popupId = $('label[for="' + this.id + '"]').data("popup-open");
-                if (popupId && window.popupL) {
-                    window.popupL.openPopup(popupId);
-                }
-            });
+            // $(document).on("change", function () {
+            //     var popupId = $('label[for="' + this.id + '"]').data("popup-open");
+            //     if (popupId && window.popupL) {
+            //         window.popupL.openPopup(popupId);
+            //     }
+            // });
 
             // 모달 열기
             var $modalBtn = $target.closest("[data-modal-open]");
