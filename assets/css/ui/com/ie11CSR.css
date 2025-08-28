@@ -79,16 +79,16 @@
 /* --------------------------------------------------공통 ie11 style end---------------------------------------------------------------------- */
 
 
-/*       IE11 호환 사회공헌 페이지 스타일         */
+/*  IE11 호환 사회공헌 페이지 스타일  */
     .social-intro {
     padding-top: 30px;
     padding-bottom: 72px;
     }
 
     .social-intro h3 {
-        font-size: 1.444rem; /* var(--font26) */
-        font-weight: 500;    /* var(--font-w-m) */
-        color: #222222;      /* var(--color-2) */
+        font-size: 1.444rem;
+        font-weight: 500;  
+        color: #222222;    
         margin-bottom: 24px;
         line-height: 1.5;
     }
@@ -97,8 +97,8 @@
     }
 
     .social-intro p {
-        font-size: 1rem;     /* var(--font18) */
-        color: #666666;      /* var(--color-6) */
+        font-size: 1rem;    
+        color: #666666;     
         line-height: 1.6;
         max-width: 800px;
     }
@@ -217,7 +217,7 @@
 }
 
 /* 반응형 (768px 이하) */
-@media screen and (max-width: 768px) {
+@media all and (max-width: 768px) and (-ms-high-contrast: none), (max-width: 768px) and (-ms-high-contrast: active) {
     .social-intro {
         padding-bottom: 35px;
     }
@@ -230,7 +230,7 @@
     }
 
     .social-intro h3 {
-        font-size: 1.571rem; /* var(--font22) */
+        font-size: 1.571rem;
     }
     .social-intro p {
         font-size: 1.143rem;
