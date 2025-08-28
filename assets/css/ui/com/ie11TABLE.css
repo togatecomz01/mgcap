@@ -151,7 +151,7 @@
 
 
 /* IE11 전용 모바일 스타일 (768px 이하) */
-@media screen and (max-width: 768px) {
+@media all and (max-width: 768px) and (-ms-high-contrast: none), (max-width: 768px) and (-ms-high-contrast: active) {
     _:-ms-lang(x),
     .table-info-content .btmWrap {
         display: block;
