@@ -63,6 +63,7 @@
     .se-select[data-stove=select] div.stove-option-layer, .se-select[data-stove=select] div.stove-option-layer.on { bottom: auto; }
     .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option:disabled { color: #ABABAB; }
     .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option.on, .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option:hover { background-color: #EEF2F9; font-weight: 600; }
+    .btn-fake-slt:focus:not(.disabled) { border-color: #2392FF; }
 
     /* 인풋 */
     input.form-control:valid, .form-group.user-valid input.form-control { color: #222222; }
@@ -70,6 +71,7 @@
     .form-content > .form-wrap > .form-group + .form-group { margin-left: 40px; }
     input::placeholder { color: #999 !important; }
     input:-ms-input-placeholder { color: #999 !important; }
+    input.form-control:focus, textarea:focus { border-color: #2392FF; outline: none; }
 
     /* 보이스피싱 */
     .info-content > .info-wrap { border: 1px solid #E5E5EA; }
@@ -103,31 +105,35 @@
     /* 간편인증 */
     .auth-list li { width: calc(25% - 36px); margin-right: 36px; margin-bottom: 36px; }
     .auth-list li:nth-child(4n) { margin-right: 0; }
+    .auth-list li.selected { border: 3px solid #2392FF; background: #FFF; box-shadow: 0 0 12px 0 rgba(31, 9, 201, 0.20); }
 }
 
-    @media (max-width: 960px) {
-.se-select[data-stove=select] div.stove-option-layer {background-color: #ffffff; display: block; height: auto;max-height: 100%; /* 필요 시 JS로 높이 계산 */
+@media all and (max-width: 960px) and (-ms-high-contrast: none), (max-width: 960px) and (-ms-high-contrast: active) {
+    .se-select[data-stove=select] div.stove-option-layer { background-color: #ffffff; }
+    .se-select[data-stove=select] div.stove-dim { background: rgba(0, 0, 0, 0.5); }
+    .se-select[data-stove=select] div.stove-option-layer.on {bottom: 0px; height: auto;}
+    .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option { border: 1px solid #DDDDDD; background-color: #FFFFFF; font-size: 1rem; }
+    .se-select[data-stove=select] div.stove-option-layer div.stove-options-title { font-size: 1rem; font-weight: 600; color: #222222; }
+    .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option.on, .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option:not(.disabled):hover { background-color: #EEF2F9; border: 1px solid #2392FF; font-weight: 600; }
 }
 
-    }
+@media all and (max-width: 768px) and (-ms-high-contrast: none), (max-width: 960px) and (-ms-high-contrast: active) {
+    /* 체크박스 */
+    ul.check-box label::before { left: 15px; width: 20px; height: 20px; }
+    ul.check-box label::after { left: 15px; width: 3px; height: 3px; background-size: contain; }
+    ul.check-box.terms li .modal { display: block; position: absolute; right: 16px; width: 10px; height: 10px; background: url('../../../images/com/svg/ico_move.svg') no-repeat center center; background-size: contain; border: none; color: transparent; font-size: 0; line-height: 0; }
 
+    /*  */
+    .form-content > .form-wrap > .form-group + .form-group { margin-left: 0; }
 
-    @media (max-width: 768px) {
-        /* 체크박스 */
-        ul.check-box label::before { left: 15px; width: 20px; height: 20px; }
-        ul.check-box label::after { left: 15px; width: 7px; height: 4px; }
-        ul.check-box.terms li input[type="checkbox"] + label::after { background-image: url(../../../images/com/svg/ico_move.svg); background-repeat: no-repeat; background-size: auto 10.4px; top: 50%; right: 16px; transform: translateY(-50%); -webkit-mask-image: url(../../../images/com/svg/ico_move.svg); }
-        
-        /*  */
-        .form-content > .form-wrap > .form-group + .form-group { margin-left: 0; }
+    /* 팝업 */
+    .layerPopup .pop-con-wrap { height: 75vh; }
 
-        /* 팝업 */
-        .layerPopup .pop-con-wrap { height: 75vh; }
-
-        /* 간편인증 */
-        .auth-list li { width: calc(50% - 9px); margin-right: 18px; }
-        .auth-list li:nth-child(2n) { margin-right: 0; }
-
-        /* 버튼 */
-        .button-content .btn-primary { background-color: #2392FF; }
+    /* 간편인증 */
+    .auth-list li { width: calc(50% - 9px); margin-right: 18px; }
+    .auth-list li:nth-child(2n) { margin-right: 0; }
+    .auth-list li:has(input[type="radio"]:checked) label span { color: #2392FF; font-weight: 500; }
+    
+    /* 버튼 */
+    .button-content .btn-primary { background-color: #2392FF; }
 }
