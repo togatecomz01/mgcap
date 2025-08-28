@@ -32,7 +32,7 @@
     /* 체크박스 */
     ul.check-box input[type="checkbox"] { position: absolute; opacity: 0; width: 0; height: 0; }
     ul.check-box label::before { content: ""; position: absolute; left: 30px; border-radius: 50%; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background-color: #DDDDDD; }
-    ul.check-box label::after { content: ""; position: absolute; left: 34.5px; top: 50%; transform: translateY(-50%); width: 13px; height: 10px; background: url(../../../images/com/svg/ico_check_white.svg) no-repeat center center; background-size: 100% 100%; }
+    ul.check-box label::after { content: ""; position: absolute; left: 34.5px; top: 50%; transform: translateY(-50%); width: 13px; height: 10px; background-image: url("../../../images/com/svg/ico_check_white.svg"); background-repeat: no-repeat; background-position: center center; background-size: 100% 100%; }
     ul.check-box input[type="checkbox"]:checked + label::before { background: #41C7F4; }
     ul.check-box.terms li.check-all-area input[type="checkbox"] + label { font-weight: 500; }
 
@@ -91,6 +91,7 @@
     /* 버튼 */
     .button-content .btn-primary { background-color: #6A6A6A; }
     .btn-primary { color: #FFFFFF; }
+    .button-content .btn-primary:hover { background-color: #2392FF; }
 
     /* 팝업 */
     .layerPopup.full.on::before, .layerPopup.btmSheet.on::before, .layerPopup.modal.on::before { background-color: rgba(0, 0, 0, 0.5); }
@@ -102,6 +103,7 @@
     .layerPopup .btm-btn-area .btn { font-size: 1.333rem; }
     .btn-primary { background-color: #222222; color: #FFFFFF; }
     .layerPopup .pop-con-wrap { height: 70vh; }
+
     /* 간편인증 */
     .auth-list li { width: calc(25% - 36px); margin-right: 36px; margin-bottom: 36px; }
     .auth-list li:nth-child(4n) { margin-right: 0; }
@@ -118,16 +120,21 @@
 }
 
 @media all and (max-width: 768px) and (-ms-high-contrast: none), (max-width: 960px) and (-ms-high-contrast: active) {
+    h2 > em { font-size: 1.667rem; }
+    ul.step li > p > em { font-size: 0.778rem; }
+
     /* 체크박스 */
     ul.check-box label::before { left: 15px; width: 20px; height: 20px; }
-    ul.check-box label::after { left: 15px; width: 3px; height: 3px; background-size: contain; }
-    ul.check-box.terms li .modal { display: block; position: absolute; right: 16px; width: 10px; height: 10px; background: url('../../../images/com/svg/ico_move.svg') no-repeat center center; background-size: contain; border: none; color: transparent; font-size: 0; line-height: 0; }
+    ul.check-box label::after { display: block; left: 17px; width: 7px; height: 4px; background-size: 80% auto; }
+    ul.check-box.terms li .modal { display: block; position: absolute; padding: 0 3px 3px 0; right: 16px; width: 10px; height: 10px; background: url('../../../images/com/svg/ico_move.svg') no-repeat center center; background-size: contain; border: none; color: transparent; font-size: 0; line-height: 0; }
 
     /*  */
     .form-content > .form-wrap > .form-group + .form-group { margin-left: 0; }
 
     /* 팝업 */
-    .layerPopup .pop-con-wrap { height: 75vh; }
+    .layerPopup .pop-con-wrap { height: 72vh; }
+    .layerPopup .pop-header, .layerPopup .pop-con-wrap { border-bottom: 0; }
+    .layerPopup .pop-header .pop-tit { font-size: 1.111rem; }
 
     /* 간편인증 */
     .auth-list li { width: calc(50% - 9px); margin-right: 18px; }
@@ -135,5 +142,6 @@
     .auth-list li:has(input[type="radio"]:checked) label span { color: #2392FF; font-weight: 500; }
     
     /* 버튼 */
-    .button-content .btn-primary { background-color: #2392FF; }
+    .btn-primary, .button-content .btn-primary { background-color: #2392FF; }
+
 }
