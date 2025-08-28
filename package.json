@@ -1,0 +1,13 @@
+{
+  "name": "mg-capital-ui",
+  "version": "1.0.0",
+  "description": "MG캐피탈 UI 컴포넌트",
+  "scripts": {
+    "build:css": "sass assets/style/scss:assets/style/css --style compressed",
+    "watch:css": "sass assets/style/scss:assets/style/css --watch",
+    "dev": "sass assets/style/scss:assets/style/css --watch --style expanded"
+  },
+  "devDependencies": {
+    "sass": "^1.69.0"
+  }
+} 

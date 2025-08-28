@@ -272,6 +272,10 @@ textarea:-webkit-autofill, textarea:-webkit-autofill:focus, textarea:-webkit-aut
   html {
     font-size: 14px;
   }
+  main.contentWrap > div {
+    padding: 0 24px !important;
+    /* 필요시 !important */
+  }
 }
 
 /*# sourceMappingURL=default.css.map */

@@ -347,6 +347,22 @@ main.contentWrap #container .form-container:first-of-type {
   main.contentWrap > div {
     padding: 0 24px;
   }
+  main.contentWrap .visual-content {
+    padding-top: 24px;
+    padding-bottom: 32px;
+  }
+  main.contentWrap #container .tab-container {
+    padding: 24px 0 32px;
+  }
+  main.contentWrap #container .tab-container:first-of-type {
+    padding-top: 32px;
+  }
+  main.contentWrap #container .form-container {
+    padding: 24px 0 32px;
+  }
+  main.contentWrap #container .form-container:first-of-type {
+    padding-top: 32px;
+  }
 }
 
 /*# sourceMappingURL=layout.css.map */

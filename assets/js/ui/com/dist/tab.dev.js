@@ -1,10 +1,5 @@
 "use strict";
 
-// '���õ�' -> \uC120\uD0DD\uB428
-// '����'   -> \uC601\uC5ED
-// '����2'  -> \uC601\uC5ED2
-// '����3'  -> \uC601\uC5ED3
-// '����4'  -> \uC601\uC5ED4
 $(document).ready(function () {
   /**
    *   TAB
@@ -46,7 +41,13 @@ $(document).ready(function () {
         $allPanels.hide(); // �� �� Ȱ��ȭ
 
         $clickedTab.addClass('active').attr('title', '���õ�');
-        $targetPanel.show();
+        $targetPanel.show(); // ����� select ����ȭ
+
+        var $mobileSelect = $tabContainer.find('.tab-select-mobile select');
+
+        if ($mobileSelect.length) {
+          $mobileSelect.val(targetId);
+        }
       }
     };
   }(); // ��� �� �ʱ�ȭ
@@ -56,28 +57,87 @@ $(document).ready(function () {
     Tabs.init(this);
   });
   /**
-   *   TAB Swiper
+   *   TAB Swiper - IE11 ȣȯ�� ó��
   **/
 
   var tabSwiperL = function () {
     var pager = ['����', '����2', '����3', '����4'];
-    var tabSwiper = new Swiper('.tabs.tab-area.swiper', {
-      spaceBetween: 20,
-      autoHeight: true,
-      pagination: {
-        el: '.tabs ul',
-        clickable: true,
-        renderBullet: function renderBullet(index, className) {
-          return '<li class="tab-item ' + className + '">' + pager[index] + '</li>';
-        }
+    var tabSwiper = null; // Swiper�� �����ϰ� IE11�� �ƴ� ��쿡�� �ʱ�ȭ
+
+    if (typeof Swiper !== 'undefined' && !isIE11()) {
+      try {
+        tabSwiper = new Swiper('.tabs.tab-area.swiper', {
+          spaceBetween: 20,
+          autoHeight: true,
+          pagination: {
+            el: '.tabs ul',
+            clickable: true,
+            renderBullet: function renderBullet(index, className) {
+              return '<li class="tab-item ' + className + '">' + pager[index] + '</li>';
+            }
+          }
+        });
+      } catch (e) {
+        console.log('Swiper �ʱ�ȭ ����:', e.message); // Swiper �ʱ�ȭ ���� �� �⺻ �� �������� ����
+
+        initFallbackTabs();
       }
-    });
+    } else {
+      // IE11�̰ų� Swiper�� ���� ��� �⺻ �� �������� ����
+      initFallbackTabs();
+    }
+
     return tabSwiper;
   }();
-});
-/* ----------����Ͽ� tab(select) jquery----------- */
+  /**
+   * IE11 ���� �Լ�
+   */
 
-$(document).ready(function () {
+
+  function isIE11() {
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf('MSIE ');
+    var msie11 = ua.indexOf('Trident/');
+    return msie > 0 || msie11 > 0;
+  }
+  /**
+   * Swiper ��� �⺻ �� �������� ����
+   */
+
+
+  function initFallbackTabs() {
+    var $swiperContainer = $('.tabs.tab-area.swiper');
+
+    if ($swiperContainer.length > 0) {
+      var $tabList = $swiperContainer.find('.swiper-pager.tab-list');
+      var $slides = $swiperContainer.find('.swiper-slide'); // �⺻ �� ��Ÿ�� ����
+
+      $tabList.find('li').each(function (index) {
+        var $tab = $(this);
+        var $slide = $slides.eq(index); // ù ��° �Ǹ� Ȱ��ȭ
+
+        if (index === 0) {
+          $tab.addClass('swiper-pagination-bullet-active');
+          $slide.show();
+        } else {
+          $slide.hide();
+        } // �� Ŭ�� �̺�Ʈ
+
+
+        $tab.on('click', function () {
+          $tabList.find('li').removeClass('swiper-pagination-bullet-active');
+          $tab.addClass('swiper-pagination-bullet-active');
+          $slides.hide();
+          $slide.show();
+        });
+      });
+    }
+  }
+  /**
+  * ����� select�� PC �� ����ȭ
+  */
+
+
   var $mobileSelect = $('.tab-select-mobile select');
 
   if ($mobileSelect.length) {

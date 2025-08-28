@@ -4,6 +4,10 @@
   /* 모바일(<=767px) */
 }
 
+.tab-container .tab-select-mobile {
+  display: none;
+}
+
 .tab-container .tab-list {
   display: flex;
   width: 100%;
@@ -54,7 +58,7 @@
   padding: 12px 26px;
   width: 100%;
   border-radius: 20px;
-  background: #F1F2F4;
+  background: #f1f2f4;
   transition: all 0.3s ease;
 }
 
@@ -156,12 +160,42 @@
   top: 0;
 }
 
-.tab-container .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet:last-child,
-.tab-container .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:last-child {
+.tab-container .swiper-horizontal
+> .swiper-pagination-bullets
+.swiper-pagination-bullet:last-child,
+.tab-container .swiper-pagination-horizontal.swiper-pagination-bullets
+.swiper-pagination-bullet:last-child {
   margin-right: 0;
 }
 
 @media (max-width: 767px) {
+  .tab-container .tab-list.depth1 {
+    display: none;
+  }
+  .tab-container .tab-select-mobile.depth1 {
+    display: block;
+    margin-bottom: 42px;
+  }
+  .tab-container .tab-select-mobile.depth1 select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e5e5ea;
+    border-radius: 8px;
+    background: #fdfdfd;
+    font-size: 1.222rem;
+    color: #757575;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    cursor: pointer;
+  }
+  .tab-container .tab-select-mobile.depth1 select:focus {
+    outline: none;
+    border-color: #0072bc;
+    box-shadow: 0 0 0 3px rgba(0, 114, 188, 0.1);
+  }
   .tab-container .tab-list {
     display: flex;
     width: 100%;
@@ -199,7 +233,7 @@
     padding: 12px 26px;
     width: 100%;
     border-radius: 20px;
-    background: #F1F2F4;
+    background: #f1f2f4;
     transition: all 0.3s ease;
   }
   .tab-container .tab-list.depth2 li.tab-item.active button {

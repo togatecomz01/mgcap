@@ -23,44 +23,99 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
-body, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, li, ol, li, table, caption, th, td, form, fieldset, legend, address, div, p, span, a {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+dt,
+dd,
+ul,
+li,
+ol,
+li,
+table,
+caption,
+th,
+td,
+form,
+fieldset,
+legend,
+address,
+div,
+p,
+span,
+a {
   margin: 0;
   padding: 0;
 }
 
-ul, ol, li, dl, dt, dd {
+ul,
+ol,
+li,
+dl,
+dt,
+dd {
   list-style: none;
 }
 
-form, fieldset, legend, input, button, textarea, label {
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+label {
   color: #454545;
 }
 
-div, img, form, fieldset, button, blockquote, p, hr, select, input {
+div,
+img,
+form,
+fieldset,
+button,
+blockquote,
+p,
+hr,
+select,
+input {
   border: 0;
   padding: 0;
   margin: 0;
   font-size: 1rem;
 }
 
-img, table {
+img,
+table {
   width: 100%;
 }
 
-legend, caption {
+legend,
+caption {
   visibility: hidden;
   position: absolute;
 }
 
-input, textarea, select, address {
+input,
+textarea,
+select,
+address {
   font-family: "Pretendard", "Spoqa Han Sans Neo", "Apple SD Gothic Neo", sans-serif;
 }
 
-input, button, select, textarea {
+input,
+button,
+select,
+textarea {
   font-family: inherit;
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
   display: inline-block;
   vertical-align: middle;
   color: #454545;
@@ -77,7 +132,8 @@ table {
   border-collapse: collapse;
 }
 
-address, em {
+address,
+em {
   font-style: normal;
 }
 
@@ -93,7 +149,10 @@ a {
   color: #454545;
 }
 
-a, a:hover, a:focus, a:active {
+a,
+a:hover,
+a:focus,
+a:active {
   text-decoration: none !important;
   cursor: pointer !important;
 }
@@ -117,7 +176,8 @@ p {
 /*---------------------------------------------
 	#인풋 리셋
 ---------------------------------------------*/
-input, .se-select select {
+input,
+.se-select select {
   display: block;
   width: 100%;
   line-height: initial;
@@ -139,11 +199,15 @@ input:disabled {
   cursor: initial;
 }
 
-input[type=number], input[type=number] {
+input[type=number],
+input[type=number] {
   -moz-appearance: textfield;
 }
 
-input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button {
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -153,16 +217,20 @@ input[type=password]::-ms-reveal {
   display: none;
 }
 
-input[type=radio], input[type=checkbox] {
+input[type=radio],
+input[type=checkbox] {
   box-sizing: border-box;
   padding: 0;
 }
 
-input::-ms-clear, input::-ms-reveal {
+input::-ms-clear,
+input::-ms-reveal {
   display: none;
 }
 
-textarea:-webkit-autofill, textarea:-webkit-autofill:focus, textarea:-webkit-autofill:hover {
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:hover {
   box-shadow: 0 0 0 1000px #ffffff inset !important;
 }
 

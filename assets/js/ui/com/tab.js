@@ -49,6 +49,12 @@ $(document).ready(function(){
                 // 새 탭 활성화
                 $clickedTab.addClass('active').attr('title', '선택됨');
                 $targetPanel.show();
+                
+                // 모바일 select 동기화
+                var $mobileSelect = $tabContainer.find('.tab-select-mobile select');
+                if ($mobileSelect.length) {
+                    $mobileSelect.val(targetId);
+                }
             }
         };
     })();
@@ -136,7 +142,7 @@ $(document).ready(function(){
     }
 
      /**
-     * 모바일
+     * 모바일 select와 PC 탭 동기화
      */
 
     var $mobileSelect = $('.tab-select-mobile select');
