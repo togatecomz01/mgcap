@@ -1,4 +1,4 @@
-@charset "euc-kr";
+@charset "utf-8";
 @use "./style.scss" as *;
 
 /* -------------------------------------------------
@@ -552,6 +552,25 @@ $lg-min: 1024px; // 데스크탑+
   }
   textarea {
     height: 200px;
+  }
+}
+
+
+.form-content {
+  > .form-wrap {
+  
+    &:first-of-type {
+    
+    }
+
+    > .form-group {
+     
+
+      &:only-child {
+        flex: 0 0 calc(50% + 157px);
+        padding-right:0;
+      }
+    }
   }
 }
 

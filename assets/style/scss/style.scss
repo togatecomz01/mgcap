@@ -49,6 +49,11 @@ $ipt-search: $color-9;
 $ipt-file: $color-9;
 $ipt-date: $color-9;
 
+// 아이콘 이미지 경로
+$ico-se-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cpath d='M7 10l7 7 7-7' stroke='%23666' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+$ico-close: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M15 15l10 10M25 15l-10 10' stroke='%23666' stroke-width='2'/%3E%3C/svg%3E");
+$ico-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath d='M3 10l5 5 9-9' stroke='%23fff' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+
 // 버튼
 $btn-disabled: $color-c;
 $btn-txt-disabled: $color-2;

@@ -23,99 +23,45 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-dl,
-dt,
-dd,
-ul,
-li,
-ol,
-li,
-table,
-caption,
-th,
-td,
-form,
-fieldset,
-legend,
-address,
-div,
-p,
-span,
-a {
+body, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, li, ol, li, table, caption, th, td, form, fieldset, legend, address, div, p, span, a {
   margin: 0;
   padding: 0;
 }
 
-ul,
-ol,
-li,
-dl,
-dt,
-dd {
+ul, ol, li, dl, dt, dd {
   list-style: none;
 }
 
-form,
-fieldset,
-legend,
-input,
-button,
-textarea,
-label {
+form, fieldset, legend, input, button, textarea, label {
   color: #454545;
 }
 
-div,
-img,
-form,
-fieldset,
-button,
-blockquote,
-p,
-hr,
-select,
-input {
+div, img, form, fieldset, button, blockquote, p, hr, select, input {
   border: 0;
   padding: 0;
   margin: 0;
   font-size: 1rem;
 }
 
-img,
-table {
+img, table {
   width: 100%;
 }
 
-legend,
-caption {
+/* legend, caption { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow: hidden;  border:0; clip:rect(0, 0, 0, 0); white-space: nowrap; } */
+legend, caption {
   visibility: hidden;
   position: absolute;
 }
 
-input,
-textarea,
-select,
-address {
+input, textarea, select, address {
   font-family: "Pretendard", "Spoqa Han Sans Neo", "Apple SD Gothic Neo", sans-serif;
 }
 
-input,
-button,
-select,
-textarea {
+input, button, select, textarea {
   font-family: inherit;
 }
 
-input,
-textarea,
-select {
+input, textarea, select {
   display: inline-block;
   vertical-align: middle;
   color: #454545;
@@ -132,13 +78,11 @@ table {
   border-collapse: collapse;
 }
 
-address,
-em {
+address, em {
   font-style: normal;
 }
 
 button {
-  background-color: transparent;
   background-position: center;
   background-size: contain;
   cursor: pointer;
@@ -149,10 +93,7 @@ a {
   color: #454545;
 }
 
-a,
-a:hover,
-a:focus,
-a:active {
+a, a:hover, a:focus, a:active {
   text-decoration: none !important;
   cursor: pointer !important;
 }
@@ -199,11 +140,13 @@ input:disabled {
   cursor: initial;
 }
 
+/** Firefox Browser **/
 input[type=number],
 input[type=number] {
   -moz-appearance: textfield;
 }
 
+/** Webkit Browser (예: Chrome, Safari) **/
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button,
@@ -213,6 +156,7 @@ input[type=number]::-webkit-inner-spin-button {
   appearance: none;
 }
 
+/** Edge Browser **/
 input[type=password]::-ms-reveal {
   display: none;
 }
@@ -228,10 +172,11 @@ input::-ms-reveal {
   display: none;
 }
 
+/* Chrome의 autofill 관련 기본 스타일 제거 */
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:focus,
 textarea:-webkit-autofill:hover {
-  box-shadow: 0 0 0 1000px #ffffff inset !important;
+  box-shadow: 0 0 0 1000px #FFFFFF inset !important;
 }
 
 /*---------------------------------------------
@@ -240,6 +185,22 @@ textarea:-webkit-autofill:hover {
 .flex-row {
   display: flex;
   flex-direction: row;
+}
+.flex-row.mo-column {
+  gap: 20px;
+}
+.flex-row.mo-column > .col.flex-row {
+  gap: 13px;
+  flex: 0 0 1;
+}
+.flex-row.mo-column > .col.flex-row .se-select {
+  flex: 0 0 152px;
+}
+.flex-row.mo-column > .col.flex-row .se-select + div {
+  flex: 1;
+}
+.flex-row.mo-column > .col:last-of-type {
+  flex: 0 0 152px;
 }
 
 .flex-col {
@@ -322,17 +283,23 @@ textarea:-webkit-autofill:hover {
   gap: 30px;
 }
 
-.auth.flex-row > div.col:first-child {
+.auth.flex-row > div.col:first-child,
+.auth.flex-row > div.col:last-child {
   flex: 0 0 152px;
 }
 
 .auth.flex-row > div.col:last-child {
-  flex: 0 0 152px;
   padding-left: 7px;
 }
 
-@media screen and (max-width: 768px) {
+/* -------------------------------------------------
+   Breakpoints
+-------------------------------------------------- */
+/* Mobile (≤ $sm-max) */
+@media (max-width: 767px) {
   html {
     font-size: 14px;
   }
-}/*# sourceMappingURL=default.css.map */
+}
+/* Tablet (≥ $md-min and < $lg-min) */
+/* Desktop (≥ $lg-min) *//*# sourceMappingURL=default.css.map */

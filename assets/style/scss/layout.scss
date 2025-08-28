@@ -1,6 +1,9 @@
 @charset "UTF-8";
 @use "./style.scss" as *;
 
+// 변수 정의
+$container: tab, form;
+
 // flex
 .flex-col {
   display: flex;
@@ -47,7 +50,7 @@ div.border-b1 ~ [class$="-content"] {
   border-top: 1px solid $border;
 }
 .form-content:last-of-type {
-  padding: 54px 0 52px !important;
+  padding: 54px 0 52px;
   border-bottom: 1px solid $border;
 }
 
@@ -320,7 +323,6 @@ main.contentWrap {
     font-weight: $font-w-b;
   }
 
-  $container: tab, form;
   #container {
     @each $name in $container {
       .#{$name}-container {
@@ -337,6 +339,19 @@ main.contentWrap {
 // 모바일
 @media screen and (max-width: $sm-max) {
   main.contentWrap > div {
-    padding: 0 124px ; /* 필요시 !important */
+    padding: 0 24px; /* 필요시 !important */
+  }
+  main.contentWrap {
+    #container {
+      @each $name in $container {
+        .#{$name}-container {
+          padding: 32px 0;
+
+          &:first-of-type {
+            padding-top: 32px;
+          }
+        }
+      }
+    }
   }
 }

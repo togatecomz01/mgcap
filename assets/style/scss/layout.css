@@ -45,7 +45,7 @@ div.border-b1 ~ [class$=-content] {
 }
 
 .form-content:last-of-type {
-  padding: 54px 0 52px !important;
+  padding: 54px 0 52px;
   border-bottom: 1px solid #e5e5ea;
 }
 
@@ -298,6 +298,18 @@ main.contentWrap #container .form-container:first-of-type {
 
 @media screen and (max-width: 767px) {
   main.contentWrap > div {
-    padding: 0 124px; /* 필요시 !important */
+    padding: 0 24px; /* 필요시 !important */
+  }
+  main.contentWrap #container .tab-container {
+    padding: 32px 0;
+  }
+  main.contentWrap #container .tab-container:first-of-type {
+    padding-top: 32px;
+  }
+  main.contentWrap #container .form-container {
+    padding: 32px 0;
+  }
+  main.contentWrap #container .form-container:first-of-type {
+    padding-top: 32px;
   }
 }/*# sourceMappingURL=layout.css.map */

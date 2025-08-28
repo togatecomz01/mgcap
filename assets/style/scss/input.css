@@ -500,6 +500,11 @@ div.toggle-box input[type=checkbox]:checked::before {
     height: 200px;
   }
 }
+.form-content > .form-wrap > .form-group:only-child {
+  flex: 0 0 calc(50% + 157px);
+  padding-right: 0;
+}
+
 /* Desktop (≥ $lg-min) */
 @media (min-width: 1024px) {
   .form-content > .form-wrap {
