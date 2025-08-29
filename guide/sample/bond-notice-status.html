@@ -1,725 +1,250 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="euc-kr" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>»ùÇÃ&gt;mgÄ³ÇÇÅ»</title>
+<head>
 
-        <meta name="keywords" content="MGÄ³ÇÇÅ»" />
-        <meta name="copyright" content="copyrights 2025 MGÄ³ÇÇÅ»" />
-        <meta name="description" content="MGÄ³ÇÇÅ» ¸®½º±ÝÀ¶, ÇÒºÎ±ÝÀ¶, ½ºÅ¹·Ð, ±â¾÷´ëÃâ, Àå±â·»Æ®Ä«, PF´ëÃâ µî ±ÝÀ¶ ¼­ºñ½º Á¦°ø." />
-        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover" />
-        <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="white" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta http-equiv="Expires" content="-1" />
-        <meta http-equiv="Pragma" content="no-cache" />
-        <meta http-equiv="Cache-Control" content="No-Cache" />
+  <meta charset="euc-kr">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>(ìƒ˜í”Œ)ì±„ê¶Œê´€ë¦¬í†µì§€í˜„í™©ì¡°íšŒ&gt;mgìºí”¼íƒˆ</title>
 
-        <!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico" />
+  <meta name="keywords" content="MGìºí”¼íƒˆ">
+  <meta name="copyright" content="copyrights 2025 MGìºí”¼íƒˆ">
+  <meta name="description" content="MGìºí”¼íƒˆ ë¦¬ìŠ¤ê¸ˆìœµ, í• ë¶€ê¸ˆìœµ, ìŠ¤íƒë¡ , ê¸°ì—…ëŒ€ì¶œ, ìž¥ê¸°ë ŒíŠ¸ì¹´, PFëŒ€ì¶œ ë“± ê¸ˆìœµ ì„œë¹„ìŠ¤ ì œê³µ.">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+  <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img">
+  <meta name="apple-mobile-web-app-status-bar-style" content="white">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta http-equiv="Expires" content="-1">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="No-Cache">
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="../../assets/css/lib/ui-lib.css" />
-        <link rel="stylesheet" href="../../assets/css/ui/ui-util.css" />
-        <link rel="stylesheet" href="../../assets/css/ui/com/ie11.css" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="../../assets/css/lib/ui-lib.css">
+  <link rel="stylesheet" href="../../assets/css/ui/ui-util.css">
 
-        <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
-        <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
-        <script type="text/javascript" src="../../assets/js/lib/swiper-bundle.min.js"></script>
-        <script type="module" src="../../assets/js/ui/com/ui-util.js"></script>
-        <script type="text/javascript" src="../../assets/js/ui/terms.js"></script>
+  <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+  <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+  <script type="text/javascript" src="../../assets/js/lib/swiper-bundle.min.js"></script>
+  <script type="module" src="../../assets/js/ui/com/ui-util.js"></script>
+  <script type="text/javascript" src="../../assets/js/ui/terms.js"></script>
 
-        <!-- ie11¿ë ui-util Á÷Á¢ »ðÀÔ -->
-        <script type="text/javascript" src="../../assets/js/ui/com/accordion.js"></script>
-        <script type="text/javascript" src="../../assets/js/ui/com/datepicker.js"></script>
-        <script type="text/javascript" src="../../assets/js/ui/com/input.js"></script>
-        <script type="text/javascript" src="../../assets/js/ui/com/layout.js"></script>
-        <script type="text/javascript" src="../../assets/js/ui/com/popup.js"></script>
-        <script type="text/javascript" src="../../assets/js/ui/com/tab.js"></script>
 
-        <script type="text/javascript" src="../../assets/js/ui/ie11.js"></script>
 
-        <!-- (¼±ÅÃ) IE11¿ë Æú¸®ÇÊ: ¾ÈÀüÇÏ°Ô ±ò¾ÆµÎ¸é ÁÁ¾Æ¿ä -->
-        <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Promise,Array.from,Object.assign,Number.isNaN"></script>
-    </head>
+</head>
 
-    <body>
-        <div class="wrap">
-            <!-- S: header -->
-            <header id="headerWrap" class="headerOn"></header>
+<body>
+  <div class="wrap">
 
-            <main class="contentWrap">
-                <div class="visual-content step">
-                    <div class="tab-content">
-                        <ul class="step">
-                            <li class="acitve">
-                                <p>
-                                    <em>01</em>
-                                    <span>º»ÀÎÀÎÁõ</span>
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <em>02</em>
-                                    <span>½ÅÃ»¿Ï·á</span>
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                    <h2>
-                        <em>Ã¤±Ç°ü¸®ÅëÁöÇöÈ²Á¶È¸</em>
-                        <span>´ç»ç Ã¤±Ç°ü¸® ÅëÁö ÇöÈ²À» Á¶È¸ÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù.</span>
-                    </h2>
-                </div>
-                <div id="container">
-                    <section class="form-container">
-                        <h3>¾à°üµ¿ÀÇ</h3>
-                        <div class="form-content border-b1">
-                            <form id="termsForm">
-                                <div class="form-group">
-                                    <ul class="check-box terms">
-                                        <li class="check-all-area">
-                                            <input type="checkbox" id="chkAll" />
-                                            <label for="chkAll" class="check-button">
-                                                <span>ÀüÃ¼ ¾à°ü¿¡ µ¿ÀÇÇÕ´Ï´Ù.</span>
-                                            </label>
-                                        </li>
+    <!-- S: header -->
+    <header id="headerWrap" class="headerOn"></header>
 
-                                        <li>
-                                            <input type="checkbox" id="check-required-1" class="chkReq" />
-                                            <label for="check-required-1" class="check-button" data-popup-open="fullPopup1">
-                                                <span>°³ÀÎÁ¤º¸ ¼öÁý&#183;ÀÌ¿ë&#183;Ãë±ÞÀ§Å¹ µ¿ÀÇ</span>
-                                            </label>
-                                            <button title="°³ÀÎÁ¤º¸ ¼öÁý&#183;ÀÌ¿ë&#183;Ãë±ÞÀ§Å¹ µ¿ÀÇ ³»¿ëº¸±â" type="button" class="modal" data-popup-open="fullPopup1">³»¿ëº¸±â</button>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="check-required-2" class="chkReq" />
-                                            <label for="check-required-2" class="check-button" data-popup-open="fullPopup2">
-                                                <span>º»ÀÎÈ®ÀÎ¼­ºñ½º ÀÌ¿ë¾à°ü</span>
-                                            </label>
-                                            <button title="º»ÀÎÈ®ÀÎ¼­ºñ½º ÀÌ¿ë¾à°ü ³»¿ëº¸±â" class="modal" type="button" data-popup-open="fullPopup2">³»¿ëº¸±â</button>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="check-required-3" class="chkReq" />
-                                            <label for="check-required-3" class="check-button" data-popup-open="fullPopup3">
-                                                <span>°íÀ¯½Äº°Á¤º¸Ã³¸® µ¿ÀÇ</span>
-                                            </label>
-                                            <button title="°íÀ¯½Äº°Á¤º¸Ã³¸® µ¿ÀÇ ³»¿ëº¸±â" class="modal" type="button" data-popup-open="fullPopup3">³»¿ëº¸±â</button>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="check-required-4" class="chkReq" />
-                                            <label for="check-required-4" class="check-button" data-popup-open="fullPopup4">
-                                                <span>Åë½Å»ç ÀÌ¿ë¾à°ü µ¿ÀÇ</span>
-                                            </label>
-                                            <button title="Åë½Å»ç ÀÌ¿ë¾à°ü µ¿ÀÇ ³»¿ëº¸±â" class="modal" type="button" data-popup-open="fullPopup4">³»¿ëº¸±â</button>
-                                        </li>
-                                    </ul>
-                                    <!--s :ÆË¾÷-->
-                                    <!-- s: °³ÀÎÁ¤º¸ ¼öÁýÀÌ¿ë ÆË¾÷(fullPopup1) -->
-                                    <div id="fullPopup1" class="layerPopup full fullPopupOn">
-                                        <!--[D] fullPopupOn Å¬·¡½º :: Çì´õ ½ºÅ©¸³Æ® Àû¿ëÁß-->
-                                        <div class="pop-area">
-                                            <div class="pop-header">
-                                                <h2 class="pop-tit">°³ÀÎÁ¤º¸ ¼öÁý&#183;ÀÌ¿ë&#183;Ãë±ÞÀ§Å¹ µ¿ÀÇ</h2>
-                                            </div>
-                                            <div class="pop-con-wrap">
-                                                <h5>Á¦1Á¶ (¸ñÀû)</h5>
-                                                <p>
-                                                    ÀÌ ¾à°üÀº MGÄ³ÇÇÅ» ÁÖ½ÄÈ¸»ç(ÀÌÇÏ "È¸»ç"¶ó ÇÕ´Ï´Ù.)°¡ ¿î¿µÇÏ´Â ¸ðµç »çÀÌÆ®(ÀÌÇÏ "»çÀÌÆ®"¶ó ÇÕ´Ï´Ù.)¿¡¼­ Á¦°øÇÏ´Â ÀÎÅÍ³Ý ¼­ºñ½º(ÀÌÇÏ "¼­ºñ½º"¶ó
-                                                    ÇÕ´Ï´Ù.)¸¦ ÀÌ¿ëÇÔ¿¡ ÀÖ¾î ÀÌ¿ëÀÚÀÇ ±Ç¸®, ÀÇ¹« ¹× Ã¥ÀÓ»çÇ×°ú ÀÌ¿ëÁ¶°Ç ¹× ÀýÂ÷¿¡ °üÇÑ »çÇ×À» ±ÔÁ¤ÇÔÀ» ¸ñÀûÀ¸·Î ÇÕ´Ï´Ù.
-                                                </p>
-
-                                                <h5>Á¦2Á¶ (¿ë¾îÁ¤ÀÇ)</h5>
-                                                <ol>
-                                                    <li>
-                                                        1. "¼­ºñ½º"¶ó ÇÔÀº È¸»çÀÇ È¨ÆäÀÌÁö ¹× È¸»ç°¡ ¿î¿µÇÏ´Â ÀÎÅÍ³Ý»çÀÌÆ® µî¿¡¼­ Á¦°øµÇ´Â ÀÎÅÍ³Ý»óÀÇ ¸ðµç À¥¼­ºñ½º(¹«¼±ÀÎÅÍ³Ý ¼­ºñ½º Æ÷ÇÔ)¸¦
-                                                        ÀÇ¹ÌÇÕ´Ï´Ù.
-                                                    </li>
-                                                    <li>2. "È¸¿ø"ÀÌ¶ó ÇÔÀº È¸»ç¿¡ °³ÀÎÁ¤º¸¸¦ Á¦°øÇÏ°í, È¸»ç¿Í ¼­ºñ½º ÀÌ¿ë¿¡ °üÇÑ °è¾àÀ» Ã¼°áÇÑ ÀÚ¸¦ ÀÇ¹ÌÇÕ´Ï´Ù.</li>
-                                                    <li>
-                                                        3. "°³ÀÎÁ¤º¸"¶ó ÇÔÀº »ýÁ¸ÇÏ´Â °³ÀÎ¿¡ °üÇÑ Á¤º¸·Î¼­ ´çÇØ Á¤º¸¿¡ Æ÷ÇÔµÇ¾î ÀÖ´Â ¼º¸í, ÁÖ¹Îµî·Ï¹øÈ£ µîÀÇ »çÇ×¿¡ ÀÇÇÏ¿© ´çÇØ °³ÀÎÀ» ½Äº°ÇÒ ¼ö ÀÖ´Â
-                                                        Á¤º¸(´çÇØ Á¤º¸¸¸À¸·Î´Â Æ¯Á¤ °³ÀÎÀ» ½Äº°ÇÒ ¼ö ¾ø´õ¶óµµ ´Ù¸¥ Á¤º¸¿Í ¿ëÀÌÇÏ°Ô °áÇÕÇÏ¿© ½Äº°ÇÒ ¼ö ÀÖ´Â °ÍÀ» Æ÷ÇÔÇÕ´Ï´Ù)¸¦ ÀÇ¹ÌÇÕ´Ï´Ù.
-                                                    </li>
-                                                </ol>
-
-                                                <h5>Á¦3Á¶ (Àû¿ë¹üÀ§)</h5>
-                                                <ol>
-                                                    <li>¨ç ÀÌ ¾à°üÀº È¸»ç°¡ »çÀÌÆ®¿¡¼­ Á¦°øÇÏ´Â ¸ðµç ¼­ºñ½ºÀÇ ÀÌ¿ëÁ¶°Ç ¹× ÀÌ¿ëÀýÂ÷, ±âÅ¸ ÇÊ¿äÇÑ »çÇ×¿¡ Àû¿ëµË´Ï´Ù.</li>
-                                                    <li>¨è È¸»ç°¡ Á¦°øÇÏ´Â °¢Á¾ »óÇ°º° ¼­ºñ½º´Â °¢ »óÇ°º° ±Ô¾à ¹× ¿©½ÅÀü¹®±ÝÀ¶¾÷¹ý, ÇÒºÎ°Å·¡¹ý µî °ü·Ã ¹ý·üÀÇ Àû¿ëÀ» ¹Þ½À´Ï´Ù.</li>
-                                                </ol>
-
-                                                <h5>Á¦4Á¶ (È¿·Â ¹× °³Á¤)</h5>
-                                                <ol>
-                                                    <li>¨ç ÀÌ ¾à°üÀÇ ³»¿ëÀº »çÀÌÆ® È­¸é¿¡ °Ô½ÃÇÏ°Å³ª ±âÅ¸ÀÇ ¹æ¹ýÀ¸·Î È¸¿ø ¿¡°Ô °øÁöÇÔÀ¸·Î½á È¿·ÂÀ» ¹ß»ýÇÕ´Ï´Ù.</li>
-                                                    <li>
-                                                        ¨è È¸»ç´Â ÀÌ ¾à°üÀ» ÇÕ¸®ÀûÀÎ »çÀ¯°¡ ¹ß»ý½Ã °ü·Ã¹ý·É¿¡ À§¹èµÇÁö ¾Ê´Â ¹üÀ§ ³»¿¡¼­ º¯°æÇÒ ¼ö ÀÖÀ¸¸ç º¯°æµÈ ¾à°üÀº ÀüÇ×°ú °°Àº ¹æ¹ýÀ¸·Î °íÁöÇÔÀ¸·Î½á
-                                                        È¿·ÂÀ» ¹ß»ýÇÕ´Ï´Ù.
-                                                    </li>
-                                                    <li>¨é È¸¿øÀÌ º¯°æµÈ ¾à°ü¿¡ µ¿ÀÇÇÏÁö ¾ÊÀ» °æ¿ì È¸¿øÅ»Åð(ÇØÁö)¸¦ ¿äÃ»ÇÒ ¼ö ÀÖ½À´Ï´Ù.</li>
-                                                </ol>
-
-                                                <h5>Á¦5Á¶ (¼­ºñ½ºÀÇ Á¦°ø ¹× Áß´Ü)</h5>
-                                                <ol>
-                                                    <li>
-                                                        ¨ç È¸»ç´Â È¸¿ø¿¡°Ô È¸»ç°¡ ÀÚÃ¼ °³¹ßÇÏ´Â ¼­ºñ½º, Å¸¾÷Ã¼¿Í Çù·Â °³¹ßÇÑ ¼­ºñ½º, Å¸¾÷Ã¼°¡ °³¹ßÇÑ ¼­ºñ½º ¹× È¸»ç¿¡¼­ º°µµ·Î Á¤ÇÏ´Â °¢Á¾ ¼­ºñ½º µîÀ»
-                                                        Á¦°øÇÕ´Ï´Ù.
-                                                    </li>
-                                                    <li>
-                                                        ¨è È¸»ç´Â ´ÙÀ½ °¢È£ÀÇ ¾î´À°Í ÇÏ³ª¿¡ ÇØ´çÇÏ´Â °æ¿ì ¼­ºñ½º Á¦°øÀ» ÁßÁöÇÒ ¼ö ÀÖ½À´Ï´Ù.
-                                                        <ol>
-                                                            <li>1. ¼­ºñ½º¿ë ¼³ºñÀÇ º¸¼ö µî °ø»ç·Î ÀÎÇÑ ºÎµæÀÌÇÑ °æ¿ì</li>
-                                                            <li>2. Àü±âÅë½Å»ç¾÷¹ý¿¡ ±ÔÁ¤µÈ ±â°£Åë½Å»ç¾÷ÀÚ°¡ Àü±âÅë½Å ¼­ºñ½º¸¦ ÁßÁöÇßÀ» °æ¿ì</li>
-                                                            <li>3. ±âÅ¸ ºÒ°¡Ç×·ÂÀû »çÀ¯°¡ ¹ß»ýÇÑ °æ¿ì</li>
-                                                        </ol>
-                                                    </li>
-                                                    <li>
-                                                        ¨é È¸»ç´Â ±¹°¡ºñ»ó»çÅÂ, Á¤Àü, ¼­ºñ½º Àå¾Ö ¶Ç´Â ¼­ºñ½º ÀÌ¿ëÀÇ ÆøÁÖ µîÀ¸·Î Á¤»óÀûÀÎ ¼­ºñ½º ÀÌ¿ë¿¡ ÁöÀåÀÌ ÀÖ´Â ¶§¿¡´Â ¼­ºñ½ºÀÇ ÀüºÎ ¶Ç´Â ÀÏºÎ¸¦
-                                                        Á¦ÇÑÇÏ°Å³ª Á¤ÁöÇÒ ¼ö ÀÖ½À´Ï´Ù.
-                                                    </li>
-                                                    <li>¨ê È¸»ç´Â »õ·Î¿î ¼­ºñ½º·Î ±³Ã¼ ¶Ç´Â ±âÅ¸ È¸»ç°¡ ¼­ºñ½º¸¦ Á¦°øÇÒ ¼ö ¾ø´Â »çÀ¯ ¹ß»ý½Ã Á¦°øµÇ´Â ¼­ºñ½º¸¦ Áß´ÜÇÒ ¼ö ÀÖ½À´Ï´Ù.</li>
-                                                </ol>
-
-                                                <h5>Á¦6Á¶ (°³ÀÎÁ¤º¸ÀÇ ¼öÁý µî¿¡ ´ëÇÑ µ¿ÀÇ)</h5>
-                                                <ol>
-                                                    <li>
-                                                        ¨ç È¸»ç´Â °³ÀÎÁ¤º¸¸¦ ÀÌ¿ëÇÏ·Á°í ¼öÁýÇÏ´Â ¶§¿¡´Â ÇØ´ç °³ÀÎ¿¡ ´ëÇÑ µ¿ÀÇ¸¦ ¾ò¾î¾ß ÇÕ´Ï´Ù. ÀÌ¿¡ ´ëÇØ È¸»ç´Â °³ÀÎÁ¤º¸ÀÇ ¼öÁý µî°ú °ü·ÃÇÏ¿© ÀÌ
-                                                        ÀÌ¿ë¾à°ü¿¡ ´ëÇØ ¡¸µ¿ÀÇ¡¹¶õ¿¡ Ã¼Å©ÇÏ½Ã¸é °³ÀÎÁ¤º¸ ¼öÁý ¹× ÀÌ¿ë µî¿¡ ´ëÇØ µ¿ÀÇÇÑ °ÍÀ¸·Î º¾´Ï´Ù. ´Ù¸¸ Á¤º¸Åë½Å¸Á ÀÌ¿ëÃËÁø ¹× Á¤º¸º¸È£ µî¿¡ °üÇÑ
-                                                        ¹ý·ü ¶Ç´Â ´Ù¸¥ ¹ý·ü¿¡ Æ¯º°ÇÑ ±ÔÁ¤ÀÌ ÀÖ´Â °æ¿ì¿¡´Â µ¿ÀÇ¸¦ ¿äÇÏÁö ¾ÊÀ» ¼ö ÀÖ½À´Ï´Ù.
-                                                    </li>
-                                                    <li>
-                                                        ¨è È¸»ç°¡ È¸¿ø µî·Ï½Ã ¹Þ´Â Á¤º¸¿Í ±âÅ¸¼­ºñ½º¸¦ ÀÌ¿ëÇÏ±â À§ÇØ ±âÀÔÇÏ´Â Á¤º¸´Â ¿À·ÎÁö È¸»ç¿¡¼­ È°µ¿ÇÏ´Â È¸¿ø¿¡ ´ëÇÑ ¼­ºñ½º¿Í È¸¿ø°£ÀÇ ¿øÈ°ÇÑ
-                                                        ÀÇ»ç¼ÒÅë¸¸À» ¸ñÀûÀ¸·Î ÇÕ´Ï´Ù.
-                                                    </li>
-                                                    <li>
-                                                        ¨é È¸»ç°¡ ¼öÁýÇÏ´Â °³ÀÎÁ¤º¸ÀÇ Ç×¸ñ ¹× Ç×¸ñ¿¡ µû¸¥ ¼öÁý¸ñÀû ¹× ÀÌ¿ë¸ñÀûÀº ´ÙÀ½ °¢È£¿Í °°½À´Ï´Ù.
-                                                        <ol>
-                                                            <li>1. ¼º¸í,ID,ºñ¹Ð¹øÈ£ : È¸¿øÁ¦ ¼­ºñ½º ÀÌ¿ë¿¡ µû¸¥ º»ÀÎ ½Äº° ÀýÂ÷¿¡ ÀÌ¿ë</li>
-                                                            <li>
-                                                                2. E-mailÁÖ¼Ò, ÀüÈ­¹øÈ£ : °íÁö»çÇ× Àü´Þ, º»ÀÎ ÀÇ»ç È®ÀÎ, ºÒ¸¸Ã³¸® µî ¿øÈ°ÇÑ ÀÇ»ç¼ÒÅë °æ·ÎÀÇ È®º¸, »õ·Î¿î ¼­ºñ½º/½Å»óÇ°ÀÌ³ª ÀÌº¥Æ® Á¤º¸ÀÇ
-                                                                ¾È³»
-                                                            </li>
-                                                            <li>3. ÁÖ¹Îµî·Ï¹øÈ£ , ÁÖ¼Ò : ÀÎ±¸Åë°èÇÐÀû ºÐ¼® ÀÚ·á(ÀÌ¿ëÀÚÀÇ ¿¬·Éº°,¼ºº°,Áö¿ªº° Åë°èºÐ¼®)</li>
-                                                            <li>4. ±×¿Ü ¼±ÅÃÇ×¸ñ : °³ÀÎ¸ÂÃã ¼­ºñ½º¸¦ Á¦°øÇÏ±â À§ÇÑ ÀÚ·á</li>
-                                                        </ol>
-                                                    </li>
-                                                    <li>
-                                                        ¨ê È¸»ç°¡ ¼öÁýÇÑ °³ÀÎÁ¤º¸ÀÇ º¸À¯ ¹× ÀÌ¿ë±â°£Àº È¸¿ø °¡ÀÔ ½ÅÃ» ½ÃÁ¡ºÎÅÍ ÇØÁö Ã³¸® ½ÃÁ¡±îÁöÀÌ¸ç, È¸»ç°¡ °³ÀÎÁ¤º¸¸¦ ¼öÁýÇÑ ¸ñÀûÀ» ´Þ¼ºÇÑ ¶§¿¡´Â ´çÇØ
-                                                        °³ÀÎÁ¤º¸¸¦ ÁöÃ¼¾øÀÌ ÆÄ±âÇÏ¸ç °³ÀÎÁ¤º¸¸¦ Àû¹ýÇÏ°Ô Á¦°ø¹ÞÀº Á¦3ÀÚ¿¡ ´ëÇÏ¿©µµ ÀÌ¸¦ ÁØ¼öÇÏµµ·Ï ±Ç°íÇÏ°í ÀÖ½À´Ï´Ù.
-                                                    </li>
-                                                    <li>¨ë È¸¿øÀº È¸¿øÁ¤º¸ ¼öÁ¤À» ÅëÇØ ¾ðÁ¦µçÁö º»ÀÎÀÇ Á¤º¸¸¦ ¿­¶÷, ¼öÁ¤ÇÒ ¼ö ÀÖ½À´Ï´Ù.</li>
-                                                    <li>¨ì È¸¿øÀÇ ±ÍÃ¥»çÀ¯·Î ÀÎÇÑ °³ÀÎÁ¤º¸ ºÐ½Ç, µµ³­, À¯Ãâ, º¯Á¶ µîÀ¸·Î ÀÎÇÑ ¼ÕÇØ¿¡ ´ëÇØ¼­´Â È¸¿øÀÌ ¸ðµç Ã¥ÀÓÀ» ºÎ´ãÇÕ´Ï´Ù.</li>
-                                                    <li>¨í È¸»ç´Â °³ÀÎÁ¤º¸º¸È£¸¦ À§ÇØ °ü¸®ÀÚ¸¦ ÁöÁ¤ÇÏ¿© ¿î¿µÇÏ°í º¸¾È½Ã½ºÅÛÀ» ±¸ÃàÇÏ¸ç °³ÀÎÁ¤º¸Ãë±Þ¹æÄ§À» °ø½ÃÇÏ°í ÀÌ¸¦ ÁØ¼öÇÕ´Ï´Ù.</li>
-                                                </ol>
-
-                                                <h5>Á¦7Á¶ (ÀÌ¿ëÀÚ Á¤º¸)</h5>
-                                                <ol>
-                                                    <li>
-                                                        ¨ç È¸¿ø°¡ÀÔ ½ÅÃ» ¾ç½Ä¿¡ ±âÀçÇÏ´Â ¸ðµç È¸¿øÁ¤º¸´Â ½ÇÁ¦ µ¥ÀÌÅÍÀÎ °ÍÀ¸·Î °£ÁÖÇÏ¸ç, ½Ç¸íÀÌ³ª ½ÇÁ¦ Á¤º¸¸¦ ÀÔ·ÂÇÏÁö ¾ÊÀº È¸¿øÀº ¹ýÀûÀÎ º¸È£¸¦ ¹ÞÀ» ¼ö
-                                                        ¾øÀ¸¸ç, ¼­ºñ½º »ç¿ëÀÇ Á¦ÇÑÀ» ¹ÞÀ» ¼ö ÀÖ½À´Ï´Ù.
-                                                    </li>
-                                                    <li>¨è È¸¿øÀº ÀÔ·ÂÇÑ Á¤º¸ ³»¿ë¿¡ º¯°æÀÌ ÀÖ´Â °æ¿ì, ¿Â¶óÀÎÀ¸·Î Á÷Á¢ ¼öÁ¤ÇÏ¿©¾ß ÇÏ¸ç ¹Ìº¯°æÀ¸·Î ÀÎÇÏ¿© ¹ß»ýµÇ´Â ¹®Á¦ÀÇ Ã¥ÀÓÀº È¸¿ø¿¡°Ô ÀÖ½À´Ï´Ù.</li>
-                                                </ol>
-
-                                                <h5>Á¦8Á¶ (È¸»çÀÇ Á¤º¸Á¦°ø)</h5>
-                                                <p>
-                                                    È¸»ç´Â È¸¿ø¿¡°Ô ¼­ºñ½ºÀÇ ÀÌ¿ë ¹× °¢Á¾Çà»ç, »ýÈ° ÆíÀÇ Á¤º¸ ÃßÃµ, »óÇ°È«º¸ µîÀÇ ¼­ºñ½º ¹× ´Ù¾çÇÑ ¸¶ÄÉÆÃ È°µ¿À» ÀüÀÚ¿ìÆí, ¹«¼±´Ü¹®¸Þ¼¼Áö(SMS), ÀüÈ­(TM)
-                                                    ±âÅ¸ÀÇ ¹æ¹ýÀ¸·Î Á¦°øÇÒ ¼ö ÀÖ½À´Ï´Ù. ´Ü, È¸¿øÀÌ ¿øÇÏÁö ¾Ê´Â °æ¿ì È¸»ç°¡ Á¦°øÇÏ´Â Á¤º¸¸¦ °ÅºÎÇÒ ¼ö ÀÖ½À´Ï´Ù.
-                                                </p>
-
-                                                <h5>Á¦9Á¶ (È¸¿ø Å»Åð ¹× ÀÚ°Ý »ó½Ç µî)</h5>
-                                                <ol>
-                                                    <li>¨ç È¸¿øÀº È¸»ç¿¡ ¾ðÁ¦µçÁö Å»Åð¸¦ ¿äÃ»ÇÒ ¼ö ÀÖÀ¸¸ç, È¸»ç´Â Áï½Ã È¸¿øÅ»Åð¸¦ Ã³¸®ÇÕ´Ï´Ù.</li>
-                                                    <li>¨è È¸¿øÀÌ È¸»çÀÇ »çÀÌÆ® ³» Áú¼­¸¦ ¾îÁö·´È÷´Â ºÎ´çÇÑ ÇàÀ§¸¦ ÇÒ °æ¿ì, È¸»ç´Â È¸¿øÀÇ È¸¿øÀÚ°ÝÀ» Á¦ÇÑ ¹× Á¤Áö½ÃÅ³ ¼ö ÀÖ½À´Ï´Ù.</li>
-                                                    <li>
-                                                        ¨é È¸»ç´Â È¸¿øÀÌ ´ÙÀ½ °¢È£ÀÇ ¾î´À°Í ÇÏ³ª¿¡ ÇØ´çÇÏ´Â ÇàÀ§¸¦ ÇÏ¿´À» °æ¿ì¿¡´Â ÀÌ¿ë°è¾àÀ» ÇØÁöÇÏ°Å³ª ¼­ºñ½ºÀÇ ÀÌ¿ëÀ» ÁßÁöÇÒ ¼ö ÀÖ½À´Ï´Ù.
-                                                        <ol>
-                                                            <li>1. ÀÌ ¾à°ü ¹× ¼­ºñ½º ÀÌ¿ë¿¡ °ü·ÃµÈ °ü°è¹ý·ÉÀ» À§¹ÝÇÑ »ç½ÇÀÌ ¹àÇôÁø °æ¿ì</li>
-                                                            <li>2. È¸¿øÀÇ ¿äÃ»¿¡ ÀÇÇØ È¸¿øÀ» Å»È¸ÇÑ °æ¿ì</li>
-                                                            <li>3. ¹üÁË¿Í °ü·ÃµÇ¾ú´Ù°í ÃßÁ¤µÇ´Â ÀÏÃ¼ÀÇ ÇàÀ§¸¦ ÇÑ °æ¿ì</li>
-                                                            <li>4. °ø°øÀÇ ÀÌÀÍÀ» ÀúÇØÇÒ ¸ñÀûÀ¸·Î ¼­ºñ½º¸¦ ÀÌ¿ëÇÏ´Â °æ¿ì</li>
-                                                            <li>5. ¼­ºñ½ºÀÇ ¿î¿µÀ» °íÀÇ·Î ¹æÇØÇÏ´Â °æ¿ì</li>
-                                                            <li>6. È¸¿øÀÌ °Ô½ÃÆÇ µî¿¡ À½¶õ¹°À» °ÔÀçÇÏ°Å³ª À½¶õ»çÀÌÆ®¸¦ ¸µÅ©ÇÏ´Â °æ¿ì</li>
-                                                            <li>7. ±âÅ¸ °ü°è¹ý·ÉÀÌ³ª È¸»ç°¡ Á¤ÇÑ ÀÌ¿ë±ÔÄ¢¿¡ À§¹ÝÇÏ¿© ´õ ÀÌ»óÀÇ ¼­ºñ½º Á¦°øÀÌ °ï¶õÇÏ´Ù°í È¸»ç°¡ ÆÇ´ÜÇÏ´Â °æ¿ì</li>
-                                                        </ol>
-                                                    </li>
-                                                </ol>
-
-                                                <h5>Á¦10Á¶ (È¸¿ø¿¡ ´ëÇÑ ÅëÁö)</h5>
-                                                <ol>
-                                                    <li>¨ç È¸»ç°¡ È¸¿ø¿¡ ´ëÇÑ ÅëÁö¸¦ ÇÏ´Â °æ¿ì, È¸¿øÀÌ »çÀÌÆ®¿¡ ±âÀçÇÑ ÀüÀÚ¿ìÆí ÁÖ¼Ò·Î ÇÒ ¼ö ÀÖ½À´Ï´Ù.</li>
-                                                    <li>¨è È¸»ç´Â ºÒÆ¯Á¤´Ù¼ö È¸¿ø¿¡ ´ëÇÑ ÅëÁöÀÇ °æ¿ì 1ÁÖÀÏ ÀÌ»ó »çÀÌÆ® °Ô½ÃÆÇ¿¡ °Ô½ÃÇÔÀ¸·Î½á °³º° ÅëÁö¿¡ °¥À½ ÇÒ ¼ö ÀÖ½À´Ï´Ù.</li>
-                                                </ol>
-
-                                                <h5>Á¦11Á¶ (È¸»çÀÇ ÀÇ¹«)</h5>
-                                                <p>
-                                                    È¸»ç´Â Æ¯º°ÇÑ »çÁ¤ÀÌ ¾ø´Â ÇÑ È¸¿øÀÌ ½ÅÃ»ÇÑ ¼­ºñ½º¸¦ ¼­ºñ½ºÁ¦°ø °³½ÃÀÏ ÀÌÈÄ¿¡ ÀÌ¿ëÇÒ ¼ö ÀÖµµ·ÏÇÏ¸ç, ÀÌ ¾à°üÀÌ Á¤ÇÑ ¹Ù¿¡ µû¶ó Áö¼ÓÀûÀ¸·Î ¾ÈÁ¤ÀûÀÎ
-                                                    ¼­ºñ½º¸¦ Á¦°øÇÒ ÀÇ¹«°¡ ÀÖ½À´Ï´Ù.
-                                                </p>
-
-                                                <h5>Á¦12Á¶ (È¸¿øÀÇ ÀÇ¹«)</h5>
-                                                <ol>
-                                                    <li>
-                                                        ¨ç È¸¿øÀº ¼­ºñ½º¸¦ ÀÌ¿ëÇÒ ¶§ ´ÙÀ½ °¢È£ÀÇ ÇàÀ§¸¦ ÇÏÁö ¾Ê¾Æ¾ß ÇÕ´Ï´Ù.
-                                                        <ol>
-                                                            <li>1. ´Ù¸¥ È¸¿øÀÇ ÁÖ¹Îµî·Ï¹øÈ£, »ç¾÷ÀÚµî·Ï¹øÈ£ ¹× ºñ¹Ð¹øÈ£¸¦ ºÎÁ¤ÇÏ°Ô »ç¿ëÇÏ´Â ÇàÀ§</li>
-                                                            <li>2. È¸»çÀÇ ÀúÀÛ±Ç, Á¦3ÀÚÀÇ ÀúÀÛ±Ç µî ±âÅ¸ ±Ç¸®¸¦ Ä§ÇØÇÏ´Â ÇàÀ§</li>
-                                                            <li>3. ¹üÁË¿Í °áºÎµÈ´Ù°í °´°üÀûÀ¸·Î ÀÎÁ¤µÇ´Â ÇàÀ§</li>
-                                                            <li>4. ¼­ºñ½º¿Í °ü·ÃµÈ ¼³ºñÀÇ ¿ÀÀÛµ¿ÀÌ³ª Á¤º¸ µîÀÇ ÆÄ±« ¹× È¥¶õÀ» À¯¹ß½ÃÅ°´Â ÄÄÇ»ÅÍ ¹ÙÀÌ·¯½º °¨¿° ÀÚ·á¸¦ µî·Ï ¶Ç´Â À¯Æ÷ÇÏ´Â ÇàÀ§</li>
-                                                            <li>5. ¼­ºñ½ºÀÇ ¾ÈÁ¤ÀûÀÎ ¿î¿µÀ» ¹æÇØÇÏ´Â ±âÅ¸ ÀÏÃ¼ÀÇ ÇàÀ§</li>
-                                                        </ol>
-                                                    </li>
-                                                    <li>
-                                                        ¨è ÁÖ¹Îµî·Ï¹øÈ£, »ç¾÷ÀÚµî·Ï¹øÈ£, ID¿Í ºñ¹Ð¹øÈ£ µî °³ÀÎÁ¤º¸ÀÇ °ü¸®¿¡ °üÇÑ ÀÏÃ¼ÀÇ Ã¥ÀÓÀº È¸¿ø º»ÀÎ¿¡°Ô ÀÖ½À´Ï´Ù. È¸¿ø º»ÀÎÀÇ °³ÀÎÁ¤º¸ÀÇ °ü¸®¼ÒÈ¦,
-                                                        ºÎÁ¤»ç¿ë¿¡ ÀÇÇÏ¿© ¹ß»ýÇÏ´Â ¸ðµç °á°ú¿¡ ´ëÇÑ Ã¥ÀÓÀº È¸¿ø º»ÀÎ¿¡°Ô ÀÖ½À´Ï´Ù.
-                                                    </li>
-                                                    <li>¨é È¸¿øÀº º»ÀÎÀÇ °³ÀÎÁ¤º¸°¡ ºÎÁ¤ÇÏ°Ô »ç¿ëµÇ´Â °æ¿ì¸¦ ÀÎÁöÇÑ ¶§¿¡´Â Áï½Ã ÀÚ½ÅÀÇ ºñ¹Ð¹øÈ£¸¦ º¯°æÇÏ°í ±× »ç½ÇÀ» È¸»ç¿¡ Åëº¸ÇÏ¿©¾ß ÇÕ´Ï´Ù.</li>
-                                                    <li>¨ê È¸¿øÀº È¸»çÀÇ »çÀü½Â³« ¾øÀÌ ¼­ºñ½º¸¦ ÀÌ¿ëÇÏ¿© ¿µ¾÷È°µ¿À» ÇÒ ¼ö ¾øÀ¸¸ç, ±× ¿µ¾÷ È°µ¿À¸·Î ÀÎÇÑ °á°ú¿¡ ´ëÇÏ¿© È¸»ç´Â Ã¥ÀÓÀ» ÁöÁö ¾Ê½À´Ï´Ù.</li>
-                                                    <li>¨ë È¸¿øÀº ³»¿ëº°·Î È¸»ç°¡ ¼­ºñ½º °øÁö»çÇ×¿¡ °Ô½ÃÇÏ°Å³ª º°µµ·Î °øÁöÇÑ ÀÌ¿ë Á¦ÇÑ»çÇ×À» ÁØ¼öÇÏ¿©¾ß ÇÕ´Ï´Ù.</li>
-                                                </ol>
-
-                                                <h5>Á¦13Á¶ (¸éÃ¥)</h5>
-                                                <p>
-                                                    È¸»ç´Â ´ÙÀ½ °¢È£ÀÇ »çÀ¯·Î ÀÎÇÏ¿© È¸¿ø¿¡°Ô ¹ß»ýÇÑ ¼ÕÇØ¿¡ ´ëÇØ¼­´Â Ã¥ÀÓÀ» ÁöÁö ¾Ê½À´Ï´Ù. ´Ù¸¸ È¸»ç°¡ Ã¥ÀÓÀÌ ÀÖ´Ù°í ÆÇ´ÜµÇ´Â »ó´çÇÑ ÀÎ°ú°ü°è°¡ ÀÖ´Â
-                                                    °æ¿ì¿¡´Â ±×·¯ÇÏÁö ¾Æ´ÏÇÕ´Ï´Ù.
-                                                </p>
-                                                <ol>
-                                                    <li>1. Åë½Å±â±â, È¸¼± ¹× ÄÄÇ»ÅÍÀÇ Àå¾Ö³ª °Å·¡ÀÇ ÆøÁÖ µî ºÎµæÀÌÇÑ »çÁ¤À¸·Î ¼­ºñ½º¸¦ Á¦°øÇÏÁö ¸øÇÏ°Å³ª ¼­ºñ½º Á¦°øÀÌ Áö¿¬µÈ °æ¿ì</li>
-                                                    <li>2. È¸¿øÀÌ °³ÀÎÁ¤º¸ÀÇ °ü¸®¼ÒÈ¦·Î ÀÎÇØ Á¦3ÀÚ¿¡°Ô ´©ÃâÇÑ °æ¿ì</li>
-                                                    <li>3. È¸¿øÀÇ Àü»êÁ¶ÀÛÀÌ³ª ¾÷¹«Ã³¸®ÀÇ ¿À·ù µîÀ¸·Î ÀÎÇÑ °æ¿ì</li>
-                                                    <li>4. ±âÅ¸ ÃµÀçÁöº¯ µîÀÇ ºÒ°¡ÇÇÇÑ »çÀ¯·Î ÀÎÇÑ °æ¿ì</li>
-                                                </ol>
-
-                                                <h5>Á¦14Á¶ (¾à°üÀ§¹Ý½Ã Ã¥ÀÓ)</h5>
-                                                <p>
-                                                    È¸»ç¿Í È¸¿øÀº ÀÌ ¾à°üÀ» À§¹ÝÇÔÀ¸·Î½á ¹ß»ýÇÏ´Â ¸ðµç Ã¥ÀÓÀ» °¢ÀÚ ºÎ´ãÇÏ¸ç, ÀÌ·Î ÀÎÇÏ¿© »ó´ë¹æ¿¡°Ô ¼ÕÇØ¸¦ ÀÔÈù °æ¿ì¿¡´Â ÁöÃ¼¾øÀÌ ¼ÕÇØ ÀÏÃ¼¸¦ ¹è»óÇÏ¿©¾ß
-                                                    ÇÕ´Ï´Ù.
-                                                </p>
-
-                                                <h5>Á¦15Á¶ (ÀÌ¿ë¾à°ü °³Á¤)</h5>
-                                                <ol>
-                                                    <li>
-                                                        ¨ç º» ¾à°üÀº ÇÊ¿ä½Ã °³Á¤µÉ ¼ö ÀÖÀ¸¸ç ¾à°üÀ» °³Á¤ÇÏ°íÀÚ ÇÒ °æ¿ì È¸»ç´Â °³Á¤µÈ ¾à°üÀ» Àû¿ëÇÏ°íÀÚ ÇÏ´Â ³¯·ÎºÎÅÍ 14ÀÏ ÀÌÀü¿¡ ¾à°üÀÌ °³Á¤µÈ´Ù´Â »ç½Ç°ú
-                                                        °³Á¤µÈ ³»¿ë µîÀ» ¾Æ·¡¿¡ ±ÔÁ¤µÈ ¹æ¹ý Áß 1°¡Áö ÀÌ»óÀÇ ¹æ¹ýÀ¸·Î È¸¿ø¿¡°Ô °íÁöÇÏ¿© µå¸³´Ï´Ù.
-                                                        <ol>
-                                                            <li>¥¡. e-mail Åëº¸</li>
-                                                            <li>¥¢. ¼­¸éÅëº¸</li>
-                                                            <li>¥£. È¨ÆäÀÌÁö ³» °Ô½Ã</li>
-                                                        </ol>
-                                                    </li>
-                                                    <li>
-                                                        ¨è È¸»ç°¡ e-mailÅëº¸ ¶Ç´Â ¼­¸éÅëº¸ÀÇ ¹æ¹ýÀ¸·Î º» ¾à°üÀÌ °³Á¤µÈ »ç½Ç ¹× °³Á¤µÈ ³»¿ëÀ» È¸¿ø¿¡°Ô °íÁöÇÏ´Â °æ¿ì¿¡´Â È¸¿øÀÌ Á¦°øÇÑ e-mail ÁÖ¼Ò³ª
-                                                        ÁÖ¼ÒÁö Áß °¡Àå ÃÖ±Ù¿¡ Á¦°øµÈ e-mail ÁÖ¼Ò³ª ÁÖ¼ÒÁö·Î Åëº¸ÇÕ´Ï´Ù.
-                                                    </li>
-                                                    <li>¨é º» Á¶ÀÇ ±ÔÁ¤¿¡ ÀÇÇÏ¿© °³Á¤µÈ ¾à°üÀº ¿øÄ¢ÀûÀ¸·Î °øÇ¥µÈ Àû¿ëÀÏ·ÎºÎÅÍ Àå·¡¿¡ ÇâÇÏ¿© À¯È¿ÇÕ´Ï´Ù.</li>
-                                                    <li>
-                                                        ¨ê º» ¾à°üÀÇ °³Á¤°ú °ü·ÃÇÏ¿© ÀÌÀÇ°¡ ÀÖ´Â È¸¿øÀº È¸¿øÅ»Åð¸¦ ÇÒ ¼ö ÀÖ½À´Ï´Ù. ´Ü, ÀÌÀÇ°¡ ÀÖÀ½¿¡µµ ºÒ±¸ÇÏ°í º» Á¶ Á¦¨çÇ× ³»Áö Á¦¨èÇ×¿¡ Á¤ÇØÁø ¹Ù¿¡ µû¸¥
-                                                        È¸»çÀÇ °íÁö°¡ ÀÖÀº ÈÄ 30ÀÏ ÀÌ³»¿¡ È¸¿øÅ»Åð¸¦ ÇÏÁö ¾ÊÀº È¸¿øÀº °³Á¤µÈ ¾à°ü¿¡ µ¿ÀÇÇÑ °ÍÀ¸·Î º¾´Ï´Ù.
-                                                    </li>
-                                                    <li>¨ë º» Á¶ÀÇ ÅëÁö¹æ¹ý ¹× ÅëÁöÀÇ È¿·ÂÀº º» ¾à°üÀÇ °¢ Á¶Ç×¿¡¼­ ±ÔÁ¤ÇÏ´Â °³º°ÀûÀÎ ¶Ç´Â ÀüÃ¼ÀûÀÎ ÅëÁöÀÇ °æ¿ì¿¡ ÀÌ¸¦ ÁØ¿ëÇÕ´Ï´Ù.</li>
-                                                </ol>
-
-                                                <h5>Á¦16Á¶ (¼ÕÇØ¹è»ó)</h5>
-                                                <p>
-                                                    È¸»ç´Â ¹«·á·Î Á¦°øÇÏ´Â ¼­ºñ½ºÀÇ ÀÌ¿ë°ú °ü·ÃÇÏ¿© °³ÀÎÁ¤º¸Ãë±Þ¹æÄ§¿¡¼­ Á¤ÇÏ´Â ³»¿ë¿¡ ÇØ´çÇÏÁö ¾Ê´Â »çÇ×¿¡ ´ëÇØ¼­´Â ¾î¶°ÇÑ ¼ÕÇØ¹è»óÀÇ Ã¥ÀÓµµ ÁöÁö
-                                                    ¾Ê½À´Ï´Ù.
-                                                </p>
-
-                                                <h5>Á¦17Á¶ (°üÇÒ¹ý¿ø)</h5>
-                                                <p>¼­ºñ½º ÀÌ¿ë°ú °ü·ÃÇÏ¿© È¸»ç¿Í È¸¿ø°£¿¡ ºÐÀïÀÌ ¹ß»ýÇÑ °æ¿ì, °üÇÒ¹ý¿øÀº È¸»ç º»»ç ¼ÒÀçÁö¸¦ °üÇÒÇÏ´Â ¹ý¿øÀ» °üÇÒ¹ý¿øÀ¸·Î ÇÕ´Ï´Ù.</p>
-
-                                                <h5>Á¦18Á¶ (¾à°ü¿Ü ÁØÄ¢)</h5>
-                                                <p>ÀÌ ¾à°ü¿¡ ¸í½ÃµÇÁö ¾ÊÀº »çÇ×Àº Àü±âÅë½Å»ç¾÷¹ý, Á¤º¸Åë½Å¸Á ÀÌ¿ëÃËÁø ¹× Á¤º¸º¸È£ µî¿¡ °üÇÑ ¹ý·ü ¹× ±âÅ¸ °ü·Ã¹ý·ÉÀÇ ±ÔÁ¤¿¡ ÀÇÇÕ´Ï´Ù.</p>
-
-                                                <p>ºÎ Ä¢</p>
-                                                <p>Á¦1Á¶(½ÃÇàÀÏ) º» ¾à°üÀº 2012³â 1 ¿ù 1 ÀÏºÎÅÍ ½ÃÇàÇÕ´Ï´Ù.</p>
-                                            </div>
-                                            <div class="pop-btm-wrap">
-                                                <div class="btm-btn-area">
-                                                    <button type="button" class="btn btn-primary" data-popup-close="fullPopup1">È®ÀÎ</button>
-                                                </div>
-                                            </div>
-                                            <button type="button" name="button" class="btn btn-close right" data-popup-close="fullPopup1"><span class="sr-only">´Ý±â</span></button>
-                                        </div>
-                                    </div>
-                                    <!-- e: °³ÀÎÁ¤º¸ ¼öÁýÀÌ¿ë ÆË¾÷(fullPopup1) -->
-                                    <!-- s: º»ÀÎÈ®ÀÎ¼­ºñ½º ÆË¾÷(fullPopup2) -->
-                                    <div id="fullPopup2" class="layerPopup full fullPopupOn">
-                                        <!--[D] fullPopupOn Å¬·¡½º :: Çì´õ ½ºÅ©¸³Æ® Àû¿ëÁß-->
-                                        <div class="pop-area">
-                                            <div class="pop-header">
-                                                <h2 class="pop-tit">º»ÀÎÈ®ÀÎ¼­ºñ½º ÀÌ¿ë¾à°ü</h2>
-                                            </div>
-                                            <div class="pop-con-wrap">
-                                                <h5>Á¦1Á¶ (¸ñÀû)</h5>
-                                                <p>
-                                                    ÀÌ ¾à°üÀº º»ÀÎÈ®ÀÎ¼­ºñ½º¸¦ Á¦°øÇÏ´Â MGÄ³ÇÇÅ»(ÀÌÇÏ "È¸»ç"¶ó ÇÕ´Ï´Ù)¿Í º»ÀÎÈ®ÀÎ¼­ºñ½º ÀÌ¿ëÀÚ(ÀÌÇÏ "ÀÌ¿ëÀÚ"¶ó ÇÕ´Ï´Ù)°£¿¡ º»ÀÎÈ®ÀÎ¼­ºñ½º ÀÌ¿ë¿¡ °üÇÑ
-                                                    È¸»ç¿Í ÀÌ¿ëÀÚÀÇ ±Ç¸®¿Í ÀÇ¹«, ±âÅ¸ Á¦¹Ý »çÇ×À» Á¤ÇÔÀ» ¸ñÀûÀ¸·Î ÇÕ´Ï´Ù.
-                                                </p>
-
-                                                <h5>Á¦2Á¶ (¿ë¾îÀÇ Á¤¸®)</h5>
-                                                <ul>
-                                                    <li>
-                                                        1. "º»ÀÎÀÎÁõ¼­ºñ½º"¶ó ÇÔÀº ÀÌ¿ëÀÚ°¡ ÀÎÅÍ³Ý»ó¿¡¼­ º»ÀÎ¸íÀÇÀÇ ÈÞ´ëÆùÀ» ÀÌ¿ëÇÏ¿©, ÁÖ¹Îµî·Ï¹øÈ£ ÀÔ·Â ¾øÀÌµµ º»ÀÎÀÓÀ» ¾ÈÀüÇÏ°Ô ½Äº° ¹× È®ÀÎÇØ ÁÖ´Â
-                                                        ¼­ºñ½º¸¦ ¸»ÇÕ´Ï´Ù.
-                                                    </li>
-                                                    <li>
-                                                        2. "ÀÌ¿ëÀÚ"¶ó ÇÔÀº È¸»ç ¶Ç´Â ÀÎÁõ ´ëÇà±â°ü¿¡¼­ Á¦°øÇÏ´Â ¼­ºñ½ºÀÇ ÀÌ¿ëÀ» À§ÇØ ÀÚ½ÅÀÇ º»ÀÎÈ®ÀÎÁ¤º¸¸¦ È¸»ç, ÀÎÁõ´ëÇà ±â°ü, º»ÀÎÈ®ÀÎ±â°ü µî¿¡°Ô
-                                                        Á¦°øÇÏ°í, º»ÀÎÀÓÀ» È®ÀÎ ¹Þ°íÀÚ ÇÏ´Â ÀÚ¸¦ ¸»ÇÕ´Ï´Ù.
-                                                    </li>
-                                                    <li>
-                                                        3. "º»ÀÎÈ®ÀÎÁ¤º¸"¶ó ÇÔÀº ÀÌ¿ëÀÚ°¡ ÀÔ·ÂÇÑ »ý³â¿ùÀÏ, ¼ºº°, ¼º¸í, ³»/¿Ü±¹ÀÎ, ÈÞ´ëÆù¹øÈ£, Åë½Å»ç µî º»ÀÎ ½Äº°¿¡ ÇÊ¿äÇÑ ÀÌ¿ëÀÚÀÇ Á¤º¸¸¦ ¸»ÇÕ´Ï´Ù.
-                                                    </li>
-                                                    <li>4. "Áßº¹°¡ÀÔÈ®ÀÎÁ¤º¸"¶ó ÇÔÀº À¥»çÀÌÆ®¿¡ °¡ÀÔÇÏ°íÀÚ ÇÏ´Â ÀÌ¿ëÀÚÀÇ Áßº¹È®ÀÎÀ» À§ÇØ Á¦°øµÇ´Â Á¤º¸¸¦ ¸»ÇÕ´Ï´Ù.</li>
-                                                    <li>5. "¿¬°èÁ¤º¸"¶ó ÇÔÀº ÀÎÅÍ³Ý»ç¾÷ÀÚÀÇ ¿Â¡¤¿ÀÇÁ¶óÀÎ ¼­ºñ½º ¿¬°è µîÀÇ ¸ñÀûÀ¸·Î ÀÌ¿ëÀÚ¸¦ ½Äº°ÇÏ±â À§ÇØ Á¦°øµÇ´Â Á¤º¸¸¦ ¸»ÇÕ´Ï´Ù.</li>
-                                                    <li>
-                                                        6. "º»ÀÎÈ®ÀÎ±â°ü"ÀÌ¶ó ÇÔÀº ÁÖ¹Îµî·Ï¹øÈ£¸¦ »ç¿ëÇÏÁö ¾Æ´ÏÇÏ°í º»ÀÎÀ» È®ÀÎÇÏ´Â ¹æ¹ý ¶Ç´Â ¼­ºñ½º¸¦ Á¦°øÇÏ´Â ÀÚ·Î ¹æ¼ÛÅë½ÅÀ§¿øÈ¸·ÎºÎÅÍ
-                                                        º»ÀÎÈ®ÀÎ±â°üÀ¸·Î ÁöÁ¤À» ¹ÞÀº ÀÚ¸¦ ÀÇ¹ÌÇÕ´Ï´Ù.
-                                                    </li>
-                                                    <li>
-                                                        7. "ÀÎÁõ ´ëÇà±â°ü"ÀÌ¶ó ÇÔÀº È¸»ç¸¦ ´ë½ÅÇÏ¿© ¼­ºñ½ºÀÇ Á¦°ø ¹× Áö¿ø µîÀÇ Áß°è ¾÷¹«¸¦ ´ã´çÇÏ´Â °÷À¸·ÎÈ¸»ç¿Í ¾÷¹«Áö¿ø¿¡ ´ëÇÑ °è¾àÀÌ ¿Ï·áµÇ¾î
-                                                        ÀÎÅÍ³Ý»ç¾÷ÀÚ¿¡ ¼­ºñ½º¸¦ Á¦°øÇÏ´Â »ç¾÷Ã¼¸¦ ¸»ÇÕ´Ï´Ù.
-                                                    </li>
-                                                    <li>
-                                                        8. "ÀÎÅÍ³Ý»ç¾÷ÀÚ"¶ó ÇÔÀº ÀÎÅÍ³ÝÀ» ÀÌ¿ëÇÏ¿© Á¤º¸¸¦ Á¦°øÇÏ°Å³ª, Á¤º¸ÀÇ Á¦°øÀ» ¸Å°³ÇÏ´Â ÀÏÀ» ¾÷À¸·Î ÇÏ´ÂÀÚ·Î È¸»ç ¶Ç´Â ÀÎÁõ ´ëÇà±â°ü°úÀÇ ¼­ºñ½º
-                                                        °è¾àÀ» ÅëÇØ ¿î¿µÇÏ¸ç, ÀÎÅÍ³Ý À¥»çÀÌÆ®ÀÇ ÀÌ¿ëÀÚ¿¡ ´ëÇÑ º»ÀÎÈ®ÀÎÁ¤º¸¸¦ Á¦°ø¹Þ´Â »ç¾÷Ã¼¸¦ ¸»ÇÕ´Ï´Ù.
-                                                    </li>
-                                                    <li>
-                                                        9. "Á¢±Ù¸ÅÃ¼"¶ó ÇÔÀº º»ÀÎÀÎÁõÀ» ÇÔ¿¡ ÀÖ¾î ÀÌ¿ëÀÚ º»ÀÎÀÎÁõÀÇ Áø½Ç¼º°ú Á¤È®¼ºÀ» È®º¸ÇÏ±â À§ÇÏ¿© »ç¿ëµÇ´Â ¼ö´Ü ¶Ç´Â Á¤º¸·Î¼­ È¸»ç¿¡ µî·ÏµÈ ÀÌ¿ëÀÚÀÇ
-                                                        ÀüÈ­¹øÈ£, ÀÌ¿ëÀÚÀÇ »ýÃ¼Á¤º¸, ÀÌ»óÀÇ ¼ö´ÜÀÌ³ª Á¤º¸¸¦ »ç¿ëÇÏ´Âµ¥ ÇÊ¿äÇÑ ºñ¹Ð¹øÈ£ µîÀ» ¸»ÇÕ´Ï´Ù.
-                                                    </li>
-                                                </ul>
-
-                                                <h5>Á¦3Á¶ (¾à°üÀÇ È¿·Â ¹× º¯°æ)</h5>
-                                                <ul>
-                                                    <li>1. º» ¾à°üÀº ÀÌ¿ëÀÚ¿¡°Ô ¼­ºñ½º È­¸é¿¡ °Ô½ÃÇÏ°Å³ª, ±âÅ¸ÀÇ ¹æ¹ýÀ¸·Î °øÁöÇÏ´Â °ÍÀ¸·Î È¿·ÂÀÌ ¹ß»ýÇÕ´Ï´Ù.</li>
-                                                    <li>
-                                                        2. È¸»ç´Â ¾à°üÀÇ ±ÔÁ¦¿¡ °üÇÑ ¹ý·ü ¹× ±âÅ¸ °ü·Ã ¹ý·É¿¡ À§¹èµÇÁö ¾Ê´Â ¹üÀ§¿¡¼­ º» ¾à°üÀÇ ³»¿ëÀ» °³Á¤ ÇÒ ¼ö ÀÖÀ¸¸ç, º¯°æµÈ °æ¿ì¿¡´Â Á¦1Ç×°ú °°Àº
-                                                        ¹æ¹ýÀ¸·Î °øÁöÇÕ´Ï´Ù. ´Ù¸¸ "ÀÌ¿ëÀÚ"ÀÇ ±Ç¸®¿Í ÀÇ¹«¿¡ °üÇÑ Áß¿äÇÑ »çÇ×Àº º¯°æµÈ ³»¿ëÀÇ ½ÃÇà 15ÀÏ ÀÌÀü¿¡ °øÁöÇÕ´Ï´Ù.
-                                                    </li>
-                                                    <li>
-                                                        3. ÀÌ¿ëÀÚ´Â °³Á¤µÈ ¾à°ü »çÇ×¿¡ µ¿ÀÇÇÏÁö ¾ÊÀ» ±Ç¸®°¡ ÀÖÀ¸¸ç, °³Á¤µÈ ¾à°ü¿¡ µ¿ÀÇÇÏÁö ¾Ê´Â °æ¿ì, º» ¼­ºñ½ºÀÇ ÀÌ¿ëÀ» Áß´ÜÇÏ°í ÀÌ¿ë °è¾àÀ» ÇØÁöÇÒ ¼ö
-                                                        ÀÖ½À´Ï´Ù. È¸¿øÀÌ È¸»çÀÇ ÀüÇ× ´Ü¼­¿¡ µû¸¥ ¾à°üÀÇ ºÒ¸®ÇÑ º¯°æ¿¡ ´ëÇÏ¿© Àû¿ë¿¹Á¤ÀÏ±îÁö È¸»ç¿¡°Ô ºÎµ¿ÀÇ ÀÇ»ç¸¦ Ç¥½ÃÇÏÁö ¾Ê°Å³ª ÀÌ¿ë°è¾àÀ» ÇØÁöÇÏÁö
-                                                        ¾ÊÀº °æ¿ì º¯°æµÈ ¾à°üÀ» ½ÂÀÎÇÑ °ÍÀ¸·Î º¾´Ï´Ù.
-                                                    </li>
-                                                </ul>
-
-                                                <h5>Á¦4Á¶ (Á¢±Ù¸ÅÃ¼ÀÇ °ü¸® µî)</h5>
-                                                <ul>
-                                                    <li>1. È¸»ç´Â ¼­ºñ½º Á¦°ø ½Ã Á¢±Ù¸ÅÃ¼¸¦ ÀÌ¿ëÇÏ¿© ÀÌ¿ëÀÚÀÇ ½Å¿ø, ±ÇÇÑ ¹× °Å·¡Áö½ÃÀÇ ³»¿ë µîÀ» È®ÀÎ ÇÒ ¼ö ÀÖ½À´Ï´Ù.</li>
-                                                    <li>2. ÀÌ¿ëÀÚ´Â Á¢±Ù¸ÅÃ¼¸¦ Á¦3ÀÚ¿¡°Ô ´ë¿©ÇÏ°Å³ª »ç¿ëÀ» À§ÀÓÇÏ°Å³ª ¾çµµ ¶Ç´Â ´ãº¸ ¸ñÀûÀ¸·Î Á¦°øÇÒ ¼ö ¾ø½À´Ï´Ù.</li>
-                                                    <li>
-                                                        3. ÀÌ¿ëÀÚ´Â ÀÚ½ÅÀÇ Á¢±Ù¸ÅÃ¼¸¦ Á¦3ÀÚ¿¡°Ô ´©¼³ ¶Ç´Â ³ëÃâÇÏ°Å³ª ¹æÄ¡ÇÏ¿©¼­´Â ¾ÈµÇ¸ç, Á¢±Ù¸ÅÃ¼ÀÇ µµ¿ëÀÌ³ª À§Á¶ ¶Ç´Â º¯Á¶¸¦ ¹æÁöÇÏ±â À§ÇØ ÃæºÐÇÑ
-                                                        ÁÖÀÇ¸¦ ±â¿ï¿©¾ß ÇÕ´Ï´Ù.
-                                                    </li>
-                                                    <li>
-                                                        4. È¸»ç°¡ Á¢±Ù¸ÅÃ¼ÀÇ ¹ß±ÞÁÖÃ¼°¡ ¾Æ´Ñ °æ¿ì¿¡´Â Á¢±Ù¸ÅÃ¼ÀÇ À§Á¶³ª º¯Á¶·Î ¹ß»ýÇÑ »ç°í·Î ÀÎÇÏ¿© ÀÌ¿ëÀÚ¿¡°Ô ¹ß»ýÇÑ ¼ÕÇØ¿¡ ´ëÇÏ¿© ¹è»óÃ¥ÀÓÀÌ ¾ø½À´Ï´Ù.
-                                                    </li>
-                                                </ul>
-
-                                                <h5>Á¦5Á¶ (¼­ºñ½º ¾È³»)</h5>
-                                                <ul>
-                                                    <li>
-                                                        1. ¼­ºñ½º´Â ÀÌ¿ëÀÚ°¡ ÁÖ¹Îµî·Ï¹øÈ£ÀÇ ÀÔ·Â ¾øÀÌ, º»ÀÎ¸íÀÇ·Î µÈ ÈÞ´ëÆùÁ¤º¸¸¦ ÀÌ¿ëÇÏ¿© º»ÀÎ ½Äº° ¶Ç´Â º»ÀÎ È®ÀÎÀÌ °¡´ÉÇÑ »ý³â¿ùÀÏ ±â¹ÝÀÇ
-                                                        ÁÖ¹Îµî·Ï¹øÈ£ ´ëÃ¼ ÈÞ´ëÆùÀÎÁõ ¼­ºñ½º ÀÔ´Ï´Ù.
-                                                    </li>
-                                                    <li>
-                                                        2. È¸»ç´Â ÀÎÁõ ´ëÇà±â°üÀ» ÅëÇØ ÀÎÅÍ³Ý»ç¾÷ÀÚ¿¡°Ô ¼­ºñ½º¸¦ Á¦°øÇÏ¸ç, ÀÎÅÍ³Ý»ç¾÷ÀÚ´Â È¸¿ø°¡ÀÔ, ID/PWÃ£±â, ¼ºÀÎÀÎÁõ, ±âÅ¸ º»ÀÎÈ®ÀÎÀÌ ÇÊ¿äÇÑ °æ¿ì
-                                                        ÀÌ¿ëÀÚ¿¡°Ô ¼­ºñ½º¸¦ Á¦°ø ÇÕ´Ï´Ù.
-                                                    </li>
-                                                    <li>
-                                                        3. ÀÌ¿ëÀÚ´Â ÀÚ½ÅÀÇ »ý³â¿ùÀÏ, ¼º¸í, ¼ºº°, ³»/¿Ü±¹ÀÎ, ÈÞ´ëÆù¹øÈ£, Åë½Å»ç µîÀÇ Á¤º¸¸¦ ÀÔ·ÂÇÏ¸ç, ÀÔ·ÂÇÑ Á¤º¸°¡ ÀÏÄ¡ÇÑ °æ¿ì¿¡´Â ÇØ´ç ÈÞ´ëÆù¹øÈ£·Î
-                                                        ¼ö½ÅµÈ 1È¸¼º ºñ¹Ð¹øÈ£(½ÂÀÎ¹øÈ£)¸¦ Á¤È®ÇÏ°Ô ÀÔ·ÂÇÏ´Â °ÍÀ¸·Î º»ÀÎ ½Äº° ¶Ç´Â º»ÀÎ È®ÀÎÀÌ ÀÌ·ç¾î Áý´Ï´Ù.
-                                                    </li>
-                                                    <li>
-                                                        4. º»ÀÎ ÀÎÁõÀÌ ¿Ï·á µÈ ÀÌ¿ëÀÚ¿¡ ´ëÇØ¼­´Â º»ÀÎÈ®ÀÎÁ¤º¸¿Í Áßº¹°¡ÀÔÈ®ÀÎÁ¤º¸ ¹× ¿¬°èÁ¤º¸°¡ ÀÎÅÍ³Ý»ç¾÷ÀÚ¿¡°Ô Á¦°øµÇ¸ç, ÀÎÅÍ³Ý»ç¾÷ÀÚ´Â
-                                                        Áßº¹°¡ÀÔÈ®ÀÎÁ¤º¸ ¶Ç´Â ¿¬°èÁ¤º¸ µîÀ» ÀÌ¿ëÇÏ¿© ÀÌ¿ëÀÚ °ü¸® ¹× ÄÁÅÙÃ÷¸¦ Á¦°ø¡¤¿î¿µ ÇÕ´Ï´Ù.
-                                                    </li>
-                                                </ul>
-
-                                                <h5>Á¦6Á¶ (¼­ºñ½º Á¦°ø½Ã°£)</h5>
-                                                <ul>
-                                                    <li>
-                                                        1. ¼­ºñ½ºÀÇ ÀÌ¿ëÀº ¿¬Áß¹«ÈÞ 1ÀÏ 24½Ã°£À» ¿øÄ¢À¸·Î ÇÕ´Ï´Ù. ´Ù¸¸, Á¤±â Á¡°Ë ¹× ±âÅ¸ ±â¼ú»óÀÇ ÀÌÀ¯·Î ¼­ºñ½º°¡ ÀÏ½Ã ÁßÁöµÉ ¼ö ÀÖ°í ¶ÇÇÑ, ¿î¿µ»óÀÇ
-                                                        ¸ñÀûÀ¸·Î È¸»ç°¡ Á¤ÇÑ ±â°£¿¡µµ ÀÏ½Ã ÁßÁöµÉ ¼ö ÀÖ½À´Ï´Ù.
-                                                    </li>
-                                                    <li>
-                                                        2. È¸»ç´Â È¿À²ÀûÀÎ ¾÷¹« ¼öÇàÀ» À§ÇÏ¿© ÇÊ¿äÇÏ´Ù°í ÆÇ´ÜÇÏ´Â °æ¿ì ¼­ºñ½º¸¦ ÀÏÁ¤ ¹üÀ§·Î ºÐÇÒ ÇÏ¿© °¢ ¹üÀ§ º°·Î ÀÌ¿ë°¡´É ½Ã°£À» ´Þ¸® Á¤ÇÒ ¼ö ÀÖÀ¸¸ç,
-                                                        ÀÌ °æ¿ì ±× ³»¿ëÀ» °øÁö ÇÕ´Ï´Ù.
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="pop-btm-wrap">
-                                                <div class="btm-btn-area">
-                                                    <button type="button" class="btn btn-primary" data-popup-close="fullPopup2">È®ÀÎ</button>
-                                                </div>
-                                            </div>
-                                            <button type="button" name="button" class="btn btn-close right" data-popup-close="fullPopup2"><span class="sr-only">´Ý±â</span></button>
-                                        </div>
-                                    </div>
-                                    <!-- e: º»ÀÎÈ®ÀÎ¼­ºñ½º ÆË¾÷(fullPopup2) -->
-                                    <!-- s: °íÀ¯½Äº°Á¤º¸Ã³¸® ÆË¾÷(fullPopup3) -->
-                                    <div id="fullPopup3" class="layerPopup full fullPopupOn">
-                                        <!--[D] fullPopupOn Å¬·¡½º :: Çì´õ ½ºÅ©¸³Æ® Àû¿ëÁß-->
-                                        <div class="pop-area">
-                                            <div class="pop-header">
-                                                <h2 class="pop-tit">°íÀ¯½Äº°Á¤º¸Ã³¸® µ¿ÀÇ</h2>
-                                            </div>
-                                            <div class="pop-con-wrap">
-                                                <p>
-                                                    º»ÀÎÀº NICEÆò°¡Á¤º¸(ÁÖ) ¶Ç´Â ¿¤ÁöÀ¯ÇÃ·¯½º(ÀÌÇÏ ¡°È¸»ç¡±¶ó ÇÔ)°¡ ¿¡½ºÄÉÀÌÅÚ·¹ÄÞ(ÁÖ), (ÁÖ)ÄÉÀÌÆ¼, LGÀ¯ÇÃ·¯½º(ÁÖ) µî Åë½Å»ç ¶Ç´Â Åë½Å»ç¿Í µµ¸ÅÁ¦°øÇùÁ¤À»
-                                                    Ã¼°áÇÑ ¾Ë¶ãÆù»ç¾÷ÀÚ·ÎºÎÅÍ À§Å¹¹Þ¾Æ Á¦°øÇÏ´Â ÈÞ´ëÆù º»ÀÎÈ®ÀÎ ¼­ºñ½º¸¦ ÀÌ¿ëÇÏ±â À§ÇÏ¿©, ´ÙÀ½°ú °°ÀÌ ¡°È¸»ç¡±¿Í ¿¡½ºÄÉÀÌÅÚ·¹ÄÞ¢ß, ¢ßÄÉÀÌÆ¼, LGÀ¯ÇÃ·¯½º¢ß
-                                                    µî Åë½Å»ç ¶Ç´Â Åë½Å»ç¿Í µµ¸ÅÁ¦°øÇùÁ¤À» Ã¼°áÇÑ ¾Ë¶ãÆù»ç¾÷ÀÚ°¡ º»ÀÎÀÇ °íÀ¯½Äº°Á¤º¸¸¦ Ã³¸®ÇÏ´Âµ¥ µ¿ÀÇÇÕ´Ï´Ù.
-                                                </p>
-                                                <ul>
-                                                    <li>1. °³ÀÎÁ¤º¸¸¦ Á¦°ø¹Þ´Â ÀÚ : NICEÆò°¡Á¤º¸¢ß, ¼­¿ï½Å¿ëÆò°¡Á¤º¸, ÄÚ¸®¾ÆÅ©·¹µ÷ºä·Î</li>
-                                                    <li>2. °³ÀÎÁ¤º¸¸¦ Á¦°ø¹Þ´Â ÀÚÀÇ °³ÀÎÁ¤º¸ ÀÌ¿ë ¸ñÀû : ¿¬°èÁ¤º¸(CI)/Áßº¹°¡ÀÔÈ®ÀÎÁ¤º¸(DI) »ý¼º ¹× Á¦°ø</li>
-                                                    <li>3. Á¦°øÇÏ´Â °³ÀÎÁ¤º¸ Ç×¸ñ : Åë½Å»ç°¡ º¸À¯ÇÏ°í ÀÖ´Â º»ÀÎÀÇ ÁÖ¹Îµî·Ï¹øÈ£, ¿Ü±¹ÀÎµî·Ï¹øÈ£</li>
-                                                    <li>4. °³ÀÎÁ¤º¸¸¦ Á¦°ø¹Þ´Â ÀÚÀÇ °³ÀÎÁ¤º¸ º¸À¯ ¹× ÀÌ¿ë±â°£ : ¿¬°èÁ¤º¸(CI)/Áßº¹°¡ÀÔÈ®ÀÎÁ¤º¸(DI) »ý¼º ÈÄ Áï½Ã Æó±â</li>
-                                                    <li>5. º»ÀÎÀº µ¿ÀÇ¸¦ °ÅºÎÇÒ ±Ç¸®°¡ ÀÖÀ¸¸ç, µ¿ÀÇÇÏÁö ¾ÊÀ¸½Ç °æ¿ì ¼­ºñ½º¸¦ ÀÌ¿ëÇÏ½Ç ¼ö ¾ø½À´Ï´Ù.</li>
-                                                </ul>
-                                            </div>
-                                            <div class="pop-btm-wrap">
-                                                <div class="btm-btn-area">
-                                                    <button type="button" class="btn btn-primary" data-popup-close="fullPopup3">È®ÀÎ</button>
-                                                </div>
-                                            </div>
-                                            <button type="button" name="button" class="btn btn-close right" data-popup-close="fullPopup3"><span class="sr-only">´Ý±â</span></button>
-                                        </div>
-                                    </div>
-                                    <!-- e: °íÀ¯½Äº°Á¤º¸Ã³¸® ÆË¾÷(fullPopup3) -->
-                                    <!-- s: Åë½Å»ç ÀÌ¿ë¾à°ü ÆË¾÷(fullPopup4) -->
-                                    <div id="fullPopup4" class="layerPopup full fullPopupOn">
-                                        <!--[D] fullPopupOn Å¬·¡½º :: Çì´õ ½ºÅ©¸³Æ® Àû¿ëÁß-->
-                                        <div class="pop-area">
-                                            <div class="pop-header">
-                                                <h2 class="pop-tit">Åë½Å»ç ÀÌ¿ë¾à°ü µ¿ÀÇ</h2>
-                                            </div>
-                                            <div class="pop-con-wrap">
-                                                <div class="agreement" id="KCB" tabindex="0">
-                                                    <h5>Á¦1Á¶ (¸ñÀû)</h5>
-                                                    <p>
-                                                        º» ¾à°üÀº ÁÖ¹Î¹øÈ£ ´ëÃ¼ º»ÀÎÈ®ÀÎ¼­ºñ½º(ÀÌÇÏ ¡°¼­ºñ½º¡±)¸¦ Á¦°øÇÏ´Â ÁÖ½ÄÈ¸»ç ÄÉÀÌÆ¼(ÀÌÇÏ ¡°È¸»ç¡±)¿Í ÀÌ¿ë °í°´(ÀÌÇÏ ¡°ÀÌ¿ëÀÚ¡±)°£¿¡ ¼­ºñ½º Á¦°ø¿¡ °üÇÑ
-                                                        ÀÌ¿ëÁ¶°Ç ¹× ÀýÂ÷ µî ±âÅ¸ ÇÊ¿äÇÑ »çÇ×À» ±ÔÁ¤ÇÔÀ» ¸ñÀûÀ¸·Î ÇÕ´Ï´Ù
-                                                    </p>
-                                                    <br />
-                                                    <h5>Á¦2Á¶ (¿ë¾îÀÇ Á¤ÀÇ)</h5>
-                                                    <p>º» ¾à°ü¿¡¼­ »ç¿ëÇÏ´Â ¿ë¾îÀÇ Á¤ÀÇ´Â ´ÙÀ½°ú °°½À´Ï´Ù.</p>
-                                                    <br />
-                                                    <ol>
-                                                        <li>
-                                                            1. ¡°º»ÀÎÈ®ÀÎ¼­ºñ½º¡±¶ó ÇÔÀº ÀÌ¿ëÀÚ°¡ ÀÎÅÍ³Ý»ó¿¡¼­ º»ÀÎ¸íÀÇÀÇ ÈÞ´ëÆùÀ» ÀÌ¿ëÇÏ¿©, ÁÖ¹Îµî·Ï¹øÈ£ ÀÔ·Â ¾øÀÌµµ º»ÀÎÀÓÀ» ¾ÈÀüÇÏ°Ô ½Äº° ¹× È®ÀÎÇØ
-                                                            ÁÖ´Â ¼­ºñ½º¸¦ ¸»ÇÕ´Ï´Ù.
-                                                        </li>
-                                                        <li>
-                                                            2. ¡°ÀÌ¿ëÀÚ¡±¶ó ÇÔÀº È¸»ç ¶Ç´Â ÀÎÁõ ´ëÇà±â°ü¿¡¼­ Á¦°øÇÏ´Â ¼­ºñ½ºÀÇ ÀÌ¿ëÀ» À§ÇØ ÀÚ½ÅÀÇ º»ÀÎÈ®ÀÎÁ¤º¸¸¦ È¸»ç, ÀÎÁõ´ëÇà ±â°ü, º»ÀÎÈ®ÀÎ±â°ü µî¿¡°Ô
-                                                            Á¦°øÇÏ°í, º»ÀÎÀÓÀ» È®ÀÎ ¹Þ°íÀÚ ÇÏ´Â ÀÚ¸¦ ¸»ÇÕ´Ï´Ù.
-                                                        </li>
-                                                        <li>
-                                                            3. ¡°º»ÀÎÈ®ÀÎÁ¤º¸¡±¶ó ÇÔÀº ÀÌ¿ëÀÚ°¡ ÀÔ·ÂÇÑ »ý³â¿ùÀÏ, ¼ºº°, ¼º¸í, ³»/¿Ü±¹ÀÎ, ÈÞ´ëÆù¹øÈ£, Åë½Å»ç µî º»ÀÎ ½Äº°¿¡ ÇÊ¿äÇÑ ÀÌ¿ëÀÚÀÇ Á¤º¸¸¦ ¸»ÇÕ´Ï´Ù.
-                                                        </li>
-                                                        <li>4. ¡°Áßº¹°¡ÀÔÈ®ÀÎÁ¤º¸¡±¶ó ÇÔÀº À¥»çÀÌÆ®¿¡ °¡ÀÔÇÏ°íÀÚ ÇÏ´Â ÀÌ¿ëÀÚÀÇ Áßº¹È®ÀÎÀ» À§ÇØ Á¦°øµÇ´Â Á¤º¸¸¦ ¸»ÇÕ´Ï´Ù.</li>
-                                                        <li>5. ¡°¿¬°èÁ¤º¸¡±¶ó ÇÔÀº ÀÎÅÍ³Ý»ç¾÷ÀÚÀÇ ¿Â¤ý¿ÀÇÁ¶óÀÎ ¼­ºñ½º ¿¬°è µîÀÇ ¸ñÀûÀ¸·Î ÀÌ¿ëÀÚ¸¦ ½Äº°ÇÏ±â À§ÇØ Á¦°øµÇ´Â Á¤º¸¸¦ ¸»ÇÕ´Ï´Ù.</li>
-                                                        <li>
-                                                            6. ¡°º»ÀÎÈ®ÀÎ±â°ü¡±ÀÌ¶ó ÇÔÀº ÁÖ¹Îµî·Ï¹øÈ£¸¦ »ç¿ëÇÏÁö ¾Æ´ÏÇÏ°í º»ÀÎÀ» È®ÀÎÇÏ´Â ¹æ¹ý ¶Ç´Â ¼­ºñ½º¸¦ Á¦°øÇÏ´Â ÀÚ·Î ¹æ¼ÛÅë½ÅÀ§¿øÈ¸·ÎºÎÅÍ
-                                                            º»ÀÎÈ®ÀÎ±â°üÀ¸·Î ÁöÁ¤À» ¹ÞÀº ÀÚ¸¦ ÀÇ¹ÌÇÕ´Ï´Ù.
-                                                        </li>
-                                                    </ol>
-                                                    <br />
-                                                    <h5>Á¦3Á¶ (¾à°üÀÇ È¿·Â ¹× º¯°æ)</h5>
-                                                    <ol>
-                                                        <li>1. º» ¾à°üÀº ÀÌ¿ëÀÚ¿¡°Ô ¼­ºñ½º È­¸é¿¡ °Ô½ÃÇÏ°Å³ª, ±âÅ¸ÀÇ ¹æ¹ýÀ¸·Î °øÁöÇÏ´Â °ÍÀ¸·Î È¿·ÂÀÌ ¹ß»ýÇÕ´Ï´Ù.</li>
-                                                        <li>
-                                                            2. È¸»ç´Â ¾à°üÀÇ ±ÔÁ¦¿¡ °üÇÑ ¹ý·ü ¹× ±âÅ¸ °ü·Ã ¹ý·É¿¡ À§¹èµÇÁö ¾Ê´Â ¹üÀ§¿¡¼­ º» ¾à°üÀÇ ³»¿ëÀ» °³Á¤ÇÒ ¼ö ÀÖÀ¸¸ç, º¯°æµÈ °æ¿ì¿¡´Â Á¦1Ç×°ú °°Àº
-                                                            ¹æ¹ýÀ¸·Î °øÁöÇÕ´Ï´Ù. ´Ù¸¸ ¡°ÀÌ¿ëÀÚ¡±ÀÇ ±Ç¸®¿Í ÀÇ¹«¿¡ °üÇÑ Áß¿äÇÑ »çÇ×Àº º¯°æµÈ ³»¿ëÀÇ ½ÃÇà 15ÀÏ ÀÌÀü¿¡ °øÁöÇÕ´Ï´Ù.
-                                                        </li>
-                                                        <li>
-                                                            3. ÀÌ¿ëÀÚ´Â °³Á¤µÈ ¾à°ü »çÇ×¿¡ µ¿ÀÇÇÏÁö ¾ÊÀ» ±Ç¸®°¡ ÀÖÀ¸¸ç, °³Á¤µÈ ¾à°ü¿¡ µ¿ÀÇÇÏÁö ¾Ê´Â °æ¿ì, º» ¼­ºñ½ºÀÇ ÀÌ¿ëÀ» Áß´ÜÇÏ°í ÀÌ¿ë °è¾àÀ» ÇØÁöÇÒ
-                                                            ¼ö ÀÖ½À´Ï´Ù. È¸¿øÀÌ È¸»çÀÇ ÀüÇ× ´Ü¼­¿¡ µû¸¥ ¾à°üÀÇ ºÒ¸®ÇÑ º¯°æ¿¡ ´ëÇÏ¿© Àû¿ë¿¹Á¤ÀÏ±îÁö È¸»ç¿¡°Ô ºÎµ¿ÀÇ ÀÇ»ç¸¦ Ç¥½ÃÇÏÁö ¾Ê°Å³ª ÀÌ¿ë°è¾àÀ»
-                                                            ÇØÁöÇÏÁö ¾ÊÀº °æ¿ì º¯°æµÈ ¾à°üÀ» ½ÂÀÎÇÑ °ÍÀ¸·Î º¾´Ï´Ù.
-                                                        </li>
-                                                    </ol>
-                                                    <br />
-
-                                                    <h5>Á¦4Á¶ (Á¢±Ù¸ÅÃ¼ÀÇ °ü¸® µî)</h5>
-                                                    <ol>
-                                                        <li>1. È¸»ç´Â ¼­ºñ½º Á¦°ø ½Ã Á¢±Ù¸ÅÃ¼¸¦ ÀÌ¿ëÇÏ¿© ÀÌ¿ëÀÚÀÇ ½Å¿ø, ±ÇÇÑ ¹× °Å·¡Áö½ÃÀÇ ³»¿ë µîÀ» È®ÀÎ ÇÒ ¼ö ÀÖ½À´Ï´Ù.</li>
-                                                        <li>2. ÀÌ¿ëÀÚ´Â Á¢±Ù¸ÅÃ¼¸¦ Á¦3ÀÚ¿¡°Ô ´ë¿©ÇÏ°Å³ª »ç¿ëÀ» À§ÀÓÇÏ°Å³ª ¾çµµ ¶Ç´Â ´ãº¸ ¸ñÀûÀ¸·Î Á¦°øÇÒ ¼ö ¾ø½À´Ï´Ù.</li>
-                                                        <li>
-                                                            3. ÀÌ¿ëÀÚ´Â ÀÚ½ÅÀÇ Á¢±Ù¸ÅÃ¼¸¦ Á¦3ÀÚ¿¡°Ô ´©¼³ ¶Ç´Â ³ëÃâÇÏ°Å³ª ¹æÄ¡ÇÏ¿©¼­´Â ¾ÈµÇ¸ç, Á¢±Ù¸ÅÃ¼ÀÇ µµ¿ëÀÌ³ª À§Á¶ ¶Ç´Â º¯Á¶¸¦ ¹æÁöÇÏ±â À§ÇØ ÃæºÐÇÑ
-                                                            ÁÖÀÇ¸¦ ±â¿ï¿©¾ß ÇÕ´Ï´Ù.
-                                                        </li>
-                                                        <li>
-                                                            4. È¸»ç°¡ Á¢±Ù¸ÅÃ¼ÀÇ ¹ß±ÞÁÖÃ¼°¡ ¾Æ´Ñ °æ¿ì¿¡´Â Á¢±Ù¸ÅÃ¼ÀÇ À§Á¶³ª º¯Á¶·Î ¹ß»ýÇÑ »ç°í·Î ÀÎÇÏ¿© ÀÌ¿ëÀÚ¿¡°Ô ¹ß»ýÇÑ ¼ÕÇØ¿¡ ´ëÇÏ¿© ¹è»óÃ¥ÀÓÀÌ
-                                                            ¾ø½À´Ï´Ù.
-                                                        </li>
-                                                    </ol>
-                                                    <br />
-
-                                                    <h5>Á¦5Á¶ (¼­ºñ½º ¾È³»)</h5>
-                                                    <ol>
-                                                        <li>
-                                                            1. ¼­ºñ½º´Â ÀÌ¿ëÀÚ°¡ ÁÖ¹Îµî·Ï¹øÈ£ÀÇ ÀÔ·Â ¾øÀÌ, º»ÀÎ¸íÀÇ·Î µÈ ÈÞ´ëÆùÁ¤º¸¸¦ ÀÌ¿ëÇÏ¿© º»ÀÎ ½Äº° ¶Ç´Â º»ÀÎ È®ÀÎÀÌ °¡´ÉÇÑ »ý³â¿ùÀÏ ±â¹ÝÀÇ
-                                                            ÁÖ¹Îµî·Ï¹øÈ£ ´ëÃ¼ ÈÞ´ëÆùÀÎÁõ ¼­ºñ½º ÀÔ´Ï´Ù.
-                                                        </li>
-                                                        <li>
-                                                            2. È¸»ç´Â ÀÎÁõ ´ëÇà±â°üÀ» ÅëÇØ ÀÎÅÍ³Ý»ç¾÷ÀÚ¿¡°Ô ¼­ºñ½º¸¦ Á¦°øÇÏ¸ç, ÀÎÅÍ³Ý»ç¾÷ÀÚ´Â È¸¿ø°¡ÀÔ, ID/PWÃ£±â, ¼ºÀÎÀÎÁõ, ±âÅ¸ º»ÀÎÈ®ÀÎÀÌ ÇÊ¿äÇÑ °æ¿ì
-                                                            ÀÌ¿ëÀÚ¿¡°Ô ¼­ºñ½º¸¦ Á¦°ø ÇÕ´Ï´Ù.
-                                                        </li>
-                                                        <li>
-                                                            3. ÀÌ¿ëÀÚ´Â ÀÚ½ÅÀÇ »ý³â¿ùÀÏ, ¼º¸í, ¼ºº°, ³»/¿Ü±¹ÀÎ, ÈÞ´ëÆù¹øÈ£, Åë½Å»ç µîÀÇ Á¤º¸¸¦ ÀÔ·ÂÇÏ¸ç, ÀÔ·ÂÇÑ Á¤º¸°¡ ÀÏÄ¡ÇÑ °æ¿ì¿¡´Â ÇØ´ç ÈÞ´ëÆù¹øÈ£·Î
-                                                            ¼ö½ÅµÈ 1È¸¼º ºñ¹Ð¹øÈ£(½ÂÀÎ¹øÈ£)¸¦ Á¤È®ÇÏ°Ô ÀÔ·ÂÇÏ´Â °ÍÀ¸·Î º»ÀÎ ½Äº° ¶Ç´Â º»ÀÎ È®ÀÎÀÌ ÀÌ·ç¾î Áý´Ï´Ù.
-                                                        </li>
-                                                        <li>
-                                                            4. º»ÀÎ ÀÎÁõÀÌ ¿Ï·á µÈ ÀÌ¿ëÀÚ¿¡ ´ëÇØ¼­´Â º»ÀÎÈ®ÀÎÁ¤º¸¿Í Áßº¹°¡ÀÔÈ®ÀÎÁ¤º¸ ¹× ¿¬°èÁ¤º¸°¡ ÀÎÅÍ³Ý»ç¾÷ÀÚ¿¡°Ô Á¦°øµÇ¸ç, ÀÎÅÍ³Ý»ç¾÷ÀÚ´Â
-                                                            Áßº¹°¡ÀÔÈ®ÀÎÁ¤º¸ ¶Ç´Â ¿¬°èÁ¤º¸ µîÀ» ÀÌ¿ëÇÏ¿© ÀÌ¿ëÀÚ °ü¸® ¹× ÄÁÅÙÃ÷¸¦ Á¦°ø¤ý¿î¿µ ÇÕ´Ï´Ù.
-                                                        </li>
-                                                    </ol>
-                                                    <br />
-                                                    <h5>Á¦6Á¶ (¼­ºñ½º Á¦°ø½Ã°£)</h5>
-                                                    <ol>
-                                                        <li>
-                                                            1. ¼­ºñ½ºÀÇ ÀÌ¿ëÀº ¿¬Áß¹«ÈÞ 1ÀÏ 24½Ã°£À» ¿øÄ¢À¸·Î ÇÕ´Ï´Ù. ´Ù¸¸, Á¤±â Á¡°Ë ¹× ±âÅ¸ ±â¼ú»óÀÇ ÀÌÀ¯·Î ¼­ºñ½º°¡ ÀÏ½Ã ÁßÁöµÉ ¼ö ÀÖ°í ¶ÇÇÑ,
-                                                            ¿î¿µ»óÀÇ ¸ñÀûÀ¸·Î È¸»ç°¡ Á¤ÇÑ ±â°£¿¡µµ ÀÏ½Ã ÁßÁöµÉ ¼ö ÀÖ½À´Ï´Ù.
-                                                        </li>
-                                                        <li>
-                                                            2. È¸»ç´Â È¿À²ÀûÀÎ ¾÷¹« ¼öÇàÀ» À§ÇÏ¿© ÇÊ¿äÇÏ´Ù°í ÆÇ´ÜÇÏ´Â °æ¿ì ¼­ºñ½º¸¦ ÀÏÁ¤ ¹üÀ§·Î ºÐÇÒ ÇÏ¿© °¢ ¹üÀ§ º°·Î ÀÌ¿ë°¡´É ½Ã°£À» ´Þ¸® Á¤ÇÒ ¼ö
-                                                            ÀÖÀ¸¸ç, ÀÌ °æ¿ì ±× ³»¿ëÀ» °øÁö ÇÕ´Ï´Ù.
-                                                        </li>
-                                                    </ol>
-                                                    <br />
-                                                </div>
-                                            </div>
-                                            <div class="pop-btm-wrap">
-                                                <div class="btm-btn-area">
-                                                    <button type="button" class="btn btn-primary" data-popup-close="fullPopup4">È®ÀÎ</button>
-                                                </div>
-                                            </div>
-                                            <button type="button" name="button" class="btn btn-close right" data-popup-close="fullPopup4"><span class="sr-only">´Ý±â</span></button>
-                                        </div>
-                                    </div>
-                                    <!-- e: Åë½Å»ç ÀÌ¿ë¾à°ü ÆË¾÷(fullPopup4) -->
-                                    <!--e: ÆË¾÷-->
-                                </div>
-                            </form>
-                        </div>
-                        <!--//form-content-->
-                        <div class="form-content">
-                            <div class="form-wrap">
-                                <div class="form-group">
-                                    <label for="password-input">ÀÌ¸§</label>
-                                    <input id="password-input" type="text" name="text" class="form-control" placeholder="³»¿ëÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="rrn-first">ÁÖ¹Îµî·Ï¹øÈ£ ÀÔ·Â</label>
-                                    <div class="flex-row gap5 rrn-first">
-                                        <div class="col">
-                                            <input
-                                                id="rrn-first"
-                                                type="number"
-                                                name="rrn-first"
-                                                class="form-control"
-                                                placeholder=""
-                                                min="0"
-                                                step="1"
-                                                oninput="this.value = this.value.slice(0, 6); if(this.value.length === 6) document.getElementById('rrn-second').focus();"
-                                            />
-                                        </div>
-                                        <div class="ipt-hyphen">-</div>
-                                        <div class="col">
-                                            <!-- µÎ ¹øÂ° ÀÔ·Â ÇÊµå´Â ½ºÅ©¸° ¸®´õ¸¦ À§ÇÑ aria-labelledby »ç¿ë -->
-                                            <input
-                                                id="rrn-second"
-                                                type="number"
-                                                name="rrn-second"
-                                                class="form-control"
-                                                placeholder="¡Ü"
-                                                min="0"
-                                                step="1"
-                                                oninput="this.value = this.value.slice(0, 1)"
-                                                aria-labelledby="rrn-second"
-                                            />
-                                            <span class="id-mask">¡Ü¡Ü¡Ü¡Ü¡Ü¡Ü</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-wrap">
-                                <div class="form-group">
-                                    <label for="phn-first">ÈÞ´ëÀüÈ­¹øÈ£</label>
-                                    <div class="auth flex-row gap13">
-                                        <div class="col">
-                                            <div id="phn-first" class="se-select" data-stove="select" data-uicase="slide">
-                                                <div class="e-hidden-title">Åë½Å»ç ¼±ÅÃ</div>
-                                                <select required="" title="">
-                                                    <option value="" hidden="">Åë½Å»ç</option>
-                                                    <option value="0">SKT</option>
-                                                    <option value="1">KT</option>
-                                                    <option value="2">LGU+</option>
-                                                    <option value="0">(¾Ë¶ã)SKT</option>
-                                                    <option value="1">(¾Ë¶ã)KT</option>
-                                                    <option value="2">(¾Ë¶ã)LGU+</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <input
-                                                id="phn-second"
-                                                type="number"
-                                                name="phn-second"
-                                                class="form-control"
-                                                placeholder=""
-                                                min="0"
-                                                step="1"
-                                                oninput="this.value = this.value.slice(0, 8)"
-                                                aria-labelledby="phn-second"
-                                            />
-                                        </div>
-                                        <div class="col">
-                                            <button class="btn-form">ÀÎÁõ¹øÈ£ ¹Þ±â</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-wrap">
-                                <div class="form-group">
-                                    <label for="auth-code">ÀÎÁõ¹øÈ£</label>
-                                    <div class="auth flex-row gap13">
-                                        <div class="col col-1">
-                                            <input
-                                                id="auth-code"
-                                                type="number"
-                                                name="auth-code"
-                                                class="form-control"
-                                                placeholder=""
-                                                min="0"
-                                                step="1"
-                                                oninput="this.value = this.value.slice(0, 8)"
-                                                aria-labelledby="phn-second"
-                                            />
-                                        </div>
-                                        <div class="col">
-                                            <button class="btn-form">È®ÀÎ</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--//form-content-->
-                    </section>
-                    <section class="btmWrap button-content">
-                        <div class="button-wrap">
-                            <a herf="javascript:void(0);" class="btn-primary">È®ÀÎ</a>
-                        </div>
-                    </section>
-                    <!--//button-content-->
-                </div>
-            </main>
-
-            <!-- S: footer -->
-            <footer id="footerWrap"></footer>
+    <main class="contentWrap">
+      <div class="visual-content step">
+        <div class="tab-content">
+          <ul class="step">
+            <li class="acitve">
+                <p>
+                    <em>01</em>
+                    <span>ë³¸ì¸ì¸ì¦</span>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <em>02</em>
+                    <span>ì‹ ì²­ì™„ë£Œ</span>
+                </p>
+            </li>
+          </ul>
         </div>
-    </body>
+        <h2>
+          <em>ì±„ê¶Œê´€ë¦¬í†µì§€í˜„í™©ì¡°íšŒ</em>
+          <span>ë‹¹ì‚¬ ì±„ê¶Œê´€ë¦¬ í†µì§€ í˜„í™©ì„ ì¡°íšŒí•˜ì‹¤ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.</span>
+        </h2>
+      </div>
+      <div id="container">
+
+        <section class="form-container">
+                <h3>ì•½ê´€ë™ì˜</h3>
+                <div class="form-content border-b1">
+                    <form id="termsForm">
+                        <div class="form-group">
+                            <ul class="check-box terms">
+                                <li class="check-all-area">
+                                    <input type="checkbox" id="chkAll">
+                                    <label for="chkAll" class="check-button">
+                                        <span>ì „ì²´ ì•½ê´€ì— ë™ì˜í•©ë‹ˆë‹¤.</span>
+                                    </label>
+                                </li>
+                    
+                                <li>
+                                    <input type="checkbox" id="check-required-1" class="chkReq">
+                                    <label for="check-required-1" class="check-button" data-popup-open="fullPopup">
+                                        <span>ê°œì¸ì •ë³´ ìˆ˜ì§‘&#183;ì´ìš©&#183;ì·¨ê¸‰ìœ„íƒ ë™ì˜</span>
+                                    </label>
+                                    <button title="ê°œì¸ì •ë³´ ìˆ˜ì§‘&#183;ì´ìš©&#183;ì·¨ê¸‰ìœ„íƒ ë™ì˜ ë‚´ìš©ë³´ê¸°" type="button" class="modal" data-popup-open="fullPopup">ë‚´ìš©ë³´ê¸°</button>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="check-required-2" class="chkReq">
+                                    <label for="check-required-2" class="check-button">
+                                        <span>ë³¸ì¸í™•ì¸ì„œë¹„ìŠ¤ ì´ìš©ì•½ê´€</span>
+                                    </label>
+                                    <button title="ë³¸ì¸í™•ì¸ì„œë¹„ìŠ¤ ì´ìš©ì•½ê´€ ë‚´ìš©ë³´ê¸°" class="modal" type="button">ë‚´ìš©ë³´ê¸°</button>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="check-required-3" class="chkReq">
+                                    <label for="check-required-3" class="check-button">
+                                        <span>ê³ ìœ ì‹ë³„ì •ë³´ì²˜ë¦¬ ë™ì˜</span>
+                                    </label>
+                                    <button title="ê³ ìœ ì‹ë³„ì •ë³´ì²˜ë¦¬ ë™ì˜ ë‚´ìš©ë³´ê¸°" class="modal" type="button">ë‚´ìš©ë³´ê¸°</button>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="check-required-4" class="chkReq">
+                                    <label for="check-required-4" class="check-button">
+                                        <span>í†µì‹ ì‚¬ ì´ìš©ì•½ê´€ ë™ì˜</span>
+                                    </label>
+                                    <button title="ê³ ìœ ì‹ë³„ì •ë³´ì²˜ë¦¬ ë™ì˜ ë‚´ìš©ë³´ê¸°" class="modal" type="button">ë‚´ìš©ë³´ê¸°</button>
+                                </li>
+                            </ul>
+                            <!--s :íŒì—…-->
+                            <div id="fullPopup" class="layerPopup full fullPopupOn"><!--[D] fullPopupOn í´ëž˜ìŠ¤ :: í—¤ë” ìŠ¤í¬ë¦½íŠ¸ ì ìš©ì¤‘-->
+                                <div class="pop-area">
+                                    <div class="pop-header">
+                                        <h2 class="pop-tit">í’€íŒì—…</h2>
+                                    </div>
+                                    <div class="pop-con-wrap">
+                                        <section class="tit">
+                                            Lyout Test
+                                        </section>
+                                        <section class="tit">
+                                            Lyout Test
+                                        </section>
+                                        <section class="tit">
+                                            Lyout Test
+                                        </section>
+                                        <section class="tit">
+                                            Lyout Test
+                                        </section>
+                                        <section class="tit">
+                                            Lyout Test
+                                        </section>
+                                        <section class="tit">
+                                            Lyout Test
+                                        </section>
+                                        <section class="tit">
+                                            Lyout Test
+                                        </section>
+                                        <section class="tit">
+                                            Lyout Test
+                                        </section>
+                                        <section class="tit">
+                                            Lyout Test
+                                        </section>
+                                        <section class="tit">
+                                            Lyout Test
+                                        </section>
+                                        <section class="tit">
+                                            Lyout Test
+                                        </section>
+                                        <section class="tit">
+                                            Lyout Test
+                                        </section>
+                                        
+                                    </div>
+                                    <div class="pop-btm-wrap">
+                                        <div class="btm-btn-area">
+                                            <button type="button" class="btn btn-secondary"  data-popup-close="fullPopup" >ë ˆì´ì•„ì›ƒ</button>
+                                            <button type="button" class="btn btn-primary" data-popup-close="fullPopup">ë ˆì´ì•„ì›ƒ</button>
+                                        </div>
+                                    </div>
+                                    <button type="button" name="button" class="btn btn-close right" data-popup-close="fullPopup"><span class="sr-only">ë‹«ê¸°</span></button>
+                                </div>
+                            </div>
+                            <!--e: íŒì—…-->
+                        </div>
+                    </form>
+                </div><!--//form-content-->
+                <div class="form-content">
+                    <div class="form-wrap">
+                        <div class="form-group">
+                            <label for="password-input">ì´ë¦„</label>
+                            <input id="password-input" type="text" name="text" class="form-control" placeholder="ë‚´ìš©ì„ ìž…ë ¥í•´ì£¼ì„¸ìš”">
+                        </div>
+                        <div class="form-group">
+                            <label for="rrn-first">ì£¼ë¯¼ë“±ë¡ë²ˆí˜¸ ìž…ë ¥</label>
+                            <div class="flex-row gap5">
+                                <div class="col">
+                                    <input id="rrn-first" type="number" name="rrn-first" class="form-control" placeholder="" min="0" step="1" oninput="this.value = this.value.slice(0, 6); if(this.value.length === 6) document.getElementById('rrn-second').focus();">
+                                </div>
+                                <div class="ipt-hyphen">-</div>
+                                <div class="col">
+                                    <!-- ë‘ ë²ˆì§¸ ìž…ë ¥ í•„ë“œëŠ” ìŠ¤í¬ë¦° ë¦¬ë”ë¥¼ ìœ„í•œ aria-labelledby ì‚¬ìš© -->
+                                    <input id="rrn-second" type="number" name="rrn-second" class="form-control" placeholder="â—" min="0" step="1" oninput="this.value = this.value.slice(0, 1)" aria-labelledby="rrn-second">
+                                    <span class="id-mask">â—â—â—â—â—â—</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-wrap">
+                        <div class="form-group">
+                            <label for="phn-first">íœ´ëŒ€ì „í™”ë²ˆí˜¸</label>
+                            <div class="auth flex-row gap13">
+                                <div class="col">
+                                    <div id="phn-first" class="se-select" data-stove="select" data-uicase="slide">
+                                        <div class="e-hidden-title">í†µì‹ ì‚¬ ì„ íƒ</div>
+                                        <select required="" title="">
+                                            <option value="" hidden="">í†µì‹ ì‚¬</option>
+                                            <option value="0">SKT</option>
+                                            <option value="1">KT</option>
+                                            <option value="2">LGU+</option>
+                                            <option value="0">(ì•Œëœ°)SKT</option>
+                                            <option value="1">(ì•Œëœ°)KT</option>
+                                            <option value="2">(ì•Œëœ°)LGU+</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <input id="phn-second" type="number" name="phn-second" class="form-control" placeholder="" min="0" step="1" oninput="this.value = this.value.slice(0, 8)" aria-labelledby="phn-second">
+                                </div>
+                                <div class="col">
+                                    <button class="btn-form">ì¸ì¦ë²ˆí˜¸ ë°›ê¸°</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-wrap">
+                        <div class="form-group">
+                            <label for="auth-code">ì¸ì¦ë²ˆí˜¸</label>
+                            <div class="auth flex-row gap13">
+                                <div class="col col-1">
+                                    <input id="auth-code" type="number" name="auth-code" class="form-control" placeholder="" min="0" step="1" oninput="this.value = this.value.slice(0, 8)" aria-labelledby="phn-second">
+                                </div>
+                                <div class="col">
+                                    <button class="btn-form">í™•ì¸</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--//form-content-->
+        </section>
+        <section class="btmWrap button-content">
+            <div class="button-wrap">
+                <a herf="javascript:void(0);" class="btn-primary">í™•ì¸</a>
+            </div>
+        </section><!--//button-content-->
+
+      </div>
+    </main>
+
+
+    <!-- S: footer -->
+    <footer id="footerWrap"></footer>
+
+  </div>
+
+
+</body>
 </html>
