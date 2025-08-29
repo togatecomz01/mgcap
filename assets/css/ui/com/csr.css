@@ -2,6 +2,10 @@
     padding-top: 30px;
     padding-bottom: 72px;
 }
+.social-intro.policy {
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
 
 .social-intro h3 {
     font-size: var(--font26); 
@@ -19,6 +23,9 @@
     color: var(--color-6); 
     line-height: 1.6;
     max-width: 800px; /* 최대 넓이 설정해서 줄바꿈 제어 */
+}
+.social-intro p.type2 {
+    max-width: 1200px;
 }
 
 
