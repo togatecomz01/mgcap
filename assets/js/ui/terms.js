@@ -84,16 +84,6 @@ $(document).ready(function () {
     })();
 
     TermsAgreement.init();
-
-    // 라벨 클릭 시 체크박스 상태 유지 + 팝업만 열기
-    $(document).on("click", "label.check-button[data-popup-open]", function (e) {
-        e.preventDefault(); // 체크박스 체크/언체크 방지
-
-        var popupId = $(this).data("popup-open");
-        if (popupId && window.popupL) {
-            window.popupL.openPopup(popupId);
-        }
-    });
 });
 
 $(function () {
