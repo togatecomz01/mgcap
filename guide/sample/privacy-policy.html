@@ -23,6 +23,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../../assets/css/lib/ui-lib.css">
     <link rel="stylesheet" href="../../assets/css/ui/ui-util.css">
+    <link rel="stylesheet" href="../../assets/css/ui/com/privacy-policy.css">
 
     <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
     <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
@@ -220,18 +221,18 @@
     <footer id="footerWrap"></footer>
 
   </div>
-  
+
   <!-- 탭 가로드래그 스크립트 -->
-  <script>
-    const scrollableTab = document.querySelector('.tab-container .tab-list.depth2');
+    <script>
+    var scrollableTab = document.querySelector('.tab-container .tab-list.depth2');
 
     if (scrollableTab) {
-        let isDown = false;
-        let startX;         
-        let scrollLeft;  
+        var isDown = false;
+        var startX;
+        var scrollLeft;
 
         //마우스를 눌렀을 때
-        scrollableTab.addEventListener('mousedown', (e) => {
+        scrollableTab.addEventListener('mousedown', function(e) {
             e.preventDefault();
             isDown = true;
             scrollableTab.classList.add('grabbing');
@@ -240,21 +241,22 @@
         });
 
         //마우스가 요소 밖으로 나갔을 때
-        scrollableTab.addEventListener('mouseleave', () => {
+        scrollableTab.addEventListener('mouseleave', function() {
             isDown = false;
             scrollableTab.classList.remove('grabbing');
         });
 
         //마우스 버튼에서 손을 뗐을 때
-        scrollableTab.addEventListener('mouseup', () => {
+        scrollableTab.addEventListener('mouseup', function() {
             isDown = false;
             scrollableTab.classList.remove('grabbing');
         });
 
-        scrollableTab.addEventListener('mousemove', (e) => {
+        //마우스를 움직일 때
+        scrollableTab.addEventListener('mousemove', function(e) {
             if (!isDown) return;
-            const x = e.pageX - scrollableTab.offsetLeft;
-            const walk = (x - startX) * 2;
+            var x = e.pageX - scrollableTab.offsetLeft;
+            var walk = (x - startX) * 2;
             scrollableTab.scrollLeft = scrollLeft - walk;
         });
     }
