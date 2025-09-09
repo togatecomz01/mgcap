@@ -1,26 +1,26 @@
 @charset "euc-kr";
 
 body{
-    /* Î∞∞Í≤Ω */
+    /* πË∞Ê */
     --tbl-bg: var(--white);
     --tbl-header-bg: var(--primary);
     --tbl-row-bg: var(--color-f4);
     --tbl-ttl-row-bg: var(--active);
     --tbl-ttl-bg: var(--color-ed);
-    /* Î≥¥Îçî */
+    /* ∫∏¥ı */
     --tbl-border: var(--color-d);
-    /* ÌÖçÏä§Ìä∏ */
+    /* ≈ÿΩ∫∆Æ */
     --tbl-txt: var(--color-6);
     --tbl-header-txt: var(--color-f);
     --tbl-row-txt: var(--color-3);
     --tbl-ttl-row-txt: var(--white);
-    /* ÌÉÄÏù¥ÌãÄ */
+    /* ≈∏¿Ã∆≤ */
     --tbl-tit: var(--color-3);
     --tbl-tit-txt: var(--color-75);
 }
 
 /*---------------------------------------------
-    #ÌÖåÏù¥Î∏î Í∏∞Î≥∏ Ïä§ÌÉÄÏùº
+    #≈◊¿Ã∫Ì ±‚∫ª Ω∫≈∏¿œ
 ---------------------------------------------*/
 table { table-layout: fixed; word-break: normal; overflow-wrap: break-word; }
 th, td { padding: 20px; border-top: 1px solid var(--tbl-border); border-bottom: 1px solid var(--tbl-border); border-left: 1px solid var(--tbl-border); font-size: var( --font16); line-height: 150%; }
@@ -36,9 +36,9 @@ tbody tr.tbl-total-row th { background-color: var(--tbl-ttl-row-bg); color: var(
 tbody tr.tbl-total-row td { background-color: var(--tbl-ttl-bg) }
 
 /*---------------------------------------------
-    #Í∏∞ÌÉÄ Ïä§ÌÉÄÏùº
+    #±‚≈∏ Ω∫≈∏¿œ
 ---------------------------------------------*/
-/* ÏÑ∏Î°ú Ïó¨Î∞± */
+/* ºº∑Œ ø©πÈ */
 .table-content + .table-content, .info-content {margin-top: 72px;}
 
 /* mobile select box */
@@ -63,10 +63,10 @@ table caption { display: none; }
 .table-container > .info-content > .info-wrap > .button-wrap > a {text-align: center;}
 
 /*---------------------------------------------
-    #Î™®Î∞îÏùº
+    #∏πŸ¿œ
 ---------------------------------------------*/
 @media screen and (max-width:768px) {
-    /* table Í∏∞Î≥∏ */
+    /* table ±‚∫ª */
     table { table-layout: auto; }
     .colYear, tbody td {display: none;}
     th.active, td.active { display: table-cell; }
@@ -81,7 +81,7 @@ table caption { display: none; }
     .table-tit h3 { font-size: var(--font18); }
     .table-tit span { font-size: var(--font12); }
 
-    /* table Ìñâ,Ïó¥ */
+    /* table «‡,ø≠ */
     th, td { padding: 14px; font-size: var( --font14); }
     thead tr th, tbody tr th { font-weight: var(--font-w-m); }
 
