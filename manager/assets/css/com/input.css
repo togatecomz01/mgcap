@@ -1,0 +1,86 @@
+@charset "euc-kr";
+body {
+    --form-font-size:var(--font16);
+    --form-font-color:var(--color-2);
+    --form-board:var(--color-d);
+    --ico-select:url("../../images/com/svg/ico_select.svg");
+    --form-disabled:var(--disabled);
+    --form-disabled-color:var(--color-75);
+    --form-placeholder:var(--color-9);
+    --form-checkbox:var(--check);
+    --form-checked:var(--primary-light);
+    --form-check-dissbled:#9CB1C4
+
+}
+
+
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+select,
+textarea { padding:10px; width:100%; height:46px; border:1px solid var(--form-board); color:var(--form-font-color); border-radius:4px; font-size:var(--form-font-size); }
+select {  padding-right:54px; -webkit-appearance:none; -moz-appearance:none; appearance:none; background:var(--ico-select) no-repeat right 10px center; }
+
+input[type="text"]::Placeholder,
+input[type="password"]::placeholder,
+input[type="email"]::Placeholder,
+input[type="number"]::Placeholder,
+select:invalid { color:var(--form-placeholder); }
+
+input:disabled,
+select:disabled,
+textarea:disabled { background:var(--form-disabled); color:var(--form-disabled-color); border:1px solid var(--form-board); }
+
+label.check,
+label.radio { display:flex; align-items:center; gap:8px; }
+label input[type="rado"] { position:relative; width:24px; height:24px; border:1px solid transparent; background:var(--form-board); overflow:hidden; }
+label input[type="checkbox"] { position:relative; width:24px; height:24px; border:1px solid transparent; background:var(--form-board); overflow:hidden; border-radius:4px; }
+label input[type="checkbox"]::before { content:""; display:block; width:100%; height:100%; background:var(--white); mask-image:var(--form-checkbox); mask-position:center; mask-repeat:no-repeat; mask-size:12px auto; --webkit-mask-image:var(--form-checkbox); --webkit-mask-position:center; --webkit-mask-repeat:no-repeat; --webkit-mask-size:12px auto; }
+label input[type="checkbox"]:checked { background:var(--form-checked); } 
+label input[type="checkbox"]:disabled { background:var(--form-check-dissbled); } 
+label span::after {
+    content: attr(data-text); /* 같은 글자 복제 */
+    font-weight:500;          /* 항상 굵은 폭으로 확보 */
+    visibility:hidden;        /* 안 보이지만 공간 차지 */
+  }
+  label span {
+    position: relative;
+    display: inline-block;
+  }
+  label input:not(:checked) + span { font-weight:400; }
+  label input:checked + span { font-weight:500; }
+label input:checked + span { font-weight:400;  } 
+label input:checked + span { color:var(--form-font-color); font-weight:500;  } 
+
+
+/*label.check > span,
+label.radio > span { display:flex; gap:8px; align-items:center; color:#757575; font-size:var(--form-font-size);  }
+label.check > span::before,
+label.radio > span::before { content:""; display:block; width:24px; height:24px; background-size:24px; background-position:center; background-repeat:no-repeat; }
+label.check > input:checked + span,
+label.radio > input:checked + span { color:#222; font-weight:500;  }
+label.check > input + span::before { background-image:url("../../images/com/svg/ico_check_default.svg"); }
+label.check > input:checked + span::before { background-image:url("../../images/com/svg/ico_check_checked.svg"); }
+label.check > input:disabled + span::before { background-image:url("../../images/com/svg/ico_check_disabled.svg"); }
+label.radio > input + span::before { background-image:url("../../images/com/svg/ico_radio_default.svg"); }
+label.radio > input:checked + span::before { background-image:url("../../images/com/svg/ico_radio_checked.svg"); }
+label.radio > input:disabled + span::before { background-image:url("../../images/com/svg/ico_radio_disabled.svg"); }*/
+
+
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+select:focus { border:1px solid #2392FF; outline:0; }
+
+
+.ipt-clear { position:relative; }
+.ipt-clear > input[type="text"] { padding-right:40px;  }
+/*.ipt-clear > input[type="text"]:focus { outline: 2px solid #5b9dd9; outline-offset: 2px; }*/
+
+.btn-clear { position:absolute; top:50%; right:8px; transform:translateY(-50%); width:24px; height:24px; border:0; background:transparent; cursor:pointer; font-size:18px; line-height:1; opacity: .6; }
+/*.btn-clear:hover, .btn-clear:focus { opacity: 1; outline: 2px solid #5b9dd9; outline-offset: 2px; }*/
+
