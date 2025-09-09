@@ -13,46 +13,30 @@ body {
   --tab3-active: var(--primary);
 }
 
-/* 스크린 리더 전용 텍스트 */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-.tab-list {
-  display: flex;
-  margin-bottom: 10px;
-  width: 100%;
-  margin-bottom: 72px;
-}
+.tab-list { display:flex; margin-bottom:10px; width:100%; margin-bottom:72px; }
 .tab-container .tab-list.depth1 li.tab-item,
-.tab-container .tab-list.depth3 li.tab-item {
-  flex: 1;
-}
-.tab-container .tab-list.depth2 li.tab-item button,.tab-container .tab-list.depth2 li.tab-item a {white-space: nowrap; padding:12px 26px; width:100%; border-radius:30px; background:var(--tab2-background); transition:all 0.3s ease; }
-.tab-container .tab-list.depth2 li.tab-item.active button,.tab-container .tab-list.depth2 li.tab-item.active a {white-space: nowrap; color: #ffffff; background:var(--tab-active); }
+.tab-container .tab-list.depth3 li.tab-item { flex:1; }
+.tab-container .tab-list.depth1 li.tab-item button,
+.tab-container .tab-list.depth1 li.tab-item a { text-align: center; line-height: 54px; padding:8px; width:100%; height:73px; font-size:var(--font21); background:var(--tab-bg); color:var(--tab-font-color); border:1px solid var(--tab-border); font-weight: var(--font-w-m); }
+.tab-container .tab-list.depth1 li.active button,
+.tab-container .tab-list.depth1 li.active a { text-align: center; line-height: 54px; color: var(--tab-active); border:2px solid var(--tab-active); background:var(--white); font-weight:var(--font-w-b); box-shadow: 0 0 12px 0 rgba(31, 9, 201, 0.2); }
 
+.tab-select-mobile select:focus { outline:2px solid var(--outline); outline-offset:2px; }
 
-/* active */
-.tab-container .tab-item.active button { color: var(--active); border-color: var(--active); font-weight: 500; }
-.tab-container .tab-item button { width: 100%; padding: 14px 10px 16px; border: 1px solid var(--color-d); background: var(--color-f); margin-right: 0; transition: all 0.3s ease; }
+.tab-container .tab-list.depth2 { flex-wrap: wrap; gap:24px; }
+.tab-container .tab-list.depth2 li.tab-item { display:inline-block; }
+.tab-container .tab-list.depth2 li.tab-item button,.tab-container .tab-list.depth2 li.tab-item a { padding:12px 26px; width:100%; border-radius:30px; background:var(--tab2-background); transition:all 0.3s ease; }
+.tab-container .tab-list.depth2 li.tab-item.active button,.tab-container .tab-list.depth2 li.tab-item.active a { color: #ffffff; background:var(--tab-active); }
 
-.tab-select-mobile select:focus {
-  outline: 2px solid var(--outline);
-  outline-offset: 2px;
-}
+.tab-container .tab-list.depth3 li.tab-item { flex:1; }
+.tab-container .tab-list.depth3 li.tab-item button { padding:8px; width:100%; height:73px; color:#999999; font-size:1.222rem; border: 1px solid #e5e5ea; border-left: 0; background: #fdfdfd; transition: all 0.3s ease; }
+.tab-container .tab-list.depth3 li.tab-item button:first-of-type { border-left: 1px solid #e5e5ea; }
+.tab-container .tab-list.depth3 li.tab-item.active button { color:#0072bc; font-weight:500; border:1px solid #0072bc; color:#0072bc; }
+
 
 @media (max-width: 767px) {
   .tab-container .tab-list.depth2 {
     flex-wrap: nowrap;
-
     overflow-x: auto;
     gap: 12px;
     margin-left: -24px;
