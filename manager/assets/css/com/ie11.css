@@ -7,3 +7,8 @@
 #headerWrap .recent-content{ font-size:16px; color:#fff; }
 #headerWrap .recent-content button { background:#fff; color:#333; font-size:14px; }
 
+
+
+
+.layerPopup.modal .pop-btm-wrap .btm-btn-area button
+.layerPopup.modal .pop-btm-wrap .btm-btn-area a { margin-left:16px; }

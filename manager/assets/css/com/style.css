@@ -30,10 +30,14 @@ body {
     --dim: rgba(0, 0, 0, 0.5);
     --white-dim: rgba(255, 255, 255, 0.5);
 
+  
+
     --active: #2392FF;
 
     --red: #FF0000;
     --white: #FFFFFF;
+
+    --disabled:#F6F6F6;
 
 
     --border:#E5E5EA;
@@ -59,6 +63,11 @@ body {
     --default-color:#757575;
 
     --header:#172233;
+
+
+    --check:url("../../images/com/svg/ico_form_check.svg");
+
+  
     
 
 }

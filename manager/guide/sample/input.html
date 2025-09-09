@@ -9,7 +9,7 @@
     <meta name="copyright" content="copyrights 2025 MG캐피탈" />
     <meta name="description" content="MG캐피탈 리스금융, 할부금융, 스탁론, 기업대출, 장기렌트카, PF대출 등 금융 서비스 제공." />
     <meta name="viewport" content="width=device-width" />
-    <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img" />
+
     <meta name="apple-mobile-web-app-status-bar-style" content="white" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
@@ -21,31 +21,23 @@
     <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../../assets/css/ui-util.css" />
+
+    <link rel="stylesheet" href="/assets/css/ui-util.css" />
     <link rel="stylesheet" href="../css/sample.css" />
     
     <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
     <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
     <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+
+
+    <style>
+        input[placeholder="포커스"] { border:1px solid #2392FF; }
+        textarea { width:100%; height:100px; }
+    </style>
+
     <!-- (선택) IE11용 폴리필: 안전하게 깔아두면 좋아요 -->
     <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Promise,Array.from,Object.assign,Number.isNaN"></script>
-    <script>
-      (function () {
-        var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
-        if (isIE11) {
-          // IE11 전용 클래스 추가
-          document.documentElement.className += " ie11";
-          
-          // IE11 전용 CSS 로드
-          var link = document.createElement('link');
-          link.rel = 'stylesheet';
-          link.href = '../../assets/css/com/ie11.css';
-          link.charset = 'euc-kr'; // 꼭 지정
-          document.head.appendChild(link);
-        }
-      })();
-    </script>
   </head>
 
     <body>
@@ -64,124 +56,24 @@
                     <div class="tit-wrap">
                         <h3>Type & Size</h3>
                         <div>
-                            <p>기본<span>Max width: 1000px / 최대 3개까지 사용</span></p>
+
+                            <h4>기본<span>좌/우 Padding을 12px, 텍스트와 아이콘은 14px의 간격을 유지한다. 만일 인풋 영역이 작아질 경우 모든 텍스트는 말줄임처리 한다.</span></h4>
                             <div class="form-container">
                                 <div class="form-content">
                                     <div class="form-wrap">
-                                        <div class="form-group">
-                                            <label for="password-input">기본</label>
-                                            <input id="password-input" type="text" name="text" class="form-control" placeholder="내용을 입력해주세요" />
+                                        <div class="form-group ipt-clear">
+                                            <input id="password-input" type="text" name="text" class="form-control" placeholder="디폴트" />
                                         </div>
-                                        <div class="form-group">
-                                            <label for="password-input">비활성</label>
-                                            <input id="password-input" type="text" name="text" class="form-control" placeholder="내용을 입력해주세요" disabled />
+                                        <div class="form-group ipt-clear">
+                                            <input id="password-input" type="text" name="text" class="form-control" placeholder="포커스" autofocus />
                                         </div>
                                     </div>
-                                </div>
-                                <!--//form-content-->
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="tit-wrap">
-                        <h3>select</h3>
-                        <div>
-                            <div class="form-container">
-                                <div class="form-content">
                                     <div class="form-wrap">
-                                        <div class="form-group">
-                                            <label for="selectCustom">셀렉트 선택</label>
-                                            <div id="" class="se-select" data-stove="select" data-uicase="slide">
-                                                <div class="e-hidden-title">TITLE</div>
-                                                <select id="selectCustom" required="" title="">
-                                                    <option value="" hidden="">default</option>
-                                                    <option value="0">option 00</option>
-                                                    <option value="1">option 01</option>
-                                                    <option value="2">option 02</option>
-                                                    <option value="3" disabled="">option 03</option>
-                                                    <option value="4" disabled="">option 04</option>
-                                                    <option value="9">option 09</option>
-                                                    <option value="10">option 10</option>
-                                                </select>
-                                            </div>
+                                        <div class="form-group ipt-clear">
+                                            <input id="password-input" type="text" name="text" class="form-control" placeholder="내용을 입력해주세요" value="완료되었습니다." />
                                         </div>
-                                        <div class="form-group">
-                                            <label for="selectDisabled">셀렉트 disabled</label>
-                                            <div id="" class="se-select" data-stove="select" data-uicase="slide">
-                                                <div class="e-hidden-title">TITLE</div>
-                                                <select id="selectDisabled" required="" title="" disabled><!--[D] disabled-->
-                                                    <option value="" hidden="">disabled</option>
-                                                    <option value="0">option 00</option>
-                                                    <option value="1">option 01</option>
-                                                    <option value="2">option 02</option>
-                                                    <option value="3" disabled="">option 03</option>
-                                                    <option value="4" disabled="">option 04</option>
-                                                    <option value="9">option 09</option>
-                                                    <option value="10">option 10</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--//form-content-->
-                            </div>
-                        </div>
-                    </div>    
-    
-                    <div class="tit-wrap">
-                        <h3>인증번호 요청</h3>
-                        <div>
-                            <div class="form-container">
-                                <div class="form-content">
-                                    <div class="form-wrap">
-                                        <div class="form-group">
-                                            <label for="auth-code">인증번호</label>
-                                            <div class="flex-row mo-column">
-                                                <div class="col col-1">
-                                                    <input id="auth-code" type="number" name="auth-code" class="form-control" placeholder="" min="0" step="1" oninput="this.value = this.value.slice(0, 8)" aria-labelledby="phn-second" />
-                                                </div>
-                                                <div class="col">
-                                                    <button class="btn-form">확인</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--//form-content-->
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="tit-wrap">
-                        <h3>전화번호</h3>
-                        <div>
-                            <div class="form-container">
-                                <div class="form-content">
-                                    <div class="form-wrap">
-                                        <div class="form-group">
-                                            <label for="phn-first">휴대전화번호</label>
-                                            <div class="flex-row mo-column">
-                                                <div class="col flex-row">
-                                                    <div id="phn-first" class="se-select" data-stove="select" data-uicase="slide">
-                                                        <div class="e-hidden-title">통신사 선택</div>
-                                                        <select required="" title="">
-                                                            <option value="" hidden="">통신사</option>
-                                                            <option value="0">SKT</option>
-                                                            <option value="1">KT</option>
-                                                            <option value="2">LGU+</option>
-                                                            <option value="3">(알뜰)SKT</option>
-                                                            <option value="4">(알뜰)KT</option>
-                                                            <option value="5">(알뜰)LGU+</option>
-                                                        </select>
-                                                    </div>
-                                                    <div>
-                                                        <input id="phn-second" type="number" name="phn-second" class="form-control" placeholder="" min="0" step="1" oninput="this.value = this.value.slice(0, 8)" aria-labelledby="phn-second" />
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <button class="btn-form">인증번호 받기</button>
-                                                </div>
-                                            </div>
+                                        <div class="form-group ipt-clear">
+                                            <input id="password-input" type="text" name="text" class="form-control" placeholder="비활성" disabled />
                                         </div>
                                     </div>
                                 </div>
@@ -191,20 +83,49 @@
                     </div>
 
                     <div class="tit-wrap">
-                        <h3>체크박스</h3>
+                        <h3></h3>
                         <div>
+                            <h4>드롭다운<span>Max width: 1000px / 최대 3개까지 사용</span></h4>
                             <div class="form-container">
                                 <div class="form-content">
                                     <div class="form-wrap">
                                         <div class="form-group">
-                                            <ul>
-                                                <li>
-                                                    <input type="checkbox" id="checkbox1" checked>
-                                                    <label for="checkbox1" class="check-button">
-                                                        <span>체크박스</span>
-                                                    </label>
-                                                </li>
-                                            </ul>
+                                            <select name="fruits" class="form-control" required>
+                                                <option value="" disabled selected>선택해주세요.</option>
+                                                <option value="1">옵션1</option>
+                                                <option value="2">옵션2</option>
+                                                <option value="3">옵션3</option>
+                                                <option value="4">옵션4</option>
+                                              </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <select name="fruits" class="form-control" required style="border:1px solid #2392FF;">
+                                                <option value="" disabled selected>선택해주세요.</option>
+                                                <option value="1">옵션1</option>
+                                                <option value="2">옵션2</option>
+                                                <option value="3">옵션3</option>
+                                                <option value="4" selected>포커스</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-wrap">
+                                        <div class="form-group">
+                                            <select name="fruits" class="form-control" required>
+                                                <option value="" disabled>선택해주세요.</option>
+                                                <option value="1">옵션1</option>
+                                                <option value="2">옵션2</option>
+                                                <option value="3">옵션3</option>
+                                                <option value="4" selected>선택완료 되었습니다.</option>
+                                              </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <select name="fruits" class="form-control" disabled>
+                                            <option value="" disabled>선택해주세요.</option>
+                                            <option value="1">옵션1</option>
+                                            <option value="2">옵션2</option>
+                                            <option value="3">옵션3</option>
+                                            <option value="4" selected>비활성</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
@@ -212,8 +133,33 @@
                             </div>
                         </div>
                     </div>
-    
-                    
+                    <div class="tit-wrap">
+                        <h3></h3>
+                        <div>
+                            <h4>본분</span></h4>
+                            <div class="form-container">
+                                <div class="form-content">
+                                    <div class="form-wrap">
+                                        <div class="form-group">
+                                            <textarea placeholder="디폴트"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                              <textarea style="border:1px solid #2392FF;">포커스</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-wrap">
+                                        <div class="form-group">
+                                            <textarea>입력완료 되었습니다.</textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea disabled>비활성</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--//form-content-->
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </main>
         </div>
