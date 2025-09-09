@@ -1,0 +1,107 @@
+@charset "euc-kr";
+
+.flex-col { display:flex;  }
+
+/*---------------------------------------------
+	#±âº» ·¹ÀÌ¾Æ¿ô
+---------------------------------------------*/
+html,body { height:100%; }
+body { position: relative; -webkit-text-size-adjust: none; }
+.wrap { position: relative; margin: 0 auto; display:-webkit-box; display:-ms-flexbox; display:-webkit-flex; display:flex; -webkit-box-orient:vertical; -webkit-box-direction:normal; -ms-flex-direction:column; flex-direction: column; height:100%; /*overflow: hidden;*/ }
+
+
+/* safe-area */
+/*.wrap { padding-right:constant(safe-area-inset-right); padding-left:constant(safe-area-inset-left); padding-right:env(safe-area-inset-right); padding-left:env(safe-area-inset-left); }*/
+
+/*---------------------------------------------
+    #ÄÁÅÙÃ÷
+---------------------------------------------*/
+main.contentWrap { -webkit-box-flex:1; -ms-flex:1 1 auto; flex:1 1 auto; min-height:0; min-width:0; overflow-y:auto; -webkit-overflow-scrolling:touch; position:relative; overflow-anchor:none; }
+main.contentWrap > div { margin:0 auto 140px; max-width:1200px; width:100%; padding:0 52px;  }
+#container > .tab-container,
+#container > .form-container,
+#container > .list-container { padding:54px 0 72px; }
+#container > div:first-of-type { margin-top:72px; }
+
+/*---------------------------------------------
+    #ºñÁÖ¾ó ÄÁÅÙÃ÷
+---------------------------------------------*/
+.contentWrap > .visual-content { padding-top:72px; padding-bottom:78px; border-bottom:1px solid var(--border); display: block; }
+.contentWrap > .visual-content.step { display:flex; flex-direction:row-reverse; justify-content:space-between; }
+ul.step { display:flex; }
+ul.step li { display:flex; align-items: center; }
+ul.step li:first-child::before { display:none; }
+ul.step li:before { content:""; display:inline-block; width:24px; height:24px; background:var(--ico-next) no-repeat center center; box-sizing:border-box; }
+ul.step li > p { display:flex; flex-direction:column; justify-content:center; margin:4px; width:86px; height:86px; border-radius:100px; background:var(--border); text-align:center; }
+ul.step li > p > em { display:block; font-size:var(--font20); color:var(--color-3); }
+ul.step li > p > span { font-size:var(--font14); color:var(--color-45); }
+ul.step li.active > p { background:var(--primary-light); color:var(--color-f); }
+ul.step li.active > p > em,
+ul.step li.active > p > span { color:var(--color-f); }
+
+/*---------------------------------------------
+    #Æû ÄÁÅÙÃ÷
+---------------------------------------------*/
+.form-content:last-of-type { border-top: 1px solid var(--border); margin-top: 72px; padding: 54px 0 0; }
+
+/*---------------------------------------------
+    #ÀÎÆ÷ ÄÁÅÙÃ÷
+---------------------------------------------*/
+.info-content > .info-wrap { padding: 40px; border: 1px solid var(--border); }
+.info-content > .info-wrap h3.info-title { margin-bottom: 20px; font-size: var(--font24); display: flex; align-items: center; }
+.info-content > .info-wrap h3.info-title > .content-link { margin-left: 16px; }
+.info-content > .info-wrap h3.info-title::before { content: ""; display: inline-block; width: 40px; height: 40px; background-image: var(--ico-info); background-repeat: no-repeat; background-position: center; background-size: 26px; }
+.info-content > .info-wrap p { color: var(--color-75); font-size: var(--font16); }
+.info-content > .info-wrap .form-group { margin-top: 32px; }
+
+/*---------------------------------------------
+    #¹öÆ° ÄÁÅÙÃ÷
+---------------------------------------------*/
+.button-content { padding-top: 72px; padding-bottom: 140px; text-align: center; }
+
+/**Å¸ÀÌÆ²**/
+h2 > em {  display:block; margin-bottom:12px; font-size:var(--font36);  }
+h2 > span { display:block; font-size:var(--font18); font-weight:normal; color:var(--color-75); }
+h3 { display:block; margin-bottom:24px; color:var(--color-45); font-size:var(--font20); font-weight:var(--font-w-m); }
+h3.bb-0 {  margin-bottom:0; padding-bottom:20px; color:var(--color-3); font-size:var(--font28); font-weight:var(--font-w-b); border-bottom:1px solid var(--color-6) }
+.accordion-item h4 {  padding:20px 0; font-size:var(--font22); font-weight:var(--font-w-m); }
+h5 { margin-bottom:10px; font-size:1rem; font-weight:var(--font-w-b); }
+
+/**ÀÎÇ²**/
+.form-content > .form-wrap { display:flex; gap:40px; margin-bottom:40px; }
+.form-content > .form-wrap:first-of-type { margin-top:0; }
+.form-content > .form-wrap > .form-group { flex:1; }
+.form-content > .form-wrap > .form-group:only-of-type { flex:0 0 calc(50% - 20px); }
+.form-content > .form-wrap > .form-group > div > .flex-row { display:flex; gap:13px; }
+.form-content > .form-wrap > .form-group .mo-column { gap:20px; }
+.form-content > .form-wrap > .form-group .mo-column .flex-row > div { flex:1; }
+.form-content > .form-wrap > .form-group .mo-column .flex-row .se-select,
+.form-content > .form-wrap > .form-group .mo-column > .col:last-of-type { flex:0 0 152px; }
+
+@media (max-width:767px) {
+    main.contentWrap > div { margin:0 auto 60px; padding:0 24px; }
+    main.contentWrap > div { padding:0 24px;}
+    #container > .tab-container,
+    #container > .form-container { padding:54px 0 72px; }
+
+    /**ÀÎÇ²**/
+    .form-content > .form-wrap { display:block; margin-bottom:0; }
+    .form-content > .form-wrap:first-of-type { margin-top:0; }
+    .form-content > .form-wrap > .form-group { margin-bottom:28px; }
+    
+    .form-content > .form-wrap > .form-group .mo-column,
+    .form-content > .form-wrap > .form-group .mo-column .flex-row { display:flex; flex-direction:column; gap:13px; }
+    .form-content > .form-wrap > .form-group .mo-column .flex-row .se-select,
+    .form-content > .form-wrap > .form-group .mo-column > .col:last-of-type { flex:1; }
+
+    /* minjung */
+    .contentWrap > .visual-content { padding-top: 24px; padding-bottom: 32px; }
+    .contentWrap > .visual-content.step { display: flex; flex-direction: column; justify-content: space-between; }
+    h2 > em { font-size: var(--font30); }
+    ul.step li > p { width: 32px; height: 32px; }
+    ul.step li > p > em { font-size: var(--font14); }
+    ul.step li > p > span { display: none; }
+    ul.step li::before { width: 12px; height: 12px; }
+}
+
+@media (min-width: 767px) and (max-width:1023px){}

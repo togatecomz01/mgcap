@@ -1,0 +1,7 @@
+.visual-content { margin-bottom:30px; }
+.visual-content > h2 { display:block; }
+.visual-content > h2 > em { display:block; color:#222; font-size:50px; padding-bottom:30px; border-bottom:1px solid #222;  }
+.visual-content > h2 > span { color:#757575; font-size:1rem; line-height:1.5; font-weight:500; }
+
+.sample-content .tit-wrap { display:flex; }
+.sample-content .tit-wrap h3 { display:block; flex:0 0 300px; min-width:300px; font-weight:500; color:#222; }

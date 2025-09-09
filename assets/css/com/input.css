@@ -1,0 +1,101 @@
+@charset "euc-kr";
+
+body{
+  --form-label: var(--color-45);
+  --form-label-font-size: var(--font20);
+  --font-label-weight: var(--font-w-m);
+  --from-font-color: var(--color-2);
+  --form-board: var(--color-d);
+  --form-padding: 20px 16px;
+  --form-transition: all 0.2s ease;
+  --form-active: var(--primary);
+  --form-disabled: var(--color-f6);
+
+  --form-check-font-color:var(--color-75);
+  --form-check-icon:url("../../images/com/svg/ico_checkbox.svg");
+
+}
+
+/* 체크박스, 라디오 공통 */
+ul.radio-box li, ul.check-box li { display: flex; align-items: center; column-gap: 8px; }
+ul.radio-box input[type="radio"] + label, ul.check-box input[type="checkbox"] + label { font-weight: var(--font-w-r); color: var(--rc-txt); }
+ul.radio-box input[type="radio"]:checked + label, ul.check-box input[type="checkbox"]:checked + label { color: var(--rc-txt-active); }
+
+/* 체크박스 */
+input[type="checkbox"] { z-index: 1; position: absolute; top: 50%; left: 30px; transform: translateY(-50%); border-radius: 50%; width:24px; height:24px; mask-image:var(--form-check-icon); -webkit-mask-image:var(--form-check-icon); background-color:var(--form-board); mask-size:100%; -webkit-mask-size: auto 100%; mask-repeat:no-repeat; -webkit-mask-repeat:no-repeat; }
+input[type="checkbox"] + label { display:inline-block; padding-left:44px; position:relative; min-height:30px; line-height:30px; color:var(--form-check-font-color); font-weight:var(--font-w-l); font-size:1rem; }
+input[type="checkbox"]:checked { background-color:var(--primary-light);}
+input[type="checkbox"]:checked  + label span { font-weight:var(--font-w-m); color:var(--from-font-color); }
+
+/* 라디오 버튼 */
+ul.radio-box { display: flex; flex-wrap: wrap; gap: 32px; }
+ul.radio-box input[type="radio"] + label { position: relative; }
+ul.radio-box input[type="radio"] { box-sizing: border-box; width:24px; height:24px; border: 7.5px solid var(--rc-border); background: var(--white); border-radius: 50%; }
+ul.radio-box input[type="radio"]:checked { background: var(--white); border: 7.5px solid var(--primary-light); }
+
+/* content-link */
+.content-link { padding: 2px 10px 4px; background: var(--white); border: 1px solid var(--color-e); color: var(--color-9); font-size: var(--font16); }
+
+/* 간편인증 라디오 버튼 */
+.form-content.auth { border-top: 0; margin-top: 0; padding: 0; border-bottom: 1px solid var(--border); margin-bottom: 54px; padding-bottom: 0 0 72px; }
+ul.radio-box.radio-button { width: 100%; display: flex; flex-wrap: wrap; justify-content: center; margin-bottom: 54px; gap: 36px; }
+ul.radio-box.radio-button input[type="radio"] + label { padding-left: 0; }
+ul.radio-box.radio-button input[type="radio"] { display: none; }
+ul.radio-box.radio-button li { display: flex; flex-direction: column; position: relative; width: calc(25% - 27px); padding: 40px 0; text-align: center; border-radius: 18px; border: 2px solid #DAE1E5; background: #F9FCFF; }
+ul.radio-box.radio-button li label span { color: #454545; font-size: var(--font24); font-weight: 400; display: block; padding-top: 100px; }
+ul.radio-box.radio-button li label:after { content: ""; display: block; position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); border-radius: 4px; width: 68px; height: 68px; background-position: 50%; background-repeat: no-repeat; background-size: 100% 100%; }
+ul.radio-box.radio-button li label.auth1:after { background-image: url(../../images/com/ico_auth_cert.png); }
+ul.radio-box.radio-button li label.auth2:after { background-image: url(../../images/com/ico_auth_ipin.png); }
+ul.radio-box.radio-button li label.auth3:after { background-image: url(../../images/com/ico_auth_payco.png); }
+ul.radio-box.radio-button li label.auth4:after { background-image: url(../../images/com/ico_auth_naver.png); }
+ul.radio-box.radio-button li label.auth5:after { background-image: url(../../images/com/ico_auth_pass.png); }
+ul.radio-box.radio-button li label.auth6:after { background-image: url(../../images/com/ico_auth_kakaotalk.png); }
+ul.radio-box.radio-button li label.auth7:after { background-image: url(../../images/com/ico_auth_toss.png); }
+ul.radio-box.radio-button li:has(input[type="radio"]:checked) { border: 3px solid #2392FF; background: #FFF; box-shadow: 0 0 12px 0 rgba(31, 9, 201, 0.20); }
+
+/* 포커스 링 */
+ul.radio-box input[type="radio"]:focus-visible,
+ul.check-box input[type="checkbox"] :focus-visible,
+div.toggle-box input[type="checkbox"]:focus-visible { outline: 1px solid var( --form-active); }
+
+
+.form-content label { display:block; margin-bottom:16px; font-size:var(--form-label-font-size); color:var(--form-label); font-weight:var(--font-label-weight); }
+.form-content input[type="text"],
+.form-content input[type="password"],
+.form-content input[type="email"],
+.form-content input[type="number"] { height:67px; line-height:65px; }
+.form-content input.form-control,
+.form-content textarea { width:100%; border: 1px solid var(--form-board); padding:var(--form-padding); color:var(--from-font-color); box-sizing:border-box;  }
+.form-content input.form-control:focus,
+.form-content textarea:focus { border-color:var(--form-active); }
+.form-content input:disabled,
+.form-content textarea:disabled { background-color:var(--form-disabled); }
+
+
+
+
+@media (max-width:767px) {
+    main.contentWrap > div { margin:0 auto 60px; padding:0 24px; }
+    main.contentWrap > div { padding:0 24px;}
+    #container > .tab-container,
+    #container > .form-container { padding:54px 0 72px; }
+
+    /**인풋**/
+    .form-content label { margin-bottom:10px; }
+	.form-content input[type="text"],
+	.form-content input[type="password"],
+	.form-content input[type="email"],
+	.form-content input[type="number"] { height:48px; line-height:46px; }
+
+	/**버튼**/
+	.btn-form { padding:12px; height:48px; }
+
+  /* 라디오 버튼 */
+  ul.radio-box.radio-button { width: 100%; display: flex; flex-wrap: wrap; justify-content: flex-start; margin-bottom: 18px; gap: 14px; }
+  ul.radio-box.radio-button li { width: calc(50% - 7px); padding: 20px 0; }
+}
+
+@media (min-width: 767px) and (max-width:1023px){
+
+    .form-content > .form-wrap > .form-group:only-of-type { flex: 1; }
+}

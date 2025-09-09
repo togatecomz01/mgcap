@@ -1,0 +1,92 @@
+@charset "euc-kr";
+
+body{
+    /* 배경 */
+    --tbl-bg: var(--white);
+    --tbl-header-bg: var(--primary);
+    --tbl-row-bg: var(--color-f4);
+    --tbl-ttl-row-bg: var(--active);
+    --tbl-ttl-bg: var(--color-ed);
+    /* 보더 */
+    --tbl-border: var(--color-d);
+    /* 텍스트 */
+    --tbl-txt: var(--color-6);
+    --tbl-header-txt: var(--color-f);
+    --tbl-row-txt: var(--color-3);
+    --tbl-ttl-row-txt: var(--white);
+    /* 타이틀 */
+    --tbl-tit: var(--color-3);
+    --tbl-tit-txt: var(--color-75);
+}
+
+/*---------------------------------------------
+    #테이블 기본 스타일
+---------------------------------------------*/
+table { table-layout: fixed; word-break: normal; overflow-wrap: break-word; }
+th, td { padding: 20px; border-top: 1px solid var(--tbl-border); border-bottom: 1px solid var(--tbl-border); border-left: 1px solid var(--tbl-border); font-size: var( --font16); line-height: 150%; }
+
+thead tr th { background-color: var(--tbl-header-bg); color: var(--tbl-header-txt); font-weight: var(--font-w-b); }
+thead tr th:first-child { border-left: none; }
+
+tbody tr th { background-color: var(--tbl-row-bg); color: var(--tbl-row-txt); font-weight: var(--font-w-b); }
+tbody tr th { border-left: none; }
+tbody tr td { background-color: var(--tbl-bg); color: var(--tbl-txt); font-weight: var(--font-w-r); text-align: center; }
+
+tbody tr.tbl-total-row th { background-color: var(--tbl-ttl-row-bg); color: var(--tbl-ttl-row-txt) } 
+tbody tr.tbl-total-row td { background-color: var(--tbl-ttl-bg) }
+
+/*---------------------------------------------
+    #기타 스타일
+---------------------------------------------*/
+/* 세로 여백 */
+.table-content + .table-content, .info-content {margin-top: 72px;}
+
+/* mobile select box */
+.table-container > #selectCustom { display: none; }
+
+/* table-caption */
+table caption { display: none; }
+
+/* table-tit pc */
+.table-tit { padding: 0 0 20px 0; display: flex; justify-content: space-between; align-items: flex-end; }
+.table-tit h3 { color: var(--tbl-tit); font-size: var(--font22); font-weight: var(--font-w-b); margin-bottom: 0; }
+.table-tit span { color: var(--tbl-tit-txt); font-size: var(--font16); font-weight: var(--font-w-r); }
+
+/* table info */
+.table-container > .info-content > .info-wrap h3 {color: var(--color-2); font-weight: 700;}
+.table-container > .info-content > .info-wrap h3.info-title::before {width: 61px; height: 61px; background-size: 61px; background-image: var(--ico-info-table)}
+.table-container > .info-content > .info-wrap {margin-bottom: 100px; padding: 24px;}
+.table-container > .info-content > .info-wrap li { position: relative; }
+.table-container > .info-content > .info-wrap li > p { margin-left: 10px; letter-spacing: -1; }
+.table-container > .info-content > .info-wrap li::after { content: ""; position: absolute; top: 0.6em; left: 0; transform: translateY(-50%); width: 4px; height: 4px; background-color: var(--color-45); border-radius: 50%; }
+.table-container > .info-content > .info-wrap > .button-wrap {display: flex; justify-content: end;}
+.table-container > .info-content > .info-wrap > .button-wrap > a {text-align: center;}
+
+/*---------------------------------------------
+    #모바일
+---------------------------------------------*/
+@media screen and (max-width:768px) {
+    /* table 기본 */
+    table { table-layout: auto; }
+    .colYear, tbody td {display: none;}
+    th.active, td.active { display: table-cell; }
+    table col:nth-child(1) { width: 50%; }
+    table col:nth-child(2) { width: 50%; }
+
+    /* mobile select box */
+    .table-container > #selectCustom  {display: block;}
+
+    /* table-tit mo */
+    .table-tit { padding: 38px 0 18px 0; }
+    .table-tit h3 { font-size: var(--font18); }
+    .table-tit span { font-size: var(--font12); }
+
+    /* table 행,열 */
+    th, td { padding: 14px; font-size: var( --font14); }
+    thead tr th, tbody tr th { font-weight: var(--font-w-m); }
+
+    /* table info */
+    .table-container > .info-content .btmWrap { display: block; }
+    .table-container > .info-content .button-wrap { text-align: end; padding-top: 24px; }
+    .table-container > .info-content .button-content .btn, .button-content a, .button-content button { width: auto; font-size: var( --font14); font-weight: var(--font-w-r); height: 45px; line-height: 45px; }
+}
