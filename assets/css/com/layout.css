@@ -79,6 +79,7 @@ h5 { margin-bottom:10px; font-size:1rem; font-weight:var(--font-w-b); }
 .form-content > .form-wrap > .form-group .mo-column > .col:last-of-type { flex:0 0 152px; }
 
 
+
 @media (max-width:767px) {
     main.contentWrap > div { margin:0 auto 60px; padding:0 24px; }
     main.contentWrap > div { padding:0 24px;}

@@ -89,5 +89,4 @@ table caption { display: none; }
     .table-container > .info-content .btmWrap { display: block; }
     .table-container > .info-content .button-wrap { text-align: end; padding-top: 24px; }
     .table-container > .info-content .button-content .btn, .button-content a, .button-content button { width: auto; font-size: var( --font14); font-weight: var(--font-w-r); height: 45px; line-height: 45px; }
-
 }

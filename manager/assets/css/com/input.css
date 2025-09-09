@@ -1,21 +1,17 @@
 @charset "euc-kr";
-
-body{
-  --form-label: var(--color-45);
-  --form-label-font-size: var(--font20);
-  --font-label-weight: var(--font-w-m);
-  --from-font-color: var(--color-2);
-  --form-board: var(--color-d);
-  --form-padding: 20px 16px;
-  --form-transition: all 0.2s ease;
-  --form-active: var(--primary);
-  --form-disabled: var(--color-f6);
-
-  --form-check-font-color:var(--color-75);
-  --form-check-icon:url("../../images/com/svg/ico_checkbox.svg");
-
+body {
+    --form-font-size:var(--font16);
+    --form-font-color:var(--color-2);
+    --form-board:var(--color-d);
+    --ico-select:url("../../images/com/svg/ico_select.svg");
+    --form-disabled:var(--disabled);
+    --form-disabled-color:var(--color-75);
+    --form-placeholder:var(--color-9);
+    --form-checkbox:var(--check);
+    --form-checked:var(--primary-light);
+    --form-check-dissbled:#9CB1C4;
+    --form-radio-bg:var(--color-f7);
 }
-
 
 
 
@@ -23,6 +19,7 @@ input[type="text"],
 input[type="password"],
 input[type="email"],
 input[type="number"],
+input[type="search"], 
 select,
 textarea { padding:10px; width:100%; height:46px; border:1px solid var(--form-board); color:var(--form-font-color); border-radius:4px; font-size:var(--form-font-size); }
 select {  padding-right:54px; -webkit-appearance:none; -moz-appearance:none; appearance:none; background:var(--ico-select) no-repeat right 10px center; }
@@ -31,32 +28,63 @@ input[type="text"]::Placeholder,
 input[type="password"]::placeholder,
 input[type="email"]::Placeholder,
 input[type="number"]::Placeholder,
+input[type="search"]::Placeholder
 select:invalid { color:var(--form-placeholder); }
 
 input:disabled,
 select:disabled,
 textarea:disabled { background:var(--form-disabled); color:var(--form-disabled-color); border:1px solid var(--form-board); }
 
-label.check,
-label.radio { display:flex; align-items:center; gap:8px; }
-label input[type="rado"] { position:relative; width:24px; height:24px; border:1px solid transparent; background:var(--form-board); overflow:hidden; }
+label:has(input) { display:flex; align-items:center; }
+label.check{ gap:8px; }
+label.radio { gap:6px; padding:6px 13px 8px; background:var(--form-radio-bg); border-radius:100px;}
+label input[type="radio"] { position:relative; width:24px; height:24px; border-radius:50%; background:var(--white); overflow:hidden; }
 label input[type="checkbox"] { position:relative; width:24px; height:24px; border:1px solid transparent; background:var(--form-board); overflow:hidden; border-radius:4px; }
 label input[type="checkbox"]::before { content:""; display:block; width:100%; height:100%; background:var(--white); mask-image:var(--form-checkbox); mask-position:center; mask-repeat:no-repeat; mask-size:12px auto; --webkit-mask-image:var(--form-checkbox); --webkit-mask-position:center; --webkit-mask-repeat:no-repeat; --webkit-mask-size:12px auto; }
 label input[type="checkbox"]:checked { background:var(--form-checked); } 
 label input[type="checkbox"]:disabled { background:var(--form-check-dissbled); } 
-label span::after {
-    content: attr(data-text); /* 같은 글자 복제 */
-    font-weight:500;          /* 항상 굵은 폭으로 확보 */
-    visibility:hidden;        /* 안 보이지만 공간 차지 */
+label input:not(:checked) + span { font-weight:400; }
+label input:checked + span { font-weight:500; }
+label input:checked + span { color:var(--form-font-color); font-weight:500; }
+label input:not(:checked) + span { font-weight:400; }
+label input[type="radio"]:not(:checked) { border:7px solid var(--form-board);  }
+label input[type="radio"]:checked { border:7px solid var(--form-checked);  }
+label input[type="radio"]:disabled { border:7px solid var(--form-check-dissbled);  }
+
+/*label.toggle { position:relative; width:40px; height:24px; padding:2px 3px; background:var(--form-board); border-radius:30px; }
+label.toggle:has(input:checked) { background:var(--active); }
+label.toggle::before { content:""; display:block; position:absolute; top:2px; left:3px; width:20px; height:20px; border-radius:20px; background:var(--white); transition: all 0.3s; }
+label.toggle:has(input:checked)::before { right:3px; }
+label.toggle input[type="checkbox"] { position: absolute; clip: rect(0 0 0 0); width: 1px; height:1px; margin:-1px; overflow:hidden; }
+label.toggle input + span { font-size:0; }*/
+
+
+label.toggle {
+    --w: 40px;
+    --h: 24px;
+    --pad-x: 3px; 
+    --pad-y: 2px;  
+    --knob: 20px; 
+    --travel: calc(var(--w) - (var(--pad-x) * 2) - var(--knob));
+    position: relative; width: var(--w); height: var(--h); padding: var(--pad-y) var(--pad-x); background: var(--form-board); border-radius:30px;
+   transition: background-color .2s ease;
   }
-  label span {
-    position: relative;
-    display: inline-block;
+  
+label.toggle:has(input:checked) { background: var(--active); }
+label.toggle::before { content:""; position:absolute; top:var(--pad-y); left:var(--pad-x); width:var(--knob); height:var(--knob); border-radius:50%; background:var(--white); transform:translateX(0); transition: transform .2s ease, box-shadow .2s ease; }
+label.toggle:has(input:checked)::before { transform: translateX(var(--travel)); }
+label.toggle:focus-within { outline: 2px solid transparent; }
+  /* 모션 민감 사용자 배려 */
+  @media (prefers-reduced-motion: reduce) {
+    label.toggle,
+    label.toggle::before {
+      transition: none !important;
+    }
   }
-  label input:not(:checked) + span { font-weight:400; }
-  label input:checked + span { font-weight:500; }
-label input:checked + span { font-weight:400;  } 
-label input:checked + span { color:var(--form-font-color); font-weight:500;  } 
+  
+label.toggle input[type="checkbox"] { position:absolute; width:1px; height:1px; margin:-1px; padding:0; border:0; clip: rect(0 0 0 0); overflow:hidden; white-space:nowrap; }
+label.toggle input + span { font-size:0; }
+
 
 
 /*label.check > span,
