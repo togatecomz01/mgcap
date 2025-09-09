@@ -53,6 +53,7 @@ ul.radio-box.radio-button li label.auth6:after { background-image: url(../../ima
 ul.radio-box.radio-button li label.auth7:after { background-image: url(../../images/com/ico_auth_toss.png); }
 ul.radio-box.radio-button li:has(input[type="radio"]:checked) { border: 3px solid #2392FF; background: #FFF; box-shadow: 0 0 12px 0 rgba(31, 9, 201, 0.20); }
 
+
 /* 포커스 링 */
 ul.radio-box input[type="radio"]:focus-visible,
 ul.check-box input[type="checkbox"] :focus-visible,
@@ -93,6 +94,7 @@ div.toggle-box input[type="checkbox"]:focus-visible { outline: 1px solid var( --
   /* 라디오 버튼 */
   ul.radio-box.radio-button { width: 100%; display: flex; flex-wrap: wrap; justify-content: flex-start; margin-bottom: 18px; gap: 14px; }
   ul.radio-box.radio-button li { width: calc(50% - 7px); padding: 20px 0; }
+
 }
 
 @media (min-width: 767px) and (max-width:1023px){

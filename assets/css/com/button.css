@@ -27,7 +27,7 @@ body{
 .btn-form:hover { border-color:var(--btn-active); color:var(--btn-active);}
 
 /**Contents & Modal**/
-.btn-content { padding:12px; width:170px; min-height:48px; line-height:24px; background:var(--btn-content-background); color:var(--btn-content-font-color); box-sizing:"border-box"; }
+.btn-content { padding:12px; width:170px; height:48px; line-height:24px; background:var(--btn-content-background); color:var(--btn-content-font-color); box-sizing:"border-box"; }
 .btn-content:hover { background:var(--btn-content-active);}
 .btn-content:disabled { background:var(--btn-content-diasbled); color:var(--btn-content-d-font-color); }
 
@@ -37,7 +37,7 @@ body{
 /**CTA 01**/
 .button-content .btn,
 .button-content a,
-.button-content button {  display:inline-block; margin:0 auto; padding:17px 16px 17px; font-size:var(--btm-btn-font-size); font-weight:var(--btm-btn-font-weight); text-align:center; min-width:220px;  min-height:56px; line-height:0.9; }
+.button-content button {  display:inline-block; margin:0 auto; padding:17px 16px 17px; font-size:var(--btm-btn-font-size); font-weight:var(--btm-btn-font-weight); text-align:center; min-width:220px;  height:56px; line-height:0.9; }
 .button-content .btn-primary { background-color: var(--btm-btn-primary); color:var(--white); }
 .button-content .btn-primary:hover { background-color: var(--active); }
 .button-content .btn-secondary { background-color: var(--btm-btn-secondary); }
@@ -58,4 +58,15 @@ body{
 
 }
 
+
 @media (min-width: 767px) and (max-width:1023px){}
+
+/* 20250902 추가 */
+.button-content .btn-more {
+    border: 1.5px solid var(--btm-btn-primary);
+    font-size: var(--font24);
+}
+.button-content .btn-more:hover { /* 호버 임시 추가 */
+    border-color: var(--primary);
+    color: var(--primary);
+}

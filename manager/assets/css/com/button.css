@@ -22,6 +22,9 @@ body{
 
 }
 
+
+button, a { cursor:pointer; }
+
 /**Form btn**/
 .btn-form { width:100%; max-width:152px; height:67px; padding:var(--btn-padding); border:1px solid var(--btn-board); color:var(--btn-font-color); box-sizing:border-box; text-align:center; }
 .btn-form:hover { border-color:var(--btn-active); color:var(--btn-active);}
@@ -34,6 +37,27 @@ body{
 
 .btn-terms-modal { padding: 2px 10px 4px; border: 1px solid var(--btn-modal-border); color:var(--btn-modal-font-color); }
 .btn-terms-modal:hover { border-color: #222222; color: #222222; }
+
+
+.btn-ico-del, .btn-ico-mod, .btn-ico-close { font-size:0; border-radius:4px; }
+.btn-ico-del:hover, .btn-ico-mod:hover, .btn-ico-close:hover { font-size:0; background-color:#f6f6f6; border-radius:4px; }
+
+.btn-ico-del { background-image:url("../../images/com/svg/ico_delete.svg"); }
+.btn-ico-del:hover { background-image:url("../../images/com/svg/ico_delete_active.svg"); }
+
+.btn-ico-mod { background-image:url("../../images/com/svg/ico_modify.svg"); }
+.btn-ico-mod:hover { background-image:url("../../images/com/svg/ico_modify_active.svg"); }
+
+.btn-ico-close {  width:28px; height:28px; background-image:url("../../images/com/svg/ico_close.svg"); background-color:#fff; background-repeat:no-repeat; background-position:center; background-size:16px; }
+
+
+/**리스트 버튼**/
+.list-content td button,
+.list-content td a {  display:block; margin:0 auto; width:32px; height:32px; background-color:#fff; background-repeat:no-repeat; background-position:center; background-size:20px; border-radius:4px; font-size:0;  }
+
+/**닫기 아이콘 버튼 **/
+
+
 
 /**CTA 01**/
 .button-content .btn,

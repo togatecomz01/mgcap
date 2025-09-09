@@ -14,6 +14,7 @@ body {
 }
 
 /* 스크린 리더 전용 텍스트 */
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -73,11 +74,13 @@ body {
   }
 
   /* 모바일에서 탭 리스트 숨김 */
+
   .tab-list[data-view="pc"] {
     display: none;
   }
 
   /* 모바일에서 select 표시 */
+
   .tab-select-mobile[data-view="mo"] {
     display: block;
   }
@@ -85,12 +88,22 @@ body {
 
 @media (min-width: 768px) {
   /* PC에서 select 숨김 */
+
   .tab-select-mobile[data-view="mo"] {
     display: none;
   }
 
   /* PC에서 탭 리스트 표시 */
+
   .tab-list[data-view="pc"] {
     display: flex;
   }
+}
+
+
+
+@media (min-width: 768px) {
+
+  
+
 }

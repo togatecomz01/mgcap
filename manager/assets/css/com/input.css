@@ -17,32 +17,74 @@ body{
 }
 
 
-input[type="checkbox"] { position:absolute; width:1px; height:1px; padding:0; clip:rect(0, 0, 0, 0); border:0; }
-input[type="checkbox"] + label { display:inline-block;  padding-left:44px; position:relative; min-height:30px; line-height:30px; color:var(--form-check-font-color); font-weight:var(--font-w-l); font-size:1rem; }
-input[type="checkbox"] + label::before { content:""; display:block; position:absolute; top:0; left:0; width:30px; height:30px; mask-image:var(--form-check-icon); -webkit-mask-image:var(--form-check-icon); background-color:var(--form-board); mask-size:100%; -webkit-mask-size: auto 100%; mask-repeat:no-repeat; -webkit-mask-repeat:no-repeat; }
-input[type="checkbox"]:checked  + label::before { background-color:var(--primary-light);}
-input[type="checkbox"]:checked  + label span { font-weight:var(--font-w-m); color:var(--from-font-color); }
+
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+select,
+textarea { padding:10px; width:100%; height:46px; border:1px solid var(--form-board); color:var(--form-font-color); border-radius:4px; font-size:var(--form-font-size); }
+select {  padding-right:54px; -webkit-appearance:none; -moz-appearance:none; appearance:none; background:var(--ico-select) no-repeat right 10px center; }
+
+input[type="text"]::Placeholder,
+input[type="password"]::placeholder,
+input[type="email"]::Placeholder,
+input[type="number"]::Placeholder,
+select:invalid { color:var(--form-placeholder); }
+
+input:disabled,
+select:disabled,
+textarea:disabled { background:var(--form-disabled); color:var(--form-disabled-color); border:1px solid var(--form-board); }
+
+label.check,
+label.radio { display:flex; align-items:center; gap:8px; }
+label input[type="rado"] { position:relative; width:24px; height:24px; border:1px solid transparent; background:var(--form-board); overflow:hidden; }
+label input[type="checkbox"] { position:relative; width:24px; height:24px; border:1px solid transparent; background:var(--form-board); overflow:hidden; border-radius:4px; }
+label input[type="checkbox"]::before { content:""; display:block; width:100%; height:100%; background:var(--white); mask-image:var(--form-checkbox); mask-position:center; mask-repeat:no-repeat; mask-size:12px auto; --webkit-mask-image:var(--form-checkbox); --webkit-mask-position:center; --webkit-mask-repeat:no-repeat; --webkit-mask-size:12px auto; }
+label input[type="checkbox"]:checked { background:var(--form-checked); } 
+label input[type="checkbox"]:disabled { background:var(--form-check-dissbled); } 
+label span::after {
+    content: attr(data-text); /* 같은 글자 복제 */
+    font-weight:500;          /* 항상 굵은 폭으로 확보 */
+    visibility:hidden;        /* 안 보이지만 공간 차지 */
+  }
+  label span {
+    position: relative;
+    display: inline-block;
+  }
+  label input:not(:checked) + span { font-weight:400; }
+  label input:checked + span { font-weight:500; }
+label input:checked + span { font-weight:400;  } 
+label input:checked + span { color:var(--form-font-color); font-weight:500;  } 
+
+
+/*label.check > span,
+label.radio > span { display:flex; gap:8px; align-items:center; color:#757575; font-size:var(--form-font-size);  }
+label.check > span::before,
+label.radio > span::before { content:""; display:block; width:24px; height:24px; background-size:24px; background-position:center; background-repeat:no-repeat; }
+label.check > input:checked + span,
+label.radio > input:checked + span { color:#222; font-weight:500;  }
+label.check > input + span::before { background-image:url("../../images/com/svg/ico_check_default.svg"); }
+label.check > input:checked + span::before { background-image:url("../../images/com/svg/ico_check_checked.svg"); }
+label.check > input:disabled + span::before { background-image:url("../../images/com/svg/ico_check_disabled.svg"); }
+label.radio > input + span::before { background-image:url("../../images/com/svg/ico_radio_default.svg"); }
+label.radio > input:checked + span::before { background-image:url("../../images/com/svg/ico_radio_checked.svg"); }
+label.radio > input:disabled + span::before { background-image:url("../../images/com/svg/ico_radio_disabled.svg"); }*/
 
 
 
-/* 포커스 링 */
-ul.radio-box input[type="radio"]:focus-visible,
-ul.check-box input[type="checkbox"] :focus-visible,
-div.toggle-box input[type="checkbox"]:focus-visible { outline: 1px solid var( --form-active); }
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+select:focus { border:1px solid #2392FF; outline:0; }
 
 
-.form-content label { display:block; margin-bottom:16px; font-size:var(--form-label-font-size); color:var(--form-label); font-weight:var(--font-label-weight); }
-.form-content input[type="text"],
-.form-content input[type="password"],
-.form-content input[type="email"],
-.form-content input[type="number"] { height:67px; line-height:65px; }
-.form-content input.form-control,
-.form-content textarea { width:100%; border: 1px solid var(--form-board); padding:var(--form-padding); color:var(--from-font-color); box-sizing:border-box;  }
-.form-content input.form-control:focus,
-.form-content textarea:focus { border-color:var(--form-active); }
-.form-content input:disabled,
-.form-content textarea:disabled { background-color:var(--form-disabled); }
+.ipt-clear { position:relative; }
+.ipt-clear > input[type="text"] { padding-right:40px;  }
+/*.ipt-clear > input[type="text"]:focus { outline: 2px solid #5b9dd9; outline-offset: 2px; }*/
 
-
-
+.btn-clear { position:absolute; top:50%; right:8px; transform:translateY(-50%); width:24px; height:24px; border:0; background:transparent; cursor:pointer; font-size:18px; line-height:1; opacity: .6; }
+/*.btn-clear:hover, .btn-clear:focus { opacity: 1; outline: 2px solid #5b9dd9; outline-offset: 2px; }*/
 

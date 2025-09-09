@@ -78,6 +78,7 @@ h5 { margin-bottom:10px; font-size:1rem; font-weight:var(--font-w-b); }
 .form-content > .form-wrap > .form-group .mo-column .flex-row .se-select,
 .form-content > .form-wrap > .form-group .mo-column > .col:last-of-type { flex:0 0 152px; }
 
+
 @media (max-width:767px) {
     main.contentWrap > div { margin:0 auto 60px; padding:0 24px; }
     main.contentWrap > div { padding:0 24px;}
@@ -105,3 +106,20 @@ h5 { margin-bottom:10px; font-size:1rem; font-weight:var(--font-w-b); }
 }
 
 @media (min-width: 767px) and (max-width:1023px){}
+
+/* microcopy 텍스트 부분 공통 */
+.microcopy {padding-bottom: 20px;}
+.microcopy em {display: block; color: var(--color-2); font-size: var(--font26); font-weight: var(--font-w-m); margin-bottom: 24px;}
+.microcopy p {color: var(--color-45);}
+
+/* privacy-content 간격조정 */
+.privacy-content > div {
+    margin-bottom: 50px;
+}
+.privacy-content > div table {
+    margin-top: 20px;
+}
+.privacy-content > div p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
