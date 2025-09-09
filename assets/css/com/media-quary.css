@@ -55,7 +55,7 @@
     left: 0px;
     width: 100%;
     padding: 0;
-    margin-top: 1px;
+    /* margin-top: 1px; */
     max-height: 200px;
     height: initial;
     border-radius: 0;

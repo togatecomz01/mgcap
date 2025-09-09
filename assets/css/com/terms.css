@@ -16,3 +16,9 @@ ul.check-box.terms li:not(.check-all-area) input[type="checkbox"]:checked  + lab
 /* 내용보기 버튼 */
 ul.check-box.terms li .modal { position:absolute; top:50%; right:30px; transform: translateY(-50%); }
 .form-group .modal { padding: 2px 10px 4px; background: var(--white); border: 1px solid var(--color-e); color: var(--color-75); font-size: var(--font16); }
+
+@media screen and (max-width:768px) {
+    ul.check-box.terms li input[type="checkbox"] + label, ul.check-box.terms li.check-all-area input[type="checkbox"] + label { padding: 20px 40px; }
+    ul.check-box.terms li .modal { display: none; }
+    ul.check-box.terms li input[type="checkbox"] + label::after { content: ""; position: absolute; top: 50%; right: 16px; transform: translateY(-50%); font-size: 0; width: 16px; height: 16px; background-color: var(--aco-tit); mask-image: var(--ico-move); mask-repeat: no-repeat; mask-size: auto 10.4px; mask-position: center; -webkit-mask-image: var(--ico-move); -webkit-mask-repeat: no-repeat; -webkit-mask-size: auto 10.4px; -webkit-mask-position: center; transition: 0.2s linear; }
+}
