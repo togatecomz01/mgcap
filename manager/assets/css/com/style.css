@@ -29,14 +29,12 @@ body {
     
     --dim: rgba(0, 0, 0, 0.5);
     --white-dim: rgba(255, 255, 255, 0.5);
-
   
 
     --active: #2392FF;
 
     --red: #FF0000;
     --white: #FFFFFF;
-
     --disabled:#F6F6F6;
 
 
@@ -50,6 +48,7 @@ body {
 
     --color-fa:#FDFDFD;
     --color-f8:#F8F8F8;
+    --color-f7:#F7F7F7;
     --color-c:#CCCCCC;
     --color-ab:#ABABAB;
     --color-e:#EEEEEE;
@@ -60,10 +59,9 @@ body {
     --primary-light: #41C7F4;
     --secondary: #BAD1EC;
     --dissabled: var(--color-f6);
-    --default-color:#757575;
+    --default-color:#454545;
 
     --header:#172233;
-
 
     --check:url("../../images/com/svg/ico_form_check.svg");
 

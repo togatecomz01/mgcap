@@ -13,6 +13,7 @@ body {
   --tab3-active: var(--primary);
 }
 
+
 /* 스크린 리더 전용 텍스트 */
 .sr-only {
   position: absolute;
@@ -46,15 +47,18 @@ body {
 .tab-container .tab-list.depth2 li.tab-item button,.tab-container .tab-list.depth2 li.tab-item a {white-space: nowrap; padding:12px 26px; width:100%; border-radius:30px; background:var(--tab2-background); transition:all 0.3s ease; }
 .tab-container .tab-list.depth2 li.tab-item.active button,.tab-container .tab-list.depth2 li.tab-item.active a {white-space: nowrap; color: #ffffff; background:var(--tab-active); }
 
+.tab-select-mobile select:focus { outline:2px solid var(--outline); outline-offset:2px; }
 
-/* active */
-.tab-container .tab-item.active button { color: var(--active); border-color: var(--active); font-weight: 500; }
-.tab-container .tab-item button { width: 100%; padding: 14px 10px 16px; border: 1px solid var(--color-d); background: var(--color-f); margin-right: 0; transition: all 0.3s ease; }
+.tab-container .tab-list.depth2 { flex-wrap: wrap; gap:24px; }
+.tab-container .tab-list.depth2 li.tab-item { display:inline-block; }
+.tab-container .tab-list.depth2 li.tab-item button,.tab-container .tab-list.depth2 li.tab-item a { padding:12px 26px; width:100%; border-radius:30px; background:var(--tab2-background); transition:all 0.3s ease; }
+.tab-container .tab-list.depth2 li.tab-item.active button,.tab-container .tab-list.depth2 li.tab-item.active a { color: #ffffff; background:var(--tab-active); }
 
-.tab-select-mobile select:focus {
-  outline: 2px solid var(--outline);
-  outline-offset: 2px;
-}
+.tab-container .tab-list.depth3 li.tab-item { flex:1; }
+.tab-container .tab-list.depth3 li.tab-item button { padding:8px; width:100%; height:73px; color:#999999; font-size:1.222rem; border: 1px solid #e5e5ea; border-left: 0; background: #fdfdfd; transition: all 0.3s ease; }
+.tab-container .tab-list.depth3 li.tab-item button:first-of-type { border-left: 1px solid #e5e5ea; }
+.tab-container .tab-list.depth3 li.tab-item.active button { color:#0072bc; font-weight:500; border:1px solid #0072bc; color:#0072bc; }
+
 
 @media (max-width: 767px) {
   .tab-container .tab-list.depth2 {

@@ -64,7 +64,8 @@ div.toggle-box input[type="checkbox"]:focus-visible { outline: 1px solid var( --
 .form-content input[type="text"],
 .form-content input[type="password"],
 .form-content input[type="email"],
-.form-content input[type="number"] { height:67px; line-height:65px; }
+.form-content input[type="number"],
+.form-content input[type="search"]{ height:67px; line-height:65px; }
 .form-content input.form-control,
 .form-content textarea { width:100%; border: 1px solid var(--form-board); padding:var(--form-padding); color:var(--from-font-color); box-sizing:border-box;  }
 .form-content input.form-control:focus,
