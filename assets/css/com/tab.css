@@ -84,7 +84,6 @@ body {
 
 @media (min-width: 768px) {
   /* PC¿¡¼­ select ¼û±è */
-
   .tab-select-mobile[data-view="mo"] {
     display: none;
   }
