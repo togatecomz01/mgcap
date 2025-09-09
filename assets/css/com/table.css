@@ -30,10 +30,15 @@ thead tr th:first-child { border-left: none; }
 
 tbody tr th { background-color: var(--tbl-row-bg); color: var(--tbl-row-txt); font-weight: var(--font-w-b); }
 tbody tr th { border-left: none; }
-tbody tr td { background-color: var(--tbl-bg); color: var(--tbl-txt); font-weight: var(--font-w-r); text-align: center; }
+tbody tr td { background-color: var(--tbl-bg); color: var(--tbl-txt); font-weight: var(--font-w-r); text-align: center;}
 
 tbody tr.tbl-total-row th { background-color: var(--tbl-ttl-row-bg); color: var(--tbl-ttl-row-txt) } 
 tbody tr.tbl-total-row td { background-color: var(--tbl-ttl-bg) }
+
+/* privacy-policy 페이지 테이블(thead 없이 구성) */ /* 0909 추가 */
+tbody tr th:first-child { border-right:1px solid var(--color-d); } 
+tbody tr th:last-child { border-left:1px solid var(--color-d); } 
+tbody tr td:first-child {border-left: none;} 
 
 /*---------------------------------------------
     #기타 스타일
@@ -62,6 +67,9 @@ table caption { display: none; }
 .table-container > .info-content > .info-wrap > .button-wrap {display: flex; justify-content: end;}
 .table-container > .info-content > .info-wrap > .button-wrap > a {text-align: center;}
 
+/* privacy-policy 페이지 mobile 테이블 none처리 */
+.table-mobile {display: none;}
+
 /*---------------------------------------------
     #모바일
 ---------------------------------------------*/
@@ -89,4 +97,10 @@ table caption { display: none; }
     .table-container > .info-content .btmWrap { display: block; }
     .table-container > .info-content .button-wrap { text-align: end; padding-top: 24px; }
     .table-container > .info-content .button-content .btn, .button-content a, .button-content button { width: auto; font-size: var( --font14); font-weight: var(--font-w-r); height: 45px; line-height: 45px; }
+
+    /* privacy-policy 페이지 테이블 모바일(thead 없이 구성) */
+    .privacy-content table tr td {display: table-cell; }
+    .table-mobile {display: table; width: 100%;}
+    .table-mobile tbody tr td {display: table-cell; }
+    .table-desktop {display: none;}
 }
