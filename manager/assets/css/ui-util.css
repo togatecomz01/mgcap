@@ -17,3 +17,6 @@
 
 @import url("./swiper-bundle.min.css");
 @import url("./ui_plugin.css");
+
+/* minjung: css 추가 */
+@import url("./com/minjung.css");
