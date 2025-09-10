@@ -67,6 +67,9 @@ button, a { cursor:pointer; display:inline-block; display:inline-flex; align-ite
 .cta .btn-primary { color:var(--white); background:var(--btn-cta-bg); }
 .cta .btn-secondary { background:var(--white); border:1px solid var(--btn-board); }
 
+/* CTA 우측 하단 */
+.rb .cta .button-wrap { justify-content:flex-end; }
+
 /**팝업 버튼**/
 .pop-content button,
 .pop-content a { font-size:var(--font16); width:106px; height:40px; border-radius:100px; text-align:center; font-weight:500; }
