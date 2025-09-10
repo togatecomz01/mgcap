@@ -4,7 +4,7 @@ $(document).ready(function(){
         load, init
     ---------------------------------------------*/
     $(window).on("load", function () {
-        if ($('.fullPopupOn .pop-con-wrap').length > 0) { // DOM 존재 여부 먼저 체크한 뒤에 이벤트 바인딩
+        if ($('.fullPopupOn .pop-body').length > 0) { // DOM 존재 여부 먼저 체크한 뒤에 이벤트 바인딩
             headerPopupL.scrolling();
         }
 
@@ -35,7 +35,7 @@ $(document).ready(function(){
             headerL.scrolling();
         }
 
-        if ($('.fullPopupOn .pop-con-wrap').length > 0) {
+        if ($('.fullPopupOn .pop-body').length > 0) {
             headerPopupL.scrolling();
         }
 
@@ -239,15 +239,15 @@ $(document).ready(function(){
                 }
             },
             scrolling: function () {
-                scrollY = $('.fullPopupOn .pop-con-wrap').length > 0 ? $('.fullPopupOn .pop-con-wrap').scrollTop() : 0;
+                scrollY = $('.fullPopupOn .pop-con-wrap').length > 0 ? $('.fullPopupOn .pop-body').scrollTop() : 0;
                 this.headerAni();
             }
         };
     })();
 
     // event
-    if ($('.fullPopupOn .pop-con-wrap').length > 0) {
-        $('.fullPopupOn .pop-con-wrap').on('scroll', function () {
+    if ($('.fullPopupOn .pop-body').length > 0) {
+        $('.fullPopupOn .pop-body').on('scroll', function () {
             headerPopupL.scrolling();
         });
     }
@@ -287,34 +287,6 @@ $(document).ready(function(){
                 console.log('moveTop: ' + 'scrollUp');
             },
 
-            // updatePosition: function () {
-
-            //     var $sideTools = $('#sideTools');
-            //     var $btmCont = $('.btmCont');
-            //     var contentScrollTop = $('.contentWrap').scrollTop();
-            
-            //     if ($btmCont.length === 0 || $btmCont.outerHeight() === 0) {
-            //         $sideTools.css({
-            //             position: 'absolute',
-            //             bottom: '30px'
-            //         });
-            //         return;
-            //     }
-            
-            //     var btmHeight = $btmCont.outerHeight();
-            
-            //     if (contentScrollTop >= btmHeight) {
-            //         $sideTools.css({
-            //             position: 'fixed',
-            //             bottom: (btmHeight + 30) + 'px'
-            //         });
-            //     } else {
-            //         $sideTools.css({
-            //             position: 'absolute',
-            //             bottom: '30px'
-            //         });
-            //     }
-            // },
 
             plusMenu: function(){
                 var $plusMenu = $('#sideTools .sideMenu ul');
@@ -345,27 +317,6 @@ $(document).ready(function(){
         };
     })();
 
-    if ($('#sideTools').length > 0) {
-        // 스크롤 이벤트 바인딩
-        if ($('.contentWrap').length > 0) {
-            $('.contentWrap').on('scroll', function () {
-                sideToolsL.scrolling();
-            });
-        }
 
-        // TOP 버튼 클릭 이벤트
-        $(document).on('click', '#sideTools .scrollUpBtn', function () {
-            sideToolsL.moveTop();
-        });
-
-        // 위치 및 메뉴 초기 세팅
-        // sideToolsL.updatePosition();
-        sideToolsL.plusMenu();
-
-    }
-
-    // $(window).on('resize', function () {
-    //     sideToolsL.updatePosition();
-    // });
 
 });

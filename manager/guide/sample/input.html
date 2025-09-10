@@ -57,18 +57,18 @@
                             <div class="form-container">
                                 <div class="form-content">
                                     <div class="form-wrap">
-                                        <div class="form-group ipt-clear">
+                                        <div class="form-group">
                                             <input id="password-input" type="text" name="text" class="form-control" placeholder="디폴트" />
                                         </div>
-                                        <div class="form-group ipt-clear">
+                                        <div class="form-group">
                                             <input id="password-input" type="text" name="text" class="form-control" placeholder="포커스" autofocus />
                                         </div>
                                     </div>
                                     <div class="form-wrap">
-                                        <div class="form-group ipt-clear">
-                                            <input id="password-input" type="text" name="text" class="form-control" placeholder="내용을 입력해주세요" value="완료되었습니다." />
+                                        <div class="form-group">
+                                            <p class="ipt-clear"><input id="password-input" type="text" name="text" class="form-control" placeholder="내용을 입력해주세요" value="완료되었습니다." /></p>
                                         </div>
-                                        <div class="form-group ipt-clear">
+                                        <div class="form-group">
                                             <input id="password-input" type="text" name="text" class="form-control" placeholder="비활성" disabled />
                                         </div>
                                     </div>
@@ -121,6 +121,31 @@
                                             <option value="3">옵션3</option>
                                             <option value="4" selected>비활성</option>
                                             </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--//form-content-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tit-wrap">
+                        <h3>Input file</h3>
+                        <div>
+                            <p>첨부 기능을 통해 업로드된 파일을 화면에 표시하는 영역이다. 사용자가 첨부한 파일 이름과 삭제 버튼(아이콘)을 함께 제공해,
+                                필요할 때 해당 파일을 손쉽게 제거할 수 있다. 한 화면에 최대 3개까지 배치하며, 파일 간 간격은 16px로 유지한다.</p>
+                            <div class="form-container">
+                                <div class="form-content">
+                                    <div class="form-wrap">
+                                        <div class="form-group">
+                                            <span class="ipt-file">
+                                                <span class="ipt-clear"><input class="form-control upload-text uploadInput" type="text" placeholder="파일을 입력해주세요" tabindex="0" readonly>
+                                                </span>
+                                                <label class="upload-label" for="files">
+                                                    <input id="files" class="upload" name="files" type="file" />
+                                                    <span class="sr-only fileLabel">파일선택</span>
+                                                </label>
+                                            </span>
+                                            
                                         </div>
                                     </div>
                                 </div>

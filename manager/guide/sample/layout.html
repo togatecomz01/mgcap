@@ -108,115 +108,127 @@
           </ul>
         </nav>
         <main class="contentWrap">
+          <seciton class="title_container">
+            <h2>메뉴관리</h2>
+            <ul class="location_content">
+                <li><a href="javascript:void(0);" class="home">홈</a></li>
+                <li><a href="javascript:void(0);">대메뉴</a></li>
+                <li><a href="javascript:void(0);">소메뉴</a></li>
+            </ul>
+          </seciton>
           <section class="list-container">
             <h3>대메뉴 목록</h3>
-            <table class="list-content">
-              <caption>타이틀, 대메뉴명, 중메뉴명, URL, 활성, 하위메뉴 변경, 삭제로 구성된 대메뉴 목록</caption>
-            
-              <colgroup>
-                <col style="width:96px;">
-                <col style="width:234px;">
-                <col style="width:234px;">
-                <col style="width:294px;">
-                <col style="width:auto">
-                <col style="width:180px;">
-                <col style="width:94px;">
-                <col style="width:94px;">
-              </colgroup>
-            
-              <thead>
-                <tr>
-                  <th id="th-title" scope="col">타이틀</th>
-                  <th id="th-top"   scope="col">대메뉴명</th>
-                  <th id="th-mid"   scope="col">중메뉴명</th>
-                  <th id="th-sub"   scope="col">하위메뉴명</th>
-                  <th id="th-url"   scope="col">URL</th>
-                  <th id="th-active" scope="col">활성</th>
-                  <th id="th-modify" scope="col">수정사항</th>
-                  <th id="th-del"   scope="col">삭제</th>
-                </tr>
-              </thead>
-            
-              <tbody>
-                <!-- 1행 -->
-                <tr>
-                  <td>
-                    <input id="row1-title" class="tac" type="text" value="1" aria-labelledby="th-title">
-                  </td>
-                  <td>
-                    <select id="row1-top" class="form-control" aria-labelledby="th-top" name="top-1">
-                      <option value="" disabled selected>선택해주세요.</option>
-                      <option>옵션1</option><option>옵션2</option>
-                    </select>
-                  </td>
-                  <td>
-                    <select id="row1-mid" class="form-control" aria-labelledby="th-mid" name="mid-1">
-                      <option value="" disabled selected>선택해주세요.</option>
-                      <option>옵션1</option><option>옵션2</option>
-                    </select>
-                  </td>
-                  <td>
-                    <select id="row1-bot" class="form-control" aria-labelledby="th-bot" name="mid-1">
-                      <option value="" disabled selected>선택해주세요.</option>
-                      <option>옵션1</option><option>옵션2</option>
-                    </select>
-                  </td>
-                  <td>
-                    <input id="row1-url" type="text" class="form-control" value="/path" aria-labelledby="th-url">
-                  </td>
-                  <td>
-                    <label>
-                      <input type="radio" id="row1-active-yes" name="row1-active" value="yes"> 예
-                    </label>
-                    <label>
-                      <input type="radio" id="row1-active-no" name="row1-active" value="no"> 아니오
-                    </label>
-                    </ul>
-                  </td>
-                  <td>
-                    <button class="btn-ico-mod" type="button" aria-labelledby="th-modify">수정</button>
-                  </td>
-                  <td>
-                    <button class="btn-ico-del" type="button" aria-labelledby="th-del" data-modal-open="modal">삭제</button>
-                  </td>
-                </tr>            
-                <tr>
-                  <td>
-                    <input id="row2-title" type="text" value="2" aria-labelledby="th-title">
-                  </td>
-                  <td>
-                    <select id="row2-top" class="form-control" aria-labelledby="th-top" name="top-2">
-                      <option value="" disabled selected>선택해주세요.</option>
-                      <option>옵션1</option><option>옵션2</option>
-                    </select>
-                  </td>
-                  <td>
-                    <select id="row2-mid" class="form-control" aria-labelledby="th-mid" name="mid-2">
-                      <option value="" disabled selected>선택해주세요.</option>
-                      <option>옵션1</option><option>옵션2</option>
-                    </select>
-                  </td>
-                  <td>
-                    <select id="row2-bot" class="form-control" aria-labelledby="th-bot" name="mid-2">
-                      <option value="" disabled selected>선택해주세요.</option>
-                      <option>옵션1</option><option>옵션2</option>
-                    </select>
-                  </td>
-                  <td>
-                    <input id="row2-url" type="text" class="form-control" value="/path2" aria-labelledby="th-url">
-                  </td>
-                  <td>
-                    <input id="row2-active" type="checkbox" aria-labelledby="th-active">
-                  </td>
-                  <td>
-                    <button type="button" aria-labelledby="th-modify">수정</button>
-                  </td>
-                  <td>
-                    <button type="button" aria-labelledby="th-del">삭제</button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="list-content">
+                <table>
+                    <caption>타이틀, 대메뉴명, 중메뉴명, URL, 활성, 하위메뉴 변경, 삭제로 구성된 대메뉴 목록</caption>
+                  
+                    <colgroup>
+                      <col style="width:96px;">
+                      <col style="width:234px;">
+                      <col style="width:234px;">
+                      <col style="width:294px;">
+                      <col style="width:auto">
+                      <col style="width:180px;">
+                      <col style="width:94px;">
+                      <col style="width:94px;">
+                    </colgroup>
+                  
+                    <thead>
+                      <tr>
+                        <th id="th-title" scope="col">타이틀</th>
+                        <th id="th-top"   scope="col">대메뉴명</th>
+                        <th id="th-mid"   scope="col">중메뉴명</th>
+                        <th id="th-sub"   scope="col">하위메뉴명</th>
+                        <th id="th-url"   scope="col">URL</th>
+                        <th id="th-active" scope="col">활성</th>
+                        <th id="th-modify" scope="col">수정사항</th>
+                        <th id="th-del"   scope="col">삭제</th>
+                      </tr>
+                    </thead>
+                  
+                    <tbody>
+                      <tr>
+                        <td>
+                          <input id="row1-title" class="tac" type="text" value="1" aria-labelledby="th-title">
+                        </td>
+                        <td>
+                          <select id="row1-top" class="form-control" aria-labelledby="th-top" name="top-1">
+                            <option value="" disabled selected>선택해주세요.</option>
+                            <option>옵션1</option><option>옵션2</option>
+                          </select>
+                        </td>
+                        <td>
+                          <select id="row1-mid" class="form-control" aria-labelledby="th-mid" name="mid-1">
+                            <option value="" disabled selected>선택해주세요.</option>
+                            <option>옵션1</option><option>옵션2</option>
+                          </select>
+                        </td>
+                        <td>
+                          <select id="row1-bot" class="form-control" aria-labelledby="th-bot" name="mid-1">
+                            <option value="" disabled selected>선택해주세요.</option>
+                            <option>옵션1</option><option>옵션2</option>
+                          </select>
+                        </td>
+                        <td class="ipt-clear">
+                          <input id="row1-url" type="text" class="form-control" value="/path" aria-labelledby="th-url">
+                        </td>
+                        <td>
+                            <label class="toggle">
+                                <input type="checkbox" name="row3-active" title="체크" value="" checked>
+                                <span>활성</span>
+                            </label>
+
+                          </ul>
+                        </td>
+                        <td>
+                          <button class="btn-ico-mod" type="button" aria-labelledby="th-modify">수정</button>
+                        </td>
+                        <td>
+                          <button class="btn-ico-del" type="button" aria-labelledby="th-del" data-modal-open="modal">삭제</button>
+                        </td>
+                      </tr>            
+                      <tr>
+                        <td>
+                          <input id="row2-title" class="tac" type="text" value="2" aria-labelledby="th-title">
+                        </td>
+                        <td>
+                          <select id="row2-top" class="form-control" aria-labelledby="th-top" name="top-2">
+                            <option value="" disabled selected>선택해주세요.</option>
+                            <option>옵션1</option><option>옵션2</option>
+                          </select>
+                        </td>
+                        <td>
+                          <select id="row2-mid" class="form-control" aria-labelledby="th-mid" name="mid-2">
+                            <option value="" disabled selected>선택해주세요.</option>
+                            <option>옵션1</option><option>옵션2</option>
+                          </select>
+                        </td>
+                        <td>
+                          <select id="row2-bot" class="form-control" aria-labelledby="th-bot" name="mid-2">
+                            <option value="" disabled selected>선택해주세요.</option>
+                            <option>옵션1</option><option>옵션2</option>
+                          </select>
+                        </td>
+                        <td>
+                          <input id="row2-url" type="text" class="form-control" value="/path2" aria-labelledby="th-url">
+                        </td>
+                        <td>
+                            <label class="toggle">
+                                <input type="checkbox" name="row3-active" title="체크" value="" checked>
+                                <span>활성</span>
+                            </label>
+                        </td>
+                        <td>
+                            <button class="btn-ico-mod" type="button" aria-labelledby="th-modify">수정</button>
+                          </td>
+                          <td>
+                            <button class="btn-ico-del" type="button" aria-labelledby="th-del" data-modal-open="modal">삭제</button>
+                          </td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+
             <div class="info-content">
               <ul class="info-list">
                 <li>[순서 저장] 버튼 : 하위메뉴의 변경된 “순서"를 저장합니다.</li>
@@ -224,27 +236,27 @@
               </ul>
             </div>
           </section>
-          <section class="modal-container">
+          <secition class="modal-container">
             <div id="modal" class="layerPopup modal">
-              <div class="pop-area">
+              <div class="pop-content">
                   <div class="pop-header">
                       <h2 class="pop-tit">메뉴를 삭제하시겠습니까?</h2>
-                      <button type="button" class="btn-ico-close"  data-popup-close="modal">닫기</button>
+                      <!--<button type="button" class="btn-ico-close"  data-popup-close="modal">닫기</button>-->
                   </div>
-                  <div class="pop-con-wrap">
+                  <div class="pop-body">
                       <p class="tit">[3depth 메뉴명 노출]</p>
                       <p>메뉴를 삭제하시겠습니까?
                         삭제 시, 해당 메뉴의 하위메뉴도 모두 삭제됩니다.</p>
                   </div>
-                  <div class="pop-btm-wrap">
-                      <div class="btm-btn-area">
-                          <button type="button" class="btn-secondary" data-popup-close="modal">취소</button>
-                          <button type="button" class="btn-primary"  data-popup-close="modal">확인</button>
+                  <div class="pop-footer">
+                      <div class="button-content">
+                          <button type="button" class="btn-pop-secondary" data-popup-close="modal">취소</button>
+                          <button type="button" class="btn-pop-primary"  data-popup-close="modal">확인</button>
                       </div>
                   </div>
               </div>
           </div>
-          </section>
+          </secition>
         </main>
       </div>
     </div>
