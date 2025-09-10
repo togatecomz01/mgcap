@@ -18,6 +18,9 @@ table td { height:72px; }
 .list-content th:first-of-type,
 .list-content td:first-of-type { border-left:0; }
 
+/* list-content에 h3 없을 때 */
+.list-content table:has(:not(h3)) thead th:first-of-type { border-radius:20px 0 0 0; }
+.list-content table:has(:not(h3)) thead th:last-of-type { border-radius:0 20px 0 0; }
 
 .write-content th, td { padding:10px 20px; }
 .write-content td { text-align:left; }
