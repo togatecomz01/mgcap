@@ -1,2 +1,8 @@
-/* ê³ ê° ë¯¼ì› ìƒì„¸ */
+@charset "EUC-KR";
+
+/* °í°´ ¹Î¿ø »ó¼¼ */
 .bg-gray { background-color: #F6F7F9; }
+
+.detail-container { background: #FFF; padding: 44px 24px; border-radius: 10px; }
+.detail-content td { text-align: left; padding: 24px 20px; }
+.detail-content textarea { min-height: 138px; }
