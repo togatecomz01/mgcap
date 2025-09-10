@@ -120,6 +120,8 @@ select:focus { border:1px solid #2392FF; outline:0; }
 /*.btn-clear:hover, .btn-clear:focus { opacity: 1; outline: 2px solid #5b9dd9; outline-offset: 2px; }*/
 
 .ipt-file { display:inline-flex; align-items:center; gap:20px; }
-.upload-label { position: relative; display:block; background-color:var(--fonm-file-button); border:1px solid var(--color-d); border-radius:4px; color:var(--color-2); width:75px; height:29px; font-size:var(--font14); cursor: pointer; }
+.ipt-file .ipt-clear > input[type="text"] { border:0; height:29px; line-height:26px; border:1px solid transparent; }
+.upload-label { position: relative; display:block; padding:0 10px; width:75px; height:29px; line-height:26px; background-color:var(--fonm-file-button); border:1px solid var(--color-d); border-radius:4px; color:var(--color-2); font-size:var(--font14); cursor: pointer; }
+.upload-label::before { content:"파일선택"; }
 .upload-text.up + .upload-label::before { background-color: var(--active); }
 .upload { display:none; }
