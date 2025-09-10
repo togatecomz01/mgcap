@@ -1,47 +1,47 @@
 $(document).ready(function () {
     /**
-     * ì•½ê´€ ë™ì˜
+     * ¾à°ü µ¿ÀÇ
      */
     var TermsAgreement = (function () {
         var $chkAll, $reqChks, $optChks, $consChk, $consChks, $allChks, $submitBtn;
 
         return {
-            // ì´ˆê¸°í™”
+            // ÃÊ±âÈ­
             init: function () {
-                $chkAll = $("#chkAll"); // ì „ì²´ ë™ì˜ (ë¶€ëª¨)
-                $reqChks = $(".chkReq"); // í•„ìˆ˜ í•­ëª©
-                $optChks = $(".chkOpt"); // ì„ íƒ í•­ëª©
-                $consChk = $("#chkCons"); // ìˆ˜ì‹  ë™ì˜ (ë¶€ëª¨)
-                $consChks = $(".chkConsChild"); // ìˆ˜ì‹  ë™ì˜ í•­ëª© (SMS, ì´ë©”ì¼, ê´‘ê³ ì„±)
-                $allChks = $(".chkReq, .chkOpt, #chkCons, .chkConsChild"); // ì „ì²´ í•­ëª©
-                // $submitBtn = $('#submitBtn'); // ê°€ì… ë²„íŠ¼
+                $chkAll = $("#chkAll"); // ÀüÃ¼ µ¿ÀÇ (ºÎ¸ğ)
+                $reqChks = $(".chkReq"); // ÇÊ¼ö Ç×¸ñ
+                $optChks = $(".chkOpt"); // ¼±ÅÃ Ç×¸ñ
+                $consChk = $("#chkCons"); // ¼ö½Å µ¿ÀÇ (ºÎ¸ğ)
+                $consChks = $(".chkConsChild"); // ¼ö½Å µ¿ÀÇ Ç×¸ñ (SMS, ÀÌ¸ŞÀÏ, ±¤°í¼º)
+                $allChks = $(".chkReq, .chkOpt, #chkCons, .chkConsChild"); // ÀüÃ¼ Ç×¸ñ
+                // $submitBtn = $('#submitBtn'); // °¡ÀÔ ¹öÆ°
 
                 this.bindEvents();
             },
 
-            // ì´ë²¤íŠ¸
+            // ÀÌº¥Æ®
             bindEvents: function () {
                 var self = this;
 
-                // ì „ì²´ ë™ì˜ (ë¶€ëª¨)
+                // ÀüÃ¼ µ¿ÀÇ (ºÎ¸ğ)
                 $chkAll.on("change", function () {
                     self.toggleAll($(this).prop("checked"));
                 });
 
-                // ì „ì²´ í•­ëª©
+                // ÀüÃ¼ Ç×¸ñ
                 $allChks.on("change", function () {
                     // self.uptSubmitBtn();
                     self.uptAllChk();
                 });
 
-                // ìˆ˜ì‹  ë™ì˜ (ë¶€ëª¨)
+                // ¼ö½Å µ¿ÀÇ (ºÎ¸ğ)
                 $consChk.on("change", function () {
                     var isChecked = $(this).prop("checked");
                     $consChks.prop("checked", isChecked);
                     self.uptAllChk();
                 });
 
-                // ìˆ˜ì‹  ë™ì˜ í•­ëª©
+                // ¼ö½Å µ¿ÀÇ Ç×¸ñ
                 $consChks.on("change", function () {
                     self.uptConsAllChk();
                     self.uptAllChk();
@@ -54,14 +54,14 @@ $(document).ready(function () {
                 this.uptAllChk();
             },
 
-            // ì „ì²´ ë™ì˜ ì²´í¬ ìƒíƒœ ì—…ë°ì´íŠ¸ (ì²´í¬ ì—¬ë¶€)
+            // ÀüÃ¼ µ¿ÀÇ Ã¼Å© »óÅÂ ¾÷µ¥ÀÌÆ® (Ã¼Å© ¿©ºÎ)
             uptAllChk: function () {
-                var allReqChked = $reqChks.length === $reqChks.filter(":checked").length; // í•„ìˆ˜ í•­ëª©
-                var allSelChked = $optChks.length === $optChks.filter(":checked").length; // ì„ íƒ í•­ëª©
-                var allConsChked = $consChks.length === $consChks.filter(":checked").length; // ìˆ˜ì‹  ë™ì˜
-                var allChecked = $allChks.length === $allChks.filter(":checked").length; // ëª¨ë“  í•­ëª©
+                var allReqChked = $reqChks.length === $reqChks.filter(":checked").length; // ÇÊ¼ö Ç×¸ñ
+                var allSelChked = $optChks.length === $optChks.filter(":checked").length; // ¼±ÅÃ Ç×¸ñ
+                var allConsChked = $consChks.length === $consChks.filter(":checked").length; // ¼ö½Å µ¿ÀÇ
+                var allChecked = $allChks.length === $allChks.filter(":checked").length; // ¸ğµç Ç×¸ñ
 
-                //  í•„ìˆ˜ + ì„ íƒ + ìˆ˜ì‹  ë™ì˜ ( ëª¨ë‘ ì²´í¬ ì‹œ ì „ì²´ ë™ì˜ ì²´í¬ í™œì„±í™” )
+                //  ÇÊ¼ö + ¼±ÅÃ + ¼ö½Å µ¿ÀÇ ( ¸ğµÎ Ã¼Å© ½Ã ÀüÃ¼ µ¿ÀÇ Ã¼Å© È°¼ºÈ­ )
                 if (allReqChked && allSelChked && allConsChked) {
                     $chkAll.prop("checked", true);
                 } else {
@@ -69,13 +69,13 @@ $(document).ready(function () {
                 }
             },
 
-            // ìˆ˜ì‹  ë™ì˜ í•­ëª© (í•˜ìœ„ í•­ëª© ì¤‘ í•˜ë‚˜ë¼ë„ ì„ íƒ ì‹œ)
+            // ¼ö½Å µ¿ÀÇ Ç×¸ñ (ÇÏÀ§ Ç×¸ñ Áß ÇÏ³ª¶óµµ ¼±ÅÃ ½Ã)
             uptConsAllChk: function () {
                 var anyConsChked = $consChks.filter(":checked").length > 0;
                 $consChk.prop("checked", anyConsChked);
             },
 
-            //ë²„íŠ¼ í™œì„±í™” (í•„ìˆ˜ í•­ëª©)
+            //¹öÆ° È°¼ºÈ­ (ÇÊ¼ö Ç×¸ñ)
             // uptSubmitBtn: function () {
             //     var allReqChked = $reqChks.length === $reqChks.filter(':checked').length;
             //     $submitBtn.prop('disabled', !allReqChked);
@@ -85,9 +85,9 @@ $(document).ready(function () {
 
     TermsAgreement.init();
 
-    // ë¼ë²¨ í´ë¦­ ì‹œ ì²´í¬ë°•ìŠ¤ ìƒíƒœ ìœ ì§€ + íŒì—…ë§Œ ì—´ê¸°
+    // ¶óº§ Å¬¸¯ ½Ã Ã¼Å©¹Ú½º »óÅÂ À¯Áö + ÆË¾÷¸¸ ¿­±â
     $(document).on("click", "label.check-button[data-popup-open]", function (e) {
-        e.preventDefault(); // ì²´í¬ë°•ìŠ¤ ì²´í¬/ì–¸ì²´í¬ ë°©ì§€
+        e.preventDefault(); // Ã¼Å©¹Ú½º Ã¼Å©/¾ğÃ¼Å© ¹æÁö
 
         var popupId = $(this).data("popup-open");
         if (popupId && window.popupL) {
@@ -97,21 +97,21 @@ $(document).ready(function () {
 });
 
 $(function () {
-    var BREAKPOINT = 768; // ëª¨ë°”ì¼: <=768, PC: >768
+    var BREAKPOINT = 768; // ¸ğ¹ÙÀÏ: <=768, PC: >768
     var mq = window.matchMedia("(max-width: " + BREAKPOINT + "px)");
 
-    // ê°œë³„ ìš”ì†Œì— ëŒ€í•´ ë°±ì—…/ë³µì›/ì œê±°
+    // °³º° ¿ä¼Ò¿¡ ´ëÇØ ¹é¾÷/º¹¿ø/Á¦°Å
     function backupIfNeeded($els) {
         $els.each(function () {
             var $el = $(this);
             if (!$el.attr("data-open-bak") && $el.is("[data-popup-open]")) {
-                $el.attr("data-open-bak", $el.attr("data-popup-open")); // ê°’ ë°±ì—…
+                $el.attr("data-open-bak", $el.attr("data-popup-open")); // °ª ¹é¾÷
             }
         });
     }
     function toMobile($scope) {
         var $els = ($scope || $(document)).find("label[data-open-bak]");
-        // ë°±ì—…ì´ ìˆëŠ” ì• ë“¤ì€ ëª¨ë‘ ë³µì›
+        // ¹é¾÷ÀÌ ÀÖ´Â ¾ÖµéÀº ¸ğµÎ º¹¿ø
         $els.each(function () {
             var $el = $(this);
             $el.attr("data-popup-open", $el.attr("data-open-bak"));
@@ -119,36 +119,36 @@ $(function () {
     }
     function toPC($scope) {
         var $els = ($scope || $(document)).find("label[data-popup-open], label[data-open-bak]");
-        // ìš°ì„  ìƒˆë¡œ ë“¤ì–´ì˜¨ ìš”ì†Œë„ ë°±ì—… ë³´ì¥
+        // ¿ì¼± »õ·Î µé¾î¿Â ¿ä¼Òµµ ¹é¾÷ º¸Àå
         backupIfNeeded($els);
-        // ê·¸ë¦¬ê³  data-popup-open ì œê±°
+        // ±×¸®°í data-popup-open Á¦°Å
         $els.filter("[data-popup-open]").removeAttr("data-popup-open");
     }
 
-    // ì´ˆê¸° ë°±ì—…
+    // ÃÊ±â ¹é¾÷
     backupIfNeeded($("label[data-popup-open]"));
 
-    // ëª¨ë“œ ì ìš©
+    // ¸ğµå Àû¿ë
     function applyMode(isMobile, $scope) {
         if (isMobile) toMobile($scope);
         else toPC($scope);
     }
 
-    // ìµœì´ˆ 1íšŒ
+    // ÃÖÃÊ 1È¸
     applyMode(mq.matches);
 
-    // ë¸Œë ˆì´í¬í¬ì¸íŠ¸ ë³€ê²½ ê°ì§€
+    // ºê·¹ÀÌÅ©Æ÷ÀÎÆ® º¯°æ °¨Áö
     if (mq.addEventListener) {
         mq.addEventListener("change", function (e) {
             applyMode(e.matches);
         });
     } else if (mq.addListener) {
-        // êµ¬í˜• ë¸Œë¼ìš°ì €
+        // ±¸Çü ºê¶ó¿ìÀú
         mq.addListener(function (e) {
             applyMode(e.matches);
         });
     } else {
-        // ì•„ì£¼ êµ¬í˜• í´ë°±: resizeë¡œ ìƒíƒœ ì „í™˜ ê°ì§€
+        // ¾ÆÁÖ ±¸Çü Æú¹é: resize·Î »óÅÂ ÀüÈ¯ °¨Áö
         var lastMobile = mq.matches;
         $(window).on("resize", function () {
             var nowMobile = $(window).width() <= BREAKPOINT;
@@ -159,7 +159,7 @@ $(function () {
         });
     }
 
-    // ë™ì  ì¶”ê°€ ëŒ€ì‘
+    // µ¿Àû Ãß°¡ ´ëÀÀ
     if (window.MutationObserver) {
         var mo = new MutationObserver(function (muts) {
             muts.forEach(function (m) {
@@ -170,14 +170,14 @@ $(function () {
                     $scope = $scope.add(this.nodeType === 1 ? this : []);
                 });
                 if ($scope.length) {
-                    // ìƒˆë¡œ ë“¤ì–´ì˜¨ labelì— ëŒ€í•´ í˜„ì¬ ëª¨ë“œ ê¸°ì¤€ ë°”ë¡œ ì ìš©
+                    // »õ·Î µé¾î¿Â label¿¡ ´ëÇØ ÇöÀç ¸ğµå ±âÁØ ¹Ù·Î Àû¿ë
                     applyMode(mq.matches, $scope);
                 }
             });
         });
         mo.observe(document.body, { childList: true, subtree: true });
     } else {
-        // í´ë°±: ì£¼ê¸°ì ìœ¼ë¡œ ì •ë¦¬
+        // Æú¹é: ÁÖ±âÀûÀ¸·Î Á¤¸®
         setInterval(function () {
             applyMode(mq.matches);
         }, 500);

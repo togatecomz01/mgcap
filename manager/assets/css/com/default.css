@@ -20,6 +20,7 @@ legend, caption { visibility: hidden; position:absolute; }
 input, textarea, select, address { font-family: 'Pretendard', 'Spoqa Han Sans Neo', "Apple SD Gothic Neo", sans-serif; }
 input, button, select, textarea { font-family: inherit; }
 input, textarea, select { display:inline-block; vertical-align: middle; color:var(--default-color); }
+fieldset { display:inline-flex; }
 
 img { line-height:0; font-size:0; vertical-align:top; }
 table{ border-spacing:0; border-collapse: collapse; }

@@ -77,13 +77,13 @@ div.toggle-box input[type="checkbox"]:focus-visible { outline: 1px solid var( --
 
 
 @media (max-width:767px) {
-    main.contentWrap > div { margin:0 auto 60px; padding:0 24px; }
-    main.contentWrap > div { padding:0 24px;}
-    #container > .tab-container,
-    #container > .form-container { padding:54px 0 72px; }
+  main.contentWrap > div { margin:0 auto 60px; padding:0 24px; }
+  main.contentWrap > div { padding:0 24px;}
+  #container > .tab-container,
+  #container > .form-container { padding:54px 0 72px; }
 
-    /**ÀÎÇ²**/
-    .form-content label { margin-bottom:10px; }
+  /**ÀÎÇ²**/
+  .form-content label { margin-bottom:10px; }
 	.form-content input[type="text"],
 	.form-content input[type="password"],
 	.form-content input[type="email"],
@@ -96,9 +96,10 @@ div.toggle-box input[type="checkbox"]:focus-visible { outline: 1px solid var( --
   ul.radio-box.radio-button { width: 100%; display: flex; flex-wrap: wrap; justify-content: flex-start; margin-bottom: 18px; gap: 14px; }
   ul.radio-box.radio-button li { width: calc(50% - 7px); padding: 20px 0; }
 
+  /* Ã¼Å©¹Ú½º */
+  input[type="checkbox"] { width: 20px; height: 20px; left: 14px; }
 }
 
 @media (min-width: 767px) and (max-width:1023px){
-
-    .form-content > .form-wrap > .form-group:only-of-type { flex: 1; }
+  .form-content > .form-wrap > .form-group:only-of-type { flex: 1; }
 }

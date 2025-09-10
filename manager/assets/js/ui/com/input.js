@@ -64,45 +64,45 @@
       - 값 있을 때만 버튼 생성
     ---------------------------*/
     function refreshClearBtn($input) {
-      var $wrap = $input.closest('.ipt-clear');
-      if ($wrap.length === 0) {
-        $input.wrap('<span class="ipt-clear"></span>');
-        $wrap = $input.parent();
-      }
-
-      var disabled = $input.prop('disabled') || $input.prop('readonly');
-      var hasVal = ($input.val() || '').trim() !== '';
-      var $btn = $wrap.find('> .btn-clear');
-
-      if (hasVal && !disabled) {
-        if ($btn.length === 0) {
-          $('<button type="button" class="btn-clear" aria-label="입력 지우기" title="지우기">\xd7</button>')
-            .appendTo($wrap)
-            .on('click', function (e) {
-              e.preventDefault();
-              var $target = $(this).siblings('input[type="text"]').first();
-              $target.val('').focus().trigger('input');
-              $(this).remove();
-            });
+        var $wrap = $input.closest('.ipt-clear');
+        if ($wrap.length === 0) {
+          // 감싸지 않고 바로 종료 → ipt-clear 없으면 동작 안함
+          return;
         }
-      } else {
-        $btn.remove();
+      
+        var disabled = $input.prop('disabled') || $input.prop('readonly');
+        var hasVal = ($input.val() || '').trim() !== '';
+        var $btn = $wrap.find('> .btn-clear');
+      
+        if (hasVal && !disabled) {
+          if ($btn.length === 0) {
+            $('<button type="button" class="btn-clear" aria-label="입력 지우기" title="지우기">\xd7</button>')
+              .appendTo($wrap)
+              .on('click', function (e) {
+                e.preventDefault();
+                var $target = $(this).siblings('input[type="text"]').first();
+                $target.val('').focus().trigger('input');
+                $(this).remove();
+              });
+          }
+        } else {
+          $btn.remove();
+        }
       }
-    }
-
-    function bindOnce($input) {
-      if ($input.data('clear-bound')) return;
-      $input
-        .on('input', function () { refreshClearBtn($(this)); })
-        .on('keyup change propertychange', function () { refreshClearBtn($(this)); }); // IE 대응
-      $input.data('clear-bound', true);
-      refreshClearBtn($input); // 초기값 반영
-    }
-
-    function initClearable() {
-      $('input[type="text"]').each(function () { bindOnce($(this)); });
-    }
-
+      
+      function bindOnce($input) {
+        if ($input.data('clear-bound')) return;
+        $input
+          .on('input', function () { refreshClearBtn($(this)); })
+          .on('keyup change propertychange', function () { refreshClearBtn($(this)); }); // IE 대응
+        $input.data('clear-bound', true);
+        refreshClearBtn($input); // 초기값 반영
+      }
+      
+      function initClearable() {
+        $('input[type="text"]').each(function () { bindOnce($(this)); });
+      }
+      
     /*---------------------------
       DOM Ready
     ---------------------------*/

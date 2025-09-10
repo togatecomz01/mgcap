@@ -12,7 +12,8 @@ body{
 
   --se-select-border: var(--color-d);
   --se-select-active: var(--active);
-  --se-select-active-bg: var(--color-ed);
+  --se-select-active-bg: #F2F5F8;
+  --se-select-active-bg-mo: var(--color-ed);
 
 }
 
@@ -86,7 +87,7 @@ body{
   .se-select[data-stove=select] .stove-option-layer { touch-action: pan-y; }
   .se-select[data-stove=select] .stove-option-layer .stove-option-scroll { -webkit-overflow-scrolling: touch; overflow-scrolling: touch; }
   .se-select[data-stove=select] .stove-option-layer .stove-option-scroll .stove-options button.stove-option:not(:disabled).on, .se-select[data-stove=select] .stove-option-layer .stove-option-scroll .stove-options button.stove-option:not(:disabled):hover
-  { border: 1px solid var(--se-select-active); color: var(--se-select-active); }
+  { border: 1px solid var(--se-select-active); color: var(--se-select-active); background-color: var(--se-select-active-bg-mo);}
 }
 /* Tablet (กร $md-min and < $lg-min) */
 /* Desktop (กร $lg-min) */
