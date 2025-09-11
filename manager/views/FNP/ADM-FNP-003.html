@@ -46,6 +46,11 @@
         /* 디자인 상 contentWrap 배경은 #F6F7F9 , write-container에 padding 있고 배경은 흰색 */
         .contentWrap {height: auto; background-color: #f6f7f9;}
         .write-container {background-color: var(--white); padding:40px 24px; border-radius: 10px;}
+
+        /* 초기화 버튼 생김으로서 button-wrap의 justify-content : flex-end -> space-between 으로 변경 */
+        .cta .button-wrap {
+            justify-content: space-between; 
+        }
     </style>
     <!-- (선택) IE11용 폴리필: 안전하게 깔아두면 좋아요 -->
     <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Promise,Array.from,Object.assign,Number.isNaN"></script>
@@ -101,7 +106,7 @@
                 </seciton>
                 <section class="write-container">
                     <table class="write-content">
-                        <caption>금융상품등록을 위한 상세페이지</caption>
+                        <caption>작성자, 작성일, 상품구분, 상품명, 상품소개, 상품판매여부, 광고제작월, 준법관리심의필 등으로 구성된 금융상품등록 관리자 상세 페이지</caption>
                         <colgroup>
                         <col style="width:210px;">
                         <col style="width:auto;">
@@ -209,11 +214,15 @@
                         </tbody>
                     </table>
                 </section>
-                <div class="button-content cta flex-end"> <!-- 이 부분 section과 간격 추가 -->
+                <div class="button-content cta"> <!-- 이 부분 section과 간격 추가 -->
                     <div class="button-wrap">
-                        <a href="javascript:void(0);" class="btn-primary" data-modal-open="fnp01">저장</a>
-                        <a href="./ADM-FNP-001-2.html" class="btn-secondary">목록</a>
-                        <a href="javascript:void(0);" class="btn-secondary" data-modal-open="fnp03">삭제</a>
+                        <button class="btn-secondary">초기화</button>
+                        <div>
+                            <a href="javascript:void(0);" class="btn-primary" data-modal-open="fnp01">저장</a>
+                            <a href="./ADM-FNP-001-2.html" class="btn-secondary">목록</a>
+                            <a href="javascript:void(0);" class="btn-secondary" data-modal-open="fnp03">삭제</a>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </main>

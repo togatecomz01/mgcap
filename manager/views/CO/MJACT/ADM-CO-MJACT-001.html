@@ -3,7 +3,7 @@
 <head>
     <meta charset="euc-kr" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>관리자&gt;금융상품관리목록(FNP-001)&gt;mg캐피탈</title>
+    <title>관리자&gt;주요활동관리목록(ADM-CO-MJACT-001)&gt;mg캐피탈</title>
 
     <meta name="keywords" content="MG캐피탈" />
     <meta name="copyright" content="copyrights 2025 MG캐피탈" />
@@ -20,14 +20,13 @@
     <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../../../manager/guide/css/sample.css" />
-    <link rel="stylesheet" href="../../assets/css/ui-util.css" />
-    <link rel="stylesheet" href="../FNP/ADM-FNP-001.css" />
+    <link rel="stylesheet" href="../../../../manager/guide/css/sample.css" />
+    <link rel="stylesheet" href="../../../assets/css/ui-util.css" />
     
-    <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
-    <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
-    <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+    <script type="text/javascript" src="../../../assets/js/lib/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../../assets/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../assets/js/lib/ui_plugin.js"></script>
+    <script type="text/javascript" src="../../../assets/js/ui/ui-util.js"></script>
 
 
     <style>
@@ -35,10 +34,14 @@
         textarea { width:100%; height:100px; }
         .form-container fieldset { gap:18px !important; }
         /* .form-container fieldset.search { display:flex; justify-content:flex-end; gap:14px;  } */
-        /* 37줄 코드가 로드는 되는데 적용이 안되어서 .form-wrap을 Flex 컨테이너로 만들고 space-between 추가*/
-        .form-wrap {display: flex; justify-content: space-between;} 
+        /* 36줄 코드가 로드는 되는데 적용이 안되어서 .form-wrap을 Flex 컨테이너로 만들고 space-between 추가*/
+        /* ++ 이 부분은 왼쪽에 selectbox가 없어서 flex-end로 재수정 */
+        .form-wrap {display: flex; justify-content: flex-end;} 
 
-        
+        /* 공통 수정 부분 */
+        /* sbject에 text-align left로 되어 있어 테이블 내 구분 부분이 오른쪽 정렬되어 center로 수정 */
+        /* .sbject {text-align: center;} */
+
         /* 리스트 테이블에 행을 추가하니 기존 wrap보다 벗어나서 lnb가 짤려서 공통 height수정 */
         .bodyWrap {height: auto;}
     </style>
@@ -87,27 +90,18 @@
             </nav>
             <main class="contentWrap">
                 <seciton class="title_container">
-                    <h2>금융상품관리 목록</h2>
+                    <h2>주요활동 관리 목록</h2>
                     <ul class="location_content">
                         <li><a href="javascript:void(0);" class="home">홈</a></li>
-                        <li><a href="javascript:void(0);">금융상품관리</a></li>
-                        <li><a href="javascript:void(0);">금융상품관리 목록</a></li>
+                        <li><a href="javascript:void(0);">회사소개 관리</a></li>
+                        <li><a href="javascript:void(0);">주요활동</a></li>
+                        <li><a href="javascript:void(0);">주요활동 관리 목록 </a></li>
                     </ul>
                 </seciton>
 
                 <section class="form-container">
                     <div class="form-content">
                         <div class="form-wrap">
-                            <fieldset class="search">
-                                <select id="category" name="category">
-                                    <option value="all">전체</option>
-                                    <option value="new">신차</option>
-                                    <option value="old">중고차</option>
-                                    <option value="bike">바이크</option>
-                                    <option value="boat">보트/선외기</option>
-                                </select>
-                            </fieldset>
-                        
                             <fieldset class="search">
                                 <legend>검색</legend>
                                 <select id="category" name="category">
@@ -123,131 +117,108 @@
 
                 <section class="list-container search">
                     <table class="list-content">
-                        <caption>number, 구분, 상품명, 기준일, 작성자, 작성일, 수정자, 수정일, 판매여부로 구성된 금융상품관리 목록</caption>
+                        <caption>주요활동 관리목록, 봉사활동 내용 등</caption>
                         <colgroup>
                             <col style="width:120px;">
-                            <col style="width:143px;">
-                            <col style="width:278px;">
-                            <col style="width:219px;">
+                            <col style="width:auto;">
+                            <col style="width:150px;">
+                            <col style="width:130px;">
                             <col style="width:150px;">
                             <col style="width:150px;">
-                            <col style="width:150px;">
-                            <col style="width:150px;">
-                            <col style="width:160px;">
+                            
                         </colgroup>
                         <thead>
                             <tr>
                                 <th id="th-title" scope="col">No</th>
-                                <th id="th-title2" scope="col">구분</th>
-                                <th id="th-title3" scope="col">상품명</th>
-                                <th id="th-title4" scope="col" style=>기준일</th>
-                                <th id="th-title5" scope="col" style=>작성자</th>
-                                <th id="th-title6" scope="col" style=>작성일</th>
-                                <th id="th-title7" scope="col" style=>수정자</th>
-                                <th id="th-title8" scope="col" style=>수정일</th>
-                                <th id="th-title9" scope="col" style=>판매여부</th>
+                                <th id="th-title2" scope="col">제목</th>
+                                <th id="th-title3" scope="col">등록자</th>
+                                <th id="th-title4" scope="col" style=>등록일</th>
+                                <th id="th-title5" scope="col" style=>수정자</th>
+                                <th id="th-title6" scope="col" style=>수정일</th>
+                                
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>42</td>
-                                <td>신차</td>
-                                <td>장기렌터카</td>
-                                <td>YYYY.MM.DD</td>
+                                <td>286</td>
+                                <td class="sbject">사랑의 연탄 나눔 봉사</td>
                                 <td>홍길동</td>
                                 <td>YYYY.MM.DD</td>
                                 <td>홍길동</td>
                                 <td>YYYY.MM.DD</td>
-                                <td>판매중</td>
                             </tr>            
                             <tr>
-                                <td>42</td>
-                                <td>신차</td>
-                                <td>장기렌터카</td>
-                                <td>YYYY.MM.DD</td>
+                                <td>285</td>
+                                <td class="sbject">농촌 일손 돕기 봉사</td>
                                 <td>홍길동</td>
                                 <td>YYYY.MM.DD</td>
                                 <td>홍길동</td>
                                 <td>YYYY.MM.DD</td>
-                                <td>판매중</td>
-                            </tr>      
+                            </tr>            
                             <tr>
-                                <td>42</td>
-                                <td>신차</td>
-                                <td>장기렌터카</td>
-                                <td>YYYY.MM.DD</td>
+                                <td>284</td>
+                                <td class="sbject">수재민 빠른 일상 회복 돕기 프로젝트 참여</td>
                                 <td>홍길동</td>
                                 <td>YYYY.MM.DD</td>
                                 <td>홍길동</td>
                                 <td>YYYY.MM.DD</td>
-                                <td>판매중</td>
-                            </tr>      
+                            </tr>            
                             <tr>
-                                <td>42</td>
-                                <td>신차</td>
-                                <td>장기렌터카</td>
-                                <td>YYYY.MM.DD</td>
+                                <td>283</td>
+                                <td class="sbject">2025년 MG캐피탈 장학기금 전달식</td>
                                 <td>홍길동</td>
                                 <td>YYYY.MM.DD</td>
                                 <td>홍길동</td>
                                 <td>YYYY.MM.DD</td>
-                                <td>판매중</td>
-                            </tr>      
+                            </tr>            
                             <tr>
-                                <td>42</td>
-                                <td>신차</td>
-                                <td>장기렌터카</td>
-                                <td>YYYY.MM.DD</td>
+                                <td>282</td>
+                                <td class="sbject">취약계층 쌀 나눔 봉사</td>
                                 <td>홍길동</td>
                                 <td>YYYY.MM.DD</td>
                                 <td>홍길동</td>
                                 <td>YYYY.MM.DD</td>
-                                <td>판매중</td>
-                            </tr>      
+                            </tr>            
                             <tr>
-                                <td>42</td>
-                                <td>신차</td>
-                                <td>장기렌터카</td>
-                                <td>YYYY.MM.DD</td>
+                                <td>281</td>
+                                <td class="sbject">사랑의 연탄 나눔 봉사</td>
                                 <td>홍길동</td>
                                 <td>YYYY.MM.DD</td>
                                 <td>홍길동</td>
                                 <td>YYYY.MM.DD</td>
-                                <td>판매중</td>
-                            </tr>      
+                            </tr>            
                             <tr>
-                                <td>42</td>
-                                <td>신차</td>
-                                <td>장기렌터카</td>
-                                <td>YYYY.MM.DD</td>
+                                <td>280</td>
+                                <td class="sbject">농촌 일손 돕기 봉사</td>
                                 <td>홍길동</td>
                                 <td>YYYY.MM.DD</td>
                                 <td>홍길동</td>
                                 <td>YYYY.MM.DD</td>
-                                <td>판매중</td>
-                            </tr>      
+                            </tr>            
                             <tr>
-                                <td>42</td>
-                                <td>신차</td>
-                                <td>장기렌터카</td>
-                                <td>YYYY.MM.DD</td>
+                                <td>279</td>
+                                <td class="sbject">수재민 빠른 일상 회복 돕기 프로젝트 참여</td>
                                 <td>홍길동</td>
                                 <td>YYYY.MM.DD</td>
                                 <td>홍길동</td>
                                 <td>YYYY.MM.DD</td>
-                                <td>판매중</td>
-                            </tr>      
+                            </tr>            
                             <tr>
-                                <td>42</td>
-                                <td>신차</td>
-                                <td>장기렌터카</td>
-                                <td>YYYY.MM.DD</td>
+                                <td>278</td>
+                                <td class="sbject">2025년 MG캐피탈 장학기금 전달식</td>
                                 <td>홍길동</td>
                                 <td>YYYY.MM.DD</td>
                                 <td>홍길동</td>
                                 <td>YYYY.MM.DD</td>
-                                <td>판매중</td>
-                            </tr>      
+                            </tr>            
+                            <tr>
+                                <td>277</td>
+                                <td class="sbject">조손 사정 아이 교육 봉사</td>
+                                <td>홍길동</td>
+                                <td>YYYY.MM.DD</td>
+                                <td>홍길동</td>
+                                <td>YYYY.MM.DD</td>
+                            </tr>            
                         </tbody>
                     </table>
                     <div class="pagination-content">
@@ -262,7 +233,7 @@
                 </section>
 
                 <div class="button-content cta flex-end"> <!-- 이 부분 section과 간격 추가 -->
-                    <a href="./ADM-FNP-003.html" class="btn-primary">등록</a> 
+                    <a href="./ADM-CO-MJACT-003.html" class="btn-primary">등록</a> 
                 </div>
             </main>
         </div>
