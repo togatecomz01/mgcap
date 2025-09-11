@@ -104,14 +104,18 @@
                             <fieldset class="search">
                                 <select id="category" name="category">
                                     <option value="all">전체</option>
+                                    <option value="new">신차</option>
+                                    <option value="old">중고차</option>
+                                    <option value="bike">바이크</option>
+                                    <option value="boat">보트/선외기</option>
                                 </select>
                             </fieldset>
                         
                             <fieldset class="search">
                                 <legend>검색</legend>
                                 <select id="category" name="category">
-                                    <option value="all">전체</option>
-                                    <!-- 필요 옵션 추가 -->
+                                    <option value="title">제목</option>
+                                    <option value="desc">내용</option>
                                 </select>
                                 <input id="q" name="q" type="search" autocomplete="off" inputmode="search" placeholder="검색어를 입력해주세요" />
                                 <button type="submit" class="btn-body">검색</button>
@@ -261,7 +265,7 @@
                 </section>
 
                 <div class="button-content cta flex-end"> <!-- 이 부분 section과 간격 추가 -->
-                    <button type="submit" class="btn-primary">등록</button>
+                    <a href="./ADM-FNP-003.html" class="btn-primary">등록</a> 
                 </div>
             </main>
         </div>

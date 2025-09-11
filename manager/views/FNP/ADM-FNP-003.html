@@ -123,7 +123,11 @@
                             <th id="th-title" scope="row"><span class="essential">상품구분</span></th>
                             <td>
                                 <select>
-                                    <option>일반리스</option>
+                                    <option>선택</option>
+                                    <option value="new">신차</option>
+                                    <option value="old">중고차</option>
+                                    <option value="bike">바이크</option>
+                                    <option value="boat">보트/선외기</option>
                                 </select>
                             </td>
                         </tr>
@@ -146,9 +150,7 @@
                             <th id="th-title" scope="row"><span class="essential">상품소개</span></th>
                             <td>
                                 <textarea placeholder="내용을 입력해주세요." style="height: 490px;">
-중소기업 창업 및 노후장비 교체를 위해 공작기계 리스는 MG캐피탈과 함께 하세요!
-공작기계 리스는 MG캐피탈 대표 상품입니다.
-당사는 공작기계 부문 전문 금융회사로 국내외 주요 메이커 업체들과 제휴약정을 맺고 있습니다.
+차량가격, 공채매입, 등록제비용, 차량세 등 자동차 구입시 필요한 자금 잋레를 지원하여 드리고, 매월 리스료를 당사에게 지급함으로서 일정기간 동안 저렴한 비용으로 원하는 자동차를 사용할 수 있는 금융 서비스입니다.
                                 </textarea><!-- 이 부분 나모웹 에디터 작업필요, 인라인으로 영역만 잡아둔 상태 -->
                             </td>
                         </tr>
@@ -195,13 +197,13 @@
                         <tr>
                             <th id="th-title" scope="row"><span class="essential">광고제작월</span></th>
                             <td>
-                                <input type="text" placeholder="내용을 입력해주세요.">
+                                <input type="text" placeholder="내용을 입력해주세요." value="2025.04">
                             </td>
                         </tr>
                         <tr>
                             <th id="th-title" scope="row"><span class="essential">준법관리심의필</span></th>
                             <td>
-                                <input type="text" placeholder="내용을 입력해주세요.">
+                                <input type="text" placeholder="내용을 입력해주세요." value="제2025-001호(2025.04.11~2026.04.10)">
                             </td>
                         </tr>
                         </tbody>
@@ -209,13 +211,77 @@
                 </section>
                 <div class="button-content cta flex-end"> <!-- 이 부분 section과 간격 추가 -->
                     <div class="button-wrap">
-                        <button type="submit" class="btn-primary">저장</button>
-                        <button type="submit" class="btn-secondary">목록</button>
-                        <button type="submit" class="btn-secondary">삭제</button>
+                        <a href="javascript:void(0);" class="btn-primary" data-modal-open="fnp01">저장</a>
+                        <a href="./ADM-FNP-001-2.html" class="btn-secondary">목록</a>
+                        <a href="javascript:void(0);" class="btn-secondary" data-modal-open="fnp03">삭제</a>
                     </div>
                 </div>
             </main>
+
+            <!-- D: 저장버튼 눌렀을 시 -> 본문 필수체크 된 내용이 비었을 때 이 모달 사용 -->
+            <secition class="modal-container">
+                <div id="fnp01" class="layerPopup modal">
+                    <div class="pop-content">
+                        <div class="pop-body">
+                            <p>내용을 작성해주세요.</p>
+                        </div>
+                        <div class="pop-footer">
+                            <div class="button-content">
+                                <button type="button" class="btn-pop-primary" data-popup-close="fnp01">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </secition>
+
+            <!-- D: 저장버튼 눌렀을 시 -> 본문 필수체크 된 내용이 전부 채워졌을 시 이 모달 사용 -->
+            <secition class="modal-container">
+                <div id="fnp02" class="layerPopup modal">
+                    <div class="pop-content">
+                        <div class="pop-body">
+                            <p>수정이 완료되었습니다.</p>
+                        </div>
+                        <div class="pop-footer">
+                            <div class="button-content">
+                                <a href="./ADM-FNP-001-2.html" class="btn-pop-primary">확인</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </secition>
+
+            <!-- D: 삭제버튼 눌렀을 시 확인 모달 -->
+            <secition class="modal-container">
+                <div id="fnp03" class="layerPopup modal">
+                    <div class="pop-content">
+                        <div class="pop-body">
+                            <p>삭제하시겠습니까?</p>
+                        </div>
+                        <div class="pop-footer">
+                            <div class="button-content">
+                                <button type="button" class="btn-pop-primary" data-modal-open="fnp04">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </secition>
+
+            <!-- D: 삭제 완료 모달 -->
+            <secition class="modal-container">
+                <div id="fnp04" class="layerPopup modal">
+                    <div class="pop-content">
+                        <div class="pop-body">
+                            <p>삭제가 완료되었습니다.</p>
+                        </div>
+                        <div class="pop-footer">
+                            <div class="button-content">
+                                <a href="./ADM-FNP-001-2.html" class="btn-pop-primary">확인</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </secition>
         </div>
-    </div>
+    </div> 
 </body>
 </html>
