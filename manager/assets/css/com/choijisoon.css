@@ -1,0 +1,9 @@
+@charset "euc-kr";
+
+/* 리스트 테이블과 button 사이 간격 */
+.list-container + .button-content {
+    margin-top: 34px;
+} 
+.write-container + .button-content {
+    margin-top: 34px;
+} 
