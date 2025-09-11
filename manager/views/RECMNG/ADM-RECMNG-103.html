@@ -3,7 +3,7 @@
     <head>
         <meta charset="euc-kr" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>MG캐피탈인의 모습 관리</title>
+        <title>채용공고 등록</title>
 
         <meta name="keywords" content="MG캐피탈" />
         <meta name="copyright" content="copyrights 2025 MG캐피탈" />
@@ -49,6 +49,32 @@
             .margin-top-24 {
                 margin-top: 24px;
             }
+            .file-list li button::before {
+                content: "";
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                margin-right: 6px;
+                background-image: url(../../assets/images/com/svg/ico_file.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                vertical-align: middle;
+            }
+            .date-range {
+                display: flex;
+                align-items: center;
+            }
+            .date-range input:first-child::after {
+                content: "-";
+                display: block;
+                text-align: center;
+                margin: 4px 0;
+            }
+            .flex {
+                display: flex;
+                justify-content: space-between;
+            }
         </style>
     </head>
 
@@ -59,11 +85,11 @@
                 <div data-include-path="../COMMON/lnb.html"></div>
                 <main class="contentWrap">
                     <section class="title_container">
-                        <h2>MG캐피탈인의 모습 관리</h2>
+                        <h2>채용공고 등록</h2>
                         <ul class="location_content">
                             <li><a href="javascript:void(0);" class="home">홈</a></li>
                             <li><a href="javascript:void(0);">채용관리</a></li>
-                            <li><a href="javascript:void(0);">MG캐피탈인의 모습 상세</a></li>
+                            <li><a href="javascript:void(0);">상세</a></li>
                         </ul>
                     </section>
                     <section class="detail-container">
@@ -77,24 +103,46 @@
                             </colgroup>
                             <tbody>
                                 <tr>
-                                    <th id="th-title" scope="row"><span>수정자</span></th>
+                                    <th id="th-title" scope="row"><span>작성자</span></th>
                                     <td><span>홍길동</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-title" scope="row"><span>수정일</span></th>
+                                    <th id="th-title" scope="row"><span>작성일</span></th>
                                     <td><span>YYYY.MM.DD</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-title" scope="row"><span class="essential">제목</span></th>
-                                    <td><input type="text" value="MG캐피탈인의 인재상" /></td>
+                                    <th id="th-title" scope="row"><span class="essential">구분</span></th>
+                                    <td>셀렉트박스</td>
                                 </tr>
                                 <tr>
-                                    <th id="th-title" scope="row"><span class="essential">소개글</span></th>
-                                    <td><input type="text" value="협동조합의 가치와 새마을금고 정신을 바탕으로 MG캐피탈의 사회적 책임을 다하는 인재가 되고자 합니다." /></td>
+                                    <th id="th-title" scope="row"><span class="essential">제목</span></th>
+                                    <td>인풋</td>
                                 </tr>
                                 <tr>
                                     <th id="th-title" scope="row"><span class="essential">내용</span></th>
                                     <td><div id="edt"></div></td>
+                                </tr>
+                                <tr>
+                                    <th id="th-title" scope="row"><span>첨부파일</span></th>
+                                    <td>
+                                        <ul class="file-list">
+                                            <li>
+                                                <button type="button">[MG캐피탈]입사지원서.docx</button>
+                                            </li>
+                                            <li>
+                                                <button type="button">[MG캐피탈]입사지원서.docx</button>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th id="th-title" scope="row"><span>게시기간</span></th>
+                                    <td>
+                                        <label class="date-range">
+                                            <input type="date" />
+                                            <input type="date" />
+                                        </label>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -102,6 +150,7 @@
                     <div class="button-content cta margin-top-24">
                         <div class="button-wrap">
                             <a herf="javascript:void(0);" class="btn-primary">저장</a>
+                            <a herf="javascript:void(0);" class="btn-secondary">목록</a>
                         </div>
                     </div>
                 </main>
