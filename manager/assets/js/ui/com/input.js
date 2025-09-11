@@ -29,103 +29,96 @@
     })();
   
     /*---------------------------
-      파일 업로더
+      입력 클리어 버튼 (공용)
+      - .ipt-clear 래퍼 없으면 자동 생성
+      - readonly 허용(= 버튼 생성 막지 않음)
     ---------------------------*/
-    var fileUploader = (function () {
-      return {
-        init: function () {
-          var $uploadInput = $('.uploadInput'); // 텍스트 박스(읽기전용)
-          var $fileInput = $('#files');
-          var $btnPick = $('#btnPick');
-          var $fileLabel = $('.fileLabel');
-  
-          function openPicker(e) {
-            if (e && e.preventDefault) e.preventDefault();
-            if ($fileInput && $fileInput.length) $fileInput.trigger('click');
-          }
-  
-          // 선택 버튼이 있을 경우만 바인딩
-          if ($btnPick && $btnPick.length) {
-            $btnPick.on('click', openPicker);
-            $btnPick.on('keydown', function (e) {
-              var k = e.key || e.keyCode;
-              if (k === 'Enter' || k === 13 || k === ' ' || k === 32) openPicker(e);
-            });
-          }
-  
-          // 파일 선택 → 프록시 텍스트에 파일명, 라벨 갱신, 클리어 버튼 갱신
-          $fileInput.on('change', function () {
-            var name = (this.files && this.files.length) ? this.files[0].name : '';
-            $uploadInput.val(name)[name ? 'addClass' : 'removeClass']('up').trigger('input');
-            if ($fileLabel.length) {
-              $fileLabel.text(name ? ('선택된 파일: ' + name) : '파일선택');
-            }
-          });
-        }
-      };
-    })();
-  
-    /*---------------------------
-      입력 클리어 버튼
-      - 래퍼가 없으면 자동으로 감쌈
-      - 값 있을 때만 버튼 생성
-    ---------------------------*/
-    function refreshClearBtn($input) {
+    function ensureClear($input) {
+      // 래퍼 보장
       var $wrap = $input.closest('.ipt-clear');
-      if ($wrap.length === 0) {
-        // 래퍼 자동 생성 (주석 정책 반영)
+      /*if (!$wrap.length) {
         $input.wrap('<span class="ipt-clear"></span>');
         $wrap = $input.parent();
-      }
+      }*/
   
-      var disabled = $input.prop('disabled') || $input.prop('readonly');
-      var hasVal = ($input.val() || '').trim() !== '';
+      // disabled만 막음 (readonly는 허용)
+      var disabled = $input.prop('disabled');
+      var hasVal = ($input.val() || '').trim() !== '' && !disabled;
       var $btn = $wrap.find('> .btn-clear');
   
-      if (hasVal && !disabled) {
-        if ($btn.length === 0) {
-          $('<button type="button" class="btn-clear" aria-label="입력 지우기" title="지우기">\xd7</button>')
-            .appendTo($wrap)
-            .on('click', function (e) {
-              e.preventDefault();
+      if (hasVal && !$btn.length) {
+        $('<button type="button" class="btn-clear" aria-label="입력 지우기" title="지우기">\xd7</button>')
+          .appendTo($wrap)
+          .on('click', function (e) {
+            e.preventDefault();
   
-              // 1) 텍스트 입력 초기화
-              var $text = $(this).siblings('input[type="text"]').first();
-              $text.val('').removeClass('up').focus().trigger('input');
+            // 1) 텍스트 초기화
+            $input.val('').removeClass('up').focus().trigger('input');
   
-              // 2) 파일 업로드와 연결된 경우: 실제 파일 input 및 라벨 초기화
-              var $fileBox = $(this).closest('.ipt-file');
-              if ($fileBox.length) {
-                var $fileInput = $fileBox.find('input[type="file"]').first();   // 예: #files
-                var $fileLabel = $fileBox.find('.fileLabel').first();           // 시각 숨김 라벨
-                if ($fileInput.length) {
-                  $fileInput.val('').trigger('change'); // 내부 상태 초기화 + 리스너 통지
-                }
-                if ($fileLabel.length) {
-                  $fileLabel.text('파일선택');
-                }
-              }
+            // 2) 같은 .ipt-file 컨테이너가 있다면 파일/라벨도 초기화
+            var $box = $wrap.closest('.ipt-file');
+            if ($box.length) {
+              var $file  = $box.find('input[type="file"]').first();
+              var $label = $box.find('.fileLabel').first();
+              if ($file.length)  $file.val('').trigger('change'); // 내부 상태/리스너 동기화
+              if ($label.length) $label.text('파일선택');
+            }
   
-              // 3) 버튼 제거
-              $(this).remove();
-            });
-        }
-      } else {
+            // 3) 버튼 제거
+            $(this).remove();
+          });
+      } else if (!hasVal && $btn.length) {
         $btn.remove();
       }
     }
   
-    function bindOnce($input) {
+    function bindClearOnce($input) {
       if ($input.data('clear-bound')) return;
       $input
-        .on('input', function () { refreshClearBtn($(this)); })
-        .on('keyup change propertychange', function () { refreshClearBtn($(this)); }); // IE 대응
+        .on('input', function () { ensureClear($(this)); })
+        .on('keyup change propertychange', function () { ensureClear($(this)); }); // IE 대응
       $input.data('clear-bound', true);
-      refreshClearBtn($input); // 초기값 반영
+      ensureClear($input); // 초기 상태 반영
     }
   
-    function initClearable() {
-      $('input[type="text"]').each(function () { bindOnce($(this)); });
+    function initClearable(scope) {
+      (scope || $(document)).find('input[type="text"]').each(function () {
+        bindClearOnce($(this));
+      });
+    }
+  
+    /*---------------------------
+      파일 업로더 (컨테이너별 바인딩)
+      - .ipt-file 내부 요소만 참조 → 다중 업로더 OK
+    ---------------------------*/
+    function initFileUploader() {
+      $('.ipt-file').each(function () {
+        var $box   = $(this);
+        var $text  = $box.find('.uploadInput').first();       // 파일명 표시용(대개 readonly)
+        var $file  = $box.find('input[type="file"]').first(); // 실제 파일 인풋
+        var $label = $box.find('.fileLabel').first();         // SR용 라벨
+  
+        // (선택) 텍스트 클릭 시 파일 선택 열기
+        if ($text.length && $file.length) {
+          $text.off('click.file').on('click.file', function () {
+            $file.trigger('click');
+          });
+        }
+  
+        // 파일 선택 → 텍스트/라벨 갱신 + 클리어 버튼 반영
+        $box.off('change.file').on('change.file', 'input[type="file"]', function () {
+          var name = (this.files && this.files.length) ? this.files[0].name : '';
+          if ($text.length) {
+            $text.val(name)[name ? 'addClass' : 'removeClass']('up').trigger('input'); // ensureClear 호출 유도
+          }
+          if ($label.length) {
+            $label.text(name ? ('선택된 파일: ' + name) : '파일선택');
+          }
+        });
+  
+        // 이 텍스트 인풋도 클리어 가능하도록 바인딩
+        if ($text.length) bindClearOnce($text);
+      });
     }
   
     /*---------------------------
@@ -133,19 +126,21 @@
     ---------------------------*/
     $(function () {
       iptFocusScrl();
-      fileUploader.init();
   
       // 숫자 인풋 3자리 콤마
       $(document).on('input', 'input[inputmode=numeric]', function () {
         commaFormatter.format(this);
       });
   
-      // 클리어 버튼: 초기화 + 동적 요소 대응
+      // 업로더/클리어 초기화
+      initFileUploader();
       initClearable();
-      $(document).on('focusin', 'input[type="text"]', function () { bindOnce($(this)); });
+  
+      // 동적 추가 대응
+      $(document).on('focusin', 'input[type="text"]', function () {
+        bindClearOnce($(this));
+      });
     });
   
   })(jQuery);
-  
-  // 셀렉트 option 색상변경 (별도 구현부)
   

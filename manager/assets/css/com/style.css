@@ -65,6 +65,12 @@ body {
 
     --check:url("../../images/com/svg/ico_form_check.svg");
 
+	col.w-96  { width: 96px; }
+	col.w-234 { width: 234px; }
+	col.w-294 { width: 294px; }
+	col.w-180 { width: 180px; }
+	col.w-94  { width: 94px; }
+	col.w-auto { width: auto; min-width:500px; }
   
     
 
