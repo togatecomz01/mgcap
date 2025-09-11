@@ -42,6 +42,11 @@
 
         /* 행을 추가하니 lnb가 짤려서 공통 height수정 */
         .bodyWrap {height: auto;}
+
+        /* 초기화 버튼 생김으로서 button-wrap의 justify-content : flex-end -> space-between 으로 변경 */
+        .cta .button-wrap {
+            justify-content: space-between; 
+        }
     </style>
     <!-- (선택) IE11용 폴리필: 안전하게 깔아두면 좋아요 -->
     <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Promise,Array.from,Object.assign,Number.isNaN"></script>
@@ -97,7 +102,7 @@
                 </seciton>
                 <section class="write-container" style="border:0; border-radius:0;">
                     <table class="write-content">
-                        <caption>**** 구성된 ** 목록</caption>
+                        <caption>작성자, 작성일, 상품구분, 상품명, 상품소개, 상품판매여부, 광고제작월, 준법관리심의필 등으로 구성된 금융상품등록 관리자 페이지</caption>
                         <colgroup>
                         <col style="width:210px;">
                         <col style="width:auto;">
@@ -196,10 +201,13 @@
                         </tbody>
                     </table>
                 </section>
-                <div class="button-content cta flex-end"> <!-- 이 부분 section과 간격 추가 -->
+                <div class="button-content cta"> <!-- 이 부분 section과 간격 추가 -->
                     <div class="button-wrap">
-                        <a href="javascript:void(0);" class="btn-primary" data-modal-open="fnp01">저장</a>
-                        <a href="./ADM-FNP-001-2.html" class="btn-secondary">목록</a>
+                        <button class="btn-secondary">초기화</button>
+                        <div>
+                            <a href="javascript:void(0);" class="btn-primary" data-modal-open="fnp01">저장</a>
+                            <a href="./ADM-FNP-001-2.html" class="btn-secondary">목록</a>
+                        </div>
                     </div>
                 </div>
             </main>
