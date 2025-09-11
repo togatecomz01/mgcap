@@ -3,25 +3,28 @@ body{
   --btn-board:var(--color-9);
   --btn-padding:20px 16px;
   --btn-font-color:var(--color-75);
+  --btn-font-size:var(--font16);
   --btn-active:var(--primary);
 
   --btn-body-color:var(--primary);
   --btn-cta-bg:var(--active);
   --btn-pop-primary:#41A6F4;
 
+  --btn-text-color:var(--primary);
+
   --lst-btn-prev:url("../../images/com/svg/ico_link.svg");
   --lst-btn-active:#F1F1F3;
 
 }
 
-button, a { cursor:pointer; display:inline-block; display:inline-flex; align-items:center; justify-content:center; text-align:center; font-weight:var(--font-w-m); }
+button, a { cursor:pointer; display:inline-block; display:inline-flex; align-items:center; justify-content:center; text-align:center; font-size:var(--btn-font-size); font-weight:var(--font-w-r); }
 
 /**Form btn**/
 .btn-form { width:100%; max-width:152px; height:67px; padding:var(--btn-padding); border:1px solid var(--btn-board); color:var(--btn-font-color); box-sizing:border-box; text-align:center; }
 .btn-form:hover { border-color:var(--btn-active); color:var(--btn-active);}
 
 /**Contents & Modal**/
-.btn-body { padding:10px; width:100%; height:46px; border:1px solid var(--form-board);  }
+.btn-body { padding:10px; width:100%; height:46px; border:1px solid var(--form-board); font-weight:var(--font-w-m) }
 .btn-content { padding:12px; width:170px; height:48px; line-height:24px; background:var(--btn-content-background); color:var(--btn-content-font-color); box-sizing:"border-box"; }
 .btn-content:hover { background:var(--btn-content-active);}
 .btn-content:disabled { background:var(--btn-content-diasbled); color:var(--btn-content-d-font-color); }
@@ -38,13 +41,14 @@ button, a { cursor:pointer; display:inline-block; display:inline-flex; align-ite
 .btn-ico-mod { background-image:url("../../images/com/svg/ico_modify.svg"); }
 .btn-ico-mod:hover { background-image:url("../../images/com/svg/ico_modify_active.svg"); }
 
-.btn-ico-close {  width:28px; height:28px; background-image:url("../../images/com/svg/ico_close.svg"); background-color:#fff; background-repeat:no-repeat; background-position:center; background-size:16px; }
+.btn-ico-close {  width:28px; height:28px; background-image:url("../../images/com/svg/ico_close.svg"); background-color:var(--white); background-repeat:no-repeat; background-position:center; background-size:16px; }
 
 
 /**리스트 버튼**/
 .list-content td button,
-.list-content td a {  display:block; margin:0 auto; width:32px; height:32px; background-color:#fff; background-repeat:no-repeat; background-position:center; background-size:20px; border-radius:4px; font-size:0;  }
-.list-content td .btn-clear { font-size:var(--font18); right:11px; transform:translateY(-62%); }
+.list-content td a {  display:block; margin:0 auto; width:32px; height:32px; background-color:var(--white);; background-repeat:no-repeat; background-position:center; background-size:20px; border-radius:4px; font-size:0;  }
+.list-content td .btn-clear { font-size:var(--font16); right:11px; top:50%; transform:translateY(-50%); }
+.list-content td a.btn-text { width:auto; height:auto; color:var(--btn-text-color); font-size:var(--font16); text-decoration:underline !important;  }
 
 /**페이지네이션 버튼 **/
 .pagination-content { position:relative; display:flex; padding:20px; align-items:center; justify-content:center; gap:8px; }
@@ -61,7 +65,8 @@ button, a { cursor:pointer; display:inline-block; display:inline-flex; align-ite
 .btn-body { padding:10px; width:85px; height:46px; border:1px solid var(--form-board); background:var(--btn-body-color); border:1px solid transparent; color:var(--white); border-radius:4px; }
 
 /**CTA 01**/
-.cta .button-wrap { display:flex; gap:10px; }
+.button-ccontainer:has(.cta) { display:block; margin-top:24px; }
+.cta .button-wrap { display:flex; gap:10px; justify-content:flex-end; }
 .cta button, 
 .cta a {  display:inline-block; display:inline-flex; align-items: center; justify-content: center; width:auto; min-height:46px; padding:8px 20px 10px; border-radius:4px; }
 .cta .btn-primary { color:var(--white); background:var(--btn-cta-bg); }
