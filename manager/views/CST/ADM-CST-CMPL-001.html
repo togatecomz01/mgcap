@@ -31,6 +31,12 @@
             .pending {
                 color: #f46241;
             }
+            .form-wrap fieldset {
+                width: 100%;
+            }
+            select {
+                width: 120px;
+            }
         </style>
     </head>
 
@@ -52,29 +58,26 @@
                     <section class="form-container">
                         <div class="form-content">
                             <div class="form-wrap">
+                                <select id="category" name="category">
+                                    <option value="all">전체</option>
+                                    <option value="complain">민원</option>
+                                    <option value="praise">칭찬&#47;제안</option>
+                                </select>
                                 <fieldset>
-                                    <select id="category" name="category">
-                                        <option value="all">전체</option>
-                                        <option value="complain">민원</option>
-                                        <option value="praise">칭찬&#47;제안</option>
-                                    </select>
                                     <legend>구분</legend>
                                     <label class="radio">
                                         <input type="radio" name="row2-active" value="" checked="" />
                                         <span>전체</span>
                                     </label>
-
                                     <label class="radio">
                                         <input type="radio" name="row2-active" value="" />
                                         <span>답변전</span>
                                     </label>
-
                                     <label class="radio">
                                         <input type="radio" name="row2-active" value="" />
                                         <span>답변완료</span>
                                     </label>
                                 </fieldset>
-
                                 <fieldset class="search">
                                     <legend>검색</legend>
                                     <select id="category" name="category">
@@ -86,7 +89,6 @@
                                 </fieldset>
                             </div>
                         </div>
-                        <!--//form-content-->
                     </section>
                     <section class="list-container search">
                         <table class="list-content">
