@@ -20,30 +20,29 @@
     <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../../../../manager/guide/css/sample.css" />
-    <link rel="stylesheet" href="../../../assets/css/ui-util.css" />
+    <link rel="stylesheet" href="../../../manager/guide/css/sample.css" />
+    <link rel="stylesheet" href="../../assets/css/ui-util.css" />
     
-    <script type="text/javascript" src="../../../assets/js/lib/jquery-1.12.4.js"></script>
-    <script type="text/javascript" src="../../../assets/js/lib/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="../../../assets/js/lib/ui_plugin.js"></script>
-    <script type="text/javascript" src="../../../assets/js/ui/ui-util.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+    <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
 
 
     <style>
         input[placeholder="포커스"] { border:1px solid #2392FF; }
-        textarea { width:100%; height:100px; }
         .form-container fieldset { gap:18px !important; }
+        table td {cursor: pointer;} /* 테이블 포인터 */
         /* .form-container fieldset.search { display:flex; justify-content:flex-end; gap:14px;  } */
         /* 36줄 코드가 로드는 되는데 적용이 안되어서 .form-wrap을 Flex 컨테이너로 만들고 space-between 추가*/
         /* ++ 이 부분은 왼쪽에 selectbox가 없어서 flex-end로 재수정 */
         .form-wrap {display: flex; justify-content: flex-end;} 
 
-        /* 공통 수정 부분 */
-        /* sbject에 text-align left로 되어 있어 테이블 내 구분 부분이 오른쪽 정렬되어 center로 수정 */
-        /* .sbject {text-align: center;} */
-
         /* 리스트 테이블에 행을 추가하니 기존 wrap보다 벗어나서 lnb가 짤려서 공통 height수정 */
         .bodyWrap {height: auto;}
+        
+        /* 리스트 테이블과 button 사이 간격 */
+        .list-container + .button-content {margin-top: 34px;} 
     </style>
     <!-- (선택) IE11용 폴리필: 안전하게 깔아두면 좋아요 -->
     <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Promise,Array.from,Object.assign,Number.isNaN"></script>
@@ -232,8 +231,10 @@
                     </div>
                 </section>
 
-                <div class="button-content cta flex-end"> <!-- 이 부분 section과 간격 추가 -->
-                    <a href="./ADM-CO-MJACT-003.html" class="btn-primary">등록</a> 
+                <div class="button-content cta">
+                    <div class="button-wrap">
+                        <a href="./ADM-CO-MJACT-003.html" class="btn-primary">등록</a> 
+                    </div>
                 </div>
             </main>
         </div>

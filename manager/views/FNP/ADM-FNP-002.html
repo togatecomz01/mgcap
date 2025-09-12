@@ -43,10 +43,8 @@
         /* 행을 추가하니 lnb가 짤려서 공통 height수정 */
         .bodyWrap {height: auto;}
 
-        /* 초기화 버튼 생김으로서 button-wrap의 justify-content : flex-end -> space-between 으로 변경 */
-        .cta .button-wrap {
-            justify-content: space-between; 
-        }
+        /* write-container와 button-content 간격 */
+        .write-container + .button-content {margin-top: 34px;} 
     </style>
     <!-- (선택) IE11용 폴리필: 안전하게 깔아두면 좋아요 -->
     <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Promise,Array.from,Object.assign,Number.isNaN"></script>
@@ -203,11 +201,9 @@
                 </section>
                 <div class="button-content cta"> <!-- 이 부분 section과 간격 추가 -->
                     <div class="button-wrap">
-                        <button class="btn-secondary">초기화</button>
-                        <div>
-                            <a href="javascript:void(0);" class="btn-primary" data-modal-open="fnp01">저장</a>
-                            <a href="./ADM-FNP-001-2.html" class="btn-secondary">목록</a>
-                        </div>
+                        <button class="btn-secondary reset">초기화</button>
+                        <a href="javascript:void(0);" class="btn-primary" data-modal-open="fnp01">저장</a>
+                        <a href="./ADM-FNP-001-2.html" class="btn-secondary">목록</a>
                     </div>
                 </div>
             </main>

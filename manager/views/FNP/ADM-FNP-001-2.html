@@ -32,15 +32,17 @@
 
     <style>
         input[placeholder="포커스"] { border:1px solid #2392FF; }
-        textarea { width:100%; height:100px; }
+
         .form-container fieldset { gap:18px !important; }
         /* .form-container fieldset.search { display:flex; justify-content:flex-end; gap:14px;  } */
         /* 37줄 코드가 로드는 되는데 적용이 안되어서 .form-wrap을 Flex 컨테이너로 만들고 space-between 추가*/
         .form-wrap {display: flex; justify-content: space-between;} 
 
-        
         /* 리스트 테이블에 행을 추가하니 기존 wrap보다 벗어나서 lnb가 짤려서 공통 height수정 */
         .bodyWrap {height: auto;}
+
+        /* 리스트 테이블과 button 사이 간격 */
+        .list-container + .button-content {margin-top: 34px;} 
     </style>
     <!-- (선택) IE11용 폴리필: 안전하게 깔아두면 좋아요 -->
     <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Promise,Array.from,Object.assign,Number.isNaN"></script>
@@ -261,8 +263,10 @@
                     </div>
                 </section>
 
-                <div class="button-content cta flex-end"> <!-- 이 부분 section과 간격 추가 -->
-                    <a href="./ADM-FNP-003.html" class="btn-primary">등록</a> 
+                <div class="button-content cta"> <!-- 이 부분 section과 간격 추가 -->
+                    <div class="button-wrap">
+                        <a href="./ADM-FNP-003.html" class="btn-primary">등록</a> 
+                    </div>
                 </div>
             </main>
         </div>
