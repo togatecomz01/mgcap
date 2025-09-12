@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>관리자&gt;서식/약관 자료실 상세(ADM-CST-ARC-002)&gt;mg캐피탈</title>
+
+    <meta name="keywords" content="MG캐피탈" />
+    <meta name="copyright" content="copyrights 2025 MG캐피탈" />
+    <meta name="description" content="MG캐피탈 리스금융, 할부금융, 스탁론, 기업대출, 장기렌트카, PF대출 등 금융 서비스 제공." />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="No-Cache" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../../manager/guide/css/sample.css" />
+    <link rel="stylesheet" href="../../assets/css/ui-util.css" />
+    
+    <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+    <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+
+
+    <style>
+        input[placeholder="포커스"] { border:1px solid #2392FF; }
+        textarea { width:100%; height:100px; }
+
+        /* form-container fieldset -> write-container fieldset 변경 */
+        .write-container fieldset { gap:18px !important; }
+
+        /* 테이블 공통 추가 전이라 임시 border */
+        table tr:first-child{border-top: 1px solid var(--table-border);}
+
+        /* 디자인 상 contentWrap 배경은 #F6F7F9 , write-container에 padding 있고 배경은 흰색 */
+        .contentWrap {height: auto; background-color: #f6f7f9;}
+        .write-container {background-color: var(--white); padding:40px 24px; border-radius: 10px;}
+
+        /* write-container와 button-content 간격 */
+        .write-container + .button-content {margin-top: 34px;} 
+
+        /* 첨부파일 리스트 */
+        .file-list li + li {margin-top: 12px;}
+        .file-list li button {text-decoration-line: underline; text-underline-position: from-font;}
+        .file-list li button::before {content: ""; margin-right: 2px; width: 20px; height: 20px; background-image: url(../../assets/images/com/svg/ico_file.svg); background-repeat: no-repeat; background-position: center; background-size: auto;}
+    </style>
+    <!-- (선택) IE11용 폴리필: 안전하게 깔아두면 좋아요 -->
+    <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Promise,Array.from,Object.assign,Number.isNaN"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header id="headerWrap" class="headerOn">
+            <h1><a href="javascript:void(0);">MG캐피탈</a></h1>
+            <div class="recent-content">
+                <span>최근접속 : 2025.08.12 12:42:28</span>
+                <button>로그아웃</button>
+            </div>
+        </header>
+        <div class="bodyWrap">
+            <nav id="menuWrap" class="lnb" role="navigation" aria-label="왼쪽 메뉴">
+                <div class="member">
+                    <a href="javascript:void(0);" class="link"><em>홍길동</em>님</a>
+                </div>
+                <ul class="menu">
+                    <li class="item">
+                    <button type="button" class="accordion" aria-expanded="false" aria-controls="submenu-1"> 대메뉴 1</button>
+                    <ul id="submenu-1" class="submenu" role="group">
+                        <li><a href="javascript:void(0);" class="link">소메뉴 1-1</a></li>
+                        <li><a href="javascript:void(0);" class="link">소메뉴 1-2</a></li>
+                        <li><a href="javascript:void(0);" class="link">소메뉴 1-3</a></li>
+                    </ul>
+                    </li>
+            
+                    <li class="item">
+                    <button type="button" class="accordion" aria-expanded="false" aria-controls="submenu-2"> 대메뉴 2</button>
+                    <ul id="submenu-2" class="submenu" role="group">
+                        <li><a href="javascript:void(0);" class="link">소메뉴 2-1</a></li>
+                        <li><a href="javascript:void(0);" class="link">소메뉴 2-2</a></li>
+                    </ul>
+                    </li>
+            
+                    <li class="item">
+                    <button type="button" class="accordion" aria-expanded="false" aria-controls="submenu-3"> 대메뉴 3</button>
+                    <ul id="submenu-3" class="submenu" role="group">
+                        <li><a href="javascript:void(0);" class="link">소메뉴 3-1</a></li>
+                    </ul>
+                    </li>
+                </ul>
+            </nav>
+            <main class="contentWrap">
+                <seciton class="title_container">
+                    <h2>주요활동 상세</h2>
+                    <ul class="location_content">
+                        <li><a href="javascript:void(0);" class="home">홈</a></li>
+                        <li><a href="javascript:void(0);">고객센터 관리</a></li>
+                        <li><a href="javascript:void(0);">서식/약관 자료실</a></li>
+                        <li><a href="javascript:void(0);">상세</a></li>
+                    </ul>
+                </seciton>
+                <section class="write-container">
+                    <table class="write-content">
+                        <caption>수정자, 수정일, 제목, 내용, 첨부파일으로 구성된 서식/약관 자료실 상세 페이지</caption>
+                        <colgroup>
+                            <col style="width:230px;">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th id="th-title" scope="row"><span>수정자</span></th>
+                                <td><span>홍길동</span></td>
+                            </tr>            
+                            <tr>
+                                <th id="th-title" scope="row"><span>수정일</span></th>
+                                <td><span>YYYY.MM.DD</span></td>
+                            </tr>            
+                            <tr>
+                                <th id="th-title" scope="row"><span class="essential">제목</span></th>
+                                <td><span>사랑의 연탄 나눔 봉사</span></td>
+                            </tr>            
+                            <tr>
+                                <th id="th-title" scope="row"><span class="essential">내용</span></th>
+                                <td>
+                                    <span>전화수신거부 신청서 및 동의 철회 신청서입니다. <br>첨부파일을 참조해주십시오.</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th id="th-file" scope="row"><span>첨부파일</span></th>
+                                <td>
+                                    <ul class="file-list">
+                                        <li>
+                                            <button type="button">[MG캐피탈]입사지원서.docx</button>
+                                        </li>
+                                        <li>
+                                            <button type="button">[MG캐피탈]입사지원서.docx</button>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>            
+                    </tbody>
+                    </table>
+                </section>
+                <div class="button-content cta">
+                    <div class="button-wrap">
+                        <a href="./ADM-CST-ARC-003.html" class="btn-primary">수정</a>
+                        <a href="./ADM-CST-ARC-001.html" class="btn-secondary">목록</a>
+                        <a href="javascript:void(0);" class="btn-secondary" data-modal-open="arc03">삭제</a>
+                    </div>
+                </div>
+                
+            </main>
+
+            <!-- D: 삭제버튼 눌렀을 시 confirm 알럿 (달라질 수 있어 임시 추가) -->
+            <secition class="modal-container">
+                <div id="arc03" class="layerPopup modal">
+                    <div class="pop-content">
+                        <div class="pop-header">
+                            <h2 class="pop-tit">서식/약관을 삭제하시겠습니까?</h2>
+                        </div>
+                        <div class="pop-body">
+                            <p>삭제한 서식/약관은</p>
+                            <p>대고객 채널에 바로 반영됩니다.</p>
+                        </div>
+                        <div class="pop-footer">
+                            <div class="button-content">
+                                <button type="button" class="btn-pop-secondary" data-popup-close="arc03">취소</button>
+                                <button type="button" class="btn-pop-primary" data-modal-open="arc04">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </secition>
+
+            <!-- D: 삭제 완료 모달 -->
+            <secition class="modal-container">
+                <div id="arc04" class="layerPopup modal">
+                    <div class="pop-content">
+                        <div class="pop-body">
+                            <p>삭제가 완료되었습니다.</p>
+                        </div>
+                        <div class="pop-footer">
+                            <div class="button-content">
+                                <a href="./ADM-CST-ARC-001.html" class="btn-pop-primary">확인</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </secition>
+        </div>
+    </div> 
+</body>
+</html>
