@@ -48,7 +48,8 @@ button, a { cursor:pointer; display:inline-block; display:inline-flex; align-ite
 .list-content td button,
 .list-content td a {  display:block; margin:0 auto; width:32px; height:32px; background-color:var(--white);; background-repeat:no-repeat; background-position:center; background-size:20px; border-radius:4px; font-size:0;  }
 .list-content td .btn-clear { font-size:var(--font16); right:11px; top:50%; transform:translateY(-50%); }
-.list-content td a.btn-text { width:auto; height:auto; color:var(--btn-text-color); font-size:var(--font16); text-decoration:underline !important;  }
+.list-content td a.btn-text,
+.list-content td button.btn-text { width:auto; height:auto; color:var(--btn-text-color); font-size:var(--font16); text-decoration:underline !important;  }
 
 /**페이지네이션 버튼 **/
 .pagination-content { position:relative; display:flex; padding:20px; align-items:center; justify-content:center; gap:8px; }
@@ -66,11 +67,12 @@ button, a { cursor:pointer; display:inline-block; display:inline-flex; align-ite
 
 /**CTA 01**/
 .button-ccontainer:has(.cta) { display:block; margin-top:24px; }
-.cta .button-wrap { display:flex; gap:10px; justify-content:flex-end; }
+.cta .button-wrap { display:flex; gap:10px; justify-content:flex-end; position:relative; }
 .cta button, 
 .cta a {  display:inline-block; display:inline-flex; align-items: center; justify-content: center; width:auto; min-height:46px; padding:8px 20px 10px; border-radius:4px; }
 .cta .btn-primary { color:var(--white); background:var(--btn-cta-bg); }
 .cta .btn-secondary { background:var(--white); border:1px solid var(--btn-board); }
+.cta .reset { position:absolute; left:0; }
 
 /**팝업 버튼**/
 .pop-content button,

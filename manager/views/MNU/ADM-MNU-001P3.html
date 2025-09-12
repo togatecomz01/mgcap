@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="euc-kr" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>메뉴관리&gt;폼&gt;샘플&gt;</title>
+
+        <meta name="keywords" content="MG캐피탈" />
+        <meta name="copyright" content="copyrights 2025 MG캐피탈" />
+        <meta name="description" content="MG캐피탈 리스금융, 할부금융, 스탁론, 기업대출, 장기렌트카, PF대출 등 금융 서비스 제공." />
+        <meta name="viewport" content="width=device-width" />
+        <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta http-equiv="Expires" content="-1" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Cache-Control" content="No-Cache" />
+
+        <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico" />
+        <link rel="stylesheet" href="../../assets/css/ui-util.css" />
+        <script  type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+        <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+        <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+        <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
+        <script src="../../assets/js/include.js"></script>
+    </head>
+
+    <body>
+    <div class="wrap">
+        <!--<div id="header"> 
+            <script> $(document).ready(function () { $("#header").load("../COM/header.html"); }); </script>
+        </div>-->
+        <div class="bodyWrap">
+        <main class="contentWrap">
+            <secition class="modal-container">
+                <div id="customModal" class="layerPopup modal on">
+                    <div class="pop-content">
+                        <div class="pop-header">
+                            <h2 class="pop-tit">메뉴등록</h2>
+                        </div>
+                        <div class="pop-body">
+                            <form action="#" method="post" novalidate>
+                                <fieldset>
+                                    <legend>메뉴 등록 정보</legend>
+                                    <ul class="write-content">
+                                        <li>
+                                            <label for="wrt01">등록자</label>
+                                            <input id="wrt01" type="text" value="수퍼어드민 성명 노출" readonly>
+                                        </li>
+                                        <li>
+                                            <label for="wrt02" class="essential">메뉴명</label>
+                                            <input id="wrt02" type="text" placeholder="예: 금융상품">
+                                            <p id="wrt02-error" class="error" role="alert">
+                                                동일한 메뉴명이 존재합니다.<br />
+                                                다른 메뉴명을 입력해주세요.</p><!--[D] 유효성 성공일땐 hidden 처리-->
+                                        </li>
+                                    </ul>  
+                                </fieldset>
+                                <div class="info-content" id="info-hint">
+                                    <ul class="info-list">
+                                    <li>신규 등록 시, 순서 미기재 및 비활성 상태로 저장됩니다.</li>
+                                    </ul>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="pop-footer">
+                            <div class="button-content">
+                                <button type="button" class="btn-pop-secondary" data-popup-close="modal">취소</button>
+                                <button type="button" class="btn-pop-primary"  data-popup-close="modal">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </secition>
+        </main>
+        </div>
+    </div>
+
+    </body>
+
+</html>

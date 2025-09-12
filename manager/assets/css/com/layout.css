@@ -3,7 +3,10 @@ body {
 
     --ico-home:url("../../images/com/svg/ico_home.svg");
     --ico-next:url("../../images/com/svg/ico_next.svg");
-    --title-color:var(--222);
+    --title-color:var(--color-2);
+    --error:#F46241;
+
+    --pop-wrt-label-color:var(--color-75);
 }
 
 .flex-col { display:flex;  }
@@ -83,12 +86,17 @@ h3 {  display:block; padding:20px; font-size:var(--font18); font-weight:var(--fo
 
 /**리스트**/
 .form-container + .list-container { margin-top:24px; }
-.list-container { width:100%; border:1px solid #ddd; border-radius:20px; }
+.list-container { width:100%; border:1px solid #ddd; border-radius:20px; overflow:hidden; }
 .list-container h3 { border-bottom:1px solid #ddd; }
 .form-container fieldset { gap:18px; }
 .form-container fieldset.search { display:flex; justify-content:flex-end; gap:14px;  }
 .form-container fieldset.search > select { width:120px; }
 .form-container fieldset.search > input { width:264px; }
+
+/*쓰기**/
+.write-container td fieldset { gap:18px; }
+
+
 
 
 /*---------------------------------------------
@@ -119,3 +127,17 @@ h3 {  display:block; padding:20px; font-size:var(--font18); font-weight:var(--fo
 .layerPopup.modal .pop-body {  padding-bottom:30px; font-size:1rem; }
 .layerPopup.modal .pop-body .tit { margin-bottom:12px; font-size:1.111rem; font-weight:500;}
 .layerPopup.modal .pop-footer .button-content { display:flex; justify-content:flex-end; gap:16px; }
+
+/**팜업_등록*/
+.pop-body fieldset {  display:block; width:100%; }
+.pop-body .write-content li{ display:grid; grid-template-columns:130px 1fr; column-gap:20px; align-items:center; margin-bottom:10px; }
+.pop-body .write-content li > label { grid-column:1; }
+.pop-body .write-content li > input[type="text"] { grid-column:2; width:100%; }
+.pop-body .write-content li:has(.error) > input[type="text"],
+.pop-body .write-content li:has(.error) > input[type="password"],
+.pop-body .write-content li:has(.error) > input[type="number"],
+.pop-body .write-content li:has(.error) > input[type="email"],
+.pop-body .write-content li:has(.error) > input[type="search"] { border:1px solid var(--error); }
+.pop-body .write-content li > .error { grid-column:2; margin-top:6px; color:var(--error); font-size:var(--font14); }
+.pop-body .info-content li { font-size:var(--font18); background-size:20px; background-position:left 5px; }
+.pop-body .info-content { margin-top:20px; padding:16px 0; border-top:1px solid var(--color-d); }
