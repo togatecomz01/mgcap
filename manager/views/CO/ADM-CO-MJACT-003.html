@@ -47,7 +47,7 @@
         .write-container + .button-content {margin-top: 34px;} 
 
         /* 이미지 태그 대신 임시 배경 */
-        .mjact-image {width: 560px; height: 130px; background-color: #666; margin-bottom: 24px;}
+        .image {width: 560px; height: 130px; background-color: #666; margin-bottom: 24px;}
 
         /* 하략 부분 임시 */
         .pd-txt {display: block; padding-top: 30px;}
@@ -136,7 +136,7 @@
 
                                         <!-- D:: 수정 페이지일 시 주석 해제 -->
                                         
-                                        <!-- <div class="mjact-image"></div>
+                                        <!-- <div class="image"></div>
                                         <span>봉사단 소속 2명의 직원은 서울 강서구에 소재한 취약계층 마을을 방문하여 연탄 나눔<br>일손 돕기와 재능기부 봉사활동을 진행했다.</span>
                                         <span class='pd-txt'>[하략]</span> -->
                                     </div> 
@@ -190,18 +190,20 @@
                 </div>
             </secition>
 
-            <!-- D: 삭제버튼 눌렀을 시 확인 모달 -->
+            <!-- D: 삭제버튼 눌렀을 시 confirm 알럿 (달라질 수 있어 임시 추가) -->
             <secition class="modal-container">
                 <div id="mjact03" class="layerPopup modal">
                     <div class="pop-content">
+                        <div class="pop-header">
+                            <h2 class="pop-tit">주요활동 수정사항을 삭제하시겠습니까?</h2>
+                        </div>
                         <div class="pop-body">
-                            <p>삭제하시겠습니까?</p>
+                            <p>삭제한 주요활동은</p>
+                            <p>대고객 채널에 바로 반영됩니다.</p>
                         </div>
                         <div class="pop-footer">
                             <div class="button-content">
-                                <!-- 화면설계서, 디자인 상 취소버튼은 없었지만 삭제 하기 전 취소 버튼이 있어야 할 것 같은 개인적 판단-->
-                                <!-- 검토 후 삭제  -->
-                                <button type="button" class="btn-pop-secondary" data-popup-close="mjact03" >취소</button>
+                                <button type="button" class="btn-pop-secondary" data-popup-close="mjact03">취소</button>
                                 <button type="button" class="btn-pop-primary" data-modal-open="mjact04">확인</button>
                             </div>
                         </div>
