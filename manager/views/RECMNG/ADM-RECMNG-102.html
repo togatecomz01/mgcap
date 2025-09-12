@@ -31,45 +31,39 @@
             .bg-gray {
                 background-color: #f6f7f9;
             }
-            .detail-container {
-                background: #fff;
+            .write-container {
                 padding: 44px 24px;
                 border-radius: 10px;
+                background: #fff;
             }
-            .detail-content {
-                border-top: 1px solid var(--table-border);
+
+            /* 첨부파일 리스트 */
+            .file-list li + li {
+                margin-top: 12px;
             }
-            .detail-content td {
-                text-align: left;
-                padding: 24px 20px;
-            }
-            .detail-content textarea {
-                min-height: 138px;
-            }
-            .margin-top-24 {
-                margin-top: 24px;
+            .file-list li button {
+                text-decoration-line: underline;
+                text-underline-position: from-font;
             }
             .file-list li button::before {
                 content: "";
-                display: inline-block;
-                width: 12px;
-                height: 12px;
-                margin-right: 6px;
+                margin-right: 2px;
+                width: 20px;
+                height: 20px;
                 background-image: url(../../assets/images/com/svg/ico_file.svg);
                 background-repeat: no-repeat;
                 background-position: center;
-                background-size: contain;
-                vertical-align: middle;
+                background-size: auto;
             }
+
+            /* datepicker */
             .date-range {
                 display: flex;
                 align-items: center;
+                gap: 16px;
             }
-            .date-range input:first-child::after {
+            .date-range .dash::before {
                 content: "-";
-                display: block;
-                text-align: center;
-                margin: 4px 0;
             }
         </style>
     </head>
@@ -88,10 +82,10 @@
                             <li><a href="javascript:void(0);">상세</a></li>
                         </ul>
                     </section>
-                    <section class="detail-container">
-                        <table class="detail-content">
+                    <section class="write-container">
+                        <table class="write-content">
                             <caption>
-                                으로 구성된 MG캐피탈인의 모습 관리 목록
+                                작성자, 작성일, 구분, 상태, 제목, 내용, 첨부파일, 게시기간, 공고 초기단계로 구성된 채용공고 상세 목록
                             </caption>
                             <colgroup>
                                 <col style="width: 210px" />
@@ -99,19 +93,19 @@
                             </colgroup>
                             <tbody>
                                 <tr>
-                                    <th id="th-title" scope="row"><span>작성자</span></th>
+                                    <th id="th-writer" scope="row"><span>작성자</span></th>
                                     <td><span>홍길동</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-title" scope="row"><span>작성일</span></th>
+                                    <th id="th-date" scope="row"><span>작성일</span></th>
                                     <td><span>YYYY.MM.DD</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-title" scope="row"><span>구분</span></th>
+                                    <th id="th-type" scope="row"><span>구분</span></th>
                                     <td><span>정기</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-title" scope="row"><span>상태</span></th>
+                                    <th id="th-state" scope="row"><span>상태</span></th>
                                     <td><span>진행중</span></td>
                                 </tr>
                                 <tr>
@@ -119,13 +113,13 @@
                                     <td><span>2025년 MG캐피탈 일반직 신입직원 채용</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-title" scope="row"><span>내용</span></th>
+                                    <th id="th-content" scope="row"><span>내용</span></th>
                                     <td>
                                         <span>내용<br />내용</span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th id="th-title" scope="row"><span>첨부파일</span></th>
+                                    <th id="th-file" scope="row"><span>첨부파일</span></th>
                                     <td>
                                         <ul class="file-list">
                                             <li>
@@ -138,16 +132,21 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th id="th-title" scope="row"><span>게시기간</span></th>
+                                    <th id="th-period" scope="row"><span>게시기간</span></th>
                                     <td>
-                                        <label class="date-range">
-                                            <input type="date" />
-                                            <input type="date" />
-                                        </label>
+                                        <div class="date-range">
+                                            <label>
+                                                <input type="date" />
+                                            </label>
+                                            <span class="dash"></span>
+                                            <label>
+                                                <input type="date" />
+                                            </label>
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th id="th-title" scope="row"><span>공고 초기단계</span></th>
+                                    <th id="th-early" scope="row"><span>공고 초기단계</span></th>
                                     <td>
                                         <label class="check">
                                             <input type="checkbox" name="row1-active" value="" checked="" />
@@ -157,13 +156,16 @@
                             </tbody>
                         </table>
                     </section>
-                    <div class="button-content cta margin-top-24">
-                        <div class="button-wrap">
-                            <a herf="javascript:void(0);" class="btn-primary">수정</a>
-                            <a herf="javascript:void(0);" class="btn-secondary">목록</a>
-                            <a herf="javascript:void(0);" class="btn-secondary">삭제</a>
+                    <section class="button-ccontainer">
+                        <div class="button-content cta">
+                            <div class="button-wrap">
+                                <a herf="javascript:void(0);" class="btn-secondary reset">초기화</a>
+                                <a herf="javascript:void(0);" class="btn-primary">수정</a>
+                                <a herf="javascript:void(0);" class="btn-secondary">목록</a>
+                                <a herf="javascript:void(0);" class="btn-secondary">삭제</a>
+                            </div>
                         </div>
-                    </div>
+                    </section>
                 </main>
             </div>
         </div>
