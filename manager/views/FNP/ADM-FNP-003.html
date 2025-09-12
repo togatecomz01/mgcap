@@ -256,15 +256,20 @@
                 </div>
             </secition>
 
-            <!-- D: 삭제버튼 눌렀을 시 확인 모달 -->
+            <!-- D: 삭제버튼 눌렀을 시 confirm 알럿 (달라질 수 있어 임시 추가) -->
             <secition class="modal-container">
                 <div id="fnp03" class="layerPopup modal">
                     <div class="pop-content">
+                        <div class="pop-header">
+                            <h2 class="pop-tit">금융상품 수정사항을 삭제하시겠습니까?</h2>
+                        </div>
                         <div class="pop-body">
-                            <p>삭제하시겠습니까?</p>
+                            <p>삭제한 금융상품은</p>
+                            <p>대고객 채널에 바로 반영됩니다.</p>
                         </div>
                         <div class="pop-footer">
                             <div class="button-content">
+                                <button type="button" class="btn-pop-secondary" data-popup-close="fnp03">취소</button>
                                 <button type="button" class="btn-pop-primary" data-modal-open="fnp04">확인</button>
                             </div>
                         </div>

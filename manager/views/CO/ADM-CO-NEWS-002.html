@@ -3,14 +3,14 @@
 <head>
     <meta charset="euc-kr" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>관리자&gt;주요활동관리상세(ADM-CO-MJACT-002)&gt;mg캐피탈</title>
+    <title>관리자&gt;회사소식상세(ADM-CO-NEWS-002)&gt;mg캐피탈</title>
 
     <meta name="keywords" content="MG캐피탈" />
     <meta name="copyright" content="copyrights 2025 MG캐피탈" />
     <meta name="description" content="MG캐피탈 리스금융, 할부금융, 스탁론, 기업대출, 장기렌트카, PF대출 등 금융 서비스 제공." />
     <meta name="viewport" content="width=device-width" />
     <meta name="apple-mobile-web-app-status-bar-style" content="white" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" /> 
     <meta name="mobile-web-app-capable" content="yes" />
     <meta http-equiv="Expires" content="-1" />
     <meta http-equiv="Pragma" content="no-cache" />
@@ -47,7 +47,7 @@
         .write-container + .button-content {margin-top: 34px;} 
 
         /* 이미지 태그 대신 임시 배경 */
-        image {width: 560px; height: 130px; background-color: #666; margin-bottom: 24px;}
+        .image {width: 560px; height: 130px; background-color: #666; margin-bottom: 24px;}
 
         /* 하략 부분 임시 */
         .pd-txt {display: block; padding-top: 30px;}
@@ -97,17 +97,17 @@
             </nav>
             <main class="contentWrap">
                 <seciton class="title_container">
-                    <h2>주요활동 상세</h2>
+                    <h2>회사소식 상세</h2>
                     <ul class="location_content">
                         <li><a href="javascript:void(0);" class="home">홈</a></li>
-                        <li><a href="javascript:void(0);">회사소개관리</a></li>
-                        <li><a href="javascript:void(0);">주요활동</a></li>
-                        <li><a href="javascript:void(0);">주요활동 상세</a></li>
+                        <li><a href="javascript:void(0);">회사소개 관리</a></li>
+                        <li><a href="javascript:void(0);">회사소식</a></li>
+                        <li><a href="javascript:void(0);">회사소식 상세</a></li>
                     </ul>
                 </seciton>
                 <section class="write-container">
                     <table class="write-content">
-                        <caption>수정자, 수정일, 제목, 내용으로 구성된 주요활동 상세 페이지</caption>
+                        <caption>수정자, 수정일, 제목, 내용으로 구성된 회사소식 상세 페이지</caption>
                         <colgroup>
                             <col style="width:230px;">
                             <col style="width:auto;">
@@ -123,24 +123,24 @@
                             </tr>            
                             <tr>
                                 <th id="th-title" scope="row"><span class="essential">제목</span></th>
-                                <td><span>사랑의 연탄 나눔 봉사</span></td>
+                                <td><span>MG캐피탈 2000억 유상증자로 신용등급 'A0'상향</span></td>
                             </tr>            
                             <tr>
                                 <th id="th-title" scope="row"><span class="essential">내용</span></th>
                                 <td>
                                     <div class="image"></div>
-                                    <span>봉사단 소속 2명의 직원은 서울 강서구에 소재한 취약계층 마을을 방문하여 연탄 나눔<br>일손 돕기와 재능기부 봉사활동을 진행했다.</span>
+                                    <span>MG캐피탈이 모회사인 새마을금고중앙회로부터 2천억원 규모의 유상증자를 성공적으로<br>마무리 했다고 8일 밝혔다.</span>
                                     <span class="pd-txt">[하략]</span>
-                                </td>
+                                </td> 
                             </tr>            
                         </tbody>
                     </table>
                 </section>
                 <div class="button-content cta"> <!-- 이 부분 section과 간격 추가 -->
                     <div class="button-wrap">
-                        <a href="./ADM-CO-MJACT-003.html" class="btn-primary">수정</a>
-                        <a href="./ADM-CO-MJACT-001.html" class="btn-secondary">목록</a>
-                        <a href="javascript:void(0);" class="btn-secondary" data-modal-open="mjact03">삭제</a>
+                        <a href="./ADM-CO-NEWS-003.html" class="btn-primary">수정</a>
+                        <a href="./ADM-CO-NEWS-001.html" class="btn-secondary">목록</a>
+                        <a href="javascript:void(0);" class="btn-secondary" data-modal-open="news03">삭제</a>
                     </div>
                 </div>
                 
@@ -148,19 +148,19 @@
 
             <!-- D: 삭제버튼 눌렀을 시 confirm 알럿 (달라질 수 있어 임시 추가) -->
             <secition class="modal-container">
-                <div id="mjact03" class="layerPopup modal">
+                <div id="news03" class="layerPopup modal">
                     <div class="pop-content">
                         <div class="pop-header">
-                            <h2 class="pop-tit">주요활동 수정사항을 삭제하시겠습니까?</h2>
+                            <h2 class="pop-tit">회사소식 수정사항을 삭제하시겠습니까?</h2>
                         </div>
                         <div class="pop-body">
-                            <p>삭제한 주요활동은</p>
+                            <p>삭제한 회사소식은</p>
                             <p>대고객 채널에 바로 반영됩니다.</p>
                         </div>
                         <div class="pop-footer">
                             <div class="button-content">
-                                <button type="button" class="btn-pop-secondary" data-popup-close="mjact03">취소</button>
-                                <button type="button" class="btn-pop-primary" data-modal-open="mjact04">확인</button>
+                                <button type="button" class="btn-pop-secondary" data-popup-close="news03">취소</button>
+                                <button type="button" class="btn-pop-primary" data-modal-open="news04">확인</button>
                             </div>
                         </div>
                     </div>
@@ -169,14 +169,14 @@
 
             <!-- D: 삭제 완료 모달 -->
             <secition class="modal-container">
-                <div id="mjact04" class="layerPopup modal">
+                <div id="news04" class="layerPopup modal">
                     <div class="pop-content">
                         <div class="pop-body">
                             <p>삭제가 완료되었습니다.</p>
                         </div>
                         <div class="pop-footer">
                             <div class="button-content">
-                                <a href="./ADM-CO-MJACT-001.html" class="btn-pop-primary">확인</a>
+                                <a href="./ADM-CO-NEWS-001.html" class="btn-pop-primary">확인</a>
                             </div>
                         </div>
                     </div>
