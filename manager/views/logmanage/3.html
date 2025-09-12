@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="euc-kr" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>고객 여정</title>
+
+        <meta name="keywords" content="MG캐피탈" />
+        <meta name="copyright" content="copyrights 2025 MG캐피탈" />
+        <meta name="description" content="MG캐피탈 리스금융, 할부금융, 스탁론, 기업대출, 장기렌트카, PF대출 등 금융 서비스 제공." />
+        <meta name="viewport" content="width=device-width" />
+
+        <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta http-equiv="Expires" content="-1" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Cache-Control" content="No-Cache" />
+
+        <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico" />
+        <link rel="stylesheet" href="../../assets/css/ui-util.css" />
+        <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+        <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+        <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+
+        <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
+        <script src="../../assets/js/include.js"></script>
+        <style>
+            .form-wrap fieldset {
+                width: 100%;
+            }
+
+            /* datepicker */
+            .date-range {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+            }
+            .date-range .dash::before {
+                content: "-";
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="wrap">
+            <div data-include-path="../COMMON/header.html"></div>
+            <div class="bodyWrap">
+                <div data-include-path="../COMMON/lnb.html"></div>
+                <main class="contentWrap">
+                    <section class="title_container">
+                        <h2>고객 여정</h2>
+                        <ul class="location_content">
+                            <li><a href="javascript:void(0);" class="home">홈</a></li>
+                            <li><a href="javascript:void(0);">로그관리</a></li>
+                            <li><a href="javascript:void(0);">고객 여정</a></li>
+                        </ul>
+                    </section>
+                    <section class="form-container">
+                        <div class="form-content">
+                            <div class="form-wrap">
+                                <div class="date-range">
+                                    <label>
+                                        <input type="date" />
+                                    </label>
+                                    <span class="dash"></span>
+                                    <label>
+                                        <input type="date" />
+                                    </label>
+                                </div>
+                                <fieldset class="search">
+                                    <legend>검색</legend>
+                                    <select id="category" name="category">
+                                        <option value="all">전체</option>
+                                        <option value="name">고객명</option>
+                                        <option value="id">ID</option>
+                                        <option value="phone">전화번호</option>
+                                        <option value="device">접속기기</option>
+                                    </select>
+                                    <input id="q" name="q" type="search" autocomplete="off" inputmode="search" placeholder="검색어를 입력해주세요" />
+                                    <button type="submit" class="btn-body">검색</button>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="list-container">
+                        <div class="list-content">
+                            <table>
+                                <caption>
+                                    No, 기준일, 평균 방문자수(명), 평균 이용시간(분), 조회 페이지수, 활동내역으로 구성된 방문자 로그 및 접속페이지 로그 목록
+                                </caption>
+                                <colgroup>
+                                    <col style="width: 8%" />
+                                    <col style="width: 14%" />
+                                    <col style="width: 12%" />
+                                    <col style="width: 14%" />
+                                    <col style="width: 8%" />
+                                    <col style="width: 10%" />
+                                    <col style="width: 10%" />
+                                    <col style="width: 10%" />
+                                    <col style="width: 10%" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th id="th-no" scope="col">No</th>
+                                        <th id="th-name" scope="col">고객명</th>
+                                        <th id="th-id" scope="col">ID</th>
+                                        <th id="th-phone" scope="col">전화번호</th>
+                                        <th id="th-device" scope="col">접속기기</th>
+                                        <th id="th-start" scope="col">접속일시</th>
+                                        <th id="th-end" scope="col">종료일시</th>
+                                        <th id="th-time" scope="col">접속시간(분)</th>
+                                        <th id="th-log" scope="col">활동내역</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>42</td>
+                                        <td>홍길동</td>
+                                        <td>mg1234</td>
+                                        <td>01012345678</td>
+                                        <td>PC</td>
+                                        <td>YYYY.MM.DD</td>
+                                        <td>YYYY.MM.DD</td>
+                                        <td>52</td>
+                                        <td><a href="javascript:void(0);">상세보기</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pagination-content">
+                            <button class="btn-prev">이전으로</button>
+                            <button class="active">1</button>
+                            <button>2</button>
+                            <button>3</button>
+                            <button>4</button>
+                            <button class="btn-next">다음으로</button>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>
