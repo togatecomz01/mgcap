@@ -31,23 +31,10 @@
             .bg-gray {
                 background-color: #f6f7f9;
             }
-            .detail-container {
+            .write-container {
                 background: #fff;
                 padding: 44px 24px;
                 border-radius: 10px;
-            }
-            .detail-content {
-                border-top: 1px solid var(--table-border);
-            }
-            .detail-content td {
-                text-align: left;
-                padding: 24px 20px;
-            }
-            .detail-content textarea {
-                min-height: 138px;
-            }
-            .margin-top-24 {
-                margin-top: 24px;
             }
         </style>
     </head>
@@ -67,8 +54,8 @@
                             <li><a href="javascript:void(0);">고객 민원 상세</a></li>
                         </ul>
                     </section>
-                    <section class="detail-container">
-                        <table class="detail-content">
+                    <section class="write-container">
+                        <table class="write-content">
                             <caption>
                                 구분, 제목, 등록자, 등록일시, 내용, 답변으로 구성된 고객 민원 상세 목록
                             </caption>
@@ -78,7 +65,7 @@
                             </colgroup>
                             <tbody>
                                 <tr>
-                                    <th id="th-title" scope="row"><span>구분</span></th>
+                                    <th id="th-type" scope="row"><span>구분</span></th>
                                     <td><span>민원</span></td>
                                 </tr>
                                 <tr>
@@ -86,21 +73,21 @@
                                     <td><span>대출 증명 서류를 발급받고 싶어요.</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-title" scope="row"><span>등록자</span></th>
+                                    <th id="th-writer" scope="row"><span>등록자</span></th>
                                     <td><span>홍길동</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-title" scope="row"><span>등록일시</span></th>
+                                    <th id="th-date" scope="row"><span>등록일시</span></th>
                                     <td><span>YYYY.MM.DD HH:MM:ss</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-title" scope="row"><span>내용</span></th>
+                                    <th id="th-content" scope="row"><span>내용</span></th>
                                     <td>
                                         <span>안녕하세요, 항상 고생 많으십니다.<br />대출 증명 서류를 발급받고 싶은데 어떻게 접수하면 되는지 알고 싶어요.</span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th id="th-title" scope="row"><span class="essential">답변</span></th>
+                                    <th id="th-answer" scope="row"><span class="essential">답변</span></th>
                                     <td>
                                         <textarea placeholder="내용을 입력해주세요."></textarea>
                                     </td>
@@ -108,15 +95,18 @@
                             </tbody>
                         </table>
                     </section>
-                    <div class="button-content cta margin-top-24">
-                        <div class="button-wrap">
-                            <a herf="javascript:void(0);" class="btn-primary">저장</a>
-                            <!-- 답변수정 -->
-                            <!-- <a herf="javascript:void(0);" class="btn-primary">수정</a> -->
-                            <a herf="javascript:void(0);" class="btn-secondary">목록</a>
-                            <a herf="javascript:void(0);" class="btn-secondary">삭제</a>
+                    <section class="button-ccontainer">
+                        <div class="button-content cta">
+                            <div class="button-wrap">
+                                <a herf="javascript:void(0);" class="btn-secondary reset">초기화</a>
+                                <a herf="javascript:void(0);" class="btn-primary">저장</a>
+                                <!-- 답변수정 -->
+                                <!-- <a herf="javascript:void(0);" class="btn-primary">수정</a> -->
+                                <a herf="javascript:void(0);" class="btn-secondary">목록</a>
+                                <a herf="javascript:void(0);" class="btn-secondary">삭제</a>
+                            </div>
                         </div>
-                    </div>
+                    </section>
                 </main>
             </div>
         </div>
