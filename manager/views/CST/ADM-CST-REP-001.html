@@ -31,6 +31,13 @@
             .pending {
                 color: #f46241;
             }
+            .form-wrap fieldset {
+                width: 100%;
+            }
+            select {
+                width: auto;
+                min-width: 120px;
+            }
         </style>
     </head>
 
@@ -52,29 +59,26 @@
                     <section class="form-container">
                         <div class="form-content">
                             <div class="form-wrap">
+                                <select id="category" name="category">
+                                    <option value="all">전체</option>
+                                    <option value="fraud">성희롱 및 부정 제보</option>
+                                    <option value="bullying">직장내 괴롭힘</option>
+                                </select>
                                 <fieldset>
-                                    <select id="category" name="category">
-                                        <option value="all">전체</option>
-                                        <option value="fraud">성희롱 및 부정 제보</option>
-                                        <option value="bullying">직장내 괴롭힘</option>
-                                    </select>
                                     <legend>구분</legend>
                                     <label class="radio">
                                         <input type="radio" name="row2-active" value="" checked="" />
                                         <span>전체</span>
                                     </label>
-
                                     <label class="radio">
                                         <input type="radio" name="row2-active" value="" />
                                         <span>답변전</span>
                                     </label>
-
                                     <label class="radio">
                                         <input type="radio" name="row2-active" value="" />
                                         <span>답변완료</span>
                                     </label>
                                 </fieldset>
-
                                 <fieldset class="search">
                                     <legend>검색</legend>
                                     <select id="category" name="category">
@@ -86,138 +90,139 @@
                                 </fieldset>
                             </div>
                         </div>
-                        <!--//form-content-->
                     </section>
                     <section class="list-container search">
-                        <table class="list-content">
-                            <caption>
-                                No, 구분, 상태, 제목, 등록자, 등록일, 답변자, 답변일로 구성된 신고 센터 목록
-                            </caption>
-                            <colgroup>
-                                <col style="width: 8%" />
-                                <col style="width: 12%" />
-                                <col style="width: 8%" />
-                                <col style="width: auto" />
-                                <col style="width: 12%" />
-                                <col style="width: 12%" />
-                                <col style="width: 12%" />
-                                <col style="width: 12%" />
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th id="th-no" scope="col">No</th>
-                                    <th id="th-type" scope="col">구분</th>
-                                    <th id="th-state" scope="col">상태</th>
-                                    <th id="th-title" scope="col">제목</th>
-                                    <th id="th-questioner" scope="col">등록자</th>
-                                    <th id="th-date" scope="col">등록일</th>
-                                    <th id="th-answerer" scope="col">답변자</th>
-                                    <th id="th-answerDate" scope="col">답변일</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>286</td>
-                                    <td>민원</td>
-                                    <td>답변완료</td>
-                                    <td class="sbject">대출 증명 서류를 발급받고 싶어요</td>
-                                    <td>홍길동</td>
-                                    <td>YYYY.MM.DD</td>
-                                    <td>관리자</td>
-                                    <td>YYYY.MM.DD</td>
-                                </tr>
-                                <tr>
-                                    <td>286</td>
-                                    <td>칭찬/제안</td>
-                                    <td class="pending">답변전</td>
-                                    <td class="sbject">대출 증명 서류를 발급받고 싶어요</td>
-                                    <td>홍길동</td>
-                                    <td>YYYY.MM.DD</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>286</td>
-                                    <td>칭찬/제안</td>
-                                    <td class="pending">답변전</td>
-                                    <td class="sbject">대출 증명 서류를 발급받고 싶어요</td>
-                                    <td>홍길동</td>
-                                    <td>YYYY.MM.DD</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>286</td>
-                                    <td>칭찬/제안</td>
-                                    <td class="pending">답변전</td>
-                                    <td class="sbject">대출 증명 서류를 발급받고 싶어요</td>
-                                    <td>홍길동</td>
-                                    <td>YYYY.MM.DD</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>286</td>
-                                    <td>칭찬/제안</td>
-                                    <td class="pending">답변전</td>
-                                    <td class="sbject">대출 증명 서류를 발급받고 싶어요</td>
-                                    <td>홍길동</td>
-                                    <td>YYYY.MM.DD</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>286</td>
-                                    <td>칭찬/제안</td>
-                                    <td class="pending">답변전</td>
-                                    <td class="sbject">대출 증명 서류를 발급받고 싶어요</td>
-                                    <td>홍길동</td>
-                                    <td>YYYY.MM.DD</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>286</td>
-                                    <td>칭찬/제안</td>
-                                    <td class="pending">답변전</td>
-                                    <td class="sbject">대출 증명 서류를 발급받고 싶어요</td>
-                                    <td>홍길동</td>
-                                    <td>YYYY.MM.DD</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>286</td>
-                                    <td>칭찬/제안</td>
-                                    <td class="pending">답변전</td>
-                                    <td class="sbject">대출 증명 서류를 발급받고 싶어요</td>
-                                    <td>홍길동</td>
-                                    <td>YYYY.MM.DD</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>286</td>
-                                    <td>칭찬/제안</td>
-                                    <td class="pending">답변전</td>
-                                    <td class="sbject">대출 증명 서류를 발급받고 싶어요</td>
-                                    <td>홍길동</td>
-                                    <td>YYYY.MM.DD</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>286</td>
-                                    <td>칭찬/제안</td>
-                                    <td class="pending">답변전</td>
-                                    <td class="sbject">대출 증명 서류를 발급받고 싶어요</td>
-                                    <td>홍길동</td>
-                                    <td>YYYY.MM.DD</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="list-content">
+                            <table>
+                                <caption>
+                                    No, 구분, 상태, 제목, 등록자, 등록일, 답변자, 답변일로 구성된 신고 센터 목록
+                                </caption>
+                                <colgroup>
+                                    <col style="width: 8%" />
+                                    <col style="width: 12%" />
+                                    <col style="width: 8%" />
+                                    <col style="width: auto" />
+                                    <col style="width: 12%" />
+                                    <col style="width: 12%" />
+                                    <col style="width: 12%" />
+                                    <col style="width: 12%" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th id="th-no" scope="col">No</th>
+                                        <th id="th-type" scope="col">구분</th>
+                                        <th id="th-state" scope="col">상태</th>
+                                        <th id="th-title" scope="col">제목</th>
+                                        <th id="th-writer" scope="col">등록자</th>
+                                        <th id="th-date" scope="col">등록일</th>
+                                        <th id="th-answerer" scope="col">답변자</th>
+                                        <th id="th-answerDate" scope="col">답변일</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>286</td>
+                                        <td>민원</td>
+                                        <td>답변완료</td>
+                                        <td class="sbject">대출 증명 서류를 발급받고 싶어요</td>
+                                        <td>홍길동</td>
+                                        <td>YYYY.MM.DD</td>
+                                        <td>관리자</td>
+                                        <td>YYYY.MM.DD</td>
+                                    </tr>
+                                    <tr>
+                                        <td>286</td>
+                                        <td>칭찬/제안</td>
+                                        <td class="pending">답변전</td>
+                                        <td class="sbject">대출 증명 서류를 발급받고 싶어요</td>
+                                        <td>홍길동</td>
+                                        <td>YYYY.MM.DD</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>286</td>
+                                        <td>칭찬/제안</td>
+                                        <td class="pending">답변전</td>
+                                        <td class="sbject">대출 증명 서류를 발급받고 싶어요</td>
+                                        <td>홍길동</td>
+                                        <td>YYYY.MM.DD</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>286</td>
+                                        <td>칭찬/제안</td>
+                                        <td class="pending">답변전</td>
+                                        <td class="sbject">대출 증명 서류를 발급받고 싶어요</td>
+                                        <td>홍길동</td>
+                                        <td>YYYY.MM.DD</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>286</td>
+                                        <td>칭찬/제안</td>
+                                        <td class="pending">답변전</td>
+                                        <td class="sbject">대출 증명 서류를 발급받고 싶어요</td>
+                                        <td>홍길동</td>
+                                        <td>YYYY.MM.DD</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>286</td>
+                                        <td>칭찬/제안</td>
+                                        <td class="pending">답변전</td>
+                                        <td class="sbject">대출 증명 서류를 발급받고 싶어요</td>
+                                        <td>홍길동</td>
+                                        <td>YYYY.MM.DD</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>286</td>
+                                        <td>칭찬/제안</td>
+                                        <td class="pending">답변전</td>
+                                        <td class="sbject">대출 증명 서류를 발급받고 싶어요</td>
+                                        <td>홍길동</td>
+                                        <td>YYYY.MM.DD</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>286</td>
+                                        <td>칭찬/제안</td>
+                                        <td class="pending">답변전</td>
+                                        <td class="sbject">대출 증명 서류를 발급받고 싶어요</td>
+                                        <td>홍길동</td>
+                                        <td>YYYY.MM.DD</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>286</td>
+                                        <td>칭찬/제안</td>
+                                        <td class="pending">답변전</td>
+                                        <td class="sbject">대출 증명 서류를 발급받고 싶어요</td>
+                                        <td>홍길동</td>
+                                        <td>YYYY.MM.DD</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>286</td>
+                                        <td>칭찬/제안</td>
+                                        <td class="pending">답변전</td>
+                                        <td class="sbject">대출 증명 서류를 발급받고 싶어요</td>
+                                        <td>홍길동</td>
+                                        <td>YYYY.MM.DD</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                         <div class="pagination-content">
                             <button class="btn-prev">이전으로</button>
                             <button class="active">1</button>
