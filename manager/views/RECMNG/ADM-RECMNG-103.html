@@ -31,49 +31,20 @@
             .bg-gray {
                 background-color: #f6f7f9;
             }
-            .detail-container {
+            .write-container {
                 background: #fff;
                 padding: 44px 24px;
                 border-radius: 10px;
             }
-            .detail-content {
-                border-top: 1px solid var(--table-border);
-            }
-            .detail-content td {
-                text-align: left;
-                padding: 24px 20px;
-            }
-            .detail-content textarea {
-                min-height: 138px;
-            }
-            .margin-top-24 {
-                margin-top: 24px;
-            }
-            .file-list li button::before {
-                content: "";
-                display: inline-block;
-                width: 12px;
-                height: 12px;
-                margin-right: 6px;
-                background-image: url(../../assets/images/com/svg/ico_file.svg);
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: contain;
-                vertical-align: middle;
-            }
+
+            /* datepicker */
             .date-range {
                 display: flex;
                 align-items: center;
+                gap: 16px;
             }
-            .date-range input:first-child::after {
+            .date-range .dash::before {
                 content: "-";
-                display: block;
-                text-align: center;
-                margin: 4px 0;
-            }
-            .flex {
-                display: flex;
-                justify-content: space-between;
             }
         </style>
     </head>
@@ -83,19 +54,21 @@
             <div data-include-path="../COMMON/header.html"></div>
             <div class="bodyWrap bg-gray">
                 <div data-include-path="../COMMON/lnb.html"></div>
+                <!-- 등록 -->
                 <main class="contentWrap">
                     <section class="title_container">
                         <h2>채용공고 등록</h2>
                         <ul class="location_content">
                             <li><a href="javascript:void(0);" class="home">홈</a></li>
                             <li><a href="javascript:void(0);">채용관리</a></li>
-                            <li><a href="javascript:void(0);">상세</a></li>
+                            <li><a href="javascript:void(0);">채용공고 관리</a></li>
+                            <li><a href="javascript:void(0);">채용공고 등록</a></li>
                         </ul>
                     </section>
-                    <section class="detail-container">
-                        <table class="detail-content">
+                    <section class="write-container">
+                        <table class="write-content">
                             <caption>
-                                으로 구성된 MG캐피탈인의 모습 관리 목록
+                                작성자, 작성일, 구분, 제목, 내용, 첨부파일, 게시기간으로 구성된 채용공고 등록 목록
                             </caption>
                             <colgroup>
                                 <col style="width: 210px" />
@@ -103,57 +76,221 @@
                             </colgroup>
                             <tbody>
                                 <tr>
-                                    <th id="th-title" scope="row"><span>작성자</span></th>
+                                    <th id="th-writer" scope="row"><span>작성자</span></th>
                                     <td><span>홍길동</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-title" scope="row"><span>작성일</span></th>
+                                    <th id="th-date" scope="row"><span>작성일</span></th>
                                     <td><span>YYYY.MM.DD</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-title" scope="row"><span class="essential">구분</span></th>
-                                    <td>셀렉트박스</td>
-                                </tr>
-                                <tr>
-                                    <th id="th-title" scope="row"><span class="essential">제목</span></th>
-                                    <td>인풋</td>
-                                </tr>
-                                <tr>
-                                    <th id="th-title" scope="row"><span class="essential">내용</span></th>
-                                    <td><div id="edt"></div></td>
-                                </tr>
-                                <tr>
-                                    <th id="th-title" scope="row"><span>첨부파일</span></th>
+                                    <th id="th-type" scope="row"><span class="essential">구분</span></th>
                                     <td>
-                                        <ul class="file-list">
-                                            <li>
-                                                <button type="button">[MG캐피탈]입사지원서.docx</button>
-                                            </li>
-                                            <li>
-                                                <button type="button">[MG캐피탈]입사지원서.docx</button>
-                                            </li>
-                                        </ul>
+                                        <select>
+                                            <option value="" disabled="" selected="">선택</option>
+                                            <option value="">정기</option>
+                                            <option value="">수시</option>
+                                        </select>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th id="th-title" scope="row"><span>게시기간</span></th>
+                                    <th id="th-title" scope="row"><span class="essential">제목</span></th>
+                                    <td><input type="text" placeholder="내용을 입력해주세요." /></td>
+                                </tr>
+                                <tr>
+                                    <th id="th-content" scope="row"><span class="essential">내용</span></th>
+                                    <!-- 나모웹에디터 추가 예정 -->
+                                    <td><div id="edt"></div></td>
+                                </tr>
+                                <tr>
+                                    <th id="th-file" scope="row"><span>첨부파일</span></th>
                                     <td>
-                                        <label class="date-range">
-                                            <input type="date" />
-                                            <input type="date" />
+                                        <div class="form-group">
+                                            <span class="ipt-file">
+                                                <span class="ipt-clear">
+                                                    <input class="form-control upload-text uploadInput" type="text" placeholder="파일을 선택해주세요" tabindex="0" readonly="" />
+                                                </span>
+                                                <label class="upload-label" for="files">
+                                                    <input id="files" class="upload" name="files" type="file" />
+                                                    <span class="sr-only fileLabel">파일 선택</span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="ipt-file">
+                                                <span class="ipt-clear">
+                                                    <input class="form-control upload-text uploadInput" type="text" placeholder="파일을 선택해주세요" tabindex="0" readonly="" />
+                                                </span>
+                                                <label class="upload-label" for="files">
+                                                    <input id="files" class="upload" name="files" type="file" />
+                                                    <span class="sr-only fileLabel">파일 선택</span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="ipt-file">
+                                                <span class="ipt-clear">
+                                                    <input class="form-control upload-text uploadInput" type="text" placeholder="파일을 선택해주세요" tabindex="0" readonly="" />
+                                                </span>
+                                                <label class="upload-label" for="files">
+                                                    <input id="files" class="upload" name="files" type="file" />
+                                                    <span class="sr-only fileLabel">파일 선택</span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th id="th-period" scope="row"><span class="essential">게시기간</span></th>
+                                    <td>
+                                        <div class="date-range">
+                                            <label>
+                                                <input type="date" />
+                                            </label>
+                                            <span class="dash"></span>
+                                            <label>
+                                                <input type="date" />
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section class="button-ccontainer">
+                        <div class="button-content cta">
+                            <div class="button-wrap">
+                                <a herf="javascript:void(0);" class="btn-primary">저장</a>
+                                <a herf="javascript:void(0);" class="btn-secondary">목록</a>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+
+                <!-- 수정 -->
+                <!-- <main class="contentWrap">
+                    <section class="title_container">
+                        <h2>채용공고 수정</h2>
+                        <ul class="location_content">
+                            <li><a href="javascript:void(0);" class="home">홈</a></li>
+                            <li><a href="javascript:void(0);">채용관리</a></li>
+                            <li><a href="javascript:void(0);">채용공고 관리</a></li>
+                            <li><a href="javascript:void(0);">채용공고 수정</a></li>
+                        </ul>
+                    </section>
+                    <section class="write-container">
+                        <table class="write-content">
+                            <caption>
+                                작성자, 작성일, 구분, 상태, 제목, 내용, 첨부파일, 게시기간, 공고 조기마감으로 구성된 채용공고 수정 목록
+                            </caption>
+                            <colgroup>
+                                <col style="width: 210px" />
+                                <col style="width: auto" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th id="th-writer" scope="row"><span>작성자</span></th>
+                                    <td><span>홍길동</span></td>
+                                </tr>
+                                <tr>
+                                    <th id="th-date" scope="row"><span>작성일</span></th>
+                                    <td><span>YYYY.MM.DD</span></td>
+                                </tr>
+                                <tr>
+                                    <th id="th-type" scope="row"><span class="essential">구분</span></th>
+                                    <td>
+                                        <select>
+                                            <option value="" disabled="">선택</option>
+                                            <option value="" selected="">정기</option>
+                                            <option value="">수시</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th id="th-state" scope="row"><span>상태</span></th>
+                                    <td><span>진행중</span></td>
+                                </tr>
+                                <tr>
+                                    <th id="th-title" scope="row"><span class="essential">제목</span></th>
+                                    <td><input type="text" placeholder="내용을 입력해주세요." value="2025년 MG캐피탈 일반직 신입직원 채용" /></td>
+                                </tr>
+                                <tr>
+                                    <th id="th-content" scope="row"><span class="essential">내용</span></th>
+                                    <td><div id="edt"></div></td>
+                                </tr>
+                                <tr>
+                                    <th id="th-file" scope="row"><span>첨부파일</span></th>
+                                    <td>
+                                        <div class="form-group">
+                                            <span class="ipt-file">
+                                                <span class="ipt-clear">
+                                                    <input class="form-control upload-text uploadInput" type="text" placeholder="파일을 선택해주세요" tabindex="0" readonly="" />
+                                                </span>
+                                                <label class="upload-label" for="files">
+                                                    <input id="files" class="upload" name="files" type="file" />
+                                                    <span class="sr-only fileLabel">파일 선택</span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="ipt-file">
+                                                <span class="ipt-clear">
+                                                    <input class="form-control upload-text uploadInput" type="text" placeholder="파일을 선택해주세요" tabindex="0" readonly="" />
+                                                </span>
+                                                <label class="upload-label" for="files">
+                                                    <input id="files" class="upload" name="files" type="file" />
+                                                    <span class="sr-only fileLabel">파일 선택</span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="ipt-file">
+                                                <span class="ipt-clear">
+                                                    <input class="form-control upload-text uploadInput" type="text" placeholder="파일을 선택해주세요" tabindex="0" readonly="" />
+                                                </span>
+                                                <label class="upload-label" for="files">
+                                                    <input id="files" class="upload" name="files" type="file" />
+                                                    <span class="sr-only fileLabel">파일 선택</span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th id="th-period" scope="row"><span class="essential">게시기간</span></th>
+                                    <td>
+                                        <div class="date-range">
+                                            <label>
+                                                <input type="date" />
+                                            </label>
+                                            <span class="dash"></span>
+                                            <label>
+                                                <input type="date" />
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th id="th-early" scope="row"><span>공고 조기마감</span></th>
+                                    <td>
+                                        <label class="check">
+                                            <input type="checkbox" name="row1-active" value="" checked="" />
                                         </label>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </section>
-                    <div class="button-content cta margin-top-24">
-                        <div class="button-wrap">
-                            <a herf="javascript:void(0);" class="btn-primary">저장</a>
-                            <a herf="javascript:void(0);" class="btn-secondary">목록</a>
+                    <section class="button-ccontainer">
+                        <div class="button-content cta">
+                            <div class="button-wrap">
+                                <a herf="javascript:void(0);" class="btn-secondary reset">초기화</a>
+                                <a herf="javascript:void(0);" class="btn-primary">저장</a>
+                                <a herf="javascript:void(0);" class="btn-secondary">목록</a>
+                            </div>
                         </div>
-                    </div>
-                </main>
+                    </section>
+                </main> -->
             </div>
         </div>
     </body>
