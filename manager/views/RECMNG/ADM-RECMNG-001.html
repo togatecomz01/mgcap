@@ -31,23 +31,10 @@
             .bg-gray {
                 background-color: #f6f7f9;
             }
-            .detail-container {
+            .write-container {
                 background: #fff;
                 padding: 44px 24px;
                 border-radius: 10px;
-            }
-            .detail-content {
-                border-top: 1px solid var(--table-border);
-            }
-            .detail-content td {
-                text-align: left;
-                padding: 24px 20px;
-            }
-            .detail-content textarea {
-                min-height: 138px;
-            }
-            .margin-top-24 {
-                margin-top: 24px;
             }
         </style>
     </head>
@@ -66,10 +53,10 @@
                             <li><a href="javascript:void(0);">MG캐피탈인의 모습 상세</a></li>
                         </ul>
                     </section>
-                    <section class="detail-container">
-                        <table class="detail-content">
+                    <section class="write-container">
+                        <table class="write-content">
                             <caption>
-                                으로 구성된 MG캐피탈인의 모습 관리 목록
+                                수정자, 수정일, 제목, 소개글, 내용으로 구성된 MG캐피탈인의 모습 관리 목록
                             </caption>
                             <colgroup>
                                 <col style="width: 210px" />
@@ -77,11 +64,11 @@
                             </colgroup>
                             <tbody>
                                 <tr>
-                                    <th id="th-title" scope="row"><span>수정자</span></th>
+                                    <th id="th-modifier" scope="row"><span>수정자</span></th>
                                     <td><span>홍길동</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-title" scope="row"><span>수정일</span></th>
+                                    <th id="th-date" scope="row"><span>수정일</span></th>
                                     <td><span>YYYY.MM.DD</span></td>
                                 </tr>
                                 <tr>
@@ -89,21 +76,25 @@
                                     <td><input type="text" value="MG캐피탈인의 인재상" /></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-title" scope="row"><span class="essential">소개글</span></th>
+                                    <th id="th-intro" scope="row"><span class="essential">소개글</span></th>
                                     <td><input type="text" value="협동조합의 가치와 새마을금고 정신을 바탕으로 MG캐피탈의 사회적 책임을 다하는 인재가 되고자 합니다." /></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-title" scope="row"><span class="essential">내용</span></th>
+                                    <th id="th-content" scope="row"><span class="essential">내용</span></th>
+                                    <!-- 나모웹에디터 추가 예정 -->
                                     <td><div id="edt"></div></td>
                                 </tr>
                             </tbody>
                         </table>
                     </section>
-                    <div class="button-content cta margin-top-24">
-                        <div class="button-wrap">
-                            <a herf="javascript:void(0);" class="btn-primary">저장</a>
+                    <section class="button-ccontainer">
+                        <div class="button-content cta">
+                            <div class="button-wrap">
+                                <a herf="javascript:void(0);" class="btn-secondary reset">초기화</a>
+                                <a herf="javascript:void(0);" class="btn-primary">저장</a>
+                            </div>
                         </div>
-                    </div>
+                    </section>
                 </main>
             </div>
         </div>
