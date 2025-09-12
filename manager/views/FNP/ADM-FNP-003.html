@@ -22,7 +22,6 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../../../manager/guide/css/sample.css" />
     <link rel="stylesheet" href="../../assets/css/ui-util.css" />
-    <link rel="stylesheet" href="../FNP/ADM-FNP-001.css" />
     
     <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
     <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
@@ -47,10 +46,8 @@
         .contentWrap {height: auto; background-color: #f6f7f9;}
         .write-container {background-color: var(--white); padding:40px 24px; border-radius: 10px;}
 
-        /* 초기화 버튼 생김으로서 button-wrap의 justify-content : flex-end -> space-between 으로 변경 */
-        .cta .button-wrap {
-            justify-content: space-between; 
-        }
+        /* write-container와 button-content 간격 */
+        .write-container + .button-content {margin-top: 34px;} 
     </style>
     <!-- (선택) IE11용 폴리필: 안전하게 깔아두면 좋아요 -->
     <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Promise,Array.from,Object.assign,Number.isNaN"></script>
@@ -154,9 +151,11 @@
                         <tr>
                             <th id="th-title" scope="row"><span class="essential">상품소개</span></th>
                             <td>
-                                <textarea placeholder="내용을 입력해주세요." style="height: 490px;">
-차량가격, 공채매입, 등록제비용, 차량세 등 자동차 구입시 필요한 자금 잋레를 지원하여 드리고, 매월 리스료를 당사에게 지급함으로서 일정기간 동안 저렴한 비용으로 원하는 자동차를 사용할 수 있는 금융 서비스입니다.
-                                </textarea><!-- 이 부분 나모웹 에디터 작업필요, 인라인으로 영역만 잡아둔 상태 -->
+                                <div id="edt" style="height: 490px; width: 100%; border: 1px solid #ddd; padding: 20px; border-radius: 5px;">
+차량가격, 공채매입, 등록제비용, 차량세 등 자동차 구입시 필요한 자금 이체를 지원하여 드리고, 매월 리스료를 당사에게 지급함으로서 일정기간 동안 저렴한 비용으로 원하는 자동차를 사용할 수 있는 금융 서비스입니다.
+                                <!-- 이 부분 나모웹 에디터 작업필요, 인라인으로 영역만 잡아둔 상태 -->
+                                </div>
+
                             </td>
                         </tr>
                         <tr>
@@ -216,15 +215,13 @@
                 </section>
                 <div class="button-content cta"> <!-- 이 부분 section과 간격 추가 -->
                     <div class="button-wrap">
-                        <button class="btn-secondary">초기화</button>
-                        <div>
-                            <a href="javascript:void(0);" class="btn-primary" data-modal-open="fnp01">저장</a>
-                            <a href="./ADM-FNP-001-2.html" class="btn-secondary">목록</a>
-                            <a href="javascript:void(0);" class="btn-secondary" data-modal-open="fnp03">삭제</a>
-                        </div>
-                    </div>
+                        <button class="btn-secondary reset">초기화</button>
+                        <a href="javascript:void(0);" class="btn-primary" data-modal-open="fnp01">저장</a>
+                        <a href="./ADM-FNP-001-2.html" class="btn-secondary">목록</a>
+                        <a href="javascript:void(0);" class="btn-secondary" data-modal-open="fnp03">삭제</a>
                     </div>
                 </div>
+                
             </main>
 
             <!-- D: 저장버튼 눌렀을 시 -> 본문 필수체크 된 내용이 비었을 때 이 모달 사용 -->
