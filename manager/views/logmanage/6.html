@@ -3,7 +3,7 @@
     <head>
         <meta charset="euc-kr" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>고객여정 안내</title>
+        <title>오류발생 이력조회</title>
 
         <meta name="keywords" content="MG캐피탈" />
         <meta name="copyright" content="copyrights 2025 MG캐피탈" />
@@ -27,7 +27,7 @@
         <script src="../../assets/js/include.js"></script>
         <style>
             .list-content + .list-content {
-                margin-top: 20px;
+                margin-top: 24px;
             }
         </style>
     </head>
@@ -43,29 +43,54 @@
                                     <h2 class="pop-tit">로그 상세 이력</h2>
                                 </div>
                                 <div class="pop-body">
-                                    <form action="#" method="post" novalidate>
-                                        <fieldset>
-                                            <legend>메뉴 등록 정보</legend>
-                                            <ul class="write-content">
-                                                <li>
-                                                    <label for="wrt01">접속 IP</label>
-                                                    <input id="wrt01" type="text" value="118.235.14.64" readonly />
-                                                </li>
-                                                <li>
-                                                    <label for="wrt01">접속 IP</label>
-                                                    <input id="wrt01" type="text" value="118.235.14.64" readonly />
-                                                </li>
-                                                <li>
-                                                    <label for="wrt01">접속 IP</label>
-                                                    <input id="wrt01" type="text" value="118.235.14.64" readonly />
-                                                </li>
-                                                <li>
-                                                    <label for="wrt01"></label>
-                                                    <label class="check"> API 보이기/해제하기<input type="checkbox" name="row1-active" value="" checked="" /></label>
-                                                </li>
-                                            </ul>
-                                        </fieldset>
-                                    </form>
+                                    <div class="list-content">
+                                        <table>
+                                            <caption>
+                                                접속 IP, 세션 ID, 고객명, 로그인 ID로 구성된 표
+                                            </caption>
+                                            <colgroup>
+                                                <col style="width: 25%" />
+                                                <col style="width: 25%" />
+                                                <col style="width: 25%" />
+                                                <col style="width: 25%" />
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>접속 IP</th>
+                                                    <td>118.235.14.64</td>
+                                                    <th>세션 ID</th>
+                                                    <td>YYYY.MM.DD</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>고객명</th>
+                                                    <td>홍길동</td>
+                                                    <th>로그인 ID</th>
+                                                    <td>mg1234</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="list-content">
+                                        <table>
+                                            <caption>
+                                                요청, 결과로 구성된 표
+                                            </caption>
+                                            <colgroup>
+                                                <col style="width: 25%" />
+                                                <col style="width: 75%" />
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>요청</th>
+                                                    <td>인터페이스 요청 값</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>결과</th>
+                                                    <td>인터페이스 응답 값</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                                 <div class="pop-footer">
                                     <div class="button-content">

@@ -3,7 +3,7 @@
     <head>
         <meta charset="euc-kr" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>고객 여정</title>
+        <title>오류발생 이력조회</title>
 
         <meta name="keywords" content="MG캐피탈" />
         <meta name="copyright" content="copyrights 2025 MG캐피탈" />
@@ -41,6 +41,14 @@
             .date-range .dash::before {
                 content: "-";
             }
+
+            .list-content td a {
+                width: auto;
+                height: auto;
+                font-size: 0.88rem;
+                color: var(--primary);
+                text-decoration-line: underline !important;
+            }
         </style>
     </head>
 
@@ -76,8 +84,10 @@
                                         <option value="all">전체</option>
                                         <option value="name">고객명</option>
                                         <option value="id">ID</option>
+                                        <option value="sessionId">세션ID</option>
                                         <option value="phone">전화번호</option>
                                         <option value="device">접속기기</option>
+                                        <option value="response">응답결과</option>
                                     </select>
                                     <input id="q" name="q" type="search" autocomplete="off" inputmode="search" placeholder="검색어를 입력해주세요" />
                                     <button type="submit" class="btn-body">검색</button>
@@ -89,29 +99,33 @@
                         <div class="list-content">
                             <table>
                                 <caption>
-                                    No, 기준일, 평균 방문자수(명), 평균 이용시간(분), 조회 페이지수, 활동내역으로 구성된 방문자 로그 및 접속페이지 로그 목록
+                                    No, 고객명, ID, 세션ID, 전화번호, 접속기기, 접속일시, 종료일시, 응답결과, 응답메시지, 활동내역으로 구성된 방문자 로그 및 오류발생 이력조회 목록
                                 </caption>
                                 <colgroup>
+                                    <col style="width: 6%" />
                                     <col style="width: 8%" />
-                                    <col style="width: 14%" />
-                                    <col style="width: 12%" />
-                                    <col style="width: 14%" />
                                     <col style="width: 8%" />
                                     <col style="width: 10%" />
                                     <col style="width: 10%" />
-                                    <col style="width: 10%" />
-                                    <col style="width: 10%" />
+                                    <col style="width: 8%" />
+                                    <col style="width: 8%" />
+                                    <col style="width: 8%" />
+                                    <col style="width: 8%" />
+                                    <col style="width: 18%" />
+                                    <col style="width: 8%" />
                                 </colgroup>
                                 <thead>
                                     <tr>
                                         <th id="th-no" scope="col">No</th>
                                         <th id="th-name" scope="col">고객명</th>
                                         <th id="th-id" scope="col">ID</th>
+                                        <th id="th-session-id" scope="col">세션ID</th>
                                         <th id="th-phone" scope="col">전화번호</th>
                                         <th id="th-device" scope="col">접속기기</th>
                                         <th id="th-start" scope="col">접속일시</th>
                                         <th id="th-end" scope="col">종료일시</th>
-                                        <th id="th-time" scope="col">접속시간(분)</th>
+                                        <th id="th-response" scope="col">응답결과</th>
+                                        <th id="th-message" scope="col">응답메시지</th>
                                         <th id="th-log" scope="col">활동내역</th>
                                     </tr>
                                 </thead>
@@ -120,11 +134,13 @@
                                         <td>42</td>
                                         <td>홍길동</td>
                                         <td>mg1234</td>
+                                        <td>1907349350227</td>
                                         <td>01012345678</td>
                                         <td>PC</td>
                                         <td>YYYY.MM.DD</td>
                                         <td>YYYY.MM.DD</td>
-                                        <td>52</td>
+                                        <td>정상</td>
+                                        <td>비밀번호 5회 오류로 계정 잠금 처리</td>
                                         <td><a href="javascript:void(0);">상세보기</a></td>
                                     </tr>
                                 </tbody>
