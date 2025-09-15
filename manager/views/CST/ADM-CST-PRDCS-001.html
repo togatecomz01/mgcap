@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="euc-kr" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>고객 민원 목록</title>
+
+        <meta name="keywords" content="MG캐피탈" />
+        <meta name="copyright" content="copyrights 2025 MG캐피탈" />
+        <meta name="description" content="MG캐피탈 리스금융, 할부금융, 스탁론, 기업대출, 장기렌트카, PF대출 등 금융 서비스 제공." />
+        <meta name="viewport" content="width=device-width" />
+
+        <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta http-equiv="Expires" content="-1" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Cache-Control" content="No-Cache" />
+
+        <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico" />
+        <link rel="stylesheet" href="../../assets/css/ui-util.css" />
+        <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+        <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+        <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+
+        <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
+        <script src="../../assets/js/include.js"></script>
+        <style>
+            .pending {color: #f46241;}
+            .form-wrap fieldset {width: 100%;}
+            select {width: auto;min-width: 120px;}
+            .bodyWrap {height: auto;}
+            table td {cursor: pointer;} /* 테이블 포인터 */
+        </style>
+    </head>
+
+    <body>
+        <div class="wrap">
+            <header id="headerWrap" class="headerOn">
+                <h1><a href="javascript:void(0);">MG캐피탈</a></h1>
+                <div class="recent-content">
+                    <span>최근접속 : 2025.08.12 12:42:28</span>
+                    <button>로그아웃</button>
+                </div>
+            </header>
+            <div class="bodyWrap">
+                <nav id="menuWrap" class="lnb" role="navigation" aria-label="왼쪽 메뉴">
+                    <div class="member">
+                        <a href="javascript:void(0);" class="link"><em>홍길동</em>님</a>
+                    </div>
+                    <ul class="menu">
+                        <li class="item">
+                        <button type="button" class="accordion" aria-expanded="false" aria-controls="submenu-1"> 대메뉴 1</button>
+                        <ul id="submenu-1" class="submenu" role="group">
+                            <li><a href="javascript:void(0);" class="link">소메뉴 1-1</a></li>
+                            <li><a href="javascript:void(0);" class="link">소메뉴 1-2</a></li>
+                            <li><a href="javascript:void(0);" class="link">소메뉴 1-3</a></li>
+                        </ul>
+                        </li>
+                
+                        <li class="item">
+                        <button type="button" class="accordion" aria-expanded="false" aria-controls="submenu-2"> 대메뉴 2</button>
+                        <ul id="submenu-2" class="submenu" role="group">
+                            <li><a href="javascript:void(0);" class="link">소메뉴 2-1</a></li>
+                            <li><a href="javascript:void(0);" class="link">소메뉴 2-2</a></li>
+                        </ul>
+                        </li>
+                
+                        <li class="item">
+                        <button type="button" class="accordion" aria-expanded="false" aria-controls="submenu-3"> 대메뉴 3</button>
+                        <ul id="submenu-3" class="submenu" role="group">
+                            <li><a href="javascript:void(0);" class="link">소메뉴 3-1</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                </nav>
+                    
+                <main class="contentWrap">
+                    <section class="title_container">
+                        <h2>상품 고객상담 목록</h2>
+                        <ul class="location_content">
+                            <li><a href="javascript:void(0);" class="home">홈</a></li>
+                            <li><a href="javascript:void(0);">고객센터 관리</a></li>
+                            <li><a href="javascript:void(0);">상품 고객상담</a></li>
+                            <li><a href="javascript:void(0);">상품 고객상담 목록</a></li>
+                        </ul>
+                    </section>
+                    <section class="form-container">
+                        <div class="form-content">
+                            <div class="form-wrap">
+                                <select id="category" name="category">
+                                    <option value="all">전체</option>
+                                    <option value="complain">자동차</option>
+                                    <option value="praise">설비&#47;의료&middot;헬스</option>
+                                    <option value="praise">주택</option>
+                                    <option value="praise">기업</option>
+                                </select>
+                                <fieldset>
+                                    <legend>구분</legend>
+                                    <label class="radio">
+                                        <input type="radio" name="row2-active" value="" checked="" />
+                                        <span>전체</span>
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="row2-active" value="" />
+                                        <span>답변전</span>
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="row2-active" value="" />
+                                        <span>답변완료</span>
+                                    </label>
+                                </fieldset>
+                                <fieldset class="search">
+                                    <legend>검색</legend>
+                                    <select id="category" name="category">
+                                        <option value="title">제목</option>
+                                        <option value="content">내용</option>
+                                    </select>
+                                    <input id="q" name="q" type="search" autocomplete="off" inputmode="search" placeholder="검색어를 입력해주세요" />
+                                    <button type="submit" class="btn-body">검색</button>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="list-container search">
+                        <div class="list-content">
+                            <table>
+                                <caption>
+                                    No, 구분, 상태, 제목, 등록자, 등록일, 답변자, 답변일로 구성된 상품 고객상담 목록
+                                </caption>
+                                <colgroup>
+                                    <col style="width: 8%" />
+                                    <col style="width: 12%" />
+                                    <col style="width: 8%" />
+                                    <col style="width: auto" />
+                                    <col style="width: 12%" />
+                                    <col style="width: 12%" />
+                                    <col style="width: 12%" />
+                                    <col style="width: 12%" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th id="th-no" scope="col">No</th>
+                                        <th id="th-type" scope="col">구분</th>
+                                        <th id="th-state" scope="col">상태</th>
+                                        <th id="th-title" scope="col">제목</th>
+                                        <th id="th-writer" scope="col">등록자</th>
+                                        <th id="th-date" scope="col">등록일</th>
+                                        <th id="th-answerer" scope="col">답변자</th>
+                                        <th id="th-answer-date" scope="col">답변일</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>286</td>
+                                        <td>자동차</td>
+                                        <td>답변완료</td>
+                                        <td class="sbject">신차 장기렌터카 상품 문의드립니다</td>
+                                        <td>홍길동</td>
+                                        <td>YYYY.MM.DD</td>
+                                        <td>관리자</td>
+                                        <td>YYYY.MM.DD</td>
+                                    </tr>
+                                    <tr>
+                                        <td>285</td>
+                                        <td>설비&#47;의료&middot;헬스</td>
+                                        <td class="pending">답변전</td>
+                                        <td class="sbject">공작기계 리스 관련 문의 드립니다</td>
+                                        <td>홍길동</td>
+                                        <td>YYYY.MM.DD</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>284</td>
+                                        <td>주택</td>
+                                        <td>답변완료</td>
+                                        <td class="sbject">사업자료 주택담보대출 진행하고 싶어요.</td>
+                                        <td>홍길동</td>
+                                        <td>YYYY.MM.DD</td>
+                                        <td>관리자</td>
+                                        <td>YYYY.MM.DD</td>
+                                    </tr>
+                                    <tr>
+                                        <td>283</td>
+                                        <td>기업</td>
+                                        <td>답변완료</td>
+                                        <td class="sbject">PR후자 상품 문의 드립니다.</td>
+                                        <td>홍길동</td>
+                                        <td>YYYY.MM.DD</td>
+                                        <td>관리자</td>
+                                        <td>YYYY.MM.DD</td>
+                                    </tr>
+                                    <tr>
+                                        <td>282</td>
+                                        <td>자동차</td>
+                                        <td>답변완료</td>
+                                        <td class="sbject">중고차 대출 문의 드리니다.</td>
+                                        <td>홍길동</td>
+                                        <td>YYYY.MM.DD</td>
+                                        <td>관리자</td>
+                                        <td>YYYY.MM.DD</td>
+                                    </tr>
+                                    <tr>
+                                        <td>281</td>
+                                        <td>설비&#47;의료&middot;헬스</td>
+                                        <td class="pending">답변전</td>
+                                        <td class="sbject">NPL 상품 문의 드립니다.</td>
+                                        <td>홍길동</td>
+                                        <td>YYYY.MM.DD</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>280</td>
+                                        <td>주택</td>
+                                        <td class="pending">답변전</td>
+                                        <td class="sbject">PR후자 상품 문의 드립니다.</td>
+                                        <td>홍길동</td>
+                                        <td>YYYY.MM.DD</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>279</td>
+                                        <td>기업</td>
+                                        <td>답변완료</td>
+                                        <td class="sbject">신차 장기렌터가 상품 문의드립니다.</td>
+                                        <td>홍길동</td>
+                                        <td>YYYY.MM.DD</td>
+                                        <td>관리자</td>
+                                        <td>YYYY.MM.DD</td>
+                                    </tr>
+                                    <tr>
+                                        <td>278</td>
+                                        <td>자동차</td>
+                                        <td>답변완료</td>
+                                        <td class="sbject">공작기계 리스 관련 문의 드립니다.</td>
+                                        <td>홍길동</td>
+                                        <td>YYYY.MM.DD</td>
+                                        <td>관리자</td>
+                                        <td>YYYY.MM.DD</td>
+                                    </tr>
+                                    <tr>
+                                        <td>277</td>
+                                        <td>설비&#47;의료&middot;헬스</td>
+                                        <td class="pending">답변전</td>
+                                        <td class="sbject">의료장비 대출 문의드립니다.</td>
+                                        <td>홍길동</td>
+                                        <td>YYYY.MM.DD</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pagination-content">
+                            <button class="btn-prev">이전으로</button>
+                            <button class="active">1</button>
+                            <button>2</button>
+                            <button>...</button>
+                            <button>3</button>
+                            <button>4</button>
+                            <button class="btn-next">다음으로</button>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>
