@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="euc-kr" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>시즈널배너 관리&gt;메인 관리&gt;관리자페이지&gt;mg캐피탈</title>
+
+    <meta name="keywords" content="MG캐피탈" />
+    <meta name="copyright" content="copyrights 2025 MG캐피탈" />
+    <meta name="description" content="MG캐피탈 리스금융, 할부금융, 스탁론, 기업대출, 장기렌트카, PF대출 등 금융 서비스 제공."/>
+    <meta name="viewport" content="width=device-width" />
+
+    <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="No-Cache" />
+
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico"/>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/ui-util.css" />
+
+    <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+    <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+    <!-- (선택) IE11용 폴리필: 안전하게 깔아두면 좋아요 -->
+    <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Promise,Array.from,Object.assign,Number.isNaN"></script>
+    <script>
+        (function () {
+            var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
+            if (isIE11) {
+            // IE11 전용 클래스 추가
+            document.documentElement.className += " ie11";
+
+            // IE11 전용 CSS 로드
+            var link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.href = "../../assets/css/com/ie11.css";
+            link.charset = "euc-kr"; // 꼭 지정
+            document.head.appendChild(link);
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="bodyWrap">
+            <main class="contentWrap">
+                <!--[D]: 순서 변경 후 [순서 저장]버튼 클릭한 경우-->
+                <secition class="modal-container">
+                    <div id="bn101P2" class="layerPopup modal on">
+                        <div class="pop-content">
+                            <div class="pop-header">
+                                <h2 class="pop-tit">[배너명]을 삭제하시겠습니까?</h2>
+                            </div>
+                            <div class="pop-body">
+                                <p>삭제에 따른 변경사항은</p>
+                                <p>대고객 채널에 바로 반영됩니다.</p>
+                            </div>
+                            <div class="pop-footer">
+                                <div class="button-content">
+                                    <button type="button" class="btn-pop-secondary"  data-popup-close="modal">취소</button>
+                                    <button type="button" class="btn-pop-primary"  data-popup-close="modal">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </secition>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

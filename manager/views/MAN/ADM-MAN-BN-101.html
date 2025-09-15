@@ -3,7 +3,7 @@
 <head>
     <meta charset="euc-kr" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>신규등록&gt;메인배너 관리&gt;메인 관리&gt;관리자페이지&gt;mg캐피탈</title>
+    <title>시즈널배너 관리&gt;메인 관리&gt;관리자페이지&gt;mg캐피탈</title>
 
     <meta name="keywords" content="MG캐피탈" />
     <meta name="copyright" content="copyrights 2025 MG캐피탈" />
@@ -105,7 +105,7 @@
                     <h3>시즈널배너(계절)</h3>
                     <div class="list-content">
                         <table>
-                            <caption>타이틀, 대메뉴명, 중메뉴명, URL, 활성, 하위메뉴 변경, 삭제로 구성된 대메뉴 목록</caption>
+                            <caption>배너명, 이미지, 이미지 Alt값, 게시기간, 수정사항으로 구성된 대메뉴 목록</caption>
                           
                             <colgroup>
                                 <col style="width:15%;">
@@ -130,7 +130,7 @@
                                     <td><span>봄 배너</span></td>
                                     <td>
                                         <span class="ipt-file">
-                                            <span class="ipt-clear"><input class="form-control upload-text uploadInput" type="text" placeholder="파일을 입력해주세요" tabindex="0" readonly>
+                                            <span class="ipt-clear"><input class="form-control upload-text uploadInput" type="text" placeholder="파일을 입력해주세요" tabindex="0" value="Seasonal_Spring.png" readonly>
                                             </span>
                                             <label class="upload-label" for="files">
                                                 <input id="files" class="upload" name="files" type="file" />
@@ -138,39 +138,270 @@
                                             </label>
                                         </span>
                                     </td>
+                                    <td><span>봄 이미지</span></td>
                                     <td>
-                                        <select id="row1-mid" class="form-control" aria-labelledby="th-mid" name="mid-1">
-                                        <option value="" disabled selected>선택해주세요.</option>
-                                        <option>옵션1</option><option>옵션2</option>
-                                        </select>
-                                    </td>
-                                    <td>
-                                        <select id="row1-bot" class="form-control" aria-labelledby="th-bot" name="mid-1">
-                                        <option value="" disabled selected>선택해주세요.</option>
-                                        <option>옵션1</option><option>옵션2</option>
-                                        </select>
+                                        <fieldset>
+                                            <legend>기간</legend>
+                                            <label for="">
+                                                <input id="password-input" type="date" name="date" class="form-control" placeholder="디폴트" />
+                                            </label>
+                                            <span class="ipt-hyphen">-</span>
+                                            <label for="">
+                                                <input id="password-input" type="date" name="date" class="form-control" placeholder="디폴트" />
+                                            </label>
+                                        </fieldset>
                                     </td>
                                     <td>
                                         <button class="btn-ico-mod" type="button" aria-labelledby="th-modify">수정</button>
                                     </td>
-                                </tr>            
+                                </tr>
+                                <tr>
+                                    <td><span>여름 배너</span></td>
+                                    <td>
+                                        <span class="ipt-file">
+                                            <span class="ipt-clear"><input class="form-control upload-text uploadInput" type="text" placeholder="파일을 입력해주세요" tabindex="0" value="Seasonal_Summer.png" readonly>
+                                            </span>
+                                            <label class="upload-label" for="files">
+                                                <input id="files" class="upload" name="files" type="file" />
+                                                <span class="sr-only fileLabel">파일선택</span>
+                                            </label>
+                                        </span>
+                                    </td>
+                                    <td><span>여름 이미지</span></td>
+                                    <td>
+                                        <fieldset>
+                                            <legend>기간</legend>
+                                            <label for="">
+                                                <input id="password-input" type="date" name="date" class="form-control" placeholder="디폴트" />
+                                            </label>
+                                            <span class="ipt-hyphen">-</span>
+                                            <label for="">
+                                                <input id="password-input" type="date" name="date" class="form-control" placeholder="디폴트" />
+                                            </label>
+                                        </fieldset>
+                                    </td>
+                                    <td>
+                                        <button class="btn-ico-mod" type="button" aria-labelledby="th-modify">수정</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span>가을 배너</span></td>
+                                    <td>
+                                        <span class="ipt-file">
+                                            <span class="ipt-clear"><input class="form-control upload-text uploadInput" type="text" placeholder="파일을 입력해주세요" tabindex="0" value="Seasonal_Fall.png" readonly>
+                                            </span>
+                                            <label class="upload-label" for="files">
+                                                <input id="files" class="upload" name="files" type="file" />
+                                                <span class="sr-only fileLabel">파일선택</span>
+                                            </label>
+                                        </span>
+                                    </td>
+                                    <td><span>가을 이미지</span></td>
+                                    <td>
+                                        <fieldset>
+                                            <legend>기간</legend>
+                                            <label for="">
+                                                <input id="password-input" type="date" name="date" class="form-control" placeholder="디폴트" />
+                                            </label>
+                                            <span class="ipt-hyphen">-</span>
+                                            <label for="">
+                                                <input id="password-input" type="date" name="date" class="form-control" placeholder="디폴트" />
+                                            </label>
+                                        </fieldset>
+                                    </td>
+                                    <td>
+                                        <button class="btn-ico-mod" type="button" aria-labelledby="th-modify">수정</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span>겨울 배너</span></td>
+                                    <td>
+                                        <span class="ipt-file">
+                                            <span class="ipt-clear"><input class="form-control upload-text uploadInput" type="text" placeholder="파일을 입력해주세요" tabindex="0" value="Seasonal_Winter .png" readonly>
+                                            </span>
+                                            <label class="upload-label" for="files">
+                                                <input id="files" class="upload" name="files" type="file" />
+                                                <span class="sr-only fileLabel">파일선택</span>
+                                            </label>
+                                        </span>
+                                    </td>
+                                    <td><span>겨울 이미지</span></td>
+                                    <td>
+                                        <fieldset>
+                                            <legend>기간</legend>
+                                            <label for="">
+                                                <input id="password-input" type="date" name="date" class="form-control" placeholder="디폴트" />
+                                            </label>
+                                            <span class="ipt-hyphen">-</span>
+                                            <label for="">
+                                                <input id="password-input" type="date" name="date" class="form-control" placeholder="디폴트" />
+                                            </label>
+                                        </fieldset>
+                                    </td>
+                                    <td>
+                                        <button class="btn-ico-mod" type="button" aria-labelledby="th-modify">수정</button>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
-                </div>
+                    </div>
+                </section>
+                <section class="list-container">
+                    <h3>시즈널배너(기념일)</h3>
+                    <div class="list-content">
+                        <table>
+                            <caption>배너명, 이미지, 이미지 Alt값, 게시기간, 수정사항, 삭제로 구성된 대메뉴 목록</caption>
+                          
+                            <colgroup>
+                                <col style="width:20%;">
+                                <col style="width:24%;">
+                                <col style="width:20%;">
+                                <col style="width:30%;">
+                                <col style="width:auto">
+                                <col style="width:auto">
+                            </colgroup>
+                          
+                            <thead>
+                              <tr>
+                                <th id="th-title" scope="col">배너명</th>
+                                <th id="th-top"   scope="col">이미지</th>
+                                <th id="th-mid"   scope="col">이미지 Alt값</th>
+                                <th id="th-sub"   scope="col">게시기간</th>
+                                <th id="th-modify" scope="col">수정사항</th>
+                                <th id="th-del"   scope="col">삭제</th>
+                              </tr>
+                            </thead>
+                          
+                            <tbody>
+                                <tr>
+                                    <td class="ipt-clear">
+                                        <input id="row1-url" type="text" class="form-control" value="삼일절(03.01)" aria-labelledby="th-url">
+                                    </td>
+                                    <td>
+                                        <span class="ipt-file">
+                                            <span class="ipt-clear"><input class="form-control upload-text uploadInput" type="text" placeholder="파일을 입력해주세요" tabindex="0" value="Seasonal_0301.png" readonly>
+                                            </span>
+                                            <label class="upload-label" for="files">
+                                                <input id="files" class="upload" name="files" type="file" />
+                                                <span class="sr-only fileLabel">파일선택</span>
+                                            </label>
+                                        </span>
+                                    </td>
+                                    <td class="ipt-clear">
+                                        <input id="row1-url" type="text" class="form-control" value="삼일절 꽃과 태극기 이미지" aria-labelledby="th-url">
+                                    </td>
+                                    <td>
+                                        <fieldset>
+                                            <legend>기간</legend>
+                                            <label for="">
+                                                <input id="password-input" type="date" name="date" class="form-control" placeholder="디폴트" />
+                                            </label>
+                                            <span class="ipt-hyphen">-</span>
+                                            <label for="">
+                                                <input id="password-input" type="date" name="date" class="form-control" placeholder="디폴트" />
+                                            </label>
+                                        </fieldset>
+                                    </td>
+                                    <td>
+                                        <button class="btn-ico-mod" type="button" aria-labelledby="th-modify">수정</button>
+                                    </td>
+                                    <td>
+                                        <button class="btn-ico-del" type="button" aria-labelledby="th-del" data-modal-open="modal">삭제</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="ipt-clear">
+                                        <input id="row1-url" type="text" class="form-control" value="어린이날(05.05)" aria-labelledby="th-url">
+                                    </td>
+                                    <td>
+                                        <span class="ipt-file">
+                                            <span class="ipt-clear"><input class="form-control upload-text uploadInput" type="text" placeholder="파일을 입력해주세요" tabindex="0" value="Seasonal_0505.png" readonly>
+                                            </span>
+                                            <label class="upload-label" for="files">
+                                                <input id="files" class="upload" name="files" type="file" />
+                                                <span class="sr-only fileLabel">파일선택</span>
+                                            </label>
+                                        </span>
+                                    </td>
+                                    <td class="ipt-clear">
+                                        <input id="row1-url" type="text" class="form-control" value="어린아이 5명 이미지" aria-labelledby="th-url">
+                                    </td>
+                                    <td>
+                                        <fieldset>
+                                            <legend>기간</legend>
+                                            <label for="">
+                                                <input id="password-input" type="date" name="date" class="form-control" placeholder="디폴트" />
+                                            </label>
+                                            <span class="ipt-hyphen">-</span>
+                                            <label for="">
+                                                <input id="password-input" type="date" name="date" class="form-control" placeholder="디폴트" />
+                                            </label>
+                                        </fieldset>
+                                    </td>
+                                    <td>
+                                        <button class="btn-ico-mod" type="button" aria-labelledby="th-modify">수정</button>
+                                    </td>
+                                    <td>
+                                        <button class="btn-ico-del" type="button" aria-labelledby="th-del" data-modal-open="modal">삭제</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="ipt-clear">
+                                        <input id="row1-url" type="text" class="form-control" value="광복절(08.15)" aria-labelledby="th-url">
+                                    </td>
+                                    <td>
+                                        <span class="ipt-file">
+                                            <span class="ipt-clear"><input class="form-control upload-text uploadInput" type="text" placeholder="파일을 입력해주세요" tabindex="0" value="Seasonal_0815.png" readonly>
+                                            </span>
+                                            <label class="upload-label" for="files">
+                                                <input id="files" class="upload" name="files" type="file" />
+                                                <span class="sr-only fileLabel">파일선택</span>
+                                            </label>
+                                        </span>
+                                    </td>
+                                    <td class="ipt-clear">
+                                        <input id="row1-url" type="text" class="form-control" value="광복절 태극기 이미지" aria-labelledby="th-url">
+                                    </td>
+                                    <td>
+                                        <fieldset>
+                                            <legend>기간</legend>
+                                            <label for="">
+                                                <input id="password-input" type="date" name="date" class="form-control" placeholder="디폴트" />
+                                            </label>
+                                            <span class="ipt-hyphen">-</span>
+                                            <label for="">
+                                                <input id="password-input" type="date" name="date" class="form-control" placeholder="디폴트" />
+                                            </label>
+                                        </fieldset>
+                                    </td>
+                                    <td>
+                                        <button class="btn-ico-mod" type="button" aria-labelledby="th-modify">수정</button>
+                                    </td>
+                                    <td>
+                                        <button class="btn-ico-del" type="button" aria-labelledby="th-del" data-modal-open="modal">삭제</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
     
-                <div class="info-content">
-                    <ul class="info-list">
-                    <li>[순서 저장] 버튼 : 하위메뉴의 변경된 “순서"를 저장합니다.</li>
-                    <li>수정사항 열에 위치한 저장 버튼: 하위메뉴의 “대메뉴, 중메뉴명, 하위메뉴명 URL, 활성상태"를 저장합니다.</li>
-                    </ul>
-                </div>
+                    <div class="info-content">
+                        <ul class="info-list">
+                            <li>시즈널배너는 대고객 채널에 1개만 노출됩니다.</li>
+                            <li>시즈널배너(계절)와 시즈널배너(기념일)간 게시기간이 겹치는 경우, ‘시즈널배너(계절)’보다 ‘시즈널배너(기념일)’이 우선 노출됩니다.</li>
+                            <li>시즈널배너(계절)의 경우 : [저장]버튼 클릭 시, 해당 배너의 변경된 ’이미지, 게시기간’을 저장합니다.<br/>
+                                시즈널배너(기념일)의 경우 : [저장]버튼 클릭 시, 해당 배너의 변경된 ’배너명, 이미지, 이미지Alt값, 게시기간’을 저장합니다.
+                            </li>
+                            <li>첨부파일을 새로 등록하면 기존의 첨부파일은 삭제됩니다.</li>
+                            <li>첨부파일 파일 형식 : jpg, png, gif</li>
+                        </ul>
+                    </div>
                 </section>
                 <section>
                     <div class="button-content cta">
                         <div class="button-wrap">
                             <a herf="javascript:void(0);" class="btn-secondary reset">초기화</a>
-                            <a herf="javascript:void(0);" class="btn-primary">저장</a>
-                            <a herf="javascript:void(0);" class="btn-secondary">목록</a>
+                            <a herf="javascript:void(0);" class="btn-primary">신규등록</a>
                         </div>
                     </div>
                 </section>

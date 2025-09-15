@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="euc-kr" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>시즈널배너 관리&gt;메인 관리&gt;관리자페이지&gt;mg캐피탈</title>
+
+        <meta name="keywords" content="MG캐피탈" />
+        <meta name="copyright" content="copyrights 2025 MG캐피탈" />
+        <meta name="description" content="MG캐피탈 리스금융, 할부금융, 스탁론, 기업대출, 장기렌트카, PF대출 등 금융 서비스 제공." />
+        <meta name="viewport" content="width=device-width" />
+        <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta http-equiv="Expires" content="-1" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Cache-Control" content="No-Cache" />
+
+        <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico" />
+        <link rel="stylesheet" href="../../assets/css/ui-util.css" />
+        <script  type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+        <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+        <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+        <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
+        <script src="../../assets/js/include.js"></script>
+        <style>
+            input[type="date"] { padding:12px; width:100%; height:46px; border:1px solid var(--form-board); color:var(--form-font-color); border-radius:4px; font-size:var(--form-font-size); box-sizing:border-box; }
+        </style>
+    </head>
+
+    <body>
+    <div class="wrap">
+        <!--<div id="header"> 
+            <script> $(document).ready(function () { $("#header").load("../COM/header.html"); }); </script>
+        </div>-->
+        <div class="bodyWrap">
+        <main class="contentWrap">
+            <secition class="modal-container">
+                <div id="customModal" class="layerPopup modal on">
+                    <div class="pop-content">
+                        <div class="pop-header">
+                            <h2 class="pop-tit">시즈널배너(기념일)등록</h2>
+                        </div>
+                        <div class="pop-body">
+                            <form action="#" method="post" novalidate>
+                                <fieldset>
+                                    <legend>메뉴 등록 정보</legend>
+                                    <ul class="write-content">
+                                        <li>
+                                            <label for="wrt01">등록자</label>
+                                            <input id="wrt01" type="text" value="수퍼어드민 성명 노출" readonly>
+                                        </li>
+                                        <li>
+                                            <label for="wrt02" class="essential">배너명</label>
+                                            <input id="wrt02" type="text" placeholder="예: 금융상품">
+                                            <p id="wrt02-error" class="error" role="alert">
+                                                배너명을 입력해주세요.</p><!--[D] 유효성 성공일땐 hidden 처리-->
+                                        </li>
+                                        <li>
+                                            <span class="essential">이미지</span>
+                                            <span class="ipt-file">
+                                                <span class="ipt-clear">
+                                                    <input class="form-control upload-text uploadInput" type="text" placeholder="파일을 입력해주세요" tabindex="0" value="Seasonal_Summer.png" readonly>
+                                                </span>
+                                                <label class="upload-label" for="files">
+                                                    <input id="files" class="upload" name="files" type="file" />
+                                                    <span class="sr-only fileLabel">파일선택</span>
+                                                </label>
+                                            </span>
+                                            <p id="wrt02-error" class="error" role="alert">
+                                                이미지를 업르도해주세요.</p><!--[D] 유효성 성공일땐 hidden 처리-->
+                                        </li>
+                                        <li>
+                                            <label for="wrt02" class="essential">이미지 Alt값</label>
+                                            <input id="wrt02" type="text" placeholder="예: 금융상품">
+                                            <p id="wrt02-error" class="error" role="alert">
+                                                이미지 Alt값을 입력해주세요.</p><!--[D] 유효성 성공일땐 hidden 처리-->
+                                        </li>
+                                        <li>
+                                            <span class="essential">게시기간</span>
+                                            <div class="flex-row gap5">
+                                                <div class="col-4">
+                                                    <input id="password-input" type="date" name="date" class="form-control" placeholder="디폴트" />
+                                                </div>
+                                                <span class="ipt-hyphen">-</span>
+                                                <div class="col-4">
+                                                    <input id="password-input" type="date" name="date" class="form-control" placeholder="디폴트" />
+                                                </div>
+                                            </div>
+                                            <!--[D]: 미입력 경우 노출 -->
+                                            <p id="wrt02-error" class="error" role="alert">게시기간을 설정해주세요.</p><!--[D] 유효성 성공일땐 hidden 처리-->
+
+                                            <!--[D]: 작일자 및 완료일자가 등록시점보다 과거의 시간일 경우 노출-->
+                                            <p id="wrt02-error" class="error" role="alert">게시기간은 등록시점을 기준으로 과거의 시점을 선택할 수 없습니다.</p>
+                                            
+                                            <!--[D]: 완료일자가 시작일자보다 과거일 경우 노출-->
+                                            <p id="wrt02-error" class="error" role="alert">게시기간의 완료일자가 게시 시작일자보다 과거입니다.<br/>게시기간을 다시 설정해주세요.</p>
+                                            <!--[D]: 시즈널배너 관리(목록)에 등록되어있는 다른 시즈널배너(기념일)와 게시기간이 겹치는 경우 노출-->
+                                            <p id="wrt02-error" class="error" role="alert">게시기간이 중복되는 시즈널배너가 존재합니다.<br/>게시기간을 다시 설정해주세요.</p>
+                                        </li>
+                                    </ul>  
+                                </fieldset>
+                                <div class="info-content" id="info-hint">
+                                    <ul class="info-list">
+                                        <li>시즈널배너는 대고객 채널에 1개만 노출됩니다.</li>
+                                        <li>배너간 게시기간이 겹치는 경우, ‘기본배너’보다 ‘시즈널배너’가 우선 노출됩니다.</li>
+                                        <li>첨부파일 파일 형식 : jpg, png, gif</li>
+                                    </ul>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="pop-footer">
+                            <div class="button-content">
+                                <button type="button" class="btn-pop-secondary" data-popup-close="modal">취소</button>
+                                <button type="button" class="btn-pop-primary"  data-popup-close="modal">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </secition>
+        </main>
+        </div>
+    </div>
+
+    </body>
+
+</html>
