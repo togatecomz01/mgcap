@@ -25,6 +25,16 @@
         <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
         <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
         <script src="../../assets/js/include.js"></script>
+        <style>
+            .pop-content {
+                width: auto !important;
+                max-height: calc(100% - 100px);
+                overflow-y: auto !important;
+            }
+            .pop-content::-webkit-scrollbar {
+                display: none;
+            }
+        </style>
     </head>
 
     <body>
@@ -41,7 +51,7 @@
                                     <div class="list-content">
                                         <table>
                                             <caption>
-                                                구분&#40;메뉴 구조&#41;, 조회수로 구성된 메뉴 별 화면 조회수 안내 목록
+                                                구분&#40;메뉴 구조&#41;, 조회수로 구성된 메뉴 별 화면 조회수 안내 표
                                             </caption>
                                             <colgroup>
                                                 <col style="width: 20%" />

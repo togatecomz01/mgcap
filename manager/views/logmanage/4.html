@@ -26,8 +26,28 @@
         <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
         <script src="../../assets/js/include.js"></script>
         <style>
+            .pop-content {
+                width: auto !important;
+                max-height: calc(100% - 100px);
+                overflow-y: auto !important;
+            }
+            .pop-content::-webkit-scrollbar {
+                display: none;
+            }
             .list-content + .list-content {
-                margin-top: 20px;
+                margin-top: 24px;
+            }
+            .tbl-total-row {
+                background: var(--table-th);
+            }
+            .tbl-total-row > td {
+                font-weight: 700;
+            }
+            .tbl-total-row > td:first-child {
+                color: var(--color-2);
+            }
+            .tbl-total-row > td:nth-child(2) {
+                color: var(--primary);
             }
         </style>
     </head>
@@ -67,7 +87,7 @@
                                     <div class="list-content">
                                         <table>
                                             <caption>
-                                                로 구성된 목록
+                                                URL, 페이지명으로 구성된 표
                                             </caption>
                                             <colgroup>
                                                 <col style="width: 50%" />
@@ -108,7 +128,7 @@
                                                     <td>/lease/general00100.jsp</td>
                                                     <td>일반리스</td>
                                                 </tr>
-                                                <tr>
+                                                <tr class="tbl-total-row">
                                                     <td>총 접속화면</td>
                                                     <td>총 00페이지</td>
                                                 </tr>
