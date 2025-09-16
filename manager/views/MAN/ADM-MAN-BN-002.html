@@ -34,10 +34,9 @@
         .list-content td a.download { width:auto; height:auto; font-size:var(--font16); color:var(--active); text-decoration:underline !important; text-underline-offset:5px; }
         .button-content { margin-top:30px; }
         /* 인풋 오른쪽 : 숫자/숫자 */
-        .ipt-right.num { right:0; font-size:var(--font14); }
+        .flex-row:has(.num) { align-items: center; }
+        .ipt-right.num { position:unset; transform:none; font-size:var(--font14); }
         .blue-txt { color:var(--primary); }
-        textarea:has(+ .ipt-right.num) { max-width:calc(100% - 50px); }
-        textarea + .ipt-right.num { top:auto; bottom:0; transform:none; }
     </style>
 </head>
 
@@ -77,7 +76,7 @@
                             <tr>
                                 <th id="th-title" scope="row"><span class="essential">배너명</span></th>
                                 <td>
-                                    <div class="col">
+                                    <div class="flex-row gap10">
                                         <input id="row1-title" type="text" placeholder="배너명을 입력해주세요." value="" aria-labelledby="th-title">
                                         <span class="ipt-right num"><span class="blue-txt">0</span>/<span>16</span>자</span>
                                     </div>
@@ -86,7 +85,7 @@
                             <tr>
                                 <th id="th-title" scope="row"><span class="essential">타이틀</span></th>
                                 <td>
-                                    <div class="col">
+                                    <div class="flex-row gap10">
                                         <input id="row2-title" type="text" placeholder="타이틀을 입력해주세요." value="" aria-labelledby="th-title">
                                         <span class="ipt-right num"><span class="blue-txt">0</span>/<span>20</span>자</span>
                                     </div>
@@ -95,7 +94,7 @@
                             <tr>
                                 <th id="th-title" scope="row"><span class="essential">내용</span></th>
                                 <td>
-                                    <div class="col">
+                                    <div class="flex-row gap10">
                                         <textarea placeholder="내용을 입력해주세요."></textarea>
                                         <span class="ipt-right num"><span class="blue-txt">0</span>/<span>64</span>자</span>
                                     </div>
