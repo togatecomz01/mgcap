@@ -41,26 +41,30 @@
             <ul class="location_content">
                 <li><a href="javascript:void(0);" class="home">홈</a></li>
                 <li><a href="javascript:void(0);">메뉴관리</a></li>
+                <li><a href="javascript:void(0);">1depth 메뉴명</a></li>
             </ul>
             </seciton>
             <section class="list-container">
                 <div class="list-content">
                     <table>
-                        <caption>순서, 메뉴명, 활성, 하위메뉴 변경, 수정사항, 삭제로 구성된 메뉴관리 목록</caption>
+                        <caption>순서, 대메뉴명, 중메뉴명, url, 활성, 하위메뉴 변경, 수정사항, 삭제로 구성된 메뉴관리 목록</caption>
                         
                         <colgroup>
-                            <col style="width:120px; min-width:80px;">
-                            <col style="width:auto; min-width:612px;">
-                            <col style="width:20%; max-width:420px;">
-                            <col style="width:140px; min-width:100px;">
-                            <col style="width:94px; min-width:80px;">
-                            <col style="width:94px; min-width:80px;">
+                            <col class="num">
+                            <col class="auto">
+                            <col class="auto">
+                            <col class="toggle">
+                            <col class="txt-btn">
+                            <col class="ico-btn">
+                            <col class="ico-btn">
                         </colgroup>
                         
                         <thead>
                             <tr>
                             <th id="th-num" scope="col">순서</th>
-                            <th id="th-menu" scope="col">메뉴명</th>
+                            <th id="th-menu" scope="col">대메뉴명</th>
+                            <th id="th-mid-menu" scope="col">중메뉴명</th>
+                            <th id="th-url" scope="col">url</th>
                             <th id="th-active" scope="col">활성</th>
                             <th id="th-sub" scope="col">하위메뉴명</th>
                             <th id="th-modify" scope="col">수정사항</th>
@@ -74,7 +78,21 @@
                                     <input id="row1-num" class="tac" type="text" value="1" aria-labelledby="th-num">
                                 </td>
                                 <td>
-                                    <span class="ipt-clear"><input id="row1-menu" type="text" class="form-control" value="1depth 메뉴명 노출" aria-labelledby="th-menu"></span>
+                                    <select id="row1-menu" aria-labelledby="th-menu" name="menu-1">
+                                        <option value="" disabled>선택해주세요.</option>
+                                        <option selected>1depth 메뉴명</option>
+                                        <option>옵션2</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <span class="ipt-clear">
+                                        <input id="row1-url" type="text" placeholder="메뉴명을 입력해주세요" value="메뉴명을 입력해주세요" title="메뉴명을 입력해주세요" aria-labelledby="th-mid-menu">
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="ipt-clear">
+                                        <input id="row1-url" type="text" placeholder="URL 경로를 입력해 주세요" value="" aria-labelledby="th-url">
+                                    </span>
                                 </td>
                                 <td>
                                     <label class="toggle">
@@ -92,36 +110,13 @@
                                     <button class="btn-ico-del" type="button" aria-label="‘1depth 메뉴명 노출’ 삭제" aria-controls="modal-delete" data-modal-open="modal">삭제</button>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>
-                                    <input id="row2-num" class="tac" type="text" value="2" aria-labelledby="th-num">
-                                </td>
-                                <td class="ipt-clear">
-                                    <input id="row2-menu" type="text" class="form-control" value="금융상품" aria-labelledby="th-menu">
-                                </td>
-                                <td>
-                                    <label class="toggle">
-                                        <input type="checkbox" name="row2-active" checked aria-labelledby="th-active">
-                                        <span>활성</span>
-                                    </label>
-                                </td>
-                                <td>
-                                    <button type="button" class="btn-text" aria-label="‘금융상품’ 하위메뉴 바로가기">바로가기</button>
-                                </td>
-                                <td>
-                                    <button class="btn-ico-mod" type="button" aria-label="‘금융상품’ 수정">수정</button>
-                                </td>
-                                <td>
-                                    <button class="btn-ico-del" type="button" aria-label="‘금융상품’ 삭제" aria-controls="modal-delete" data-modal-open="modal">삭제</button>
-                                </td>
-                            </tr>
                         </tbody>
                         </table>
                 </div>
                 <div class="info-content">
                     <ul class="info-list">
-                    <li>[순서 저장] 버튼 : 메뉴의 변경된 “순서"를 저장합니다.</li>
-                    <li>수정사항 열에 위치한 [저장] 버튼: 해당메뉴의 “메뉴명, 활성상태"를 저장합니다.</li>
+                    <li>[순서 저장] 버튼 : 2depth 메뉴의 변경된 “순서"를 저장합니다.</li>
+                    <li>수정사항 열에 위치한 [저장] 버튼: 해당메뉴의 “메뉴명, 2depth, URL, 활성상태"를 저장합니다.</li>
                     </ul>
                 </div>
             </section>
@@ -141,7 +136,7 @@
                             <h2 class="pop-tit">메뉴를 삭제하시겠습니까?</h2>
                         </div>
                         <div class="pop-body">
-                            <p class="tit">[3depth 메뉴명 노출]</p>
+                            <p class="tit">[2depth 메뉴명 노출]</p>
                             <p>메뉴를 삭제하시겠습니까?
                             삭제 시, 해당 메뉴의 하위메뉴도 모두 삭제됩니다.</p>
                         </div>

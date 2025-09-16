@@ -26,9 +26,9 @@
         <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
         <script src="../../assets/js/include.js"></script>
         <style>
-            input[type="date"] { padding:12px; width:100%; height:46px; border:1px solid var(--form-board); color:var(--form-font-color); border-radius:4px; font-size:var(--form-font-size); box-sizing:border-box; }
+           /**input[type="date"] { padding:12px; width:100%; height:46px; border:1px solid var(--form-board); color:var(--form-font-color); border-radius:4px; font-size:var(--form-font-size); box-sizing:border-box; }
 
-            .pop-content button.btn-clear { width:24px; height:24px; font-size:var(--font18); }
+            .pop-content button.btn-clear { width:24px; height:24px; font-size:var(--font18); }**/
         </style>
     </head>
 
@@ -53,9 +53,9 @@
                                         </li>
                                         <li>
                                             <label for="wrt02" class="essential">배너명</label>
-                                            <input id="wrt02" type="text" placeholder="예: 금융상품">
+                                            <input id="wrt02" type="text" placeholder="예: 금융상품" aria-invalid="true">
                                             <p id="wrt02-error" class="error" role="alert">
-                                                배너명을 입력해주세요.</p><!--[D] 유효성 성공일땐 hidden 처리-->
+                                                배너명을 입력해주세요.</p><!--[D] 유효성 성공일땐 hidden 처리이거나 전체 p.error 태그 삭제-->
                                         </li>
                                         <li>
                                             <span class="essential">이미지</span>
@@ -82,11 +82,11 @@
                                             <fieldset>
                                                 <legend>기간</legend>
                                                 <label for="">
-                                                    <input id="password-input" type="date" name="date" class="form-control" placeholder="디폴트" />
+                                                    <input id="password-input" type="date" name="date" placeholder="디폴트" aria-invalid="true" />
                                                 </label>
                                                 <span class="ipt-hyphen">-</span>
                                                 <label for="">
-                                                    <input id="password-input" type="date" name="date" class="form-control" placeholder="디폴트" />
+                                                    <input id="password-input" type="date" name="date" placeholder="디폴트" aria-invalid="true" />
                                                 </label>
                                             </fieldset>
                                             <!--[D]: 미입력 경우 노출 -->

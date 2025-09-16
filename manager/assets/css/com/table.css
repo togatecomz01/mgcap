@@ -21,3 +21,5 @@ table td { height:72px; }
 
 .write-content th, td { padding:10px 20px; }
 .write-content td { text-align:left; }
+.write-content tr:first-of-type { border-top:1px solid var(--table-border); }
+
