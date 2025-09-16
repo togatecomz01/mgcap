@@ -27,66 +27,14 @@
     <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
     <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
-
-
-    <style>
-        input[placeholder="포커스"] { border:1px solid #2392FF; }
-        .form-container fieldset { gap:18px !important; }
-        table td {cursor: pointer;} /* 테이블 포인터 */
-        /* .form-container fieldset.search { display:flex; justify-content:flex-end; gap:14px; } */
-        /* 36줄 코드가 로드는 되는데 적용이 안되어서 .form-wrap을 Flex 컨테이너로 만들고 space-between 추가*/
-        /* ++ 이 부분은 왼쪽에 selectbox가 없어서 flex-end로 재수정 */
-        .form-wrap {display: flex; justify-content: flex-end;} 
-
-        /* 리스트 테이블에 행을 추가하니 기존 wrap보다 벗어나서 lnb가 짤려서 공통 height수정 */
-        .bodyWrap {height: auto;}
-        
-        /* 리스트 테이블과 button 사이 간격 */
-        .list-container + .button-content {margin-top: 34px;} 
-    </style>
-    <!-- (선택) IE11용 폴리필: 안전하게 깔아두면 좋아요 -->
-    <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Promise,Array.from,Object.assign,Number.isNaN"></script>
+    <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
+    <script src="../../assets/js/include.js"></script>
 </head>
 <body>
     <div class="wrap">
-        <header id="headerWrap" class="headerOn">
-            <h1><a href="javascript:void(0);">MG캐피탈</a></h1>
-            <div class="recent-content">
-                <span>최근접속 : 2025.08.12 12:42:28</span>
-                <button>로그아웃</button>
-            </div>
-        </header>
+        <div data-include-path="../COMMON/header.html"></div>
         <div class="bodyWrap">
-            <nav id="menuWrap" class="lnb" role="navigation" aria-label="왼쪽 메뉴">
-                <div class="member">
-                    <a href="javascript:void(0);" class="link"><em>홍길동</em>님</a>
-                </div>
-                <ul class="menu">
-                    <li class="item">
-                    <button type="button" class="accordion" aria-expanded="false" aria-controls="submenu-1"> 대메뉴 1</button>
-                    <ul id="submenu-1" class="submenu" role="group">
-                        <li><a href="javascript:void(0);" class="link">소메뉴 1-1</a></li>
-                        <li><a href="javascript:void(0);" class="link">소메뉴 1-2</a></li>
-                        <li><a href="javascript:void(0);" class="link">소메뉴 1-3</a></li>
-                    </ul>
-                    </li>
-            
-                    <li class="item">
-                    <button type="button" class="accordion" aria-expanded="false" aria-controls="submenu-2"> 대메뉴 2</button>
-                    <ul id="submenu-2" class="submenu" role="group">
-                        <li><a href="javascript:void(0);" class="link">소메뉴 2-1</a></li>
-                        <li><a href="javascript:void(0);" class="link">소메뉴 2-2</a></li>
-                    </ul>
-                    </li>
-            
-                    <li class="item">
-                    <button type="button" class="accordion" aria-expanded="false" aria-controls="submenu-3"> 대메뉴 3</button>
-                    <ul id="submenu-3" class="submenu" role="group">
-                        <li><a href="javascript:void(0);" class="link">소메뉴 3-1</a></li>
-                    </ul>
-                    </li>
-                </ul>
-            </nav>
+            <div data-include-path="../COMMON/lnb.html"></div>
             <main class="contentWrap"> 
                 <seciton class="title_container">
                     <h2>회사소식 관리 목록</h2>
@@ -97,144 +45,146 @@
                         <li><a href="javascript:void(0);">회사소식 관리 목록 </a></li>
                     </ul>
                 </seciton>
-
-                <section class="form-container">
-                    <div class="form-content">
-                        <div class="form-wrap">
-                            <fieldset class="search">
-                                <legend>검색</legend>
-                                <select id="category" name="category">
-                                    <option value="title">제목</option>
-                                    <option value="desc">내용</option>
-                                </select>
-                                <input id="q" name="q" type="search" autocomplete="off" inputmode="search" placeholder="검색어를 입력해주세요" />
-                                <button type="submit" class="btn-body">검색</button>
-                            </fieldset>
+                <div>
+                    <section class="form-container">
+                        <div class="form-content">
+                            <div class="form-wrap">
+                                <fieldset class="search">
+                                    <legend>검색</legend>
+                                    <select id="category" name="category">
+                                        <option value="title">제목</option>
+                                        <option value="desc">내용</option>
+                                    </select>
+                                    <input id="q" name="q" type="search" autocomplete="off" inputmode="search" placeholder="검색어를 입력해주세요" />
+                                    <button type="submit" class="btn-body">검색</button>
+                                </fieldset>
                             </div>
-                    </div>
-                </section>
+                        </div>
+                    </section>
 
-                <section class="list-container search">
-                    <table class="list-content">
-                        <caption>number, 제목, 등록자, 등록일, 수정자, 수정일로 이루어진 회사 소식 내용 목록</caption>
-                        <colgroup>
-                            <col style="width:120px;">
-                            <col style="width:auto;">
-                            <col style="width:150px;">
-                            <col style="width:150px;">
-                            <col style="width:150px;">
-                            <col style="width:150px;">
-                            
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th id="th-title" scope="col">No</th>
-                                <th id="th-title2" scope="col">제목</th>
-                                <th id="th-title3" scope="col">등록자</th>
-                                <th id="th-title4" scope="col" style=>등록일</th>
-                                <th id="th-title5" scope="col" style=>수정자</th>
-                                <th id="th-title6" scope="col" style=>수정일</th>
+                    <section class="list-container search">
+                        <table class="list-content">
+                            <caption>number, 제목, 등록자, 등록일, 수정자, 수정일로 이루어진 회사 소식 내용 목록</caption>
+                            <colgroup>
+                                <col style="width:120px;">
+                                <col style="width:auto;">
+                                <col style="width:150px;">
+                                <col style="width:150px;">
+                                <col style="width:150px;">
+                                <col style="width:150px;">
                                 
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>286</td>
-                                <td class="sbject">MG캐피탈 2000억 유상증자로 신용등급 ‘A0’ 상향</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                            </tr>            
-                            <tr>
-                                <td>285</td>
-                                <td class="sbject">MG캐피탈 신임 대표에 김병국 전 신한투자증권 상무 선임</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                            </tr>            
-                            <tr>
-                                <td>284</td>
-                                <td class="sbject">MG캐피탈, PEF 수시 출자 재개로 펀딩 시장 단비</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                            </tr>            
-                            <tr>
-                                <td>283</td>
-                                <td class="sbject">새마을금고중앙회, 자회사 MG캐피탈 현판식 개최</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                            </tr>            
-                            <tr>
-                                <td>282</td>
-                                <td class="sbject">2025년도 시무식 진행</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                            </tr>            
-                            <tr>
-                                <td>281</td>
-                                <td class="sbject">2024년도 총무식 진행</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                            </tr>            
-                            <tr>
-                                <td>280</td>
-                                <td class="sbject">2024년도 하반기 워크숍</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                            </tr>            
-                            <tr>
-                                <td>279</td>
-                                <td class="sbject">2024년도 상반기 워크숍</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                            </tr>            
-                            <tr>
-                                <td>278</td>
-                                <td class="sbject">회사 창립 27주년 기념식 진행</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                            </tr>            
-                            <tr>
-                                <td>277</td>
-                                <td class="sbject">2024년도 시무식 진행</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                            </tr>            
-                        </tbody>
-                    </table>
-                    <div class="pagination-content">
-                        <button class="btn-prev">이전으로</button>
-                        <button class="active">1</button>
-                        <button>2</button>
-                        <button>...</button>
-                        <button>3</button>
-                        <button>4</button>
-                        <button class="btn-next">다음으로</button>
-                    </div>
-                </section>
-
-                <div class="button-content cta">
-                    <div class="button-wrap">
-                        <a href="./ADM-CO-NEWS-003.html" class="btn-primary">등록</a> 
-                    </div>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th id="th-title" scope="col">No</th>
+                                    <th id="th-title2" scope="col">제목</th>
+                                    <th id="th-title3" scope="col">등록자</th>
+                                    <th id="th-title4" scope="col" style=>등록일</th>
+                                    <th id="th-title5" scope="col" style=>수정자</th>
+                                    <th id="th-title6" scope="col" style=>수정일</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>286</td>
+                                    <td class="sbject">MG캐피탈 2000억 유상증자로 신용등급 ‘A0’ 상향</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                </tr>            
+                                <tr>
+                                    <td>285</td>
+                                    <td class="sbject">MG캐피탈 신임 대표에 김병국 전 신한투자증권 상무 선임</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                </tr>            
+                                <tr>
+                                    <td>284</td>
+                                    <td class="sbject">MG캐피탈, PEF 수시 출자 재개로 펀딩 시장 단비</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                </tr>            
+                                <tr>
+                                    <td>283</td>
+                                    <td class="sbject">새마을금고중앙회, 자회사 MG캐피탈 현판식 개최</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                </tr>            
+                                <tr>
+                                    <td>282</td>
+                                    <td class="sbject">2025년도 시무식 진행</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                </tr>            
+                                <tr>
+                                    <td>281</td>
+                                    <td class="sbject">2024년도 총무식 진행</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                </tr>            
+                                <tr>
+                                    <td>280</td>
+                                    <td class="sbject">2024년도 하반기 워크숍</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                </tr>            
+                                <tr>
+                                    <td>279</td>
+                                    <td class="sbject">2024년도 상반기 워크숍</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                </tr>            
+                                <tr>
+                                    <td>278</td>
+                                    <td class="sbject">회사 창립 27주년 기념식 진행</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                </tr>            
+                                <tr>
+                                    <td>277</td>
+                                    <td class="sbject">2024년도 시무식 진행</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                </tr>            
+                            </tbody>
+                        </table>
+                        <div class="pagination-content">
+                            <button class="btn-prev">이전으로</button>
+                            <button class="active">1</button>
+                            <button>2</button>
+                            <button>...</button>
+                            <button>3</button>
+                            <button>4</button>
+                            <button class="btn-next">다음으로</button>
+                        </div>
+                    </section>
+                    <section class="button-ccontainer">
+                        <div class="button-content cta">
+                            <div class="button-wrap">
+                                <a href="./ADM-CO-NEWS-003.html" class="btn-primary">등록</a> 
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </main>
         </div>

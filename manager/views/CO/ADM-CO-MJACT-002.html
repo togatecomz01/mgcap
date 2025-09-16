@@ -88,6 +88,42 @@
                 </secition>
             </div>
         </main>
+        <!-- D: 삭제버튼 눌렀을 시 confirm 알럿 (달라질 수 있어 임시 추가) -->
+        <secition class="modal-container">
+            <div id="mjact03" class="layerPopup modal">
+                <div class="pop-content">
+                    <div class="pop-header">
+                        <h2 class="pop-tit">주요활동 수정사항을 삭제하시겠습니까?</h2>
+                    </div>
+                    <div class="pop-body">
+                        <p>삭제한 주요활동은</p>
+                        <p>대고객 채널에 바로 반영됩니다.</p>
+                    </div>
+                    <div class="pop-footer">
+                        <div class="button-content">
+                            <button type="button" class="btn-pop-secondary" data-popup-close="mjact03">취소</button>
+                            <button type="button" class="btn-pop-primary" data-modal-open="mjact04">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </secition>
+
+        <!-- D: 삭제 완료 모달 -->
+        <secition class="modal-container">
+            <div id="mjact04" class="layerPopup modal">
+                <div class="pop-content">
+                    <div class="pop-body">
+                        <p>삭제가 완료되었습니다.</p>
+                    </div>
+                    <div class="pop-footer">
+                        <div class="button-content">
+                            <a href="./ADM-CO-MJACT-001.html" class="btn-pop-primary">확인</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </secition>
         </div>
     </div>
 
