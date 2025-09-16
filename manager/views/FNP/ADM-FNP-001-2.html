@@ -28,65 +28,19 @@
     <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
     <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
-
-
+    <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
+    <script src="../../assets/js/include.js"></script>
     <style>
-        input[placeholder="포커스"] { border:1px solid #2392FF; }
-
-        .form-container fieldset { gap:18px !important; }
-        /* .form-container fieldset.search { display:flex; justify-content:flex-end; gap:14px;  } */
-        /* 37줄 코드가 로드는 되는데 적용이 안되어서 .form-wrap을 Flex 컨테이너로 만들고 space-between 추가*/
-        .form-wrap {display: flex; justify-content: space-between;} 
-
-        /* 리스트 테이블에 행을 추가하니 기존 wrap보다 벗어나서 lnb가 짤려서 공통 height수정 */
-        .bodyWrap {height: auto;}
-
-        /* 리스트 테이블과 button 사이 간격 */
-        .list-container + .button-content {margin-top: 34px;} 
+        .form-content .form-wrap { /* fleldset 두개를 뒀을 때 각각의 fleldset이 양쪽 끝에 위치해야함 */
+            justify-content: space-between;
+        }
     </style>
-    <!-- (선택) IE11용 폴리필: 안전하게 깔아두면 좋아요 -->
-    <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Promise,Array.from,Object.assign,Number.isNaN"></script>
 </head>
 <body>
     <div class="wrap">
-        <header id="headerWrap" class="headerOn">
-            <h1><a href="javascript:void(0);">MG캐피탈</a></h1>
-            <div class="recent-content">
-                <span>최근접속 : 2025.08.12 12:42:28</span>
-                <button>로그아웃</button>
-            </div>
-        </header>
+        <div data-include-path="../COMMON/header.html"></div>
         <div class="bodyWrap">
-            <nav id="menuWrap" class="lnb" role="navigation" aria-label="왼쪽 메뉴">
-                <div class="member">
-                    <a href="javascript:void(0);" class="link"><em>홍길동</em>님</a>
-                </div>
-                <ul class="menu">
-                    <li class="item">
-                    <button type="button" class="accordion" aria-expanded="false" aria-controls="submenu-1"> 대메뉴 1</button>
-                    <ul id="submenu-1" class="submenu" role="group">
-                        <li><a href="javascript:void(0);" class="link">소메뉴 1-1</a></li>
-                        <li><a href="javascript:void(0);" class="link">소메뉴 1-2</a></li>
-                        <li><a href="javascript:void(0);" class="link">소메뉴 1-3</a></li>
-                    </ul>
-                    </li>
-            
-                    <li class="item">
-                    <button type="button" class="accordion" aria-expanded="false" aria-controls="submenu-2"> 대메뉴 2</button>
-                    <ul id="submenu-2" class="submenu" role="group">
-                        <li><a href="javascript:void(0);" class="link">소메뉴 2-1</a></li>
-                        <li><a href="javascript:void(0);" class="link">소메뉴 2-2</a></li>
-                    </ul>
-                    </li>
-            
-                    <li class="item">
-                    <button type="button" class="accordion" aria-expanded="false" aria-controls="submenu-3"> 대메뉴 3</button>
-                    <ul id="submenu-3" class="submenu" role="group">
-                        <li><a href="javascript:void(0);" class="link">소메뉴 3-1</a></li>
-                    </ul>
-                    </li>
-                </ul>
-            </nav>
+            <div data-include-path="../COMMON/lnb.html"></div>
             <main class="contentWrap">
                 <seciton class="title_container">
                     <h2>금융상품관리 목록</h2>
@@ -96,177 +50,178 @@
                         <li><a href="javascript:void(0);">금융상품관리 목록</a></li>
                     </ul>
                 </seciton>
-
-                <section class="form-container">
-                    <div class="form-content">
-                        <div class="form-wrap">
-                            <fieldset class="search">
-                                <select id="category" name="category">
-                                    <option value="all">전체</option>
-                                    <option value="new">신차</option>
-                                    <option value="old">중고차</option>
-                                    <option value="bike">바이크</option>
-                                    <option value="boat">보트/선외기</option>
-                                </select>
-                            </fieldset>
-                        
-                            <fieldset class="search">
-                                <legend>검색</legend>
-                                <select id="category" name="category">
-                                    <option value="title">제목</option>
-                                    <option value="desc">내용</option>
-                                </select>
-                                <input id="q" name="q" type="search" autocomplete="off" inputmode="search" placeholder="검색어를 입력해주세요" />
-                                <button type="submit" class="btn-body">검색</button>
-                            </fieldset>
+                <div>
+                    <section class="form-container">
+                        <div class="form-content">
+                            <div class="form-wrap">
+                                <fieldset class="search"> <!-- width 맞추기 위해 class를 search로 뒀는데 맞는 부분인지 모르겠음 -->
+                                    <select id="category" name="category" >
+                                        <option value="title">전체</option>
+                                        <option value="desc">자동차</option>
+                                        <option value="desc">설비/의료&middot;헬스</option>
+                                        <option value="desc">주택</option>
+                                        <option value="desc">기업</option>
+                                    </select>
+                                </fieldset>
+                                <fieldset class="search">
+                                    <legend>검색</legend>
+                                    <select id="category" name="category">
+                                        <option value="title">제목</option>
+                                        <option value="desc">내용</option>
+                                    </select>
+                                    <input id="q" name="q" type="search" autocomplete="off" inputmode="search" placeholder="검색어를 입력해주세요" />
+                                    <button type="submit" class="btn-body">검색</button>
+                                </fieldset>
+                                </div>
+                        </div><!--//form-content-->
+                    </section>
+                    </section>
+                    <section class="list-container search">
+                        <table class="list-content">
+                            <caption>number, 구분, 상품명, 기준일, 작성자, 작성일, 수정자, 수정일, 판매여부로 구성된 금융상품관리 목록</caption>
+                            <colgroup>
+                                <col style="width:120px;">
+                                <col style="width:143px;">
+                                <col style="width:278px;">
+                                <col style="width:219px;">
+                                <col style="width:150px;">
+                                <col style="width:150px;">
+                                <col style="width:150px;">
+                                <col style="width:150px;">
+                                <col style="width:160px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th id="th-title" scope="col">No</th>
+                                    <th id="th-title2" scope="col">구분</th>
+                                    <th id="th-title3" scope="col">상품명</th>
+                                    <th id="th-title4" scope="col" style=>기준일</th>
+                                    <th id="th-title5" scope="col" style=>작성자</th>
+                                    <th id="th-title6" scope="col" style=>작성일</th>
+                                    <th id="th-title7" scope="col" style=>수정자</th>
+                                    <th id="th-title8" scope="col" style=>수정일</th>
+                                    <th id="th-title9" scope="col" style=>판매여부</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>42</td>
+                                    <td>신차</td>
+                                    <td>장기렌터카</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>판매중</td>
+                                </tr>            
+                                <tr>
+                                    <td>42</td>
+                                    <td>신차</td>
+                                    <td>장기렌터카</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>판매중</td>
+                                </tr>      
+                                <tr>
+                                    <td>42</td>
+                                    <td>신차</td>
+                                    <td>장기렌터카</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>판매중</td>
+                                </tr>      
+                                <tr>
+                                    <td>42</td>
+                                    <td>신차</td>
+                                    <td>장기렌터카</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>판매중</td>
+                                </tr>      
+                                <tr>
+                                    <td>42</td>
+                                    <td>신차</td>
+                                    <td>장기렌터카</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>판매중</td>
+                                </tr>      
+                                <tr>
+                                    <td>42</td>
+                                    <td>신차</td>
+                                    <td>장기렌터카</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>판매중</td>
+                                </tr>      
+                                <tr>
+                                    <td>42</td>
+                                    <td>신차</td>
+                                    <td>장기렌터카</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>판매중</td>
+                                </tr>      
+                                <tr>
+                                    <td>42</td>
+                                    <td>신차</td>
+                                    <td>장기렌터카</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>판매중</td>
+                                </tr>      
+                                <tr>
+                                    <td>42</td>
+                                    <td>신차</td>
+                                    <td>장기렌터카</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>홍길동</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>판매중</td>
+                                </tr>      
+                            </tbody>
+                        </table>
+                        <div class="pagination-content">
+                            <button class="btn-prev">이전으로</button>
+                            <button class="active">1</button>
+                            <button>2</button>
+                            <button>...</button>
+                            <button>3</button>
+                            <button>4</button>
+                            <button class="btn-next">다음으로</button>
+                        </div>
+                    </section>
+                    <section class="button-ccontainer">
+                        <div class="button-content cta">
+                            <div class="button-wrap">
+                                <a href="./ADM-FNP-003.html" class="btn-primary">등록</a> 
                             </div>
-                    </div><!--//form-content-->
-                </section>
-
-                <section class="list-container search">
-                    <table class="list-content">
-                        <caption>number, 구분, 상품명, 기준일, 작성자, 작성일, 수정자, 수정일, 판매여부로 구성된 금융상품관리 목록</caption>
-                        <colgroup>
-                            <col style="width:120px;">
-                            <col style="width:143px;">
-                            <col style="width:278px;">
-                            <col style="width:219px;">
-                            <col style="width:150px;">
-                            <col style="width:150px;">
-                            <col style="width:150px;">
-                            <col style="width:150px;">
-                            <col style="width:160px;">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th id="th-title" scope="col">No</th>
-                                <th id="th-title2" scope="col">구분</th>
-                                <th id="th-title3" scope="col">상품명</th>
-                                <th id="th-title4" scope="col" style=>기준일</th>
-                                <th id="th-title5" scope="col" style=>작성자</th>
-                                <th id="th-title6" scope="col" style=>작성일</th>
-                                <th id="th-title7" scope="col" style=>수정자</th>
-                                <th id="th-title8" scope="col" style=>수정일</th>
-                                <th id="th-title9" scope="col" style=>판매여부</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>42</td>
-                                <td>신차</td>
-                                <td>장기렌터카</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>판매중</td>
-                            </tr>            
-                            <tr>
-                                <td>42</td>
-                                <td>신차</td>
-                                <td>장기렌터카</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>판매중</td>
-                            </tr>      
-                            <tr>
-                                <td>42</td>
-                                <td>신차</td>
-                                <td>장기렌터카</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>판매중</td>
-                            </tr>      
-                            <tr>
-                                <td>42</td>
-                                <td>신차</td>
-                                <td>장기렌터카</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>판매중</td>
-                            </tr>      
-                            <tr>
-                                <td>42</td>
-                                <td>신차</td>
-                                <td>장기렌터카</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>판매중</td>
-                            </tr>      
-                            <tr>
-                                <td>42</td>
-                                <td>신차</td>
-                                <td>장기렌터카</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>판매중</td>
-                            </tr>      
-                            <tr>
-                                <td>42</td>
-                                <td>신차</td>
-                                <td>장기렌터카</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>판매중</td>
-                            </tr>      
-                            <tr>
-                                <td>42</td>
-                                <td>신차</td>
-                                <td>장기렌터카</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>판매중</td>
-                            </tr>      
-                            <tr>
-                                <td>42</td>
-                                <td>신차</td>
-                                <td>장기렌터카</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>홍길동</td>
-                                <td>YYYY.MM.DD</td>
-                                <td>판매중</td>
-                            </tr>      
-                        </tbody>
-                    </table>
-                    <div class="pagination-content">
-                        <button class="btn-prev">이전으로</button>
-                        <button class="active">1</button>
-                        <button>2</button>
-                        <button>...</button>
-                        <button>3</button>
-                        <button>4</button>
-                        <button class="btn-next">다음으로</button>
-                    </div>
-                </section>
-
-                <div class="button-content cta"> <!-- 이 부분 section과 간격 추가 -->
-                    <div class="button-wrap">
-                        <a href="./ADM-FNP-003.html" class="btn-primary">등록</a> 
-                    </div>
+                        </div>
+                    </section>
                 </div>
             </main>
         </div>
