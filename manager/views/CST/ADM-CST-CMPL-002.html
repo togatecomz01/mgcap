@@ -3,7 +3,7 @@
     <head>
         <meta charset="euc-kr" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>고객 민원 상세</title>
+        <title>상세&gt;고객 민원 관리&gt;관리자페이지&gt;mg캐피탈</title>
 
         <meta name="keywords" content="MG캐피탈" />
         <meta name="copyright" content="copyrights 2025 MG캐피탈" />
@@ -32,7 +32,7 @@
     <body>
         <div class="wrap">
             <div data-include-path="../COMMON/header.html"></div>
-            <div class="bodyWrap bg-gray">
+            <div class="bodyWrap">
                 <div data-include-path="../COMMON/lnb.html"></div>
                 <main class="contentWrap">
                     <section class="title_container">
@@ -56,19 +56,27 @@
                             <tbody>
                                 <tr>
                                     <th id="th-type" scope="row"><span>구분</span></th>
-                                    <td><span>민원</span></td>
+                                    <td>
+                                        <span>민원</span>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th id="th-title" scope="row"><span>제목</span></th>
-                                    <td><span>대출 증명 서류를 발급받고 싶어요.</span></td>
+                                    <td>
+                                        <span>대출 증명 서류를 발급받고 싶어요.</span>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th id="th-writer" scope="row"><span>등록자</span></th>
-                                    <td><span>홍길동</span></td>
+                                    <td>
+                                        <span>홍길동</span>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th id="th-date" scope="row"><span>등록일시</span></th>
-                                    <td><span>YYYY.MM.DD HH:MM:ss</span></td>
+                                    <td>
+                                        <span>YYYY.MM.DD HH:MM:ss</span>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th id="th-content" scope="row"><span>내용</span></th>
@@ -79,7 +87,7 @@
                                 <tr>
                                     <th id="th-answer" scope="row"><span class="essential">답변</span></th>
                                     <td>
-                                        <textarea placeholder="내용을 입력해주세요."></textarea>
+                                        <textarea placeholder="답변을 입력해주세요." required></textarea>
                                     </td>
                                 </tr>
                             </tbody>
@@ -97,6 +105,11 @@
                             </div>
                         </div>
                     </section>
+                    <!-- 얼럿(등록, 수정 동일) -->
+                    <!-- 1. 답변을 작성해주세요. / 확인 -->
+                    <!-- 2. 답변이 등록되었습니다. / 확인('고객 민원 목록 화면'으로 이동) -->
+                    <!-- 3. 삭제하시겠습니까? / 취소,확인 -->
+                    <!-- 4. 삭제가 완료되었습니다. / 확인('고객 민원 목록 화면'으로 이동) -->
                 </main>
             </div>
         </div>

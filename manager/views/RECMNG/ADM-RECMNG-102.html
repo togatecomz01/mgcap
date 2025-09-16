@@ -3,7 +3,7 @@
     <head>
         <meta charset="euc-kr" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>채용공고 상세</title>
+        <title>상세&gt;채용 관리&gt;관리자페이지&gt;mg캐피탈</title>
 
         <meta name="keywords" content="MG캐피탈" />
         <meta name="copyright" content="copyrights 2025 MG캐피탈" />
@@ -28,32 +28,18 @@
         <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
         <script src="../../assets/js/include.js"></script>
         <style>
-            .bg-gray {
-                background-color: #f6f7f9;
-            }
-            .write-container {
-                padding: 44px 24px;
-                border-radius: 10px;
-                background: #fff;
-            }
-
             /* 첨부파일 리스트 */
-            .file-list li + li {
-                margin-top: 12px;
-            }
-            .file-list li button {
+            .ipt-file {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
                 text-decoration-line: underline;
                 text-underline-position: from-font;
             }
-            .file-list li button::before {
-                content: "";
+            .ipt-file .ipt-clear::before {
                 margin-right: 2px;
-                width: 20px;
-                height: 20px;
-                background-image: url(../../assets/images/com/svg/ico_file.svg);
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: auto;
+                background-color: var(--color-2);
+                mask-size: auto;
             }
         </style>
     </head>
@@ -61,7 +47,7 @@
     <body>
         <div class="wrap">
             <div data-include-path="../COMMON/header.html"></div>
-            <div class="bodyWrap bg-gray">
+            <div class="bodyWrap">
                 <div data-include-path="../COMMON/lnb.html"></div>
                 <main class="contentWrap">
                     <section class="title_container">
@@ -111,28 +97,19 @@
                                 <tr>
                                     <th id="th-file" scope="row"><span>첨부파일</span></th>
                                     <td>
-                                        <ul class="file-list">
-                                            <li>
+                                        <span class="ipt-file">
+                                            <span class="ipt-clear">
                                                 <button type="button">[MG캐피탈]입사지원서.docx</button>
-                                            </li>
-                                            <li>
+                                            </span>
+                                            <span class="ipt-clear">
                                                 <button type="button">[MG캐피탈]입사지원서.docx</button>
-                                            </li>
-                                        </ul>
+                                            </span>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th id="th-period" scope="row"><span>게시기간</span></th>
                                     <td>
-                                        <!-- <div class="date-range">
-                                            <label>
-                                                <input type="date" />
-                                            </label>
-                                            <span class="dash"></span>
-                                            <label>
-                                                <input type="date" />
-                                            </label>
-                                        </div> -->
                                         <fieldset>
                                             <legend>기간</legend>
                                             <label for="">
