@@ -36,7 +36,7 @@
     <div class="wrap">
         <div class="bodyWrap">
         <main class="contentWrap">
-            <secition class="modal-container">
+            <section class="modal-container">
                 <div id="customModal" class="layerPopup modal on">
                     <div class="pop-content">
                         <div class="pop-header">
@@ -64,7 +64,7 @@
                                                     <input class="form-control upload-text uploadInput" type="text" placeholder="파일을 입력해주세요" tabindex="0" value="Seasonal_Summer.png" readonly>
                                                 </span>
                                                 <label class="upload-label" for="files">
-                                                    <input id="files" class="upload" name="files" type="file" />
+                                                    <input id="files" class="upload" name="files" type="file" aria-invalid="true" />
                                                     <span class="sr-only fileLabel">파일선택</span>
                                                 </label>
                                             </span>
@@ -73,7 +73,7 @@
                                         </li>
                                         <li>
                                             <label for="wrt02" class="essential">이미지 Alt값</label>
-                                            <input id="wrt02" type="text" placeholder="예: 금융상품">
+                                            <input id="wrt02" type="text" placeholder="예: 금융상품" aria-invalid="true">
                                             <p id="wrt02-error" class="error" role="alert">
                                                 이미지 Alt값을 입력해주세요.</p><!--[D] 유효성 성공일땐 hidden 처리-->
                                         </li>
@@ -119,7 +119,7 @@
                         </div>
                     </div>
                 </div>
-            </secition>
+            </section>
         </main>
         </div>
     </div>

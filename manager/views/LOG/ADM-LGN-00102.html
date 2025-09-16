@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="euc-kr" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>비밀번호 변경 화면&gt;mg캐피탈</title>
+
+        <meta name="keywords" content="MG캐피탈" />
+        <meta name="copyright" content="copyrights 2025 MG캐피탈" />
+        <meta name="description" content="MG캐피탈 리스금융, 할부금융, 스탁론, 기업대출, 장기렌트카, PF대출 등 금융 서비스 제공." />
+        <meta name="viewport" content="width=device-width" />
+        <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta http-equiv="Expires" content="-1" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Cache-Control" content="No-Cache" />
+
+        <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico" />
+        <link rel="stylesheet" href="../../assets/css/ui-util.css" />
+        <script  type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+        <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+        <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+        <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
+        <script src="../../assets/js/include.js"></script>
+        <style>
+            /* 로그인 헤더 */
+            .login .login-header { margin:100px auto 0;}
+            .login .login-header img { width:214px; height:144px; }
+            .login .login-header h2 { font-size:var(--font16); font-weight:var(--font-w-r); text-align:center; }
+
+            /* 로그인 content */
+            .login .contentWrap { flex:unset; margin:46px auto 0; padding:0; width:auto; }
+            .login .login-content { width:560px; }
+            .login .login-content li + li { margin-top:24px; }
+            .login .login-content li label { font-size:var(--font16); font-weight:var(--font-w-m); color:#666; }
+            .login .login-content li input[type="text"], 
+            .login .login-content li input[type="password"], 
+            .login .login-content li input[type="email"], 
+            .login .login-content li input[type="number"],
+            .login .login-content li select { flex:1; margin-top:10px; padding:20px; height:67px; border-radius:12px; }
+            .login .login-content li .btn-body { margin-top:10px; width:150px; height:67px; border-radius:12px; }
+            .btn-body:disabled { background:var(--color-d); color:var(--default-color); }
+
+            /* 휴대폰번호 */
+            .phone { display:block; }
+
+            /* 로그인 버튼 */
+            .login .button-ccontainer .button-content { margin-top:46px; text-align:center; }
+            .login .button-wrap .btn-login { padding:21px 0 19px; width:100%; border-radius:12px; background-color:var(--primary); font-size:var(--font20); font-weight:var(--font-w-m); color:var(--white); }
+            .login .button-wrap .btn-text { margin:24px 0 22px; border-bottom:1px solid var(--default-color); font-size:var(--font16); font-weight:var(--font-w-m); }
+            .login .button-wrap p { padding-top:20px; font-size:var(--font14); font-weight:var(--font-w-m); color:var(--color-9); }
+
+            /* 유효성 체크 */
+            li > .error { grid-column:2; margin-top:6px; color:var(--error); font-size:var(--font14); }
+
+            /* 구분선 */
+            .dividing { width:100%; height:1px; background-color:var(--color-d); font-size:0; }
+        </style>
+    </head>
+
+    <body>
+    <div class="wrap login">
+        <!-- s:header -->
+        <div class="login-header">
+            <img src="../../assets/images/logo.png" alt="MG캐피탈 로고">
+            <h2>MG캐피탈 관리자 로그인</h2>
+        </div>
+        <!-- //e:header -->
+        <div class="bodyWrap">
+            <main class="contentWrap">
+                <section class="login-container">
+                    <form action="#">
+                        <fieldset>
+                            <legend>비밀번호 변경</legend>
+                            <ul class="login-content">
+                                <li>
+                                    <label for="npw01">새 비밀번호</label>
+                                    <input id="npw01" type="text" name="npw01" aria-label="새 비밀번호 입력" aria-invalid="true">
+                                    <!--[D] 유효성 성공일땐 hidden 처리-->
+                                    <p id="wrt02-error" class="error" role="alert">비밀번호는 8~12자 영문, 숫자, 특수문자, 대문자를 혼용하여 입력하시기 바랍니다.</p>
+                                    <!-- <p id="wrt02-error" class="error" role="alert">비밀번호는 8자 이상 12자 이하 이어야 합니다.</p>
+                                    <p id="wrt02-error" class="error" role="alert">비밀번호에 숫자가 포함되지 않았습니다.</p>
+                                    <p id="wrt02-error" class="error" role="alert">비밀번호에 영문자가 포함되지 않았습니다.</p>
+                                    <p id="wrt02-error" class="error" role="alert">비밀번호에 소문자가 포함되지 않았습니다.</p>
+                                    <p id="wrt02-error" class="error" role="alert">비밀번호에 대문자가 포함되지 않았습니다.</p>
+                                    <p id="wrt02-error" class="error" role="alert">비밀번호에 특수문자가 포함되지 않았습니댜.</p>
+                                    <p id="wrt02-error" class="error" role="alert">비밀번호는 연속된 3자리 이상의 문자나 숫자가 포함될 수 없습니다.</p>
+                                    <p id="wrt02-error" class="error" role="alert">비밀번호는 잘 알려진 단어가 포함될 수 없습니다.</p>
+                                    <p id="wrt02-error" class="error" role="alert">비밀번호는 아이디나 휴대폰 번호가 포함될 수 없습니다.</p>
+                                    <p id="wrt02-error" class="error" role="alert">비밀번호에 사용 불가한 특수문자가 포함되어 있습니다.</p> -->
+                                </li>
+                                <li>
+                                    <label for="npw02">새 비밀번호 확인</label>
+                                    <input id="npw02" type="text" name="npw02" aria-label="새 비밀번호 입력" aria-invalid=”true”>
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </form>
+                    <div class="info-content">
+                        <ul class="info-list">
+                            <li>8~12 영문, 숫자, 특수문자, 대문자를 혼용하여 작성</li>
+                            <li>사용가능 특수문자 [!, @, #, $, %, ^, +, =, -, *, &, _, |, ~]</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="button-ccontainer">
+                    <div class="button-content">
+                        <div class="button-wrap">
+                            <a herf="javascript:void(0);" class="btn-login">등록</a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    </body>
+
+</html>
