@@ -55,16 +55,6 @@
                 background-position: center;
                 background-size: auto;
             }
-
-            /* datepicker */
-            .date-range {
-                display: flex;
-                align-items: center;
-                gap: 16px;
-            }
-            .date-range .dash::before {
-                content: "-";
-            }
         </style>
     </head>
 
@@ -134,7 +124,7 @@
                                 <tr>
                                     <th id="th-period" scope="row"><span>게시기간</span></th>
                                     <td>
-                                        <div class="date-range">
+                                        <!-- <div class="date-range">
                                             <label>
                                                 <input type="date" />
                                             </label>
@@ -142,14 +132,24 @@
                                             <label>
                                                 <input type="date" />
                                             </label>
-                                        </div>
+                                        </div> -->
+                                        <fieldset>
+                                            <legend>기간</legend>
+                                            <label for="">
+                                                <input id="password-input" type="date" name="date" placeholder="디폴트" aria-invalid="true" />
+                                            </label>
+                                            <span class="ipt-hyphen">-</span>
+                                            <label for="">
+                                                <input id="password-input" type="date" name="date" placeholder="디폴트" aria-invalid="true" />
+                                            </label>
+                                        </fieldset>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th id="th-early" scope="row"><span>공고 조기마감</span></th>
                                     <td>
                                         <label class="check">
-                                            <input type="checkbox" name="row1-active" value="" checked="" />
+                                            <input type="checkbox" name="row1-active" value="" checked />
                                         </label>
                                     </td>
                                 </tr>
