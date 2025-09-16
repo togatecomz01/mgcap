@@ -58,8 +58,10 @@ table th { background:#eee; position:sticky; top:0; }
 table td { background:#fff; }
 
 .fileName > a { color:#7070ff; }
-.non td { background:#f5f5f5;/ }
+.common td,
+.non td { background:#f5f5f5; }
 .comp td { background:rgb(29 148 212 / 17%);}
+
 .non td.fileName > a { color:gray; }
 a:hover { color:#0000ff; }
 

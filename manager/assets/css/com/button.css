@@ -1,6 +1,6 @@
 @charset "euc-kr";
 body{
-  --btn-board:var(--color-9);
+  --btn-board:var(--color-d);
   --btn-padding:20px 16px;
   --btn-font-color:var(--color-75);
   --btn-font-size:var(--font16);
@@ -45,9 +45,10 @@ button, a { cursor:pointer; display:inline-block; display:inline-flex; align-ite
 
 
 /**리스트 버튼**/
-.list-content td button,
-.list-content td a {  display:block; margin:0 auto; width:32px; height:32px; background-color:var(--white);; background-repeat:no-repeat; background-position:center; background-size:20px; border-radius:4px; font-size:0;  }
+.list-content td .btn-ico-mod,
+.list-content td .btn-ico-del {  display:block; margin:0 auto; width:32px; height:32px; background-color:var(--white);; background-repeat:no-repeat; background-position:center; background-size:20px; border-radius:4px; font-size:0;  }
 .list-content td .btn-clear { font-size:var(--font16); right:11px; top:50%; transform:translateY(-50%); }
+.list-content td a { font-weight:var(--font-w-m); }
 .list-content td a.btn-text,
 .list-content td button.btn-text { width:auto; height:auto; color:var(--btn-text-color); font-size:var(--font16); text-decoration:underline !important;  }
 

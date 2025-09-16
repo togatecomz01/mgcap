@@ -29,14 +29,10 @@
     // 모든 UI 컴포넌트 스크립트 로드
     function loadUIComponents() {
         var components = [
-            'accordion.js',
-            'datepicker.js', 
-            'fake_select.js',
             'input.js',
             'layout.js',
             'popup.js',
-            'tab.js',
-            'nav.js'
+           
         ];
         
         var basePath = '../../assets/js/ui/com/';

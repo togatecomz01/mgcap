@@ -58,18 +58,24 @@
                                 <div class="form-content">
                                     <div class="form-wrap">
                                         <div class="form-group">
-                                            <input id="password-input" type="text" name="text" class="form-control" placeholder="디폴트" />
+                                            <input id="password-input" type="text" name="text" class="form-control" placeholder="디폴트" aria-invalid="false" />
                                         </div>
                                         <div class="form-group">
-                                            <input id="password-input" type="text" name="text" class="form-control" placeholder="포커스" autofocus />
+                                            <input id="password-input" type="text" name="text" class="form-control" placeholder="포커스" autofocus aria-invalid="false" />
                                         </div>
                                     </div>
                                     <div class="form-wrap">
                                         <div class="form-group">
-                                            <p class="ipt-clear"><input id="password-input" type="text" name="text" class="form-control" placeholder="내용을 입력해주세요" value="완료되었습니다." /></p>
+                                            <p class="ipt-clear"><input id="password-input" type="text" name="text" class="form-control" placeholder="내용을 입력해주세요" value="완료되었습니다." aria-invalid="false" /></p>
                                         </div>
                                         <div class="form-group">
-                                            <input id="password-input" type="text" name="text" class="form-control" placeholder="비활성" disabled />
+                                            <input id="password-input" type="text" name="text" class="form-control" placeholder="비활성" aria-invalid="false" disabled  />
+                                        </div>
+                                    </div>
+                                    <div class="form-wrap">
+                                        <div class="form-group">
+                                            <p class="ipt-clear"><input id="password-input" type="text" name="text" class="form-control" placeholder="내용을 입력해주세요" value="유효성체크 에러" aria-invalid="true" /></p>
+                                            <p id="wrt02-error" class="error" role="alert">에러가 생성되었을시 문구생성 성공일시는 p.error태그 삭제나 hidden 처리</p>
                                         </div>
                                     </div>
                                 </div>
@@ -85,7 +91,7 @@
                                 <div class="form-content">
                                     <div class="form-wrap">
                                         <div class="form-group">
-                                            <select name="fruits" class="form-control" required>
+                                            <select name="fruits" required>
                                                 <option value="" disabled selected>선택해주세요.</option>
                                                 <option value="1">옵션1</option>
                                                 <option value="2">옵션2</option>
@@ -94,7 +100,7 @@
                                               </select>
                                         </div>
                                         <div class="form-group">
-                                            <select name="fruits" class="form-control" required style="border:1px solid #2392FF;">
+                                            <select name="fruits" required style="border:1px solid #2392FF;">
                                                 <option value="" disabled selected>선택해주세요.</option>
                                                 <option value="1">옵션1</option>
                                                 <option value="2">옵션2</option>
@@ -105,7 +111,7 @@
                                     </div>
                                     <div class="form-wrap">
                                         <div class="form-group">
-                                            <select name="fruits" class="form-control" required>
+                                            <select name="fruits" required>
                                                 <option value="" disabled>선택해주세요.</option>
                                                 <option value="1">옵션1</option>
                                                 <option value="2">옵션2</option>
@@ -115,6 +121,15 @@
                                         </div>
                                         <div class="form-group">
                                             <select name="fruits" class="form-control" disabled>
+                                            <option value="" disabled>선택해주세요.</option>
+                                            <option value="1">옵션1</option>
+                                            <option value="2">옵션2</option>
+                                            <option value="3">옵션3</option>
+                                            <option value="4" selected>비활성</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <select name="fruits" disabled>
                                             <option value="" disabled>선택해주세요.</option>
                                             <option value="1">옵션1</option>
                                             <option value="2">옵션2</option>

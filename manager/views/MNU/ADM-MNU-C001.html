@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="euc-kr" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>메뉴관리&gt;폼&gt;샘플&gt;</title>
+
+
+        <meta name="viewport" content="width=device-width" />
+        <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta http-equiv="Expires" content="-1" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Cache-Control" content="No-Cache" />
+
+        <link rel="stylesheet" href="../../assets/css/ui-util.css" />
+        <script  type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+        <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+        <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+        <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
+        <script src="../../assets/js/include.js"></script>
+        <style>
+
+        .select-display{
+        position:absolute; left:12px; right:32px; top:50%; transform:translateY(-50%);
+        overflow:hidden; white-space:nowrap; text-overflow:ellipsis; pointer-events:none;
+        color:#222; font:inherit; line-height:1.2;
+        }
+
+
+        </style>
+        <script>
+            (function(){
+              function sync(wrap){
+                var sel = wrap.querySelector('select');
+                var disp = wrap.querySelector('.select-display');
+                disp.textContent = sel.options[sel.selectedIndex] ? sel.options[sel.selectedIndex].text : '';
+              }
+              var wraps = document.querySelectorAll('.select-wrap');
+              Array.prototype.forEach.call(wraps, function(w){
+                sync(w);
+                w.querySelector('select').addEventListener('change', function(){ sync(w); });
+              });
+            })();
+            </script>
+    </head>
+
+    <body>
+    <div class="wrap">
+        <!--<div id="header"> 
+            <script> $(document).ready(function () { $("#header").load("../COM/header.html"); }); </script>
+        </div>-->
+        <div data-include-path="../COMMON/header.html"></div>
+        <div class="bodyWrap">
+        <div data-include-path="../COMMON/lnb.html"></div>
+        <main class="contentWrap">
+            <seciton class="title_container">
+            <h2>메뉴관리</h2>
+            <ul class="location_content">
+                <li><a href="javascript:void(0);" class="home">홈</a></li>
+                <li><a href="javascript:void(0);">메뉴관리</a></li>
+                <li><a href="javascript:void(0);">1depth 메뉴명</a></li>
+            </ul>
+            </seciton>
+            <section class="list-container">
+                <div class="list-content">
+                    <table>
+                        <caption>순서, 대메뉴명, 중메뉴명, url, 활성, 하위메뉴 변경, 수정사항, 삭제로 구성된 메뉴관리 목록</caption>
+                        
+                        <colgroup>
+                            <col class="num">
+                            <col class="w_194">
+                            <col class="w_194">
+                            <col class="w_194">
+                            <col clas="w_auto">
+                            <col class="toggle">
+                            <col class="txt-btn">
+                            <col class="ico-btn">
+                            <col class="ico-btn">
+                        </colgroup>
+                        
+                        <thead>
+                            <tr>
+                            <th id="th-num" scope="col">순서</th>
+                            <th id="th-menu" scope="col">메뉴</th>
+                            <th id="th-mid-menu" scope="col">2depth메뉴</th>
+                            <th id="th-sub-menu" scope="col">3depth메뉴명</th>
+                            <th id="th-url" scope="col">url</th>
+                            <th id="th-active" scope="col">활성</th>
+                            <th id="th-sub" scope="col">하위메뉴명</th>
+                            <th id="th-modify" scope="col">수정사항</th>
+                            <th id="th-del" scope="col">삭제</th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span>
+                                        <input id="row1-num" class="tac" type="text" value="1" aria-labelledby="th-num">
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="select-display" aria-hidden="true"></span>
+                                    <select id="row1-menu" aria-labelledby="th-menu" name="menu-1">
+                                        <option value="" disabled>선택해주세요.</option>
+                                        <option selected>1depth 메뉴명1depth 메뉴명1depth 메뉴명1depth 메뉴명1depth 메뉴명1depth 메뉴명1depth 메뉴명</option>
+                                        <option>옵션2</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select id="row1-mid-menu" aria-labelledby="th-menu" name="mid-menu-1">
+                                        <option value="" disabled>선택해주세요.</option>
+                                        <option selected>2depth 메뉴명</option>
+                                        <option>옵션2</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <span class="ipt-clear">
+                                        <input id="row1-sub-menu" type="text" placeholder="메뉴명을 입력해주세요" value="메뉴명을 입력해주세요" title="메뉴명을 입력해주세요" aria-labelledby="th-sub-menu">
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="ipt-clear">
+                                        <input id="row1-url" type="text" placeholder="URL 경로를 입력해 주세요" value="" aria-labelledby="th-url">
+                                    </span>
+                                </td>
+                                <td>
+                                    <label class="toggle">
+                                        <input type="checkbox" name="row1-active" checked aria-labelledby="th-active">
+                                        <span>활성</span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn-text" aria-label="1depth 메뉴명 노출' 하위메뉴 바로가기">바로가기</button>
+                                </td>
+                                <td>
+                                    <button class="btn-ico-mod" type="button" aria-label="‘1depth 메뉴명 노출’ 수정">수정</button>
+                                </td>
+                                <td>
+                                    <button class="btn-ico-del" type="button" aria-label="‘1depth 메뉴명 노출’ 삭제" aria-controls="modal-delete" data-modal-open="modal">삭제</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                        </table>
+                </div>
+                <div class="info-content">
+                    <ul class="info-list">
+                        <li>[[순서 저장]버튼 : 3depth메뉴의 변경된 ‘순서’를 저장합니다. </li>
+                        <li>수정사항 열에 위치한 [저장]버튼 : 3depth메뉴의 ‘메뉴, 2depth메뉴, 3depth메뉴명, URL, 활성상태’를 저장합니다.</li>
+                    </ul>
+                </div>
+            </section>
+            <secition class="button-ccontainer">
+                <div class="button-content cta">
+                    <div class="button-wrap">
+                        <a herf="javascript:void(0);" class="btn-secondary reset">초기화</a>
+                        <a herf="javascript:void(0);" class="btn-secondary">신규등록</a>
+                        <a herf="javascript:void(0);" class="btn-primary">순서저장</a>
+                    </div>
+                </div>
+            </secition>
+            <secition class="modal-container">
+                <div id="modal" class="layerPopup modal">
+                    <div class="pop-content">
+                        <div class="pop-header">
+                            <h2 class="pop-tit">메뉴를 삭제하시겠습니까?</h2>
+                        </div>
+                        <div class="pop-body">
+                            <p class="tit">[2depth 메뉴명 노출]</p>
+                            <p>메뉴를 삭제하시겠습니까?
+                            삭제 시, 해당 메뉴의 하위메뉴도 모두 삭제됩니다.</p>
+                        </div>
+                        <div class="pop-footer">
+                            <div class="button-content">
+                                <button type="button" class="btn-pop-secondary" data-popup-close="modal">취소</button>
+                                <button type="button" class="btn-pop-primary"  data-popup-close="modal">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </secition>
+        </main>
+        </div>
+    </div>
+
+    </body>
+
+</html>
