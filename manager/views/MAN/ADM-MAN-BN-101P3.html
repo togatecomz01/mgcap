@@ -49,13 +49,13 @@
                                     <ul class="write-content">
                                         <li>
                                             <label for="wrt01">등록자</label>
-                                            <input id="wrt01" type="text" value="수퍼어드민 성명 노출" readonly>
+                                            <span><input id="wrt01" type="text" value="수퍼어드민 성명 노출" readonly></span>
                                         </li>
                                         <li>
                                             <label for="wrt02" class="essential">배너명</label>
-                                            <input id="wrt02" type="text" placeholder="예: 금융상품" aria-invalid="true">
-                                            <p id="wrt02-error" class="error" role="alert">
-                                                배너명을 입력해주세요.</p><!--[D] 유효성 성공일땐 hidden 처리이거나 전체 p.error 태그 삭제-->
+                                            <span><input id="wrt02" type="text" placeholder="예: 금융상품" aria-invalid="true"></span>
+                                            <span id="wrt02-error" class="error" role="alert">
+                                                배너명을 입력해주세요.</span><!--[D] 유효성 성공일땐 hidden 처리이거나 전체 p.error 태그 삭제-->
                                         </li>
                                         <li>
                                             <span class="essential">이미지</span>
@@ -68,14 +68,14 @@
                                                     <span class="sr-only fileLabel">파일선택</span>
                                                 </label>
                                             </span>
-                                            <p id="wrt02-error" class="error" role="alert">
-                                                이미지를 업르도해주세요.</p><!--[D] 유효성 성공일땐 hidden 처리-->
+                                            <span id="wrt02-error" class="error" role="alert">
+                                                이미지를 업르도해주세요.</span><!--[D] 유효성 성공일땐 hidden 처리-->
                                         </li>
                                         <li>
                                             <label for="wrt02" class="essential">이미지 Alt값</label>
-                                            <input id="wrt02" type="text" placeholder="예: 금융상품" aria-invalid="true">
-                                            <p id="wrt02-error" class="error" role="alert">
-                                                이미지 Alt값을 입력해주세요.</p><!--[D] 유효성 성공일땐 hidden 처리-->
+                                            <span><input id="wrt02" type="text" placeholder="예: 금융상품" aria-invalid="true"></span>
+                                            <span id="wrt02-error" class="error" role="alert">
+                                                이미지 Alt값을 입력해주세요.</span><!--[D] 유효성 성공일땐 hidden 처리-->
                                         </li>
                                         <li>
                                             <span class="essential">게시기간</span>
@@ -90,15 +90,15 @@
                                                 </label>
                                             </fieldset>
                                             <!--[D]: 미입력 경우 노출 -->
-                                            <p id="wrt02-error" class="error" role="alert">게시기간을 설정해주세요.</p><!--[D] 유효성 성공일땐 hidden 처리-->
+                                            <span id="wrt02-error" class="error" role="alert">게시기간을 설정해주세요.</span><!--[D] 유효성 성공일땐 hidden 처리-->
 
                                             <!--[D]: 작일자 및 완료일자가 등록시점보다 과거의 시간일 경우 노출-->
-                                            <p id="wrt02-error" class="error" role="alert">게시기간은 등록시점을 기준으로 과거의 시점을 선택할 수 없습니다.</p>
+                                            <span id="wrt02-error" class="error" role="alert">게시기간은 등록시점을 기준으로 과거의 시점을 선택할 수 없습니다.</span>
                                             
                                             <!--[D]: 완료일자가 시작일자보다 과거일 경우 노출-->
-                                            <p id="wrt02-error" class="error" role="alert">게시기간의 완료일자가 게시 시작일자보다 과거입니다.<br/>게시기간을 다시 설정해주세요.</p>
+                                            <span id="wrt02-error" class="error" role="alert">게시기간의 완료일자가 게시 시작일자보다 과거입니다.<br/>게시기간을 다시 설정해주세요.</span>
                                             <!--[D]: 시즈널배너 관리(목록)에 등록되어있는 다른 시즈널배너(기념일)와 게시기간이 겹치는 경우 노출-->
-                                            <p id="wrt02-error" class="error" role="alert">게시기간이 중복되는 시즈널배너가 존재합니다.<br/>게시기간을 다시 설정해주세요.</p>
+                                            <span id="wrt02-error" class="error" role="alert">게시기간이 중복되는 시즈널배너가 존재합니다.<br/>게시기간을 다시 설정해주세요.</span>
                                         </li>
                                     </ul>  
                                 </fieldset>

@@ -31,7 +31,7 @@
     <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
     <script src="../../assets/js/include.js"></script>
     <style>
-        .list-content td a.download { width:auto; height:auto; font-size:var(--font16); color:var(--active); text-decoration:underline !important; text-underline-offset:5px; }
+        .list-content td .download { width:auto; height:auto; font-size:var(--font16); color:var(--active); text-decoration:underline !important; text-underline-offset:5px; }
         .button-content { margin-top:30px; }
     </style>
 </head>
@@ -79,18 +79,18 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        <input id="row1-title" class="tac" type="text" value="1" aria-labelledby="th-title">
+                                        <span><input id="row1-title" class="tac" type="text" value="1" aria-labelledby="th-title"></span>
                                     </td>
                                     <td><span>오토리스 상품배너</span></td>
                                     <td><span>오토리스</span></td>
                                     <td><span>배너 내용이 들어갑니다.</span></td>
-                                    <td><a class="download" href="javascript:void(0);" download>Banner-Image01.png</a></td>
-                                    <td>오토리스 배너 자동차 이미지</td>
-                                    <td><span>https://www.mgcap.co.kr/prdt/car1.js</span>p</td>
+                                    <td><button class="download">Banner-Image01.png</button></td>
+                                    <td><span>오토리스 배너 자동차 이미지</span></td>
+                                    <td><span>https://www.mgcap.co.kr/prdt/car1.js</span></td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <input id="row2-title" class="tac" type="text" value="2" aria-labelledby="th-title">
+                                        <span><input id="row2-title" class="tac" type="text" value="2" aria-labelledby="th-title"></span>
                                     </td>
                                     <td><span>오토할부 상품배너</span></td>
                                     <td><span>오토할부</span></td>
@@ -101,12 +101,12 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <input id="row1-title" class="tac" type="text" value="1" aria-labelledby="th-title">
+                                        <span><input id="row1-title" class="tac" type="text" value="1" aria-labelledby="th-title"></span>
                                     </td>
                                     <td><span>배너명 배너명 배너명</span></td>
                                     <td><span>기업금융</span></td>
                                     <td><span>기업의 든든한 성장 파트너 맞춤형 금융 솔루션.</span></td>
-                                    <td><a class="download" href="javascript:void(0);" download>Banner-Image03.png</a></td>
+                                    <td><button class="download">Banner-Image03.png</button></td>
                                     <td><span>이미지 Alt값 이미지 Alt값</span></td>
                                     <td><span>https://www.mgcap.co.kr/prdt/banner.jsp</span></td>
                                 </tr>
