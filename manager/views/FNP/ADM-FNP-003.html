@@ -60,15 +60,21 @@
                             <tbody>
                             <tr>
                                 <th id="th-title" scope="row"><span>작성자</span></th>
-                                <td><span>홍길동</span></td>
+                                <td>
+                                    <span>홍길동</span>
+                                </td>
                             </tr>            
                             <tr>
                                 <th id="th-title" scope="row"><span>작성일</span></th>
-                                <td><span>YYYY.MM.DD</span></td>
+                                <td>
+                                    <span>YYYY.MM.DD</span>
+                                </td>
                             </tr>            
                             <tr>
                                 <th id="th-title" scope="row"><span>수정일</span></th>
-                                <td><span>YYYY.MM.DD</span></td>
+                                <td>
+                                    <span>YYYY.MM.DD</span>
+                                </td>
                             </tr>            
                             <tr>
                                 <th id="th-title" scope="row"><span class="essential">상품구분</span></th>
@@ -85,13 +91,13 @@
                             <tr>
                                 <th id="th-title" scope="row"><span class="essential">상품명</span></th>
                                 <td>
-                                    <input type="text" placeholder="내용을 입력해주세요." value="공작기계">
+                                    <input type="text" placeholder="내용을 입력해주세요." value="공작기계" readonly="">
                                 </td>
                             </tr>
                             <tr>
                                 <th id="th-title" scope="row"><span class="essential">상품소개</span></th>
                                 <td>
-                                    <textarea placeholder="내용을 입력해주세요.">중소기업 창업 및 노후장비 교체를 위해 공작기계 리스는 MG캐피탈과 함께 하세요! 
+                                    <textarea placeholder="내용을 입력해주세요." readonly="">중소기업 창업 및 노후장비 교체를 위해 공작기계 리스는 MG캐피탈과 함께 하세요! 
 공작기계 리스는 MG캐피탈 대표 상품입니다.
 당사는 공작기계 부문 전문 금융회사로 국내외 주요 메이커 업체들과 제휴약정을 맺고 있습니다.
                                     </textarea>
@@ -100,7 +106,7 @@
                             <tr>
                                 <th id="th-title" scope="row"><span class="essential">상품소개</span></th>
                                 <td>
-                                    <div id="edt" style="height: 490px; width: 100%; border: 1px solid #ddd; padding: 20px; border-radius: 5px;">
+                                    <div id="edt" style="height: 490px; width: 100%; border: 1px solid #ddd; padding: 20px; border-radius: 5px;" readonly="">
 차량가격, 공채매입, 등록제비용, 차량세 등 자동차 구입시 필요한 자금 이체를 지원하여 드리고, 매월 리스료를 당사에게 지급함으로서 일정기간 동안 저렴한 비용으로 원하는 자동차를 사용할 수 있는 금융 서비스입니다.
                                     <!-- 이 부분 나모웹 에디터 작업필요, 인라인으로 영역만 잡아둔 상태 -->
                                     </div>
@@ -162,7 +168,7 @@
                         </table>
                     </section>
                     <section class="button-ccontainer">
-                        <div class="button-content cta"> <!-- 이 부분 section과 간격 추가 -->
+                        <div class="button-content cta">
                             <div class="button-wrap">
                                 <button class="btn-secondary reset">초기화</button>
                                 <a href="javascript:void(0);" class="btn-primary" data-modal-open="fnp01">저장</a>
@@ -174,74 +180,17 @@
                 </div>
             </main>
 
-            <!-- D: 저장버튼 눌렀을 시 -> 본문 필수체크 된 내용이 비었을 때 이 모달 사용 -->
-            <secition class="modal-container">
-                <div id="fnp01" class="layerPopup modal">
-                    <div class="pop-content">
-                        <div class="pop-body">
-                            <p>내용을 작성해주세요.</p>
-                        </div>
-                        <div class="pop-footer">
-                            <div class="button-content">
-                                <button type="button" class="btn-pop-primary" data-popup-close="fnp01">확인</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </secition>
+            <!-- D: 저장버튼 눌렀을 시 -> 본문 필수체크 된 내용이 없을 시 이 메시지가 사용된 알럿 사용 -->
+            <!-- M: 내용을 작성해주세요. -->
 
-            <!-- D: 저장버튼 눌렀을 시 -> 본문 필수체크 된 내용이 전부 채워졌을 시 이 모달 사용 -->
-            <secition class="modal-container">
-                <div id="fnp02" class="layerPopup modal">
-                    <div class="pop-content">
-                        <div class="pop-body">
-                            <p>수정이 완료되었습니다.</p>
-                        </div>
-                        <div class="pop-footer">
-                            <div class="button-content">
-                                <a href="./ADM-FNP-001-2.html" class="btn-pop-primary">확인</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </secition>
+            <!-- D: 저장버튼 눌렀을 시 -> 본문 필수체크 된 내용이 전부 채워졌을 시 이 메시지가 사용된 알럿 사용 -->
+            <!-- M: 저장이 완료되었습니다. -->
 
-            <!-- D: 삭제버튼 눌렀을 시 confirm 알럿 (달라질 수 있어 임시 추가) -->
-            <secition class="modal-container">
-                <div id="fnp03" class="layerPopup modal">
-                    <div class="pop-content">
-                        <div class="pop-header">
-                            <h2 class="pop-tit">금융상품 수정사항을 삭제하시겠습니까?</h2>
-                        </div>
-                        <div class="pop-body">
-                            <p>삭제한 금융상품은</p>
-                            <p>대고객 채널에 바로 반영됩니다.</p>
-                        </div>
-                        <div class="pop-footer">
-                            <div class="button-content">
-                                <button type="button" class="btn-pop-secondary" data-popup-close="fnp03">취소</button>
-                                <button type="button" class="btn-pop-primary" data-modal-open="fnp04">확인</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </secition>
+            <!-- D: 삭제버튼 눌렀을 시 -> 취소, 확인 버튼이 있는 기본알럿 사용 -->
+            <!-- M: 삭제하시겠습니까? -->
 
-            <!-- D: 삭제 완료 모달 -->
-            <secition class="modal-container">
-                <div id="fnp04" class="layerPopup modal">
-                    <div class="pop-content">
-                        <div class="pop-body">
-                            <p>삭제가 완료되었습니다.</p>
-                        </div>
-                        <div class="pop-footer">
-                            <div class="button-content">
-                                <a href="./ADM-FNP-001-2.html" class="btn-pop-primary">확인</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </secition>
+            <!-- D: 삭제 완료 모달 -> 확인버튼만 있는 기본알럿 사용 -->
+            <!-- M: 삭제가 완료되었습니다. -->
         </div>
     </div> 
 </body>

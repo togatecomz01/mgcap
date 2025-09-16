@@ -73,7 +73,7 @@
                                 <tr>
                                     <th id="th-title" scope="row"><span class="essential">제목</span></th>
                                     <td><input type="text" placeholder="내용을 입력해주세요."></td> 
-                                    <!-- 수정 페이지면 input에 value 추가 -->
+                                    <!-- 수정 페이지면 input에 value 추가 + readonly = "" 까지 추가 -->
                                 </tr>            
                                 <tr>
                                     <th id="th-title" scope="row"><span class="essential">내용</span></th>
@@ -104,39 +104,11 @@
                 </div>
             </main>
 
-            <!-- D: 본문 필수체크 된 내용이 없을 시 이 모달 사용 -->
-            <secition class="modal-container">
-                <div id="news01" class="layerPopup modal">
-                    <div class="pop-content">
-                        <div class="pop-body">
-                            <p>내용을 작성해주세요.</p>
-                        </div>
-                        <div class="pop-footer">
-                            <div class="button-content">
-                                <button type="button" class="btn-pop-primary" data-popup-close="news01">확인</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </secition>
-
-            <!-- D: 본문 필수체크 된 내용이 전부 있을 시 이 모달 사용 -->
-            <secition class="modal-container">
-                <div id="news02" class="layerPopup modal">
-                    <div class="pop-content">
-                        <div class="pop-body">
-                            <p>내용이 등록되었습니다.</p>
-                            <!-- D:: 수정 페이지 시 밑에 p 주석 풀고 사용 -->
-                            <!-- <p>내용이 등록되었습니다.</p> -->
-                        </div>
-                        <div class="pop-footer">
-                            <div class="button-content">
-                                <a href="./ADM-CO-MJACT-001.html" class="btn-pop-primary">확인</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </secition>
+            <!-- D: 저장버튼 눌렀을 시 -> 본문 필수체크 된 내용이 없을 시 이 메시지가 사용된 알럿 사용 -->
+            <!-- M: 내용을 작성해주세요. -->
+            
+            <!-- D: 저장버튼 눌렀을 시 -> 본문 필수체크 된 내용이 전부 채워졌을 시 이 메시지가 사용된 알럿 사용 -->
+            <!-- M: 저장이 완료되었습니다. -->
         </div>
     </div> 
 </body>
