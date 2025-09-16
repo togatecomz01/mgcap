@@ -32,9 +32,18 @@
 
     <style>
         /* 첨부파일 리스트 */
-        .file-list li + li {margin-top: 12px;}
-        .file-list li button {text-decoration-line: underline; text-underline-position: from-font;}
-        .file-list li button::before {content: ""; margin-right: 2px; width: 20px; height: 20px; background-image: url(../../assets/images/com/svg/ico_file.svg); background-repeat: no-repeat; background-position: center; background-size: auto;}
+        .ipt-file {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            text-decoration-line: underline;
+            text-underline-position: from-font;
+        }
+        .ipt-file .ipt-clear::before {
+            margin-right: 2px;
+            background-color: var(--color-2);
+            mask-size: auto;
+        }
     </style>
     <!-- (선택) IE11용 폴리필: 안전하게 깔아두면 좋아요 -->
     <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Promise,Array.from,Object.assign,Number.isNaN"></script>
@@ -84,14 +93,14 @@
                                 <tr>
                                     <th id="th-file" scope="row"><span>첨부파일</span></th>
                                     <td>
-                                        <ul class="file-list">
-                                            <li>
+                                        <span class="ipt-file">
+                                            <span class="ipt-clear">
                                                 <button type="button">[MG캐피탈]입사지원서.docx</button>
-                                            </li>
-                                            <li>
+                                            </span>
+                                            <span class="ipt-clear">
                                                 <button type="button">[MG캐피탈]입사지원서.docx</button>
-                                            </li>
-                                        </ul>
+                                            </span>
+                                        </span>
                                     </td>
                                 </tr>            
                         </tbody>
