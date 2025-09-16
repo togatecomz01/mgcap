@@ -36,16 +36,6 @@
                 border-radius: 10px;
                 background: #fff;
             }
-
-            /* datepicker */
-            .date-range {
-                display: flex;
-                align-items: center;
-                gap: 16px;
-            }
-            .date-range .dash::before {
-                content: "-";
-            }
         </style>
     </head>
 
@@ -143,15 +133,16 @@
                                 <tr>
                                     <th id="th-period" scope="row"><span class="essential">게시기간</span></th>
                                     <td>
-                                        <div class="date-range">
-                                            <label>
-                                                <input type="date" />
+                                        <fieldset>
+                                            <legend>기간</legend>
+                                            <label for="">
+                                                <input id="password-input" type="date" name="date" placeholder="디폴트" aria-invalid="true" />
                                             </label>
-                                            <span class="dash"></span>
-                                            <label>
-                                                <input type="date" />
+                                            <span class="ipt-hyphen">-</span>
+                                            <label for="">
+                                                <input id="password-input" type="date" name="date" placeholder="디폴트" aria-invalid="true" />
                                             </label>
-                                        </div>
+                                        </fieldset>
                                     </td>
                                 </tr>
                             </tbody>
@@ -259,15 +250,16 @@
                                 <tr>
                                     <th id="th-period" scope="row"><span class="essential">게시기간</span></th>
                                     <td>
-                                        <div class="date-range">
-                                            <label>
-                                                <input type="date" />
+                                        <fieldset>
+                                            <legend>기간</legend>
+                                            <label for="">
+                                                <input id="password-input" type="date" name="date" placeholder="디폴트" aria-invalid="true" />
                                             </label>
-                                            <span class="dash"></span>
-                                            <label>
-                                                <input type="date" />
+                                            <span class="ipt-hyphen">-</span>
+                                            <label for="">
+                                                <input id="password-input" type="date" name="date" placeholder="디폴트" aria-invalid="true" />
                                             </label>
-                                        </div>
+                                        </fieldset>
                                     </td>
                                 </tr>
                                 <tr>
