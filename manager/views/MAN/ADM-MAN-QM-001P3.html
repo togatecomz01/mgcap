@@ -31,15 +31,7 @@
     <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
     <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
     <script src="../../assets/js/include.js"></script>
-    <style>
-        .pop-content button.btn-clear { width:24px; height:24px; font-size:var(--font18); }
-
-        /* 유효성 검사: 팝업 > 테이블 */
-        tbody tr.error { background-color:#FFF8F8; }
-        tbody tr.error input[type="text"], tbody tr.error input[type="password"], tbody tr.error input[type="email"], tbody tr.error input[type="number"], tbody tr.error input[type="search"] { border:1px solid var(--error); }
-        .list-content + .error { margin-top:16px; }
-        .error { color:var(--error); }
-    </style>
+  
 </head>
 
 <body>
@@ -47,7 +39,7 @@
         <div class="bodyWrap">
             <main class="contentWrap">
                 <secition class="modal-container">
-                    <div id="qm02" class="layerPopup modal on">
+                    <div id="qm02" class="layerPopup on">
                         <div class="pop-content">
                             <div class="pop-header">
                                 <h2 class="pop-tit">퀵메뉴 순서 설정</h2>
