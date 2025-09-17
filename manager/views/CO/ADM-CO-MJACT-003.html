@@ -31,6 +31,9 @@
     <script src="../../assets/js/include.js"></script>
     <!-- (선택) IE11용 폴리필: 안전하게 깔아두면 좋아요 -->
     <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Promise,Array.from,Object.assign,Number.isNaN"></script>
+    <style>
+        .image {width: 560px; height: 130px; margin-bottom: 24px;}
+    </style>
 </head>
 <body>
     <div class="wrap">
@@ -84,12 +87,45 @@
                                             <span class='pd-txt'>[하략]</span> -->
                                         </div> 
                                     </td> 
-                                </tr>            
+                                </tr>
+                                <tr>
+                                    <th id="th-file" scope="row"><span class="essential">썸네일 이미지</span></th>
+                                    <td>
+                                        <div class="form-group">
+                                            <span class="ipt-file"> 
+                                                <span class="ipt-clear">
+                                                    <!-- 수정 페이지 밸류 추가 EX -->
+                                                    <!-- <input class="form-control upload-text uploadInput" type="text" placeholder="" value="파일123456.docx" tabindex="0" readonly="" /> -->
+                                                    <input class="form-control upload-text uploadInput" type="text" placeholder="파일을 선택해주세요" tabindex="0" readonly="" />
+                                                </span>
+                                                <label class="upload-label" for="files">
+                                                    <input id="files" class="upload" name="files" type="file" />
+                                                    <span class="sr-only fileLabel">파일 선택</span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- D:: 수정 페이지일 시 주석 해제 -->
+                                <!-- <tr>
+                                    <th id="th-title" scope="row"><span class="essential">적용 이미지</span></th>
+                                    <td>
+                                        <div class="image"></div>
+                                    </td> 
+                                </tr> -->
+                                <tr>
+                                    <th id="th-title" scope="row"><span class="essential">이미지 Alt값</span></th>
+                                    <td><input type="text" placeholder="내용을 입력해주세요."></td> 
+                                    <!-- 수정 페이지면 input에 value 추가 + readonly="" 까지 추가 -->
+                                </tr>                          
                             </tbody>
                         </table>
                         <div class="info-content">
                             <ul class="info-list">
-                                <li>첨부파일을 새로 등록하면, 기존의 첨부파일은 <span class="color-error">삭제</span>됩니다.</li>
+                                <li>첨부파일 파일 형식 : jpg, png, gif</li>
+                                <!-- D:: 수정 페이지일 시 주석 해제 -->
+                                <!-- <li>첨부파일을 새로 등록하면 기존의 첨부파일은 <span class="color-error">삭제</span> 됩니다</li>
+                                <li>첨부파일 사이즈 : 00 X 00</li> -->
                             </ul>
                         </div>
                     </section>
