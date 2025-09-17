@@ -100,7 +100,7 @@
                                             <span class="ipt-file"> 
                                                 <span class="ipt-clear">
                                                     <!-- 수정 페이지 밸류 추가 EX -->
-                                                    <!-- <input class="form-control upload-text uploadInput" type="text" placeholder="파일을 선택해주세요" value="파일123456.docx" tabindex="0" readonly="" /> -->
+                                                    <!-- <input class="form-control upload-text uploadInput" type="text" placeholder="" value="파일123456.docx" tabindex="0" readonly="" /> -->
                                                     <input class="form-control upload-text uploadInput" type="text" placeholder="파일을 선택해주세요" tabindex="0" readonly="" />
                                                 </span>
                                                 <label class="upload-label" for="files">
@@ -148,37 +148,25 @@
                 </div>
             </main>
 
-            <!-- D: 본문 필수체크 된 내용이 없을 시 이 모달 사용 -->
-            <secition class="modal-container">
-                <div id="arc01" class="layerPopup modal">
-                    <div class="pop-content">
-                        <div class="pop-body">
-                            <p>내용을 작성해주세요.</p>
-                        </div>
-                        <div class="pop-footer">
-                            <div class="button-content">
-                                <button type="button" class="btn-pop-primary" data-popup-close="arc01">확인</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </secition>
+            <!-- 공통 알럿 (ADM-MNU-001P1) 사용 -->
+            <!-- D: 저장 혹은 등록 버튼 눌렀을 시 -> 본문 필수체크 된 내용이 비어있을 때 이 메시지가 사용된 알럿 사용 -->
+            <!-- M: 내용을 작성해주세요. -->
 
-            <!-- D: 본문 필수체크 된 내용이 전부 있을 시 이 모달 사용 -->
-            <secition class="modal-container">
-                <div id="arc02" class="layerPopup modal">
-                    <div class="pop-content">
-                        <div class="pop-body">
-                            <p>저장이 완료되었습니다.</p>
-                        </div>
-                        <div class="pop-footer">
-                            <div class="button-content">
-                                <a href="./ADM-CST-ARC-001.html" class="btn-pop-primary">확인</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </secition>
+            <!-- D: 저장 혹은 등록버튼 눌렀을 시 -> 본문 필수체크 된 내용이 전부 채워져 있을 때 이 메시지가 사용된 알럿 사용 -->
+            <!-- M: 저장 || 등록이 완료되었습니다. -->
+
+
+            <!-- "삭제버튼 눌렀을 시" 공통 알럿 (ADM-MNU-001P1) 취소 , 확인 버튼이 있는 컨펌알럿 사용 -->
+            <!-- M: 삭제하시겠습니까? -->
+
+            <!-- D: 삭제 완료 모달 -> (ADM-MNU-001P1) 확인버튼만 있는 기본알럿 사용 -->
+            <!-- M: 삭제가 완료되었습니다. -->
+
+
+            <!-- 초기화 버튼 눌렀을 시 -> 공통 알럿 (ADM-MNU-001P1) 취소 버튼이 있는 컨펌알럿 사용 -->
+            <!-- M: 초기화 하시겠습니까? -->
+            <!-- Y: 해당 버전의 개인정보처리방침 노출(화면 재진입) -->
+            <!-- N: 컨펌 얼럿 닫기 -->
         </div>
     </div> 
 </body>
