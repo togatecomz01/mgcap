@@ -105,6 +105,8 @@ h3 {  display:block; padding:20px; font-size:var(--font18); font-weight:var(--fo
 .form-container fieldset.search > select { width:120px; }
 .form-container fieldset.search > input { width:264px; }
 .list-container:has(tr.error) span.error{ display:block; margin-top:16px; color:var(--error); }
+.list-container + .list-container { margin-top:36px; }
+
 
 /*¾²±â**/
 .write-container td fieldset { gap:18px; }

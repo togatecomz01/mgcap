@@ -33,6 +33,9 @@ a, a:hover, a:focus, a:active { text-decoration: none !important; cursor: pointe
 .tar{ text-align: right !important; }
 
 p { color:var(--color-75); } 
+.color75 {color:var(--color-75);}
+.blue-txt { color:var(--primary); }
+
 /*---------------------------------------------
 	#ÀÎÇ² ¸®¼Â
 ---------------------------------------------*/
