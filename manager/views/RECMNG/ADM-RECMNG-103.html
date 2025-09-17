@@ -73,6 +73,11 @@
                                         </select>
                                     </td>
                                 </tr>
+                                <!-- 수정 페이지에서만 -->
+                                <!-- <tr>
+                                    <th id="th-state" scope="row"><span>상태</span></th>
+                                    <td><span>진행중</span></td>
+                                </tr> -->
                                 <tr>
                                     <th id="th-title" scope="row"><span class="essential">제목</span></th>
                                     <td>
@@ -81,7 +86,7 @@
                                 </tr>
                                 <tr>
                                     <th id="th-content" scope="row"><span class="essential">내용</span></th>
-                                    <td><div id="edt">나모웹에디터 추가 예정</div></td>
+                                    <td><div class="edt">나모웹에디터 추가 예정</div></td>
                                 </tr>
                                 <tr>
                                     <th id="th-file" scope="row"><span>첨부파일</span></th>
@@ -136,134 +141,15 @@
                                         </fieldset>
                                     </td>
                                 </tr>
-                            </tbody>
-                        </table>
-                    </section>
-                    <section class="button-ccontainer">
-                        <div class="button-content cta">
-                            <div class="button-wrap">
-                                <a herf="javascript:void(0);" class="btn-primary">저장</a>
-                                <a herf="javascript:void(0);" class="btn-secondary">목록</a>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- 얼럿 -->
-                    <!-- 1. OO을 작성해주세요. / 확인 -->
-                    <!-- 2. 내용이 등록되었습니다. / 확인('채용공고 관리 목록(ADM-RECMNG-101)'으로 이동) -->
-                </main>
-
-                <!-- 수정 -->
-                <!-- <main class="contentWrap">
-                    <section class="title_container">
-                        <h2>채용공고 수정</h2>
-                        <ul class="location_content">
-                            <li><a href="javascript:void(0);" class="home">홈</a></li>
-                            <li><a href="javascript:void(0);">채용관리</a></li>
-                            <li><a href="javascript:void(0);">채용공고 관리</a></li>
-                            <li><a href="javascript:void(0);">채용공고 수정</a></li>
-                        </ul>
-                    </section>
-                    <section class="write-container">
-                        <table class="write-content">
-                            <caption>
-                                작성자, 작성일, 구분, 상태, 제목, 내용, 첨부파일, 게시기간, 공고 조기마감으로 구성된 채용공고 수정 표
-                            </caption>
-                            <colgroup>
-                                <col style="width: 210px" />
-                                <col style="width: auto" />
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th id="th-writer" scope="row"><span>작성자</span></th>
-                                    <td><span>홍길동</span></td>
-                                </tr>
-                                <tr>
-                                    <th id="th-date" scope="row"><span>작성일</span></th>
-                                    <td><span>YYYY.MM.DD</span></td>
-                                </tr>
-                                <tr>
-                                    <th id="th-type" scope="row"><span class="essential">구분</span></th>
-                                    <td>
-                                        <select>
-                                            <option value="" disabled="">선택</option>
-                                            <option value="" selected="">정기</option>
-                                            <option value="">수시</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th id="th-state" scope="row"><span>상태</span></th>
-                                    <td><span>진행중</span></td>
-                                </tr>
-                                <tr>
-                                    <th id="th-title" scope="row"><span class="essential">제목</span></th>
-                                    <td><span><input type="text" placeholder="내용을 입력해주세요." value="2025년 MG캐피탈 일반직 신입직원 채용" required /></span></td>
-                                </tr>
-                                <tr>
-                                    <th id="th-content" scope="row"><span class="essential">내용</span></th>
-                                    <td><div id="edt">나모웹에디터 추가 예정</div></td>
-                                </tr>
-                                <tr>
-                                    <th id="th-file" scope="row"><span>첨부파일</span></th>
-                                    <td>
-                                        <div class="form-group">
-                                            <span class="ipt-file">
-                                                <span class="ipt-clear">
-                                                    <input class="form-control upload-text uploadInput" type="text" placeholder="파일을 선택해주세요" tabindex="0" readonly="" />
-                                                </span>
-                                                <label class="upload-label" for="files">
-                                                    <input id="files" class="upload" name="files" type="file" />
-                                                    <span class="sr-only fileLabel">파일 선택</span>
-                                                </label>
-                                            </span>
-                                        </div>
-                                        <div class="form-group">
-                                            <span class="ipt-file">
-                                                <span class="ipt-clear">
-                                                    <input class="form-control upload-text uploadInput" type="text" placeholder="파일을 선택해주세요" tabindex="0" readonly="" />
-                                                </span>
-                                                <label class="upload-label" for="files">
-                                                    <input id="files" class="upload" name="files" type="file" />
-                                                    <span class="sr-only fileLabel">파일 선택</span>
-                                                </label>
-                                            </span>
-                                        </div>
-                                        <div class="form-group">
-                                            <span class="ipt-file">
-                                                <span class="ipt-clear">
-                                                    <input class="form-control upload-text uploadInput" type="text" placeholder="파일을 선택해주세요" tabindex="0" readonly="" />
-                                                </span>
-                                                <label class="upload-label" for="files">
-                                                    <input id="files" class="upload" name="files" type="file" />
-                                                    <span class="sr-only fileLabel">파일 선택</span>
-                                                </label>
-                                            </span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th id="th-period" scope="row"><span class="essential">게시기간</span></th>
-                                    <td>
-                                        <fieldset>
-                                            <legend>기간</legend>
-                                            <label for="">
-                                                <input id="password-input" type="date" name="date" placeholder="디폴트" aria-invalid="true" />
-                                            </label>
-                                            <span class="ipt-hyphen">-</span>
-                                            <label for="">
-                                                <input id="password-input" type="date" name="date" placeholder="디폴트" aria-invalid="true" />
-                                            </label>
-                                        </fieldset>
-                                    </td>
-                                </tr>
-                                <tr>
+                                <!-- 수정 페이지에서만 -->
+                                <!-- <tr>
                                     <th id="th-early" scope="row"><span>공고 조기마감</span></th>
                                     <td>
                                         <label class="check">
                                             <input type="checkbox" name="row1-active" value="" checked="" />
                                         </label>
                                     </td>
-                                </tr>
+                                </tr> -->
                             </tbody>
                         </table>
                     </section>
@@ -276,10 +162,10 @@
                             </div>
                         </div>
                     </section>
-                </main> -->
-                <!-- 얼럿(수정) -->
-                <!-- 1. OO을 작성해주세요. / 확인 -->
-                <!-- 2. 내용이 수정되었습니다. / 확인('채용공고 관리 목록(ADM-RECMNG-101)'으로 이동) -->
+                    <!-- 얼럿 -->
+                    <!-- 1. OO을 작성해주세요. / 확인 -->
+                    <!-- 2. 내용이 등록되었습니다. / 확인('채용공고 관리 목록(ADM-RECMNG-101)'으로 이동) -->
+                </main>
             </div>
         </div>
     </body>
