@@ -90,8 +90,9 @@ h1, h2, h3, h4, h5, h6 { color:var(--color-2); }
 h3 {  display:block; padding:20px; font-size:var(--font18); font-weight:var(--font-w-m); color:#222; }
 
 /**컨텐츠**/
-.contentWrap { flex:1;  padding:48px 60px 120px ; width:calc(100% - 240px); min-width:1400px; overflow:auto; }
+.contentWrap { flex:1;  padding:48px 60px 120px ; width:calc(100% - 240px); min-width:1200px; overflow:auto; }
 .contentWrap:has(.write-container) { background:var(--write-bg); }
+.contentWrap:has(.intro-container) { padding-top:125px; }
 .contentWrap > div {width:100%; }
 .form-container { width:100%; }
 
@@ -102,7 +103,7 @@ h3 {  display:block; padding:20px; font-size:var(--font18); font-weight:var(--fo
 
 /**폼컨텐츠**/
 .form-content .form-wrap { display:flex; width:100%; gap:30px;  }
-.form-content .form-wrap:has(fieldset:only-of-type) { justify-content:flex-end; }
+.contentWrap:has(.list-container) .form-content .form-wrap:has(fieldset:only-of-type) { justify-content:flex-end; }
 .form-content .form-wrap .form-group { flex:1; }
 
 /**리스트**/
@@ -121,11 +122,11 @@ h3 {  display:block; padding:20px; font-size:var(--font18); font-weight:var(--fo
 
 /*쓰기**/
 .write-container td fieldset { gap:18px; }
-.write-container { width:100%; padding:44px 24px; background:var(--white); border-radius:20px; overflow:hidden; }
+.write-container { width:100%; padding:44px 24px; background:var(--white); border-radius:10px; overflow:hidden; }
 .write-container td .edt { width:653px; height:490px; }
 
 /** 관리자 채널 대쉬보드 메인화면 **/
-.intro-container { width:100%; height:100%; background:url("../../images/com/main.png")no-repeat right bottom 50%/1162px; }
+.intro-container { width:100%; height:100%; background: linear-gradient(128deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 54%), url("../../images/com/main.png") no-repeat right bottom 50%/972px; }
 .intro-container h2 { position:relative; margin-bottom:24px; padding-left:22px; font-size: 44px; color:var(--color-2); }
 .intro-container h2::before { content:""; position:absolute; top:50%; transform:translateY(-50%); left:0; display:inline-block; width:8px; height:108px; background-color:var(--primary); }
 .intro-container p { padding-left:30px; }
@@ -176,8 +177,10 @@ h3 {  display:block; padding:20px; font-size:var(--font18); font-weight:var(--fo
 /*---------------------------------------------
     #관리자 채널 에러 화면
 ---------------------------------------------*/
-.error-container { position:relative; margin:200px auto 0; padding-top:196px; text-align:center; }
+.error-container { position:relative; margin:160px auto 0; padding-top:196px; text-align:center; }
 .error-container::before { content:""; position:absolute; top:0; left:50%; transform:translateX(-50%); display:inline-block; width:176px; height:176px; background:url("../../images/com/img_error.png")no-repeat 50%/176px auto; }
+.error-container h2 { margin-bottom: 20px; font-size:var(--font38); }
+.error-container p { font-size:var(--font20); }
 .error-container + .button-ccontainer { margin-top:34px; text-align:center; }
 .error button,
 .error a { padding:15px 48px 16px; border:2px solid var(--color-2); font-size:var(--font20); font-weight:var(--font-w-m); color:var(--color-2); background-color:var(--white); }

@@ -177,7 +177,7 @@ tr.error td input { border:1px solid var(--error);}
 .write-content textarea { max-width:560px; }
 .write-content textarea { min-height:138px; }
 
-.pop-body .write-content li input[readonly] { border:0; font-size:var(--font18); }
+.write-content li input[readonly] { padding-left:0; border:0; font-size:var(--font18); }
 .pop-body .write-content li fieldset { display:flex; gap:5px; }
 .pop-body .write-content li fieldset > label { width:100%; }
 
