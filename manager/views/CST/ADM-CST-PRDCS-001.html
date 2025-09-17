@@ -31,12 +31,8 @@
             .pending {
                 color: #f46241;
             }
-            .form-wrap fieldset {
-                width: 100%;
-            }
             select {
-                width: auto;
-                min-width: 120px;
+                width: 120px;
             }
         </style>
     </head>
@@ -61,14 +57,14 @@
                         <section class="form-container">
                             <div class="form-content">
                                 <div class="form-wrap">
-                                    <select id="category" name="category">
-                                        <option value="all">전체</option>
-                                        <option value="complain">자동차</option>
-                                        <option value="praise">설비&#47;의료&middot;헬스</option>
-                                        <option value="praise">주택</option>
-                                        <option value="praise">기업</option>
-                                    </select>
                                     <fieldset>
+                                        <select id="category" name="category">
+                                            <option value="all">전체</option>
+                                            <option value="complain">자동차</option>
+                                            <option value="praise">설비&#47;의료&middot;헬스</option>
+                                            <option value="praise">주택</option>
+                                            <option value="praise">기업</option>
+                                        </select>
                                         <legend>구분</legend>
                                         <label class="radio">
                                             <input type="radio" name="row2-active" value="" checked="" />
