@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="euc-kr" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>수정&gt;개인정보처리방침&gt;관리자페이지&gt;mg캐피탈</title>
+
+        <meta name="keywords" content="MG캐피탈" />
+        <meta name="copyright" content="copyrights 2025 MG캐피탈" />
+        <meta name="description" content="MG캐피탈 리스금융, 할부금융, 스탁론, 기업대출, 장기렌트카, PF대출 등 금융 서비스 제공." />
+        <meta name="viewport" content="width=device-width" />
+
+        <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta http-equiv="Expires" content="-1" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Cache-Control" content="No-Cache" />
+
+        <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico" />
+        <link rel="stylesheet" href="../../assets/css/ui-util.css" />
+        <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+        <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+        <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+
+        <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
+        <script src="../../assets/js/include.js"></script>
+        <style>
+            .color-error {
+                color: var(--error);
+            }
+            .info-content {
+                padding-left: 0;
+                padding-right: 0;
+                padding-bottom: 0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="wrap">
+            <div data-include-path="../COMMON/header.html"></div>
+            <div class="bodyWrap">
+                <div data-include-path="../COMMON/lnb.html"></div>
+                <main class="contentWrap">
+                    <section class="title_container">
+                        <h2>개인정보처리방침 수정</h2>
+                        <ul class="location_content">
+                            <li><a href="javascript:void(0);" class="home">홈</a></li>
+                            <li><a href="javascript:void(0);">고객센터 관리</a></li>
+                            <li><a href="javascript:void(0);">개인정보처리방침</a></li>
+                        </ul>
+                    </section>
+                    <section class="write-container">
+                        <table class="write-content">
+                            <caption>
+                                수정자, 수정일, 기준일, 구분, 제목, 내용, 자동화평가, 기초정보재산출로 구성된 개인정보처리방침 수정 표
+                            </caption>
+                            <colgroup>
+                                <col style="width: 210px" />
+                                <col style="width: auto" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th id="th-modifier" scope="row"><span>수정자</span></th>
+                                    <td><span>홍길동</span></td>
+                                </tr>
+                                <tr>
+                                    <th id="th-modify-date" scope="row"><span>수정일</span></th>
+                                    <td><span>YYYY.MM.DD</span></td>
+                                </tr>
+                                <tr>
+                                    <th id="th-base-date" scope="row"><span class="essential">기준일</span></th>
+                                    <td>
+                                        <fieldset>
+                                            <legend>기준일</legend>
+                                            <label for="">
+                                                <input id="password-input" type="date" name="date" placeholder="디폴트" aria-invalid="true" />
+                                            </label>
+                                        </fieldset>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th id="th-type" scope="row"><span class="essential">구분</span></th>
+                                    <td>
+                                        <select>
+                                            <option value="" selected="">개인정보처리방침 YYYY.MM.DD</option>
+                                            <option value="">개인정보처리방침 YYYY.MM.DD</option>
+                                            <option value="">개인정보처리방침 YYYY.MM.DD</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th id="th-title" scope="row"><span class="essential">제목</span></th>
+                                    <td>
+                                        <span><input type="text" placeholder="내용을 입력해주세요." required /></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th id="th-content" scope="row"><span class="essential">내용</span></th>
+                                    <td><div id="edt">나모웹에디터 추가 예정</div></td>
+                                </tr>
+                                <tr>
+                                    <th id="th-file-auto" scope="row"><span>자동화평가</span></th>
+                                    <td>
+                                        <div class="form-group">
+                                            <span class="ipt-file">
+                                                <span class="ipt-clear">
+                                                    <input class="form-control upload-text uploadInput" type="text" placeholder="파일을 선택해주세요" tabindex="0" readonly="" />
+                                                </span>
+                                                <label class="upload-label" for="files">
+                                                    <input id="files" class="upload" name="files" type="file" />
+                                                    <span class="sr-only fileLabel">파일 선택</span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th id="th-file-basic" scope="row"><span>기초정보재산출</span></th>
+                                    <td>
+                                        <div class="form-group">
+                                            <span class="ipt-file">
+                                                <span class="ipt-clear">
+                                                    <input class="form-control upload-text uploadInput" type="text" placeholder="파일을 선택해주세요" tabindex="0" readonly="" />
+                                                </span>
+                                                <label class="upload-label" for="files">
+                                                    <input id="files" class="upload" name="files" type="file" />
+                                                    <span class="sr-only fileLabel">파일 선택</span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="info-content">
+                            <ul class="info-list">
+                                <li>첨부파일을 새로 선택 후 수정 하면, 기존의 첨부파일은 <span class="color-error">삭제</span>됩니다.</li>
+                                <li>첨부파일은 <span class="color-error">최대 5M</span>까지 가능합니다.</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="button-ccontainer">
+                        <div class="button-content cta">
+                            <div class="button-wrap">
+                                <a herf="javascript:void(0);" class="btn-secondary reset">초기화</a>
+                                <a herf="javascript:void(0);" class="btn-primary">수정</a>
+                                <a herf="javascript:void(0);" class="btn-secondary">등록</a>
+                                <a herf="javascript:void(0);" class="btn-secondary">삭제</a>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- 얼럿 -->
+                    <!-- 1. 알럿메시지(유효성체크)문구노출 / 확인 -->
+                    <!-- 2. 컨펌알럿 문구노출 / 취소,확인 -->
+                </main>
+            </div>
+        </div>
+    </body>
+</html>
