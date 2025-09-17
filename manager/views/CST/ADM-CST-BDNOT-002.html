@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="euc-kr" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>상세&gt;입찰공고 관리&gt;관리자페이지&gt;mg캐피탈</title>
+
+        <meta name="keywords" content="MG캐피탈" />
+        <meta name="copyright" content="copyrights 2025 MG캐피탈" />
+        <meta name="description" content="MG캐피탈 리스금융, 할부금융, 스탁론, 기업대출, 장기렌트카, PF대출 등 금융 서비스 제공." />
+        <meta name="viewport" content="width=device-width" />
+
+        <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta http-equiv="Expires" content="-1" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Cache-Control" content="No-Cache" />
+
+        <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico" />
+        <link rel="stylesheet" href="../../assets/css/ui-util.css" />
+        <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+        <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+        <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+
+        <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
+        <script src="../../assets/js/include.js"></script>
+        <style>
+            /* 첨부파일 리스트 */
+            .ipt-file {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                text-decoration-line: underline;
+                text-underline-position: from-font;
+            }
+            .ipt-file .ipt-clear::before {
+                margin-right: 2px;
+                background-color: var(--color-2);
+                mask-size: auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="wrap">
+            <div data-include-path="../COMMON/header.html"></div>
+            <div class="bodyWrap">
+                <div data-include-path="../COMMON/lnb.html"></div>
+                <main class="contentWrap">
+                    <section class="title_container">
+                        <h2>입찰공고 관리 상세</h2>
+                        <ul class="location_content">
+                            <li><a href="javascript:void(0);" class="home">홈</a></li>
+                            <li><a href="javascript:void(0);">입찰공고 관리</a></li>
+                            <li><a href="javascript:void(0);">입찰공고 관리 상세</a></li>
+                        </ul>
+                    </section>
+                    <section class="write-container">
+                        <table class="write-content">
+                            <caption>
+                                등록자, 등록일, 기간, 제목, 내용, 첨부파일로 구성된 입찰공고 관리 상세 표
+                            </caption>
+                            <colgroup>
+                                <col style="width: 210px" />
+                                <col style="width: auto" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th id="th-writer" scope="row">등록자</th>
+                                    <td>
+                                        <span>홍길동</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th id="th-date" scope="row">등록일</th>
+                                    <td>
+                                        <span>YYYY.MM.DD</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th id="th-period" scope="row">기간</th>
+                                    <td>
+                                        <span>
+                                            <fieldset>
+                                                <legend>기간</legend>
+                                                <label for="">
+                                                    <input id="password-input" type="date" name="date" placeholder="디폴트" />
+                                                </label>
+                                                <span class="ipt-hyphen">-</span>
+                                                <label for="">
+                                                    <input id="password-input" type="date" name="date" placeholder="디폴트" />
+                                                </label>
+                                            </fieldset>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th id="th-title" scope="row">제목</th>
+                                    <td>
+                                        <span><input id="wrt01" type="text" value="2025년 MG캐피탈 일반직 신입직원 채용" readonly="" /></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th id="th-content" scope="row">내용</th>
+                                    <td>
+                                        <span>
+                                            <textarea id="wrt01" readonly>
+내용
+내용
+                                            </textarea>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th id="th-file" scope="row">첨부파일</th>
+                                    <td>
+                                        <span class="ipt-file">
+                                            <span class="ipt-clear">
+                                                <button type="button">[MG캐피탈]입사지원서.docx</button>
+                                            </span>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section class="button-ccontainer">
+                        <div class="button-content cta">
+                            <div class="button-wrap">
+                                <a herf="javascript:void(0);" class="btn-primary">수정</a>
+                                <a herf="javascript:void(0);" class="btn-secondary">목록</a>
+                                <a herf="javascript:void(0);" class="btn-secondary">삭제</a>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- 얼럿 -->
+                    <!-- 1. 삭제하시겠습니까? / 취소,확인 -->
+                    <!-- 2. 삭제가 완료되었습니다. / 확인('입찰공고 관리 목록(ADM-CST-BDNOT-001)'으로 이동) -->
+                </main>
+            </div>
+        </div>
+    </body>
+</html>
