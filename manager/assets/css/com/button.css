@@ -65,6 +65,7 @@ button, a { cursor:pointer; display:inline-block; display:inline-flex; align-ite
 
 /**body 버튼 ***/
 .btn-body { padding:10px; width:85px; height:46px; border:1px solid var(--form-board); background:var(--btn-body-color); border:1px solid transparent; color:var(--white); border-radius:4px; }
+.btn-body:disabled { background:var(--color-d); color:var(--default-color); }
 
 /**CTA 01**/
 .button-ccontainer:has(.cta) { display:block; margin-top:24px; }
@@ -80,3 +81,10 @@ button, a { cursor:pointer; display:inline-block; display:inline-flex; align-ite
 .pop-content a { font-size:var(--font16); width:106px; height:40px; border-radius:100px; text-align:center; font-weight:500; }
 .btn-pop-primary { color:var(--white); background:var(--btn-pop-primary); border:1px solid var(--btn-pop-primary); }
 .btn-pop-secondary {color:var(--color-45); background:var(--white); border:1px solid var(--color-e); }
+
+/** 로그인 버튼 **/
+.login .button-ccontainer .button-content { margin-top:46px; text-align:center; }
+.login .button-wrap .btn-login { padding:21px 0 19px; width:100%; border-radius:12px; background-color:var(--primary); font-size:var(--font20); font-weight:var(--font-w-m); color:var(--white); }
+.login .button-wrap .btn-text { margin:24px 0 22px; border-bottom:1px solid var(--default-color); font-size:var(--font16); font-weight:var(--font-w-m); }
+.login .button-wrap p { padding-top:20px; font-size:var(--font14); font-weight:var(--font-w-m); color:var(--color-9); }
+.login .login-content li .btn-body { margin-top:10px; width:150px; height:67px; border-radius:12px; }

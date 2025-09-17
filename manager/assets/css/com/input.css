@@ -158,8 +158,6 @@ span:has(input[aria-invalid="true"]) + .error { grid-column:2; margin-top:6px; c
 
 tr.error td input { border:1px solid var(--error);}
 
-
-
 /**팝업이 있을때**/
 .pop-body .ipt-file { margin:8px 0; }
 
@@ -182,3 +180,13 @@ tr.error td input { border:1px solid var(--error);}
 .pop-body .write-content li input[readonly] { border:0; font-size:var(--font18); }
 .pop-body .write-content li fieldset { display:flex; gap:5px; }
 .pop-body .write-content li fieldset > label { width:100%; }
+
+/** 로그인 **/
+.login .login-content li label { font-size:var(--font16); font-weight:var(--font-w-m); color:#666; }
+.login .login-content li input[type="text"], 
+.login .login-content li input[type="password"], 
+.login .login-content li input[type="email"], 
+.login .login-content li input[type="number"],
+.login .login-content li select { flex:1; margin-top:10px; padding:20px; height:67px; border-radius:12px; }
+/* 휴대폰번호 */
+.phone { display:block; }
