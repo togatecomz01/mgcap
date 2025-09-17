@@ -35,7 +35,7 @@ a, a:hover, a:focus, a:active { text-decoration: none !important; cursor: pointe
 p { color:var(--color-75); } 
 .color75 {color:var(--color-75);}
 .blue-txt { color:var(--primary); }
-
+.color-error { color: var(--error);}
 /*---------------------------------------------
 	#ÀÎÇ² ¸®¼Â
 ---------------------------------------------*/

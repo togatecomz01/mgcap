@@ -51,6 +51,8 @@ button, a { cursor:pointer; display:inline-block; display:inline-flex; align-ite
 .list-content td a { font-weight:var(--font-w-m); }
 .list-content td a.btn-text,
 .list-content td button.btn-text { width:auto; height:auto; color:var(--btn-text-color); font-size:var(--font16); text-decoration:underline !important;  }
+.list-content td a.btn-text.img,
+.list-content td button.btn-text.img { font-weight:var(--font-w-m); color:var(--active); }
 
 /**페이지네이션 버튼 **/
 .pagination-content { position:relative; display:flex; padding:20px; align-items:center; justify-content:center; gap:8px; }
@@ -88,3 +90,6 @@ button, a { cursor:pointer; display:inline-block; display:inline-flex; align-ite
 .login .button-wrap .btn-text { margin:24px 0 22px; border-bottom:1px solid var(--default-color); font-size:var(--font16); font-weight:var(--font-w-m); }
 .login .button-wrap p { padding-top:20px; font-size:var(--font14); font-weight:var(--font-w-m); color:var(--color-9); }
 .login .login-content li .btn-body { margin-top:10px; width:150px; height:67px; border-radius:12px; }
+
+/** 파일 다운로드 버튼 **/
+.ipt-file:has(button) { flex-direction: column; }

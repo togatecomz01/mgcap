@@ -48,4 +48,8 @@ col.ico-btn { width:94px; min-width:74px }
 .list-content td:first-of-type.bo-b { border-bottom:1px solid var(--color-d); }
 .list-content td:first-of-type.bo-t { border-top:1px solid var(--color-d); }
 
-
+/** ÃÑ Á¢¼ÓÈ­¸é **/
+.tbl-total-row { background: var(--table-th); }
+.tbl-total-row > td { font-weight: 700; }
+.tbl-total-row > td:first-child { color: var(--color-2); }
+.tbl-total-row > td:nth-child(2) { color: var(--primary); }
