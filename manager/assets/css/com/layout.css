@@ -98,6 +98,8 @@ h3 {  display:block; padding:20px; font-size:var(--font18); font-weight:var(--fo
 .form-container + .list-container { margin-top:24px; }
 .list-container { width:100%; border:1px solid #ddd; border-radius:20px; overflow:hidden; }
 .list-container h3 { border-bottom:1px solid var(--color-d); }
+.contentWrap:has(.list-container) .form-container .form-wrap { justify-content:space-between;  }
+
 .form-container fieldset { gap:18px; }
 .form-container fieldset.search { display:flex; justify-content:flex-end; gap:14px;  }
 .form-container fieldset.search > select { width:120px; }
