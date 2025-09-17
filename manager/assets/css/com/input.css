@@ -164,6 +164,7 @@ tr.error td input { border:1px solid var(--error);}
 .pop-body .ipt-file { margin:8px 0; }
 
 /**list**/
+.list-content th.check-all-area label { cursor:pointer; }
 .list-content td label.check:only-of-type { justify-content:center; }
 
 

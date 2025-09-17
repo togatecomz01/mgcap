@@ -122,6 +122,29 @@
     }
   
     /*---------------------------
+      체크 전체해제
+    ---------------------------*/
+    function uncheck() {
+        var $chkAllLabel = $('label[for="chkAll"]');
+        var $chkAll = $('#chkAll');
+        var $thCheck = $('tbody td input[type="checkbox"]');
+
+      if (!$chkAllLabel.length) {
+          console.log('전체 해제가 없습니다');
+          return;
+      }
+
+      $chkAllLabel.off('click').on('click', function(e) {
+        e.preventDefault();
+
+        // 전체해제 체크박스 해제
+        $chkAll.prop('checked', false);
+
+        // 모든 행 체크박스 해제
+        $thCheck.prop('checked', false);
+      });
+    }
+    /*---------------------------
       DOM Ready
     ---------------------------*/
     $(function () {
@@ -135,6 +158,9 @@
       // 업로더/클리어 초기화
       initFileUploader();
       initClearable();
+
+      // 체크박스 전체해제 초기화
+      uncheck();
   
       // 동적 추가 대응
       $(document).on('focusin', 'input[type="text"]', function () {
