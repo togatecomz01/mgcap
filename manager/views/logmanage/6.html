@@ -3,7 +3,7 @@
     <head>
         <meta charset="euc-kr" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>오류발생 이력조회</title>
+        <title>상세&gt;오류발생 이력조회&gt;관리자페이지&gt;mg캐피탈</title>
 
         <meta name="keywords" content="MG캐피탈" />
         <meta name="copyright" content="copyrights 2025 MG캐피탈" />
@@ -26,7 +26,7 @@
         <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
         <script src="../../assets/js/include.js"></script>
         <style>
-            .write-content + .write-content {
+            .list-content + .write-content {
                 margin-top: 24px;
             }
         </style>
@@ -36,14 +36,14 @@
         <div class="wrap">
             <div class="bodyWrap">
                 <main class="contentWrap">
-                    <secition class="modal-container">
+                    <section class="modal-container">
                         <div id="customModal" class="layerPopup modal on">
                             <div class="pop-content">
                                 <div class="pop-header">
                                     <h2 class="pop-tit">로그 상세 이력</h2>
                                 </div>
                                 <div class="pop-body">
-                                    <div class="write-content">
+                                    <div class="list-content">
                                         <table>
                                             <caption>
                                                 접속 IP, 세션 ID, 고객명, 로그인 ID로 구성된 표
@@ -57,15 +57,15 @@
                                             <tbody>
                                                 <tr>
                                                     <th>접속 IP</th>
-                                                    <td>118.235.14.64</td>
+                                                    <td><span>118.235.14.64</span></td>
                                                     <th>세션 ID</th>
-                                                    <td>YYYY.MM.DD</td>
+                                                    <td><span>YYYY.MM.DD</span></td>
                                                 </tr>
                                                 <tr>
                                                     <th>고객명</th>
-                                                    <td>홍길동</td>
+                                                    <td><span>홍길동</span></td>
                                                     <th>로그인 ID</th>
-                                                    <td>mg1234</td>
+                                                    <td><span>mg1234</span></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -82,11 +82,11 @@
                                             <tbody>
                                                 <tr>
                                                     <th>요청</th>
-                                                    <td>인터페이스 요청 값</td>
+                                                    <td><span>인터페이스 요청 값</span></td>
                                                 </tr>
                                                 <tr>
                                                     <th>결과</th>
-                                                    <td>인터페이스 응답 값</td>
+                                                    <td><span>인터페이스 응답 값</span></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -99,7 +99,7 @@
                                 </div>
                             </div>
                         </div>
-                    </secition>
+                    </section>
                 </main>
             </div>
         </div>

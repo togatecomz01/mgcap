@@ -69,33 +69,48 @@
                             </colgroup>
                             <tbody>
                                 <tr>
-                                    <th id="th-writer" scope="row"><span>작성자</span></th>
-                                    <td><span>홍길동</span></td>
-                                </tr>
-                                <tr>
-                                    <th id="th-date" scope="row"><span>작성일</span></th>
-                                    <td><span>YYYY.MM.DD</span></td>
-                                </tr>
-                                <tr>
-                                    <th id="th-type" scope="row"><span>구분</span></th>
-                                    <td><span>정기</span></td>
-                                </tr>
-                                <tr>
-                                    <th id="th-state" scope="row"><span>상태</span></th>
-                                    <td><span>진행중</span></td>
-                                </tr>
-                                <tr>
-                                    <th id="th-title" scope="row"><span>제목</span></th>
-                                    <td><span>2025년 MG캐피탈 일반직 신입직원 채용</span></td>
-                                </tr>
-                                <tr>
-                                    <th id="th-content" scope="row"><span>내용</span></th>
+                                    <th id="th-writer" scope="row">작성자</th>
                                     <td>
-                                        <span>내용<br />내용</span>
+                                        <span>홍길동</span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th id="th-file" scope="row"><span>첨부파일</span></th>
+                                    <th id="th-date" scope="row">작성일</th>
+                                    <td>
+                                        <span>YYYY.MM.DD</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th id="th-type" scope="row">구분</th>
+                                    <td>
+                                        <span><input id="wrt01" type="text" value="정기" readonly="" /></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th id="th-state" scope="row">상태</th>
+                                    <td>
+                                        <span>진행중</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th id="th-title" scope="row">제목</th>
+                                    <td>
+                                        <span><input id="wrt01" type="text" value="2025년 MG캐피탈 일반직 신입직원 채용" readonly="" /></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th id="th-content" scope="row">내용</th>
+                                    <td>
+                                        <span>
+                                            <textarea id="wrt01" readonly>
+내용
+내용
+                                            </textarea>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th id="th-file" scope="row">첨부파일</th>
                                     <td>
                                         <span class="ipt-file">
                                             <span class="ipt-clear">
@@ -108,22 +123,22 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th id="th-period" scope="row"><span>게시기간</span></th>
+                                    <th id="th-period" scope="row">게시기간</th>
                                     <td>
                                         <fieldset>
                                             <legend>기간</legend>
                                             <label for="">
-                                                <input id="password-input" type="date" name="date" placeholder="디폴트" aria-invalid="true" />
+                                                <input id="password-input" type="date" name="date" placeholder="디폴트" />
                                             </label>
                                             <span class="ipt-hyphen">-</span>
                                             <label for="">
-                                                <input id="password-input" type="date" name="date" placeholder="디폴트" aria-invalid="true" />
+                                                <input id="password-input" type="date" name="date" placeholder="디폴트" />
                                             </label>
                                         </fieldset>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th id="th-early" scope="row"><span>공고 조기마감</span></th>
+                                    <th id="th-early" scope="row">공고 조기마감</th>
                                     <td>
                                         <label class="check">
                                             <input type="checkbox" name="row1-active" value="" checked />
@@ -143,6 +158,9 @@
                             </div>
                         </div>
                     </section>
+                    <!-- 얼럿 -->
+                    <!-- 1. 삭제하시겠습니까? / 취소,확인 -->
+                    <!-- 2. 삭제가 완료되었습니다. / 확인('채용공고 관리 목록(ADM-RECMNG-101)'으로 이동) -->
                 </main>
             </div>
         </div>

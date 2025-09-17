@@ -31,15 +31,6 @@
             .pending {
                 color: #f46241;
             }
-            /* TODO: 공통 css로 변경 필요 */
-            .form-wrap fieldset {
-                width: 100%;
-            }
-            select {
-                width: auto;
-                min-width: 120px;
-            }
-            /* TODO: a 태그로 감싼 title css 추가 */
         </style>
     </head>
 
@@ -61,12 +52,12 @@
                     <section class="form-container">
                         <div class="form-content">
                             <div class="form-wrap">
-                                <select id="category" name="category">
-                                    <option value="all">전체</option>
-                                    <option value="complain">민원</option>
-                                    <option value="praise">칭찬&#47;제안</option>
-                                </select>
                                 <fieldset>
+                                    <select id="category" name="category">
+                                        <option value="all">전체</option>
+                                        <option value="complain">민원</option>
+                                        <option value="praise">칭찬&#47;제안</option>
+                                    </select>
                                     <legend>구분</legend>
                                     <label class="radio">
                                         <input type="radio" name="row2-active" value="" checked="" />
