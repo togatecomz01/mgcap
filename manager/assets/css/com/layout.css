@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6 { color:var(--color-2); }
 #headerWrap .recent-content > * + *{ margin-left:20px; }
 #headerWrap .recent-content button { display:block; padding:5px 10px; background:var(--white); color:var(--color-3); border-radius:30px; font-size:var(--font14); }
 
-.bodyWrap {  display:flex; width:100%; height:calc(100% - 60px); }
+.bodyWrap {  display:flex; width:100%; height:calc(100% - 60px); overflow-x:scroll; }
 
 /**¿ÞÂÊ¸Þ´º**/
 #menuWrap {  flex:0 0 240px; width:240px; min-height:100%; /*position:fixed; left:0; top:62px; bottom:0;*/ background:#384150; }
