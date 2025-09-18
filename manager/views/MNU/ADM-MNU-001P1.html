@@ -52,13 +52,16 @@
                         </div>
                     </section>
 
-                    <!-- 저장 버튼 클릭 시 (답변 미작성) -->
+                    <!-- [D]:저장 버튼 클릭 시 (필수 미입력) -->
                     <section class="modal-container">
                         <div id="save01" class="layerPopup modal">
                             <div class="pop-content alert">
                                 <div class="pop-body">
-                                    <!-- (필수체크 된 title중 비어있는 메뉴) -->
+                                    <!-- 0) 얼럿메시지(유효성체크) 문구노출 -->
+                                    <!-- 1) 필수 미입력 title -->
                                     <p>(title)을 작성해 주세요.</p>
+                                    <!-- 2) 답변 미작성 시 메시지 -->
+                                    <!-- <p>답변을 작성해주세요.</p> -->
                                 </div>
                                 <div class="pop-footer">
                                     <div class="button-content">
@@ -69,14 +72,20 @@
                         </div>
                     </section>
 
-                    <!-- 저장 버튼 클릭 시 (답변 작성) -->
+                    <!-- [D]:저장 버튼 클릭 시 (정상 입력) -->
                     <section class="modal-container">
                         <div id="save02" class="layerPopup modal">
                             <div class="pop-content alert">
                                 <div class="pop-body">
+                                    <!-- 0) 컨펌얼럿 문구노출 -->
+                                    <!-- 1) 내용등록 시 메시지 -->
                                     <p>내용이 등록되었습니다.</p>
-                                    <!-- 수정 시 메시지  -->
+                                    <!-- 2) 내용수정 시 메시지 -->
                                     <!-- <p>내용이 수정되었습니다.</p> -->
+                                    <!-- 3) 답변등록 시 메시지 -->
+                                    <!-- <p>답변이 등록되었습니다.</p> -->
+                                    <!-- 4) 답변수정 시 메시지 -->
+                                    <!-- <p>답변이 수정되었습니다.</p> -->
                                 </div>
                                 <div class="pop-footer">
                                     <div class="button-content">
@@ -87,7 +96,7 @@
                         </div>
                     </section>
 
-                    <!-- 삭제 버튼 클릭 시  -->
+                    <!-- [D]:삭제 버튼 클릭 시  -->
                     <section class="modal-container">
                         <div id="delete01" class="layerPopup modal">
                             <div class="pop-content alert">
@@ -104,7 +113,7 @@
                         </div>
                     </section>
 
-                    <!-- 삭제 확인 버튼 클릭 시 -->
+                    <!-- [D]:삭제 확인 버튼 클릭 시 -->
                     <section class="modal-container">
                         <div id="delete02" class="layerPopup modal">
                             <div class="pop-content alert">
@@ -120,7 +129,7 @@
                         </div>
                     </section>
 
-                    <!-- 초기화 버튼 클릭 시 -->
+                    <!-- [D]:초기화 버튼 클릭 시 -->
                     <section class="modal-container">
                         <div id="reset" class="layerPopup modal">
                             <div class="pop-content alert">
