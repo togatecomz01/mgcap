@@ -98,10 +98,44 @@
                             <div class="button-wrap">
                                 <a herf="javascript:void(0);" class="btn-secondary reset">초기화</a>
                                 <a herf="javascript:void(0);" class="btn-primary">저장</a>
-                                <!-- 답변수정 -->
+                                <!-- [D]:답변수정 -->
                                 <!-- <a herf="javascript:void(0);" class="btn-primary">수정</a> -->
                                 <a herf="javascript:void(0);" class="btn-secondary">목록</a>
                                 <a herf="javascript:void(0);" class="btn-secondary">삭제</a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- [D]: 기본얼럿 -->
+                    <section class="modal-container">
+                        <div id="alert01" class="layerPopup modal">
+                            <div class="pop-content alert">
+                                <div class="pop-body">
+                                    <!-- [D]: 화면설계서 참고하여 문구변경 -->
+                                    <p>얼럿메시지 문구노출</p>
+                                </div>
+                                <div class="pop-footer">
+                                    <div class="button-content">
+                                        <button type="button" class="btn-pop-primary" data-popup-close="modal">확인</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- [D]: 컨펌얼럿  -->
+                    <section class="modal-container">
+                        <div id="confirm01" class="layerPopup modal">
+                            <div class="pop-content alert">
+                                <div class="pop-body">
+                                    <!-- [D]: 화면설계서 참고하여 문구변경 -->
+                                    <p>컨펌메시지 문구노출</p>
+                                </div>
+                                <div class="pop-footer">
+                                    <div class="button-content">
+                                        <button type="button" class="btn-pop-secondary" data-popup-close="modal">아니오</button>
+                                        <button type="button" class="btn-pop-primary" data-popup-open="modal">예</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>
