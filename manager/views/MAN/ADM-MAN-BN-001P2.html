@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="euc-kr" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>퀵메뉴 관리&gt;메인 관리&gt;관리자페이지&gt;mg캐피탈</title>
+
+    <meta name="keywords" content="MG캐피탈" />
+    <meta name="copyright" content="copyrights 2025 MG캐피탈" />
+    <meta name="description" content="MG캐피탈 리스금융, 할부금융, 스탁론, 기업대출, 장기렌트카, PF대출 등 금융 서비스 제공."/>
+    <meta name="viewport" content="width=device-width" />
+
+    <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="No-Cache" />
+
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico"/>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/ui-util.css" />
+
+    <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+    <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+    <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
+    <script src="../../assets/js/include.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="bodyWrap">
+            <main class="contentWrap">
+                <!--[D]: 순서 변경 후 [순서 저장]버튼 클릭한 경우-->
+                <section class="modal-container">
+                    <div id="bn0201" class="layerPopup modal on">
+                        <div class="pop-content">
+                            <div class="pop-header">
+                                <h2 class="pop-tit">수정사항을 저장하시겠습니까?</h2>
+                            </div>
+                            <div class="pop-body">
+                                <p>입력하신 순서는</p>
+                                <p>대고객 채널에 바로 반영됩니다.</p>
+                            </div>
+                            <div class="pop-footer">
+                                <div class="button-content">
+                                    <button type="button" class="btn-pop-secondary"  data-popup-close="modal">취소</button>
+                                    <button type="button" class="btn-pop-primary"  data-popup-close="modal">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--[D]: [초기화]버튼을 클릭한 경우(변경사항이 있던 없던 클릭 시, 노출)-->
+                <section class="modal-container">
+                    <div id="bn0202" class="layerPopup modal">
+                        <div class="pop-content">
+                            <div class="pop-header">
+                                <h2 class="pop-tit">초기화 하시겠습니까?</h2>
+                            </div>
+                            <div class="pop-body">
+                                <p>저장되지 않은 모든 변경사항은 초기화됩니다.</p>
+                            </div>
+                            <div class="pop-footer">
+                                <div class="button-content">
+                                    <button type="button" class="btn-pop-secondary"  data-popup-close="modal">취소</button>
+                                    <button type="button" class="btn-pop-primary"  data-popup-close="modal">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--[D]: 입력된 내용이 존재할 때, [목록]버튼을 클릭한 경우-->
+                <section class="modal-container">
+                    <div id="bn0203" class="layerPopup modal">
+                        <div class="pop-content">
+                            <div class="pop-header">
+                                <h2 class="pop-tit">목록으로 돌아가시겠습니까?</h2>
+                            </div>
+                            <div class="pop-body">
+                                <p>입력하신 내용은 저장되지 않습니다.</p>
+                            </div>
+                            <div class="pop-footer">
+                                <div class="button-content">
+                                    <button type="button" class="btn-pop-secondary"  data-popup-close="modal">취소</button>
+                                    <button type="button" class="btn-pop-primary"  data-popup-close="modal">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--[D]: [초기화]버튼을 클릭한 경우(입려값 존재 시에만 노출)-->
+                <section class="modal-container">
+                    <div id="bn0204" class="layerPopup modal">
+                        <div class="pop-content">
+                            <div class="pop-header">
+                                <h2 class="pop-tit">초기화 하시겠습니까?</h2>
+                            </div>
+                            <div class="pop-body">
+                                <p>입력하신 내용이 저장되지 않고 초기화됩니다.</p>
+                            </div>
+                            <div class="pop-footer">
+                                <div class="button-content">
+                                    <button type="button" class="btn-pop-secondary"  data-popup-close="modal">취소</button>
+                                    <button type="button" class="btn-pop-primary"  data-popup-close="modal">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                 <!--[D]: 변경된 내용이 존재할 때, [목록]버튼을 클릭한 경우-->
+                 <section class="modal-container">
+                    <div id="bn0205" class="layerPopup modal on">
+                        <div class="pop-content">
+                            <div class="pop-header">
+                                <h2 class="pop-tit">목록으로 돌아가시겠습니까?</h2>
+                            </div>
+                            <div class="pop-body">
+                                <p>수정하신 내용은 저장되지 않습니다.</p>
+                            </div>
+                            <div class="pop-footer">
+                                <div class="button-content">
+                                    <button type="button" class="btn-pop-secondary"  data-popup-close="modal">취소</button>
+                                    <button type="button" class="btn-pop-primary"  data-popup-close="modal">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--[D]: [삭제]버튼을 클릭한 경우-->
+                <section class="modal-container">
+                    <div id="bn0206" class="layerPopup modal">
+                        <div class="pop-content">
+                            <div class="pop-header">
+                                <h2 class="pop-tit">[배너명]을 삭제하시겠습니까?</h2>
+                            </div>
+                            <div class="pop-body">
+                                <p>삭제에 따른 변경사항은 대고객 채널에 바로 반영됩니다.</p>
+                            </div>
+                            <div class="pop-footer">
+                                <div class="button-content">
+                                    <button type="button" class="btn-pop-secondary"  data-popup-close="modal">취소</button>
+                                    <button type="button" class="btn-pop-primary"  data-popup-close="modal">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--[D]:메인배너 관리(상세): [초기화]버튼을 클릭한 경우(변경값 존재 시에만 노출)-->
+                <section class="modal-container">
+                    <div id="bn0204" class="layerPopup modal">
+                        <div class="pop-content">
+                            <div class="pop-header">
+                                <h2 class="pop-tit">초기화 하시겠습니까?</h2>
+                            </div>
+                            <div class="pop-body">
+                                <p>입력하신 내용이 저장되지 않고 초기화됩니다.</p>
+                            </div>
+                            <div class="pop-footer">
+                                <div class="button-content">
+                                    <button type="button" class="btn-pop-secondary"  data-popup-close="modal">취소</button>
+                                    <button type="button" class="btn-pop-primary"  data-popup-close="modal">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

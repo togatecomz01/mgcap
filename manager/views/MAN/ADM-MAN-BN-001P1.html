@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="euc-kr" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>퀵메뉴 관리&gt;메인 관리&gt;관리자페이지&gt;mg캐피탈</title>
+
+    <meta name="keywords" content="MG캐피탈" />
+    <meta name="copyright" content="copyrights 2025 MG캐피탈" />
+    <meta name="description" content="MG캐피탈 리스금융, 할부금융, 스탁론, 기업대출, 장기렌트카, PF대출 등 금융 서비스 제공."/>
+    <meta name="viewport" content="width=device-width" />
+
+    <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="No-Cache" />
+
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico"/>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/ui-util.css" />
+
+    <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+    <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+    <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
+    <script src="../../assets/js/include.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="bodyWrap">
+            <main class="contentWrap">
+                <!--[D]:기재하지 않은 상태에서 [순서 저장]버튼을 클릭한 경우-->
+                <section class="modal-container">
+                    <div id="bn0101" class="layerPopup modal on">
+                        <div class="pop-content">
+                            <div class="pop-body">
+                                <p>순서가 입력되지 않은 메뉴가 있습니다.</p>
+                                <p>입력란을 확인해주세요.</p>
+                            </div>
+                            <div class="pop-footer">
+                                <div class="button-content">
+                                    <button type="button" class="btn-pop-primary"  data-popup-close="modal">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--[D]:동일한 순서가 존재하는 상태에서  [순서 저장]버튼을 클릭한 경우-->
+                <section class="modal-container">
+                    <div id="bn0102" class="layerPopup modal">
+                        <div class="pop-content">
+                            <div class="pop-body">
+                                <p>중복된 순서가 있습니다.</p>
+                                <p>입력하신 순서를 확인해주세요.</p>
+                            </div>
+                            <div class="pop-footer">
+                                <div class="button-content">
+                                    <button type="button" class="btn-pop-primary"  data-popup-close="modal">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--[D]:
+                    배너명을 입력하지 않고 [저장] 버튼을 클릭한 경우
+                    타이틀을 입력하지 않고 [저장] 버튼을 클릭한 경우
+                    내용을 입력하지 않고 [저장] 버튼을 클릭한 경우
+                    첨부파일을 등록하지 않고 [저장] 버튼을 클릭한 경우
+                    이미지 Alt값을 입력하지 않고 [저장] 버튼을 클릭한 경우
+                    URL을 입력하지 않고 [저장] 버튼을 클릭한 경우
+                -->
+                <section class="modal-container">
+                    <div id="bn0103" class="layerPopup modal">
+                        <div class="pop-content">
+                            <div class="pop-body">
+                                <p>필수 입력 항목 중 입력되지 않은 항목이 있습니다.</p>
+                                <p>입력란을 확인해주세요.</p>
+                            </div>
+                            <div class="pop-footer">
+                                <div class="button-content">
+                                    <button type="button" class="btn-pop-primary"  data-popup-close="modal">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--[D]:중복 배너명 존재 시-->
+                <section class="modal-container">
+                    <div id="bn0104" class="layerPopup modal">
+                        <div class="pop-content">
+                            <div class="pop-body">
+                                <p>중복된 배너명이 존재합니다.</p>
+                                <p>배너명을 수정해주세요.</p>
+                            </div>
+                            <div class="pop-footer">
+                                <div class="button-content">
+                                    <button type="button" class="btn-pop-primary"  data-popup-close="modal">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--[D]:이미지가 배너 크기와 안맞을 경우-->
+                <section class="modal-container">
+                    <div id="bn0105" class="layerPopup modal">
+                        <div class="pop-content">
+                            <div class="pop-body">
+                                <p>업로드 된 이미지가 배너크기와 일치하지 않습니다.</p>
+                            </div>
+                            <div class="pop-footer">
+                                <div class="button-content">
+                                    <button type="button" class="btn-pop-primary"  data-popup-close="modal">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--[D]:중복 타이틀 존재 시-->
+                <section class="modal-container">
+                    <div id="bn0106" class="layerPopup modal">
+                        <div class="pop-content">
+                            <div class="pop-body">
+                                <p>중복된 타이틀이 존재합니다.</p>
+                                <p>타이틀을 수정해주세요.</p>
+                            </div>
+                            <div class="pop-footer">
+                                <div class="button-content">
+                                    <button type="button" class="btn-pop-primary"  data-popup-close="modal">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--[D]:[저장] 버튼을 눌렀을 때 정상적으로 저장 된 경우-->
+                <section class="modal-container">
+                    <div id="bn0107" class="layerPopup modal">
+                        <div class="pop-content">
+                            <div class="pop-body">
+                                <p>신규 배너가 등록되었습니다.</p>
+                                <p>등록된 배너는 대고객 채널에 바로 반영됩니다.</p>
+                            </div>
+                            <div class="pop-footer">
+                                <div class="button-content">
+                                    <button type="button" class="btn-pop-primary"  data-popup-close="modal">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--[D]:메인배너 관리(상세): [저장] 버튼을 눌렀을 때 정상적으로 저장 된 경우-->
+                <section class="modal-container">
+                    <div id="bn0108" class="layerPopup modal">
+                        <div class="pop-content">
+                            <div class="pop-body">
+                                <p>수정하신 내용이 저장되었습니다.</p>
+                                <p>수정된 내용은 대고객 채널에 바로 반영됩니다.</p>
+                            </div>
+                            <div class="pop-footer">
+                                <div class="button-content">
+                                    <button type="button" class="btn-pop-primary"  data-popup-close="modal">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--[D]:메인배너 관리(상세): [삭제]버튼 클릭시-삭제로 인해 대고객채널에 노출되는 메인배너가 없을 경우-->
+                <section class="modal-container">
+                    <div id="bn0108" class="layerPopup modal">
+                        <div class="pop-content">
+                            <div class="pop-body">
+                                <p>해당 배너를 삭제할 경우, 현재 대고객 채널에 노출되는 메인배너가 존재하지 않게 됩니다.</p>
+                                <p>메인배너는 반드시 1개이상 노출되어야 하므로, 해당 배너를 삭제할 수 없습니다.</p>
+                                <p>신규 배너를 등록한 뒤, 삭제하시기 바랍니다.</p>
+                            </div>
+                            <div class="pop-footer">
+                                <div class="button-content">
+                                    <button type="button" class="btn-pop-primary"  data-popup-close="modal">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

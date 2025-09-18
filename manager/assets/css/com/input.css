@@ -154,7 +154,8 @@ span.iput-clear { max-width:560px; }
 /**유효성체크**/
 input[aria-invalid="true"] { border:1px solid var(--error);}
 .form-group:has(input[aria-invalid="true"]) span + .error,
-span:has(input[aria-invalid="true"]) + .error { grid-column:2; margin-top:6px; color:var(--error); font-size:var(--font14); }
+span:has(input[aria-invalid="true"]) + .error,
+li:has(.error) .error { grid-column:2; margin-top:6px; color:var(--error); font-size:var(--font14); }
 
 tr.error td input { border:1px solid var(--error);}
 

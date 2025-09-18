@@ -46,13 +46,27 @@
                         <li><a href="javascript:void(0);">메인배너 관리</a></li>
                     </ul>
                 </seciton>
+                <section class="form-container">
+                    <div class="form-content">
+                        <div class="form-wrap">
+                            <fieldset class="search">
+                                <legend>옵션선택</legend>
+                                <select id="row-top" name="top">
+                                    <option value="" selected>메인배너</option>
+                                    <option>중단배너</option>
+                                    <option>하단배너</option>
+                                </select>
+                            </fieldset>
+                        </div>
+                    </div><!--//form-content-->
+                </section>
                 <section class="list-container">
                     <div class="list-content">
                         <table>
                             <caption>순서, 배너명, 타이틀, 내용, 이미지, 이미지 Alt 값, URL로 구성된 목록</caption>
                         
                             <colgroup>
-                            <col style="width:5%;">
+                            <col style="width:8%;">
                             <col style="width:10%;">
                             <col style="width:auto;">
                             <col style="width:25%;">
@@ -119,6 +133,7 @@
                 <section class="button-ccontainer">
                     <div class="button-content cta">
                         <div class="button-wrap">
+                            <a herf="javascript:void(0);" class="btn-secondary reset">초기화</a>
                             <a herf="javascript:void(0);" class="btn-secondary">신규등록</a>
                             <a herf="javascript:void(0);" class="btn-primary">순서저장</a>
                         </div>

@@ -31,7 +31,8 @@ table td { height:72px; }
 .write-content td { text-align:left; }
 .write-content tr:first-of-type { border-top:1px solid var(--table-border); }
 
-
+/** info-content ¾øÀ» ¶§ **/
+.list-container:not(:has(.info-content)) table tr:last-child { border-bottom:0; }
 
 tr.error td { background:var(--error-td); }
 

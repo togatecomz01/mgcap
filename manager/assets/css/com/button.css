@@ -92,4 +92,4 @@ button, a { cursor:pointer; display:inline-block; display:inline-flex; align-ite
 .login .login-content li .btn-body { margin-top:10px; width:150px; height:67px; border-radius:12px; }
 
 /** 파일 다운로드 버튼 **/
-.ipt-file:has(button:only-child) { flex-direction: column; }
+.ipt-file:has(button:only-child) { flex-direction: column; gap:12px; text-decoration-line:underline; text-underline-offset:2px; }
