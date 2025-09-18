@@ -33,26 +33,113 @@
             <script> $(document).ready(function () { $("#header").load("../COM/header.html"); }); </script>
         </div>-->
         <div class="bodyWrap">
-        <main class="contentWrap">
-            <secition class="modal-container">
-            <div id="modal" class="layerPopup modal on">
-                <div class="pop-content alert">
-                    <div class="pop-body">
-                        <p>중복된 순서가 있습니다.<br />
-                           입력하신 순서를 확인해 주세요.</p>
-                    </div>
-                    <div class="pop-footer">
-                        <div class="button-content">
-                            <button type="button" class="btn-pop-primary"  data-popup-close="modal">확인</button>
+            <main class="contentWrap">
+                <secition class="modal-container">
+                    <div id="modal" class="layerPopup modal on">
+                        <div class="pop-content alert">
+                            <div class="pop-body">
+                                <p>중복된 순서가 있습니다.<br />
+                                입력하신 순서를 확인해 주세요.</p>
+                            </div>
+                            <div class="pop-footer">
+                                <div class="button-content">
+                                    <button type="button" class="btn-pop-primary"  data-popup-close="modal">확인</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            </secition>
-        </main>
+                </secition>
+                
+                <!-- [저장] 버튼 - 클릭 시, 유효성 체크
+                1) 답변 미작성 : (save01) 알럿 메시지 호출
+                2) 답변 작성 : 수정된 답변 내용이 저장(업로드) 됨과 동시에 (save02) 알럿 메시지 호출 -->
+                <!-- ㄴ (save02) 알럿에서 [확인] 버튼 클릭하면, 목록 페이지(화면 ID - 001)’ 화면으로 이동-->
+                <section class="modal-container">
+                    <div id="save01" class="layerPopup modal">
+                        <div class="pop-content">
+                            <div class="pop-body">
+                                <!-- (필수체크 된 title중 비어있는 메뉴) -->
+                                <p>(title)을 작성해 주세요.</p>
+                            </div>
+                            <div class="pop-footer">
+                                <div class="button-content">
+                                    <button type="button" class="btn-pop-primary" data-popup-close="">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="modal-container">
+                    <div id="save02" class="layerPopup modal">
+                        <div class="pop-content">
+                            <div class="pop-body">
+                                <p>내용이 등록되었습니다.</p>
+                                <!-- 수정 페이지에 등록 버튼이 있을 시 주석 해제 후 사용  -->
+                                <!-- <p>내용이 수정되었습니다.</p> -->
+                            </div>
+                            <div class="pop-footer">
+                                <div class="button-content">
+                                    <a href="javascript:void(0);" class="btn-pop-primary" data-popup-close="">확인</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- D: [삭제] 버튼- 클릭하면 알럿 호출 (컨펌 알럿)
+                        ㄴ 알럿에서 [확인] 버튼 클릭하면 다음 알럿 메시지(delete02) 호출 -->
+                        <!-- ㄴ (delete02) 알럿에서 [확인] 버튼 클릭하면 해당 게시물이 지워지며, ‘목록 페이지(화면 ID - 001)’ 화면으로 이동-->
+                <section class="modal-container">
+                    <div id="delete01" class="layerPopup modal">
+                        <div class="pop-content">
+                            <div class="pop-body">
+                                <p>삭제하시겠습니까?</p>
+                            </div>
+                            <div class="pop-footer">
+                                <div class="button-content">
+                                    <button type="button" class="btn-pop-secondary" data-popup-close="">아니오</button>
+                                    <button type="button" class="btn-pop-primary" data-popup-open="">예</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="modal-container">
+                    <div id="delete02" class="layerPopup modal">
+                        <div class="pop-content">
+                            <div class="pop-body">
+                                <p>삭제가 완료되었습니다.</p>
+                            </div>
+                            <div class="pop-footer">
+                                <div class="button-content">
+                                    <a href="javascript:void(0);" class="btn-pop-primary" data-popup-close="">확인</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- [초기화] 버튼 [예] 클릭하면, 해당하는 버전의 개인정보처리방침 노출(화면재진입) [아니오] 클릭하면, 컨펌얼럿 닫기 -->
+                <section class="modal-container">
+                    <div id="reset" class="layerPopup modal">
+                        <div class="pop-content">
+                            <div class="pop-body">
+                                <p>초기화하시겠습니까?</p>
+                            </div>
+                            <div class="pop-footer">
+                                <div class="button-content">
+                                    <button type="button" class="btn-pop-secondary"  data-popup-close="">아니오</button>
+                                    <a href="javascript:void(0);" class="btn-pop-primary" data-popup-close="">예</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
         </div>
     </div>
-
     </body>
-
 </html>
