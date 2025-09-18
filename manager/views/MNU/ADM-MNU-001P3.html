@@ -51,7 +51,11 @@
                                         </li>
                                         <li>
                                             <label for="wrt02" class="essential">메뉴명</label>
-                                            <input id="wrt02" type="text" placeholder="예: 금융상품">
+                                            <input id="wrt02" type="text" placeholder="메뉴명을 입력해주세요" aria-invalid="true">
+                                            <!--[D]: 미입력시 -->
+                                            <p id="wrt02-error" class="error" role="alert">
+                                                메뉴명을 입력해주세요</p><!--[D] 유효성 성공일땐 hidden 처리-->
+                                            <!--[D]: 중복경우  -->
                                             <p id="wrt02-error" class="error" role="alert">
                                                 동일한 메뉴명이 존재합니다.<br />
                                                 다른 메뉴명을 입력해주세요.</p><!--[D] 유효성 성공일땐 hidden 처리-->
