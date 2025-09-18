@@ -119,6 +119,7 @@ h3 {  display:block; padding:20px; font-size:var(--font18); font-weight:var(--fo
 .form-container fieldset.search > input { width:264px; }
 .list-container:has(tr.error) span.error{ display:block; margin-top:16px; color:var(--error); }
 .list-container + .list-container { margin-top:36px; }
+.list-content { overflow-x:auto; }
 .list-content + .list-content { margin-top: 24px; }
 .list-content + .write-content { margin-top: 24px; }
 
