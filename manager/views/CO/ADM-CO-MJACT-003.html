@@ -55,10 +55,10 @@
                 <div>
                     <section class="write-container">
                         <table class="write-content">
-                            <caption>수정자, 수정일, 제목, 내용으로 구성된 주요활동 등록 페이지</caption>
+                            <caption>수정자, 수정일, 제목, 내용으로 구성된 주요활동 등록/수정 페이지</caption>
                             <colgroup>
                                 <col style="width:230px;">        
-                                <col style="width:auto;">
+                                <col class="auto">
                             </colgroup>
                             <tbody>
                                 <tr>
@@ -115,7 +115,7 @@
                                 </tr> -->
                                 <tr>
                                     <th id="th-title" scope="row"><span class="essential">이미지 Alt값</span></th>
-                                    <td><input type="text" placeholder="내용을 입력해주세요."></td> 
+                                    <td><input type="text" placeholder="이미지 Alt값을 입력해주세요."></td> 
                                     <!-- 수정 페이지면 input에 value 추가 + readonly="" 까지 추가 -->
                                 </tr>                          
                             </tbody>
@@ -134,37 +134,50 @@
                         <div class="button-content cta">
                             <div class="button-wrap">
                                 <button class="btn-secondary reset">초기화</button>
-                                <a href="javascript:void(0);" class="btn-primary" data-modal-open="mjact01">저장</a>
+                                <button class="btn-primary">저장</button>
                                 <a href="./ADM-CO-MJACT-001.html" class="btn-secondary">목록</a>
 
                                 <!-- D:: 수정 페이지면 주석 해제 후 사용 -->
-                                <!-- <a href="javascript:void(0);" class="btn-secondary" data-modal-open="mjact03">삭제</a> -->
+                                <!-- <button class="btn-secondary">삭제</button> -->
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- [D]: 기본얼럿 -->
+                    <section class="modal-container">
+                        <div id="alert01" class="layerPopup modal">
+                            <div class="pop-content alert">
+                                <div class="pop-body">
+                                    <!-- [D]: 화면설계서 참고하여 문구변경 -->
+                                    <p>얼럿메시지 문구노출</p>
+                                </div>
+                                <div class="pop-footer">
+                                    <div class="button-content">
+                                        <button type="button" class="btn-pop-primary" data-popup-close="modal">확인</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- [D]: 컨펌얼럿  -->
+                    <section class="modal-container">
+                        <div id="confirm01" class="layerPopup modal">
+                            <div class="pop-content alert">
+                                <div class="pop-body">
+                                    <!-- [D]: 화면설계서 참고하여 문구변경 -->
+                                    <p>컨펌메시지 문구노출</p>
+                                </div>
+                                <div class="pop-footer">
+                                    <div class="button-content">
+                                        <button type="button" class="btn-pop-secondary" data-popup-close="modal">아니오</button>
+                                        <button type="button" class="btn-pop-primary" data-popup-open="modal">예</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>
                 </div>
             </main>
-
-            <!-- 공통 알럿 (ADM-MNU-001P1) 사용 -->
-            <!-- D: 저장 혹은 등록 버튼 눌렀을 시 -> 본문 필수체크 된 내용이 비어있을 때 이 메시지가 사용된 알럿 사용 -->
-            <!-- M: 내용을 작성해주세요. -->
-
-            <!-- D: 저장 혹은 등록버튼 눌렀을 시 -> 본문 필수체크 된 내용이 전부 채워져 있을 때 이 메시지가 사용된 알럿 사용 -->
-            <!-- M: 저장이 완료되었습니다. -->
-
-
-            <!-- 공통 알럿 (ADM-MNU-001P1) 취소 , 확인 버튼이 있는 컨펌알럿 사용 -->
-            <!-- D: 삭제버튼 눌렀을 시 -->
-            <!-- M: 삭제하시겠습니까? -->
-
-            <!-- D: 삭제 완료 모달 -> (ADM-MNU-001P1) 확인버튼만 있는 기본알럿 사용 -->
-            <!-- M: 삭제가 완료되었습니다. -->
-
-
-            <!-- 초기화 버튼 눌렀을 시 -> 공통 알럿 (ADM-MNU-001P1) 취소 버튼이 있는 컨펌알럿 사용 -->
-            <!-- M: 초기화 하시겠습니까? -->
-            <!-- Y: 해당 버전의 개인정보처리방침 노출(화면 재진입) -->
-            <!-- N: 컨펌 얼럿 닫기 -->
         </div>
     </div> 
 </body>
