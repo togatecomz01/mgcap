@@ -6,7 +6,7 @@ body {
     --error-td:#FFF8F8;
 }
 
-table{ border-spacing:0; border-collapse: collapse; table-layout:fixed; min-width:1400px; }
+table{ border-spacing:0; border-collapse: collapse; table-layout:fixed; min-width:1200px; }
 table tr { border-bottom:1px solid var(--table-border); }
 table th,
 table td { padding:10px; text-align:center; color:var(--default-color); font-size:var(--font16); font-weight:var(--font-w-m); text-align:center; }
@@ -31,9 +31,6 @@ table td { height:72px; }
 .write-content td { text-align:left; }
 .write-content tr:first-of-type { border-top:1px solid var(--table-border); }
 
-/** info-content 없을 때 **/
-.list-container:not(:has(.info-content)) table tbody tr:last-child { border-bottom:0; }
-
 tr.error td { background:var(--error-td); }
 
 col.num { width:120px; min-width:80px; }
@@ -54,3 +51,8 @@ col.ico-btn { width:94px; min-width:74px }
 .tbl-total-row > td { font-weight: 700; }
 .tbl-total-row > td:first-child { color: var(--color-2); }
 .tbl-total-row > td:nth-child(2) { color: var(--primary); }
+
+/** info-content 없을 때 **/
+.list-container:not(:has(.info-content)) table tbody tr:last-child { border-bottom:0; }
+.list-container:has(.pagination-content) table tbody tr:last-child,
+.pop-body .list-container table tbody tr:last-child { border-bottom:1px solid var(--table-border); }
