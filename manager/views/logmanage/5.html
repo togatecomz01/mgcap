@@ -77,34 +77,28 @@
                         <div class="list-content">
                             <table>
                                 <caption>
-                                    No, 고객명, ID, 세션ID, 전화번호, 접속기기, 접속일시, 종료일시, 응답결과, 응답메시지, 활동내역으로 구성된 방문자 로그 및 오류발생 이력조회 목록
+                                    No, 고객명, ID, 전화번호, 접속기기, 접속일시, 응답메시지, 오류로 구성된 방문자 로그 및 오류발생 이력조회 목록
                                 </caption>
                                 <colgroup>
-                                    <col style="width: 6%" />
-                                    <col style="width: 8%" />
-                                    <col style="width: 8%" />
-                                    <col style="width: 10%" />
-                                    <col style="width: 10%" />
-                                    <col style="width: 8%" />
-                                    <col style="width: 8%" />
-                                    <col style="width: 8%" />
-                                    <col style="width: 8%" />
-                                    <col style="width: 18%" />
-                                    <col style="width: 8%" />
+                                    <col class="num" />
+                                    <col class="num" />
+                                    <col class="width: 200px" />
+                                    <col style="width: 150px" />
+                                    <col class="num" />
+                                    <col style="width: 150px" />
+                                    <col class="auto" />
+                                    <col class="num" />
                                 </colgroup>
                                 <thead>
                                     <tr>
                                         <th id="th-no" scope="col">No</th>
                                         <th id="th-name" scope="col">고객명</th>
                                         <th id="th-id" scope="col">ID</th>
-                                        <th id="th-session-id" scope="col">세션ID</th>
                                         <th id="th-phone" scope="col">전화번호</th>
                                         <th id="th-device" scope="col">접속기기</th>
-                                        <th id="th-start" scope="col">접속일시</th>
-                                        <th id="th-end" scope="col">종료일시</th>
-                                        <th id="th-response" scope="col">응답결과</th>
+                                        <th id="th-date" scope="col">접속일시</th>
                                         <th id="th-message" scope="col">응답메시지</th>
-                                        <th id="th-log" scope="col">활동내역</th>
+                                        <th id="th-error" scope="col">오류</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -112,12 +106,9 @@
                                         <td><span>42</span></td>
                                         <td><span>홍길동</span></td>
                                         <td><span>mg1234</span></td>
-                                        <td><span>1907349350227</span></td>
                                         <td><span>01012345678</span></td>
                                         <td><span>PC</span></td>
                                         <td><span>YYYY.MM.DD</span></td>
-                                        <td><span>YYYY.MM.DD</span></td>
-                                        <td><span>정상</span></td>
                                         <td><span>비밀번호 5회 오류로 계정 잠금 처리</span></td>
                                         <td><button type="button" class="btn-text" aria-label="활동내역 상세보기">상세보기</button></td>
                                     </tr>
