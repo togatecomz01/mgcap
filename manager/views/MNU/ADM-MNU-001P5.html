@@ -3,7 +3,7 @@
     <head>
         <meta charset="euc-kr" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>메뉴관리&gt;폼&gt;샘플&gt;</title>
+        <title>mg캐피탈&gt;관리자페이지&gt;메뉴 관리&gt;1depth메뉴 관리&gt;2depth메뉴 관리&gt;3depth메뉴 관리</title>
 
         <meta name="keywords" content="MG캐피탈" />
         <meta name="copyright" content="copyrights 2025 MG캐피탈" />
@@ -55,12 +55,14 @@
                                         </li>
                                         <li>
                                             <label for="wrt02" class="essential">2depth 메뉴명</label>
-                                            <span><input id="wrt02" type="text" value="2depth 메뉴명"></span>
+                                            <span><input id="wrt02" type="text" value="2depth 메뉴명" aria-invalid="true"></span>
+                                            <span id="wrt02-error" class="error" role="alert"> 메뉴명을 입력해주세요.</span><!--[D] 유효성 성공일땐 hidden 처리-->
+                                            <span id="wrt02-error" class="error" role="alert"> 동일한 메뉴명이 존재합니다.<br/>다른 메뉴명을 입력해주세요.</span><!--[D] 유효성 성공일땐 hidden 처리-->
                                         </li>
                                         <li>
                                             <label for="wrt02" class="essential">URL</label>
                                             <span><input id="wrt02" type="text" placeholder="URL 경로를 입력해주세요." aria-invalid="true"></span>
-                                            <span id="wrt02-error" class="error" role="alert"> 메뉴명을 입력해주세요.</span><!--[D] 유효성 성공일땐 hidden 처리-->
+                                            <span id="wrt02-error" class="error" role="alert"> URL경로를 입력해주세요.</span><!--[D] 유효성 성공일땐 hidden 처리-->
                                         </li>
                                     </ul>  
                                 </fieldset>
