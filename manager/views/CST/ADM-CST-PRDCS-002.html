@@ -55,7 +55,7 @@
                             <caption>구분, 제목, 등록자, 등록일시, 내용, 답변으로 구성된 상품 고객상담 상세 페이지</caption>
                             <colgroup>
                                 <col style="width:230px;">
-                                <col style="width:auto;">
+                                <col class="auto">
                             </colgroup>
                             <tbody>
                                 <tr>
@@ -92,30 +92,52 @@
                         <div class="button-content cta">
                             <div class="button-wrap">
                                 <button class="btn-secondary reset">초기화</button>
-                                <button class="btn-primary" data-modal-open="prdcs01">저장</button>
-                                <!-- 수정 페이지 일 시 저장버튼 -> 주석처리, 수정버튼 -> 주석 해제 -->
-                                <!-- <a href="./ADM-CST-PRDCS-001.html" class="btn-primary">수정</a> -->
+                                <button class="btn-primary">저장</button>
+                                <!-- 화면설계서에는 수정페이지 일 때도 저장 버튼 그대로 사용하는데 피그마 내에선 수정 버튼 필요 -->
+                                <!-- 수정 페이지에서 수정 버튼이 필요 할 시 -> 저장버튼 주석, 수정버튼 주석해제 -->
+                                <!-- <button class="btn-primary">수정</button> -->
                                 <a href="./ADM-CST-PRDCS-001.html" class="btn-secondary">목록</a>
-                                <a href="javascript:void(0);" class="btn-secondary" data-modal-open="prdcs03">삭제</a>
+                                <button class="btn-secondary">삭제</button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- [D]: 기본얼럿 -->
+                    <section class="modal-container">
+                        <div id="alert01" class="layerPopup modal">
+                            <div class="pop-content alert">
+                                <div class="pop-body">
+                                    <!-- [D]: 화면설계서 참고하여 문구변경 -->
+                                    <p>얼럿메시지 문구노출</p>
+                                </div>
+                                <div class="pop-footer">
+                                    <div class="button-content">
+                                        <button type="button" class="btn-pop-primary" data-popup-close="modal">확인</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- [D]: 컨펌얼럿  -->
+                    <section class="modal-container">
+                        <div id="confirm01" class="layerPopup modal">
+                            <div class="pop-content alert">
+                                <div class="pop-body">
+                                    <!-- [D]: 화면설계서 참고하여 문구변경 -->
+                                    <p>컨펌메시지 문구노출</p>
+                                </div>
+                                <div class="pop-footer">
+                                    <div class="button-content">
+                                        <button type="button" class="btn-pop-secondary" data-popup-close="modal">아니오</button>
+                                        <button type="button" class="btn-pop-primary" data-popup-open="modal">예</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>
                 </div>
             </main>
-
-            <!-- 공통 알럿 (ADM-MNU-001P1) 사용 -->
-            <!-- D: 저장버튼 or 수정버튼 눌렀을 시 -> 답변 내용이 없다면 공통 알럿 사용 -->
-            <!-- M: 답변을 작성해주세요. -->
-            
-            <!-- D: 저장버튼 or 수정버튼 눌렀을 시 -> 답변 내용이 있다면 이 모달 사용 -->
-            <!-- M: 답변이 등록되었습니다. -->
-            
-            <!-- 공통 알럿 (ADM-MNU-001P1) 확인, 취소버튼이 있는 알럿 사용 -->
-            <!-- D: 삭제버튼 눌렀을 시 -->
-            <!-- M: 답변 내용을 삭제하시겠습니까? -->
-            
-            <!-- D: 삭제 완료 모달 -->
-            <!-- M: 삭제가 완료되었습니다. -->
         </div>
     </div> 
 </body>
