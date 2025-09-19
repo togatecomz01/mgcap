@@ -104,7 +104,7 @@ h3 {  display:block; padding:20px; font-size:var(--font18); font-weight:var(--fo
 
 /**ÆûÄÁÅÙÃ÷**/
 .form-content .form-wrap { display:flex; width:100%; gap:30px;  }
-.contentWrap:has(.list-container) .form-content .form-wrap:has(fieldset:only-of-type:has(:not(select))) { justify-content:flex-end; }
+.contentWrap:has(.list-container) .form-content .form-wrap.flex-end { justify-content:flex-end; }
 .form-content .form-wrap .form-group { flex:1; }
 
 /**¸®½ºÆ®**/
