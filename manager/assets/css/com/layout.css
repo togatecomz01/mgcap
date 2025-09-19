@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 { color:var(--color-2); }
 #menuWrap {  flex:0 0 240px; width:240px; min-height:100%; /*position:fixed; left:0; top:62px; bottom:0;*/ background:#384150; }
 #menuWrap button,
 #menuWrap a { position:relative; display:block; width:100%; padding:20px 12px 20px 20px; background:transparent; color:#fff; text-align:left; }
-#menuWrap .link::after { content:""; display:block; position:absolute; right:12px; top:50%; transform:translateY(-50%); width:20px; height:20px; background:url("../../images/com/svg/ico_link.svg") no-repeat center; background-size:auto 13px; }
+#menuWrap .link::after { content:""; display:block; position:absolute; right:12px; top:50%; transform:translateY(-50%); width:20px; height:20px; background:url("../../images/com/svg/ico_link.svg") no-repeat center; background-size:auto 20px; }
 #menuWrap > .member { display:block; background:#424B59; border-bottom:2px solid #273141; }
 #menuWrap > .member button { display:block; font-size:var(--font20); }
 #menuWrap > ul > li.item > .accordion{ display:block; width:100%; font-weight:400; text-align:left; }
