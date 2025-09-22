@@ -27,34 +27,6 @@
 
         <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
         <script src="../../assets/js/include.js"></script>
-        <style>
-            body {
-                --tab-font-color: #666666;
-                --tab-font-size: var(--font22);
-                --tab-active: var(--color-45);
-                --tab-border: var(--primary);
-            }
-            .tab-list {
-                display: flex;
-                margin-bottom: 42px;
-                width: 100%;
-                border-bottom: 1px solid var(--color-e);
-            }
-            .tab-container .tab-list.depth1 li.tab-item {
-                flex: 0;
-            }
-            .tab-container .tab-list.depth1 li.tab-item a {
-                padding: 24px 0;
-                width: 180px;
-                font-size: var(--tab-font-size);
-                color: var(--tab-font-color);
-            }
-            .tab-container .tab-list.depth1 li.active a {
-                border-bottom: 4px solid var(--tab-border);
-                font-weight: var(--font-w-b);
-                color: var(--tab-active);
-            }
-        </style>
     </head>
 
     <body>
@@ -109,37 +81,26 @@
                         <div class="list-content">
                             <table>
                                 <caption>
-                                    No, 기준일, 평균 방문자수(명), 평균 이용시간(분), 평균 조회 페이지수, 활동내역으로 구성된 방문자 로그 및 접속페이지 로그 목록
+                                    월, 평균 방문자수(명), 평균 이용시간(분), 조회 페이지수, 활동내역으로 구성된 방문자 로그 및 접속페이지 로그 목록
                                 </caption>
                                 <colgroup>
-                                    <col class="num" />
-                                    <col style="width: 280px" />
-                                    <col style="width: 280px" />
-                                    <col style="width: 280px" />
-                                    <col style="width: 280px" />
-                                    <col style="width: 280px" />
+                                    <col style="width: 304px" />
+                                    <col style="width: 304px" />
+                                    <col style="width: 304px" />
+                                    <col style="width: 304px" />
+                                    <col style="width: 304px" />
                                 </colgroup>
                                 <thead>
                                     <tr>
-                                        <th id="th-deselect" scope="col">
-                                            <label class="check">
-                                                <input type="checkbox" name="row1-active" value="" checked />
-                                            </label>
-                                        </th>
-                                        <th id="th-year" scope="col">년도</th>
-                                        <th id="th-visitor" scope="col">방문자수(명)</th>
+                                        <th id="th-month" scope="col">월</th>
+                                        <th id="th-visitor" scope="col">평균 방문자수(명)</th>
                                         <th id="th-time" scope="col">평균 이용시간(분)</th>
-                                        <th id="th-pages" scope="col">평균 조회 페이지수</th>
+                                        <th id="th-pages" scope="col">조회 페이지수</th>
                                         <th id="th-log" scope="col">활동내역</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>
-                                            <label class="check">
-                                                <input type="checkbox" name="row1-active" value="" checked />
-                                            </label>
-                                        </td>
                                         <td><span>2025</span></td>
                                         <td><span>4394</span></td>
                                         <td><span>453</span></td>
@@ -148,18 +109,6 @@
                                     </tr>
                                 </tbody>
                             </table>
-                        </div>
-                        <div class="info-content">
-                            <ul class="info-list">
-                                <li>삭제버튼을 클릭하시면, <span class="color-error">체크하신 로그기록은 삭제</span>되오니 신중히 삭제하시기 바랍니다.</li>
-                            </ul>
-                        </div>
-                    </section>
-                    <section class="button-ccontainer">
-                        <div class="button-content cta">
-                            <div class="button-wrap">
-                                <a herf="javascript:void(0);" class="btn-primary">로그삭제</a>
-                            </div>
                         </div>
                     </section>
                 </main>
