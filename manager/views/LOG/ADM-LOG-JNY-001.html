@@ -27,6 +27,20 @@
 
         <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
         <script src="../../assets/js/include.js"></script>
+        <style>
+            .info-content + .pagination-content {
+                border-top: 1px solid #ddd;
+            }
+            .no-result {
+                padding: 290px 0 120px 0;
+                text-align: center;
+                font-size: var(--font22);
+                font-weight: var(--font-w-m);
+                color: var(--color-45);
+                background: url(../../assets/images/com/ico_info_list.png) no-repeat center top 120px;
+                background-size: 202px auto;
+            }
+        </style>
     </head>
 
     <body>
@@ -55,6 +69,19 @@
                                     <label for="">
                                         <input id="password-input" type="date" name="date" placeholder="디폴트" />
                                     </label>
+                                    <select id="category" name="category">
+                                        <option value="2025">2025</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2016">2016</option>
+                                    </select>
                                 </fieldset>
                                 <fieldset class="search">
                                     <legend>검색</legend>
@@ -75,28 +102,22 @@
                         <div class="list-content">
                             <table>
                                 <caption>
-                                    No, 고객명, ID, 전화번호, 접속기기, 접속일시, 종료일시, 접속시간(분), 활동내역으로 구성된 고객 여정 목록
+                                    No, ID, 접속기기, 접속일시, 접속시간(분), 활동내역으로 구성된 고객 여정 목록
                                 </caption>
                                 <colgroup>
                                     <col class="num" />
-                                    <col style="width: 240px" />
-                                    <col class="w_w_194" />
-                                    <col style="width: 240px" />
+                                    <col class="auto" />
                                     <col class="num" />
-                                    <col style="width: 150px" />
-                                    <col style="width: 150px" />
+                                    <col style="width: 308px" />
                                     <col style="width: 150px" />
                                     <col style="width: 150px" />
                                 </colgroup>
                                 <thead>
                                     <tr>
                                         <th id="th-no" scope="col">No</th>
-                                        <th id="th-name" scope="col">고객명</th>
                                         <th id="th-id" scope="col">ID</th>
-                                        <th id="th-phone" scope="col">전화번호</th>
                                         <th id="th-device" scope="col">접속기기</th>
                                         <th id="th-start" scope="col">접속일시</th>
-                                        <th id="th-end" scope="col">종료일시</th>
                                         <th id="th-time" scope="col">접속시간(분)</th>
                                         <th id="th-log" scope="col">활동내역</th>
                                     </tr>
@@ -104,17 +125,91 @@
                                 <tbody>
                                     <tr>
                                         <td><span>42</span></td>
-                                        <td><span>홍길동</span></td>
                                         <td><span>mg1234</span></td>
-                                        <td><span>01012345678</span></td>
                                         <td><span>PC</span></td>
                                         <td><span>YYYY.MM.DD</span></td>
+                                        <td><span>52</span></td>
+                                        <td><button type="button" class="btn-text" aria-label="활동내역 상세보기">상세보기</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>42</span></td>
+                                        <td><span>mg1234</span></td>
+                                        <td><span>PC</span></td>
+                                        <td><span>YYYY.MM.DD</span></td>
+                                        <td><span>52</span></td>
+                                        <td><button type="button" class="btn-text" aria-label="활동내역 상세보기">상세보기</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>42</span></td>
+                                        <td><span>mg1234</span></td>
+                                        <td><span>PC</span></td>
+                                        <td><span>YYYY.MM.DD</span></td>
+                                        <td><span>52</span></td>
+                                        <td><button type="button" class="btn-text" aria-label="활동내역 상세보기">상세보기</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>42</span></td>
+                                        <td><span>mg1234</span></td>
+                                        <td><span>PC</span></td>
+                                        <td><span>YYYY.MM.DD</span></td>
+                                        <td><span>52</span></td>
+                                        <td><button type="button" class="btn-text" aria-label="활동내역 상세보기">상세보기</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>42</span></td>
+                                        <td><span>mg1234</span></td>
+                                        <td><span>PC</span></td>
+                                        <td><span>YYYY.MM.DD</span></td>
+                                        <td><span>52</span></td>
+                                        <td><button type="button" class="btn-text" aria-label="활동내역 상세보기">상세보기</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>42</span></td>
+                                        <td><span>mg1234</span></td>
+                                        <td><span>PC</span></td>
+                                        <td><span>YYYY.MM.DD</span></td>
+                                        <td><span>52</span></td>
+                                        <td><button type="button" class="btn-text" aria-label="활동내역 상세보기">상세보기</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>42</span></td>
+                                        <td><span>mg1234</span></td>
+                                        <td><span>PC</span></td>
+                                        <td><span>YYYY.MM.DD</span></td>
+                                        <td><span>52</span></td>
+                                        <td><button type="button" class="btn-text" aria-label="활동내역 상세보기">상세보기</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>42</span></td>
+                                        <td><span>mg1234</span></td>
+                                        <td><span>PC</span></td>
+                                        <td><span>YYYY.MM.DD</span></td>
+                                        <td><span>52</span></td>
+                                        <td><button type="button" class="btn-text" aria-label="활동내역 상세보기">상세보기</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>42</span></td>
+                                        <td><span>mg1234</span></td>
+                                        <td><span>PC</span></td>
+                                        <td><span>YYYY.MM.DD</span></td>
+                                        <td><span>52</span></td>
+                                        <td><button type="button" class="btn-text" aria-label="활동내역 상세보기">상세보기</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>42</span></td>
+                                        <td><span>mg1234</span></td>
+                                        <td><span>PC</span></td>
                                         <td><span>YYYY.MM.DD</span></td>
                                         <td><span>52</span></td>
                                         <td><button type="button" class="btn-text" aria-label="활동내역 상세보기">상세보기</button></td>
                                     </tr>
                                 </tbody>
                             </table>
+                        </div>
+                        <div class="info-content">
+                            <ul class="info-list">
+                                <li>삭제버튼을 클릭하시면, 선택하신 <span class="color-error">로그기록은 삭제되오니 신중히 삭제</span>하시기 바랍니다.</li>
+                            </ul>
                         </div>
                         <div class="pagination-content">
                             <button class="btn-prev">이전으로</button>
@@ -123,6 +218,52 @@
                             <button>3</button>
                             <button>4</button>
                             <button class="btn-next">다음으로</button>
+                        </div>
+                    </section>
+                    <section class="button-ccontainer">
+                        <div class="button-content cta">
+                            <div class="button-wrap">
+                                <a herf="javascript:void(0);" class="btn-primary">고객여정 삭제</a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 조회 결과 없음 -->
+                    <!-- <section class="list-container">
+                        <div class="list-content"><p class="no-result">조회 결과가 없습니다.</p></div>
+                    </section> -->
+
+                    <!-- [D]: 기본얼럿 -->
+                    <section class="modal-container">
+                        <div id="alert01" class="layerPopup modal">
+                            <div class="pop-content alert">
+                                <div class="pop-body">
+                                    <!-- [D]: 화면설계서 참고하여 문구변경 -->
+                                    <p>얼럿메시지 문구노출</p>
+                                </div>
+                                <div class="pop-footer">
+                                    <div class="button-content">
+                                        <button type="button" class="btn-pop-primary" data-popup-close="modal">확인</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- [D]: 컨펌얼럿  -->
+                    <section class="modal-container">
+                        <div id="confirm01" class="layerPopup modal">
+                            <div class="pop-content alert">
+                                <div class="pop-body">
+                                    <!-- [D]: 화면설계서 참고하여 문구변경 -->
+                                    <p>컨펌메시지 문구노출</p>
+                                </div>
+                                <div class="pop-footer">
+                                    <div class="button-content">
+                                        <button type="button" class="btn-pop-secondary" data-popup-close="modal">아니오</button>
+                                        <button type="button" class="btn-pop-primary" data-popup-open="modal">예</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </section>
                 </main>

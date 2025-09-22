@@ -27,6 +27,20 @@
 
         <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
         <script src="../../assets/js/include.js"></script>
+        <style>
+            .info-content + .pagination-content {
+                border-top: 1px solid #ddd;
+            }
+            .no-result {
+                padding: 290px 0 120px 0;
+                text-align: center;
+                font-size: var(--font22);
+                font-weight: var(--font-w-m);
+                color: var(--color-45);
+                background: url(../../assets/images/com/ico_info_list.png) no-repeat center top 120px;
+                background-size: 202px auto;
+            }
+        </style>
     </head>
 
     <body>
@@ -55,6 +69,19 @@
                                     <label for="">
                                         <input id="password-input" type="date" name="date" placeholder="디폴트" />
                                     </label>
+                                    <select id="category" name="category">
+                                        <option value="2025">2025</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2016">2016</option>
+                                    </select>
                                 </fieldset>
                                 <fieldset class="search">
                                     <legend>검색</legend>
@@ -62,7 +89,6 @@
                                         <option value="all">전체</option>
                                         <option value="name">고객명</option>
                                         <option value="id">ID</option>
-                                        <option value="sessionId">세션ID</option>
                                         <option value="phone">전화번호</option>
                                         <option value="device">접속기기</option>
                                         <option value="response">응답결과</option>
@@ -82,12 +108,12 @@
                                 <colgroup>
                                     <col class="num" />
                                     <col class="num" />
-                                    <col class="width: 200px" />
-                                    <col style="width: 150px" />
-                                    <col class="num" />
-                                    <col style="width: 150px" />
                                     <col class="auto" />
-                                    <col class="num" />
+                                    <col style="width: 200px" />
+                                    <col style="width: 130px" />
+                                    <col style="width: 130px" />
+                                    <col class="auto" />
+                                    <col style="width: 150px" />
                                 </colgroup>
                                 <thead>
                                     <tr>
@@ -109,11 +135,106 @@
                                         <td><span>01012345678</span></td>
                                         <td><span>PC</span></td>
                                         <td><span>YYYY.MM.DD</span></td>
-                                        <td><span>비밀번호 5회 오류로 계정 잠금 처리</span></td>
+                                        <td><span>로그인</span></td>
+                                        <td><button type="button" class="btn-text" aria-label="활동내역 상세보기">상세보기</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>41</span></td>
+                                        <td><span>홍길동</span></td>
+                                        <td><span>mg1234</span></td>
+                                        <td><span>01012345678</span></td>
+                                        <td><span>PC</span></td>
+                                        <td><span>YYYY.MM.DD</span></td>
+                                        <td><span>상담신청</span></td>
+                                        <td><button type="button" class="btn-text" aria-label="활동내역 상세보기">상세보기</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>40</span></td>
+                                        <td><span>홍길동</span></td>
+                                        <td><span>mg1234</span></td>
+                                        <td><span>01012345678</span></td>
+                                        <td><span>PC</span></td>
+                                        <td><span>YYYY.MM.DD</span></td>
+                                        <td><span>공지사항 상세보기</span></td>
+                                        <td><button type="button" class="btn-text" aria-label="활동내역 상세보기">상세보기</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>39</span></td>
+                                        <td><span>홍길동</span></td>
+                                        <td><span>mg1234</span></td>
+                                        <td><span>01012345678</span></td>
+                                        <td><span>PC</span></td>
+                                        <td><span>YYYY.MM.DD</span></td>
+                                        <td><span>공지사항 화면진입</span></td>
+                                        <td><button type="button" class="btn-text" aria-label="활동내역 상세보기">상세보기</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>38</span></td>
+                                        <td><span>홍길동</span></td>
+                                        <td><span>mg1234</span></td>
+                                        <td><span>01012345678</span></td>
+                                        <td><span>모바일</span></td>
+                                        <td><span>YYYY.MM.DD</span></td>
+                                        <td><span>자료실 화면진입</span></td>
+                                        <td><button type="button" class="btn-text" aria-label="활동내역 상세보기">상세보기</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>37</span></td>
+                                        <td><span>홍길동</span></td>
+                                        <td><span>mg1234</span></td>
+                                        <td><span>01012345678</span></td>
+                                        <td><span>모바일</span></td>
+                                        <td><span>YYYY.MM.DD</span></td>
+                                        <td><span>로그인</span></td>
+                                        <td><button type="button" class="btn-text" aria-label="활동내역 상세보기">상세보기</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>36</span></td>
+                                        <td><span>홍길동</span></td>
+                                        <td><span>mg1234</span></td>
+                                        <td><span>01012345678</span></td>
+                                        <td><span>모바일</span></td>
+                                        <td><span>YYYY.MM.DD</span></td>
+                                        <td><span>상담신청</span></td>
+                                        <td><button type="button" class="btn-text" aria-label="활동내역 상세보기">상세보기</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>35</span></td>
+                                        <td><span>홍길동</span></td>
+                                        <td><span>mg1234</span></td>
+                                        <td><span>01012345678</span></td>
+                                        <td><span>모바일</span></td>
+                                        <td><span>YYYY.MM.DD</span></td>
+                                        <td><span>공지사항 상세보기</span></td>
+                                        <td><button type="button" class="btn-text" aria-label="활동내역 상세보기">상세보기</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>34</span></td>
+                                        <td><span>홍길동</span></td>
+                                        <td><span>mg1234</span></td>
+                                        <td><span>01012345678</span></td>
+                                        <td><span>모바일</span></td>
+                                        <td><span>YYYY.MM.DD</span></td>
+                                        <td><span>공지사항 화면진입</span></td>
+                                        <td><button type="button" class="btn-text" aria-label="활동내역 상세보기">상세보기</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>33</span></td>
+                                        <td><span>홍길동</span></td>
+                                        <td><span>mg1234</span></td>
+                                        <td><span>01012345678</span></td>
+                                        <td><span>모바일</span></td>
+                                        <td><span>YYYY.MM.DD</span></td>
+                                        <td><span>자료실 화면진입</span></td>
                                         <td><button type="button" class="btn-text" aria-label="활동내역 상세보기">상세보기</button></td>
                                     </tr>
                                 </tbody>
                             </table>
+                        </div>
+                        <div class="info-content">
+                            <ul class="info-list">
+                                <li>삭제버튼을 클릭하시면, 선택하신 <span class="color-error">로그기록은 삭제되오니 신중히 삭제</span>하시기 바랍니다.</li>
+                            </ul>
                         </div>
                         <div class="pagination-content">
                             <button class="btn-prev">이전으로</button>
@@ -122,6 +243,52 @@
                             <button>3</button>
                             <button>4</button>
                             <button class="btn-next">다음으로</button>
+                        </div>
+                    </section>
+                    <section class="button-ccontainer">
+                        <div class="button-content cta">
+                            <div class="button-wrap">
+                                <a herf="javascript:void(0);" class="btn-primary">오류로그 삭제</a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 조회 결과 없음 -->
+                    <!-- <section class="list-container">
+                        <div class="list-content"><p class="no-result">조회 결과가 없습니다.</p></div>
+                    </section> -->
+
+                    <!-- [D]: 기본얼럿 -->
+                    <section class="modal-container">
+                        <div id="alert01" class="layerPopup modal">
+                            <div class="pop-content alert">
+                                <div class="pop-body">
+                                    <!-- [D]: 화면설계서 참고하여 문구변경 -->
+                                    <p>얼럿메시지 문구노출</p>
+                                </div>
+                                <div class="pop-footer">
+                                    <div class="button-content">
+                                        <button type="button" class="btn-pop-primary" data-popup-close="modal">확인</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- [D]: 컨펌얼럿  -->
+                    <section class="modal-container">
+                        <div id="confirm01" class="layerPopup modal">
+                            <div class="pop-content alert">
+                                <div class="pop-body">
+                                    <!-- [D]: 화면설계서 참고하여 문구변경 -->
+                                    <p>컨펌메시지 문구노출</p>
+                                </div>
+                                <div class="pop-footer">
+                                    <div class="button-content">
+                                        <button type="button" class="btn-pop-secondary" data-popup-close="modal">아니오</button>
+                                        <button type="button" class="btn-pop-primary" data-popup-open="modal">예</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </section>
                 </main>
