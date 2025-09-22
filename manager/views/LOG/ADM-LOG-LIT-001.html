@@ -28,31 +28,9 @@
         <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
         <script src="../../assets/js/include.js"></script>
         <style>
-            body {
-                --tab-font-color: #666666;
-                --tab-font-size: var(--font22);
-                --tab-active: var(--color-45);
-                --tab-border: var(--primary);
-            }
-            .tab-list {
+            #th-allcheck {
                 display: flex;
-                margin-bottom: 42px;
-                width: 100%;
-                border-bottom: 1px solid var(--color-e);
-            }
-            .tab-container .tab-list.depth1 li.tab-item {
-                flex: 0;
-            }
-            .tab-container .tab-list.depth1 li.tab-item a {
-                padding: 24px 0;
-                width: 180px;
-                font-size: var(--tab-font-size);
-                color: var(--tab-font-color);
-            }
-            .tab-container .tab-list.depth1 li.active a {
-                border-bottom: 4px solid var(--tab-border);
-                font-weight: var(--font-w-b);
-                color: var(--tab-active);
+                justify-content: center;
             }
         </style>
     </head>
@@ -109,7 +87,7 @@
                         <div class="list-content">
                             <table>
                                 <caption>
-                                    No, 기준일, 평균 방문자수(명), 평균 이용시간(분), 평균 조회 페이지수, 활동내역으로 구성된 방문자 로그 및 접속페이지 로그 목록
+                                    년도, 방문자수(명), 평균 이용시간(분), 평균 조회 페이지수, 활동내역으로 구성된 방문자 로그 및 접속페이지 로그 목록
                                 </caption>
                                 <colgroup>
                                     <col class="num" />
@@ -121,9 +99,9 @@
                                 </colgroup>
                                 <thead>
                                     <tr>
-                                        <th id="th-deselect" scope="col">
-                                            <label class="check">
-                                                <input type="checkbox" name="row1-active" value="" checked />
+                                        <th id="th-allcheck" scope="col">
+                                            <label class="check" for="chkAll">
+                                                <input id="chkAll" type="checkbox" name="row1-active" value="" checked />
                                             </label>
                                         </th>
                                         <th id="th-year" scope="col">년도</th>
@@ -134,6 +112,18 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <tr>
+                                        <td>
+                                            <label class="check">
+                                                <input type="checkbox" name="row1-active" value="" checked />
+                                            </label>
+                                        </td>
+                                        <td><span>2025</span></td>
+                                        <td><span>4394</span></td>
+                                        <td><span>453</span></td>
+                                        <td><span>57</span></td>
+                                        <td><button type="button" class="btn-text" aria-label="활동내역 상세보기">상세보기</button></td>
+                                    </tr>
                                     <tr>
                                         <td>
                                             <label class="check">
