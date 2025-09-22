@@ -13,7 +13,6 @@ body{
   --btn-text-color:var(--primary);
 
   --lst-btn-prev:url("../../images/com/svg/ico_link.svg");
-  --lst-btn-last:url("../../images/com/svg/ico_last.svg");
   --lst-btn-active:#F1F1F3;
 
 }
@@ -60,17 +59,10 @@ button, a { cursor:pointer; display:inline-block; display:inline-flex; align-ite
 .pagination-content button, 
 .pagination-content a { min-width:40px; height:40px; font-size:var(--font14); border-radius:4px; }
 .pagination-content .active { background:var(--lst-btn-active); font-weight:var(--font-w-m); }
-.pagination-content div { flex:1; text-align:center; }
-.pagination-content .first,
-.pagination-content .last {  flex:0 0 64px; display:flex; gap:16px; }
-.pagination-content .first { left:20px; }
-.pagination-content .last { right:20px; }
-.pagination-content .first *,
-.pagination-content .last *{ display:flex; align-items:center; font-size:0; width:24px; min-width:24px; height:24px; }
-.pagination-content .btn-first::before { content:""; display:block; width:24px; height:24px; background:var(--lst-btn-last) no-repeat left center; background-size:100%; transform:rotate(180deg);   }
+.pagination-content .btn-prev { position:absolute; left:20px; display:flex; align-items:center;}
 .pagination-content .btn-prev::before { content:""; display:block; width:24px; height:24px; background:var(--lst-btn-prev) no-repeat left center; background-size:100%; transform:rotate(180deg);   }
+.pagination-content .btn-next { position:absolute; right:20px; display:flex; align-items:center;}
 .pagination-content .btn-next::after { content:""; display:block; width:24px; height:24px; background:var(--lst-btn-prev) no-repeat right center; background-size:100%;  }
-.pagination-content .btn-last::after { content:""; display:block; width:24px; height:24px; background:var(--lst-btn-last) no-repeat right center; background-size:100%;  }
 
 
 /**body ¹öÆ° ***/
