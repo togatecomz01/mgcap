@@ -26,6 +26,7 @@ table td { height:72px; }
 .list-content td:first-of-type { border-left:0; }
 .list-content td:has(input:not(.toggle input)) { padding:20px 24px; }
 
+.list-content thead th { position:sticky; top:0; }
 
 .write-content th, td { padding:10px 20px; }
 .write-content td { text-align:left; }

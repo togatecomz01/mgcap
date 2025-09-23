@@ -72,6 +72,8 @@ button, a { cursor:pointer; display:inline-block; display:inline-flex; align-ite
 .pagination-content .btn-next::after { content:""; display:block; width:24px; height:24px; background:var(--lst-btn-prev) no-repeat right center; background-size:100%;  }
 .pagination-content .btn-last::after { content:""; display:block; width:24px; height:24px; background:var(--lst-btn-last) no-repeat right center; background-size:100%;  }
 
+.info-content + .pagination-content { border-top: 1px solid #ddd; }
+
 
 /**body ¹öÆ° ***/
 .btn-body { padding:10px; width:85px; height:46px; border:1px solid var(--form-board); background:var(--btn-body-color); border:1px solid transparent; color:var(--white); border-radius:4px; }
