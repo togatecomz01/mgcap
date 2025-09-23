@@ -3,7 +3,7 @@
     <head>
         <meta charset="euc-kr" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>mg캐피탈&gt;관리자페이지&gt;메뉴 관리&gt;1depth메뉴 관리&gt;2depth메뉴 관리&gt;3depth메뉴 관리</title>
+        <title>mg캐피탈&gt;관리자페이지&gt;메뉴 관리&gt;1depth메뉴 관리&gt;2depth메뉴 관리</title>
 
         <meta name="keywords" content="MG캐피탈" />
         <meta name="copyright" content="copyrights 2025 MG캐피탈" />
@@ -55,20 +55,20 @@
                                         </li>
                                         <li>
                                             <label for="wrt02" class="essential">2depth 메뉴명</label>
-                                            <span><input id="wrt02" type="text" value="2depth 메뉴명" aria-invalid="true"></span>
+                                            <span><input id="wrt02" type="text" placeholder="메뉴명을 입력해주세요." aria-invalid="true"></span>
                                             <span id="wrt02-error" class="error" role="alert"> 메뉴명을 입력해주세요.</span><!--[D] 유효성 성공일땐 hidden 처리-->
-                                            <span id="wrt02-error" class="error" role="alert"> 동일한 메뉴명이 존재합니다.<br/>다른 메뉴명을 입력해주세요.</span><!--[D] 유효성 성공일땐 hidden 처리-->
+                                            <span id="wrt02-error" class="error" role="alert">동일한 메뉴명이 존재합니다.다른 메뉴명을 입력해주세요.</span><!--[D] 유효성 성공일땐 hidden 처리-->
                                         </li>
                                         <li>
                                             <label for="wrt02" class="essential">URL</label>
-                                            <span><input id="wrt02" type="text" placeholder="URL 경로를 입력해주세요." aria-invalid="true"></span>
-                                            <span id="wrt02-error" class="error" role="alert"> URL경로를 입력해주세요.</span><!--[D] 유효성 성공일땐 hidden 처리-->
+                                            <span><input id="wrt02" type="text" placeholder="URL 경로를 입력해주세요."></span>
                                         </li>
                                     </ul>  
                                 </fieldset>
                                 <div class="info-content">
                                     <ul class="info-list">
                                         <li>신규 등록 시, 순서 미기재 및 비활성 상태로 저장됩니다.</li>
+                                        <li>URL경로 미 입력 시, 하위메뉴 [바로가기]버튼을 통해 해당 메뉴의 하위메뉴를 관리할 수 있습니다.</li>
                                     </ul>
                                 </div>
                             </form>
@@ -76,7 +76,7 @@
                         <div class="pop-footer">
                             <div class="button-content">
                                 <button type="button" class="btn-pop-secondary" data-popup-close="modal">취소</button>
-                                <button type="button" class="btn-pop-primary"  data-popup-close="modal">확인</button>
+                                <button type="button" class="btn-pop-primary"  data-popup-close="modal">등록</button>
                             </div>
                         </div>
                     </div>

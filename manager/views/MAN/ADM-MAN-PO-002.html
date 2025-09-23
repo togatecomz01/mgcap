@@ -3,7 +3,7 @@
 <head>
     <meta charset="euc-kr" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>mg캐피탈&gt;관리자페이지&gt;메인 관리&gt;메인배너 관리&gt;신규등록</title>
+    <title>mg캐피탈&gt;관리자페이지&gt;메인 관리&gt;팝업 관리&gt;신규등록</title>
 
     <meta name="keywords" content="MG캐피탈" />
     <meta name="copyright" content="copyrights 2025 MG캐피탈" />
@@ -43,13 +43,13 @@
                     <ul class="location_content">
                         <li><a href="javascript:void(0);" class="home">홈</a></li>
                         <li><a href="javascript:void(0);">메인 관리</a></li>
-                        <li><a href="javascript:void(0);">메인배너 관리</a></li>
+                        <li><a href="javascript:void(0);">팝업 관리</a></li>
                         <li><a href="javascript:void(0);">신규 등록</a></li>
                     </ul>
                 </seciton>
                 <section class="write-container">
                     <table class="write-content">
-                        <caption>등록자, 구분, 배너명, 타이틀, 내용, 첨부파일, 이미지 Alt값, URL로 구성된 목록</caption>
+                        <caption>등록자, 구분, 팝업명, 타이틀, 내용, 첨부파일, 이미지 Alt값, URL로 구성된 목록</caption>
                         <colgroup>
                             <col class="w_w_194">
                             <col style="width:auto;">
@@ -66,7 +66,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th id="th-title3" scope="row"><span class="essential">배너명</span></th>
+                                <th id="th-title3" scope="row"><span class="essential">팝업</span></th>
                                 <td>
                                     <div class="flex-row gap10">
                                         <input id="row1-title" type="text" placeholder="배너명을 입력해주세요." value="" aria-labelledby="th-title" maxlength="16">
@@ -77,19 +77,13 @@
                             <tr>
                                 <th id="th-title4" scope="row"><span class="essential">타이틀</span></th>
                                 <td>
-                                    <div class="flex-row gap10">
-                                        <input id="row2-title" type="text" placeholder="타이틀을 입력해주세요." value="" aria-labelledby="th-title" maxlength="20">
-                                        <span class="ipt-right num"><span class="blue-txt">0</span>/<span>20</span>자</span>
-                                    </div>
+                                    <input id="row2-title" type="text" placeholder="타이틀을 입력해주세요." value="" aria-labelledby="th-title">
                                 </td>
                             </tr>
                             <tr>
                                 <th id="th-title5" scope="row"><span class="essential">내용</span></th>
                                 <td>
-                                    <div class="flex-row gap10">
-                                        <textarea placeholder="내용을 입력해주세요." maxlength="64"></textarea>
-                                        <span class="ipt-right num"><span class="blue-txt">0</span>/<span>64</span>자</span>
-                                    </div>
+                                    <textarea placeholder="내용을 입력해주세요."></textarea>
                                 </td>
                             </tr>
                             <tr>
@@ -125,9 +119,8 @@
                     </table>
                     <div class="info-content">
                         <ul class="info-list">
-                            <li>수정 시, 해당 배너의 순서는 기존과 동일하게 유지되며, 대고객채널에 즉시 노출됩니다.</li>
-                            <li>첨부파일을 새로 등록하면 기존의 첨부파일은 삭제됩니다.</li>
-                            <li>첨부파일 사이즈 : 00x00</li>
+                            <li>신규 등록 시, 맨 마지막 순서로 자동 배정되며, 대고객채널에 즉시 노출됩니다.</li>
+                            <li>첨부파일 사이즈 : 00x00.</li>
                             <li>첨부파일 파일 형식 : jpg, png, gif</li>
                             </ul>
                     </div>

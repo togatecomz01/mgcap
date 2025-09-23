@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>mg캐피탈&gt;관리자페이지&gt;메인 관리&gt;팝업 관리</title>
+
+    <meta name="keywords" content="MG캐피탈" />
+    <meta name="copyright" content="copyrights 2025 MG캐피탈" />
+    <meta name="description" content="MG캐피탈 리스금융, 할부금융, 스탁론, 기업대출, 장기렌트카, PF대출 등 금융 서비스 제공."/>
+    <meta name="viewport" content="width=device-width" />
+
+    <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="No-Cache" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico"/>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/ui-util.css" />
+
+    <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+    <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+    <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
+    <script src="../../assets/js/include.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div data-include-path="../COMMON/header.html"></div>
+        <div class="bodyWrap">
+            <div data-include-path="../COMMON/lnb.html"></div>
+            <main class="contentWrap">
+                <seciton class="title_container">
+                    <h2>팝업 관리</h2>
+                    <ul class="location_content">
+                        <li><a href="javascript:void(0);" class="home">홈</a></li>
+                        <li><a href="javascript:void(0);">메인 관리</a></li>
+                        <li><a href="javascript:void(0);">팝업 관리</a></li>
+                    </ul>
+                </seciton>
+                <section class="list-container">
+                    <div class="list-content">
+                        <table>
+                            <caption>순서, 팝업명, 이미지, 이미지 Alt 값, URL로 구성된 목록</caption>
+                        
+                            <colgroup>
+                                <col class="num">
+                                <col class="w_w_194">
+                                <col class="auto">
+                                <col class="auto">
+                                <col class="auto">
+                            </colgroup>
+                        
+                            <thead>
+                            <tr>
+                                <th id="th-num" scope="col">순서</th>
+                                <th id="th-top"   scope="col">팝업명</th>
+                                <th id="th-image"   scope="col">이미지</th>
+                                <th id="th-image2"   scope="col">이미지 Alt 값</th>
+                                <th id="th-url" scope="col">URL</th>
+                            </tr>
+                            </thead>
+                        
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span><input id="row1-title" class="tac" type="text" value="1" aria-labelledby="th-title"></span>
+                                    </td>
+                                    <td><span>홈페이지 리뉴얼 안내 팝업</span></td>
+                                    <td><button type="button" class="btn-text img" aria-label="Banner-Image01.png">Banner-Image01.png</button></td>
+                                    <td><span>홈페이지 리뉴얼 안내 이미지</span></td>
+                                    <td><span>https://www.mgcap.co.kr/notice/1.js</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span><input id="row2-title" class="tac" type="text" value="2" aria-labelledby="th-title"></span>
+                                    </td>
+                                    <td><span>시스템점검 안내 팝업</span></td>
+                                    <td><button type="button" class="btn-text img" aria-label="Banner-Image02.png">Banner-Image02.png</button></td>
+                                    <td><span>시스템 점검 일자 안내 이미지</span></td>
+                                    <td><span>https://www.mgcap.co.kr/notice/3.jsp</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span><input id="row1-title" class="tac" type="text" value="1" aria-labelledby="th-title"></span>
+                                    </td>
+                                    <td><span>신규 상품 안내 팝업</span></td>
+                                    <td><button type="button" class="btn-text img" aria-label="Banner-Image03.png">Banner-Image03.png</button></td>
+                                    <td><span>신규 상품 안내 이미지</span></td>
+                                    <td><span>https://www.mgcap.co.kr/notice/17.jsp</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="info-content">
+                        <ul class="info-list">
+                            <li>각각의 팝업명 클릭 시, 해당 배너의 내용을 수정 및 삭제하실 수 있습니다.</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="button-ccontainer">
+                    <div class="button-content cta">
+                        <div class="button-wrap">
+                            <a herf="javascript:void(0);" class="btn-secondary reset">초기화</a>
+                            <a herf="javascript:void(0);" class="btn-secondary">신규등록</a>
+                            <a herf="javascript:void(0);" class="btn-primary">순서저장</a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
