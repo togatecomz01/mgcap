@@ -1,24 +1,30 @@
+window.addEventListener('load', function() {
+    fullMenu();
+    allMenuToggle();
+    headerMenu();
+});
+
 /*---------------------------------------------
-        전체메뉴 모바일
+    전체메뉴 모바일
 ---------------------------------------------*/
-function initMobileMenu() {
+function fullMenu() {
     const menuTit = document.querySelectorAll('.menu-tit li');
     const gnb = document.querySelectorAll('.menu-inner > li');
 
-    menuTit.forEach((item, index) => {
+    menuTit.forEach((item) => {
         item.addEventListener('click', function() {
             const span = this.querySelector('span');
             const focusTarget = span.getAttribute('data-focus');
 
             // 모든 menu-tit li에서 on 클래스 제거
             menuTit.forEach(li => li.classList.remove('on'));
-            
+
             // 클릭된 li에 on 클래스 추가
             this.classList.add('on');
 
             // 모든 menu-inner li에서 on 클래스 제거
             gnb.forEach(li => li.classList.remove('on'));
-            
+
             // data-focus와 일치하는 menu-inner li에 on 클래스 추가
             const targetMenuItem = document.querySelector(`.menu-inner .${focusTarget}`);
             if (targetMenuItem) {
@@ -27,19 +33,139 @@ function initMobileMenu() {
         });
     });
 }
+/*---------------------------------------------
+    전체메뉴 열기/닫기 기능 (PC & Mobile)
+---------------------------------------------*/
+function allMenuToggle() {
+    const menuBtn = document.querySelector('.menu-btn[data-open="modal"]') || document.querySelector('.menu-btn');
+    const allMenu = document.getElementById('allMenu');
+    const closeBtn = document.querySelector('.close_btn');
 
-// // 데모용 함수들
-// function toggleMenu() {
-//     const menu = document.querySelector('.allmenu');
-//     menu.classList.toggle('hidden');
-// }
+    // 메뉴 열기
+    function openMenu() {
+        allMenu.classList.add('on');
+    }
 
-// function closeMenu() {
-//     const menu = document.querySelector('.allmenu');
-//     menu.classList.add('hidden');
-// }
+    // 메뉴 닫기
+    function closeMenu() {
+        allMenu.classList.remove('on');
+    }
 
-// 페이지 로드 시 초기화
-document.addEventListener('DOMContentLoaded', function() {
-    initMobileMenu();
-});
+    // 메뉴 버튼 클릭/터치
+    if (menuBtn) {
+        menuBtn.addEventListener('click', openMenu);
+        menuBtn.addEventListener('touchend', openMenu);
+    }
+
+    // 닫기 버튼 클릭/터치
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeMenu);
+        closeBtn.addEventListener('touchend', closeMenu);
+    }
+}
+
+/*---------------------------------------------
+    헤더 드롭다운 메뉴 기능
+---------------------------------------------*/
+function headerMenu() {
+    const menuButtons = document.querySelectorAll('.lnb .menu-item > .menu-tit');
+    const menuItems = document.querySelectorAll('.lnb .menu-item');
+    const submenuItems = document.querySelectorAll('.lnb .submenu2 > li');
+    const submenu3Items = document.querySelectorAll('.lnb .submenu3 > li');
+
+    // 모든 드롭다운 메뉴를 닫는 함수
+    function closeAllMenus() {
+        menuItems.forEach(item => {
+            item.classList.remove('on');
+            const btn = item.querySelector('.menu-tit');
+            if (btn) {
+                btn.classList.remove('on');
+                btn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
+    // 각 메뉴 버튼에 클릭 이벤트 추가
+    menuButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const parentMenuItem = this.parentElement;
+            const listItem = parentMenuItem.querySelector('.list-item');
+            const href = this.getAttribute('href');
+
+            // 모든 메뉴 닫기 초기화
+            closeAllMenus();
+
+            // menu-item에 list-item이 없으면 페이지 이동 후 함수 종료
+            if (!listItem) {
+                if (href) {
+                    window.location.href = href;
+                }
+                return;
+            }
+
+            const isCurrentlyOpen = parentMenuItem.classList.contains('on');
+            // 모든 메뉴 닫기
+            menuItems.forEach(item => {
+                item.classList.remove('on');
+                const btn = item.querySelector('.menu-tit');
+                if (btn) {
+                    btn.classList.remove('on');
+                    btn.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // 현재 클릭한 메뉴가 닫혀있었다면 열기
+            if (!isCurrentlyOpen) {
+                parentMenuItem.classList.add('on');
+                this.classList.add('on');
+                this.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+
+    // submenu2 > li에 클릭 이벤트 추가
+    submenuItems.forEach(li => {
+        li.addEventListener('click', function (e) {
+            e.stopPropagation();
+            // 다른 submenu 아이템의 on 제거
+            submenuItems.forEach(item => {
+                item.classList.remove('on');
+            });
+
+            // 모든 submenu3 아이템의 'on' 클래스 제거 (초기화)
+            submenu3Items.forEach(item => {
+                item.classList.remove('on');
+            });
+
+            // 현재 클릭한 li에 on 추가
+            this.classList.add('on');
+
+            // 만약 현재 li가 submenu3를 포함하고 있다면
+            const submenu3 = this.querySelector('.submenu3');
+            if (submenu3) {
+                const firstSubmenu3Li = submenu3.querySelector('li');
+                if (firstSubmenu3Li) {
+                    firstSubmenu3Li.classList.add('on');
+                    // 그리고 현재 submenu2 li의 on 제거
+                    this.classList.remove('on');
+                }
+            }
+        });
+    });
+
+    // 다른 곳 클릭시 메뉴 닫기
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.lnb')) {
+            menuItems.forEach(item => {
+                item.classList.remove('on');
+                const btn = item.querySelector('.menu-tit');
+                if (btn) {
+                    btn.classList.remove('on');
+                    btn.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
+    });
+}
