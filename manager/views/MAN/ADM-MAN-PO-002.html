@@ -60,16 +60,41 @@
                                 <td><span>홍길동</span></td>
                             </tr>
                             <tr>
-                                <th id="th-title2" scope="row"><span>구분</span></th>
+                                <th id="th-title" scope="row"><span class="essential">게시기간</span></th>
                                 <td>
-                                    <span>메인배너</span>
+                                    <fieldset>
+                                        <legend>기간</legend>
+                                        <label for="">
+                                            <input id="password-input" type="date" name="date" placeholder="디폴트"/>
+                                        </label>
+                                        <span class="ipt-hyphen">-</span>
+                                        <label for="">
+                                            <input id="password-input" type="date" name="date" placeholder="디폴트"/>
+                                        </label>
+                                    </fieldset>
                                 </td>
                             </tr>
                             <tr>
-                                <th id="th-title3" scope="row"><span class="essential">팝업</span></th>
+                                <th id="th-title" scope="row"><span class="essential">활성 상태</span></th>
+                                <td>
+                                    <fieldset>
+                                        <legend>활성 상태</legend>
+                                        <label class="radio">
+                                            <input type="radio" name="row2-active" value="" checked="">
+                                            <span>활성</span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="row2-active" value="">
+                                            <span>비활성</span>
+                                        </label>
+                                    </fieldset>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th id="th-title3" scope="row"><span class="essential">팝업명</span></th>
                                 <td>
                                     <div class="flex-row gap10">
-                                        <input id="row1-title" type="text" placeholder="배너명을 입력해주세요." value="" aria-labelledby="th-title" maxlength="16">
+                                        <input id="row1-title" type="text" placeholder="팝업명을 입력해주세요." value="" aria-labelledby="th-title" maxlength="16">
                                         <span class="ipt-right num"><span class="blue-txt">0</span>/<span>16</span>자</span>
                                     </div>
                                 </td>

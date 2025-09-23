@@ -57,3 +57,7 @@ col.ico-btn { width:94px; min-width:74px }
 .list-container:not(:has(.info-content)) table tbody tr:last-child { border-bottom:0; }
 .list-container:has(.pagination-content) table tbody tr:last-child,
 .pop-body .list-container table tbody tr:last-child { border-bottom:1px solid var(--table-border); }
+
+/** 활성/비활성 **/
+.active { font-size:var(--font16); font-weight:var(--font-w-r); color:var(--primary); }
+.n-active { font-size:var(--font16); font-weight:var(--font-w-r); color:var(--color-9); }
