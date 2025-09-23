@@ -35,7 +35,8 @@
             'input.js',
             'layout.js',
             'popup.js',
-            'tab.js'
+            'tab.js',
+            'nav.js'
         ];
         
         var basePath = '../../assets/js/ui/com/';

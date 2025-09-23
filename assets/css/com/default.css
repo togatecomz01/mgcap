@@ -89,6 +89,32 @@ textarea:-webkit-autofill:hover { -webkit-box-shadow: 0 0 0 1000px #FFFFFF inset
 .auth.flex-row > div.col:last-child { flex: 0 0 152px; }
 .auth.flex-row > div.col:last-child { padding-left:7px; }
 
+/*********************************************************************
+#ºí¸´ÅØ½ºÆ®
+*********************************************************************/
+.bul-dot,
+.bul-hypn,
+.bul-refer { position:relative; display:inline-block; width:100%; }
+
+.bul-hypn > li,
+.bul-dot > li,
+.bul-refer > li { display:inline-block; width:100%; padding-left:15px; }
+
+/* - */
+.bul-hypn > li::before{ content:'-'; position:absolute; left:0; }
+
+/* . */
+p + .bul-dot,
+.bul-dot + .bul-refer,
+.bul-refer + p { margin-top:10px; }
+
+.bul-dot > li { margin-bottom:10px; }
+.bul-dot > li:last-child { margin-bottom:0; }
+.bul-dot > li::before { content:'¡¤'; position:absolute; left:0; }
+
+/* ¡Ø */
+.bul-refer > li { padding-left:20px; }
+.bul-refer > li::before { content:'¡Ø'; position:absolute; left:0; }
 
 
 @media screen and (max-width:768px){ 
