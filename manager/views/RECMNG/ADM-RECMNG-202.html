@@ -75,17 +75,17 @@
                             </colgroup>
                             <tbody>
                                 <tr>
-                                    <th id="th-writer" scope="row"><span>지원구분</span></th>
+                                    <th id="th-apply-type" scope="row"><span>지원구분</span></th>
                                     <td>
                                         <div class="form-wrap">
                                             <fieldset>
                                                 <legend>기본 라디오박스</legend>
                                                 <label class="radio">
-                                                    <input type="radio" name="row2-active" value checked />
+                                                    <input type="radio" name="row2-active" value="" checked="" />
                                                     <span>신입</span>
                                                 </label>
                                                 <label class="radio">
-                                                    <input type="radio" name="row2-active" value />
+                                                    <input type="radio" name="row2-active" value="" />
                                                     <span>경력</span>
                                                 </label>
                                             </fieldset>
@@ -107,9 +107,9 @@
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th scope="col">희망근무지</th>
-                                    <th scope="col">지원업무</th>
-                                    <th scope="col">상세지원업무</th>
+                                    <th id="th-workplace" scope="col">희망근무지</th>
+                                    <th id="th-work" scope="col">지원업무</th>
+                                    <th id="th-work-detail" scope="col">상세지원업무</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -133,9 +133,9 @@
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th scope="col">희망근무지</th>
-                                    <th scope="col">지원업무</th>
-                                    <th scope="col">상세지원업무</th>
+                                    <th id="th-workplace" scope="col">희망근무지</th>
+                                    <th id="th-work" scope="col">지원업무</th>
+                                    <th id="th-work-detail" scope="col">상세지원업무</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -155,50 +155,52 @@
                         <h4><span>개인정보</span></h4>
                         <table class="write-content">
                             <caption>
-                                사진등록, 성명, 생년월일, 휴대폰번호, 국적, 현주소, 이메일, 전화번호, 취미, 특기, 보훈여부로 구성된 표
+                                사진등록, 성명, 생년월일, 휴대폰번호, 국적, 현주소, 이메일, 전화번호, 취미, 특기, 보훈여부로 구성된 개인정보 표
                             </caption>
                             <colgroup>
+                                <col style="width: 230px" />
+                                <col class="auto" />
                                 <col style="width: 230px" />
                                 <col class="auto" />
                             </colgroup>
                             <tbody>
                                 <tr>
-                                    <th id="th-pic" scope="row" rowspan="3"><span>사진등록</span></th>
-                                    <td rowspan="3"></td>
-                                    <th id="th-pic" scope="row"><span>성명</span></th>
-                                    <td>성명노출</td>
+                                    <th id="th-pic" scope="row" rowspan="3">사진등록</th>
+                                    <td rowspan="3"><img /></td>
+                                    <th id="th-name" scope="row">성명</th>
+                                    <td><span>성명노출</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-pic" scope="row"><span>생년월일</span></th>
-                                    <td>생년월일 노출</td>
+                                    <th id="th-birth" scope="row">생년월일</th>
+                                    <td><span>생년월일 노출</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-pic" scope="row"><span>휴대폰번호</span></th>
-                                    <td>휴대폰번호 노출</td>
+                                    <th id="th-phone" scope="row">휴대폰번호</th>
+                                    <td><span>휴대폰번호 노출</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-pic" scope="row"><span>국적</span></th>
-                                    <td>국적노출</td>
+                                    <th id="th-nation" scope="row">국적</th>
+                                    <td><span>국적노출</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-pic" scope="row"><span>현주소</span></th>
-                                    <td>주소노출</td>
+                                    <th id="th-address" scope="row">현주소</th>
+                                    <td><span>주소노출</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-pic" scope="row" rowspan="1"><span>이메일</span></th>
-                                    <td>이메일 노출</td>
-                                    <th id="th-pic" scope="row"><span>이메일</span></th>
-                                    <td>이메일 노출</td>
+                                    <th id="th-email" scope="row" rowspan="1">이메일</th>
+                                    <td><span>이메일 노출</span></td>
+                                    <th id="th-call" scope="row">전화번호</th>
+                                    <td><span>전화번호 노출</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-pic" scope="row" rowspan="1"><span>취미</span></th>
-                                    <td>취미 노출</td>
-                                    <th id="th-pic" scope="row"><span>특기</span></th>
-                                    <td>이메일 노출</td>
+                                    <th id="th-hobby" scope="row" rowspan="1">취미</th>
+                                    <td><span>취미 노출</span></td>
+                                    <th id="th-skill" scope="row">특기</th>
+                                    <td><span>특기 노출</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-pic" scope="row"><span>보존여부</span></th>
-                                    <td>이메일 노출</td>
+                                    <th id="th-veteran" scope="row">보훈여부</th>
+                                    <td><span>보훈여부 노출</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -216,18 +218,18 @@
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th scope="col">병역구분</th>
-                                    <th scope="col">군별</th>
-                                    <th scope="col">복무기간</th>
-                                    <th scope="col">면제사유</th>
+                                    <th id="th-military-type" scope="col">병역구분</th>
+                                    <th id="th-military" scope="col">군별</th>
+                                    <th id="th-military-period" scope="col">복무기간</th>
+                                    <th id="th-military-reason" scope="col">면제사유</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><span>희망근무지</span></td>
-                                    <td><span>희망근무지</span></td>
-                                    <td><span>희망근무지</span></td>
-                                    <td><span>희망근무지</span></td>
+                                    <td><span>병역구분 노출</span></td>
+                                    <td><span>군별 노출</span></td>
+                                    <td><span>복무기간 노출</span></td>
+                                    <td><span>면제사유 노출</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -240,30 +242,32 @@
                         <h4><span>고등학교</span></h4>
                         <table class="write-content">
                             <caption>
-                                사진등록, 성명, 생년월일, 휴대폰번호, 국적, 현주소, 이메일, 전화번호, 취미, 특기, 보훈여부로 구성된 표
+                                학교명, 기간, 졸업구분, 전공명, 학점으로 구성된 고등학교 표
                             </caption>
                             <colgroup>
+                                <col style="width: 230px" />
+                                <col class="auto" />
                                 <col style="width: 230px" />
                                 <col class="auto" />
                             </colgroup>
                             <tbody>
                                 <tr>
-                                    <th id="th-pic" scope="row"><span>학교명</span></th>
-                                    <td>학교명 노출</td>
+                                    <th id="th-highschool-name" scope="row">학교명</th>
+                                    <td><span>학교명 노출</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-pic" scope="row" rowspan="1"><span>기간</span></th>
-                                    <td>재학기간 노출</td>
-                                    <th id="th-pic" scope="row"><span>졸업구분</span></th>
-                                    <td>졸업구분 노출</td>
+                                    <th id="th-highschool-period" scope="row" rowspan="1">기간</th>
+                                    <td><span>재학기간 노출</span></td>
+                                    <th id="th-highschool-graduation" scope="row">졸업구분</th>
+                                    <td><span>졸업여부 노출</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-pic" scope="row"><span>전공명</span></th>
-                                    <td>전공명 노출</td>
+                                    <th id="th-highschool-major" scope="row">전공명</th>
+                                    <td><span>전공명 노출</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-pic" scope="row"><span>학점</span></th>
-                                    <td>00/00</td>
+                                    <th id="th-highschool-score" scope="row">학점</th>
+                                    <td><span>00/00</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -271,30 +275,32 @@
                         <h4><span>전문대학</span></h4>
                         <table class="write-content">
                             <caption>
-                                사진등록, 성명, 생년월일, 휴대폰번호, 국적, 현주소, 이메일, 전화번호, 취미, 특기, 보훈여부로 구성된 표
+                                학교명, 기간, 졸업구분, 전공명, 학점으로 구성된 전문대학 표
                             </caption>
                             <colgroup>
+                                <col style="width: 230px" />
+                                <col class="auto" />
                                 <col style="width: 230px" />
                                 <col class="auto" />
                             </colgroup>
                             <tbody>
                                 <tr>
-                                    <th id="th-pic" scope="row"><span>학교명</span></th>
-                                    <td>학교명 노출</td>
+                                    <th id="th-college-name" scope="row">학교명</th>
+                                    <td><span>학교명 노출</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-pic" scope="row" rowspan="1"><span>기간</span></th>
-                                    <td>재학기간 노출</td>
-                                    <th id="th-pic" scope="row"><span>졸업구분</span></th>
-                                    <td>졸업구분 노출</td>
+                                    <th id="th-college-period" scope="row" rowspan="1">기간</th>
+                                    <td><span>재학기간 노출</span></td>
+                                    <th id="th-college-graduation" scope="row">졸업구분</th>
+                                    <td><span>졸업여부 노출</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-pic" scope="row"><span>전공명</span></th>
-                                    <td>전공명 노출</td>
+                                    <th id="th-college-major" scope="row">전공명</th>
+                                    <td><span>전공명 노출</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-pic" scope="row"><span>학점</span></th>
-                                    <td>00/00</td>
+                                    <th id="th-college-score" scope="row">학점</th>
+                                    <td><span>00/00</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -302,27 +308,29 @@
                         <h4><span>대학교(4년제)</span></h4>
                         <table class="write-content">
                             <caption>
-                                사진등록, 성명, 생년월일, 휴대폰번호, 국적, 현주소, 이메일, 전화번호, 취미, 특기, 보훈여부로 구성된 표
+                                학교명, 본교/분교, 주간/야간, 기간, 졸업구분, 전공명, 학점으로 구성된 대학교(4년제) 표
                             </caption>
                             <colgroup>
+                                <col style="width: 230px" />
+                                <col class="auto" />
                                 <col style="width: 230px" />
                                 <col class="auto" />
                             </colgroup>
                             <tbody>
                                 <tr>
-                                    <th id="th-pic" scope="row" rowspan="2"><span>학교명</span></th>
-                                    <td rowspan="2">학교명 노출</td>
-                                    <th id="th-pic" scope="row"><span>본교/분교</span></th>
+                                    <th id="th-univ-name" scope="row" rowspan="2">학교명</th>
+                                    <td rowspan="2"><span>학교명 노출</span></td>
+                                    <th id="th-univ-campus" scope="row">본교/분교</th>
                                     <td>
                                         <div class="form-wrap">
                                             <fieldset>
                                                 <legend>기본 라디오박스</legend>
                                                 <label class="radio">
-                                                    <input type="radio" name="row2-active" value checked />
+                                                    <input type="radio" name="row2-active" value="" checked="" />
                                                     <span>본교</span>
                                                 </label>
                                                 <label class="radio">
-                                                    <input type="radio" name="row2-active" value />
+                                                    <input type="radio" name="row2-active" value="" />
                                                     <span>분교</span>
                                                 </label>
                                             </fieldset>
@@ -330,36 +338,36 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th id="th-pic" scope="row"><span>주간/야간</span></th>
+                                    <th id="th-univ-time" scope="row">주간/야간</th>
                                     <td>
                                         <div class="form-wrap">
                                             <fieldset>
                                                 <legend>기본 라디오박스</legend>
                                                 <label class="radio">
-                                                    <input type="radio" name="row2-active" value checked />
-                                                    <span>본교</span>
+                                                    <input type="radio" name="row2-active" value="" checked="" />
+                                                    <span>주간</span>
                                                 </label>
                                                 <label class="radio">
-                                                    <input type="radio" name="row2-active" value />
-                                                    <span>분교</span>
+                                                    <input type="radio" name="row2-active" value="" />
+                                                    <span>야간</span>
                                                 </label>
                                             </fieldset>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th id="th-pic" scope="row" rowspan="1"><span>기간</span></th>
-                                    <td>전공명 노출</td>
-                                    <th id="th-pic" scope="row"><span>졸업구분 노출</span></th>
-                                    <td>00/00</td>
+                                    <th id="th-univ-period" scope="row" rowspan="1">기간</th>
+                                    <td><span>재학기간 노출</span></td>
+                                    <th id="th-univ-graduation" scope="row">졸업구분</th>
+                                    <td><span>졸업여부 노출</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-pic" scope="row"><span>전공명 노출</span></th>
-                                    <td>00/00</td>
+                                    <th id="th-univ-major" scope="row">전공명</th>
+                                    <td><span>전공명 노출</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-pic" scope="row"><span>학점</span></th>
-                                    <td>00/00</td>
+                                    <th id="th-univ-score" scope="row">학점</th>
+                                    <td><span>00/00</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -367,27 +375,29 @@
                         <h4><span>대학교(석사)</span></h4>
                         <table class="write-content">
                             <caption>
-                                사진등록, 성명, 생년월일, 휴대폰번호, 국적, 현주소, 이메일, 전화번호, 취미, 특기, 보훈여부로 구성된 표
+                                학교명, 본교/분교, 주간/야간, 기간, 졸업구분, 전공명, 세부전공 소개, 학점으로 구성된 대학교(석사) 표
                             </caption>
                             <colgroup>
+                                <col style="width: 230px" />
+                                <col class="auto" />
                                 <col style="width: 230px" />
                                 <col class="auto" />
                             </colgroup>
                             <tbody>
                                 <tr>
-                                    <th id="th-pic" scope="row" rowspan="2"><span>학교명</span></th>
-                                    <td rowspan="2">학교명 노출</td>
-                                    <th id="th-pic" scope="row"><span>본교/분교</span></th>
+                                    <th id="th-master-name" scope="row" rowspan="2">학교명</th>
+                                    <td rowspan="2"><span>학교명 노출</span></td>
+                                    <th id="th-master-campus" scope="row">본교/분교</th>
                                     <td>
                                         <div class="form-wrap">
                                             <fieldset>
                                                 <legend>기본 라디오박스</legend>
                                                 <label class="radio">
-                                                    <input type="radio" name="row2-active" value checked />
+                                                    <input type="radio" name="row2-active" value="" checked="" />
                                                     <span>본교</span>
                                                 </label>
                                                 <label class="radio">
-                                                    <input type="radio" name="row2-active" value />
+                                                    <input type="radio" name="row2-active" value="" />
                                                     <span>분교</span>
                                                 </label>
                                             </fieldset>
@@ -395,36 +405,38 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th id="th-pic" scope="row"><span>주간/야간</span></th>
+                                    <th id="th-master-time" scope="row">주간/야간</th>
                                     <td>
                                         <div class="form-wrap">
                                             <fieldset>
                                                 <legend>기본 라디오박스</legend>
                                                 <label class="radio">
-                                                    <input type="radio" name="row2-active" value checked />
-                                                    <span>본교</span>
+                                                    <input type="radio" name="row2-active" value="" checked="" />
+                                                    <span>주간</span>
                                                 </label>
                                                 <label class="radio">
-                                                    <input type="radio" name="row2-active" value />
-                                                    <span>분교</span>
+                                                    <input type="radio" name="row2-active" value="" />
+                                                    <span>야간</span>
                                                 </label>
                                             </fieldset>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th id="th-pic" scope="row" rowspan="1"><span>기간</span></th>
-                                    <td>전공명 노출</td>
-                                    <th id="th-pic" scope="row"><span>졸업구분 노출</span></th>
-                                    <td>00/00</td>
+                                    <th id="th-master-period" scope="row" rowspan="1">기간</th>
+                                    <td><span>재학기간 노출</span></td>
+                                    <th id="th-master-graduation" scope="row">졸업구분</th>
+                                    <td><span>졸업여부 노출</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-pic" scope="row"><span>전공명 노출</span></th>
-                                    <td>00/00</td>
+                                    <th id="th-master-major" scope="row" rowspan="1">전공명</th>
+                                    <td><span>전공명 노출</span></td>
+                                    <th id="th-master-major-detail" scope="row">세부전공 소개</th>
+                                    <td><span>세부전공 소개</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-pic" scope="row"><span>학점</span></th>
-                                    <td>00/00</td>
+                                    <th id="th-master-score" scope="row">학점</th>
+                                    <td><span>00/00</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -432,27 +444,29 @@
                         <h4><span>대학교(박사)</span></h4>
                         <table class="write-content">
                             <caption>
-                                사진등록, 성명, 생년월일, 휴대폰번호, 국적, 현주소, 이메일, 전화번호, 취미, 특기, 보훈여부로 구성된 표
+                                학교명, 본교/분교, 주간/야간, 기간, 졸업구분, 전공명, 연구실적 소개, 학점으로 구성된 대학교(박사) 표
                             </caption>
                             <colgroup>
+                                <col style="width: 230px" />
+                                <col class="auto" />
                                 <col style="width: 230px" />
                                 <col class="auto" />
                             </colgroup>
                             <tbody>
                                 <tr>
-                                    <th id="th-pic" scope="row" rowspan="2"><span>학교명</span></th>
-                                    <td rowspan="2">학교명 노출</td>
-                                    <th id="th-pic" scope="row"><span>본교/분교</span></th>
+                                    <th id="th-doctor-name" scope="row" rowspan="2">학교명</th>
+                                    <td rowspan="2"><span>학교명 노출</span></td>
+                                    <th id="th-doctor-campus" scope="row">본교/분교</th>
                                     <td>
                                         <div class="form-wrap">
                                             <fieldset>
                                                 <legend>기본 라디오박스</legend>
                                                 <label class="radio">
-                                                    <input type="radio" name="row2-active" value checked />
+                                                    <input type="radio" name="row2-active" value="" checked="" />
                                                     <span>본교</span>
                                                 </label>
                                                 <label class="radio">
-                                                    <input type="radio" name="row2-active" value />
+                                                    <input type="radio" name="row2-active" value="" />
                                                     <span>분교</span>
                                                 </label>
                                             </fieldset>
@@ -460,36 +474,38 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th id="th-pic" scope="row"><span>주간/야간</span></th>
+                                    <th id="th-doctor-time" scope="row">주간/야간</th>
                                     <td>
                                         <div class="form-wrap">
                                             <fieldset>
                                                 <legend>기본 라디오박스</legend>
                                                 <label class="radio">
-                                                    <input type="radio" name="row2-active" value checked />
-                                                    <span>본교</span>
+                                                    <input type="radio" name="row2-active" value="" checked="" />
+                                                    <span>주간</span>
                                                 </label>
                                                 <label class="radio">
-                                                    <input type="radio" name="row2-active" value />
-                                                    <span>분교</span>
+                                                    <input type="radio" name="row2-active" value="" />
+                                                    <span>야간</span>
                                                 </label>
                                             </fieldset>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th id="th-pic" scope="row" rowspan="1"><span>기간</span></th>
-                                    <td>전공명 노출</td>
-                                    <th id="th-pic" scope="row"><span>졸업구분 노출</span></th>
-                                    <td>00/00</td>
+                                    <th id="th-doctor-period" scope="row" rowspan="1">기간</th>
+                                    <td><span>재학기간 노출</span></td>
+                                    <th id="th-doctor-graduation" scope="row">졸업구분</th>
+                                    <td><span>졸업여부 노출</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-pic" scope="row"><span>전공명 노출</span></th>
-                                    <td>00/00</td>
+                                    <th id="th-doctor-major" scope="row" rowspan="1">전공명</th>
+                                    <td><span>전공명 노출</span></td>
+                                    <th id="th-doctor-major-research" scope="row">연구실적 소개</th>
+                                    <td><span>연구실적 소개</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-pic" scope="row"><span>학점</span></th>
-                                    <td>00/00</td>
+                                    <th id="th-doctor-score" scope="row">학점</th>
+                                    <td><span>00/00</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -502,7 +518,7 @@
                         <h4><span>영어능력</span></h4>
                         <table class="list-content">
                             <caption>
-                                병역구분, 군별, 복무기간, 면제사유로 구성된 표
+                                시험종류, 점수/등급, 취득일로 구성된 영어능력 표
                             </caption>
                             <colgroup>
                                 <col class="auto" />
@@ -511,16 +527,16 @@
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th scope="col">시험종류</th>
-                                    <th scope="col">점수/등급</th>
-                                    <th scope="col">취득일</th>
+                                    <th id="th-test-type" scope="col">시험종류</th>
+                                    <th id="th-test-score" scope="col">점수/등급</th>
+                                    <th id="th-test-date" scope="col">취득일</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><span>희망근무지</span></td>
-                                    <td><span>희망근무지</span></td>
-                                    <td><span>희망근무지</span></td>
+                                    <td><span>-</span></td>
+                                    <td><span>-</span></td>
+                                    <td><span>-</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -528,7 +544,7 @@
                         <h4><span>제2외국어</span></h4>
                         <table class="list-content">
                             <caption>
-                                병역구분, 군별, 복무기간, 면제사유로 구성된 표
+                                시험종류, 점수/등급, 취득일로 구성된 제2외국어 표
                             </caption>
                             <colgroup>
                                 <col class="auto" />
@@ -537,16 +553,16 @@
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th scope="col">시험종류</th>
-                                    <th scope="col">점수/등급</th>
-                                    <th scope="col">취득일</th>
+                                    <th id="th-test-type" scope="col">시험종류</th>
+                                    <th id="th-test-score" scope="col">점수/등급</th>
+                                    <th id="th-test-date" scope="col">취득일</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><span>희망근무지</span></td>
-                                    <td><span>희망근무지</span></td>
-                                    <td><span>희망근무지</span></td>
+                                    <td><span>-</span></td>
+                                    <td><span>-</span></td>
+                                    <td><span>-</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -554,7 +570,7 @@
                         <h4><span>자격·면허사항</span></h4>
                         <table class="list-content">
                             <caption>
-                                병역구분, 군별, 복무기간, 면제사유로 구성된 표
+                                자격증, 자격등급, 취득일, 발행기관으로 구성된 자격·면허사항 표
                             </caption>
                             <colgroup>
                                 <col class="auto" />
@@ -564,18 +580,47 @@
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th scope="col">자격증</th>
-                                    <th scope="col">자격등급</th>
-                                    <th scope="col">취득일</th>
-                                    <th scope="col">발행기관</th>
+                                    <th id="th-license" scope="col">자격증</th>
+                                    <th id="th-license-level" scope="col">자격등급</th>
+                                    <th id="th-license-date" scope="col">취득일</th>
+                                    <th id="th-license-issuer" scope="col">발행기관</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><span>희망근무지</span></td>
-                                    <td><span>희망근무지</span></td>
-                                    <td><span>희망근무지</span></td>
-                                    <td><span>희망근무지</span></td>
+                                    <td><span>-</span></td>
+                                    <td><span>-</span></td>
+                                    <td><span>-</span></td>
+                                    <td><span>-</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- [D]: 자격면허-해외체류경험 -->
+                        <h4><span>해외체류경험</span></h4>
+                        <table class="list-content">
+                            <caption>
+                                체류국가, 체류목적, 체류기간, 사용 외국어로 구성된 해외체류경험 표
+                            </caption>
+                            <colgroup>
+                                <col class="auto" />
+                                <col class="auto" />
+                                <col class="auto" />
+                                <col class="auto" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th id="th-country" scope="col">체류국가</th>
+                                    <th id="th-purpose" scope="col">체류목적</th>
+                                    <th id="th-period" scope="col">체류기간</th>
+                                    <th id="th-language" scope="col">사용 외국어</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span>-</span></td>
+                                    <td><span>-</span></td>
+                                    <td><span>-</span></td>
+                                    <td><span>-</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -583,7 +628,7 @@
                         <h4><span>수상경력</span></h4>
                         <table class="list-content">
                             <caption>
-                                병역구분, 군별, 복무기간, 면제사유로 구성된 표
+                                상명, 수상일, 수상내용, 시상기관으로 구성된 수상경력 표
                             </caption>
                             <colgroup>
                                 <col class="auto" />
@@ -593,18 +638,18 @@
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th scope="col">자격증</th>
-                                    <th scope="col">자격등급</th>
-                                    <th scope="col">취득일</th>
-                                    <th scope="col">발행기관</th>
+                                    <th id="th-award" scope="col">상명</th>
+                                    <th id="th-date" scope="col">수상일</th>
+                                    <th id="th-content" scope="col">수상내용</th>
+                                    <th id="th-issuer" scope="col">시상기관</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><span>희망근무지</span></td>
-                                    <td><span>희망근무지</span></td>
-                                    <td><span>희망근무지</span></td>
-                                    <td><span>희망근무지</span></td>
+                                    <td><span>-</span></td>
+                                    <td><span>-</span></td>
+                                    <td><span>-</span></td>
+                                    <td><span>-</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -617,7 +662,7 @@
                         <h4><span>동아리 활동</span></h4>
                         <table class="list-content">
                             <caption>
-                                병역구분, 군별, 복무기간, 면제사유로 구성된 표
+                                활동기간, 활동단체명, 활동내용으로 구성된 동아리 활동 표
                             </caption>
                             <colgroup>
                                 <col style="width: 390px" />
@@ -626,16 +671,16 @@
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th scope="col">활동기간</th>
-                                    <th scope="col">활동단체명</th>
-                                    <th scope="col">활동내용</th>
+                                    <th id="th-period" scope="col">활동기간</th>
+                                    <th id="th-club" scope="col">활동단체명</th>
+                                    <th id="th-content" scope="col">활동내용</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><span>희망근무지</span></td>
-                                    <td><span>희망근무지</span></td>
-                                    <td><span>희망근무지</span></td>
+                                    <td><span>-</span></td>
+                                    <td><span>-</span></td>
+                                    <td><span>-</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -643,7 +688,7 @@
                         <h4><span>사회봉사 활동</span></h4>
                         <table class="list-content">
                             <caption>
-                                병역구분, 군별, 복무기간, 면제사유로 구성된 표
+                                활동기간, 활동단체명, 활동내용으로 구성된 사회봉사 활동 표
                             </caption>
                             <colgroup>
                                 <col style="width: 390px" />
@@ -652,16 +697,16 @@
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th scope="col">활동기간</th>
-                                    <th scope="col">활동단체명</th>
-                                    <th scope="col">활동내용</th>
+                                    <th id="th-period" scope="col">활동기간</th>
+                                    <th id="th-club" scope="col">활동단체명</th>
+                                    <th id="th-content" scope="col">활동내용</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><span>희망근무지</span></td>
-                                    <td><span>희망근무지</span></td>
-                                    <td><span>희망근무지</span></td>
+                                    <td><span>-</span></td>
+                                    <td><span>-</span></td>
+                                    <td><span>-</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -670,11 +715,11 @@
                     <!-- [D]: 경력사항 -->
                     <section class="write-container">
                         <h3>경력사항</h3>
-                        <!-- [D]: 개인정보-개인정보 -->
+                        <!-- [D]: 경력사항-병역특례 경력사항 -->
                         <h4><span>병역특례 경력사항</span></h4>
                         <table class="list-content">
                             <caption>
-                                병역구분, 군별, 복무기간, 면제사유로 구성된 표
+                                근무처, 근무기간, 담당업무로 구성된 병역특례 경력사항 표
                             </caption>
                             <colgroup>
                                 <col class="auto" />
@@ -683,51 +728,76 @@
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th scope="col">근무처</th>
-                                    <th scope="col">근무기간</th>
-                                    <th scope="col">담당업무</th>
+                                    <th id="th-place" scope="col">근무처</th>
+                                    <th id="th-period" scope="col">근무기간</th>
+                                    <th id="th-work" scope="col">담당업무</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><span>희망근무지</span></td>
-                                    <td><span>희망근무지</span></td>
-                                    <td><span>희망근무지</span></td>
+                                    <td><span>-</span></td>
+                                    <td><span>-</span></td>
+                                    <td><span>-</span></td>
                                 </tr>
                             </tbody>
                         </table>
-                        <!-- [D]: 개인정보-개인정보 -->
+                        <!-- [D]: 경력사항-경력사항 -->
                         <h4><span>경력사항</span></h4>
                         <table class="list-content">
                             <caption>
-                                병역구분, 군별, 복무기간, 면제사유로 구성된 표
+                                근무처, 직위, 근무기간, 담당업무, 연봉, 퇴직사유로 구성된 경력사항 표
                             </caption>
                             <colgroup>
-                                <!-- <col class="auto" />
-                                <col class="auto" />
-                                <col class="auto" />
-                                <col class="auto" />
-                                <col class="auto" />
-                                <col class="auto" /> -->
+                                <col style="width: 300px" />
+                                <col style="width: 180px" />
+                                <col style="width: 250px" />
+                                <col style="width: 180px" />
+                                <col style="width: 200px" />
+                                <col style="width: 340px" />
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th scope="col">근무처</th>
-                                    <th scope="col">직위</th>
-                                    <th scope="col">근무기간</th>
-                                    <th scope="col">담당업무</th>
-                                    <th scope="col">연봉</th>
-                                    <th scope="col">퇴직사유</th>
+                                    <th id="th-place" scope="col">근무처</th>
+                                    <th id="th-position" scope="col">직위</th>
+                                    <th id="th-period" scope="col">근무기간</th>
+                                    <th id="th-work" scope="col">담당업무</th>
+                                    <th id="th-salary" scope="col">연봉</th>
+                                    <th id="th-why" scope="col">퇴직사유</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><span>희망근무지</span></td>
-                                    <td><span>희망근무지</span></td>
-                                    <td><span>희망근무지</span></td>
-                                    <td><span>희망근무지</span></td>
-                                    <td><span>희망근무지</span></td>
-                                    <td><span>희망근무지</span></td>
+                                    <td><span>-</span></td>
+                                    <td><span>-</span></td>
+                                    <td><span>-</span></td>
+                                    <td><span>-</span></td>
+                                    <td><span>-</span></td>
+                                    <td><span>-</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- 세부 경력사항 -->
+                        <h4><span>세부 경력사항</span></h4>
+                        <table class="write-content">
+                            <caption>
+                                근무처, 근무기간, 세부 경력소개로 구성된 세부 경력사항 표
+                            </caption>
+                            <colgroup>
+                                <col style="width: 230px" />
+                                <col class="auto" />
+                                <col style="width: 230px" />
+                                <col class="auto" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th id="th-detail-place" scope="row" rowspan="1">근무처</th>
+                                    <td><span>MG캐피탈</span></td>
+                                    <th id="th-detail-period" scope="row">근무기간</th>
+                                    <td><span>2021.01.01 ~ 2025.08.31</span></td>
+                                </tr>
+                                <tr>
+                                    <th id="th-detail-detail" scope="row">세부 경력소개</th>
+                                    <td><span>-</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -740,7 +810,7 @@
                         <h4><span>자기소개</span></h4>
                         <table class="write-content">
                             <caption>
-                                사진등록, 성명, 생년월일, 휴대폰번호, 국적, 현주소, 이메일, 전화번호, 취미, 특기, 보훈여부로 구성된 표
+                                성장과정 학창시절, 성격 및 지식과 재능, 성공 및 실패 경험, 지원동기 입사포부로 구성된 자기소개 표
                             </caption>
                             <colgroup>
                                 <col style="width: 230px" />
@@ -748,20 +818,20 @@
                             </colgroup>
                             <tbody>
                                 <tr>
-                                    <th id="th-pic" scope="row"><span>성장과정 학창시절</span></th>
-                                    <td>주소노출</td>
+                                    <th id="th-growth" scope="row">성장과정 학창시절</th>
+                                    <td><span>MG캐피탈</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-pic" scope="row"><span>성격 및 지식과 재능</span></th>
-                                    <td>주소노출</td>
+                                    <th id="th-personality" scope="row">성격 및 지식과 재능</th>
+                                    <td><span>-</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-pic" scope="row"><span>성공 및 실패 경험</span></th>
-                                    <td>주소노출</td>
+                                    <th id="th-experience" scope="row">성공 및 실패 경험</th>
+                                    <td><span>-</span></td>
                                 </tr>
                                 <tr>
-                                    <th id="th-pic" scope="row"><span>지원동기 입사포부</span></th>
-                                    <td>주소노출</td>
+                                    <th id="th-motivation" scope="row">지원동기 입사포부</th>
+                                    <td><span>-</span></td>
                                 </tr>
                             </tbody>
                         </table>
