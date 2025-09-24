@@ -17,6 +17,7 @@
     --font36: 2rem;     
     --font38: 2.111rem;  
     --font40: 2.222rem; 
+    --font42: 2.333rem; 
 
     --font-w-b: 600;
     --font-w-m: 500;
@@ -45,7 +46,6 @@ body {
     --border:#E5E5EA;
 
     --color-1: #111111;
-    --color-12:#121212;
     --color-2:#222222;
     --color-3:#333333;
     --color-45:#454545;
@@ -61,86 +61,36 @@ body {
     --color-e:#EEEEEE;
     --color-d:#DDDDDD;
     --color-f6:#F6F6F6;
-    
-    --color-f4:#F4F6F7;
-    --color-ed:#EDF9FF;
 
-}
-
-body {
-    
     --outline: #3ca7ff;
     --error: var(--red);
 
-
-    /* 필수 정보 */
-    --info-color: var(--primary);
-
-    /* 아이콘 색상 */
-    --ipt-clear: var(--color-c);
-    --ipt-search:var(--color-9);
-    --ipt-file: var(--color-9);
-    --ipt-date: var(--color-9);
-
-    /* 버튼 */
-    --btn-disabled: var(--color-c);
-    --btn-txt-disabled: var(--color-2);
-    --btn-primary: var(--color-2);
-    --btn-secondary: var(--secondary);
-    /* 버튼_하단 */
-    --btm-btn-primary: #6A6A6A;
-    --btm-btn-secondary:#DADFEA;
-
-    /* 폼_인풋 */
-    --ipt-label: var(--color-2);
-    --ipt-txt: var(--color-2);
-    --ipt-txt-placeholder: var(--color-9);
-    --ipt-txt-active: var(--color-2);
-    --ipt-txt-inactive: var(--color-ab);
-    --ipt-border: var(--color-d);
-    --ipt-border-active: var(--active);
-    --ipt-border-inactive:var(--color-c);
-    --ipt-bg-inactive: var(--color-f8);
-
-    /* 폼_라디오/체크박스 */
-    --rc-txt: var(--color-75);
-    --rc-active: var(--active);
-    --rc-txt-inactive: var(--color-ab);
-    --rc-border: var(--color-c);
-    --rc-border-inactive:var(--color-c);
-    --rc-bg-inactive: var(--color-f8);
-
-    /* 폼_토글 */
-    --toggle-bg: var(--color-d);
-
-    /* 폼_커스텀 셀렉트 */
-    --fk-se-ative: #EEF2F9;
-    --fk-se-inactive: var(--color-d);
-    --fk-se-title: var(--color-2);
-
-    /* 아코디언 */
-    --aco-tit: var(--color-2);
-    --aco-border: var(--color-d);
-    --aco-bg:#EEF2F9;
-
-    /* 탭 */
-
-
-    /* 테이블 */
-    --tbl-bg: var(--color-f8);
-    --tbl-border: var(--color-e);
-    --tbl-tit: var(--color-2);
-    --tbl-txt: var(--color-75);
-    --tbl-caption: var(--color-9);
-
 }
+
+
 
 
 
 @media (max-width: 768px) {
 
-    body {
-        --btn-primary:var(--active);
+
+    :root {
+    --font12: 0.75rem;
+    --font14: 0.875rem;
+    --font16: 1rem;
+    --font18: 1.125rem;
+    --font20: 1.25rem;
+    --font22: 1.375rem;
+    --font24: 1.5rem;
+    --font26: 1.625rem;
+    --font28: 1.75rem;
+    --font30: 1.875rem;
+    --font32: 2rem;
+    --font34: 2.125rem;
+    --font36: 2.25rem;
+    --font38: 2.375rem;
+    --font40: 2.5rem;
+    --font42: 2.625rem;
     }
 
 }

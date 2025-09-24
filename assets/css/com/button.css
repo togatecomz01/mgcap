@@ -1,6 +1,6 @@
 @charset "euc-kr";
 body{
-  --btn-board:var(--color-9);
+  --btn-board:1px solid var(--color-9);
   --btn-padding:8px 16px;
   --btn-font-color:var(--color-75);
   --btn-active:var(--primary);
@@ -20,14 +20,13 @@ body{
   --btn-pop-font-w:var(--font-w-m);
 
   --btn-pop-s-background:var(--white);
-  --btn-pop-s-border:var(--color-d);
+  --btn-pop-s-border:1px solid var(--color-d);
 
 
-  --btn-download-background:var(--color-2);
-  --btn-download-font-color:var(--white);
+  --btn-download-background:var(--white);
   --btn-download-font-size:var(--font20);
-  --btn-download-font-w:var(--font-w-m);
-  --ico-download:var(--font-w-m);
+  --btn-download-border:1px solid var(--color-d);
+  --ico-download:url("../../images/com/svg/ico_download.svg");
 
   --btm-btn-primary:var(--primary);
   --btm-btn-primary-active:var(--active);
@@ -38,8 +37,10 @@ body{
 
 }
 
+a, button { position:relative; }
+
 /**Form btn**/
-.btn-form { width:100%; max-width:152px; height:67px; padding:var(--btn-padding); border:1px solid var(--btn-board); color:var(--btn-font-color); box-sizing:border-box; text-align:center; }
+.btn-form { width:100%; max-width:152px; height:67px; padding:var(--btn-padding); border:var(--btn-board); color:var(--btn-font-color); box-sizing:border-box; text-align:center; }
 .btn-form:hover { border-color:var(--btn-active); color:var(--btn-active);}
 .btn-form.reset { font-size:0; flex:0 0 67px; width:67px; height:67px; font-size:0;  }
 .btn-form.reset::before { content:""; display:block; width:30px; height:30px; margin:0 auto; background:var(--ico_reset) no-repeat center; background-size:100%; }
@@ -49,19 +50,22 @@ body{
 .btn-pop-secondary { padding:0 60px; min-width:157px; height:60px; line-height:60px; box-sizing:"border-box"; font-size:var(--btn-pop-font-color); font-weight:var(--btn-pop-font-w); border-radius:100px; border:1px solid transparent; }
 .btn-pop-primary{ background:var(--btn-pop-background); color:var(--btn-pop-font-color); }
 .btn-pop-primary:hover { background:var(--primary); }
-.btn-pop-secondary{ border:1px solid var(--btn-pop-s-border); background:var(--btn-pop-s-background); }
+.btn-pop-secondary{ border:var(--btn-pop-s-border); background:var(--btn-pop-s-background); }
 
 .btn-content:hover { background:var(--btn-content-active);}
 .btn-content:disabled { background:var(--btn-content-diasbled); color:var(--btn-content-d-font-color); }
 
-.btn-terms-modal { padding: 2px 10px 4px; border: 1px solid var(--btn-modal-border); color:var(--btn-modal-font-color); }
+.btn-terms-modal { padding: 2px 10px 4px; border: 1px solid var(--btn-modal-border); color:var(--btn-modal-font-color); font-size:var(--btn-download-font-size); }
 .btn-terms-modal:hover { border-color: #222222; color: #222222; }
 
 /**다운로드버튼**/
-.btn-download {  }
+.btn-download { display:inline-flex; align-items:center; gap:10px; height:62px; line-height:62px; padding:0 32px; border-radius:100px; background:var(--btn-download-background); border:var(--btn-download-border); text-align:left; font-size:var(--btn-download-font-size); }
+.btn-download::after { content:""; display:block; width:24px; height:24px; background-color:var(--color-9); 
+  mask-image:var(--ico-download); mask-repeat:no-repeat; mask-size:auto 40px; mask-position:center; -webkit-mask-image:var(--ico-download); -webkit-mask-repeat:no-repeat; -webkit-mask-size:17.333px auto; -webkit-mask-position:center; 
+  }
 
 /**CTA 01**/
-.bottom-content .button-wrap { display:flex; gap:24px; }
+.bottom-content .button-wrap { display:inline-flex; gap:24px; }
 .bottom-content a,
 .bottom-content button {  flex:0 0 auto; display:inline-block; padding:0 60px; min-width:161px; width:auto; height:63px; line-height:63px; font-size:var(--btm-btn-font-size); font-weight:var(--btm-btn-font-weight); text-align:center; border-radius:100px;}
 .bottom-content .btn-primary { background-color: var(--btm-btn-primary); color:var(--white); }
@@ -74,10 +78,15 @@ body{
     body{
     --btn-padding:12px;
     --btm-btn-font-weight:var(--font-w-m);
+
+    --btn-download-font-size:var(--font18);
     }
    .btn-form { max-width:100%; height:48px; }
    .btn-form.reset { width:auto; height:48px; font-size:inherit; }
    .btn-form.reset::before { display:none; }
+
+   .btn-download { width:100%; gap:30px; line-height:1.5; flex-direction:row-reverse; justify-content:flex-end; padding:0 20px 0 80px; background:linear-gradient(to right, var(--primary) 0 60px, var(--white) 60px 100%); }
+   .btn-download::after {  position:absolute; left:20px; background-color:var(--white); }
 
    /**CTA 01**/
    .bottom-content a,

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="euc-kr" />
+  <title>Namo CrossEditor - 데모 절대경로 테스트</title>
+
+  <!-- 데모의 절대경로 스크립트 (UTF-8 저장 → charset 지정) -->
+  <script type="text/javascript"
+          src="https://comp.namoeditor.co.kr/demo/ce4/crosseditor/js/namo_scripteditor.js?ver=46026_1"
+          charset="utf-8"></script>
+
+  <style>
+    body {margin:0; padding:24px; font-family:system-ui,-apple-system,'Noto Sans KR',sans-serif;}
+    form {max-width:900px; margin:auto;}
+    #editorArea {width:100%; height:520px; border:1px solid #ddd; background:#fff;}
+    textarea[name=editorValue]{display:block; width:100%; height:160px; margin-top:12px; box-sizing:border-box;}
+  </style>
+</head>
+<body>
+  <form id="postForm" onsubmit="return handleSubmit(event)">
+    <h1>글쓰기</h1>
+    <div id="editorArea"></div>
+    <button type="submit" style="margin-top:12px">저장(내용 미리보기)</button>
+    <textarea id="editorValue" name="editorValue" placeholder="저장 시 에디터 내용이 여기에 복사됩니다."></textarea>
+  </form>
+
+  <script>
+    if (typeof NamoSE === 'undefined') {
+      alert('나모 스크립트를 불러오지 못했습니다. (네트워크/경로/차단 정책 확인)');
+    } else {
+      var CrossEditor = new NamoSE('namoeditor1');
+
+      // 데모 기준 경로(끝에 / 필수). 내부 리소스(crosseditor.html 등) 이 경로 기준으로 로드됩니다.
+      CrossEditor.params.EditorBaseURL = "https://comp.namoeditor.co.kr/demo/ce4/crosseditor/"; // :contentReference[oaicite:1]{index=1}
+
+      // (선택) 나모 AI 기능을 데모처럼 보이게 하려면 실행 경로 지정
+      // 실제 동작은 데모 도메인 정책에 의해 제한될 수 있습니다.
+      // CrossEditor.params.NamoAIExecutePath = "https://comp.namoeditor.co.kr/demo/ce4/crosseditor/websource/jsp/NamoAI.jsp"; // :contentReference[oaicite:2]{index=2}
+
+      CrossEditor.params.Width = "100%";
+      CrossEditor.params.ParentEditor = document.getElementById("editorArea");
+
+      // 초기화 완료 시 본문 기본값
+      window.OnInitCompleted = function(e){
+        e.editorTarget.SetBodyValue("<p><strong>나모 데모 절대경로</strong> 테스트입니다.</p><p>동일 출처/도메인 허용 정책에 따라 동작이 제한될 수 있습니다.</p>");
+      };
+
+      CrossEditor.EditorStart();
+    }
+
+    function handleSubmit(e){
+      e.preventDefault();
+      try {
+        document.getElementById("editorValue").value = CrossEditor.GetBodyValue();
+        alert("전송될 내용 미리보기:\n\n" + document.getElementById("editorValue").value);
+      } catch(err) {
+        alert("에디터 내용 읽기 실패: " + err);
+      }
+      return false;
+    }
+  </script>
+</body>
+</html>

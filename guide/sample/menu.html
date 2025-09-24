@@ -1,533 +1,270 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
+  <head>
     <meta charset="euc-kr" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>mg캐피탈폼&gt;메뉴&gt;</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>占쏙옙占쌘듸옙占� LNB</title>
+    <style>
+      /* 占썩본 占쏙옙占싱아울옙(占쏙옙占쏙옙 占쏙옙占시울옙 占쏙옙占쏙옙 占쏙옙占쏙옙) */
+      header,
+      nav,
+      main,
+      footer {
+        display: block;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        -webkit-text-size-adjust: none;
+        font-family: Arial, sans-serif;
+        color: #222;
+      }
 
-    <meta name="keywords" content="MG캐피탈" />
-    <meta name="copyright" content="copyrights 2025 MG캐피탈" />
-    <meta name="description" content="MG캐피탈 리스금융, 할부금융, 스탁론, 기업대출, 장기렌트카, PF대출 등 금융 서비스 제공."/>
-    <meta name="viewport" content="width=device-width" />
+      .container {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: row;
+        flex-direction: row;
+      }
+      .lnb {
+        -ms-flex: 0 0 240px;
+        flex: 0 0 240px;
+        width: 240px;
+        border-right: 1px solid #e5e5e5;
+        padding: 16px;
+      }
+      .contentWrap {
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        min-width: 0;
+        padding: 24px;
+      }
 
-    <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img"/>
-    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta http-equiv="Expires" content="-1" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Cache-Control" content="No-Cache" />
+      /* LNB 占쏙옙占쏙옙트 */
+      .lnb ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .lnb li {
+        border-bottom: 1px solid #f0f0f0;
+      }
 
+      /* 占쏙옙占쏙옙 占쏙옙튼(占쏙옙占�) */
+      .lnb .lnb-toggle {
+        display: block;
+        width: 100%;
+        text-align: left;
+        background: #fff;
+        color: #222;
+        border: 0;
+        padding: 12px 12px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .lnb .lnb-toggle:focus {
+        outline: 2px solid #000;
+        outline-offset: -2px;
+      }
 
+      /* 占쏙옙占쏙옙 占쌨댐옙 - 占쌍니몌옙占싱쇽옙 효占쏙옙 */
+      .lnb .submenu {
+        max-height: 0;
+        overflow: hidden;
+        padding: 0 12px;
+        transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+        opacity: 0;
+      }
+      .lnb .submenu li + li {
+        margin-top: 6px;
+      }
+      .lnb .submenu a {
+        color: #333;
+        text-decoration: none;
+        display: block;
+        padding: 8px 0;
+        transition: color 0.2s ease;
+      }
+      .lnb .submenu a:focus,
+      .lnb .submenu a:hover {
+        text-decoration: underline;
+        color: #007bff;
+      }
 
+      /* 占쏙옙占쏙옙占쏙옙占쏙옙 占쏙옙 - 占쌍니몌옙占싱쇽옙 */
+      .lnb li.is-open > .submenu {
+        max-height: 200px;
+        padding: 8px 12px 12px;
+        opacity: 1;
+      }
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico"/>
+      /* 占쏙옙占쏙옙 占쏙옙占쏙옙占쏙옙 占쌍니몌옙占싱쇽옙 */
+      .lnb .lnb-toggle .indicator {
+        float: right;
+        transition: transform 0.3s ease;
+      }
+      .lnb li.is-open .lnb-toggle .indicator {
+        transform: rotate(90deg);
+      }
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="../../assets/css/ui-util.css" />
+      /* 占쏙옙튼 호占쏙옙 효占쏙옙 */
+      .lnb .lnb-toggle:hover {
+        background-color: #f8f9fa;
+        transition: background-color 0.2s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="headerWrap" class="headerOn">占쏙옙占�</header>
 
-    <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
-    <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
-    <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
-    <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
-    <script src="../../assets/js/include.js"></script>
-</head>
+    <div class="container">
+      <nav
+        class="lnb"
+        role="navigation"
+        aria-label="占쏙옙占쏙옙 占쌨댐옙"
+        data-accordion="single"
+      >
+        <ul>
+          <li class="item">
+            <button
+              type="button"
+              class="lnb-toggle"
+              aria-expanded="false"
+              aria-controls="submenu-1"
+            >
+              占쏙옙濱占� 1 <span class="indicator">占쏙옙</span>
+            </button>
+            <ul id="submenu-1" class="submenu" role="group">
+              <li><a href="#">占쌀메댐옙 1-1</a></li>
+              <li><a href="#">占쌀메댐옙 1-2</a></li>
+              <li><a href="#">占쌀메댐옙 1-3</a></li>
+            </ul>
+          </li>
 
-<body>
-    <div class="wrap">
-        <header id="headerWrap" class="headerOn">
-            <h1><a href="javascript:void(0);">MG캐피탈</a></h1>
-            <div class="recent-content">
-            <span>최근접속 : 2025.08.12 12:42:28</span>
-            <button>로그아웃</button>
-            </div>
-        </header>
-        <div class="bodyWrap">
-            <nav id="menuWrap" class="lnb" role="navigation" aria-label="top 메뉴">
-                <div class="member">
-                    <a href="javascript:void(0);" class="link"><em>홍길동</em>님</a>
-                </div>
-                <ul class="menu">
-                    <li class="item">
-                    <button type="button" class="accordion" aria-expanded="false" aria-controls="submenu-1"> 대메뉴 1</button>
-                    <ul id="submenu-1" class="submenu" role="group">
-                        <li><a href="javascript:void(0);" class="link">소메뉴 1-1</a></li>
-                        <li><a href="javascript:void(0);" class="link">소메뉴 1-2</a></li>
-                        <li><a href="javascript:void(0);" class="link">소메뉴 1-3</a></li>
-                    </ul>
-                    </li>
-            
-                    <li class="item">
-                    <button type="button" class="accordion" aria-expanded="false" aria-controls="submenu-2"> 대메뉴 2</button>
-                    <ul id="submenu-2" class="submenu" role="group">
-                        <li><a href="javascript:void(0);" class="link">소메뉴 2-1</a></li>
-                        <li><a href="javascript:void(0);" class="link">소메뉴 2-2</a></li>
-                    </ul>
-                    </li>
-            
-                    <li class="item">
-                    <button type="button" class="accordion" aria-expanded="false" aria-controls="submenu-3"> 대메뉴 3</button>
-                    <ul id="submenu-3" class="submenu" role="group">
-                        <li><a href="javascript:void(0);" class="link">소메뉴 3-1</a></li>
-                    </ul>
-                    </li>
-                </ul>
-            </nav>
-            <div class="allmenu on">
-                <div class="allmenu-header">
-                    <div class="allmenu-header-inner">
-                        <div class="title-l">
-                            <p>전체메뉴</p>
-                            <a href="javascript:void(0);">MG캐피탈</a>
-                        </div>
-                        <div class="close">
-                            <button type="button" class="close_btn" aria-label="닫기">닫기</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="menu-cont">
-                    <div class="menu-l">
-                        <ul class="menu-tit">
-                            <li><span data-focus="gnb1">자동차</span></li>
-                            <li><span data-focus="gnb2">설비/의료</span></li>
-                            <li><span data-focus="gnb3">주택</span></li>
-                            <li><span data-focus="gnb4">기업</span></li>
-                            <li><span data-focus="gnb5">MY MG</span></li>
-                            <li class="on"><span data-focus="gnb6">소비자보호</span></li>
-                            <li><span data-focus="gnb7">고객센터</span></li>
-                            <li><span data-focus="gnb8">회사소개</span></li>
-                            <li><span data-focus="gnb9">인증센터</span></li>
-                        </ul>
-                    </div>
+          <li class="item">
+            <button
+              type="button"
+              class="lnb-toggle"
+              aria-expanded="false"
+              aria-controls="submenu-2"
+            >
+              占쏙옙濱占� 2 <span class="indicator">占쏙옙</span>
+            </button>
+            <ul id="submenu-2" class="submenu" role="group">
+              <li><a href="#">占쌀메댐옙 2-1</a></li>
+              <li><a href="#">占쌀메댐옙 2-2</a></li>
+            </ul>
+          </li>
 
-                    <ul class="menu-inner">
-                        <li class="gnb1">
-                            <span>자동차</span>
-                            <ul class="gnb-2dep">
-                                <li>
-                                    <span>신차</span>
-                                    <ul class="gnb-3dep">
-                                        <li><a href="#">장기렌터카</a></li>
-                                        <li><a href="#">신차오토리스</a></li>
-                                        <li><a href="#">신차오토할부</a></li>
-                                    </ul>
-                                </li>
+          <li class="item">
+            <button
+              type="button"
+              class="lnb-toggle"
+              aria-expanded="false"
+              aria-controls="submenu-3"
+            >
+              占쏙옙濱占� 3 <span class="indicator">占쏙옙</span>
+            </button>
+            <ul id="submenu-3" class="submenu" role="group">
+              <li><a href="#">占쌀메댐옙 3-1</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
 
-                                <li>
-                                    <span>중고차</span>
-                                    <ul class="gnb-3dep">
-                                        <li><a href="#">중고오토론(대출)</a></li>
-                                        <li><a href="#">중고오토할부</a></li>
-                                        <li><a href="#">재고금융(상사)</a></li>
-                                    </ul>
-                                </li>
+      <main id="main" class="contentWrap" role="main" tabindex="-1">
+        占쏙옙占쏙옙占쏙옙 占쏙옙占쏙옙
+      </main>
+    </div>
 
-                                <li>
-                                    <span>바이크</span>
-                                    <ul class="gnb-3dep">
-                                        <li><a href="#">바이크리스</a></li>
-                                        <li><a href="#">바이크할부</a></li>
-                                    </ul>
-                                </li>
+    <script>
+      // IE11 호환(ES5): let/const, forEach, arrow 占쌉쇽옙 占쏙옙占쏙옙占쏙옙占� 占쏙옙占쏙옙
+      (function () {
+        var lnb = document.querySelector(".lnb");
+        if (!lnb) return;
 
-                                <li>
-                                    <span>보트/선외기</span>
-                                    <ul class="gnb-3dep">
-                                        <li><a href="#">보트/선외기</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
+        var singleMode = lnb.getAttribute("data-accordion") === "single";
+        var toggles = lnb.getElementsByClassName("lnb-toggle");
 
-                        <li class="gnb2">
-                            <span>설비/의료&middot;헬스</span>
-                            <ul class="gnb-2dep">
-                                <li>
-                                    <span>기계설비</span>
-                                    <ul class="gnb-3dep">
-                                        <li><a href="#">공작기계리스</a></li>
-                                        <li><a href="#">특수장비리스</a></li>
-                                    </ul>
-                                </li>
+        function closeItem(li) {
+          if (!li) return;
+          var btn = li.getElementsByClassName("lnb-toggle")[0];
+          var submenu = li.querySelector(".submenu");
 
-                                <li>
-                                    <span>산업재</span>
-                                    <ul class="gnb-3dep">
-                                        <li><a href="#">신차 산업재 구입</a></li>
-                                        <li><a href="#">중고 산업재 구입/담보</a></li>
-                                    </ul>
-                                </li>
+          if (btn) btn.setAttribute("aria-expanded", "false");
 
-                                <li>
-                                    <span>의료</span>
-                                    <ul class="gnb-3dep">
-                                        <li><a href="#">의료장비리스</a></li>
-                                        <li><a href="#">임플란트할부</a></li>
-                                        <li><a href="#">의료약품할부/대출</a></li>
-                                    </ul>
-                                </li>
+          // CSS 占쌍니몌옙占싱쇽옙占쏙옙 占쏙옙占쏙옙 클占쏙옙占쏙옙占쏙옙 占쏙옙占쏙옙 (display 占쏙옙占쏙옙 占쏙옙占쏙옙)
+          if (li.className.indexOf("is-open") !== -1) {
+            li.className = li.className
+              .replace("is-open", "")
+              .replace("  ", " ");
+          }
+        }
 
-                                <li>
-                                    <span>헬스</span>
-                                    <ul class="gnb-3dep">
-                                        <li><a href="#">헬스장비리스</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
+        function openItem(li) {
+          if (!li) return;
+          var btn = li.getElementsByClassName("lnb-toggle")[0];
+          var submenu = li.querySelector(".submenu");
 
-                        <li class="gnb3">
-                            <span>주택</span>
-                            <ul class="gnb-2dep">
-                                <li>
-                                    <a href="#">사업자담보대출</a>
-                                </li>
+          if (btn) btn.setAttribute("aria-expanded", "true");
 
-                                <li>
-                                    <a href="#">사업자대출채권 담보 대출</a>
-                                </li>
+          // CSS 占쌍니몌옙占싱쇽옙占쏙옙 占쏙옙占쏙옙 클占쏙옙占쏙옙占쏙옙 占쌩곤옙 (display 占쏙옙占쏙옙 占쏙옙占쏙옙)
+          if (li.className.indexOf("is-open") === -1) {
+            li.className += " is-open";
+          }
+        }
 
-                                <li>
-                                    <span>NPL</span>
-                                    <ul class="gnb-3dep">
-                                        <li><a href="#">신용NPL</a></li>
-                                        <li><a href="#">담보NPL</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
+        function toggleItem(li) {
+          var isOpen = li.className.indexOf("is-open") !== -1;
+          if (isOpen) {
+            closeItem(li);
+          } else {
+            if (singleMode) {
+              // 占쏙옙占쏙옙 占쏙옙占쏙옙 占쏙옙占쏙옙 占쏙옙占� 占쌥깍옙
+              var siblings = li.parentNode.children;
+              for (var i = 0; i < siblings.length; i++) {
+                if (siblings[i] !== li) closeItem(siblings[i]);
+              }
+            }
+            openItem(li);
+          }
+        }
 
-                        <li class="gnb4">
-                            <span>기업</span>
-                            <ul class="gnb-2dep">
-                                <li>
-                                    <a href="#">PF투자</a>
-                                </li>
+        function onClick(e) {
+          var target = e.target || e.srcElement;
+          // 占쏙옙튼 占쏙옙체/占쌘쏙옙(占쏙옙占쏙옙占쏙옙 span) 클占쏙옙 占쏙옙占� 占쏙옙占�
+          while (target && target !== lnb && !hasClass(target, "lnb-toggle")) {
+            target = target.parentNode;
+          }
+          if (!target || target === lnb) return;
 
-                                <li>
-                                    <a href="#">신기술금융</a>
-                                </li>
+          var li = target.parentNode;
+          toggleItem(li);
+        }
 
-                                <li>
-                                    <a href="#">인수금융</a>
-                                </li>
+        function onKeydown(e) {
+          var target = e.target || e.srcElement;
+          if (!hasClass(target, "lnb-toggle")) return;
+          var key = e.keyCode || e.which;
+          // Enter(13), Space(32)
+          if (key === 13 || key === 32) {
+            e.preventDefault ? e.preventDefault() : (e.returnValue = false);
+            toggleItem(target.parentNode);
+          }
+        }
 
-                                <li>
-                                    <a href="#">신용채권유동화</a>
-                                </li>
+        function hasClass(el, cls) {
+          // IE11: classList 占쏙옙占� 占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙 占쏙옙占쌘울옙 체크占쏙옙 占쏙옙占쏙옙 처占쏙옙
+          return (" " + el.className + " ").indexOf(" " + cls + " ") > -1;
+        }
 
-                                <li>
-                                    <a href="#">팩토링</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="gnb5">
-                            <span>MY MG</span>
-                            <ul class="gnb-2dep">
-                                <li>
-                                    <span>이용현황</span>
-                                    <ul class="gnb-3dep">
-                                        <li><a href="#">이용상품내역</a></li>
-                                        <li><a href="#">납입내역</a></li>
-                                        <li><a href="#">상환일정 조회</a></li>
-                                        <li><a href="#">만기예정 및 결과조회</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <span>청구정보조회</span>
-                                    <ul class="gnb-3dep">
-                                        <li><a href="#">청구내역조회</a></li>
-                                        <li><a href="#">연체내역조회</a></li>
-                                        <li><a href="#">청구정보변경</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <span>차량납부조회</span>
-                                    <ul class="gnb-3dep">
-                                        <li><a href="#">자동차세조회</a></li>
-                                        <li><a href="#">범칙금/과태료조회</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <span>진행상태조회</span>
-                                    <ul class="gnb-3dep">
-                                        <li><a href="#">본인인증<br/>(개인, 개인사업자 / 법인)</a></li>
-                                        <li><a href="#">중도상환 조회/신청</a></li>
-                                        <li><a href="#">오토리스만기예정처리</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <span>서류발급</span>
-                                    <ul class="gnb-3dep">
-                                        <li><a href="#">본인인증<br/>(개인, 개인사업자 / 법인)</a></li>
-                                        <li><a href="#">금융거래확인서</a></li>
-                                        <li><a href="#">만기안내장</a></li>
-                                        <li><a href="#">중도상환완납증서</a></li>
-                                        <li><a href="#">연체완납확인서</a></li>
-                                        <li><a href="#">양도확인서</a></li>
-                                        <li><a href="#">담보권해지신청</a></li>
-                                        <li><a href="#">영수증조회</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <span>서류등록</span>
-                                    <ul class="gnb-3dep">
-                                        <li><a href="#">본인인증<br/>(개인, 개인사업자 / 법인)</a></li>
-                                        <li><a href="#">제출 서류 업로드</a></li>
-                                        <li><a href="#">제출 완료</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <a href="#">나의 정보변경</a>
-                                </li>
-
-                                <li>
-                                    <a href="#">나의 상담내역</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="gnb6 on">
-                            <span>소비자보호</span>
-                            <ul class="gnb-2dep">
-                                <li>
-                                    <span>금융소비자보호체계</span>
-                                    <ul class="gnb-3dep">
-                                        <li class="on"><a href="#">금융소비자보호헌장</a></li>
-                                        <li><a href="#">금융소비자보호조직</a></li>
-                                        <li><a href="#">상품개발프로세스</a></li>
-                                        <li><a href="#">금융상품 판매세칙</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <span>금융소비자 주요 권리</span>
-                                    <ul class="gnb-3dep">
-                                        <li><a href="#">고객권리 안내문</a></li>
-                                        <li><a href="#">청약철회권</a></li>
-                                        <li><a href="#">금리인하요구권</a></li>
-                                        <li><a href="#">위법계약해지요구권</a></li>
-                                        <li><a href="#">자료열람요구권</a></li>
-                                        <li><a href="#">연락금지요구권</a></li>
-                                        <li><a href="#">연락금지 요구 신청 접수</a></li>
-                                        <li><a href="#">연락금지 요구 접수 결과 조회</a></li>
-                                        <li><a href="#">연락금지 요구 해제</a></li>
-                                        <li><a href="#">방문판매인력 신원조회</a></li>
-                                        <li><a href="#">모집인 조회</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <span>장애인고객지원 서비스</span>
-                                    <ul class="gnb-3dep">
-                                        <li><a href="#">장애인 상담 안내</a></li>
-                                        <li><a href="#">유용한 정보</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <span>금융소비자보호공시</span>
-                                    <ul class="gnb-3dep">
-                                        <li><a href="#">민원건수</a></li>
-                                        <li><a href="#">실태평가</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <span>고객의 목소리</span>
-                                    <ul class="gnb-3dep">
-                                        <li><a href="#">민원처리 프로세스</a></li>
-                                        <li><a href="#">민원접수</a></li>
-                                        <li><a href="#">칭찬/제안 접수</a></li>
-                                        <li><a href="#">개인(신용)정보 고객권리 신청</a></li>
-                                        <li><a href="#">민원사무편람</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <span>유익한소비자정보</span>
-                                    <ul class="gnb-3dep">
-                                        <li><a href="#">대출사기 피해 예방 안내</a></li>
-                                        <li><a href="#">연체이자율 변경 안내</a></li>
-                                        <li><a href="#">안전망대출2&middot;햇살론15</a></li>
-                                        <li><a href="#">금융분쟁 정보</a></li>
-                                        <li><a href="#">유용한 정보 사이트</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <span>금융소비자보호우수 사례</span>
-                                    <ul class="gnb-3dep">
-                                        <li><a href="#">보이스피싱 예방안내</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="gnb7">
-                            <span>고객센터</span>
-                            <ul class="gnb-2dep">
-                                <li>
-                                    <a href="#">공지사항</a>
-                                </li>
-
-                                <li>
-                                    <a href="#">자주하는 질문</a>
-                                </li>
-
-                                <li>
-                                    <a href="#">서식/약관 자료실</a>
-                                </li>
-
-                                <li>
-                                    <span>금융계산기</span>
-                                    <ul class="gnb-3dep">
-                                        <li><a href="#">오토리스</a></li>
-                                        <li><a href="#">일반리스</a></li>
-                                        <li><a href="#">할부</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <a href="#">원격지원 서비스</a>
-                                </li>
-
-                                <li>
-                                    <a href="#">기한이익상실 예정 공지</a>
-                                </li>
-
-                                <li>
-                                    <a href="#">소멸시효 완성여부 조회</a>
-                                </li>
-
-                                <li>
-                                    <span>약관 및 정책</span>
-                                    <ul class="gnb-3dep">
-                                        <li><a href="#">업무위탁및제3자제공현황</a></li>
-                                        <li><a href="#">이메일주소무단수집거부</a></li>
-                                        <li><a href="#">개인정보조회&middot;동의 안내문</a></li>
-                                        <li><a href="#">신용정보 활용체제</a></li>
-                                        <li><a href="#">분리보존된 개인신용정보의 활용 안내</a></li>
-                                        <li><a href="#">불법 채권추심 대응요령</a></li>
-                                        <li><a href="#">개인신용용평가(자동화평가) 대응권</a></li>
-                                        <li><a href="#">채무조정안내</a></li>
-                                        <li><a href="#">법적고지</a></li>
-                                        <li><a href="#">개인정보처리방침</a></li>
-                                        <li><a href="#">이용약관</a></li>
-                                        <li><a href="#">영상정보처리기기 운영&middot;관리 방침</a></li>
-                                        <li><a href="#">고객확인제도</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="gnb8">
-                            <span>회사소개</span>
-                            <ul class="gnb-2dep">
-                                <li>
-                                    <a href="#">CEO 인사말</a>
-                                </li>
-
-                                <li>
-                                    <a href="#">회사 개요</a>
-                                </li>
-
-                                <li>
-                                    <a href="#">회사 연혁</a>
-                                </li>
-
-                                <li>
-                                    <span>CI 소개</span>
-                                    <ul class="gnb-3dep">
-                                        <li><a href="#">CI</a></li>
-                                        <li><a href="#">컬러시스템</a></li>
-                                        <li><a href="#">CI 활용</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <span>사회공헌</span>
-                                    <ul class="gnb-3dep">
-                                        <li><a href="#">주용활동</a></li>
-                                        <li><a href="#">회사 소식</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <span>윤리경영</span>
-                                    <ul class="gnb-3dep">
-                                        <li><a href="#">윤리경영</a></li>
-                                        <li><a href="#">클린신고센터</a></li>
-                                        <li><a href="#">성희롱 및 직장내 괴롭힘 신고센터</a></li>
-                                        <li><a href="#">신고센터 처리현황</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <span>채용 정보</span>
-                                    <ul class="gnb-3dep">
-                                        <li><a href="#">MG캐피탈 인재상</a></li>
-                                        <li><a href="#">복지제도</a></li>
-                                        <li><a href="#">채용안내 및 절차</a></li>
-                                        <li>
-                                            <a href="#">채용공고</a>
-                                            <ul class="gnb-4dep bul-hypn">
-                                                <li><a href="#">정기공고</a></li>
-                                                <li><a href="#">수시공고</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">입사지원서 수정</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <span>찾아오시는길</span>
-                                    <ul class="gnb-3dep">
-                                        <li><a href="#">본사</a></li>
-                                        <li><a href="#">서초 출장소</a></li>
-                                        <li><a href="#">대구지점</a></li>
-                                        <li><a href="#">부산지점</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="gnb9">
-                            <span>인증센터</span>
-                            <ul class="gnb-2dep">
-                                <li>
-                                    <span>공동인증서 관리</span>
-                                    <ul class="gnb-3dep">
-                                        <li><a href="#">공동인증서 등록 현황</a></li>
-                                        <li><a href="#">공동인증서 등록</a></li>
-                                        <li><a href="#">공동인증서 삭제</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <a href="#">i-Pin 인증 등록</a>
-                                </li>
-
-                                <li>
-                                    <a href="#">공개매각 입찰내역</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <main class="contentWrap">
-            </main>
-        </div>
-        </div>
-    </body>
+        lnb.addEventListener("click", onClick, false);
+        lnb.addEventListener("keydown", onKeydown, false);
+      })();
+    </script>
+  </body>
 </html>

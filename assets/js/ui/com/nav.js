@@ -2,7 +2,21 @@ window.addEventListener('load', function() {
     fullMenu();
     allMenuToggle();
     headerMenu();
+    scrollState();
 });
+
+/*---------------------------------------------
+    스크롤 제어 함수
+---------------------------------------------*/
+function scrollState() {
+    const allMenu = document.getElementById('allMenu');
+    
+    if (window.innerWidth <= 375 && allMenu && allMenu.classList.contains('on')) {
+        document.body.classList.add('no-scroll');
+    } else {
+        document.body.classList.remove('no-scroll');
+    }
+}
 
 /*---------------------------------------------
     전체메뉴 모바일
@@ -44,11 +58,13 @@ function allMenuToggle() {
     // 메뉴 열기
     function openMenu() {
         allMenu.classList.add('on');
+        scrollState();
     }
 
     // 메뉴 닫기
     function closeMenu() {
         allMenu.classList.remove('on');
+        scrollState();
     }
 
     // 메뉴 버튼 클릭/터치
@@ -62,6 +78,9 @@ function allMenuToggle() {
         closeBtn.addEventListener('click', closeMenu);
         closeBtn.addEventListener('touchend', closeMenu);
     }
+
+    // 화면 크기 변경 시 스크롤 상태 체크
+    window.addEventListener('resize', scrollState);
 }
 
 /*---------------------------------------------
@@ -139,19 +158,30 @@ function headerMenu() {
                 item.classList.remove('on');
             });
 
-            // 현재 클릭한 li에 on 추가
-            this.classList.add('on');
-
             // 만약 현재 li가 submenu3를 포함하고 있다면
             const submenu3 = this.querySelector('.submenu3');
             if (submenu3) {
                 const firstSubmenu3Li = submenu3.querySelector('li');
                 if (firstSubmenu3Li) {
                     firstSubmenu3Li.classList.add('on');
-                    // 그리고 현재 submenu2 li의 on 제거
-                    this.classList.remove('on');
                 }
+            } else {
+                this.classList.add('on');
             }
+        });
+    });
+
+    // submenu3 > li에 클릭 이벤트 추가 (새로 추가된 부분)
+    submenu3Items.forEach(li => {
+        li.addEventListener('click', function (e) {
+            e.stopPropagation();
+            // 모든 submenu3 > li에 on 클래스 제거
+            submenu3Items.forEach(item => {
+                item.classList.remove('on');
+            });
+
+            // 현재 클릭한 submenu3 > li에 on 추가
+            this.classList.add('on');
         });
     });
 

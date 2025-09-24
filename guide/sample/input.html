@@ -8,8 +8,7 @@
     <meta name="keywords" content="MG캐피탈" />
     <meta name="copyright" content="copyrights 2025 MG캐피탈" />
     <meta name="description" content="MG캐피탈 리스금융, 할부금융, 스탁론, 기업대출, 장기렌트카, PF대출 등 금융 서비스 제공." />
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover" />
-    <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img" />
+    <meta name="viewport" content="width=device-width" />
     <meta name="apple-mobile-web-app-status-bar-style" content="white" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
@@ -22,63 +21,79 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="../../assets/css/ui-util.css" />
+    <link rel="stylesheet" href="../css/sample.css" />
     
     <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
     <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
     <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
-    <!-- (선택) IE11용 폴리필: 안전하게 깔아두면 좋아요 -->
-    <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Promise,Array.from,Object.assign,Number.isNaN"></script>
-    <script>
-      (function () {
-        var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
-        if (isIE11) {
-          // IE11 전용 클래스 추가
-          document.documentElement.className += " ie11";
-          
-          // IE11 전용 CSS 로드
-          var link = document.createElement('link');
-          link.rel = 'stylesheet';
-          link.href = '../../assets/css/com/ie11.css';
-          link.charset = 'euc-kr'; // 꼭 지정
-          document.head.appendChild(link);
-        }
-      })();
-    </script>
+
+    <style>
+        input[placeholder="포커스"] { border:1px solid #2392FF; }
+        textarea { width:100%; height:100px; }
+
+        input[title]:hover::after{
+	content:attr(title); 
+	position: absolute; 
+	top: 80%;  
+	left: 50%; 
+	width:120px;
+	height:80px; 
+	line-height:80px;  
+	padding: 5px; 
+	background:yellow; 
+	font-size:24px; 
+	border:1px solid blue; 
+	color:blue; 
+	text-align:center; 
+	z-index:100;
+}
+    </style>
+
   </head>
 
     <body>
         <div class="wrap">
-            <!-- S: header -->
-            <header id="headerWrap" class="headerOn"></header>
-
             <main class="contentWrap">
-                <div class="visual-content product">
+                <div class="visual-content">
                     <h2>
                         <em>Form</em>
                         <span>
-                            반응형 환경에서는 해상도와 화면 크기에 따라 Input 컴포넌트의 폰트와 간격만 조정하며, 상태는 동일하게 유지한다.<br />
-                            Label 사이즈는 Web/Tablet에서는 20px M, Mobile에서는 16px M 사이즈를 사용하며, Placeholder의 경우 Web/Tablet에서는 18px R, Mobile에서는 16px R 사이즈를 사용한다.
+                            Lable과 함께 사용하여 직관적으로 구분한다. 인풋 영역은 1개일 경우 max-width: 1000px을 사용한다.<br>
+                            인풋은 최대 3개까지 배치할 수 있으며 인풋간의 간격은 24px로 고정한다.
                         </span>
                     </h2>
                 </div>
                 <div class="sample-content">
-
-    
-
                     <div class="tit-wrap">
-                        <h3>Input</h3>
+                        <h3>Type & Size</h3>
                         <div>
+                            <h4>기본<span>좌/우 Padding을 12px, 텍스트와 아이콘은 14px의 간격을 유지한다. 만일 인풋 영역이 작아질 경우 모든 텍스트는 말줄임처리 한다.</span></h4>
                             <div class="form-container">
                                 <div class="form-content">
                                     <div class="form-wrap">
                                         <div class="form-group">
-                                            <label for="password-input">기본</label>
-                                            <input id="password-input" type="text" name="text" class="form-control" placeholder="내용을 입력해주세요" />
+                                            <input id="password-input" type="text" name="text" class="form-control" placeholder="디폴트" />
                                         </div>
                                         <div class="form-group">
-                                            <label for="password-input">비활성</label>
-                                            <input id="password-input" type="text" name="text" class="form-control" placeholder="내용을 입력해주세요" disabled />
+                                            <input id="password-input" type="text" name="text" class="form-control" placeholder="포커스" autofocus  />
+                                        </div>
+                                    </div>
+                                    <div class="form-wrap">
+                                        <div class="form-group">
+                                            <span class="ipt-clear"><input id="password-input" type="text" name="text" class="form-control" placeholder="내용을 입력해주세요" value="완료되었습니다." /></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <span><input id="password-input" type="text" name="text" class="form-control" placeholder="비활성" disabled  /></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-wrap">
+                                        <div class="form-group">
+                                            <span class="ipt-clear"><input id="password-input" type="text" name="text" class="form-control" placeholder="내용을 입력해주세요" value="유효성체크 에러" aria-invalid="true" /></span>
+                                            <span id="wrt02-error" class="error" role="alert">에러가 생성되었을시 문구생성 성공일시는 p.error태그 삭제나 hidden 처리</span>
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="ipt-clear"><input id="password-input" type="text" name="text" class="form-control" placeholder="내용을 입력해주세요" value="타이틀추가 필요 마우스 오버했을때 보여지는 툴팁효과 필요합니다. 마우스오버해보세요" /></span>
                                         </div>
                                     </div>
                                 </div>
@@ -86,68 +101,61 @@
                             </div>
                         </div>
                     </div>
-                    
                     <div class="tit-wrap">
-                        <h3>select</h3>
+                        <h3></h3>
                         <div>
+                            <h4>드롭다운<span>Max width: 1000px / 최대 3개까지 사용</span></h4>
                             <div class="form-container">
                                 <div class="form-content">
                                     <div class="form-wrap">
                                         <div class="form-group">
-                                            <label for="selectCustom">셀렉트 선택</label>
-                                            <div id="" class="se-select" data-stove="select" data-uicase="slide">
-                                                <div class="e-hidden-title">TITLE</div>
-                                                <select id="selectCustom" required="" title="">
-                                                    <option value="" hidden="">default</option>
-                                                    <option value="0">option 00</option>
-                                                    <option value="1">option 01</option>
-                                                    <option value="2">option 02</option>
-                                                    <option value="3" disabled="">option 03</option>
-                                                    <option value="4" disabled="">option 04</option>
-                                                    <option value="9">option 09</option>
-                                                    <option value="10">option 10</option>
+                                            <select name="fruits" required>
+                                                <option value="" disabled selected>선택해주세요.</option>
+                                                <option value="1">옵션1</option>
+                                                <option value="2">옵션2</option>
+                                                <option value="3">옵션3</option>
+                                                <option value="4">옵션4</option>
+                                              </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <select name="fruits" required style="border:1px solid #2392FF;">
+                                                <option value="" disabled selected>선택해주세요.</option>
+                                                <option value="1">옵션1</option>
+                                                <option value="2">옵션2</option>
+                                                <option value="3">옵션3</option>
+                                                <option value="4" selected>포커스</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-wrap">
+                                        <div class="form-group">
+                                            <span>
+                                                <select name="fruits" required>
+                                                    <option value="" disabled>선택해주세요.</option>
+                                                    <option value="1">옵션1</option>
+                                                    <option value="2">옵션2</option>
+                                                    <option value="3">옵션3</option>
+                                                    <option value="4" selected>선택완료 되었습니다.선택완료 되었습니다.선택완료 되었습니다.선택완료 되었습니다.선택완료 되었습니다.선택완료 되었습니다.선택완료 되었습니다.선택완료 되었습니다.선택완료 되었습니다.선택완료 되었습니다.선택완료 되었습니다.</option>
                                                 </select>
-                                            </div>
+                                            </span>
                                         </div>
                                         <div class="form-group">
-                                            <label for="selectDisabled">셀렉트 disabled</label>
-                                            <div id="" class="se-select" data-stove="select" data-uicase="slide">
-                                                <div class="e-hidden-title">TITLE</div>
-                                                <select id="selectDisabled" required="" title="" disabled><!--[D] disabled-->
-                                                    <option value="" hidden="">disabled</option>
-                                                    <option value="0">option 00</option>
-                                                    <option value="1">option 01</option>
-                                                    <option value="2">option 02</option>
-                                                    <option value="3" disabled="">option 03</option>
-                                                    <option value="4" disabled="">option 04</option>
-                                                    <option value="9">option 09</option>
-                                                    <option value="10">option 10</option>
-                                                </select>
-                                            </div>
+                                            <select name="fruits" class="form-control" disabled>
+                                            <option value="" disabled>선택해주세요.</option>
+                                            <option value="1">옵션1</option>
+                                            <option value="2">옵션2</option>
+                                            <option value="3">옵션3</option>
+                                            <option value="4" selected>비활성</option>
+                                            </select>
                                         </div>
-                                    </div>
-                                </div>
-                                <!--//form-content-->
-                            </div>
-                        </div>
-                    </div>    
-    
-                    <div class="tit-wrap">
-                        <h3>인증번호 요청</h3>
-                        <div>
-                            <div class="form-container">
-                                <div class="form-content">
-                                    <div class="form-wrap">
                                         <div class="form-group">
-                                            <label for="auth-code">인증번호</label>
-                                            <div class="flex-row mo-column">
-                                                <div class="col col-1">
-                                                    <input id="auth-code" type="number" name="auth-code" class="form-control" placeholder="" min="0" step="1" oninput="this.value = this.value.slice(0, 8)" aria-labelledby="phn-second" />
-                                                </div>
-                                                <div class="col">
-                                                    <button class="btn-form">확인</button>
-                                                </div>
-                                            </div>
+                                            <select name="fruits" disabled>
+                                            <option value="" disabled>선택해주세요.</option>
+                                            <option value="1">옵션1</option>
+                                            <option value="2">옵션2</option>
+                                            <option value="3">옵션3</option>
+                                            <option value="4" selected>비활성</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
@@ -155,37 +163,24 @@
                             </div>
                         </div>
                     </div>
-    
                     <div class="tit-wrap">
-                        <h3>전화번호</h3>
+                        <h3>Input file</h3>
                         <div>
+                            <p style="padding-bottom:30px;">첨부 기능을 통해 업로드된 파일을 화면에 표시하는 영역이다. 사용자가 첨부한 파일 이름과 삭제 버튼(아이콘)을 함께 제공해,
+                                필요할 때 해당 파일을 손쉽게 제거할 수 있다. 한 화면에 최대 3개까지 배치하며, 파일 간 간격은 16px로 유지한다.</p>
                             <div class="form-container">
                                 <div class="form-content">
                                     <div class="form-wrap">
                                         <div class="form-group">
-                                            <label for="phn-first">휴대전화번호</label>
-                                            <div class="flex-row mo-column">
-                                                <div class="col flex-row">
-                                                    <div id="phn-first" class="se-select" data-stove="select" data-uicase="slide">
-                                                        <div class="e-hidden-title">통신사 선택</div>
-                                                        <select required="" title="">
-                                                            <option value="" hidden="">통신사</option>
-                                                            <option value="0">SKT</option>
-                                                            <option value="1">KT</option>
-                                                            <option value="2">LGU+</option>
-                                                            <option value="3">(알뜰)SKT</option>
-                                                            <option value="4">(알뜰)KT</option>
-                                                            <option value="5">(알뜰)LGU+</option>
-                                                        </select>
-                                                    </div>
-                                                    <div>
-                                                        <input id="phn-second" type="number" name="phn-second" class="form-control" placeholder="" min="0" step="1" oninput="this.value = this.value.slice(0, 8)" aria-labelledby="phn-second" />
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <button class="btn-form">인증번호 받기</button>
-                                                </div>
-                                            </div>
+                                            <span class="ipt-file">
+                                                <span class="ipt-clear"><input class="form-control upload-text uploadInput" type="text" placeholder="파일을 입력해주세요" tabindex="0" readonly>
+                                                </span>
+                                                <label class="upload-label" for="files">
+                                                    <input id="files" class="upload" name="files" type="file" />
+                                                    <span class="sr-only fileLabel">파일선택</span>
+                                                </label>
+                                            </span>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -193,36 +188,9 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="tit-wrap">
-                        <h3>체크박스</h3>
-                        <div>
-                            <div class="form-container">
-                                <div class="form-content">
-                                    <div class="form-wrap">
-                                        <div class="form-group">
-                                            <ul>
-                                                <li>
-                                                    <input type="checkbox" id="checkbox1" checked>
-                                                    <label for="checkbox1" class="check-button">
-                                                        <span>체크박스</span>
-                                                    </label>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--//form-content-->
-                            </div>
-                        </div>
-                    </div>
-    
-                    
+                   
                 </div>
             </main>
-
-            <!-- S: footer -->
-            <footer id="footerWrap"></footer>
         </div>
     </body>
 </html>

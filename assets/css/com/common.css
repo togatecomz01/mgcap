@@ -3,23 +3,18 @@
 :root{
     --ico-back:  url(../../../images/com/svg/ico_back.svg);
     --ico-menu:  url(../../../images/com/svg/ico_menu.svg);
-    --ico-close: url(../../images/com/svg/ico_close.svg);
+    --ico-close: url(../../../images/com/svg/ico_close.svg);
     --ico-close-toggle: url(../../../images/com/svg/ico_toggle_up.svg);
     --ico-search: url(../../../images/com/svg/ico_search.svg);
     --ico-clear: url(../../../images/com/svg/ico_clear.svg);
-    --ico-info: url(../../images/com/svg/ico_info.svg);
+    --ico-info: url(../../../images/com/svg/ico_info.svg);
     --ico-check: url(../../../images/com/svg/ico_check.svg);
     --ico-se-arrow: url(../../../images/com/svg/ico_se_arrow.svg);
     --ico-file: url(../../../images/com/svg/ico_file.svg);
     --ico-date: url(../../../images/com/svg/ico_date.svg);
-    --ico-move: url(../../images/com/svg/ico_move.svg);
-
-    --ico-next: url(../../images/com/svg/ico_next.svg);
 
     --ico-w-plus: url(../../../images/com/ico_w_plus.png);
-    --ico-top: url(../../../images/com/ico_scrollTop.png);
-    --ico-info-table: url(../../images/com/ico_info_table.png);
-
+    --ico-top: url(../../../images/com/ico_scrollTop.png)
 }
 
 /* 필수 표시 :: * */
