@@ -39,9 +39,9 @@
     <div class="wrap main">
         <header id="headerWrap" class="headerOn">
             <div class="header-l">
-                <h1><a href="javascript:void(0);">MG캐피탈</a></h1>
+                <h1><a href="javascript:void(0);" title="MG캐피탈 홈페이지">MG캐피탈</a></h1>
                 <ul>
-                    <li class="on"><a href="javascript:void(0);">자동차</a></li>
+                    <li class="on"><a href="javascript:void(0);"  aria-current="page">자동차</a></li>
                     <li><a href="javascript:void(0);">설비/의료&middot;헬스</a></li>
                     <li><a href="javascript:void(0);">주택</a></li>
                     <li><a href="javascript:void(0);">기업</a></li>
@@ -51,13 +51,13 @@
                 <nav id="menuWrap" class="lnb" role="navigation" aria-label="top 메뉴">
                     <ul class="menu">
                         <li class="menu-item">
-                            <button type="button" class="menu-tit" aria-expanded="false" aria-controls="submenu-1"> My MG</button>
+                            <button type="button" class="menu-tit" aria-expanded="false" aria-haspopup="true" aria-controls="submenu-1"> My MG</button>
                             <div class="list-item">
                                 <ul id="submenu-1" class="submenu" role="group">
                                     <li>
                                         <span>이용현황</span>
                                         <ul class="submenu2">
-                                            <li><a href="#">이용상품내역</a></li>
+                                            <li class="on"><a href="#" aria-current="page">이용상품내역</a></li>
                                             <li><a href="#">납입내역</a></li>
                                             <li><a href="#">상환일정 조회</a></li>
                                             <li><a href="#">만기예정 및 결과조회</a></li>
@@ -125,7 +125,7 @@
                         </li>
 
                         <li class="menu-item">
-                            <button type="button" class="menu-tit on" aria-expanded="false" aria-controls="submenu-2"> 소비자보호</button>
+                            <button type="button" class="menu-tit on" aria-expanded="false" aria-haspopup="true" aria-controls="submenu-2"> 소비자보호</button>
                             <div class="list-item">
                                 <ul id="submenu-2" class="submenu" role="group">
                                     <li>
@@ -147,11 +147,9 @@
                                             <li><a href="#">위법계약해지요구권</a></li>
                                             <li><a href="#">자료열람요구권</a></li>
                                             <li><a href="#">연락금지요구권</a></li>
-                                            <li><a href="#">연락금지 요구 신청 접수</a></li>
-                                            <li><a href="#">연락금지 요구 접수 결과 조회</a></li>
-                                            <li><a href="#">연락금지 요구 해제</a></li>
                                             <li><a href="#">방문판매인력 신원조회</a></li>
                                             <li><a href="#">모집인 조회</a></li>
+                                            <li><a href="#">연락금지 요구 해제</a></li>
                                         </ul>
                                     </li>
 
@@ -178,7 +176,6 @@
                                             <li><a href="#">민원접수</a></li>
                                             <li><a href="#">칭찬/제안 접수</a></li>
                                             <li><a href="#">개인(신용)정보 고객권리 신청</a></li>
-                                            <li><a href="#">민원사무편람</a></li>
                                         </ul>
                                     </li>
 
@@ -188,8 +185,7 @@
                                             <li><a href="#">대출사기 피해 예방 안내</a></li>
                                             <li><a href="#">연체이자율 변경 안내</a></li>
                                             <li><a href="#">안전망대출2&middot;햇살론15</a></li>
-                                            <li><a href="#">금융분쟁 정보</a></li>
-                                            <li><a href="#">유용한 정보 사이트</a></li>
+                                            <li><a href="#">금융분쟁 정보 및 유용한 사이트 정보</a></li>
                                         </ul>
                                     </li>
 
@@ -204,7 +200,7 @@
                         </li>
 
                         <li class="menu-item">
-                            <button type="button" class="menu-tit" aria-expanded="false" aria-controls="submenu-3"> 회사소개</button>
+                            <button type="button" class="menu-tit" aria-expanded="false" aria-haspopup="true" aria-controls="submenu-3"> 회사소개</button>
                             <div class="list-item">
                                 <ul id="submenu-3" class="submenu" role="group">
                                     <li><a href="#">CEO 인사말</a></li>
@@ -236,37 +232,31 @@
                                     </li>
     
                                     <li>
+                                        <span>경영정보</span>
+                                        <ul class="submenu2">
+                                            <li><a href="#">공시정보</a></li>
+                                            <li><a href="#">재무정보</a></li>
+                                            <li><a href="#">신용평가</a></li>
+                                        </ul>
+                                    </li>
+    
+                                    <li>
                                         <span>채용 정보</span>
                                         <ul class="submenu2">
                                             <li><a href="#">MG캐피탈 인재상</a></li>
                                             <li><a href="#">복지제도</a></li>
                                             <li><a href="#">채용안내 및 절차</a></li>
-                                            <li>
-                                                <a href="#">채용공고</a>
-                                                <ul class="submenu3 bul-hypn">
-                                                    <li><a href="#">정기공고</a></li>
-                                                    <li><a href="#">수시공고</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">입사지원서 수정</a></li>
+                                            <li> <a href="#">채용공고</a></li>
                                         </ul>
                                     </li>
     
-                                    <li>
-                                        <span>찾아오시는길</span>
-                                        <ul class="submenu2">
-                                            <li><a href="#">본사</a></li>
-                                            <li><a href="#">서초 출장소</a></li>
-                                            <li><a href="#">대구지점</a></li>
-                                            <li><a href="#">부산지점</a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a href="#">찾아오시는길</a></li>
                                 </ul>
                             </div>
                         </li>
 
                         <li class="menu-item">
-                            <button type="button" class="menu-tit" aria-expanded="false" aria-controls="submenu-4"> 고객센터</button>
+                            <button type="button" class="menu-tit" aria-expanded="false" aria-haspopup="true" aria-controls="submenu-4"> 고객센터</button>
                             <div class="list-item">
                                 <ul id="submenu-4" class="submenu" role="group">
                                     <li>
@@ -288,6 +278,10 @@
                                             <li><a href="#">일반리스</a></li>
                                             <li><a href="#">할부</a></li>
                                         </ul>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">공개매각 정보</a>
                                     </li>
 
                                     <li>
@@ -325,7 +319,7 @@
                         </li>
 
                         <li class="menu-item">
-                            <button type="button" class="menu-tit" aria-expanded="false" aria-controls="submenu-5"> 인증센터</button>
+                            <button type="button" class="menu-tit" aria-expanded="false" aria-haspopup="true" aria-controls="submenu-5"> 인증센터</button>
                             <div class="list-item">
                                 <ul id="submenu-5" class="submenu" role="group">
                                     <li>
@@ -334,6 +328,14 @@
                                             <li><a href="#">공동인증서 등록 현황</a></li>
                                             <li><a href="#">공동인증서 등록</a></li>
                                             <li><a href="#">공동인증서 삭제</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <span>금융인증서 관리</span>
+                                        <ul class="submenu2">
+                                            <li><a href="#">금융인증서 등록 현황</a></li>
+                                            <li><a href="#">금융인증서 등록</a></li>
                                         </ul>
                                     </li>
     
@@ -353,33 +355,37 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="header-btn-wrap">
-                    <button class="search-btn">검색</button>
-                    <button class="menu-btn" data-open="modal">전체메뉴</button>
+                <div class="header-btn-wrap" aria-label="헤더 도구모음">
+                    <button class="search-btn" aria-label="검색" data-open="searchWrap"></button>
+                    <button class="close-btn" aria-label="전체메뉴 닫기"></button>
+                    <button class="menu-btn" aria-label="전체메뉴" data-open="modal"></button>
                 </div>
             </div>
-        </header>
-        <!--S: 검색창 -->
-        <div class="allsearch on">
-            <form>
-                <div class="form-content">
-                    <div class="search-wrap">
-                        <div class="search-group">
-                            <p class="ipt-search">
-                                <input id="search-input" type="text" name="text" placeholder="">
-                            </p>
-                        </div>
-                        <div class="search-group">
-                            <ul class="recomend">
-                                <li class="tit">추천메뉴</li>
-                                <li><button></button></li>
-                            </ul>
+            <!--S: 검색창 -->
+            <div id="allSearch" class="allsearch">
+                <form>
+                    <div class="form-content">
+                        <div class="search-wrap">
+                            <div class="search-group">
+                                <p class="ipt-search">
+                                    <input id="search-input" type="text" name="text" placeholder="">
+                                </p>
+                            </div>
+                            <div class="search-group">
+                                <ul class="recomend">
+                                    <li class="tit">추천메뉴</li>
+                                    <li><a href="#">상품공시실</a></li>
+                                    <li><a href="#">대출상담신청</a></li>
+                                    <li><a href="#">금융상품</a></li>
+                                    <li><a href="#">리스상품</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </form>
-        </div>
-        <!--E: 검색창 -->
+                </form>
+            </div>
+            <!--E: 검색창 -->
+        </header>
         <div class="bodyWrap">
             <main class="contentWrap">
 

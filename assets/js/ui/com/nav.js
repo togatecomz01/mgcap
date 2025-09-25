@@ -3,6 +3,7 @@ window.addEventListener('load', function() {
     allMenuToggle();
     headerMenu();
     scrollState();
+    allSearchToggle();
 });
 
 /*---------------------------------------------
@@ -11,7 +12,7 @@ window.addEventListener('load', function() {
 function scrollState() {
     const allMenu = document.getElementById('allMenu');
     
-    if (window.innerWidth <= 375 && allMenu && allMenu.classList.contains('on')) {
+    if (window.innerWidth <= 480 && allMenu && allMenu.classList.contains('on')) {
         document.body.classList.add('no-scroll');
     } else {
         document.body.classList.remove('no-scroll');
@@ -47,13 +48,14 @@ function fullMenu() {
         });
     });
 }
+
 /*---------------------------------------------
     전체메뉴 열기/닫기 기능 (PC & Mobile)
 ---------------------------------------------*/
 function allMenuToggle() {
     const menuBtn = document.querySelector('.menu-btn[data-open="modal"]') || document.querySelector('.menu-btn');
     const allMenu = document.getElementById('allMenu');
-    const closeBtn = document.querySelector('.close_btn');
+    const closeBtn = document.querySelector('.allmenu-header-inner .close-btn');
 
     // 메뉴 열기
     function openMenu() {
@@ -78,6 +80,60 @@ function allMenuToggle() {
         closeBtn.addEventListener('click', closeMenu);
         closeBtn.addEventListener('touchend', closeMenu);
     }
+
+    // 화면 크기 변경 시 스크롤 상태 체크
+    window.addEventListener('resize', scrollState);
+}
+
+/*---------------------------------------------
+    검색창 열기/닫기 기능 (PC & Mobile)
+---------------------------------------------*/
+function allSearchToggle() {
+    const searchBtn = document.querySelector('.search-btn[data-open="searchWrap"]') || document.querySelector('.search-btn');
+    const allSearch = document.getElementById('allSearch');
+    const headerCloseBtn = document.querySelector('.header-btn-wrap .close-btn');
+
+    // 메뉴 열기
+    function openSearch() {
+        allSearch.classList.add('on');
+        scrollState();
+    }
+
+    // 메뉴 닫기
+    function closeSearch() {
+        allSearch.classList.remove('on');
+        scrollState();
+    }
+
+    // 메뉴 버튼 클릭/터치
+    if (searchBtn) {
+        searchBtn.addEventListener('click', openSearch);
+        searchBtn.addEventListener('touchend', openSearch);
+    }
+
+    // 닫기 버튼 클릭/터치
+    if (headerCloseBtn) {
+        headerCloseBtn.addEventListener('click', closeSearch);
+        headerCloseBtn.addEventListener('touchend', closeSearch);
+    }
+
+    // 검색창,닫기 버튼 show hide
+    function searchToggle() {
+        if (allSearch.classList.contains('on')) {
+            searchBtn.style.display = 'none';
+            headerCloseBtn.style.display = 'inline-block';
+        } else {
+            searchBtn.style.display = 'inline-block';
+            headerCloseBtn.style.display = 'none';
+        }
+    }
+
+    const observer = new MutationObserver(searchToggle);
+    if (allSearch) {
+        observer.observe(allSearch, { attributes: true, attributeFilter: ['class'] });
+    }
+
+    searchToggle();
 
     // 화면 크기 변경 시 스크롤 상태 체크
     window.addEventListener('resize', scrollState);
