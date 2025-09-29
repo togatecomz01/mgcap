@@ -16,7 +16,7 @@ body{
 
   --btn-pop-background:var(--color-2);
   --btn-pop-font-color:var(--white);
-  --btn-pop-font-size:var(--font20);
+  --btn-pop-font-size:var(--font18);
   --btn-pop-font-w:var(--font-w-m);
 
   --btn-pop-s-background:var(--white);
@@ -34,10 +34,16 @@ body{
   --btm-btn-font-size:var(--font22);  
   --btm-btn-font-weight:var(--font-w-m);
 
+  --btn-text:var(--primary);
+
 
 }
 
 a, button { position:relative; }
+a:focus-visible,
+button:focus-visible { outline:2px solid var(--tab-active); outline-offset:4px; z-index:2;  }
+
+.btn-text { color:var(--btn-text); text-decoration:underline;  }
 
 /**Form btn**/
 .btn-form { width:100%; max-width:152px; height:67px; padding:var(--btn-padding); border:var(--btn-board); color:var(--btn-font-color); box-sizing:border-box; text-align:center; }
@@ -47,7 +53,7 @@ a, button { position:relative; }
 
 /**Popup Btn**/
 .btn-pop-primary,
-.btn-pop-secondary { padding:0 60px; min-width:157px; height:60px; line-height:60px; box-sizing:"border-box"; font-size:var(--btn-pop-font-color); font-weight:var(--btn-pop-font-w); border-radius:100px; border:1px solid transparent; }
+.btn-pop-secondary { padding:0 60px; width:100%; height:60px; line-height:60px; box-sizing:"border-box"; font-size:var(--btn-pop-font-color); font-weight:var(--btn-pop-font-w); border-radius:100px; border:1px solid transparent; }
 .btn-pop-primary{ background:var(--btn-pop-background); color:var(--btn-pop-font-color); }
 .btn-pop-primary:hover { background:var(--primary); }
 .btn-pop-secondary{ border:var(--btn-pop-s-border); background:var(--btn-pop-s-background); }
@@ -65,14 +71,14 @@ a, button { position:relative; }
   }
 
 /**CTA 01**/
-.bottom-content .button-wrap { display:inline-flex; gap:24px; }
-.bottom-content a,
-.bottom-content button {  flex:0 0 auto; display:inline-block; padding:0 60px; min-width:161px; width:auto; height:63px; line-height:63px; font-size:var(--btm-btn-font-size); font-weight:var(--btm-btn-font-weight); text-align:center; border-radius:100px;}
-.bottom-content .btn-primary { background-color: var(--btm-btn-primary); color:var(--white); }
-.bottom-content .btn-primary:hover { background-color: var(--active); }
-.bottom-content .btn-secondary { background-color: var(--btm-btn-secondary); }
-.bottom-content button:disabled,
-.bottom-content a[aria-disabled="true"] { text-decoration:none; cursor: not-allowed; background-color:var(--color-d); color:var(--color-75); pointer-events:none;}
+.bottom-container .button-group { display:flex; gap:24px; justify-content:center; width:100%; text-align:center; }
+.bottom-container a,
+.bottom-container button {  flex:0 0 auto; display:inline-block; padding:0 60px; min-width:161px; width:auto; height:63px; line-height:63px; font-size:var(--btm-btn-font-size); font-weight:var(--btm-btn-font-weight); text-align:center; border-radius:100px;}
+.bottom-container .btn-primary { background-color: var(--btm-btn-primary); color:var(--white); }
+.bottom-container .btn-primary:hover { background-color: var(--active); }
+.bottom-container .btn-secondary { background-color: var(--btm-btn-secondary); }
+.bottom-container button:disabled,
+.bottom-container a[aria-disabled="true"] { text-decoration:none; cursor: not-allowed; background-color:var(--color-d); color:var(--color-75); pointer-events:none;}
 
 @media (max-width:767px) {
     body{
@@ -89,8 +95,8 @@ a, button { position:relative; }
    .btn-download::after {  position:absolute; left:20px; background-color:var(--white); }
 
    /**CTA 01**/
-   .bottom-content a,
-   .bottom-content button { flex:1; height:57px; line-height:57px; font-size:var(--font18); }
+   .bottom-container a,
+   .bottom-container button { flex:1; height:57px; line-height:57px; font-size:var(--font20); }
 
  
    

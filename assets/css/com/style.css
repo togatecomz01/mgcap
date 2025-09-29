@@ -3,6 +3,7 @@
 /* 모바일 폰트 사이즈 기준 [html::18px], 짝수 단위입니다.[짝수 단위로 할 경우 소수점 최대 3자리로 떨어집니다.] */
 :root {
     --font12: 0.667rem;  
+    --font13: 0.722rem; 
     --font14: 0.778rem;  
     --font16: 0.889rem; 
     --font18: 1rem;      
@@ -38,7 +39,7 @@ body {
 
 
     /** 기본 색상 **/
-    --primary: #0072BC;
+    --primary: #0871F3;
     --primary-light: #41C7F4;
     --secondary: #BAD1EC;
     ----default-color:#757575;
@@ -61,9 +62,12 @@ body {
     --color-e:#EEEEEE;
     --color-d:#DDDDDD;
     --color-f6:#F6F6F6;
+    --bg-box:#F3F6FB;
 
-    --outline: #3ca7ff;
+
+    --outline: #0871F3;
     --error: var(--red);
+
 
 }
 

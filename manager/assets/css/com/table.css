@@ -61,3 +61,9 @@ col.ico-btn { width:94px; min-width:74px }
 /** 활성/비활성 **/
 .active { font-size:var(--font16); font-weight:var(--font-w-r); color:var(--primary); }
 .n-active { font-size:var(--font16); font-weight:var(--font-w-r); color:var(--color-9); }
+
+/** 테이블 두줄일 때 **/
+.list-content td:first-of-type.bo-l,
+.write-content td.bo-l { border-left:1px solid var(--color-d); }
+.list-content td:first-of-type.bo-r,
+.write-content td.bo-r { border-right:1px solid var(--color-d); }
