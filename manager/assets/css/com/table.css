@@ -6,7 +6,7 @@ body {
     --error-td:#FFF8F8;
 }
 
-table{ border-spacing:0; border-collapse: collapse; table-layout:fixed; min-width:1200px; }
+table{ border-spacing:0; border-collapse: collapse; /*table-layout:fixed;*/ min-width:1200px; }
 table tr { border-bottom:1px solid var(--table-border); }
 table th,
 table td { padding:10px; text-align:center; color:var(--default-color); font-size:var(--font16); font-weight:var(--font-w-m); text-align:center; }
@@ -21,12 +21,11 @@ table td { height:72px; }
 .list-container .list-content:not(:has(thead)) tr:first-of-type { border-top:0; }
 
 .list-content th,
-.list-content td { border-left:1px solid var(--table-border); }
+.list-content td { height:48px; border-left:1px solid var(--table-border); font-size:var(--font14); }
 .list-content th:first-of-type,
 .list-content td:first-of-type { border-left:0; }
-.list-content td:has(input:not(.toggle input)) { padding:20px 24px; }
+.list-content td:has(input:not(.toggle input)) { padding:8px 20px; }
 
-.list-content thead th { position:sticky; top:0; }
 
 .write-content th, td { padding:10px 20px; }
 .write-content td { text-align:left; }
@@ -57,13 +56,3 @@ col.ico-btn { width:94px; min-width:74px }
 .list-container:not(:has(.info-content)) table tbody tr:last-child { border-bottom:0; }
 .list-container:has(.pagination-content) table tbody tr:last-child,
 .pop-body .list-container table tbody tr:last-child { border-bottom:1px solid var(--table-border); }
-
-/** 활성/비활성 **/
-.active { font-size:var(--font16); font-weight:var(--font-w-r); color:var(--primary); }
-.n-active { font-size:var(--font16); font-weight:var(--font-w-r); color:var(--color-9); }
-
-/** 테이블 두줄일 때 **/
-.list-content td:first-of-type.bo-l,
-.write-content td.bo-l { border-left:1px solid var(--color-d); }
-.list-content td:first-of-type.bo-r,
-.write-content td.bo-r { border-right:1px solid var(--color-d); }

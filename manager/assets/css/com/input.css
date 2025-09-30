@@ -27,7 +27,7 @@ input[type="number"],
 input[type="search"], 
 input[type="date"], 
 select,
-textarea { padding:12px; width:100%; height:46px; border:1px solid var(--form-board); color:var(--form-font-color); border-radius:4px; font-size:var(--form-font-size); box-sizing:border-box; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+textarea { padding:3px 10px; width:100%; height:40px; border:1px solid var(--form-board); color:var(--form-font-color); border-radius:4px; font-size:var(--form-font-size); box-sizing:border-box; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 select {  padding-right:54px; -webkit-appearance:none; -moz-appearance:none; appearance:none; background:var(--ico-select) no-repeat right 10px center; }
 input[type="search"] { background-image:var(--ico-search); background-size:18px; background-repeat:no-repeat; background-position:12px center; padding-left:40px;  }
 
@@ -165,8 +165,7 @@ tr.error td input { border:1px solid var(--error);}
 /**list**/
 .list-content th.check-all-area label { cursor:pointer; }
 .list-content th.check-all-area label span { text-decoration-line:underline; text-underline-offset:3px; }
-.list-content td label.check:only-of-type,
-.list-content th label.check:only-of-type { justify-content:center; }
+.list-content td label.check:only-of-type { justify-content:center; }
 
 
 /**write**/

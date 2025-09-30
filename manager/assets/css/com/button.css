@@ -25,7 +25,7 @@ button, a { cursor:pointer; display:inline-block; display:inline-flex; align-ite
 .btn-form:hover { border-color:var(--btn-active); color:var(--btn-active);}
 
 /**Contents & Modal**/
-.btn-body { padding:10px; width:100%; height:46px; border:1px solid var(--form-board); font-weight:var(--font-w-m) }
+.btn-body { padding:10px; width:100%; height:40px; border:1px solid var(--form-board); font-weight:var(--font-w-m) }
 .btn-content { padding:12px; width:170px; height:48px; line-height:24px; background:var(--btn-content-background); color:var(--btn-content-font-color); box-sizing:"border-box"; }
 .btn-content:hover { background:var(--btn-content-active);}
 .btn-content:disabled { background:var(--btn-content-diasbled); color:var(--btn-content-d-font-color); }
@@ -56,11 +56,11 @@ button, a { cursor:pointer; display:inline-block; display:inline-flex; align-ite
 .list-content td button.btn-text.img { font-weight:var(--font-w-m); color:var(--active); }
 
 /**페이지네이션 버튼 **/
-.pagination-content { position:relative; display:flex; padding:20px; align-items:center; justify-content:center; gap:8px; }
+.pagination-content { position:relative; display:flex; padding:12px; align-items:center; justify-content:center; gap:8px; }
 .pagination-content button, 
 .pagination-content a { min-width:40px; height:40px; font-size:var(--font14); border-radius:4px; }
 .pagination-content .active { background:var(--lst-btn-active); font-weight:var(--font-w-m); }
-.pagination-content div { flex:1; text-align:center; }
+.pagination-content div { text-align:center; }
 .pagination-content .first,
 .pagination-content .last {  flex:0 0 64px; display:flex; gap:16px; }
 .pagination-content .first { left:20px; }
@@ -72,11 +72,9 @@ button, a { cursor:pointer; display:inline-block; display:inline-flex; align-ite
 .pagination-content .btn-next::after { content:""; display:block; width:24px; height:24px; background:var(--lst-btn-prev) no-repeat right center; background-size:100%;  }
 .pagination-content .btn-last::after { content:""; display:block; width:24px; height:24px; background:var(--lst-btn-last) no-repeat right center; background-size:100%;  }
 
-.info-content + .pagination-content { border-top: 1px solid #ddd; }
-
 
 /**body 버튼 ***/
-.btn-body { padding:10px; width:85px; height:46px; border:1px solid var(--form-board); background:var(--btn-body-color); border:1px solid transparent; color:var(--white); border-radius:4px; }
+.btn-body { padding:10px; width:85px; height:40px; border:1px solid var(--form-board); background:var(--btn-body-color); border:1px solid transparent; color:var(--white); border-radius:4px; }
 .btn-body:disabled { background:var(--color-d); color:var(--default-color); }
 
 /**CTA 01**/
