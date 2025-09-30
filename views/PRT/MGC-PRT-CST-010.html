@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>연락금지요구권&gt;소비자보호&gt;금융소비자 주요 권리&gt;홈</title>
+
+    <meta name="keywords" content="MG캐피탈" />
+    <meta name="copyright" content="copyrights 2025 MG캐피탈" />
+    <meta name="viewport" content="width=device-width" />
+    <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="No-Cache" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico"/>
+    <link rel="stylesheet" href="../../assets/css/ui-util.css" />
+    <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+    <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header id="headerWrap" class="headerOn">
+            <nav class="lnb">
+                
+            </nav>
+        </header>
+        <div class="bodyWrap">
+            <main class="contentWrap">
+                <nav class="location-container">
+                    <ol class="breadcrumb">
+                        <li>
+                            <span class="home">홈</span>
+                        </li>
+                        <li>
+                            <span>금융소비자 주요 권리</span>
+                        </li>
+                        <li>
+                            <span>연락금지요구권</span>
+                        </li>
+                    </ol>
+                </nav>
+                <section class="visual-container">
+                    <h2>연락금지요구권</h2>
+                    <p>일반금융소비자가 방문(전화)판매원이 금융상품을 권유하거나 계약체결을 목적으로<br />방문 또는  전화 연락하는 것을 금지하도록 요구할 수 있는 권리</p>
+                </section>
+                <section class="page-container">
+                    <div class="text-content">
+                        <div class="text-group">
+                            <h3>신청대상</h3>
+                            <p>일반금융소비자</p>
+                        </div>
+                        <div class="text-group">
+                            <h3>신청내용</h3>
+                            <p>금융상품 판매, 계약체결 권유에 대한 연락금지 요구 등록 및 철회</p>
+                            <p class="rfrnc">단, 마케팅 권유 목적의 연락 등에 한하며 납입일 안내, 연체예정 문자 등 계약관련 문자는 대상이 아닙니다.</p>
+                        </div>
+                        <div class="text-group">
+                            <h3>신청방법</h3>
+                            <p>방문(전화)권유판매원 또는 당사 고객센터(수신자부담 080-558-9688) 및 홈페이지를 통한 신청 가능</p>
+                        </div>
+                        <div class="text-group">
+                            <h3>신청결과</h3>
+                            <p>요구받은 날로부터 1개월 이내 조치</p>
+                        </div>
+                    </div>
+                    <div class="tab-container jsTab">
+                        <nav class="tab-list depth2">
+                            <button type="button" class="tab-item active" data-tab="tab2-1" title="선택됨">조회</button>
+                            <button type="button" class="tab-item" data-tab="tab2-2">신청</button>
+                            <button type="button" class="tab-item" data-tab="tab2-3">해제</button>
+                        </nav>
+                        <div class="tab-content">
+                            <div id="tab2-1" class="tab-panel">
+                                <h3>연락금지 요구 접수 결과조회</h3>
+                                <form>
+                                    <fieldset class="form-content">
+                                        <legend>연락금지 요구 접수 결과조회 입력</legend>
+                                        <div class="form-wrap">
+                                            <div class="form-group">
+                                                <label for="phn-first">휴대전화번호</label>
+                                                <div class="flex-row mo-column">
+                                                    <div>
+                                                        <select id="phn-first" required="" title="" required>
+                                                            <option value="0">010</option>
+                                                            <option value="1">017</option>
+                                                            <option value="3">019</option>
+                                                        </select>
+                                                        <input id="phn-second" name="phn-second" type="tel" inputmode="numeric" autocomplete="tel-local-prefix" pattern="[0-9]{3,4}" maxlength="4" aria-describedby="desc-phone" required>
+                                                        <input id="phn-third" name="phn-third" type="tel" inputmode="numeric" autocomplete="tel-local-suffix" pattern="[0-9]{4}" maxlength="4" aria-describedby="desc-phone" required>
+                                                    </div>
+                                                    <!--[D]:공통 - 알럿참고 -->
+                                                    <button class="btn-form" data-modal-open="modal">조회</button>
+                                                </div><!--//flex-row-->
+                                            </div><!--//form-group-->
+                                        </div><!--//form-wrap-->
+                                    </fieldset>
+                                </form>
+                                <h3>조회결과</h3>
+                                <!--[D]:성공시 - success-content, 실패시 - error-content로 제어 -->
+                                <div class="error-content">
+                                    <p>해당연락처는 연락금지 요구권이 접수되지 않았습니다.</p>
+                                </div>
+                            </div>
+                            <div id="tab2-2" class="tab-panel active">
+                                <h3>연락금지 요구 신청접수</h3>
+                                <form>
+                                    <fieldset class="form-content">
+                                        <legend>연락금지 요구 신청접수 입력</legend>
+                                        <div class="form-wrap">
+                                            <div class="form-group">
+                                                <label for="phn-first2">휴대전화번호</label>
+                                                <div class="flex-row">
+                                                    <select id="phn-first2" required="" title="" required>
+                                                        <option value="0">010</option>
+                                                        <option value="1">017</option>
+                                                        <option value="3">019</option>
+                                                    </select>
+                                                    <input id="phn-second2" name="phn-second" type="tel" inputmode="numeric" autocomplete="tel-local-prefix" pattern="[0-9]{3,4}" maxlength="4" aria-describedby="desc-phone" required>
+                                                    <input id="phn-third2" name="phn-third" type="tel" inputmode="numeric" autocomplete="tel-local-suffix" pattern="[0-9]{4}" maxlength="4" aria-describedby="desc-phone" required>  
+                                                </div><!--//flex-row-->
+                                            </div><!--//form-group-->
+                                            <div class="form-group">
+                                                <label for="captcha-input2">보안문자</label>
+                                                <div class="flex-row mo-column">
+                                                    <div class="captcha">
+                                                        <p class="img-captcha">캡챠이미지 영역</p>
+                                                        <button type="button"  class="btn-form reset">새로고침</button>
+                                                    </div>
+                                                    <input id="captcha-input2" name="captcha" type="text" inputmode="latin" pattern="[A-Za-z0-9]{6}" maxlength="6" placeholder="보안문자 6자리" aria-describedby="captcha-help" required>
+                                                    <button class="btn-form">인증번호 발송</button>
+                                                </div><!--//flex-row-->
+                                            </div><!--//form-group-->
+                                        </div><!--//form-wrap-->
+                                        <div class="form-wrap">
+                                            <div class="form-group">
+                                                <label for="auth-code2">인증번호</label>
+                                                <div class="flex-row mo-column">
+                                                    <input id="auth-code2" type="number" name="auth-code" placeholder="" min="0" step="1" oninput="this.value = this.value.slice(0, 8)" aria-labelledby="phn-second" />
+                                                    <button class="btn-form">확인</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                                <h3>조회결과</h3>
+                                <!--[D]:성공시 - success-content, 실패시 - error-content로 제어 -->
+                                <div class="success-content">
+                                    <p>연락금지요구 신청이 정상적으로 처리되었습니다.</p>
+                                </div>
+                            </div>
+                            <div id="tab2-3" class="tab-panel">
+                                <h3>연락금지 요구 해제</h3>
+                                <form>
+                                    <fieldset class="form-content">
+                                        <legend>연락금지 요구 해제 입력</legend>
+                                        <div class="form-wrap">
+                                            <div class="form-group">
+                                                <label for="phn-first3">휴대전화번호</label>
+                                                <div class="flex-row">
+                                                    <select id="phn-first3" required="" title="" required>
+                                                        <option value="0">010</option>
+                                                        <option value="1">017</option>
+                                                        <option value="3">019</option>
+                                                    </select>
+                                                    <input id="phn-second3" name="phn-second" type="tel" inputmode="numeric" autocomplete="tel-local-prefix" pattern="[0-9]{3,4}" maxlength="4" aria-describedby="desc-phone" required>
+                                                    <input id="phn-third3" name="phn-third" type="tel" inputmode="numeric" autocomplete="tel-local-suffix" pattern="[0-9]{4}" maxlength="4" aria-describedby="desc-phone" required data-modal-open="modal"> 
+                                                </div><!--//flex-row-->
+                                            </div><!--//form-group-->
+                                            <div class="form-group">
+                                                <label for="captcha-input2">보안문자</label>
+                                                <div class="flex-row mo-column">
+                                                    <div class="captcha">
+                                                        <p class="img-captcha">캡챠이미지 영역</p>
+                                                        <button type="button"  class="btn-form reset">새로고침</button>
+                                                    </div>
+                                                    <input id="captcha-input3" name="captcha" type="text" inputmode="latin" pattern="[A-Za-z0-9]{6}" maxlength="6" placeholder="보안문자 6자리" aria-describedby="captcha-help" required>
+                                                    <button class="btn-form" >인증번호 발송</button>
+                                                </div><!--//flex-row-->
+                                            </div><!--//form-group-->
+                                        </div><!--//form-wrap-->
+                                        <div class="form-wrap">
+                                            <div class="form-group">
+                                                <label for="auth-code3">인증번호</label>
+                                                <div class="flex-row mo-column">
+                                                    <input id="auth-code3" type="number" name="auth-code" placeholder="" min="0" step="1" oninput="this.value = this.value.slice(0, 8)" aria-labelledby="phn-second" />
+                                                    <button class="btn-form">확인</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                                <h3>조회결과</h3>
+                                <!--[D]:성공시 - success-content, 실패시 - error-content로 제어 -->
+                                <div class="success-content">
+                                    <p>연락금지요구 해제가 정상적으로 처리되었습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--s: 알럿모음-->
+                <secition class="modal-container">
+                    <div id="modal" class="layerPopup modal">
+                        <div class="pop-content alert">
+                            <div class="pop-body">
+                                <p>휴대폰번호를 입력해 주세요.</p>
+                            </div>
+                            <div class="pop-footer">
+                                <div class="button-content">
+                                    <button type="button" class="btn-pop-primary"  data-popup-close="modal">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </secition>
+                <!--e: 알럿모음-->
+            </main>
+        </div>
+    </div>
+</body>
+</html>

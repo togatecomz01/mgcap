@@ -91,7 +91,7 @@ function menuToggle() {
             allSearch.classList.add('on');
             searchBtn.style.display = 'none';
             if (searchCloseBtn) {
-                searchCloseBtn.style.display = 'inline-block';
+                searchCloseBtn.classList.add('on');/* 20250929 수정 */
             }
         });
         
@@ -99,7 +99,7 @@ function menuToggle() {
             searchCloseBtn.addEventListener('click', function() {
                 allSearch.classList.remove('on');
                 searchBtn.style.display = 'inline-block';
-                this.style.display = 'none';
+                this.classList.remove('on');/* 20250929 수정 */
             });
         }
     }
