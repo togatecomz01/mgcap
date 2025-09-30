@@ -100,7 +100,7 @@
 .menu-cont .menu-inner > li { padding:72px 0; border-bottom:1.5px dashed var(--color-d); }
 .menu-cont .menu-inner > li > span { display:inline-block; margin-bottom:62px; font-size:var(--font32); font-weight:700; color:var(--active); }
 
-.menu-inner .gnb-2dep { display:flex; flex-wrap:wrap; justify-content:flex-start; gap: 58px 100px; }
+.menu-inner .gnb-2dep { display:flex; flex-wrap:wrap; justify-content:flex-start; gap: 58px 64px; }
 .menu-inner .gnb-2dep > li { width:200px; }
 .menu-inner .gnb-2dep > li > a { font-size:var(--font22); font-weight:700; color:var(--color-45); }
 .menu-inner .gnb-2dep > li > span { display:inline-block; margin-bottom:16px; font-size:var(--font22); font-weight:700; color:var(--color-45); }
@@ -109,7 +109,7 @@
 .menu-inner .gnb-4dep li a { font-size:var(--font18); font-weight:var(--font-w-r); color:var(--color-75); }
 .menu-inner .gnb-3dep li.on a,
 .menu-inner .gnb-3dep:not(:has(.gnb-4dep)) > li:hover a,
-.menu-inner .gnb-4dep > li:hover a { font-weight:var(--font-w-m); color:var(--primary); }
+.menu-inner .gnb-4dep > li:hover a { font-weight:var(--font-w-m); color:#0072BC; }
 .menu-inner .gnb-4dep { margin-top:11px; }
 
 .menu-l { display:none; padding:24px 12px 24px 24px; background-color:#FCFCFF; }
@@ -122,10 +122,12 @@
 /*---------------------------------------------
 	#푸터
 ---------------------------------------------*/
-.footer-wrap { background-color: #F6F6F8; padding:42px 0 80px; width:100%; }
+.footer-wrap {padding:42px 0 80px; width:100%; }
 .footer-container { margin:0 auto; max-width:1400px; width:100%; }
-.footer-top { padding-top:31px; border-top:1px solid var(--color-d); font-size: 14px; font-weight:700; }
+.footer-top { display:flex; justify-content:space-between; align-items:center;  padding-top:29px; border-top:1px solid var(--color-d); font-size: 14px; font-weight:700; }
 .footer-top > ul { display:flex; gap:20px; }
+
+.footer-top .family-site select {padding:0; border:0; font-size:var(--font14); font-weight:var(--font-w-m); color:#9D9D9D; }
 
 .footer-main { display:flex; justify-content:space-between; align-items:center; padding-top:38px; }
 .footer-main .ft-cts p { padding-bottom:8px; font-size:var(--font14); font-weight:var(--font-w-r); color:var(--color-6); }
@@ -134,6 +136,9 @@
 .footer-main .ft-logo a .img-wa { width:100%; }
 
 @media (max-width:1400px){
+	/*---------------------------------------------
+		#헤더
+	---------------------------------------------*/
 	/* 헤더 */
 	#headerWrap { padding:0 20px; }
 	.header-r .menu .menu-item.on .list-item { padding:0 24px; }
@@ -141,13 +146,16 @@
 	/* 전체메뉴 */
 	.allmenu-header { padding:27px 24px 32px; }
 	.menu-cont .menu-inner { padding:0 24px; }
-	.menu-inner .gnb-2dep { gap:50px 24px; }
+	.menu-inner .gnb-2dep { gap:50px 54px; }
 	.menu-cont .menu-inner > li { padding:60px 0; }
 
 	/* 검색창 */
 	.search-wrap { padding:0 24px; }
 }
 @media (max-width:1200px){
+	/*---------------------------------------------
+		#헤더
+	---------------------------------------------*/
 	/* 헤더 */
 	#headerWrap .header-l ul,
 	.header-r .lnb { display:none; }
@@ -156,7 +164,9 @@
 	/* 헤더 */
 	/* #headerWrap .header-l ul,
 	.header-r .lnb { display:none; } */
-
+	/*---------------------------------------------
+		#헤더
+	---------------------------------------------*/
 	/* 전체메뉴 */
 	.allmenu-header { padding:15px 24px 20px; }
 	.allmenu-header-inner .title-l p { font-size:var(--font20); }
@@ -180,6 +190,9 @@
 	.search-btn-wrap .btn-search { width:34px; height:34px; background-size:auto 34px; }
 }
 @media screen and (max-width:480px){
+	/*---------------------------------------------
+		#헤더
+	---------------------------------------------*/
 	/* 헤더 */
 	#headerWrap { height:54px; border-bottom:0; }
 	#headerWrap h1 { width:114px; height:30px; }
@@ -243,5 +256,12 @@
 	.search-wrap .result-tit { display:block; font-size:var(--font14); font-weight:var(--font-w-m); color:var(--color-75); }
 	.search-wrap .search-result { padding:26px 0 38px; border-bottom:1px solid #F0F0F0; border-radius:0; }
 
+	/*---------------------------------------------
+		#푸터
+	---------------------------------------------*/
+	.footer-top { flex-direction:column-reverse; align-items:flex-start; padding:0; border:0; }
+	.footer-top > ul { flex-wrap:wrap; }
+	.footer-top .family-site { width:100%; }
+	.footer-top .family-site select { padding:12px 24px; background-color:var(--bg-box); }
 }
 
