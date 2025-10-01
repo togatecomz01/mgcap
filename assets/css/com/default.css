@@ -32,6 +32,10 @@ a, a:hover, a:focus, a:active { text-decoration: none; cursor: pointer; }
 .tar{ text-align: right !important; }
 
 p { color:var(--color-45); } 
+
+.bor-l { border-left:1px solid var(--color-d); }
+.bor-r { border-right:1px solid var(--color-d); }
+
 /*---------------------------------------------
 	#ÀÎÇ² ¸®¼Â
 ---------------------------------------------*/

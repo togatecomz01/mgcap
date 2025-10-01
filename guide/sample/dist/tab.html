@@ -57,9 +57,12 @@
         <div class="visual-content product">
           <h2>
             <em>탭메뉴</em>
-            <span>탭메뉴는 동일한 페이지 또는 영역 안에서 유사한 콘텐츠를 그룹화하여 섹션 간 이동 시 사용한다.<br />
+            <span
+              >탭메뉴는 동일한 페이지 또는 영역 안에서 유사한 콘텐츠를
+              그룹화하여 섹션 간 이동 시 사용한다.<br />
               각 탭에는 동일한 중요도의 Peer로 구성되며 다른 탭과 구별되는
-              콘텐츠가 포함되어야 한다.</span>
+              콘텐츠가 포함되어야 한다.</span
+            >
           </h2>
         </div>
         <div id="container">
@@ -79,7 +82,7 @@
               </div>
 
               <ul class="tab-list depth1" data-view="pc">
-                <li class="tab-item active" data-tab="tab1">
+                <li class="tab-item active" data-tab="tab1" title="선택됨">
                   <button type="button">탭1-1</button>
                 </li>
                 <li class="tab-item" data-tab="tab2">
@@ -89,15 +92,13 @@
                   <button type="button">탭1-3</button>
                 </li>
               </ul>
-              
-              <div id="" class="se-select tab-select-mobile" data-view="mo"  data-stove="select" data-uicase="slide">
-                <div class="e-hidden-title">TITLE</div>
-                <select id="selectCustom" class="tab-select depth1" required="" title="">
-                    <option value="tab1" selected>탭1-1</option>
-                    <option value="tab2">탭1-2</option>
-                    <option value="tab3">탭1-3</option>
+              <div class="se-select tab-select-mobile" data-view="mo">
+                <select class="tab-select depth1">
+                  <option value="tab1" selected>탭1-1</option>
+                  <option value="tab2">탭1-2</option>
+                  <option value="tab3">탭1-3</option>
                 </select>
-            </div>
+              </div>
 
               <div class="tab-content">
                 <div id="tab1" class="tab-panel active">
@@ -116,7 +117,7 @@
           <section class="tab-container jsTab">
             <div style="padding: 0 0 20px">
               <h3>2Depth</h3>
-              <div style="padding: 10px 0 20px; font-size: 14px"> 
+              <div style="padding: 10px 0 20px; font-size: 14px">
                 <p>컨텐츠 전환처럼 명확한 상태 구분이 필요한 경우 사용한다.</p>
                 <p>
                   PC 환경에서는 탭 개수가 많아질 경우 자동으로 2줄 처리되며,

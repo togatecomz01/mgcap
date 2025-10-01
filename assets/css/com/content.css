@@ -1,6 +1,8 @@
 @charset "euc-kr";
 
 body{
+
+ --board:1px solid var(--color-d);   
  --process-step:url("../../images/com/svg/ico_step.svg");
  --process-dot:#3C85E5;
  --process-dot-border:6px solid #C4DAF7;
@@ -11,9 +13,14 @@ body{
  --process-step3-bg:#4277D4;
  --process-step4-bg:#3763C1;
  --process-step5-bg:#204BAB;
-
-
-
+ --ico-arrow:url("../../images/content/ico_arrow.svg");
+ --ico-cst-01:url("../../images/content/PRT/w/ico_CST-008_1.png"); /**문서 아이콘**/
+ --ico-cst-02:url("../../images/content/PRT/w/ico_CST-008_2.png"); /**프린터 아이콘**/
+ --ico-cst-03:url("../../images/content/PRT/w/ico_CST-008_3.png"); /**돋보기 아이콘**/
+ --ico-cst-04:url("../../images/content/PRT/w/ico_CST-008_4.png"); /**돈 아이콘**/
+ --ico-cst-05:url("../../images/content/PRT/w/ico_CST-008_5.png"); /**펜 아이콘**/
+ --ico-cst-06:url("../../images/content/PRT/w/ico_CST-008_6.png"); /**보안 금지 아이콘**/
+ --ico-cst-07:url("../../images/content/PRT/w/ico_CST-008_7.png"); /**은행 거절 아이콘**/
 
 }
 
@@ -24,7 +31,7 @@ body{
 .process-content li { display:flex; gap:30px; align-items:stretch; }
 .process-content li:first-of-type { padding-top:20px; }
 .process-content li * { position:relative; }
-.process-content li .step { display:flex; padding-bottom:20px; align-items:center; width:136px; }
+.process-content li .step { display:flex; padding-bottom:40px; align-items:center; width:136px; }
 .process-content li .step p { 
     content:""; margin-right:30px; display:inline-flex; justify-content:center; align-items:center; flex-direction:column; width:109px; height:109px; background:#5296F2;
     mask-image:var(--process-step); mask-repeat:no-repeat; mask-size:auto 40px; mask-position:center; -webkit-mask-image:var(--process-step); -webkit-mask-repeat:no-repeat; -webkit-mask-size:85px auto; -webkit-mask-position:center; 
@@ -36,20 +43,59 @@ body{
 .process-content li:first-of-type .step::after {  bottom:0; width:1px; height:50%; background:var(--process-line); }
 .process-content li:last-of-type .step::after { right:0; top:0; bottom:initial; width:1px; height:50%; background:var(--process-line); }
 
- .process-content li .step + div { margin-left:15px; margin-bottom:20px; padding:20px 40px; background:var(--process-bg); flex:1; border-radius:16px; }
+ .process-content li .step + div { margin-left:15px; margin-bottom:40px; padding:20px 40px; background:var(--process-bg); flex:1; border-radius:16px; }
  .process-content li .step + div dt, 
  .process-content li .step + div em {  margin-bottom:4px; font-size:var(--font20); color:var(--color-2); font-weight:var(--font-w-b); }
  .process-content li .step + div dd { color:var(--color-6); }
 
- .process-content li:nth-child(1) .step p { background:var(--process-step1-bg); }
- .process-content li:nth-child(2) .step p { background:var(--process-step2-bg); }
- .process-content li:nth-child(3) .step p { background:var(--process-step3-bg); }
- .process-content li:nth-child(4) .step p { background:var(--process-step4-bg); }
- .process-content li:nth-child(5) .step p { background:var(--process-step5-bg); }
+ .process-content .process01 li:nth-child(1) .step p { background:var(--process-step1-bg); }
+ .process-content .process01 li:nth-child(2) .step p { background:var(--process-step2-bg); }
+ .process-content .process01 li:nth-child(3) .step p { background:var(--process-step3-bg); }
+ .process-content .process02 li:nth-child(4) .step p { background:var(--process-step4-bg); }
+ .process-content .process02 li:nth-child(5) .step p { background:var(--process-step5-bg); }
+
+
+  /*---------------------------------------------
+    #고객센터
+---------------------------------------------*/
+.sub-process-content ul { display:inline-flex; align-items:flex-start; padding:40px; border:var(--board); border-radius:8px;   }
+.sub-process-content ul li { display:inline-flex; align-items:center; }
+.sub-process-content ul li::after { content:""; display:block; margin:0 11px; width:50px; height:15px; background-image:var(--ico-arrow); background-repeat:no-repeat; background-position:center; background-size:48px auto; }
+.sub-process-content ul li > p { text-align:center; }
+.sub-process-content ul li > p::before { content:""; display:block; margin:0 auto; margin-bottom:16px; width:100px; height:100px; border:var(--board); border-radius:100px; background-repeat:no-repeat; background-position:center; background-size:48px; }
+.sub-process-content ul li > p span, em { display:block; margin-bottom:4px; }
+.sub-process-content ul li > p em { color:var(--primary); font-weight:var(--font-w-m); }
+.sub-process-content ul li > p span { margin-bottom:0; max-width:200px; font-size:var(--font16); }
+.sub-process-content ul li:last-of-type:after { display:none; }
+
+
+ /******위법계약해지 요구권**/
+ .MGC-PRT-CST-008 .sub-process-content ul.process01 li:nth-of-type(1) > p::before { background-image:var(--ico-cst-01); }
+ .MGC-PRT-CST-008 .sub-process-content ul.process01 li:nth-of-type(2) > p::before { background-image:var(--ico-cst-02); }
+ .MGC-PRT-CST-008 .sub-process-content ul.process01 li:nth-of-type(3) > p::before { background-image:var(--ico-cst-03); }
+ .MGC-PRT-CST-008 .sub-process-content ul.process02 li:nth-of-type(1) > p::before { background-image:var(--ico-cst-04); }
+ .MGC-PRT-CST-008 .sub-process-content ul.process02 li:nth-of-type(2) > p::before { background-image:var(--ico-cst-05); }
+ .MGC-PRT-CST-008 .sub-process-content ul.process03 li:nth-of-type(1) > p::before { background-image:var(--ico-cst-06); }
+ .MGC-PRT-CST-008 .sub-process-content ul.process03 li:nth-of-type(2) > p::before { background-image:var(--ico-cst-07); }
+
+  /******자료열람 요구권**/
+  .MGC-PRT-CST-009 .sub-process-content ul.process01 li:nth-of-type(1) > p::before { background-image:var(--ico-cst-01); }
+  .MGC-PRT-CST-009 .sub-process-content ul.process01 li:nth-of-type(2) > p::before { background-image:var(--ico-cst-03); }
+  .MGC-PRT-CST-009 .sub-process-content ul.process01 li:nth-of-type(3) > p::before { background-image:var(--ico-cst-05); }
 
 
 
  @media (max-width:767px) {
+
+body{
+    --ico-cst-01:url("../../images/content/PRT/m/ico_CST-008_1.png"); /**문서 아이콘**/
+    --ico-cst-02:url("../../images/content/PRT/m/ico_CST-008_2.png"); /**프린터 아이콘**/
+    --ico-cst-03:url("../../images/content/PRT/m/ico_CST-008_3.png"); /**돋보기 아이콘**/
+    --ico-cst-04:url("../../images/content/PRT/m/ico_CST-008_4.png"); /**돈 아이콘**/
+    --ico-cst-05:url("../../images/content/PRT/m/ico_CST-008_5.png"); /**펜 아이콘**/
+    --ico-cst-06:url("../../images/content/PRT/m/ico_CST-008_6.png"); /**보안 금지 아이콘**/
+    --ico-cst-07:url("../../images/content/PRT/m/ico_CST-008_7.png"); /**은행 거절 아이콘**/
+}
 
 /*---------------------------------------------
     #프로세스
@@ -59,9 +105,22 @@ body{
 .process-content li .step p { margin:0; width:54.55px; height:54.55px; -webkit-mask-size:100% 100%; }
 .process-content li .step::after,
 .process-content li .step::before { display:none; }
-.process-content li .step + div { padding:0; margin:0; background:transparent; }
-.process-content li .step p span {font-size:16px; margin-top:0; }
+.process-content li .step p span { margin-top:0; }
 .process-content li .step p span:first-of-type { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0, 0, 0, 0); white-space:nowrap; border:0; }
+.process-content li .step + div { padding:0; margin:0; background:transparent; font-size:var(--font18); }
+
+  /*---------------------------------------------
+    #고객센터
+---------------------------------------------*/
+.sub-process-content ul { display:block; padding:32px 24px; }
+.sub-process-content ul li { display:block; min-height:74px; margin-bottom:32px; }
+.sub-process-content ul li:last-of-type { margin-bottom:0; }
+.sub-process-content ul li::after { display:none; }
+.sub-process-content ul li p { display:flex; flex-direction:column; justify-content:center; min-height:74px; position:relative; padding-left:96px; text-align:left; }
+.sub-process-content ul li p::before { position:absolute; left:0; margin-bottom:0; width:74px; height:74px; background-size:35px auto; }
+.sub-process-content ul li > p span { font-size:14px; max-width:100%; }
+.sub-process-content ul li span.sr-only.mo { color:var(--color-6); font-size:var(--font14);  }
 
 
  }
+
