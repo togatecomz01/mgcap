@@ -58,9 +58,6 @@ button:focus-visible { outline:2px solid var(--tab-active); outline-offset:4px; 
 .btn-pop-primary:hover { background:var(--primary); }
 .btn-pop-secondary{ border:var(--btn-pop-s-border); background:var(--btn-pop-s-background); }
 
-.btn-content:hover { background:var(--btn-content-active);}
-.btn-content:disabled { background:var(--btn-content-diasbled); color:var(--btn-content-d-font-color); }
-
 .btn-terms-modal { padding: 2px 10px 4px; border: 1px solid var(--btn-modal-border); color:var(--btn-modal-font-color); font-size:var(--btn-download-font-size); }
 .btn-terms-modal:hover { border-color: #222222; color: #222222; }
 
@@ -71,14 +68,14 @@ button:focus-visible { outline:2px solid var(--tab-active); outline-offset:4px; 
   }
 
 /**CTA 01**/
-.bottom-container .button-group { display:flex; gap:24px; justify-content:center; width:100%; text-align:center; }
-.bottom-container a,
-.bottom-container button {  flex:0 0 auto; display:inline-block; padding:0 60px; min-width:161px; width:auto; height:63px; line-height:63px; font-size:var(--btm-btn-font-size); font-weight:var(--btm-btn-font-weight); text-align:center; border-radius:100px;}
-.bottom-container .btn-primary { background-color: var(--btm-btn-primary); color:var(--white); }
-.bottom-container .btn-primary:hover { background-color: var(--active); }
-.bottom-container .btn-secondary { background-color: var(--btm-btn-secondary); }
-.bottom-container button:disabled,
-.bottom-container a[aria-disabled="true"] { text-decoration:none; cursor: not-allowed; background-color:var(--color-d); color:var(--color-75); pointer-events:none;}
+.btn-content.cta .button-group { display:flex; gap:24px; justify-content:center; width:100%; text-align:center; }
+.btn-content.cta a,
+.btn-content.cta button {  flex:0 0 auto; display:inline-block; padding:0 60px; min-width:161px; width:auto; height:63px; line-height:63px; font-size:var(--btm-btn-font-size); font-weight:var(--btm-btn-font-weight); text-align:center; border-radius:100px;}
+.btn-content.cta .btn-primary { background-color: var(--btm-btn-primary); color:var(--white); }
+.btn-content.cta .btn-primary:hover { background-color: var(--active); }
+.btn-content.cta .btn-secondary { background-color: var(--btm-btn-secondary); }
+.btn-content.cta button:disabled,
+.btn-content.cta a[aria-disabled="true"] { text-decoration:none; cursor: not-allowed; background-color:var(--color-d); color:var(--color-75); pointer-events:none;}
 
 @media (max-width:767px) {
     body{
@@ -95,8 +92,8 @@ button:focus-visible { outline:2px solid var(--tab-active); outline-offset:4px; 
    .btn-download::after {  position:absolute; left:20px; background-color:var(--white); }
 
    /**CTA 01**/
-   .bottom-container a,
-   .bottom-container button { flex:1; height:57px; line-height:57px; font-size:var(--font20); }
+   .btn-content.cta a,
+   .btn-content.cta button { flex:1; height:57px; line-height:57px; font-size:var(--font20); }
 
  
    

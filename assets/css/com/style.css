@@ -34,8 +34,9 @@ body {
 
     --active: #2392FF;
 
-    --red: #FF0000;
+    --red: #E52A00;
     --white: #FFFFFF;
+
 
 
     /** 기본 색상 **/
@@ -66,7 +67,6 @@ body {
 
 
     --outline: #0871F3;
-    --error: var(--red);
 
 
 }

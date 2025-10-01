@@ -26,7 +26,7 @@
         document.head.appendChild(script);
     }
     
-    // 모든 UI 컴포넌트 스크립트 로드
+    // 모든 UI 컴포넌트 스크립트 로드 
     function loadUIComponents() {
         var components = [
             'accordion.js',
@@ -36,7 +36,7 @@
             'layout.js',
             'popup.js',
             'tab.js',
-            'nav.js'
+            'nav.js',
         ];
         
         var basePath = '../../assets/js/ui/com/';

@@ -31,6 +31,7 @@ body {
 @media (max-width: 767px) {
 
   .tab-container .tab-list.depth1 .tab-item {  padding:8px 12px; line-height:32px; height:48px; }
+  .tab-container .tab-list.depth2 { margin-bottom:32px; }
   .tab-container .tab-list.depth2 .tab-item {  padding:0 20px; line-height:45px; height:45px; }
 
 

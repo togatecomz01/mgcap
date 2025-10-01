@@ -32,9 +32,8 @@ body{
 
 
 /* 포커스 링 */
-ul.radio-box input[type="radio"]:focus-visible,
-ul.check-box input[type="checkbox"] :focus-visible,
-div.toggle-box input[type="checkbox"]:focus-visible { outline: 1px solid var( --form-active); }
+input:focus-visible,
+select:focus-visible { outline:2px solid var(--form-active); outline-offset:4px; z-index:2;  }
 
 
 label { display:block; margin-bottom:16px; font-size:var(--form-label-font-size); color:var(--form-label); font-weight:var(--font-label-weight); }
@@ -90,8 +89,14 @@ label input[type="radio"]:disabled { border:7px solid var(--form-check-dissbled)
 
 
 @media (max-width:767px) {
+    body{
+        --form-label-font-size:var(--font16);
+        --form-padding:0 16px;
+
+    }
+
     main.contentWrap > div { margin:0 auto 60px; padding:0 24px; }
-    main.contentWrap > div { padding:0 24px;}
+    main.contentWrap > div { padding:0 12px;}
     #container > .tab-container,
     #container > .form-container { padding:54px 0 72px; }
 
