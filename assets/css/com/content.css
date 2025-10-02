@@ -83,7 +83,13 @@ body{
   .MGC-PRT-CST-009 .sub-process-content ul.process01 li:nth-of-type(2) > p::before { background-image:var(--ico-cst-03); }
   .MGC-PRT-CST-009 .sub-process-content ul.process01 li:nth-of-type(3) > p::before { background-image:var(--ico-cst-05); }
 
-
+  /******고객센터-채무조정안내**/
+  .MGC-CST-TRMNPL-008 .sub-process-content.border-none ul { border: 0; }
+  .MGC-CST-TRMNPL-008 .sub-process-content ul { flex-wrap: wrap; gap: 16px; }
+  .MGC-CST-TRMNPL-008 .sub-process-content ul dl { width: 180px; height: 188px; text-align: center; border: 1px solid var(--color-1); }
+  .MGC-CST-TRMNPL-008 .sub-process-content ul dl dt { padding: 10px 0; width: 100%; border-bottom: 1px solid var(--color-1); background-color: var(--color-c); }
+  .MGC-CST-TRMNPL-008 .sub-process-content ul dl dd { margin-top: 0; }
+  .MGC-CST-TRMNPL-008 .sub-process-content ul dl dd span { display: block; }
 
  @media (max-width:767px) {
 
