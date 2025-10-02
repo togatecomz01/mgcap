@@ -109,9 +109,11 @@ function menuToggle() {
 /*---------------------------------------------
     헤더 드롭다운 메뉴 기능
 ---------------------------------------------*/
+f/*---------------------------------------------
+    헤더 드롭다운 메뉴 기능
+---------------------------------------------*/
 function headerMenu() {
     const menuItems = document.querySelectorAll('.lnb .menu-item');
-    const menuButtons = document.querySelectorAll('.lnb .menu-item > .menu-tit');
     
     // 모든 메뉴 닫기 함수
     function closeAllMenus() {
@@ -125,36 +127,68 @@ function headerMenu() {
     }
     
     // 1depth
-    for (let i = 0; i < menuButtons.length; i++) {
-        menuButtons[i].addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const parentItem = this.parentElement;
-            const hasSubmenu = parentItem.querySelector('.list-item');
-            
-            // 서브메뉴가 없으면 페이지 이동
-            if (!hasSubmenu) {
-                const href = this.getAttribute('href');
-                if (href) {
-                    window.location.href = href;
+    for (let i = 0; i < menuItems.length; i++) {
+        const menuItem = menuItems[i];
+        const menuButton = menuItem.querySelector('.menu-tit');
+        const listItem = menuItem.querySelector('.list-item');
+        const hasSubmenu = listItem !== null;
+        
+        let closeTimer = null;
+        
+        // 메뉴 열기
+        function openMenu() {
+            if (closeTimer) {
+                clearTimeout(closeTimer);
+                closeTimer = null;
+            }
+            if (hasSubmenu) {
+                closeAllMenus();
+                menuItem.classList.add('on');
+                if (menuButton) {
+                    menuButton.classList.add('on');
                 }
-                return;
             }
+        }
+        
+        // 메뉴 닫기 예약
+        function scheduleClose() {
+            closeTimer = setTimeout(function() {
+                menuItem.classList.remove('on');
+                if (menuButton) {
+                    menuButton.classList.remove('on');
+                }
+            }, 100);
+        }
+        
+        // menu-tit에 마우스 진입
+        if (menuButton) {
+            menuButton.addEventListener('mouseenter', openMenu);
+            menuButton.addEventListener('mouseleave', scheduleClose);
             
-            const isOpen = parentItem.classList.contains('on');
-            closeAllMenus();
-            
-            if (!isOpen) {
-                parentItem.classList.add('on');
-                this.classList.add('on');
-            }
-        });
+            // 클릭 이벤트
+            menuButton.addEventListener('click', function(e) {
+                if (!hasSubmenu) {
+                    const href = this.getAttribute('href');
+                    if (href) {
+                        window.location.href = href;
+                    }
+                } else {
+                    e.preventDefault();
+                }
+            });
+        }
+        
+        // list-item에 마우스 진입/이탈
+        if (listItem) {
+            listItem.addEventListener('mouseenter', openMenu);
+            listItem.addEventListener('mouseleave', scheduleClose);
+        }
     }
     
-    // 2depth
+    // 2depth - 마우스오버 이벤트
     const submenu2Items = document.querySelectorAll('.lnb .submenu2 > li');
     for (let i = 0; i < submenu2Items.length; i++) {
-        submenu2Items[i].addEventListener('click', function(e) {
+        submenu2Items[i].addEventListener('mouseenter', function(e) {
             e.stopPropagation();
             
             // 같은 레벨 메뉴들 초기화
@@ -169,50 +203,6 @@ function headerMenu() {
             }
             
             this.classList.add('on');
-            
-            // 3depth가 있으면 첫번째 활성화
-            // const submenu3 = this.querySelector('.submenu3');
-            // if (submenu3) {
-            //     const firstItem = submenu3.querySelector('li');
-            //     if (firstItem) {
-            //         firstItem.classList.add('on');
-            //     }
-            // }
         });
     }
-    
-    // 3depth
-    // const submenu3Items = document.querySelectorAll('.lnb .submenu3 > li');
-    // for (let i = 0; i < submenu3Items.length; i++) {
-    //     submenu3Items[i].addEventListener('click', function(e) {
-    //         e.stopPropagation();
-            
-    //         // 같은 레벨 메뉴들 초기화
-    //         const allSubmenu3 = document.querySelectorAll('.lnb .submenu3 > li');
-    //         for (let j = 0; j < allSubmenu3.length; j++) {
-    //             allSubmenu3[j].classList.remove('on');
-    //         }
-            
-    //         this.classList.add('on');
-    //     });
-    // }
-    
-    // 외부 클릭시 메뉴 닫기
-    document.addEventListener('click', function(e) {
-        let clickedElement = e.target;
-        let isInsideMenu = false;
-        
-        // 클릭한 요소가 메뉴 안에 있는지 확인
-        while (clickedElement) {
-            if (clickedElement.classList && clickedElement.classList.contains('lnb')) {
-                isInsideMenu = true;
-                break;
-            }
-            clickedElement = clickedElement.parentElement;
-        }
-        
-        if (!isInsideMenu) {
-            closeAllMenus();
-        }
-    });
 }
