@@ -84,7 +84,7 @@ body{
   .MGC-PRT-CST-009 .sub-process-content ul.process01 li:nth-of-type(3) > p::before { background-image:var(--ico-cst-05); }
 
   /******고객센터-채무조정안내**/
-  .MGC-CST-TRMNPL-008 .sub-process-content.border-none ul { border: 0; }
+  .MGC-CST-TRMNPL-008 .sub-process-content.border-none ul { border: 0; padding: 0; }
   .MGC-CST-TRMNPL-008 .sub-process-content ul { flex-wrap: wrap; gap: 16px; }
   .MGC-CST-TRMNPL-008 .sub-process-content ul dl { width: 180px; height: 188px; text-align: center; border: 1px solid var(--color-1); }
   .MGC-CST-TRMNPL-008 .sub-process-content ul dl dt { padding: 10px 0; width: 100%; border-bottom: 1px solid var(--color-1); background-color: var(--color-c); }
@@ -127,6 +127,10 @@ body{
 .sub-process-content ul li > p span { font-size:14px; max-width:100%; }
 .sub-process-content ul li span.sr-only.mo { color:var(--color-6); font-size:var(--font14);  }
 
+/******고객센터-채무조정안내**/
+.MGC-CST-TRMNPL-008 .sub-process-content ul { display: inline-flex; }
+.MGC-CST-TRMNPL-008 .sub-process-content ul li { display: inline-flex; }
+.MGC-CST-TRMNPL-008 .sub-process-content ul li::after { content: ""; display: block; margin: 0 11px; width: 50px; height: 15px; background-image: var(--ico-arrow); background-repeat: no-repeat; background-position: center; background-size: 48px auto; }
 
  }
 
