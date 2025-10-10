@@ -68,6 +68,9 @@ body{
 .sub-process-content ul li > p span { margin-bottom:0; max-width:200px; font-size:var(--font16); }
 .sub-process-content ul li:last-of-type:after { display:none; }
 
+/****** 고객센터-업무위탁 및 제 3자 제공현황 **/
+.MGC-CST-TRMNPL-001 .table-group .mo tbody tr th.th-t {background-color: transparent; font-size: var(--font16); font-weight: var(--font-w-r);}
+.MGC-CST-TRMNPL-001 .table-group .mo tbody tr td {text-align: left;}
 
  /******위법계약해지 요구권**/
  .MGC-PRT-CST-008 .sub-process-content ul.process01 li:nth-of-type(1) > p::before { background-image:var(--ico-cst-01); }
@@ -86,8 +89,20 @@ body{
 /******모잡인조회**/
 .MGC-PRT-CST-012 .button-content .btn-group.link1 .btn-link::before { background-image:var(--ico-cst-05); }
 
+  /******고객센터-채무조정안내**/
+  .MGC-CST-TRMNPL-008 .sub-process-content.border-none ul { padding: 0; border: 0; }
+  .MGC-CST-TRMNPL-008 .sub-process-content ul { flex-wrap: wrap; gap: 16px; }
+  .MGC-CST-TRMNPL-008 .sub-process-content ul dl { width: 180px; height: 188px; border: 1px solid var(--color-1); text-align: center; }
+  .MGC-CST-TRMNPL-008 .sub-process-content ul dl dt { padding: 10px 0; width: 100%; border-bottom: 1px solid var(--color-1); background-color: var(--color-c); }
+  .MGC-CST-TRMNPL-008 .sub-process-content ul dl dd { margin-top: 0; }
+  .MGC-CST-TRMNPL-008 .sub-process-content ul dl dd span { display: block; }
 
-
+  /******고객센터-개인정보처리방침**/
+  .MGC-CST-TRMNPL-010 .button-content .lnk-group { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+  .MGC-CST-TRMNPL-010 .button-content .lnk-group a { padding: 12px 20px; border: var(--board); }
+  .MGC-CST-TRMNPL-010 em { display: inline-flex; font-weight: 700; }
+  .MGC-CST-TRMNPL-010 .link-list li .btn-text { display: inline-flex }
+  
  @media (max-width:767px) {
 
 body{
@@ -124,6 +139,21 @@ body{
 .sub-process-content ul li > p span { font-size:14px; max-width:100%; }
 .sub-process-content ul li span.sr-only.mo { color:var(--color-6); font-size:var(--font14);  }
 
+/****** 고객센터-업무위탁 및 제 3자 제공현황 **/
+.MGC-CST-TRMNPL-001 .table-group table colgroup {display: none;}
+.MGC-CST-TRMNPL-001 .table-group .mo thead {display: none;}
+.MGC-CST-TRMNPL-001 .table-group .mo tbody tr {display: grid; grid-template-columns: 1fr;}
+.MGC-CST-TRMNPL-001 .table-group .mo tbody tr th.th-t {border-right: none; background-color: var(--table-th); font-weight: var(--font-w-b);}
+.MGC-CST-TRMNPL-001 .table-group .mo tbody tr td {text-align: center;}
 
+/******고객센터-채무조정안내**/
+.MGC-CST-TRMNPL-008 .sub-process-content ul { display: inline-flex; }
+.MGC-CST-TRMNPL-008 .sub-process-content ul li { display: inline-flex; }
+.MGC-CST-TRMNPL-008 .sub-process-content ul li::after { content: ""; display: block; margin: 0 11px; width: 50px; height: 15px; background-image: var(--ico-arrow); background-repeat: no-repeat; background-position: center; background-size: 48px auto; }
+
+/******고객센터-개인정보처리방침**/
+.MGC-CST-TRMNPL-010 .button-content .lnk-group { gap: 10px; }
+.MGC-CST-TRMNPL-010 .button-content .lnk-group a { width: 100%; text-align: center; }
+.MGC-CST-TRMNPL-010 .link-list li span { display: block }
  }
 

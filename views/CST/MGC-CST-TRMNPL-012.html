@@ -21,13 +21,13 @@
         <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
         <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
         <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+        <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
+        <script src="../../assets/js/include.js"></script>
     </head>
 
     <body>
         <div class="wrap">
-            <header id="headerWrap" class="headerOn">
-                <nav class="lnb"></nav>
-            </header>
+            <div data-include-path="../COM/nav.html"></div>
             <div class="bodyWrap">
                 <main class="contentWrap">
                     <nav class="location-container">
@@ -42,14 +42,10 @@
                         <h2>영상정보처리기기 운영·관리 방침</h2>
                     </section>
                     <section class="page-container">
-                        <select id="category" name="category">
-                            <option value="2025-08-25">2025-08-25</option>
-                        </select>
                         <div class="text-content">
                             <div class="group">
                                 <h3>영상정보처리기기 운영·관리 방침</h3>
                                 <p>본 엠지캐피탈㈜(이하 '회사'라 함)는 영상정보처리기기 운영·관리 방침을 통해 회사에서 처리하는 영상정보가 어떠한 용도와 방식으로 이용·관리되고 있는지 알려드립니다.</p>
-                                <!-- 1 -->
                                 <div class="text-group">
                                     <h4 class="tit">1. 영상정보처리기기의 설치 근거 및 설치 목적</h4>
                                     <p>회사는 개인정보보호법 제 25조 제 1항에 따라 다음과 같은 목적으로 영상정보처리기기를 설치·운영 합니다.</p>
@@ -58,11 +54,10 @@
                                         <li>고객의 안전을 위함 범죄 예방</li>
                                     </ul>
                                 </div>
-                                <!-- 2 -->
                                 <div class="text-group">
                                     <h4 class="tit">2. 설치 대수, 설치 위치 및 촬영 범위</h4>
                                     <div class="table-content">
-                                        <table class="">
+                                        <table class="col-row">
                                             <caption>
                                                 설치 대수, 설치 위치 및 촬영 범위로 구성된 표
                                             </caption>
@@ -78,19 +73,18 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td data-label="설치 대수">16대</td>
-                                                    <td data-label="설치 위치 및 촬영 범위">주출입문 6개층 11개소, 문서고 4개소</td>
+                                                    <td>16대</td>
+                                                    <td>주출입문 6개층 11개소, 문서고 4개소</td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </div>
                                 </div>
-                                <!-- 3 -->
                                 <div class="text-group">
                                     <h4 class="tit">3. 관리책임자 및 접근권한자</h4>
                                     <p>정보주체의 영상정보를 보호하고 개인정보와 관련한 불만을 처리하기 위하여 아래와 같이 개인정보보호책임자를 두고 있습니다.</p>
                                     <div class="table-content">
-                                        <table class="">
+                                        <table class="col-row">
                                             <caption>
                                                 구분, 담당자로 구성된 관리책임자 및 접근권한자 표
                                             </caption>
@@ -100,8 +94,8 @@
                                             </colgroup>
                                             <thead>
                                                 <tr>
-                                                    <th id="th-type" scope="col">구분</th>
-                                                    <th id="th-manager" scope="col">담당자</th>
+                                                    <th scope="col">구분</th>
+                                                    <th scope="col">담당자</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -117,11 +111,10 @@
                                         </table>
                                     </div>
                                 </div>
-                                <!-- 4 -->
                                 <div class="text-group">
                                     <h4 class="tit">4. 영상정보의 촬영시간, 보관기간, 보관장소 및 처리방법</h4>
                                     <div class="table-content">
-                                        <table class="">
+                                        <table class="col-row mo-row">
                                             <caption>
                                                 촬영시간, 보관기간, 항목으로 구성된 영상정보의 촬영시간, 보관기간, 보관장소 및 처리방법 표
                                             </caption>
@@ -132,36 +125,29 @@
                                             </colgroup>
                                             <thead>
                                                 <tr>
-                                                    <th id="th-time" scope="col">촬영시간</th>
-                                                    <th id="th-period" scope="col">보관기간</th>
-                                                    <th id="th-item" scope="col">항목</th>
+                                                    <th scope="col">촬영시간</th>
+                                                    <th scope="col">보관기간</th>
+                                                    <th scope="col">항목</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td data-label="촬영시간">24시간</td>
-                                                    <td data-label="보관기간">촬영일로부터 30일</td>
-                                                    <td data-label="항목">CCTV통제실</td>
+                                                    <td data-label="촬영시간"><span>24시간</span></td>
+                                                    <td data-label="보관기간"><span>촬영일로부터 30일</span></td>
+                                                    <td data-label="항목"><span>CCTV통제실</span></td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </div>
                                     <ul class="m-dot">
-                                        <li>
-                                            처리방법: 개인정보영상정보 목적 외 이용, 제3자 제공, 파기, 열람 등 요구에 관한 사항을 기록·관리하고, 보관기간 만료 시 복원이 불가능한 방법으로 영구
-                                            삭제(출력물의 경우 파쇄 또는 소각)합니다.
-                                        </li>
+                                        <li>처리방법: 개인정보영상정보 목적 외 이용, 제3자 제공, 파기, 열람 등 요구에 관한 사항을 기록·관리하고, 보관기간 만료 시 복원이 불가능한 방법으로 영구 삭제(출력물의 경우 파쇄 또는 소각)합니다.</li>
                                     </ul>
                                 </div>
-                                <!-- 5 -->
                                 <div class="text-group">
                                     <h4 class="tit">5. 영상정보처리기기 설치 및 관리 등의 위탁에 관한 사항</h4>
-                                    <p>
-                                        회사는 아래와 같이 영상정보처리기기 설치 및 관리 등을 위탁하고 있으며, 관계 법령에 따라 위탁계약 시 개인정보가 안전하게 관리될 수 있도록 필요한 사항을 규정하고
-                                        있습니다.
-                                    </p>
+                                    <p>회사는 아래와 같이 영상정보처리기기 설치 및 관리 등을 위탁하고 있으며, 관계 법령에 따라 위탁계약 시 개인정보가 안전하게 관리될 수 있도록 필요한 사항을 규정하고 있습니다.</p>
                                     <div class="table-content">
-                                        <table class="">
+                                        <table class="col-row mo-row">
                                             <caption>
                                                 수탁업체, 담당자, 연락처로 구성된 영상정보처리기기 설치 및 관리 등의 위탁에 관한 사항 표
                                             </caption>
@@ -172,22 +158,21 @@
                                             </colgroup>
                                             <thead>
                                                 <tr>
-                                                    <th id="th-company" scope="col">수탁업체</th>
-                                                    <th id="th-manager" scope="col">담당자</th>
-                                                    <th id="th-contact" scope="col">연락처</th>
+                                                    <th scope="col">수탁업체</th>
+                                                    <th scope="col">담당자</th>
+                                                    <th scope="col">연락처</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>에스원</td>
-                                                    <td>에스원 담당자</td>
-                                                    <td>1588-3112</td>
+                                                    <td data-label="수탁업체"><span>에스원</span></td>
+                                                    <td data-label="담당자"><span>에스원 담당자</span></td>
+                                                    <td data-label="연락처"><span>1588-3112</span></td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </div>
                                 </div>
-                                <!-- 6 -->
                                 <div class="text-group">
                                     <h4 class="tit">6. 개인정보영상정보 확인 방법 및 장소에 관한 사항</h4>
                                     <ul class="m-dot">
@@ -195,23 +180,16 @@
                                         <li>확인 장소: MG캐피탈 경영지원본부 인사총무부</li>
                                     </ul>
                                 </div>
-                                <!-- 7 -->
                                 <div class="text-group">
                                     <h4 class="tit">7. 정보주체의 영상정보 열람 등 요구에 대한 조치</h4>
-                                    <ol>
+                                    <ol class="text-list">
                                         <li>
                                             <span>①</span>
-                                            <span>
-                                                정보주체는 개인정보영상정보에 관하여 열람 또는 존재확인·삭제를 원하는 경우 언제든지 영상정보처리기기 운영자에게 요구하실 수 있습니다. 단, 정보주체가
-                                                촬영된 개인정보영상 및 명백히 정보주체의 급박한 생명, 신체, 재산의 이익을 위하여 필요한 개인정보영상정보에 한정됩니다.
-                                            </span>
+                                            <span> 정보주체는 개인정보영상정보에 관하여 열람 또는 존재확인·삭제를 원하는 경우 언제든지 영상정보처리기기 운영자에게 요구하실 수 있습니다. 단, 정보주체가 촬영된 개인정보영상 및 명백히 정보주체의 급박한 생명, 신체, 재산의 이익을 위하여 필요한 개인정보영상정보에 한정됩니다. </span>
                                         </li>
                                         <li>
                                             <span>②</span>
-                                            <span>
-                                                열람 등을 요구하는 정보주체는 요구하는 영상에 대한 정보 및 청구자 본인이거나 정당한 대리인임을 확인하기 위한 자료로부터 신분증명서(주민등록증,
-                                                운전면허증 등)를 제출해야 확인합니다.
-                                            </span>
+                                            <span> 열람 등을 요구하는 정보주체는 요구하는 영상에 대한 정보 및 청구자 본인이거나 정당한 대리인임을 확인하기 위한 자료로부터 신분증명서(주민등록증, 운전면허증 등)를 제출해야 확인합니다. </span>
                                         </li>
                                         <li>
                                             <span>③</span>
@@ -219,39 +197,24 @@
                                         </li>
                                         <li>
                                             <span>④</span>
-                                            <span>
-                                                회사는 1기재 영상정보의 보관기간 경과하여 파기한 경우, 기타 정당한 사유가 존재할 경우 정보주체의 열람 등 요구를 거부할 수 있습니다. 이 경우 회사는 10일
-                                                이내에 서면 등으로 거부사유를 정보주체에게 통지합니다.
-                                            </span>
+                                            <span> 회사는 1기재 영상정보의 보관기간 경과하여 파기한 경우, 기타 정당한 사유가 존재할 경우 정보주체의 열람 등 요구를 거부할 수 있습니다. 이 경우 회사는 10일 이내에 서면 등으로 거부사유를 정보주체에게 통지합니다. </span>
                                         </li>
                                     </ol>
                                 </div>
-                                <!-- 8 -->
                                 <div class="text-group">
                                     <h4 class="tit">8. 영상정보의 안전성 확보조치</h4>
-                                    <p>
-                                        회사는 처리하는 영상정보는 암호화 조치 등을 통하여 안전하게 관리되고 있습니다. 또한 영상정보 보호를 위한 관리적 대책으로써 개인정보에 대한 접근 권한을 제한하고
-                                        있고, 개인정보영상정보의 위·변조 방지를 위하여 생성 일시, 열람 목적, 열람자, 열람 일시 등을 기록하여 관리하고 있습니다. 이 외에도 개인정보영상정보의 안전한
-                                        물리적 보호를 위하여 잠금장치를 설치하고 있습니다.
-                                    </p>
+                                    <p>회사는 처리하는 영상정보는 암호화 조치 등을 통하여 안전하게 관리되고 있습니다. 또한 영상정보 보호를 위한 관리적 대책으로써 개인정보에 대한 접근 권한을 제한하고 있고, 개인정보영상정보의 위·변조 방지를 위하여 생성 일시, 열람 목적, 열람자, 열람 일시 등을 기록하여 관리하고 있습니다. 이 외에도 개인정보영상정보의 안전한 물리적 보호를 위하여 잠금장치를 설치하고 있습니다.</p>
                                 </div>
-                                <!-- 9 -->
                                 <div class="text-group">
                                     <h4 class="tit">9. 법에 영상정보처리기기 설치·운영 및 관리에 관한 사항</h4>
-                                    <ol>
+                                    <ol class="text-list">
                                         <li>
                                             <span>①</span>
-                                            <span>
-                                                회사는 정보통신망법 등의 법령에서 영상정보를 수집 목적 이외의 목적으로 이용하거나 제3자에게 제공하지 않습니다. 단, 개인정보보호법 등 관련 법령에 따라
-                                                개인정보를 수집 및 목적 이외의 제공이 가능한 경우에는 제공될 수 있습니다.
-                                            </span>
+                                            <span> 회사는 정보통신망법 등의 법령에서 영상정보를 수집 목적 이외의 목적으로 이용하거나 제3자에게 제공하지 않습니다. 단, 개인정보보호법 등 관련 법령에 따라 개인정보를 수집 및 목적 이외의 제공이 가능한 경우에는 제공될 수 있습니다. </span>
                                         </li>
                                         <li>
                                             <span>②</span>
-                                            <span>
-                                                회사는 영상정보처리기기 설치 운영의 효율을 쉽게 확인할 수 있도록 영상기기를 설치한 장소, 건물 외부 등 잘 보이는 곳에 설치 장소 전제에 영상정보처리기기
-                                                설치목적을 표시하는 안내문을 설치하였습니다.
-                                            </span>
+                                            <span> 회사는 영상정보처리기기 설치 운영의 효율을 쉽게 확인할 수 있도록 영상기기를 설치한 장소, 건물 외부 등 잘 보이는 곳에 설치 장소 전제에 영상정보처리기기 설치목적을 표시하는 안내문을 설치하였습니다. </span>
                                         </li>
                                     </ol>
                                 </div>

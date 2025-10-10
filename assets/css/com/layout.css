@@ -68,6 +68,8 @@ main.contentWrap > .page-container { padding-top:56px; }
 .page-container > [class*="-content"] > [class*="-group"],
 .page-container > div + div.bo-t0  { margin-bottom:72px; }
 .page-container > [class*="-content"] > .group > [class*="-group"] { margin-bottom:52px; }
+.page-container > [class*="-content"] > .group > [class*="-group"],
+.page-container > [class*="-content"] >[class*="-group"]:last-of-type { margin-top:52px; }
 .page-container > [class*="-content"] > .group > [class*="-group"]:last-of-type { margin-bottom:0; }
 .page-container > div + div { padding-top:56px; border-top:1px solid var(--color-d); }
 
