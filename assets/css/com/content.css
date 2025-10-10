@@ -91,7 +91,7 @@ body{
   .MGC-CST-TRMNPL-008 .sub-process-content ul dl dd { margin-top: 0; }
   .MGC-CST-TRMNPL-008 .sub-process-content ul dl dd span { display: block; }
 
-  /******고객센터-채무조정안내**/
+  /******고객센터-개인정보처리방침**/
   .MGC-CST-TRMNPL-010 .button-content .button-group { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
   .MGC-CST-TRMNPL-010 .button-content .button-group a { border: var(--board); padding: 12px 20px; }
   .MGC-CST-TRMNPL-010 em { font-weight: 700; display: inline-flex }
