@@ -84,17 +84,17 @@ body{
   .MGC-PRT-CST-009 .sub-process-content ul.process01 li:nth-of-type(3) > p::before { background-image:var(--ico-cst-05); }
 
   /******고객센터-채무조정안내**/
-  .MGC-CST-TRMNPL-008 .sub-process-content.border-none ul { border: 0; padding: 0; }
+  .MGC-CST-TRMNPL-008 .sub-process-content.border-none ul { padding: 0; border: 0; }
   .MGC-CST-TRMNPL-008 .sub-process-content ul { flex-wrap: wrap; gap: 16px; }
-  .MGC-CST-TRMNPL-008 .sub-process-content ul dl { width: 180px; height: 188px; text-align: center; border: 1px solid var(--color-1); }
+  .MGC-CST-TRMNPL-008 .sub-process-content ul dl { width: 180px; height: 188px; border: 1px solid var(--color-1); text-align: center; }
   .MGC-CST-TRMNPL-008 .sub-process-content ul dl dt { padding: 10px 0; width: 100%; border-bottom: 1px solid var(--color-1); background-color: var(--color-c); }
   .MGC-CST-TRMNPL-008 .sub-process-content ul dl dd { margin-top: 0; }
   .MGC-CST-TRMNPL-008 .sub-process-content ul dl dd span { display: block; }
 
   /******고객센터-개인정보처리방침**/
-  .MGC-CST-TRMNPL-010 .button-content .button-group { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
-  .MGC-CST-TRMNPL-010 .button-content .button-group a { border: var(--board); padding: 12px 20px; }
-  .MGC-CST-TRMNPL-010 em { font-weight: 700; display: inline-flex }
+  .MGC-CST-TRMNPL-010 .button-content .lnk-group { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+  .MGC-CST-TRMNPL-010 .button-content .lnk-group a { padding: 12px 20px; border: var(--board); }
+  .MGC-CST-TRMNPL-010 em { display: inline-flex; font-weight: 700; }
   .MGC-CST-TRMNPL-010 .link-list li .btn-text { display: inline-flex }
   
  @media (max-width:767px) {
@@ -139,8 +139,8 @@ body{
 .MGC-CST-TRMNPL-008 .sub-process-content ul li::after { content: ""; display: block; margin: 0 11px; width: 50px; height: 15px; background-image: var(--ico-arrow); background-repeat: no-repeat; background-position: center; background-size: 48px auto; }
 
 /******고객센터-개인정보처리방침**/
-.MGC-CST-TRMNPL-010 .button-content .button-group { gap: 10px; }
-.MGC-CST-TRMNPL-010 .button-content .button-group a { width: 100%; text-align: center; }
+.MGC-CST-TRMNPL-010 .button-content .lnk-group { gap: 10px; }
+.MGC-CST-TRMNPL-010 .button-content .lnk-group a { width: 100%; text-align: center; }
 .MGC-CST-TRMNPL-010 .link-list li span { display: block }
  }
 
