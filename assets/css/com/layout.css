@@ -6,6 +6,7 @@ body {
     --error-bg:#FFF0F0;
     --error-font-color:#D52700;
     --ico-error:url("../../images/com/svg/ico_error.svg");
+    --ico-select:url("../../images/com/svg/ico_select.svg");
     --error: var(--red);
     --success:var(--primary);
     --failure:var(--red);
@@ -273,7 +274,7 @@ main.contentWrap > .bottom-container { margin-top:72px; }
     .text-content p + ul{ margin-top:16px; }
 
     .text-content .rfrnc {  padding:18px; background:var(--bg-box); font-size:var(--font14); }
-    .text-content .rfrnc.point-r { padding:0; background:transparent; }
+    .text-content .bck-t { padding:0; background:transparent; }
 
     .text-content .text-list li > p.rfrnc { margin-top:18px; }
 

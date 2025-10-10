@@ -27,6 +27,7 @@ body{
   --btn-download-font-size:var(--font20);
   --btn-download-border:1px solid var(--color-d);
   --ico-download:url("../../images/com/svg/ico_download.svg");
+  --ico-link:url("../../images/com/svg/ico_link.svg");
 
   --btm-btn-primary:var(--primary);
   --btm-btn-primary-active:var(--active);
@@ -41,7 +42,9 @@ body{
 
 a, button { position:relative; }
 a:focus-visible,
-button:focus-visible { outline:2px solid var(--tab-active); outline-offset:4px; z-index:2;  }
+button:focus-visible { outline:2px solid var(--tab-active); outline-offset:4px; z-index:2; color:var(--primary); }
+
+a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
 
 .btn-text { color:var(--btn-text); text-decoration:underline;  }
 
@@ -61,11 +64,20 @@ button:focus-visible { outline:2px solid var(--tab-active); outline-offset:4px; 
 .btn-terms-modal { padding: 2px 10px 4px; border: 1px solid var(--btn-modal-border); color:var(--btn-modal-font-color); font-size:var(--btn-download-font-size); }
 .btn-terms-modal:hover { border-color: #222222; color: #222222; }
 
-/**다운로드버튼**/
+/**링크, 다운로드버튼**/
+.btn-link,
 .btn-download { display:inline-flex; align-items:center; gap:10px; height:62px; line-height:62px; padding:0 32px; border-radius:100px; background:var(--btn-download-background); border:var(--btn-download-border); text-align:left; font-size:var(--btn-download-font-size); }
 .btn-download::after { content:""; display:block; width:24px; height:24px; background-color:var(--color-9); 
   mask-image:var(--ico-download); mask-repeat:no-repeat; mask-size:auto 40px; mask-position:center; -webkit-mask-image:var(--ico-download); -webkit-mask-repeat:no-repeat; -webkit-mask-size:17.333px auto; -webkit-mask-position:center; 
   }
+
+ .btn-link::after { content:""; display:block; width:24px; height:24px; background-color:var(--color-9); 
+   mask-image:var(--ico-link); mask-repeat:no-repeat; mask-size:auto 40px; mask-position:center; -webkit-mask-image:var(--ico-link); -webkit-mask-repeat:no-repeat; -webkit-mask-size:19px auto; -webkit-mask-position:center; 
+   }
+
+.btn-link:focus-visible::after,
+.btn-link:hover::after { background-color:var(--primary); }  
+
 
 /**CTA 01**/
 .btn-content.cta .button-group { display:flex; gap:24px; justify-content:center; width:100%; text-align:center; }

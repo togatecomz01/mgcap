@@ -56,7 +56,7 @@ body{
 
 
   /*---------------------------------------------
-    #고객센터
+    #소비자보호
 ---------------------------------------------*/
 .sub-process-content ul { display:inline-flex; align-items:flex-start; padding:40px; border:var(--board); border-radius:8px;   }
 .sub-process-content ul li { display:inline-flex; align-items:center; }
@@ -78,10 +78,13 @@ body{
  .MGC-PRT-CST-008 .sub-process-content ul.process03 li:nth-of-type(1) > p::before { background-image:var(--ico-cst-06); }
  .MGC-PRT-CST-008 .sub-process-content ul.process03 li:nth-of-type(2) > p::before { background-image:var(--ico-cst-07); }
 
-  /******자료열람 요구권**/
+/******자료열람 요구권**/
   .MGC-PRT-CST-009 .sub-process-content ul.process01 li:nth-of-type(1) > p::before { background-image:var(--ico-cst-01); }
   .MGC-PRT-CST-009 .sub-process-content ul.process01 li:nth-of-type(2) > p::before { background-image:var(--ico-cst-03); }
   .MGC-PRT-CST-009 .sub-process-content ul.process01 li:nth-of-type(3) > p::before { background-image:var(--ico-cst-05); }
+  
+/******모잡인조회**/
+.MGC-PRT-CST-012 .button-content .btn-group.link1 .btn-link::before { background-image:var(--ico-cst-05); }
 
 
 
@@ -110,7 +113,7 @@ body{
 .process-content li .step + div { padding:0; margin:0; background:transparent; font-size:var(--font18); }
 
   /*---------------------------------------------
-    #고객센터
+    #소비자보호
 ---------------------------------------------*/
 .sub-process-content ul { display:block; padding:32px 24px; }
 .sub-process-content ul li { display:block; min-height:74px; margin-bottom:32px; }

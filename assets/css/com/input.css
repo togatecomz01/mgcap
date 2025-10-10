@@ -45,8 +45,11 @@ input[type="tel"],
 input[type="search"], 
 select{ width:100%; height:var(--form-height); background:var(--form-bg); border: 1px solid var(--form-board); padding:var(--form-padding); color:var(--from-font-color); box-sizing:border-box; }
 textarea { width:100%; border: 1px solid var(--form-board); padding:var(--form-padding); color:var(--from-font-color); box-sizing:border-box;  }
+select {  padding-right:54px; -webkit-appearance:none; -moz-appearance:none; appearance:none; background:var(--ico-select) no-repeat right 14px center; }
+
 input::placeholder,
 textarea::placeholder { color:var(--from-placeholder-color); }
+
 
 
 input:focus,
@@ -58,6 +61,14 @@ textarea:focus::placeholder { color:var(--form-focus-font-color); }
 input:disabled,
 textarea:disabled { background-color:var(--form-disabled); color:var(--form-disabled-font-color); }
 
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group input[type="tel"],
+.form-group input[type="search"], 
+.form-group select{ flex:1; }
 
 label:has(input) { display:flex; align-items:center; font-size:var(--form-font-size) }
 label.check{ gap:14px; }
