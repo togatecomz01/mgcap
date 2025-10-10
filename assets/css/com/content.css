@@ -100,9 +100,14 @@ body{
   /******고객센터-개인정보처리방침**/
   .MGC-CST-TRMNPL-010 .button-content .lnk-group { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
   .MGC-CST-TRMNPL-010 .button-content .lnk-group a { padding: 12px 20px; border: var(--board); }
-  .MGC-CST-TRMNPL-010 em { display: inline-flex; font-weight: 700; }
+  .MGC-CST-TRMNPL-010 em { display: inline-flex; font-weight: var(--font-w-b); }
   .MGC-CST-TRMNPL-010 .link-list li .btn-text { display: inline-flex }
-  
+
+  /******회사소개-채용안내 및 절차**/
+  .MGC-INT-CMP-024 ul.diamond-box { display: flex; padding: 32px 24px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; background:#F3F6FB; }
+  .MGC-INT-CMP-024 ul.diamond-box li::before { content:"◆"; display:inline; color:var(--primary); margin-right: 6px; }
+  .MGC-INT-CMP-024 ul.diamond-box li {color: #222; font-weight: 500;}
+
  @media (max-width:767px) {
 
 body{
