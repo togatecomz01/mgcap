@@ -1,0 +1,479 @@
+메모
+// 전역 변수로 현재 상태 관리
+let currentBreakpoint = 'desktop';
+let isMenuOpen = false;
+let isSearchOpen = false;
+
+// 브레이크포인트 정의
+const breakpoints = {
+    mobile: 480,
+    tablet: 768,
+    desktop: 1024
+};
+
+window.addEventListener('load', function() {
+    initializeMenu();
+});
+
+window.addEventListener('resize', debounce(function() {
+    handleResize();
+}, 150));
+
+/*---------------------------------------------
+    디바운스 함수 (성능 최적화)
+---------------------------------------------*/
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+/*---------------------------------------------
+    현재 브레이크포인트 감지
+---------------------------------------------*/
+function getCurrentBreakpoint() {
+    const width = window.innerWidth;
+    if (width <= breakpoints.mobile) return 'mobile';
+    if (width <= breakpoints.tablet) return 'tablet';
+    return 'desktop';
+}
+
+/*---------------------------------------------
+    메뉴 초기화
+---------------------------------------------*/
+function initializeMenu() {
+    currentBreakpoint = getCurrentBreakpoint();
+    
+    fullMenu();
+    allMenuToggle();
+    headerMenu();
+    allSearchToggle();
+    scrollState();
+    
+    console.log('Menu initialized for:', currentBreakpoint);
+}
+
+/*---------------------------------------------
+    화면 크기 변경 시 처리
+---------------------------------------------*/
+function handleResize() {
+    const newBreakpoint = getCurrentBreakpoint();
+    
+    if (newBreakpoint !== currentBreakpoint) {
+        console.log('Breakpoint changed from', currentBreakpoint, 'to', newBreakpoint);
+        currentBreakpoint = newBreakpoint;
+        
+        // 메뉴 상태 리셋
+        resetMenuState();
+        
+        // 메뉴 재초기화
+        initializeMenu();
+    }
+    
+    scrollState();
+}
+
+/*---------------------------------------------
+    메뉴 상태 리셋
+---------------------------------------------*/
+function resetMenuState() {
+    const allMenu = document.getElementById('allMenu');
+    const allSearch = document.getElementById('allSearch');
+    const menuItems = document.querySelectorAll('.lnb .menu-item');
+    
+    // 전체 메뉴 닫기
+    if (allMenu) {
+        allMenu.classList.remove('on');
+        isMenuOpen = false;
+    }
+    
+    // 검색 메뉴 닫기
+    if (allSearch) {
+        allSearch.classList.remove('on');
+        isSearchOpen = false;
+    }
+    
+    // 헤더 드롭다운 메뉴 닫기
+    menuItems.forEach(item => {
+        item.classList.remove('on');
+        const btn = item.querySelector('.menu-tit');
+        if (btn) {
+            btn.classList.remove('on');
+            btn.setAttribute('aria-expanded', 'false');
+        }
+    });
+    
+    // 스크롤 상태 복원
+    document.body.classList.remove('no-scroll');
+}
+
+/*---------------------------------------------
+    스크롤 제어 함수
+---------------------------------------------*/
+function scrollState() {
+    const allMenu = document.getElementById('allMenu');
+    const allSearch = document.getElementById('allSearch');
+    
+    if (currentBreakpoint === 'mobile') {
+        if ((allMenu && allMenu.classList.contains('on')) || 
+            (allSearch && allSearch.classList.contains('on'))) {
+            document.body.classList.add('no-scroll');
+        } else {
+            document.body.classList.remove('no-scroll');
+        }
+    } else {
+        document.body.classList.remove('no-scroll');
+    }
+}
+
+/*---------------------------------------------
+    전체메뉴 모바일
+---------------------------------------------*/
+function fullMenu() {
+    const menuTit = document.querySelectorAll('.menu-tit li');
+    const gnb = document.querySelectorAll('.menu-inner > li');
+
+    // 기존 이벤트 리스너 제거를 위한 참조 저장
+    menuTit.forEach((item) => {
+        // 기존 리스너 제거
+        const newItem = item.cloneNode(true);
+        item.parentNode.replaceChild(newItem, item);
+    });
+
+    // 새로운 이벤트 리스너 추가
+    const newMenuTit = document.querySelectorAll('.menu-tit li');
+    newMenuTit.forEach((item) => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const span = this.querySelector('span');
+            if (!span) return;
+            
+            const focusTarget = span.getAttribute('data-focus');
+            if (!focusTarget) return;
+
+            // 모든 menu-tit li에서 on 클래스 제거
+            newMenuTit.forEach(li => li.classList.remove('on'));
+
+            // 클릭된 li에 on 클래스 추가
+            this.classList.add('on');
+
+            // 모든 menu-inner li에서 on 클래스 제거
+            gnb.forEach(li => li.classList.remove('on'));
+
+            // data-focus와 일치하는 menu-inner li에 on 클래스 추가
+            const targetMenuItem = document.querySelector(`.menu-inner .${focusTarget}`);
+            if (targetMenuItem) {
+                targetMenuItem.classList.add('on');
+            }
+        });
+    });
+}
+
+/*---------------------------------------------
+    전체메뉴 열기/닫기 기능 (PC & Mobile)
+---------------------------------------------*/
+function allMenuToggle() {
+    const menuBtn = document.querySelector('.menu-btn[data-open="modal"]') || document.querySelector('.menu-btn');
+    const allMenu = document.getElementById('allMenu');
+    const closeBtn = document.querySelector('.allmenu-header-inner .close-btn');
+
+    if (!allMenu) return;
+
+    // 메뉴 열기
+    function openMenu(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        allMenu.classList.add('on');
+        isMenuOpen = true;
+        scrollState();
+        
+        // 포커스 트랩을 위한 첫 번째 포커스 가능한 요소로 이동
+        const firstFocusable = allMenu.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        if (firstFocusable) {
+            firstFocusable.focus();
+        }
+    }
+
+    // 메뉴 닫기
+    function closeMenu(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        allMenu.classList.remove('on');
+        isMenuOpen = false;
+        scrollState();
+        
+        // 메뉴 버튼으로 포커스 복귀
+        if (menuBtn) {
+            menuBtn.focus();
+        }
+    }
+
+    // 이벤트 리스너 제거 및 재추가
+    if (menuBtn) {
+        menuBtn.removeEventListener('click', openMenu);
+        menuBtn.removeEventListener('touchend', openMenu);
+        menuBtn.addEventListener('click', openMenu);
+        
+        if (currentBreakpoint === 'mobile') {
+            menuBtn.addEventListener('touchend', openMenu);
+        }
+    }
+
+    if (closeBtn) {
+        closeBtn.removeEventListener('click', closeMenu);
+        closeBtn.removeEventListener('touchend', closeMenu);
+        closeBtn.addEventListener('click', closeMenu);
+        
+        if (currentBreakpoint === 'mobile') {
+            closeBtn.addEventListener('touchend', closeMenu);
+        }
+    }
+
+    // ESC 키로 메뉴 닫기
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && isMenuOpen) {
+            closeMenu(e);
+        }
+    });
+}
+
+/*---------------------------------------------
+    검색창 열기/닫기 기능 (PC & Mobile)
+---------------------------------------------*/
+function allSearchToggle() {
+    const searchBtn = document.querySelector('.search-btn[data-open="searchWrap"]') || document.querySelector('.search-btn');
+    const allSearch = document.getElementById('allSearch');
+    const headerCloseBtn = document.querySelector('.header-btn-wrap .close-btn');
+
+    if (!allSearch) return;
+
+    // 검색창 열기
+    function openSearch(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        allSearch.classList.add('on');
+        isSearchOpen = true;
+        scrollState();
+        searchToggle();
+        
+        // 검색 입력창으로 포커스 이동
+        const searchInput = allSearch.querySelector('input[type="text"], input[type="search"]');
+        if (searchInput) {
+            setTimeout(() => searchInput.focus(), 100);
+        }
+    }
+
+    // 검색창 닫기
+    function closeSearch(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        allSearch.classList.remove('on');
+        isSearchOpen = false;
+        scrollState();
+        searchToggle();
+        
+        // 검색 버튼으로 포커스 복귀
+        if (searchBtn) {
+            searchBtn.focus();
+        }
+    }
+
+    // 검색창,닫기 버튼 show hide
+    function searchToggle() {
+        if (!searchBtn || !headerCloseBtn) return;
+        
+        if (allSearch.classList.contains('on')) {
+            searchBtn.style.display = 'none';
+            headerCloseBtn.style.display = 'inline-block';
+        } else {
+            searchBtn.style.display = 'inline-block';
+            headerCloseBtn.style.display = 'none';
+        }
+    }
+
+    // 이벤트 리스너 제거 및 재추가
+    if (searchBtn) {
+        searchBtn.removeEventListener('click', openSearch);
+        searchBtn.removeEventListener('touchend', openSearch);
+        searchBtn.addEventListener('click', openSearch);
+        
+        if (currentBreakpoint === 'mobile') {
+            searchBtn.addEventListener('touchend', openSearch);
+        }
+    }
+
+    if (headerCloseBtn) {
+        headerCloseBtn.removeEventListener('click', closeSearch);
+        headerCloseBtn.removeEventListener('touchend', closeSearch);
+        headerCloseBtn.addEventListener('click', closeSearch);
+        
+        if (currentBreakpoint === 'mobile') {
+            headerCloseBtn.addEventListener('touchend', closeSearch);
+        }
+    }
+
+    // MutationObserver로 클래스 변화 감지
+    const observer = new MutationObserver(searchToggle);
+    observer.observe(allSearch, { attributes: true, attributeFilter: ['class'] });
+
+    searchToggle();
+
+    // ESC 키로 검색창 닫기
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && isSearchOpen) {
+            closeSearch(e);
+        }
+    });
+}
+
+/*---------------------------------------------
+    헤더 드롭다운 메뉴 기능
+---------------------------------------------*/
+function headerMenu() {
+    const menuButtons = document.querySelectorAll('.lnb .menu-item > .menu-tit');
+    const menuItems = document.querySelectorAll('.lnb .menu-item');
+    const submenuItems = document.querySelectorAll('.lnb .submenu2 > li');
+    const submenu3Items = document.querySelectorAll('.lnb .submenu3 > li');
+
+    // 모든 드롭다운 메뉴를 닫는 함수
+    function closeAllMenus() {
+        menuItems.forEach(item => {
+            item.classList.remove('on');
+            const btn = item.querySelector('.menu-tit');
+            if (btn) {
+                btn.classList.remove('on');
+                btn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
+    // 기존 이벤트 리스너 제거 및 재추가
+    menuButtons.forEach(button => {
+        // 복제를 통한 이벤트 리스너 초기화
+        const newButton = button.cloneNode(true);
+        button.parentNode.replaceChild(newButton, button);
+    });
+
+    // 새로운 버튼들에 이벤트 추가
+    const newMenuButtons = document.querySelectorAll('.lnb .menu-item > .menu-tit');
+    newMenuButtons.forEach(button => {
+        const clickHandler = function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const parentMenuItem = this.parentElement;
+            const listItem = parentMenuItem.querySelector('.list-item');
+            const href = this.getAttribute('href');
+
+            // 데스크톱에서만 드롭다운 메뉴 작동
+            if (currentBreakpoint === 'desktop') {
+                // menu-item에 list-item이 없으면 페이지 이동 후 함수 종료
+                if (!listItem) {
+                    if (href && href !== '#') {
+                        window.location.href = href;
+                    }
+                    return;
+                }
+
+                const isCurrentlyOpen = parentMenuItem.classList.contains('on');
+                
+                // 모든 메뉴 닫기
+                closeAllMenus();
+
+                // 현재 클릭한 메뉴가 닫혀있었다면 열기
+                if (!isCurrentlyOpen) {
+                    parentMenuItem.classList.add('on');
+                    this.classList.add('on');
+                    this.setAttribute('aria-expanded', 'true');
+                }
+            } else {
+                // 모바일/태블릿에서는 바로 링크 이동
+                if (href && href !== '#') {
+                    window.location.href = href;
+                }
+            }
+        };
+
+        button.addEventListener('click', clickHandler);
+        
+        // 모바일에서 터치 이벤트 추가
+        if (currentBreakpoint === 'mobile') {
+            button.addEventListener('touchend', clickHandler);
+        }
+    });
+
+    // submenu2 이벤트 처리 (데스크톱만)
+    if (currentBreakpoint === 'desktop') {
+        submenuItems.forEach(li => {
+            const newLi = li.cloneNode(true);
+            li.parentNode.replaceChild(newLi, li);
+        });
+
+        const newSubmenuItems = document.querySelectorAll('.lnb .submenu2 > li');
+        newSubmenuItems.forEach(li => {
+            li.addEventListener('click', function (e) {
+                e.stopPropagation();
+                
+                newSubmenuItems.forEach(item => {
+                    item.classList.remove('on');
+                });
+
+                const newSubmenu3Items = document.querySelectorAll('.lnb .submenu3 > li');
+                newSubmenu3Items.forEach(item => {
+                    item.classList.remove('on');
+                });
+
+                const submenu3 = this.querySelector('.submenu3');
+                if (submenu3) {
+                    const firstSubmenu3Li = submenu3.querySelector('li');
+                    if (firstSubmenu3Li) {
+                        firstSubmenu3Li.classList.add('on');
+                    }
+                } else {
+                    this.classList.add('on');
+                }
+            });
+        });
+
+        // submenu3 이벤트 처리
+        const newSubmenu3Items = document.querySelectorAll('.lnb .submenu3 > li');
+        newSubmenu3Items.forEach(li => {
+            const newLi = li.cloneNode(true);
+            li.parentNode.replaceChild(newLi, li);
+        });
+
+        const finalSubmenu3Items = document.querySelectorAll('.lnb .submenu3 > li');
+        finalSubmenu3Items.forEach(li => {
+            li.addEventListener('click', function (e) {
+                e.stopPropagation();
+                
+                finalSubmenu3Items.forEach(item => {
+                    item.classList.remove('on');
+                });
+
+                this.classList.add('on');
+            });
+        });
+    }
+
+    // 다른 곳 클릭시 메뉴 닫기 (데스크톱만)
+    if (currentBreakpoint === 'desktop') {
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.lnb')) {
+                closeAllMenus();
+            }
+        });
+    }
+}

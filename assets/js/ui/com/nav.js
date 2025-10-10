@@ -2,6 +2,7 @@ window.addEventListener('load', function() {
     mobileMenu();
     menuToggle();
     headerMenu();
+    searchToggle();
 });
 
 /*---------------------------------------------
@@ -80,11 +81,15 @@ function menuToggle() {
             });
         }
     }
-    
-    // 검색 토글
+}
+
+// 검색 토글
+function searchToggle() {
     const searchBtn = document.querySelector('.search-btn');
     const allSearch = document.getElementById('allSearch');
     const searchCloseBtn = document.querySelector('.header-btn-wrap .close-btn');
+    const allMenuSearchBtn = document.querySelector('.allmenu-header-inner .search-btn');
+    const allSearchCloseBtn = document.querySelector('.allsearch-header-inner .close-btn')
     
     if (searchBtn && allSearch) {
         searchBtn.addEventListener('click', function() {
@@ -102,17 +107,32 @@ function menuToggle() {
                 this.classList.remove('on');/* 20250929 수정 */
             });
         }
+
+        const winWidth = window.innerWidth;
+
+        if (winWidth <= 480) {
+            if (allMenuSearchBtn && allSearch) {
+                allMenuSearchBtn.addEventListener('click', function () {
+                    allSearch.classList.add('on');
+                    allMenuSearchBtn.style.display = 'none';
+                })
+                if (allSearchCloseBtn) {
+                    allSearchCloseBtn.addEventListener('click', function () {
+                        allSearch.classList.remove('on');
+                        allMenuSearchBtn.style.display = 'inline-block';
+                    })
+                }
+            }
+
+        }
     }
 }
-
 
 /*---------------------------------------------
     헤더 드롭다운 메뉴 기능
 ---------------------------------------------*/
-f/*---------------------------------------------
-    헤더 드롭다운 메뉴 기능
----------------------------------------------*/
 function headerMenu() {
+    const menu = document.querySelector('.lnb .menu');
     const menuItems = document.querySelectorAll('.lnb .menu-item');
     
     // 모든 메뉴 닫기 함수
