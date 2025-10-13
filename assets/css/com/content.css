@@ -138,6 +138,27 @@ body{
 /*---------------------------------------------
     #회사소개
 ---------------------------------------------*/
+  /******회사소개-회사개요**/
+  .MGC-INT-CMP-002 { text-align: center; }
+  .MGC-INT-CMP-002 .text-group h3 { line-height: 150%; font-size: var(--font32); }
+  .MGC-INT-CMP-002 h3::after { content:""; display: block; width: 100%; min-height: 330px; background-image: url("../../images/content/INT/w/main_CMP-002.png"); background-size: contain; background-repeat: no-repeat; background-position: center; }
+  .MGC-INT-CMP-002 .text-group p { margin-top: 0; font-size:var(--font20); font-weight: var(--font-w-m); line-height: 150%; }
+  .MGC-INT-CMP-002 .company-intro { counter-reset: item; display: flex; justify-content: center; margin-top: 100px; gap: 47px; }
+  .MGC-INT-CMP-002 .company-intro > li > p { font-size: var(--font22); font-weight: var(--font-w-b); margin-bottom: 38px; }
+  .MGC-INT-CMP-002 .company-intro > li > ul { position: relative; width: 342px; min-height: 442px; padding: 48px 26px 30px 26px; border: var(--board); }
+  .MGC-INT-CMP-002 .company-intro > li > ul::before { content: "0"counter(item); counter-increment: item; position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center;
+    width: 40px; height: 40px; background: var(--primary); color: var(--white); font-size: var(--font20); font-weight: var(--font-w-b); }
+  .MGC-INT-CMP-002 .company-intro > li > ul > li+li { margin-top: 16px; }
+  .MGC-INT-CMP-002 .company-intro > li > ul > li > p { margin-bottom: 10px; font-size: var(--font18); font-weight: var(--font-w-b); }
+  .MGC-INT-CMP-002 .company-intro > li > ul > li > span { color: var(--color-6); font-size: var(--font16); font-weight: var(--font-w-r); }
+  .MGC-INT-CMP-002 .button-content {padding-top:0}
+  .MGC-INT-CMP-002 .button-content .lnk-group { display: flex; flex-wrap: wrap; gap: 40px; }
+  .MGC-INT-CMP-002 .button-content .lnk-group a { flex: 1 1 calc(50% - 20px); box-sizing: border-box; height: 202px; display: flex; align-items: center; justify-content: center; border-radius: 16px; color: var(--white); font-size: var(--font-28); font-weight: var(--font-w-b); 
+    background-size: cover; background-repeat: no-repeat; background-position: center; }
+  .MGC-INT-CMP-002 .button-content .lnk-group a:nth-child(1) { background-image: url("../../images/content/INT/w/link_1_CMP-002.png") }
+  .MGC-INT-CMP-002 .button-content .lnk-group a:nth-child(2) { background-image: url("../../images/content/INT/w/link_2_CMP-002.png") }
+  .MGC-INT-CMP-002 .button-content .lnk-group a:nth-child(3) { background-image: url("../../images/content/INT/w/link_3_CMP-002.png") }
+  .MGC-INT-CMP-002 .button-content .lnk-group a:nth-child(4) { background-image: url("../../images/content/INT/w/link_4_CMP-002.png") }
   /******회사소개-채용안내 및 절차**/
   .MGC-INT-CMP-024 ul.diamond-box { display: flex; padding: 32px 24px; margin-top: 32px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; background: var(--bg-box); }
   .MGC-INT-CMP-024 ul.diamond-box li::before { content:"◆"; display:inline; color:var(--primary); margin-right: 6px; }
