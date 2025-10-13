@@ -81,6 +81,51 @@ body{
  .process-content .process02 li:nth-child(4) .step p { background:var(--process-step4-bg); }
  .process-content .process02 li:nth-child(5) .step p { background:var(--process-step5-bg); }
 
+/* =-========================================================================
+   회사소개 - CEO 인사말 (MGC-INT-CMP-001)
+   ========================================================================== */
+.MGC-INT-CMP-001 {padding-top: 0 !important;}
+.MGC-INT-CMP-001 .quote-content { border: none; padding-top: 0; }
+.MGC-INT-CMP-001 .quote-group { text-align: center; padding: 10px 0 10px 0; }
+.MGC-INT-CMP-001 .quote-group blockquote { position: relative; display: inline-block; padding: 30px 0; }
+.MGC-INT-CMP-001 .quote-group blockquote p { font-size: var(--font28); line-height: 1.6; padding: 15px 0 15px 0; }
+.MGC-INT-CMP-001 .quote-group blockquote strong { color: var(--primary); }
+.MGC-INT-CMP-001 .quote-group blockquote::before, .MGC-INT-CMP-001 .quote-group blockquote::after { content: ''; position: absolute; left: 50%; width: 80%; height: 30px; box-sizing: border-box; transform: translateX(-50%); }
+.MGC-INT-CMP-001 .quote-group blockquote::before { top: 0; border-top: 4px solid var(--primary); border-left: 4px solid var(--primary); border-right: 4px solid var(--primary); }
+.MGC-INT-CMP-001 .quote-group blockquote::after { bottom: 0; border-bottom: 4px solid var(--primary); border-left: 4px solid var(--primary); border-right: 4px solid var(--primary); }
+
+.MGC-INT-CMP-001 .greeting-content { position: relative; left: 50%; width: 100vw; margin-left: -50vw; background-image: url("../../images/content/INT/w/bg_CMP-001.png"); background-repeat: no-repeat; background-position: center bottom; background-size: cover; color: var(--white); padding-top: 0; }
+.MGC-INT-CMP-001 .greeting-group { position: relative; padding: 0 100px; box-sizing: border-box; display: flex; align-items: flex-end; min-height: 750px; }
+.MGC-INT-CMP-001 .greeting-group::before { content: ''; align-self: stretch; flex: 0 0 800px; background-image: url('../../images/content/INT/w/pf_CMP-001.png'); background-repeat: no-repeat; background-size: cover; background-position: center bottom; }
+.MGC-INT-CMP-001 .greeting-group .ceo-text { flex: 1; max-width: 1050px; padding-bottom: 170px; }
+.MGC-INT-CMP-001 .greeting-group .ceo-text em { display: block; font-size: var(--font28); font-weight: var(--font-w-b); margin-bottom: 52px; }
+.MGC-INT-CMP-001 .greeting-group .ceo-text p { font-size: var(--font20); color: var(--white); margin-top: 0; margin-bottom: 42px; }
+.MGC-INT-CMP-001 .greeting-group .signature { position: absolute; bottom: 50px; right: 190px; text-align: right; }
+.MGC-INT-CMP-001 .greeting-group .signature span { display: block; color: var(--white); margin-bottom: 8px; }
+.MGC-INT-CMP-001 .greeting-group .signature img { width: 150px; }
+
+
+/* =-========================================================================
+   회사소개 - 회사연혁 (MGC-INT-CMP-003)
+   ========================================================================== */
+.MGC-INT-CMP-003 { padding-top: 0 !important; }
+.MGC-INT-CMP-003 .text-content h3 { font-size: var(--font32); }
+.MGC-INT-CMP-003 .text-content h3 span { color: var(--primary); }
+.MGC-INT-CMP-003 .text-content p { font-size: var(--font32); font-weight: var(--font-w-b); }
+.MGC-INT-CMP-003 .text-content p span { color: var(--primary); }
+.MGC-INT-CMP-003 .history-group { display: flex; align-items: flex-start; gap: 160px; }
+.MGC-INT-CMP-003 .history-range { flex: 0 0 250px; text-align: center; }
+.MGC-INT-CMP-003 .history-range .sub-title { font-size: var(--font22); font-weight: var(--font-w-m); color: var(--color-9); margin-bottom: 10px; }
+.MGC-INT-CMP-003 .history-range .main-title { font-size: var(--font32); font-weight: var(--font-w-b); }
+.MGC-INT-CMP-003 .timeline-list li { position: relative; }
+.MGC-INT-CMP-003 .timeline-list li:not(:last-child) { margin-bottom: 90px; }
+.MGC-INT-CMP-003 .timeline-list li::before { content: ''; position: absolute; top: 15px; left: -36px; width: 10px; height: 10px; background-color: var(--color-3); border-radius: 50%; z-index: 2; }
+.MGC-INT-CMP-003 .timeline-list li::after { content: ''; position: absolute; left: -33px; width: 4px; background-color: #e0e0e0; z-index: 1; top: 35px; bottom: -90px; }
+.MGC-INT-CMP-003 .timeline-list dt { font-size: var(--font32); font-weight: var(--font-w-b); margin-bottom: 24px; padding-left: 80px; }
+.MGC-INT-CMP-003 .timeline-list dd { display: flex; padding-left: 80px; }
+.MGC-INT-CMP-003 .timeline-list dd:not(:last-of-type) { margin-bottom: 12px; }
+.MGC-INT-CMP-003 .timeline-list .date { flex: 0 0 90px; color: var(--color-45); }
+.MGC-INT-CMP-003 .timeline-list .desc { display: block; color: var(--color-6); }
 
   /*---------------------------------------------
     #소비자보호
