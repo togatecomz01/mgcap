@@ -335,7 +335,8 @@ main.contentWrap > .bottom-container { margin-top:72px; }
     .form-content > .form-wrap > .form-group { margin-bottom:28px; }
 
     .form-content > .form-wrap > .form-group > .flex-row.mo-column { gap:14px; }
-    
+    .form-content > .form-wrap > .form-group > .flex-row:only-child { max-width:680px; }
+
     .form-content > .form-wrap > .form-group .mo-column,
     .form-content > .form-wrap > .form-group .mo-column .flex-row { display:flex; flex-direction:column; }
     .form-content > .form-wrap > .form-group .mo-column .flex-row .se-select,
