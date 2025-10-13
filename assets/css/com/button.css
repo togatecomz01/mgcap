@@ -84,6 +84,8 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
 .btn-content.cta .button-group { display:flex; gap:24px; justify-content:center; width:100%; text-align:center; }
 .btn-content.cta a,
 .btn-content.cta button {  flex:0 0 auto; display:inline-block; padding:0 60px; min-width:161px; width:auto; height:63px; line-height:63px; font-size:var(--btm-btn-font-size); font-weight:var(--btm-btn-font-weight); text-align:center; border-radius:100px;}
+.btn-content.cta.round12 a,
+.btn-content.cta.round12 button { padding:0 10px; min-width:120px; border-radius:12px; }
 .btn-content.cta .btn-primary { background-color: var(--btm-btn-primary); color:var(--white); }
 .btn-content.cta .btn-primary:hover { background-color: var(--active); }
 .btn-content.cta .btn-secondary { background-color: var(--btm-btn-secondary); }

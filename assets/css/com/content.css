@@ -249,7 +249,8 @@ body{
 .MGC-AUTH-001 .note-content .text-content,
 .MGC-AUTH-002 .note-content .text-content { padding:32px 40px 42px; border:var(--board); }
 .MGC-AUTH-001 .note-content .text-content .tit,
-.MGC-AUTH-002 .note-content .text-content .tit { position:relative; padding-left:55px; padding-bottom:29px; font-size:var(--font28); font-weight:var(--font-w-m); color:var(--color-2); }
+.MGC-AUTH-002 .note-content .text-content .tit,
+.MGC-AUTH-004 .note-content .text-content .tit { position:relative; padding-left:55px; padding-bottom:29px; font-size:var(--font28); font-weight:var(--font-w-m); color:var(--color-2); }
 .MGC-AUTH-001 .note-content .text-content .tit::before,
 .MGC-AUTH-002 .note-content .text-content .tit::before { content:""; position:absolute; left:0; display:block; width:43px; height:43px; background:var(--ico-info)no-repeat center; background-size:auto 28px; }
 
@@ -264,3 +265,11 @@ body{
 .MGC-AUTH-002 .advantage li:nth-child(3)::before { background:url("../../images/content/AUTH/auth_002_03.png")no-repeat 50%/180px auto; }
 .MGC-AUTH-002 .advantage li .tit { padding-bottom:12px; font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-2); }
 .MGC-AUTH-002 .advantage li span { font-size:var(--font20); font-weight:var(--font-w-r); }
+
+/* 공개매각 입찰내역 */
+.MGC-AUTH-004 .table-content .caption { display:flex; justify-content:space-between; align-items:center; }
+.MGC-AUTH-004 .table-content .caption:has(p:only-child) { display:block; }
+.MGC-AUTH-004 .table-content .caption p { padding-bottom:24px; font-size:var(--font16); font-weight:var(--font-w-m); }
+.MGC-AUTH-004 .table-content .caption p + p { margin:0; }
+.MGC-AUTH-004 .table-content .caption p span { color:var(--primary); }
+.MGC-AUTH-004 .table-content .info-list { padding-top:18px; }
