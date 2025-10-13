@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>I-PIN 인증 등록&gt;인증센터&gt;홈</title>
+
+    <meta name="keywords" content="MG캐피탈" />
+    <meta name="copyright" content="copyrights 2025 MG캐피탈" />
+    <meta name="viewport" content="width=device-width" />
+    <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="No-Cache" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico"/>
+    <link rel="stylesheet" href="../../assets/css/ui-util.css" />
+    <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+    <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+    <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
+    <script src="../../assets/js/include.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div data-include-path="../../views/COMMON/header.html"></div>
+        <div class="bodyWrap">
+            <main class="contentWrap">
+                <nav class="location-container">
+                    <ol class="breadcrumb">
+                        <li><span class="home">홈</span></li>
+                        <li><span>인증센터</span></li>
+                        <li><span>I-PIN 인증 등록</span></li>
+                    </ol>
+                </nav>
+                <section class="visual-container">
+                    <h2>I-PIN 인증 등록</h2>
+                    <p>시장의 신뢰와 사회의 존경을 받을 수 있는 기업이 되겠습니다.</p>
+                </section>
+                <section class="page-container">
+                    <div class="text-content">
+                        <div class="text-group">
+                            <h3>I-PIN 인증 등록 본인인증</h3>
+                            <p>I-PIN으로 회원가입을 하신 당사 거래 고객님은 온라인 서비스를 이용하시기 위해 주민등록번호를 입력하셔서 본인인증을<br>진행하셔야 이용이 가능합니다.</p>
+                        </div>
+                    </div>
+                    <form>
+                        <fieldset class="form-content">
+                            <legend>주민등록번호 입력</legend>
+                            <div class="form-wrap">
+                                <div class="form-group">
+                                    <label for="resident-1">주민등록번호 앞자리</label>
+                                    <div class="flex-row gap10">
+                                        <input id="resident-1" name="resident-1" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" required>
+                                        <span class="ipt-hyphen">-</span>
+                                        <input id="resident-2" name="resident-1" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </section>
+                <section class="bottom-container">
+                    <div class="btn-content cta">
+                        <div class="button-group">
+                            <a herf="javascript:void(0);" class="btn-primary">조회</a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <div data-include-path="../../views/COMMON/footer.html"></div>
+    </div>
+</body>
+</html>
+ 
