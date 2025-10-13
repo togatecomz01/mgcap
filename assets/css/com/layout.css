@@ -143,6 +143,9 @@ h4.tit-diamond::before { content:"◆"; display:inline; color:var(--primary); }
 .text-content .text-group .button-content { margin-top:34px; }
 .text-content .text-group p:first-child { margin-top:0; }
 
+/* 테이블 텍스트 */
+.table-content h3.table-tit { padding-bottom:20px; font-size:var(--font22); color:var(--color-2); }
+
 /**유의사항**/
 .page-container .note-content { padding-top:72px; border-top:0; }
 

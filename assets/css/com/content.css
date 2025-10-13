@@ -22,6 +22,9 @@ body{
  --ico-cst-06:url("../../images/content/PRT/w/ico_CST-008_6.png"); /**보안 금지 아이콘**/
  --ico-cst-07:url("../../images/content/PRT/w/ico_CST-008_7.png"); /**은행 거절 아이콘**/
 
+ --ico-info:url("../../images/com/svg/ico_info_guide.svg");/** 유의사항 안내 **/
+
+
   /** 모집인 조회 MGC-PRT-CST-012 **/
   --logo-cst-01:url("../../images/content/PRT/w/logo_KFOB.png"); /**은행엽합회**/
 
@@ -40,7 +43,6 @@ body{
 
   /** 채용안내 및 절차 MGC-INT-CMP-024 **/
   --ico-note: url("../../images/com/svg/ico_note.svg");
-
 
 
 
@@ -202,3 +204,13 @@ body{
 .MGC-INT-CMP-024 .note-content .text-content { padding: 20px }
  }
 
+/*---------------------------------------------
+    #인증센터
+---------------------------------------------*/
+/** 공동인증서 관리 **/
+.MGC-AUTH-001 table th:first-of-type { color:var(--color-2); }
+.MGC-AUTH-001 table td span { font-size:var(--font18); }
+/* 유의사항 안내 */
+.MGC-AUTH-001 .note-content .text-content { padding:32px 40px 42px; border:var(--board); }
+.MGC-AUTH-001 .note-content .text-content .tit { position:relative; padding-left:55px; padding-bottom:29px; font-size:var(--font28); font-weight:var(--font-w-m); color:var(--color-2); }
+.MGC-AUTH-001 .note-content .text-content .tit::before { content:""; position:absolute; left:0; display:block; width:43px; height:43px; background:var(--ico-info)no-repeat center; background-size:auto 28px; }
