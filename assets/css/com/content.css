@@ -41,8 +41,7 @@ body{
   --logo-cst-12:url("../../images/content/PRT/w/logo_getcha.png"); /**㈜겟차**/
   --logo-cst-13:url("../../images/content/PRT/w/logo_automobile.png"); /**(주)스타오토모빌**/
 
-  /** 채용안내 및 절차 MGC-INT-CMP-024 **/
-  --ico-note: url("../../images/com/svg/ico_note.svg");
+
 
 
 
@@ -118,6 +117,9 @@ body{
 .MGC-PRT-CST-012 .btn-link { padding-left:73px; background-image:var(--logo-cst-01); background-repeat:no-repeat; background-position:left 20px center; background-size:40px;   }
 
 
+/*---------------------------------------------
+    #고객센터
+---------------------------------------------*/
   /******고객센터-채무조정안내**/
   .MGC-CST-TRMNPL-008 .sub-process-content.border-none ul { padding: 0; border: 0; }
   .MGC-CST-TRMNPL-008 .sub-process-content ul { flex-wrap: wrap; gap: 16px; }
@@ -132,6 +134,10 @@ body{
   .MGC-CST-TRMNPL-010 em { display: inline-flex; font-weight: var(--font-w-b); }
   .MGC-CST-TRMNPL-010 .link-list li .btn-text { display: inline-flex }
 
+
+/*---------------------------------------------
+    #회사소개
+---------------------------------------------*/
   /******회사소개-채용안내 및 절차**/
   .MGC-INT-CMP-024 ul.diamond-box { display: flex; padding: 32px 24px; margin-top: 32px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; background: var(--bg-box); }
   .MGC-INT-CMP-024 ul.diamond-box li::before { content:"◆"; display:inline; color:var(--primary); margin-right: 6px; }
@@ -140,11 +146,10 @@ body{
   .MGC-INT-CMP-024 .process-content li:nth-child(3) .step p { background:var(--process-step3-bg); }
   .MGC-INT-CMP-024 .process-content li:nth-child(4) .step p { background:var(--process-step4-bg); }
   .MGC-INT-CMP-024 .process-content li:nth-child(5) .step p { background:var(--process-step5-bg); }
+  /* 유의사항 안내 */
   .MGC-INT-CMP-024 .note-content .text-content { padding: 32px 40px; border: var(--board); }
-  .MGC-INT-CMP-024 .note-content .text-content .note-title { display: inline-flex; margin-bottom: 28px; color: var(--color-2); font-size: var(--font28); font-weight: var(--font-w-m); }
-  .MGC-INT-CMP-024 .note-content .text-content .note-title::before { content: ""; display: block; margin-right: 12px; width: 43px; height: 43px; background-color: var(--color-2);
-    mask-image: var(--ico-note); mask-repeat: no-repeat; mask-size: auto 28px; mask-position: center; -webkit-mask-image: var(--ico-note); -webkit-mask-repeat: no-repeat; -webkit-mask-size: auto 28px; -webkit-mask-position: center; }
-  .MGC-INT-CMP-024 .note-content .text-content ul li+li { margin-top: 16px }
+  .MGC-INT-CMP-024 .note-content .text-content .tit { position:relative; padding-left:55px; padding-bottom:29px; font-size:var(--font28); font-weight:var(--font-w-m); color:var(--color-2); }
+  .MGC-INT-CMP-024 .note-content .text-content .tit::before { content:""; position:absolute; left:0; display:block; width:43px; height:43px; background:var(--ico-info)no-repeat center; background-size:auto 28px; }
 
  @media (max-width:767px) {
 
@@ -182,6 +187,9 @@ body{
 .sub-process-content ul li > p span { font-size:14px; max-width:100%; }
 .sub-process-content ul li span.sr-only.mo { color:var(--color-6); font-size:var(--font14);  }
 
+/*---------------------------------------------
+    #고객센터
+---------------------------------------------*/
 /****** 고객센터-업무위탁 및 제 3자 제공현황 **/
 .MGC-CST-TRMNPL-001 .table-group table colgroup {display: none;}
 .MGC-CST-TRMNPL-001 .table-group .mo thead {display: none;}
@@ -199,6 +207,10 @@ body{
 .MGC-CST-TRMNPL-010 .button-content .lnk-group a { width: 100%; text-align: center; }
 .MGC-CST-TRMNPL-010 .link-list li span { display: block }
 
+
+/*---------------------------------------------
+    #회사소개
+---------------------------------------------*/
 /******회사소개-채용안내 및 절차**/
 .MGC-INT-CMP-024 ul.diamond-box { padding: 12px 16px; }
 .MGC-INT-CMP-024 .note-content .text-content { padding: 20px }
