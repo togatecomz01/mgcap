@@ -109,6 +109,7 @@ body{
    회사소개 - 회사연혁 (MGC-INT-CMP-003)
    ========================================================================== */
 .MGC-INT-CMP-003 { padding-top: 0 !important; }
+.MGC-INT-CMP-003 .text-content {border: none;}
 .MGC-INT-CMP-003 .text-content h3 { font-size: var(--font32); }
 .MGC-INT-CMP-003 .text-content h3 span { color: var(--primary); }
 .MGC-INT-CMP-003 .text-content p { font-size: var(--font32); font-weight: var(--font-w-b); }
