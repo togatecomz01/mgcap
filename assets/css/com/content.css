@@ -207,10 +207,27 @@ body{
 /*---------------------------------------------
     #인증센터
 ---------------------------------------------*/
-/** 공동인증서 관리 **/
-.MGC-AUTH-001 table th:first-of-type { color:var(--color-2); }
-.MGC-AUTH-001 table td span { font-size:var(--font18); }
+/** 공동/금융인증서 관리 공통 **/
+.MGC-AUTH-001 table th:first-of-type,
+.MGC-AUTH-002 table th:first-of-type { color:var(--color-2); }
+.MGC-AUTH-001 table td span,
+.MGC-AUTH-002 table td span { font-size:var(--font18); }
 /* 유의사항 안내 */
-.MGC-AUTH-001 .note-content .text-content { padding:32px 40px 42px; border:var(--board); }
-.MGC-AUTH-001 .note-content .text-content .tit { position:relative; padding-left:55px; padding-bottom:29px; font-size:var(--font28); font-weight:var(--font-w-m); color:var(--color-2); }
-.MGC-AUTH-001 .note-content .text-content .tit::before { content:""; position:absolute; left:0; display:block; width:43px; height:43px; background:var(--ico-info)no-repeat center; background-size:auto 28px; }
+.MGC-AUTH-001 .note-content .text-content,
+.MGC-AUTH-002 .note-content .text-content { padding:32px 40px 42px; border:var(--board); }
+.MGC-AUTH-001 .note-content .text-content .tit,
+.MGC-AUTH-002 .note-content .text-content .tit { position:relative; padding-left:55px; padding-bottom:29px; font-size:var(--font28); font-weight:var(--font-w-m); color:var(--color-2); }
+.MGC-AUTH-001 .note-content .text-content .tit::before,
+.MGC-AUTH-002 .note-content .text-content .tit::before { content:""; position:absolute; left:0; display:block; width:43px; height:43px; background:var(--ico-info)no-repeat center; background-size:auto 28px; }
+
+/* 금융인증서 */
+.MGC-AUTH-002 .text-content + .table-content { border-top:0; }
+.MGC-AUTH-002 .text-content .text-group { margin-bottom:16px; }
+.MGC-AUTH-002 .advantage { display:flex; align-items:center; padding:32px 80px; }
+.MGC-AUTH-002 .advantage li { position:relative; padding-top:200px; width:calc(100% / 3); text-align:center; }
+.MGC-AUTH-002 .advantage li::before { content:""; position:absolute; top:0; left:50%; transform:translateX(-50%); display:block; width:180px; height:180px; }
+.MGC-AUTH-002 .advantage li:nth-child(1)::before { background:url("../../images/content/AUTH/auth_002_01.png")no-repeat 50%/180px auto; }
+.MGC-AUTH-002 .advantage li:nth-child(2)::before { background:url("../../images/content/AUTH/auth_002_02.png")no-repeat 50%/180px auto; }
+.MGC-AUTH-002 .advantage li:nth-child(3)::before { background:url("../../images/content/AUTH/auth_002_03.png")no-repeat 50%/180px auto; }
+.MGC-AUTH-002 .advantage li .tit { padding-bottom:12px; font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-2); }
+.MGC-AUTH-002 .advantage li span { font-size:var(--font20); font-weight:var(--font-w-r); }

@@ -240,6 +240,7 @@ main.contentWrap > .bottom-container { margin-top:72px; }
 .footer-top { display:flex; justify-content:space-between; align-items:center; column-gap:20px;  padding-top:29px; font-size: 14px; font-weight:700; }
 .footer-top > ul { display:flex; gap:20px; }
 
+.footer-top .family-site { width:112px; }
 .footer-top .family-site select {padding:0; border:0; font-size:var(--font14); font-weight:var(--font-w-m); color:#9D9D9D; }
 
 .footer-main { display:flex; justify-content:space-between; align-items:center; padding-top:38px; }
