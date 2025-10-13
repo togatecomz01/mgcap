@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>이용상품내역&gt;이용현황&gt;홈</title>
+
+    <meta name="keywords" content="MG캐피탈" />
+    <meta name="copyright" content="copyrights 2025 MG캐피탈" />
+    <meta name="viewport" content="width=device-width" />
+    <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="No-Cache" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico"/>
+    <link rel="stylesheet" href="../../assets/css/ui-util.css" />
+    <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+    <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+    <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
+    <script src="../../assets/js/include.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div data-include-path="../../views/COMMON/header.html"></div>
+        <div class="bodyWrap">
+            <main class="contentWrap">
+                <nav class="location-container">
+                    <ol class="breadcrumb">
+                        <li><span class="home">홈</span></li>
+                        <li><span>이용현황</span></li>
+                        <li><span>이용상품내역</span></li>
+                    </ol>
+                </nav>
+                <section class="visual-container">
+                    <h2>이용상품내역</h2>
+                </section>
+                <section class="page-container MGC-MMG-UST-001">
+                    <div class="text-content">
+                        <h3>이용상품내역 목록</h3>
+                    </div>
+                    <form>
+                        <fieldset class="form-content">
+                            <div class="form-wrap bg-gray">
+                                <fieldset>
+                                    <legend>이용상품내역 목록 라디오</legend>
+                                    <label class="radio">
+                                        <input type="radio" name="use" value="" checked="">
+                                        <span>전체</span>
+                                    </label>
+    
+                                    <label class="radio">
+                                        <input type="radio" name="use" value="">
+                                        <span>진행</span>
+                                    </label>
+    
+                                    <label class="radio">
+                                        <input type="radio" name="use" value="">
+                                        <span>종료</span>
+                                    </label>
+
+                                </fieldset>
+                                <button class="btn-form">조회</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <div class="text-content">
+                        <div class="table-content">
+                            <p class="caption">기준일 : 2025-09-22 / 단위: 원</p>
+                            <table>
+                                <caption>캡션내용</caption>
+                                <colgroup>
+                                    <col style="width:5%">
+                                    <col style="width:10%">
+                                    <col style="width:11%">
+                                    <col style="width:10%">
+                                    <col style="width:10%">
+                                    <col style="width:7%">
+                                    <col style="width:9%">
+                                    <col style="width:7%">
+                                    <col style="width:5%">
+                                    <col style="width:6%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" rowspan="2">No.</th>
+                                        <th scope="col" rowspan="2">실행번호</th>
+                                        <th scope="col" rowspan="2">공급자명</th>
+                                        <th scope="col" rowspan="2">상품명</th>
+                                        <th scope="col" rowspan="2">여신금액</th>
+                                        <th scope="col" rowspan="2">잔여회차/총회차</th>
+                                        <th scope="col">실행일</th>
+                                        <th scope="col">최근납입일</th>
+                                        <th scope="col" rowspan="2">전액</th>
+                                        <th scope="col">진행상태</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" class="bor-l">만기일</th>
+                                        <th scope="col">차기납입일</th>
+                                        <th scope="col">진행상태</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="2">1</td>
+                                        <td rowspan="2">MI14002240001</td>
+                                        <td rowspan="2">충면화광기고추손도</td>
+                                        <td rowspan="2">내구재/헬스케어</td>
+                                        <td rowspan="2">1,800,000</td>
+                                        <td rowspan="2">6/18</td>
+                                        <td>2014-02-27</td>
+                                        <td>134,050</td>
+                                        <td rowspan="2">0</td>
+                                        <td>중도상환</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="bor-l">2015-02-27</td>
+                                        <td>134,050</td>
+                                        <td>정상</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="4" class="sum">합계</td>
+                                        <td colspan="2">1,800,000</td>
+                                        <td colspan="2"></td>
+                                        <td>0</td>
+                                        <td></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                            <div class="info-list">
+                                <ul class="m-dot">
+                                    <li> 납입상태가 연체일 경우 납입상태의 “연체"를 클릭하시면 연체내역을 확인 하실 수 있습니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="bottom-container">
+                    <div class="btn-content cta">
+                        <div class="button-group">
+                            <a herf="javascript:void(0);" class="btn-primary">출력</a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <div data-include-path="../../views/COMMON/footer.html"></div>
+    </div>
+</body>
+</html>
+ 
