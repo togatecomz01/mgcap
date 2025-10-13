@@ -57,9 +57,9 @@ main.contentWrap > .location-container { padding:24px 0; width:100%;  }
 /*---------------------------------------------
     #¼­ºêÀÌ¹ÌÁö
 ---------------------------------------------*/
-.visual-container > * { padding-bottom:20px; text-align:center; }
+.visual-container > * { text-align:center; }
 .visual-container h2 { font-size:var(--font42); }
-.visual-container p { font-size:var(--font20); color:var(--color-6); }
+.visual-container p { padding:20px 0; font-size:var(--font20); color:var(--color-6); }
 
 /*---------------------------------------------
     #ÄÁÅÙÃ÷
