@@ -83,7 +83,7 @@ function menuToggle() {
     }
 }
 
-// 검색 토글
+// 검색 토글 20251010 수정
 function searchToggle() {
     const searchBtn = document.querySelector('.search-btn');
     const allSearch = document.getElementById('allSearch');
@@ -108,23 +108,38 @@ function searchToggle() {
             });
         }
 
-        const winWidth = window.innerWidth;
-
-        if (winWidth <= 480) {
-            if (allMenuSearchBtn && allSearch) {
-                allMenuSearchBtn.addEventListener('click', function () {
-                    allSearch.classList.add('on');
-                    allMenuSearchBtn.style.display = 'none';
-                })
-                if (allSearchCloseBtn) {
-                    allSearchCloseBtn.addEventListener('click', function () {
-                        allSearch.classList.remove('on');
-                        allMenuSearchBtn.style.display = 'inline-block';
-                    })
-                }
-            }
-
+        // 모바일 검색
+        if (allMenuSearchBtn && allSearchCloseBtn) {
+            allMenuSearchBtn.addEventListener('click', function () {
+                console.log('click');
+                allSearch.classList.add('on');
+                allMenuSearchBtn.style.display = 'none';
+            });
+            
+            allSearchCloseBtn.addEventListener('click', function () {
+                allSearch.classList.remove('on');
+                allMenuSearchBtn.style.display = 'inline-block';
+            });
         }
+
+        function handleResize() {
+            if (window.innerWidth < 480) {
+                console.log('이하');
+                searchBtn.style.display = 'none';
+            } else {
+                searchBtn.style.display = 'inline-block';
+            }
+        }
+
+        // 초기 실행
+        handleResize();
+
+        // resize
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(handleResize, 10);
+        });
     }
 }
 
