@@ -299,10 +299,6 @@ body{
 .MGC-MMG-UST-001 .text-content + .text-content,
 .MGC-MMG-UST-002 .text-content + .text-content { padding-top:20px; }
 
-/* 테이블 스크롤 오른쪽 쉐도우 */
-.MGC-MMG-UST-001 .text-content .gradient-overlay,
-.MGC-MMG-UST-002 .text-content .gradient-overlay { display:none; }
-
 /* 테이블 아래 info */
 .MGC-MMG-UST-001 .text-content .m-dot li:first-child,
 .MGC-MMG-UST-002 .text-content .m-dot li:first-child { margin:0; }
@@ -357,7 +353,8 @@ body{
 .MGC-MMG-UST-001 .form-wrap.bg-gray .btn-form { padding:0 10px; max-width:82px; height:48px; border:0; border-radius:4px; font-size:var(--font16); font-weight:var(--font-w-m); color:var(--white); background-color:var(--primary); }
 
 .MGC-MMG-UST-001 .text-content .caption,
-.MGC-MMG-UST-002 .text-content .caption { padding-bottom:24px; font-size:var(--font16); font-weight:var(--font-w-r); color:var(--color-6); text-align:right; }
+.MGC-MMG-UST-002 .text-content .caption,
+.MGC-MMG-UST-003 .text-content .caption { padding-bottom:24px; font-size:var(--font16); font-weight:var(--font-w-r); color:var(--color-6); text-align:right; }
 .MGC-MMG-UST-001 .text-content .table-content table tfoot { background-color:#EDF9FF; }
 .MGC-MMG-UST-001 .text-content .table-content table tfoot td { padding:10px; }
 .MGC-MMG-UST-001 .text-content .table-content table tfoot .sum { font-weight:var(--font-w-m); color:var(--white); background-color:var(--primary); }
@@ -369,20 +366,7 @@ body{
     #미디어쿼리
 ---------------------------------------------*/
 @media (max-width:1200px){
-    /*---------------------------------------------
-        #MY MG
-    ---------------------------------------------*/
-    /* 테이블 스크롤 공통 */
-        .MGC-MMG-UST-001 .text-content,
-        .MGC-MMG-UST-002 .text-content:has(table) { position:relative; }
-    .MGC-MMG-UST-001 .text-content .table-content,
-    .MGC-MMG-UST-002 .text-content .table-content { position:relative; overflow-x:auto; }
-    .MGC-MMG-UST-001 .text-content .table-content table,
-    .MGC-MMG-UST-002 .text-content .table-content table { table-layout:auto; }
-    .MGC-MMG-UST-001 .text-content .gradient-overlay,
-    .MGC-MMG-UST-002 .text-content .gradient-overlay { position:absolute; top:43px; right:0; display:block; width:15px; height:calc(100% - 37px); background:linear-gradient(270deg, rgba(255, 255, 255, 0.99) 2%, rgba(255, 255, 255, 0.00) 95.31%);pointer-events:none; z-index:1; transform:translateX(var(--scroll-left, 0px)); }
-    /* 납입내역 */
-    .MGC-MMG-UST-002 .text-content + .text-content .gradient-overlay { top:73px; height:calc(100% - 67px); }
+    
 }
 
 @media screen and (max-width:480px) {
@@ -398,6 +382,7 @@ body{
     .MGC-MMG-UST-001 .form-wrap .btn-form { margin-top:36px; min-width:130px; }
 
     .MGC-MMG-UST-001 .text-content .caption,
-    .MGC-MMG-UST-002 .text-content .caption { padding-bottom:18px; }
+    .MGC-MMG-UST-002 .text-content .caption,
+    .MGC-MMG-UST-003 .text-content .caption { padding-bottom:18px; }
 
 }

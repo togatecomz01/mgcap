@@ -27,6 +27,11 @@ table.col-row tbody th { background:transparent; font-size:1rem; }
 
 table.td-al td { text-align:left; }
 
+@media (max-width:1200px){
+    .table-content:has(.mo-s) { overflow-x:auto; }
+    .table-content:has(.mo-s) table { table-layout:auto; }
+
+}
 
 @media (max-width: 760px) {
     table th, 
