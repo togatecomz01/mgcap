@@ -23,6 +23,7 @@ body{
  --ico-cst-07:url("../../images/content/PRT/w/ico_CST-008_7.png"); /**은행 거절 아이콘**/
 
  --ico-info:url("../../images/com/svg/ico_info_guide.svg");/** 유의사항 안내 **/
+ --ico-arrow-black:url("../../images/content/ico_arrow_black.svg");/** 절차 화살표 black **/
 
 
   /** 모집인 조회 MGC-PRT-CST-012 **/
@@ -120,12 +121,15 @@ body{
     #고객센터
 ---------------------------------------------*/
   /******고객센터-채무조정안내**/
-  .MGC-CST-TRMNPL-008 .sub-process-content.border-none ul { padding: 0; border: 0; }
-  .MGC-CST-TRMNPL-008 .sub-process-content ul { flex-wrap: wrap; gap: 16px; }
-  .MGC-CST-TRMNPL-008 .sub-process-content ul dl { width: 180px; height: 188px; border: 1px solid var(--color-1); text-align: center; }
-  .MGC-CST-TRMNPL-008 .sub-process-content ul dl dt { padding: 10px 0; width: 100%; border-bottom: 1px solid var(--color-1); background-color: var(--color-c); }
-  .MGC-CST-TRMNPL-008 .sub-process-content ul dl dd { margin-top: 0; }
-  .MGC-CST-TRMNPL-008 .sub-process-content ul dl dd span { display: block; }
+  .MGC-CST-TRMNPL-008 .sub-process-content.bo-none ul { padding: 0; border: 0; }
+  .MGC-CST-TRMNPL-008 .sub-process-content ul { flex-wrap: wrap; gap: 24px 0; }
+  .MGC-CST-TRMNPL-008 .sub-process-content ul li::after { margin: 10px; width: 32px; height: 32px; background-image: var(--ico-arrow-black); background-size: auto; }
+  .MGC-CST-TRMNPL-008 .sub-process-content ul dl { width: 182px; height: 190px; border: 1px solid var(--color-45); text-align: center; }
+  .MGC-CST-TRMNPL-008 .sub-process-content ul dl dt { padding: 8px 0; width: 100%; border-bottom: 1px solid var(--color-45); background-color: var(--color-e); color: var(--color-2); }
+  .MGC-CST-TRMNPL-008 .sub-process-content ul dl dd { margin: 12px 22px; }
+  .MGC-CST-TRMNPL-008 .sub-process-content ul dl dd span { display: block; font-size: var(--font16); word-break: break-all; overflow-wrap: break-word; }
+  .MGC-CST-TRMNPL-008 .sub-process-content ul dl dd span.txt-less-2 { font-size: calc(var(--font16) - 2px); }
+  .MGC-CST-TRMNPL-008 .sub-process-content ul dl dd span+span { margin-top: 8px; }
 
   /******고객센터-개인정보처리방침**/
   .MGC-CST-TRMNPL-010 .button-content .lnk-group { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
@@ -215,7 +219,6 @@ body{
   .MGC-INT-CMP-024 .process-content li:nth-child(3) .step p { background:var(--process-step3-bg); }
   .MGC-INT-CMP-024 .process-content li:nth-child(4) .step p { background:var(--process-step4-bg); }
   .MGC-INT-CMP-024 .process-content li:nth-child(5) .step p { background:var(--process-step5-bg); }
-
   /* 유의사항 안내 */
   .MGC-INT-CMP-024 .note-content .text-content { padding: 32px 40px; border: var(--board); }
   .MGC-INT-CMP-024 .note-content .text-content .tit { position:relative; padding-left:55px; padding-bottom:29px; font-size:var(--font28); font-weight:var(--font-w-m); color:var(--color-2); }
@@ -268,9 +271,14 @@ body{
 .MGC-CST-TRMNPL-001 .table-group .mo tbody tr td {text-align: center;}
 
 /******고객센터-채무조정안내**/
-.MGC-CST-TRMNPL-008 .sub-process-content ul { display: inline-flex; }
-.MGC-CST-TRMNPL-008 .sub-process-content ul li { display: inline-flex; }
-.MGC-CST-TRMNPL-008 .sub-process-content ul li::after { content: ""; display: block; margin: 0 11px; width: 50px; height: 15px; background-image: var(--ico-arrow); background-repeat: no-repeat; background-position: center; background-size: 48px auto; }
+.MGC-CST-TRMNPL-008 .sub-process-content ul { display: inline-flex; gap: 20px 10px; }
+.MGC-CST-TRMNPL-008 .sub-process-content ul li { display: inline-flex; margin-bottom: 0; }
+.MGC-CST-TRMNPL-008 .sub-process-content ul li::after { background-image: none; }
+.MGC-CST-TRMNPL-008 .sub-process-content ul dl { width: 156px; height: 162px; }
+.MGC-CST-TRMNPL-008 .sub-process-content ul dl dt { padding: 6px 0; font-size: var(--font16) }
+.MGC-CST-TRMNPL-008 .sub-process-content ul dl dd { margin: 8px 18px; }
+.MGC-CST-TRMNPL-008 .sub-process-content ul dl dd span { font-size: var(--font14) }
+.MGC-CST-TRMNPL-008 .sub-process-content ul dl dd span.txt-less-2 { font-size: calc(var(--font14) - 2px); }
 
 /******고객센터-개인정보처리방침**/
 .MGC-CST-TRMNPL-010 .button-content .lnk-group { gap: 10px; }
@@ -307,7 +315,6 @@ body{
 .MGC-INT-CMP-002 .info-card dt { font-size: var(--font16); }
 .MGC-INT-CMP-002 .info-card dd { font-size: var(--font14); }
 /* button-content */
-.page-container.MGC-INT-CMP-002 > [class*="-content"] >[class*="-group"]:last-of-type {margin-top: 4px;}
 .MGC-INT-CMP-002 .button-content .lnk-group { display: block; }
 .MGC-INT-CMP-002 .button-content .lnk-group a { height: 102px; font-size: var(--font22) }
 .MGC-INT-CMP-002 .button-content .lnk-group a+a { margin-top: 20px; }
