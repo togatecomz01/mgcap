@@ -307,7 +307,8 @@ body{
     #인증센터, MY MG 공통
 ---------------------------------------------*/
 .MGC-AUTH-002 .text-content + .table-content,
-.MGC-MMG-UST-002 .text-content + .text-content { border-top:0; }
+.MGC-MMG-UST-002 .text-content + .text-content,
+.MGC-MMG-UST-003 .text-content + .text-content { border-top:0; }
 
 .MGC-MMG-UST-001 .text-content + .text-content,
 .MGC-MMG-UST-002 .text-content + .text-content { padding-top:20px; }
@@ -360,14 +361,12 @@ body{
     #MY MG
 ---------------------------------------------*/
 /** 이용상품내역 **/
-.MGC-MMG-UST-001 .form-wrap.bg-gray { display:flex; justify-content: space-between; flex-direction: row; margin-bottom:90px; padding:32px 40px; width:100%; border-radius:12px; background-color:#EEF2F7; }
-.MGC-MMG-UST-001 .form-wrap.bg-gray fieldset { display:flex; }
-.MGC-MMG-UST-001 .form-wrap.bg-gray fieldset label { margin:0; }
-.MGC-MMG-UST-001 .form-wrap.bg-gray .btn-form { padding:0 10px; max-width:82px; height:48px; border:0; border-radius:4px; font-size:var(--font16); font-weight:var(--font-w-m); color:var(--white); background-color:var(--primary); }
-
+/* 테이블 위에 텍스트 */
 .MGC-MMG-UST-001 .text-content .caption,
 .MGC-MMG-UST-002 .text-content .caption,
 .MGC-MMG-UST-003 .text-content .caption { padding-bottom:24px; font-size:var(--font16); font-weight:var(--font-w-r); color:var(--color-6); text-align:right; }
+
+/* 테이블 푸터 */
 .MGC-MMG-UST-001 .text-content .table-content table tfoot { background-color:#EDF9FF; }
 .MGC-MMG-UST-001 .text-content .table-content table tfoot td { padding:10px; }
 .MGC-MMG-UST-001 .text-content .table-content table tfoot .sum { font-weight:var(--font-w-m); color:var(--white); background-color:var(--primary); }
@@ -379,7 +378,7 @@ body{
     #미디어쿼리
 ---------------------------------------------*/
 @media (max-width:1200px){
-    
+
 }
 
 @media screen and (max-width:480px) {
