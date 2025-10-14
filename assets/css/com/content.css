@@ -331,12 +331,26 @@ body{
 .MGC-MMG-UST-003 .text-content + .text-content,
 .MGC-MMG-UST-004 .text-content + .text-content,
 .MGC-MMG-UST-005 .text-content + .text-content,
-.MGC-MMG-UST-006 .text-content + .text-content { border-top:0; }
+.MGC-MMG-UST-006 .text-content + .text-content,
+.MGC-MMG-BILINF-001 .text-content + .text-content { border-top:0; }
+.MGC-MMG-BILINF-002 .text-content + .text-content { border-top:0; }
 
-.MGC-MMG-UST-001 .text-content + .text-content,
-.MGC-MMG-UST-002 .text-content + .text-content,
-.MGC-MMG-UST-004 .text-content + .text-content,
-.MGC-MMG-UST-006 .text-content + .text-content { padding-top:20px; }
+.MGC-AUTH-004 .text-content + .info-content,
+.MGC-MMG-UST-001 .text-content + .info-content,
+.MGC-MMG-UST-002 .text-content + .info-content,
+.MGC-MMG-UST-004 .text-content + .info-content,
+.MGC-MMG-UST-006 .text-content + .info-content,
+.MGC-MMG-BILINF-001 .text-content + .info-content,
+.MGC-MMG-BILINF-002 .text-content + .info-content { padding-top:20px; }
+
+/* 테이블 아래 info */
+.MGC-AUTH-004 .info-content .m-dot li:first-child,
+.MGC-MMG-UST-001 .info-content .m-dot li:first-child,
+.MGC-MMG-UST-002 .info-content .m-dot li:first-child,
+.MGC-MMG-UST-004 .info-content .m-dot li:first-child,
+.MGC-MMG-UST-006 .info-content .m-dot li:first-child,
+.MGC-MMG-BILINF-001 .info-content .m-dot li:first-child,
+.MGC-MMG-BILINF-002 .info-content .m-dot li:first-child { margin:0; }
 
 /* 테이블 위에 텍스트 */
 .MGC-MMG-UST-001 .text-content .caption,
@@ -344,16 +358,19 @@ body{
 .MGC-MMG-UST-003 .text-content .caption,
 .MGC-MMG-UST-004 .text-content .caption,
 .MGC-MMG-UST-005 .text-content .caption,
-.MGC-MMG-UST-006 .text-content .caption { padding-bottom:20px; font-size:var(--font16); font-weight:var(--font-w-r); color:var(--color-6); text-align:right; }
+.MGC-MMG-UST-006 .text-content .caption,
+.MGC-MMG-BILINF-001 .text-content .caption { padding-bottom:20px; font-size:var(--font16); font-weight:var(--font-w-r); color:var(--color-6); text-align:right; }
 
 /* 테이블 푸터 */
-.MGC-MMG-UST-001 .text-content .table-content table tfoot,
-.MGC-MMG-UST-003 .text-content .table-content table tfoot,
-.MGC-MMG-UST-005 .text-content .table-content table tfoot { background-color:#EDF9FF; }
+.MGC-MMG-UST-001 .text-content .table-content table tfoot tr:only-child,
+.MGC-MMG-UST-003 .text-content .table-content table tfoot tr:only-child,
+.MGC-MMG-UST-005 .text-content .table-content table tfoot tr:only-child,
+.MGC-MMG-BILINF-001 .text-content .table-content table tfoot tr:last-child { background-color:#EDF9FF; }
 .MGC-MMG-UST-001 .text-content .table-content table tfoot td { padding:10px; }
 .MGC-MMG-UST-001 .text-content .table-content table tfoot .sum,
 .MGC-MMG-UST-003 .text-content .table-content table tfoot .sum,
-.MGC-MMG-UST-005 .text-content .table-content table tfoot .sum { font-weight:var(--font-w-m); color:var(--white); background-color:var(--primary); }
+.MGC-MMG-UST-005 .text-content .table-content table tfoot .sum,
+.MGC-MMG-BILINF-001 .text-content .table-content table tfoot .sum { font-weight:var(--font-w-m); color:var(--white); background-color:var(--primary); }
 
 /*---------------------------------------------
     #인증센터
@@ -387,7 +404,6 @@ body{
 .MGC-AUTH-004 .table-content .caption p { padding-bottom:24px; font-size:var(--font16); font-weight:var(--font-w-m); }
 .MGC-AUTH-004 .table-content .caption p + p { margin:0; }
 .MGC-AUTH-004 .table-content .caption p span { color:var(--primary); }
-.MGC-AUTH-004 .table-content .info-list { padding-top:18px; }
 
 /*---------------------------------------------
     #MY MG
@@ -401,7 +417,7 @@ body{
 @media (max-width:1200px){
     /*---------------------------------------------
     #회사소개
----------------------------------------------*/
+    ---------------------------------------------*/
     /* 회사소개 - ceo인사말 (MGC-INT-CMP-001) */
     .MGC-INT-CMP-001 { max-width: none !important; padding-left: 0 !important; padding-right: 0 !important }
     .MGC-INT-CMP-001 .quote-content,
@@ -421,6 +437,18 @@ body{
     .MGC-INT-CMP-001 .greeting-group .ceo-text em, .MGC-INT-CMP-001 .greeting-group .ceo-text p { color: inherit; }
 }
 
+@media (max-width:780px){
+    /*---------------------------------------------
+    #MY MG
+    ---------------------------------------------*/
+    /** 청구내역조회 **/
+    .MGC-MMG-BILINF-002 .mo colgroup { display:none; }
+    .MGC-MMG-BILINF-002 .mo tbody { display:block; width:100%; }
+    .MGC-MMG-BILINF-002 .mo tbody tr { display:flex; flex-wrap:wrap; align-items:stretch; width:100%; font-size:0; }
+    .MGC-MMG-BILINF-002 .mo tbody th { display:inline-flex; justify-content: center; align-items:center; padding:10px; width:30%; min-height:24px; border-left:0; }
+    .MGC-MMG-BILINF-002 .mo tbody td { display:inline-flex; flex-direction:column; justify-content:center; padding:10px; width:calc(70% - 4px); min-height:24px; border-left:0; }
+}
+
 @media screen and (max-width:480px) {
     /*---------------------------------------------
         #MY MG
@@ -436,5 +464,4 @@ body{
     .MGC-MMG-UST-001 .text-content .caption,
     .MGC-MMG-UST-002 .text-content .caption,
     .MGC-MMG-UST-003 .text-content .caption { padding-bottom:18px; }
-
 }

@@ -112,17 +112,20 @@ h4.tit-diamond::before { content:"¡ß"; display:inline; color:var(--primary); }
 .text-content p.square:before,
 .text-content .square li:before,
 .text-content .square dd:before { content:"¡à"; }
-.text-content p.dot, .text-content .dot li, .text-content .dot dt { position:relative; padding-left:15px; }
+.text-content p.dot, .text-content .dot li, .text-content .dot dt, .info-content .dot li { position:relative; padding-left:15px; }
 .text-content .dot li { margin-bottom:18px; }
 .text-content p.dot:before,
 .text-content .dot li:before,
-.text-content .dot dt:before { content:""; display:inline-block; position:absolute; left:5px; top:10px; width:5px; height:5px; border-radius:10px; background:var(--color-45); margin-right:7px; }
+.text-content .dot dt:before,
+.info-content .dot li:before { content:""; display:inline-block; position:absolute; left:5px; top:10px; width:5px; height:5px; border-radius:10px; background:var(--color-45); margin-right:7px; }
 .text-content p.m-dot,
 .text-content .m-dot dd,
-.text-content .m-dot li { color:var(--color-6);  margin-top:12px; }
+.text-content .m-dot li,
+.info-content .m-dot li { color:var(--color-6);  margin-top:12px; }
 .text-content p.m-dot::before,
 .text-content .m-dot dd::before,
-.text-content .m-dot li::before { content:"¡¤"; margin-right:5px; }
+.text-content .m-dot li::before,
+.info-content .m-dot li::before { content:"¡¤"; margin-right:5px; }
 .text-content .dot li:last-of-type,
 .text-content .m-dot li:last-of-type,
 .text-content .dot li:last-of-type { margin-bottom:0; }
