@@ -66,14 +66,10 @@
                         </div>
                     </div>
                     <div class="tab-container jsTab">
-                        <ul class="tab-list depth2">
-                            <li class="tab-item active" data-tab="regular-recruit" title="선택됨">
-                                <button type="button">정기채용</button>
-                            </li>
-                            <li class="tab-item" data-tab="senior-recruit">
-                                <button type="button">경력직채용</button>
-                            </li>
-                        </ul>
+                        <nav class="tab-list depth2">
+                            <button type="button" class="tab-item active" data-tab="regular-recruit" title="선택됨" aria-selected="true">정기채용</button>
+                            <button type="button" class="tab-item" data-tab="senior-recruit" aria-selected="false">경력직채용</button>
+                        </nav>
                         <div class="tab-content">
                             <div class="process-content">
                                 <div id="regular-recruit" class="tab-panel active">
