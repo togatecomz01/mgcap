@@ -383,10 +383,6 @@ main.contentWrap > .bottom-container { margin-top:72px; }
 	.gnb .header-l > ul,
 	.gnb .header-r > nav { display:none; }
 	.header-btn-wrap button { width:30px; height:30px; }
-	.header-r .header-btn-wrap label.toggle { display:block; }
-	.header-btn-wrap .menu-btn { background-size:auto 30px; }
-	.header-btn-wrap .search-btn,
-	.header-btn-wrap .close-btn { display:none; }
 
 	/*---------------------------------------------
 		#г╙ем
