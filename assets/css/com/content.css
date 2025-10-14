@@ -331,14 +331,40 @@ body{
     #MY MG
 ---------------------------------------------*/
 /** 이용상품내역 **/
-.MGC-MMG-UST-001 .form-wrap.bg-gray { display:flex; justify-content: space-between; flex-direction: row; margin-bottom:90px; padding:32px 40px; border-radius:12px; background-color:#EEF2F7; }
+.MGC-MMG-UST-001 .form-wrap.bg-gray { display:flex; justify-content: space-between; flex-direction: row; margin-bottom:90px; padding:32px 40px; width:100%; border-radius:12px; background-color:#EEF2F7; }
 .MGC-MMG-UST-001 .form-wrap.bg-gray fieldset { display:flex; }
 .MGC-MMG-UST-001 .form-wrap.bg-gray fieldset label { margin:0; }
 .MGC-MMG-UST-001 .form-wrap.bg-gray .btn-form { padding:0 10px; max-width:82px; height:48px; border:0; border-radius:4px; font-size:var(--font16); font-weight:var(--font-w-m); color:var(--white); background-color:var(--primary); }
 
-.MGC-MMG-UST-001 .table-content .caption { padding-bottom:24px; font-size:var(--font16); font-weight:var(--font-w-r); color:var(--color-6); text-align:right; }
-.MGC-MMG-UST-001 .table-content table tfoot { background-color:#EDF9FF; }
-.MGC-MMG-UST-001 .table-content table tfoot td { padding:10px; }
-.MGC-MMG-UST-001 .table-content table tfoot .sum { font-weight:var(--font-w-m); color:var(--white); background-color:var(--primary); }
-.MGC-MMG-UST-001 .table-content .info-list { padding-top:20px; }
-.MGC-MMG-UST-001 .table-content .m-dot li:only-child { margin:0; }
+.MGC-MMG-UST-001 .text-content .caption { padding-bottom:24px; font-size:var(--font16); font-weight:var(--font-w-r); color:var(--color-6); text-align:right; }
+.MGC-MMG-UST-001 .text-content .table-content table tfoot { background-color:#EDF9FF; }
+.MGC-MMG-UST-001 .text-content .table-content table tfoot td { padding:10px; }
+.MGC-MMG-UST-001 .text-content .table-content table tfoot .sum { font-weight:var(--font-w-m); color:var(--white); background-color:var(--primary); }
+.MGC-MMG-UST-001 .text-content .gradient-overlay { display:none; }
+.MGC-MMG-UST-001 .text-content .info-list { padding-top:20px; }
+.MGC-MMG-UST-001 .text-content .m-dot li:only-child { margin:0; }
+
+/*---------------------------------------------
+    #미디어쿼리
+---------------------------------------------*/
+@media (max-width:1200px){
+  /*---------------------------------------------
+    #MY MG
+  ---------------------------------------------*/
+/** 이용상품내역 **/
+	.MGC-MMG-UST-001 .text-content { position:relative; }
+  .MGC-MMG-UST-001 .text-content .table-content { position:relative; overflow-x:auto; }
+  .MGC-MMG-UST-001 .text-content .table-content table { table-layout:auto; }
+  .MGC-MMG-UST-001 .text-content .gradient-overlay { position:absolute; top:37px; right:0; display:block; width:32px; height:calc(100% - 90px); background:linear-gradient(270deg, rgba(255, 255, 255, 0.99) 50%, rgba(255, 255, 255, 0.00) 95.31%);pointer-events:none; z-index:1; transform:translateX(var(--scroll-left, 0px)); }
+}
+
+@media screen and (max-width:480px) {
+  /*---------------------------------------------
+    #MY MG
+  ---------------------------------------------*/
+  /** 이용상품내역 **/
+  .MGC-MMG-UST-001 .form-wrap.bg-gray { display:block; text-align:center; margin-bottom:32px; }
+  .MGC-MMG-UST-001 .form-wrap legend { position:unset; visibility:unset; padding-bottom:18px; text-align:left; font-weight:var(--font-w-b); color:var(--color-2); }
+  .MGC-MMG-UST-001 .form-wrap .btn-form { margin-top:36px; min-width:130px; }
+  .MGC-MMG-UST-001 .text-content .caption { padding-bottom:18px; }
+}
