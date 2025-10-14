@@ -301,6 +301,17 @@ body{
 .MGC-INT-CMP-002 .button-content .lnk-group a { height: 102px; }
 .MGC-INT-CMP-002 .button-content .lnk-group a+a { margin-top: 20px; }
 
+/* 회사소개 - 회사연혁 (MGC-INT-CMP-003) */
+.MGC-INT-CMP-003 .history-group .history-range{display:none}
+.MGC-INT-CMP-003 .history-group{gap:0}
+.MGC-INT-CMP-003 .timeline-list{width:100%}
+.MGC-INT-CMP-003 .timeline-list .date{width:100%;flex:0 0 20px}
+.MGC-INT-CMP-003 .timeline-list li::before{left:0}
+.MGC-INT-CMP-003 .timeline-list li::after{left:3px}
+.MGC-INT-CMP-003 .timeline-list dt{padding-left:30px;font-size:var(--font22)}
+.MGC-INT-CMP-003 .timeline-list dd{padding-left:30px;flex-direction:column;font-size:var(--font18)}
+.MGC-INT-CMP-003 .timeline-list .date{margin-bottom:12px;color:var(--color-2)}
+
 /******회사소개-채용안내 및 절차**/
 .MGC-INT-CMP-024 ul.diamond-box { padding: 12px 16px; }
 .MGC-INT-CMP-024 .note-content .text-content { padding: 20px }
