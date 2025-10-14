@@ -140,7 +140,7 @@ body{
 /* 회사소개 - CEO 인사말 (MGC-INT-CMP-001) */
   .MGC-INT-CMP-001 { padding-top: 0 !important; }
   .MGC-INT-CMP-001 .quote-content { padding-top: 0; border: none; }
-  .MGC-INT-CMP-001 .br-mo {display: none}
+  .MGC-INT-CMP-001 .br-mo {display: none} 
   .MGC-INT-CMP-001 .quote-group { padding: 10px 0; text-align: center; }
   .MGC-INT-CMP-001 .quote-group blockquote { position: relative; display: inline-block; padding: 30px 0; }
   .MGC-INT-CMP-001 .quote-group blockquote p { padding: 15px 0; font-size: var(--font28); line-height: 1.6; }
