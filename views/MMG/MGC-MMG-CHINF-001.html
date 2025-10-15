@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>나의 정보변경&gt;My MG&gt;홈</title>
+
+    <meta name="keywords" content="MG캐피탈" />
+    <meta name="copyright" content="copyrights 2025 MG캐피탈" />
+    <meta name="viewport" content="width=device-width" />
+    <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="No-Cache" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico"/>
+    <link rel="stylesheet" href="../../assets/css/ui-util.css" />
+    <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+    <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+    <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
+    <script src="../../assets/js/include.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div data-include-path="../../views/COMMON/header.html"></div>
+        <div class="bodyWrap">
+            <main class="contentWrap">
+                <nav class="location-container">
+                    <ol class="breadcrumb">
+                        <li><span class="home">홈</span></li>
+                        <li><span>MY MG</span></li>
+                        <li><span>나의 정보변경</span></li>
+                    </ol>
+                </nav>
+                <section class="visual-container">
+                    <h2>나의 정보변경</h2>
+                </section>
+                <section class="page-container MGC-MMG-CHINF-001">
+
+                    <div class="text-content">
+                        <div class="table-content">
+                            <h3 class="table-tit">기본정보</h3>
+                            <table>
+                                <caption>이름, 주민번호, 아이디, 현재 비밀번호, 휴대폰, SMS 수신동의, 자택전화번호, 자택주소가 포함된 기본정보 테이블</caption>
+                                <colgroup>
+                                    <col style="width:20%">
+                                    <col style="width:80%">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>이름</th>
+                                        <td class="tal">홍길동</td>
+                                    </tr>
+                                    <tr>
+                                        <th>주민번호</th>
+                                        <td class="tal">990143-*******</td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <th>아이디</th>
+                                        <td class="tal">mtr9908</td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <th>현재 비밀번호</th>
+                                        <td class="tal">
+                                            <!-- 여기 form 태그로 묶어야하는가? -->
+                                            <fieldset class="form-content">
+                                                <div class="form-wrap">
+                                                    <div class="form-group">
+                                                        <div class="flex-row">
+                                                            <input id="password-input" type="text" name="text" class="form-control" required />
+                                                            <button class="btn-form">비밀번호 변경</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>휴대폰</th>
+                                        <td class="tal">
+                                            <fieldset class="form-content">
+                                                <legend>핸드폰 번호 입력</legend>
+                                                <div class="form-wrap">
+                                                    <div class="form-group">
+                                                        <div class="flex-row">
+                                                            <div class="info-phone">
+                                                                <select id="phn-first" required="" title="" required>
+                                                                    <option value="0">010</option>
+                                                                    <option value="1">017</option>
+                                                                    <option value="2">019</option>
+                                                                </select>
+                                                                <input id="phn-second" name="phn-second" type="tel" inputmode="numeric" autocomplete="tel-local-prefix" pattern="[0-9]{3,4}" maxlength="4" aria-describedby="desc-phone" required>
+                                                                <input id="phn-third" name="phn-third" type="tel" inputmode="numeric" autocomplete="tel-local-suffix" pattern="[0-9]{4}" maxlength="4" aria-describedby="desc-phone" required>
+                                                            </div>
+                                                            <button class="btn-form pad">SMS인증후 변경</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>휴대폰 (SMS)<br>수신동의</th>
+                                        <td class="tal">
+                                            <div class="form-content">
+                                                <div class="form-wrap">
+                                                    <fieldset class="form-group">
+                                                        <legend>휴대폰(SMS) 수신동의 라디오박스</legend>
+                                                        <label class="radio">
+                                                            <span>동의</span>
+                                                            <input type="radio" name="row2-active" value="" checked>
+                                                        </label>
+                                                        <label class="radio">
+                                                            <span>거절</span>
+                                                            <input type="radio" name="row2-active" value="">
+                                                        </label>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>자택전화번호</th>
+                                        <td class="tal">
+                                            <fieldset class="form-content">
+                                                <legend>핸드폰 번호 입력</legend>
+                                                <div class="form-wrap">
+                                                    <div class="form-group">
+                                                        <div class="flex-row">
+                                                            <div>
+                                                                <select id="phn-first" required="" title="" required>
+                                                                    <option value="0">선택</option>
+                                                                    <option value="1">02</option>
+                                                                    <option value="2">031</option>
+                                                                </select>
+                                                                <input id="phn-second" name="phn-second" type="tel" value="83**" inputmode="numeric" autocomplete="tel-local-prefix" pattern="[0-9]{3,4}" maxlength="4" aria-describedby="desc-phone" required>
+                                                                <input id="phn-third" name="phn-third" type="tel" value="67**" inputmode="numeric" autocomplete="tel-local-suffix" pattern="[0-9]{4}" maxlength="4" aria-describedby="desc-phone" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>자택주소</th>
+                                        <td class="tal">
+                                            <fieldset class="form-content">
+                                                <legend>자택주소 입력</legend>
+                                                <div class="form-wrap">
+                                                    <div class="form-group address-group">
+                                                        <div class="flex-row">
+                                                            <input type="text" placeholder="우편번호" disabled />
+                                                            <button class="btn-form">우편번호 검색</button>
+                                                        </div>
+                                                        <input type="text" placeholder="도로명 주소" disabled />
+                                                        <input type="text" placeholder="상세주소 입력" />
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="text-content">
+                        <div class="table-content">
+                            <h3 class="table-tit">상세정보</h3>
+                            <table>
+                                <caption></caption>
+                                <colgroup>
+                                    <col style="width:25%">
+                                    <col style="width:25%">
+                                    <col style="width:25%">
+                                    <col style="width:25%">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>분류</th>
+                                        <td colspan="3" class="tal">
+                                            <fieldset class="form-content">
+                                                <div class="form-wrap">
+                                                    <div class="form-group">
+                                                        <input id="" type="date" name="date" required />
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>결혼여부</th>
+                                        <td class="tal">
+                                            <div class="form-content">
+                                                <div class="form-wrap">
+                                                    <fieldset class="form-group">
+                                                        <legend>결혼여부 라디오박스</legend>
+                                                        <label class="radio">
+                                                            <span>예</span>
+                                                            <input type="radio" name="row2-active" value="" checked>
+                                                        </label>
+                                                        <label class="radio">
+                                                            <span>아니오</span>
+                                                            <input type="radio" name="row2-active" value="">
+                                                        </label>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <th>결혼기념일</th>
+                                        <td class="tal">
+                                            <fieldset class="form-content">
+                                                <div class="form-wrap">
+                                                    <div class="form-group">
+                                                        <input id="" type="date" name="date" required />
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>직장명</th>
+                                        <td class="tal">
+                                            <div class="form-content">
+                                                <fieldset class="form-group">
+                                                    <input id="text" type="text" />
+                                                </fieldset>
+                                            </div>
+                                        </td>
+                                        <th>재직기간</th>
+                                        <td class="tal">
+                                            <fieldset class="form-content">
+                                                <div class="form-wrap">
+                                                    <div class="form-group">
+                                                        <div class="flex-row">
+                                                            <select name="year" id="year"></select><span> 년</span>
+                                                            <select name="month" id="month"></select><span> 개월</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>모델</th>
+                                        <td colspan="3" class="tal">물티슈 포장라인</td>
+                                    </tr>
+                                    <tr>
+                                        <th>년식</th>
+                                        <td class="tal">2000</td>
+                                        <th>보관 장소</th>
+                                        <td class="tal">당사창고</td>
+                                    </tr>
+                                    <tr>
+                                        <th>S/N</th>
+                                        <td colspan="3" class="tal">98504-0090-04-00014</td>
+                                    </tr>
+                                    <tr>
+                                        <th>주소</th>
+                                        <td colspan="3" class="tal">서울특별시 성남구 도산대로 306 (논현동 91-3)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="bottom-container">
+                    <div class="btn-content cta round12">
+                        <div class="button-group">
+                            <a herf="javascript:void(0);" class="btn-primary ">목록</a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <div data-include-path="../../views/COMMON/footer.html"></div>
+    </div>
+</body>
+</html>
