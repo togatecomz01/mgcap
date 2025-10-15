@@ -389,6 +389,14 @@ body{
 .MGC-MMG-BILINF-001 .text-content .table-content table tfoot .sum,
 .MGC-MMG-BILINF-003 .text-content .table-content table tfoot .sum { font-weight:var(--font-w-m); color:var(--white); background-color:var(--primary); }
 
+/* 나의 정보 변경 페이지 329번째 줄과 동일, 합칠 예정 */
+.MGC-MMG-CHINF-001 .text-content + .text-content {border-top: 0;}
+
+.MGC-MMG-CHINF-001 .pad {padding: 8px 10px;}
+.MGC-MMG-CHINF-001 .form-group:has(.info-phone) {flex: 0 0 calc(66% - 20px) !important}
+.MGC-MMG-CHINF-001 fieldset.form-group {display: flex;}
+.MGC-MMG-CHINF-001 fieldset.form-group label.radio {margin-bottom: 0; gap: 10px; align-items: flex-start;}
+.MGC-MMG-CHINF-001 .address-group {display: flex; flex-direction: column; gap: 10px; }
 /*---------------------------------------------
     #인증센터
 ---------------------------------------------*/
