@@ -197,8 +197,9 @@ function headerMenu() {
         
         // menu-tit에 마우스 진입
         if (menuButton) {
-            menuButton.addEventListener('mouseenter', openMenu);
-            menuButton.addEventListener('mouseleave', scheduleClose);
+            // 2025.10.15 menu-item에 hover했을 때 submenu 열리게 변경
+            menuItem.addEventListener('mouseenter', openMenu);
+            menuItem.addEventListener('mouseleave', scheduleClose);
             
             // 클릭 이벤트
             menuButton.addEventListener('click', function(e) {
