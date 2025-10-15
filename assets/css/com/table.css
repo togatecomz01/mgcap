@@ -3,6 +3,7 @@
 body {
     --table-border:1px solid var(--color-d);
     --table-th:#F3F6FB;
+    --total:#EDF9FF;
 }
 
 
@@ -26,6 +27,11 @@ table tbody th { border-right:var(--table-border); }
 table.col-row tbody th { background:transparent; font-size:1rem; }
 
 table.td-al td { text-align:left; }
+
+/* Å×ÀÌºí ÇªÅÍ */
+.text-content .table-content table tfoot tr:only-child,
+.text-content .table-content table tfoot tr:last-child { background-color:#EDF9FF; }
+.text-content .table-content table tfoot .sum { font-weight:var(--font-w-m); color:var(--white); background-color:var(--primary); }
 
 @media (max-width:1200px){
     .table-content:has(.mo-s) { overflow-x:auto; }

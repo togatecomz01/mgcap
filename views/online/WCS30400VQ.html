@@ -41,37 +41,41 @@
                 <section class="visual-container">
                     <h2>자동차세조회</h2>
                 </section>
-                <section class="page-container MGC-MMG-PYVHC-001">
+                <section class="page-container WCS10100VQ">
                     <div class="text-content">
                         <h3>자동차세 조회 목록</h3>
                     </div>
                     <form>
                         <fieldset class="form-content">
-                            <legend>납입내역에 대한 조회</legend>
+                            <legend>자동차세에 대한 조회</legend>
                             <div class="form-wrap search-form">
                                 <div class="form-group">
                                     <p class="mo-tit">구분선택</p>
                                     <label class="radio">
                                         <input type="radio" name="use" value="" checked="">
-                                        <span>팩스</span>
+                                        <span>상품번호</span>
                                     </label>
                                     <label class="radio">
                                         <input type="radio" name="use" value="">
-                                        <span>이메일</span>
+                                        <span>차량번호</span>
                                     </label>
                                     <label class="radio">
                                         <input type="radio" name="use" value="">
-                                        <span>우편</span>
+                                        <span>과세기간</span>
                                     </label>
                                 </div>
                                 <div class="group">
                                     <div class="form-group">
-                                        <label>납입기간</label>
-                                        <div class="ph">
-                                            <input id="date-input" type="date" name="date" placeholder="디폴트" />
-                                            <span class="ipt-hyphen">-</span>
-                                            <input id="date-input" type="date" name="date" placeholder="디폴트" />
-                                        </div>
+                                        <label>상품번호</label>
+                                        <select required="" title="">
+                                            <option value="" hidden="">상품번호</option>
+                                            <option value="0">상품번호</option>
+                                            <option value="1">상품번호</option>
+                                            <option value="2">상품번호</option>
+                                            <option value="0">상품번호</option>
+                                            <option value="1">상품번호</option>
+                                            <option value="2">상품번호</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <button class="btn-form">조회</button>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="euc-kr" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>연체내역조회&gt;청구정보조회&gt;MY MG&gt;홈</title>
+    <title>청구내역조회&gt;청구정보조회&gt;MY MG&gt;홈</title>
 
     <meta name="keywords" content="MG캐피탈" />
     <meta name="copyright" content="copyrights 2025 MG캐피탈" />
@@ -35,81 +35,55 @@
                         <li><span class="home">홈</span></li>
                         <li><span>MY MG</span></li>
                         <li><span>청구정보조회</span></li>
-                        <li><span>연체내역조회</span></li>
+                        <li><span>청구내역조회</span></li>
                     </ol>
                 </nav>
                 <section class="visual-container">
-                    <h2>연체내역조회</h2>
+                    <h2>청구내역조회</h2>
                 </section>
-                <section class="page-container MGC-MMG-BILINF-003">
+                <section class="page-container WCS30100VQ">
                     <div class="text-content">
-                        <h3>연체내역조회 목록</h3>
+                        <h3>청구내역조회 목록</h3>
                     </div>
-                    <form>
-                        <fieldset class="form-content">
-                            <legend>연체내역에 대한 조회</legend>
-                            <div class="form-wrap search-form">
-                                <div class="group">
-                                    <div class="form-group">
-                                        <label>기준일</label>
-                                        <div class="ph">
-                                            <input id="date-input" type="date" name="date" placeholder="디폴트" />
-                                            <span class="ipt-hyphen">-</span>
-                                            <input id="date-input" type="date" name="date" placeholder="디폴트" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <button class="btn-form">조회</button>
-                            </div><!--//form-wrap-->
-                        </fieldset>
-                    </form>
                     <div class="text-content">
                         <p class="caption">기준일 : 2025-09-22 / 단위: 원</p>
                         <div class="table-content">
                             <table class="mo-s">
-                                <caption>실행번호, 상품명, 회차, 납부예정일, 스케줄종류, 연체 기산일, 연체일수, 연체 대상금액, 연체이자, 연체 금액합계에 대한 표</caption>
+                                <caption>번호, 실행번호, 납부예정일, 총납입금액, 납입방법에 대한 표</caption>
                                 <colgroup>
                                     <col style="width:10%">
-                                    <col style="width:10%">
-                                    <col style="width:10%">
-                                    <col style="width:10%">
-                                    <col style="width:10%">
-                                    <col style="width:10%">
-                                    <col style="width:10%">
-                                    <col style="width:10%">
-                                    <col style="width:10%">
-                                    <col style="width:10%">
+                                    <col style="width:22.5%">
+                                    <col style="width:22.5%">
+                                    <col style="width:22.5%">
+                                    <col style="width:22.5%">
                                 </colgroup>
                                 <thead>
                                     <tr>
+                                        <th scope="col">No.</th>
                                         <th scope="col">실행번호</th>
+                                        <th scope="col">공급자명</th>
                                         <th scope="col">상품명</th>
-                                        <th scope="col">회차</th>
-                                        <th scope="col">납부예정일</th>
-                                        <th scope="col">스케줄종류</th>
-                                        <th scope="col">연체기산일</th>
-                                        <th scope="col">연체일수</th>
-                                        <th scope="col">연체대상금액</th>
-                                        <th scope="col">연체이자</th>
-                                        <th scope="col">연체금액합계</th>
+                                        <th scope="col">여신금액</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td colspan="10">연체 내역을 확인하시려면 조회를 해주세요</td>
+                                        <td>1</td>
+                                        <td class="underline">MI14002240001</td>
+                                        <td>2020-09-09</td>
+                                        <td>40,000</td>
+                                        <td>CMS 입금</td>
                                     </tr>
                                 </tbody>
                                 <tfoot>
                                     <tr>
-                                        <td class="sum">총합</td>
+                                        <td colspan="3">소계</td>
+                                        <td>40,000</td>
                                         <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" class="sum">총계</td>
+                                        <td>40,000</td>
                                         <td></td>
                                     </tr>
                                 </tfoot>
@@ -119,9 +93,8 @@
                     <div class="info-content">
                         <div class="info-list">
                             <ul class="m-dot">
-                                <li>기타입금은 장기선수금,선수금 등의 합산금액입니다.</li>
-                                <li>기타청구는 과태료,자동차세, 환경개선부담금 등의 합산금액입니다.</li>
-                                <li>납입 기한 내 납부하지 않으실 경우에는 신용정보 집중기관 등에 연체정보가 등록되어 타기관의 거래가 제한되거나 신용거래상 불이익을 받을 수 있음을 알려드립니다.</li>
+                                <li>실행번호를 클릭하시면 세부항목을 볼 수 있습니다.</li>
+                                <li> 금액 기준은 청구서 작성일 기준입니다.</li>
                             </ul>
                         </div>
                     </div>
@@ -132,3 +105,4 @@
     </div>
 </body>
 </html>
+ 

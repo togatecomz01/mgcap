@@ -356,59 +356,46 @@ body{
     #인증센터, MY MG 공통
 ---------------------------------------------*/
 .MGC-AUTH-002 .text-content + .table-content,
-.MGC-MMG-UST-002 .text-content + .text-content,
-.MGC-MMG-UST-003 .text-content + .text-content,
-.MGC-MMG-UST-004 .text-content + .text-content,
+.WCS10200VQ .text-content + .text-content,
+.WCS10201DQ .text-content + .text-content,
+.WCS10300VQ .text-content + .text-content,
 .MGC-MMG-UST-005 .text-content + .text-content,
-.MGC-MMG-UST-006 .text-content + .text-content,
-.MGC-MMG-BILINF-001 .text-content + .text-content,
-.MGC-MMG-BILINF-002 .text-content + .text-content,
+.WCS10500VQ .text-content + .text-content,
+.WCS30100VQ .text-content + .text-content,
+.WCS30101DQ .text-content + .text-content,
 .MGC-MMG-BILINF-004 .text-content + .text-content { border-top:0; }
 
 .MGC-AUTH-004 .text-content + .info-content,
-.MGC-MMG-UST-001 .text-content + .info-content,
-.MGC-MMG-UST-002 .text-content + .info-content,
-.MGC-MMG-UST-004 .text-content + .info-content,
-.MGC-MMG-UST-006 .text-content + .info-content,
-.MGC-MMG-BILINF-001 .text-content + .info-content,
-.MGC-MMG-BILINF-002 .text-content + .info-content,
-.MGC-MMG-BILINF-003 .text-content + .info-content,
+.WCS10100VQ .text-content + .info-content,
+.WCS10200VQ .text-content + .info-content,
+.WCS10300VQ .text-content + .info-content,
+.WCS10500VQ .text-content + .info-content,
+.WCS30100VQ .text-content + .info-content,
+.WCS30101DQ .text-content + .info-content,
+.WCS30700VQ .text-content + .info-content,
 .MGC-MMG-BILINF-004 .text-content + .info-content { padding-top:20px; }
 
 /* 테이블 아래 info */
 .MGC-AUTH-004 .info-content .m-dot li:first-child,
-.MGC-MMG-UST-001 .info-content .m-dot li:first-child,
-.MGC-MMG-UST-002 .info-content .m-dot li:first-child,
-.MGC-MMG-UST-004 .info-content .m-dot li:first-child,
-.MGC-MMG-UST-006 .info-content .m-dot li:first-child,
-.MGC-MMG-BILINF-001 .info-content .m-dot li:first-child,
-.MGC-MMG-BILINF-002 .info-content .m-dot li:first-child,
-.MGC-MMG-BILINF-003 .info-content .m-dot li:first-child,
+.WCS10100VQ .info-content .m-dot li:first-child,
+.WCS10200VQ .info-content .m-dot li:first-child,
+.WCS10300VQ .info-content .m-dot li:first-child,
+.WCS10500VQ .info-content .m-dot li:first-child,
+.WCS30100VQ .info-content .m-dot li:first-child,
+.WCS30101DQ .info-content .m-dot li:first-child,
+.WCS30700VQ .info-content .m-dot li:first-child,
 .MGC-MMG-BILINF-004 .info-content .m-dot li:first-child { margin:0; }
 
 /* 테이블 위에 텍스트 */
-.MGC-MMG-UST-001 .text-content .caption,
-.MGC-MMG-UST-002 .text-content .caption,
-.MGC-MMG-UST-003 .text-content .caption,
-.MGC-MMG-UST-004 .text-content .caption,
+.WCS10100VQ .text-content .caption,
+.WCS10200VQ .text-content .caption,
+.WCS10201DQ .text-content .caption,
+.WCS10300VQ .text-content .caption,
 .MGC-MMG-UST-005 .text-content .caption,
-.MGC-MMG-UST-006 .text-content .caption,
-.MGC-MMG-BILINF-001 .text-content .caption,
-.MGC-MMG-BILINF-003 .text-content .caption,
+.WCS10500VQ .text-content .caption,
+.WCS30100VQ .text-content .caption,
+.WCS30700VQ .text-content .caption,
 .MGC-MMG-BILINF-004 .text-content .caption { padding-bottom:20px; font-size:var(--font16); font-weight:var(--font-w-r); color:var(--color-6); text-align:right; }
-
-/* 테이블 푸터 */
-.MGC-MMG-UST-001 .text-content .table-content table tfoot tr:only-child,
-.MGC-MMG-UST-003 .text-content .table-content table tfoot tr:only-child,
-.MGC-MMG-UST-005 .text-content .table-content table tfoot tr:only-child,
-.MGC-MMG-BILINF-001 .text-content .table-content table tfoot tr:last-child,
-.MGC-MMG-BILINF-003 .text-content .table-content table tfoot tr:only-child { background-color:#EDF9FF; }
-.MGC-MMG-UST-001 .text-content .table-content table tfoot td { padding:10px; }
-.MGC-MMG-UST-001 .text-content .table-content table tfoot .sum,
-.MGC-MMG-UST-003 .text-content .table-content table tfoot .sum,
-.MGC-MMG-UST-005 .text-content .table-content table tfoot .sum,
-.MGC-MMG-BILINF-001 .text-content .table-content table tfoot .sum,
-.MGC-MMG-BILINF-003 .text-content .table-content table tfoot .sum { font-weight:var(--font-w-m); color:var(--white); background-color:var(--primary); }
 
 /* 나의 정보 변경 페이지 329번째 줄과 동일, 합칠 예정 */
 .WCS50300VS .text-content + .text-content {border-top: 0;}
@@ -462,7 +449,7 @@ body{
     #MY MG
 ---------------------------------------------*/
 /** 닙입내역 **/
-.MGC-MMG-UST-002 .underline { color:var(--primary); text-decoration:underline; }
+.WCS10200VQ .underline { color:var(--primary); text-decoration:underline; }
 
 /*---------------------------------------------
     #미디어쿼리
@@ -495,11 +482,11 @@ body{
     #MY MG
     ---------------------------------------------*/
     /** 청구내역조회 **/
-    .MGC-MMG-BILINF-002 .mo colgroup { display:none; }
-    .MGC-MMG-BILINF-002 .mo tbody { display:block; width:100%; }
-    .MGC-MMG-BILINF-002 .mo tbody tr { display:flex; flex-wrap:wrap; align-items:stretch; width:100%; font-size:0; }
-    .MGC-MMG-BILINF-002 .mo tbody th { display:inline-flex; justify-content: center; align-items:center; padding:10px; width:30%; min-height:24px; border-left:0; }
-    .MGC-MMG-BILINF-002 .mo tbody td { display:inline-flex; flex-direction:column; justify-content:center; padding:10px; width:calc(70% - 4px); min-height:24px; border-left:0; }
+    .WCS30101DQ .mo colgroup { display:none; }
+    .WCS30101DQ .mo tbody { display:block; width:100%; }
+    .WCS30101DQ .mo tbody tr { display:flex; flex-wrap:wrap; align-items:stretch; width:100%; font-size:0; }
+    .WCS30101DQ .mo tbody th { display:inline-flex; justify-content: center; align-items:center; padding:10px; width:30%; min-height:24px; border-left:0; }
+    .WCS30101DQ .mo tbody td { display:inline-flex; flex-direction:column; justify-content:center; padding:10px; width:calc(70% - 4px); min-height:24px; border-left:0; }
 }
 
 @media screen and (max-width:480px) {
@@ -507,10 +494,10 @@ body{
         #MY MG
     ---------------------------------------------*/
     /** 이용상품내역 **/
-    .MGC-MMG-UST-001 .text-content + .text-content,
-    .MGC-MMG-UST-002 .text-content + .text-content { padding-top:18px; }
+    .WCS10100VQ .text-content + .text-content,
+    .WCS10200VQ .text-content + .text-content { padding-top:18px; }
 
-    .MGC-MMG-UST-001 .text-content .caption,
-    .MGC-MMG-UST-002 .text-content .caption,
-    .MGC-MMG-UST-003 .text-content .caption { padding-bottom:18px; }
+    .WCS10100VQ .text-content .caption,
+    .WCS10200VQ .text-content .caption,
+    .WCS10201DQ .text-content .caption { padding-bottom:18px; }
 }
