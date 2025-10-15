@@ -340,8 +340,9 @@ body{
 .MGC-MMG-UST-004 .text-content + .text-content,
 .MGC-MMG-UST-005 .text-content + .text-content,
 .MGC-MMG-UST-006 .text-content + .text-content,
-.MGC-MMG-BILINF-001 .text-content + .text-content { border-top:0; }
-.MGC-MMG-BILINF-002 .text-content + .text-content { border-top:0; }
+.MGC-MMG-BILINF-001 .text-content + .text-content,
+.MGC-MMG-BILINF-002 .text-content + .text-content,
+.MGC-MMG-BILINF-004 .text-content + .text-content { border-top:0; }
 
 .MGC-AUTH-004 .text-content + .info-content,
 .MGC-MMG-UST-001 .text-content + .info-content,
@@ -349,7 +350,9 @@ body{
 .MGC-MMG-UST-004 .text-content + .info-content,
 .MGC-MMG-UST-006 .text-content + .info-content,
 .MGC-MMG-BILINF-001 .text-content + .info-content,
-.MGC-MMG-BILINF-002 .text-content + .info-content { padding-top:20px; }
+.MGC-MMG-BILINF-002 .text-content + .info-content,
+.MGC-MMG-BILINF-003 .text-content + .info-content,
+.MGC-MMG-BILINF-004 .text-content + .info-content { padding-top:20px; }
 
 /* 테이블 아래 info */
 .MGC-AUTH-004 .info-content .m-dot li:first-child,
@@ -358,7 +361,9 @@ body{
 .MGC-MMG-UST-004 .info-content .m-dot li:first-child,
 .MGC-MMG-UST-006 .info-content .m-dot li:first-child,
 .MGC-MMG-BILINF-001 .info-content .m-dot li:first-child,
-.MGC-MMG-BILINF-002 .info-content .m-dot li:first-child { margin:0; }
+.MGC-MMG-BILINF-002 .info-content .m-dot li:first-child,
+.MGC-MMG-BILINF-003 .info-content .m-dot li:first-child,
+.MGC-MMG-BILINF-004 .info-content .m-dot li:first-child { margin:0; }
 
 /* 테이블 위에 텍스트 */
 .MGC-MMG-UST-001 .text-content .caption,
@@ -367,13 +372,16 @@ body{
 .MGC-MMG-UST-004 .text-content .caption,
 .MGC-MMG-UST-005 .text-content .caption,
 .MGC-MMG-UST-006 .text-content .caption,
-.MGC-MMG-BILINF-001 .text-content .caption { padding-bottom:20px; font-size:var(--font16); font-weight:var(--font-w-r); color:var(--color-6); text-align:right; }
+.MGC-MMG-BILINF-001 .text-content .caption,
+.MGC-MMG-BILINF-003 .text-content .caption,
+.MGC-MMG-BILINF-004 .text-content .caption { padding-bottom:20px; font-size:var(--font16); font-weight:var(--font-w-r); color:var(--color-6); text-align:right; }
 
 /* 테이블 푸터 */
 .MGC-MMG-UST-001 .text-content .table-content table tfoot tr:only-child,
 .MGC-MMG-UST-003 .text-content .table-content table tfoot tr:only-child,
 .MGC-MMG-UST-005 .text-content .table-content table tfoot tr:only-child,
-.MGC-MMG-BILINF-001 .text-content .table-content table tfoot tr:last-child { background-color:#EDF9FF; }
+.MGC-MMG-BILINF-001 .text-content .table-content table tfoot tr:last-child,
+.MGC-MMG-BILINF-003 .text-content .table-content table tfoot tr:only-child { background-color:#EDF9FF; }
 .MGC-MMG-UST-001 .text-content .table-content table tfoot td { padding:10px; }
 .MGC-MMG-UST-001 .text-content .table-content table tfoot .sum,
 .MGC-MMG-UST-003 .text-content .table-content table tfoot .sum,
