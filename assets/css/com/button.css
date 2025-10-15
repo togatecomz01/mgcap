@@ -67,14 +67,15 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
 
 /**링크, 다운로드버튼**/
 .btn-link,
-.btn-download { display:inline-flex; align-items:center; gap:10px; height:62px; line-height:62px; padding:0 32px; border-radius:100px; background:var(--btn-download-background); border:var(--btn-download-border); text-align:left; font-size:var(--btn-download-font-size); }
+.btn-download { display:inline-flex; align-items:center; gap:10px; min-height:62px; line-height:1.5; padding:0 32px; border-radius:100px; background:var(--btn-download-background); border:var(--btn-download-border); text-align:left; font-size:var(--btn-download-font-size); }
 .btn-download::after { content:""; display:block; width:24px; height:24px; background-color:var(--color-9); 
   mask-image:var(--ico-download); mask-repeat:no-repeat; mask-size:auto 40px; mask-position:center; -webkit-mask-image:var(--ico-download); -webkit-mask-repeat:no-repeat; -webkit-mask-size:17.333px auto; -webkit-mask-position:center; 
   }
 
- .btn-link::after { content:""; display:block; width:24px; height:24px; background-color:var(--color-9); 
-   mask-image:var(--ico-link); mask-repeat:no-repeat; mask-size:auto 40px; mask-position:center; -webkit-mask-image:var(--ico-link); -webkit-mask-repeat:no-repeat; -webkit-mask-size:19px auto; -webkit-mask-position:center; 
-   }
+.btn-link { justify-content:space-between; }
+.btn-link::after { content:""; display:block; width:24px; height:24px; background-color:var(--color-9); 
+  mask-image:var(--ico-link); mask-repeat:no-repeat; mask-size:auto 40px; mask-position:center; -webkit-mask-image:var(--ico-link); -webkit-mask-repeat:no-repeat; -webkit-mask-size:19px auto; -webkit-mask-position:center; 
+}
 
 .btn-link:focus-visible::after,
 .btn-link:hover::after { background-color:var(--primary); }  
@@ -100,7 +101,6 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
     body{
     --btn-padding:12px;
     --btm-btn-font-weight:var(--font-w-m);
-
     --btn-download-font-size:var(--font18);
     }
     .btn-form { max-width:100%; height:48px; }
@@ -110,9 +110,24 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
     .btn-download { width:100%; gap:30px; line-height:1.5; flex-direction:row-reverse; justify-content:flex-end; padding:0 20px 0 80px; background:linear-gradient(to right, var(--primary) 0 60px, var(--white) 60px 100%); }
     .btn-download::after {  position:absolute; left:20px; background-color:var(--white); }
 
+<<<<<<< Updated upstream
     /**CTA 01**/
     .btn-content.cta a,
     .btn-content.cta button { flex:1; height:57px; line-height:57px; font-size:var(--font20); }
+=======
+   
+   /**링크, 다운로드버튼**/
+  .btn-link { gap:0; flex:1; min-height:60px; font-size:1rem; }
+  .btn-link::after { content:""; display:none; }
+
+   
+   /**CTA 01**/
+   .btn-content.cta a,
+   .btn-content.cta button { flex:1; height:57px; line-height:57px; font-size:var(--font20); }
+
+ 
+   
+>>>>>>> Stashed changes
 
     /** 검색조건 **/
     .search-form .btn-form,

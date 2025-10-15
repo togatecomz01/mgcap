@@ -25,31 +25,6 @@ body{
  --ico-info:url("../../images/com/svg/ico_info_guide.svg");/** 유의사항 안내 **/
  --ico-arrow-black:url("../../images/content/ico_arrow_black.svg");/** 절차 화살표 black **/
 
-
-  /** 모집인 조회 MGC-PRT-CST-012 **/
-  --logo-cst-01:url("../../images/content/PRT/w/logo_KFOB.png"); /**은행엽합회**/
-
-  --logo-cst-02:url("../../images/content/PRT/w/logo_autoplus.png"); /**오토플러스(주)**/
-  --logo-cst-03:url("../../images/content/PRT/w/logo_A1auto.png"); /**(주)에이원오토**/
-  --logo-cst-04:url("../../images/content/PRT/w/logo_SIgroup.png"); /**(주)에스아이그룹**/
-  --logo-cst-05:url("../../images/content/PRT/w/logo_carmento.png"); /**주식회사 카멘토**/
-  --logo-cst-06:url("../../images/content/PRT/w/logo_CScar.png"); /**주식회사 씨에스카**/
-  --logo-cst-07:url("../../images/content/PRT/w/logo_SM network.png"); /**주식회사 성문네트웍스**/
-  --logo-cst-08:url("../../images/content/PRT/w/logo_surecar.png"); /**㈜슈어카**/
-  --logo-cst-09:url("../../images/content/PRT/w/logo_SmartDirectCar.png"); /**스마트다이렉트카**/
-  --logo-cst-10:url("../../images/content/PRT/w/logo_chanawa.png"); /**주식회사 카베이**/
-  --logo-cst-11:url("../../images/content/PRT/w/logo_sihyun.png"); /**주식회사 시현신차장기렌터카**/
-  --logo-cst-12:url("../../images/content/PRT/w/logo_getcha.png"); /**㈜겟차**/
-  --logo-cst-13:url("../../images/content/PRT/w/logo_automobile.png"); /**(주)스타오토모빌**/
-
-
-
-
-
-
-
-
-
 }
 
 /*---------------------------------------------
@@ -82,7 +57,7 @@ body{
  .process-content .process02 li:nth-child(4) .step p { background:var(--process-step4-bg); }
  .process-content .process02 li:nth-child(5) .step p { background:var(--process-step5-bg); }
 
-  /*---------------------------------------------
+/*---------------------------------------------
     #소비자보호
 ---------------------------------------------*/
 .sub-process-content ul { display:inline-flex; align-items:flex-start; padding:40px; border:var(--board); border-radius:8px;   }
@@ -113,8 +88,47 @@ body{
   .MGC-PRT-CST-009 .sub-process-content ul.process01 li:nth-of-type(2) > p::before { background-image:var(--ico-cst-03); }
   .MGC-PRT-CST-009 .sub-process-content ul.process01 li:nth-of-type(3) > p::before { background-image:var(--ico-cst-05); }
   
+
 /******모잡인조회**/
-.MGC-PRT-CST-012 .btn-link { padding-left:73px; background-image:var(--logo-cst-01); background-repeat:no-repeat; background-position:left 20px center; background-size:40px;   }
+.MGC-PRT-CST-012 {
+    /** 모집인 조회 MGC-PRT-CST-012 **/
+    --logo-cst-01:url("../../images/content/PRT/w/logo_KFOB.png"); /**은행엽합회**/
+
+    --logo-cst-02:url("../../images/content/PRT/w/logo_autoplus.png"); /**오토플러스(주)**/
+    --logo-cst-03:url("../../images/content/PRT/w/logo_A1auto.png"); /**(주)에이원오토**/
+    --logo-cst-04:url("../../images/content/PRT/w/logo_SIgroup.png"); /**(주)에스아이그룹**/
+    --logo-cst-05:url("../../images/content/PRT/w/logo_carmento.png"); /**주식회사 카멘토**/
+    --logo-cst-06:url("../../images/content/PRT/w/logo_CScar.png"); /**주식회사 씨에스카**/
+    --logo-cst-07:url("../../images/content/PRT/w/logo_SM network.png"); /**주식회사 성문네트웍스**/
+    --logo-cst-08:url("../../images/content/PRT/w/logo_surecar.png"); /**㈜슈어카**/
+    --logo-cst-09:url("../../images/content/PRT/w/logo_SmartDirectCar.png"); /**스마트다이렉트카**/
+    --logo-cst-10:url("../../images/content/PRT/w/logo_chanawa.png"); /**주식회사 카베이**/
+    --logo-cst-11:url("../../images/content/PRT/w/logo_sihyun.png"); /**주식회사 시현신차장기렌터카**/
+    --logo-cst-12:url("../../images/content/PRT/w/logo_getcha.png"); /**㈜겟차**/
+    --logo-cst-13:url("../../images/content/PRT/w/logo_automobile.png"); /**(주)스타오토모빌**/
+  
+}
+
+.MGC-PRT-CST-012 .btn-link { margin-top:24px; padding-left:73px; width:calc(50% - 16px); background-repeat:no-repeat; background-position:left 20px center; background-size:40px; }
+.MGC-PRT-CST-012 .btn-link:nth-child(odd) { margin-right:16px; }
+.MGC-PRT-CST-012 .btn-link:nth-child(even) { margin-left:16px; }
+
+.MGC-PRT-CST-012 .btn-group { display:flex; flex-wrap:wrap; }
+.MGC-PRT-CST-012 .btn-group.link1 .btn-link:first-of-type { margin-top:0; background-image:var(--logo-cst-01); }
+
+.MGC-PRT-CST-012 .btn-group.link2 .btn-link:first-of-type { margin-top:0; background-image:var(--logo-cst-02); }
+.MGC-PRT-CST-012 .btn-group.link2 .btn-link:nth-of-type(2) { margin-top:0; background-image:var(--logo-cst-03); }
+.MGC-PRT-CST-012 .btn-group.link2 .btn-link:nth-of-type(3) { background-image:var(--logo-cst-04); }
+.MGC-PRT-CST-012 .btn-group.link2 .btn-link:nth-of-type(4) { background-image:var(--logo-cst-05); }
+.MGC-PRT-CST-012 .btn-group.link2 .btn-link:nth-of-type(5) { background-image:var(--logo-cst-06); }
+.MGC-PRT-CST-012 .btn-group.link2 .btn-link:nth-of-type(6) { background-image:var(--logo-cst-07); }
+.MGC-PRT-CST-012 .btn-group.link2 .btn-link:nth-of-type(7) { background-image:var(--logo-cst-08); }
+.MGC-PRT-CST-012 .btn-group.link2 .btn-link:nth-of-type(8) { background-image:var(--logo-cst-09); }
+.MGC-PRT-CST-012 .btn-group.link2 .btn-link:nth-of-type(9) { background-image:var(--logo-cst-10); }
+.MGC-PRT-CST-012 .btn-group.link2 .btn-link:nth-of-type(10) { background-image:var(--logo-cst-11); }
+.MGC-PRT-CST-012 .btn-group.link2 .btn-link:nth-of-type(11) { background-image:var(--logo-cst-12); }
+.MGC-PRT-CST-012 .btn-group.link2 .btn-link:nth-of-type(12) { background-image:var(--logo-cst-13); }
+
 
 
 /*---------------------------------------------
@@ -264,6 +278,13 @@ body{
 .sub-process-content ul li p::before { position:absolute; left:0; margin-bottom:0; width:74px; height:74px; background-size:35px auto; }
 .sub-process-content ul li > p span { font-size:14px; max-width:100%; }
 .sub-process-content ul li span.sr-only.mo { color:var(--color-6); font-size:var(--font14);  }
+
+/******모잡인조회**/
+.MGC-PRT-CST-012 .btn-group { flex-direction:column; }
+.MGC-PRT-CST-012 .btn-link { width:100%; }
+.MGC-PRT-CST-012 .btn-link:nth-child(odd),
+.MGC-PRT-CST-012 .btn-link:nth-child(even) { margin:0 0 20px; }
+.MGC-PRT-CST-012 .btn-link:last-of-type { margin-bottom:0; }
 
 /*---------------------------------------------
     #고객센터

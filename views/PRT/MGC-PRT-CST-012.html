@@ -21,15 +21,13 @@
     <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
     <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+    <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
+    <script src="../../assets/js/include.js"></script>
 </head>
 
 <body>
     <div class="wrap">
-        <header id="headerWrap" class="headerOn">
-            <nav class="lnb">
-                
-            </nav>
-        </header>
+        <div data-include-path="../../views/COMMON/header.html"></div>
         <div class="bodyWrap">
             <main class="contentWrap">
                 <nav class="location-container">
@@ -60,25 +58,34 @@
                         </div>
                     </div>
                     <div class="text-content">
-                        <div class="text-content">
-                            <div class="text-group">
-                                <h3>모집인조회</h3>
-                                <p>여신금융협회를 통해 등록된 방문판매인력에 대한 명부를 조회하실 수 있습니다. </p>
-                                <div class="button-content">
-                                    <div class="btn-group link1">
-                                        <a href="javascript:void(0);" class="btn-link">은행연합회 대출성상품 모집인 조회 바로가기</a>
-                                    </div>
+                        <div class="text-group">
+                            <h3>모집인조회</h3>
+                            <p>여신금융협회를 통해 등록된 방문판매인력에 대한 명부를 조회하실 수 있습니다. </p>
+                            <div class="button-content">
+                                <div class="btn-group link1">
+                                    <a href="javascript:void(0);" class="btn-link">은행연합회 대출성상품 모집인 조회 바로가기</a>
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="text-group">
-                                <h3>모집인 임직원조회</h3>
-                                <p>모집법인의 임직원에 대한 명부를 조회하실 수 있는 해당 모집법인 사이트로 연결됩니다.</p>
-                                <p>홈페이지가 제공되지 않는 “모집법인 임직원”은 MG캐피탈 임직원 조회항목에서 확인하실 수 있습니다.</p>
-                                <div class="button-content">
-                                    <div class="btn-group link2">
-                                        <a href="javascript:void(0);" class="btn-link">오토플러스㈜ 바로가기 </a>
-                                    </div>
+                        <div class="text-group">
+                            <h3>모집인 임직원조회</h3>
+                            <p>모집법인의 임직원에 대한 명부를 조회하실 수 있는 해당 모집법인 사이트로 연결됩니다.</p>
+                            <p>홈페이지가 제공되지 않는 “모집법인 임직원”은 MG캐피탈 임직원 조회항목에서 확인하실 수 있습니다.</p>
+                            <div class="button-content">
+                                <div class="btn-group link2">
+                                    <a href="javascript:void(0);" class="btn-link">오토플러스㈜ 바로가기</a>
+                                    <a href="javascript:void(0);" class="btn-link">㈜에이원오토 바로가기</a>
+                                    <a href="javascript:void(0);" class="btn-link">㈜에스아이그룹 바로가기</a>
+                                    <a href="javascript:void(0);" class="btn-link">주식회사 카멘토 바로가기 </a>
+                                    <a href="javascript:void(0);" class="btn-link">주식회사 씨에스카 바로가기</a>
+                                    <a href="javascript:void(0);" class="btn-link">주식회사 성문네트웍스 바로가기</a>
+                                    <a href="javascript:void(0);" class="btn-link">㈜슈어카 바로가기</a>
+                                    <a href="javascript:void(0);" class="btn-link">스마트다이렉트카 바로가기</a>
+                                    <a href="javascript:void(0);" class="btn-link">주식회사 카베이 바로가기</a>
+                                    <a href="javascript:void(0);" class="btn-link">주식회사 시현신차장기렌터카 바로가기</a>
+                                    <a href="javascript:void(0);" class="btn-link">㈜겟차 바로가기</a>
+                                    <a href="javascript:void(0);" class="btn-link">㈜스타오토모빌 바로가기</a>
                                 </div>
                             </div>
                         </div>
@@ -88,6 +95,7 @@
   
             </main>
         </div>
+        <div data-include-path="../../views/COMMON/footer.html"></div>
     </div>
 </body>
 </html>
