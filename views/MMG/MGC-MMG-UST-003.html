@@ -94,7 +94,6 @@
                         <h3>납입내역</h3>
                     </div>
                     <form>
-                        <!--확인용-->
                         <fieldset class="form-content">
                             <legend>납입내역에 대한 조회</legend>
                             <div class="form-wrap search-form">
@@ -113,82 +112,156 @@
                                         <span>우편</span>
                                     </label>
                                 </div>
-                                <div class="group"> 
+                                <div class="group">
                                     <div class="form-group">
-                                        <label>발급기준일</label>
-                                        <input id="password-input" type="text" name="date" placeholder="디폴트" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">제출기간</label>
-                                        <select required="" title="">
-                                            <option value="" hidden="">통신사</option>
-                                            <option value="0">SKT</option>
-                                            <option value="1">KT</option>
-                                            <option value="2">LGU+</option>
-                                            <option value="0">(알뜰)SKT</option>
-                                            <option value="1">(알뜰)KT</option>
-                                            <option value="2">(알뜰)LGU+</option>
-                                        </select>
-
-                                        <label for="">제출기관명</label>
-                                        <input id="password-input" type="text" name="date" placeholder="디폴트" />
-                                        <label for="">제출용도</label>
-                                        <input id="password-input" type="text" name="date" placeholder="디폴트" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label>팩스 번호</label>
-                                        <input id="password-input" type="number" name="date" placeholder="디폴트" />
-                                        <input id="password-input" type="number" name="date" placeholder="디폴트" />
-                                        <input id="password-input" type="number" name="date" placeholder="디폴트" />
+                                        <label>납입기간</label>
+                                        <div class="ph">
+                                            <input id="date-input" type="date" name="date" placeholder="디폴트" />
+                                            <span class="ipt-hyphen">-</span>
+                                            <input id="date-input" type="date" name="date" placeholder="디폴트" />
+                                        </div>
                                     </div>
                                 </div>
                                 <button class="btn-form">조회</button>
                             </div><!--//form-wrap-->
                         </fieldset>
-                        <!--확인용끝-->
                     </form>
                     <div class="text-content">
                         <p class="caption">기준일 : 2025-09-22 / 단위: 원</p>
                         <div class="table-content">
                             <table class="mo-s">
-                                <caption>실행번호, 상품명, 기간, 대출일, 만기예정일, 종료일, 여신금액, 잔여금액, 상태에 대한 표</caption>
+                                <caption>회차, 납입일, 원금, 이자, 기타, 연체이자, 합계에 대한 표</caption>
                                 <colgroup>
-                                    <col style="width:10%">
-                                    <col style="width:10%">
-                                    <col style="width:11%">
-                                    <col style="width:10%">
-                                    <col style="width:10%">
-                                    <col style="width:7%">
-                                    <col style="width:9%">
-                                    <col style="width:7%">
-                                    <col style="width:6%">
+                                    <col style="width:14%">
+                                    <col style="width:14%">
+                                    <col style="width:14%">
+                                    <col style="width:14%">
+                                    <col style="width:14%">
+                                    <col style="width:14%">
+                                    <col style="width:14%">
                                 </colgroup>
                                 <thead>
                                     <tr>
-                                        <th scope="col">실행번호</th>
-                                        <th scope="col">상품명</th>
-                                        <th scope="col">기간</th>
-                                        <th scope="col">대출일</th>
-                                        <th scope="col">만기예정일</th>
-                                        <th scope="col">종료일</th>
-                                        <th scope="col">여신금액</th>
-                                        <th scope="col">잔여금액</th>
-                                        <th scope="col">상태</th>
+                                        <th scope="col">회차</th>
+                                        <th scope="col">납입일</th>
+                                        <th scope="col">원금</th>
+                                        <th scope="col">이자</th>
+                                        <th scope="col">기타</th>
+                                        <th scope="col">연체이자</th>
+                                        <th scope="col">합계</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>MI14002240001</td>
-                                        <td>내구재/헬스케어</td>
-                                        <td>18개월</td>
-                                        <td>2014-06-17</td>
-                                        <td>2015-06-17</td>
-                                        <td>2015-02-17</td>
-                                        <td>1,800,000</td>
+                                        <td>1</td>
+                                        <td>2014-12-31</td>
+                                        <td>100,000</td>
                                         <td>0</td>
-                                        <td class="error">중도상환</td>
+                                        <td>0</td>
+                                        <td>16,146</td>
+                                        <td>100,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>2014-12-31</td>
+                                        <td>100,000</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>100,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>2014-12-31</td>
+                                        <td>100,000</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>100,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>2014-12-31</td>
+                                        <td>100,000</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>100,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>2014-12-31</td>
+                                        <td>100,000</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>100,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>2014-12-31</td>
+                                        <td>100,000</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>100,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>2014-12-31</td>
+                                        <td>100,000</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>100,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>2014-12-31</td>
+                                        <td>100,000</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>100,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>2014-12-31</td>
+                                        <td>100,000</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>100,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>2014-12-31</td>
+                                        <td>100,000</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>100,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>2014-12-31</td>
+                                        <td>100,000</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>100,000</td>
                                     </tr>
                                 </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="2" class="sum">합계</td>
+                                        <td>1,000,000</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>16,146</td>
+                                        <td>1,000,000</td>
+                                    </tr>
+                                </tfoot>
                             </table>
                         </div>
                     </div>
@@ -196,6 +269,7 @@
                 <section class="bottom-container">
                     <div class="btn-content cta">
                         <div class="button-group">
+                            <a herf="javascript:void(0);" class="btn-secondary">목록</a>
                             <a herf="javascript:void(0);" class="btn-primary">출력</a>
                         </div>
                     </div>

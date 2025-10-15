@@ -81,7 +81,7 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
 
 /**조건검색**/
 .search-form .btn-form { position:absolute; top:0; right:0; width:auto; height:initial; padding:12px 26px; border-radius:4px; border:0; background:var(--primary); color:var(--white);  }
-.search-form .group + .btn-form { top:50%; transform:translateY(-50%); right:40px; }
+.search-form .group:only-of-type + .btn-form { top:50%; transform:translateY(-50%); right:40px; }
 
 
 /**CTA 01**/
@@ -114,14 +114,13 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
     .btn-content.cta a,
     .btn-content.cta button { flex:1; height:57px; line-height:57px; font-size:var(--font20); }
 
-    
-
+    /** 검색조건 **/
+    .search-form .btn-form,
+    .search-form .group:only-of-type + .btn-form { position:unset; transform:unset; min-width:130px; }
 }
 
 @media (min-width: 767px) and (max-width:1023px){}
 
 @media screen and (max-width:480px) {
-    /** 검색조건 **/
-    .search-form .btn-form,
-    .search-form .group + .btn-form { position:unset; transform:unset; min-width:130px; }
+    
 }

@@ -98,7 +98,7 @@
                             <legend>납입내역에 대한 조회</legend>
                             <div class="form-wrap search-form">
                                 <div class="form-group">
-                                    <p class="sr-only">구분선택</p>
+                                    <p class="mo-tit">구분선택</p>
                                     <label class="radio">
                                         <input type="radio" name="use" value="" checked="">
                                         <span>팩스</span>
@@ -112,10 +112,14 @@
                                         <span>우편</span>
                                     </label>
                                 </div>
-                                <div class="group"> 
+                                <div class="group">
                                     <div class="form-group">
-                                        <label>발급기준일</label>
-                                        <input id="password-input" type="text" name="date" placeholder="디폴트" />
+                                        <label>납입기간</label>
+                                        <div class="ph">
+                                            <input id="date-input" type="date" name="date" placeholder="디폴트" />
+                                            <span class="ipt-hyphen">-</span>
+                                            <input id="date-input" type="date" name="date" placeholder="디폴트" />
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="">제출기간</label>
@@ -130,15 +134,17 @@
                                         </select>
 
                                         <label for="">제출기관명</label>
-                                        <input id="password-input" type="text" name="date" placeholder="디폴트" />
+                                        <input id="submit-name" type="text" name="submitName" placeholder="제출기관명" />
                                         <label for="">제출용도</label>
-                                        <input id="password-input" type="text" name="date" placeholder="디폴트" />
+                                        <input id="submit-name" type="text" name="submitName" placeholder="제출용도" />
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-group ph">
                                         <label>팩스 번호</label>
-                                        <input id="password-input" type="number" name="date" placeholder="디폴트" />
-                                        <input id="password-input" type="number" name="date" placeholder="디폴트" />
-                                        <input id="password-input" type="number" name="date" placeholder="디폴트" />
+                                        <div class="ph">
+                                            <input id="fax-number" type="number" name="fax" placeholder="디폴트" />
+                                            <input id="fax-number" type="number" name="fax" placeholder="디폴트" />
+                                            <input id="fax-number" type="number" name="fax" placeholder="디폴트" />
+                                        </div>
                                     </div>
                                 </div>
                                 <button class="btn-form">조회</button>

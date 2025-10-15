@@ -378,7 +378,8 @@ body{
 .MGC-MMG-UST-001 .text-content .table-content table tfoot .sum,
 .MGC-MMG-UST-003 .text-content .table-content table tfoot .sum,
 .MGC-MMG-UST-005 .text-content .table-content table tfoot .sum,
-.MGC-MMG-BILINF-001 .text-content .table-content table tfoot .sum { font-weight:var(--font-w-m); color:var(--white); background-color:var(--primary); }
+.MGC-MMG-BILINF-001 .text-content .table-content table tfoot .sum,
+.MGC-MMG-BILINF-003 .text-content .table-content table tfoot .sum { font-weight:var(--font-w-m); color:var(--white); background-color:var(--primary); }
 
 /*---------------------------------------------
     #인증센터
