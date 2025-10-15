@@ -457,10 +457,6 @@ body{
     .MGC-MMG-UST-001 .text-content + .text-content,
     .MGC-MMG-UST-002 .text-content + .text-content { padding-top:18px; }
 
-    .MGC-MMG-UST-001 .form-wrap.bg-gray { display:block; text-align:center; margin-bottom:32px; }
-    .MGC-MMG-UST-001 .form-wrap legend { position:unset; visibility:unset; padding-bottom:18px; text-align:left; font-weight:var(--font-w-b); color:var(--color-2); }
-    .MGC-MMG-UST-001 .form-wrap .btn-form { margin-top:36px; min-width:130px; }
-
     .MGC-MMG-UST-001 .text-content .caption,
     .MGC-MMG-UST-002 .text-content .caption,
     .MGC-MMG-UST-003 .text-content .caption { padding-bottom:18px; }

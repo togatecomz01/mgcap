@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
+<head>
     <meta charset="euc-kr" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>폼&gt;샘플&gt;mg캐피탈</title>
@@ -8,14 +8,14 @@
     <meta name="keywords" content="MG캐피탈" />
     <meta name="copyright" content="copyrights 2025 MG캐피탈" />
     <meta
-      name="description"
-      content="MG캐피탈 리스금융, 할부금융, 스탁론, 기업대출, 장기렌트카, PF대출 등 금융 서비스 제공."
+    name="description"
+    content="MG캐피탈 리스금융, 할부금융, 스탁론, 기업대출, 장기렌트카, PF대출 등 금융 서비스 제공."
     />
     <meta name="viewport" content="width=device-width" />
 
     <meta
-      property="og:image"
-      content="http://gallery2gate.kr/resources/images/common/ui-maeta-img"
+    property="og:image"
+    content="http://gallery2gate.kr/resources/images/common/ui-maeta-img"
     />
     <meta name="apple-mobile-web-app-status-bar-style" content="white" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -29,173 +29,208 @@
 
     <!-- Favicon -->
     <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="https://www.mgcap.co.kr/favicon.ico"
+    rel="shortcut icon"
+    type="image/x-icon"
+    href="https://www.mgcap.co.kr/favicon.ico"
     />
 
     <!-- CSS -->
     <link rel="stylesheet" href="../../assets/css/ui-util.css" />
 
     <script
-      type="text/javascript"
-      src="../../assets/js/lib/jquery-1.12.4.js"
+    type="text/javascript"
+    src="../../assets/js/lib/jquery-1.12.4.js"
     ></script>
     <script
-      type="text/javascript"
-      src="../../assets/js/lib/jquery-ui.min.js"
+    type="text/javascript"
+    src="../../assets/js/lib/jquery-ui.min.js"
     ></script>
     <script
-      type="text/javascript"
-      src="../../assets/js/lib/ui_plugin.js"
+    type="text/javascript"
+    src="../../assets/js/lib/ui_plugin.js"
     ></script>
     <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
     <!-- (선택) IE11용 폴리필: 안전하게 깔아두면 좋아요 -->
     <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Promise,Array.from,Object.assign,Number.isNaN"></script>
     <script>
-      (function () {
+    (function () {
         var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
         if (isIE11) {
-          // IE11 전용 클래스 추가
-          document.documentElement.className += " ie11";
+        // IE11 전용 클래스 추가
+        document.documentElement.className += " ie11";
 
-          // IE11 전용 CSS 로드
-          var link = document.createElement("link");
-          link.rel = "stylesheet";
-          link.href = "../../assets/css/com/ie11.css";
-          link.charset = "euc-kr"; // 꼭 지정
-          document.head.appendChild(link);
+        // IE11 전용 CSS 로드
+        var link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = "../../assets/css/com/ie11.css";
+        link.charset = "euc-kr"; // 꼭 지정
+        document.head.appendChild(link);
         }
-      })();
+    })();
     </script>
     <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
     <script src="../../assets/js/include.js"></script>
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="wrap">
-      <div data-include-path="../../views/COMMON/header.html"></div>
-      <div class="bodyWrap">
-        <main class="contentWrap">
-          <seciton class="title_container">
-            <h2>메뉴관리</h2>
-            <ul class="location_content">
-                <li><a href="javascript:void(0);" class="home">홈</a></li>
-                <li><a href="javascript:void(0);">대메뉴</a></li>
-                <li><a href="javascript:void(0);">소메뉴</a></li>
-            </ul>
-          </seciton>
-          <section class="list-container">
-            <h3>대메뉴 목록</h3>
-            <div class="list-content">
-                <table>
-                    <caption>타이틀, 대메뉴명, 중메뉴명, URL, 활성, 하위메뉴 변경, 삭제로 구성된 대메뉴 목록</caption>
-                  
-                    <colgroup>
-                      <col style="width:96px;">
-                      <col style="width:234px;">
-                      <col style="width:234px;">
-                      <col style="width:294px;">
-                      <col style="width:auto">
-                      <col style="width:180px;">
-                      <col style="width:94px;">
-                      <col style="width:94px;">
-                    </colgroup>
-                  
-                    <thead>
-                      <tr>
-                        <th id="th-title" scope="col">타이틀</th>
-                        <th id="th-top"   scope="col">대메뉴명</th>
-                        <th id="th-mid"   scope="col">중메뉴명</th>
-                        <th id="th-sub"   scope="col">하위메뉴명</th>
-                        <th id="th-url"   scope="col">URL</th>
-                        <th id="th-active" scope="col">활성</th>
-                        <th id="th-modify" scope="col">수정사항</th>
-                        <th id="th-del"   scope="col">삭제</th>
-                      </tr>
-                    </thead>
-                  
-                    <tbody>
-                      <tr>
-                        <td>
-                          <span>
-                            <input id="row1-title" class="tac" type="text" value="1" aria-labelledby="th-title">
-                          </span>
-                        </td>
-                        <td>
-                          <select id="row1-top" class="form-control" aria-labelledby="th-top" name="top-1">
-                            <option value="" disabled selected>선택해주세요.</option>
-                            <option>옵션1</option><option>옵션2</option>
-                          </select>
-                        </td>
-                        <td>
-                          <select id="row1-mid" class="form-control" aria-labelledby="th-mid" name="mid-1">
-                            <option value="" disabled selected>선택해주세요.</option>
-                            <option>옵션1</option><option>옵션2</option>
-                          </select>
-                        </td>
-                        <td>
-                          <select id="row1-bot" class="form-control" aria-labelledby="th-bot" name="mid-1">
-                            <option value="" disabled selected>선택해주세요.</option>
-                            <option>옵션1</option><option>옵션2</option>
-                          </select>
-                        </td>
-                        <td>
-                          <span class="ipt-clear">
-                            <input id="row1-url" type="text" class="form-control" value="/path" aria-labelledby="th-url">
-                          </span>
-                        </td>
-                        <td>
-                            <label class="toggle">
-                                <input type="checkbox" name="row3-active" title="체크" value="" checked>
-                                <span>활성</span>
-                            </label>
+        <div data-include-path="../../views/COMMON/header.html"></div>
+        <div class="bodyWrap">
+            <main class="contentWrap">
+                <nav class="location-container">
+                    <ol class="breadcrumb">
+                        <li><span class="home">홈</span></li>
+                        <li><span>MY MG</span></li>
+                        <li><span>이용현황</span></li>
+                        <li><span>이용상품내역</span></li>
+                    </ol>
+                </nav>
+                <section class="visual-container">
+                    <h2>이용상품내역</h2>
+                </section>
+                <section class="page-container MGC-MMG-UST-001">
+                    <div class="text-content">
+                        <h3>이용상품내역 목록</h3>
+                    </div>
+                    <form>
+                        <!--확인용-->
+                        <fieldset class="form-content">
+                            <legend>납입내역에 대한 조회</legend>
+                            <div class="form-wrap search-form">
+                                <div class="form-group">
+                                    <p class="sr-only">구분선택</p>
+                                    <label class="radio">
+                                        <input type="radio" name="use" value="" checked="">
+                                        <span>팩스</span>
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="use" value="">
+                                        <span>이메일</span>
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="use" value="">
+                                        <span>우편</span>
+                                    </label>
+                                </div>
+                                <div class="group"> 
+                                    <div class="form-group">
+                                        <label>발급기준일</label>
+                                        <input id="password-input" type="text" name="date" placeholder="디폴트" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">제출기간</label>
+                                        <select required="" title="">
+                                            <option value="" hidden="">통신사</option>
+                                            <option value="0">SKT</option>
+                                            <option value="1">KT</option>
+                                            <option value="2">LGU+</option>
+                                            <option value="0">(알뜰)SKT</option>
+                                            <option value="1">(알뜰)KT</option>
+                                            <option value="2">(알뜰)LGU+</option>
+                                        </select>
 
-                          </ul>
-                        </td>
-                        <td>
-                          <button class="btn-ico-mod" type="button" aria-labelledby="th-modify">수정</button>
-                        </td>
-                        <td>
-                          <button class="btn-ico-del" type="button" aria-labelledby="th-del" data-modal-open="modal">삭제</button>
-                        </td>
-                      </tr>  
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="info-content">
-              <ul class="info-list">
-                <li>[순서 저장] 버튼 : 하위메뉴의 변경된 “순서"를 저장합니다.</li>
-                <li>수정사항 열에 위치한 저장 버튼: 하위메뉴의 “대메뉴, 중메뉴명, 하위메뉴명 URL, 활성상태"를 저장합니다.</li>
-              </ul>
-            </div>
-          </section>
-          <secition class="modal-container">
-            <div id="modal" class="layerPopup modal">
-              <div class="pop-content">
-                  <div class="pop-header">
-                      <h2 class="pop-tit">메뉴를 삭제하시겠습니까?</h2>
-                      <!--<button type="button" class="btn-ico-close"  data-popup-close="modal">닫기</button>-->
-                  </div>
-                  <div class="pop-body">
-                      <p class="tit">[3depth 메뉴명 노출]</p>
-                      <p>메뉴를 삭제하시겠습니까?
-                        삭제 시, 해당 메뉴의 하위메뉴도 모두 삭제됩니다.</p>
-                  </div>
-                  <div class="pop-footer">
-                      <div class="button-content">
-                          <button type="button" class="btn-pop-secondary" data-popup-close="modal">취소</button>
-                          <button type="button" class="btn-pop-primary"  data-popup-close="modal">확인</button>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          </secition>
-        </main>
-      </div>
-      <div data-include-path="../../views/COMMON/footer.html"></div>
+                                        <label for="">제출기관명</label>
+                                        <input id="password-input" type="text" name="date" placeholder="디폴트" />
+                                        <label for="">제출용도</label>
+                                        <input id="password-input" type="text" name="date" placeholder="디폴트" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>팩스 번호</label>
+                                        <input id="password-input" type="number" name="date" placeholder="디폴트" />
+                                        <input id="password-input" type="number" name="date" placeholder="디폴트" />
+                                        <input id="password-input" type="number" name="date" placeholder="디폴트" />
+                                    </div>
+                                </div>
+                                <button class="btn-form">조회</button>
+                            </div><!--//form-wrap-->
+                        </fieldset>
+                        <!--확인용끝-->
+                    </form>
+                    <div class="text-content" style="padding-top:52px;">
+                        <p class="caption">기준일 : 2025-09-22 / 단위: 원</p>
+                        <div class="table-content">
+                            <table class="mo-s">
+                                <caption>번호, 실행번호, 공급자명, 상품명, 여신금액, 잔여회차/총회차, 실행일, 최근납입일, 전액, 진행상태, 만기일, 차기납입일, 진행상태에 대한 표</caption>
+                                <colgroup>
+                                    <col style="width:5%">
+                                    <col style="width:10%">
+                                    <col style="width:11%">
+                                    <col style="width:10%">
+                                    <col style="width:10%">
+                                    <col style="width:7%">
+                                    <col style="width:9%">
+                                    <col style="width:7%">
+                                    <col style="width:5%">
+                                    <col style="width:6%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" rowspan="2">No.</th>
+                                        <th scope="col" rowspan="2">실행번호</th>
+                                        <th scope="col" rowspan="2">공급자명</th>
+                                        <th scope="col" rowspan="2">상품명</th>
+                                        <th scope="col" rowspan="2">여신금액</th>
+                                        <th scope="col" rowspan="2">잔여회차/총회차</th>
+                                        <th scope="col">실행일</th>
+                                        <th scope="col">최근납입일</th>
+                                        <th scope="col" rowspan="2">전액</th>
+                                        <th scope="col">진행상태</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" class="bor-l">만기일</th>
+                                        <th scope="col">차기납입일</th>
+                                        <th scope="col">진행상태</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="2">1</td>
+                                        <td rowspan="2">MI14002240001</td>
+                                        <td rowspan="2">충면화광기고추손도</td>
+                                        <td rowspan="2">내구재/헬스케어</td>
+                                        <td rowspan="2">1,800,000</td>
+                                        <td rowspan="2">6/18</td>
+                                        <td>2014-02-27</td>
+                                        <td>134,050</td>
+                                        <td rowspan="2">0</td>
+                                        <td>중도상환</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="bor-l">2015-02-27</td>
+                                        <td>134,050</td>
+                                        <td>정상</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="4" class="sum">합계</td>
+                                        <td colspan="2">1,800,000</td>
+                                        <td colspan="2"></td>
+                                        <td>0</td>
+                                        <td></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="info-content">
+                        <div class="info-list">
+                            <ul class="m-dot">
+                                <li> 납입상태가 연체일 경우 납입상태의 “연체"를 클릭하시면 연체내역을 확인 하실 수 있습니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="bottom-container">
+                    <div class="btn-content cta">
+                        <div class="button-group">
+                            <a herf="javascript:void(0);" class="btn-primary">출력</a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <div data-include-path="../../views/COMMON/footer.html"></div>
     </div>
-  </body>
+</body>
 </html>
- 

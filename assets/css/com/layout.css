@@ -11,7 +11,8 @@ body {
     --success:var(--primary);
     --failure:var(--red);
     --point-r:var(--red);
-    --ico-location:url("../../images/com/svg/ico_location.svg")
+    --ico-location:url("../../images/com/svg/ico_location.svg");
+    --search-bg:#EEF2F7;
 }
 
 
@@ -167,6 +168,21 @@ h4.tit-diamond::before { content:"¡ß"; display:inline; color:var(--primary); }
 .form-content > .form-wrap > .form-group .mo-column .flex-row > div { flex:1; }
 .form-content > .form-wrap > .form-group .mo-column .flex-row .se-select,
 .form-content > .form-wrap > .form-group .mo-column > .col:last-of-type { flex:0 0 152px; }
+
+
+/**°Ë»ö Æû**/
+.form-wrap.search-form { position:relative; display:block; font-size:var(--font16); }
+.form-wrap.search-form > .form-group { display:flex; align-items:center; margin-bottom:30px;   }
+.form-wrap.search-form > .group {  padding:40px; background:var(--search-bg); border-radius:12px; }
+.form-wrap.search-form > .group:has(.radio) { padding:32px 27px; }
+.form-wrap.search-form > .group > .form-group { display:inline-flex; align-items:center; gap:12px; margin-bottom:24px; padding-bottom:24px; width:100%; border-bottom:1px solid #D6E0EB; }
+.form-wrap.search-form > .group > .form-group:has(.radio) { gap:19px; margin-bottom:0; padding:0;  border-bottom:0; }
+.form-wrap.search-form > .group > .form-group:last-child { padding-bottom:0; margin-bottom:0; bottom:0; }
+.form-wrap.search-form > .group > .form-group label:not(.radio) { width:80px; }
+.form-wrap.search-form > .group > .form-group > input + label,
+.form-wrap.search-form > .group > .form-group > select + label { margin-left:32px; }
+
+.form-wrap.search-form p.mo-tit { display:none; }
 
 /**Ä¸Ã­ÀÌ¹ÌÁö**/
 .form-content > .form-wrap > .form-group .captcha { display:flex; flex:0 0 268px; }
@@ -354,6 +370,13 @@ main.contentWrap > .bottom-container { margin-top:72px; }
     main.contentWrap > .page-container .btn-content.cta,
     main.contentWrap > .bottom-container{ margin-top:52px; }
 
+    /** °Ë»ö Æû **/
+    .form-wrap.search-form { padding:28px 20px; background-color:var(--search-bg); border-radius:6px; }
+    .form-wrap.search-form > .group,
+    .form-wrap.search-form > .group:has(.radio) { padding:0; margin-bottom:36px; }
+    .form-wrap.search-form > .group > .form-group { display:block; }
+    .form-wrap.search-form p.mo-tit { display:block; margin-bottom:18px; font-size:var(--font16); font-weight:var(--font-w-b); color:var(--color-2); }
+
     /*---------------------------------------------
 		#ÇªÅÍ
 	---------------------------------------------*/
@@ -387,6 +410,9 @@ main.contentWrap > .bottom-container { margin-top:72px; }
 	.gnb .header-r > nav { display:none; }
 	.header-btn-wrap button { width:30px; height:30px; }
 
+    /** °Ë»ö Æû **/
+    .form-wrap.search-form { text-align:center; }
+    .form-wrap.search-form > .group > .form-group { text-align:left; }
 	/*---------------------------------------------
 		#ÇªÅÍ
 	---------------------------------------------*/
