@@ -28,6 +28,9 @@ table.col-row tbody th { background:transparent; font-size:1rem; }
 
 table.td-al td { text-align:left; }
 
+/* 테이블 위에 텍스트 */
+.caption { padding-bottom:20px; font-size:var(--font16); font-weight:var(--font-w-r); color:var(--color-6); text-align:right; }
+
 /* 테이블 푸터 */
 .text-content .table-content table tfoot tr:only-child,
 .text-content .table-content table tfoot tr:last-child { background-color:#EDF9FF; }
