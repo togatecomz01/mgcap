@@ -159,7 +159,7 @@ body{
   .MGC-INT-CMP-001 .quote-group blockquote::after { bottom: 0; border-bottom: 4px solid var(--primary); border-left: 4px solid var(--primary); border-right: 4px solid var(--primary); }
 
   .MGC-INT-CMP-001 .greeting-content { position: relative; left: 50%; width: 100vw; padding-top: 0; margin-left: -50vw; color: var(--white); background-image: url("../../images/content/INT/w/bg_CMP-001.png"); background-repeat: no-repeat; background-position: center bottom; background-size: cover; }
-  .MGC-INT-CMP-001 .greeting-group { position: relative; display: flex; align-items: flex-end; gap: 50px; max-width: 1920px; min-height: 900px; margin: 0 auto; box-sizing: border-box; }
+  .MGC-INT-CMP-001 .greeting-group { position: relative; display: flex; align-items: flex-end; max-width: 1920px; min-height: 900px; margin: 0 auto; box-sizing: border-box; }
   .MGC-INT-CMP-001 .greeting-group::before { content: ''; position: relative; left: -3%; align-self: stretch; flex-basis: 48vw; max-width: 900px; background-image: url('../../images/content/INT/w/pf_CMP-001.png'); background-repeat: no-repeat; background-size: cover; background-position: 40% bottom; }
   .MGC-INT-CMP-001 .greeting-group .ceo-text { flex: 1; align-self: center; min-width: 450px; padding-bottom: 100px; }
   .MGC-INT-CMP-001 .greeting-group .ceo-text em { display: block; margin-bottom: 52px; font-size: var(--font28); font-weight: var(--font-w-b); }
