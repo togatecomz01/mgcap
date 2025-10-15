@@ -136,7 +136,12 @@ body{
   .MGC-CST-TRMNPL-010 .button-content .lnk-group a { padding: 12px 20px; border: var(--board); }
   .MGC-CST-TRMNPL-010 em { display: inline-flex; font-weight: var(--font-w-b); }
   .MGC-CST-TRMNPL-010 .link-list li .btn-text { display: inline-flex }
-
+  /* 셀렉트 박스 */
+  .MGC-CST-TRMNPL-010 .form-group + div {border:none}
+  .MGC-CST-TRMNPL-010 .form-group { display: flex; justify-content: flex-end; }
+  .MGC-CST-TRMNPL-010 .se-select label { display: none; }
+  .MGC-CST-TRMNPL-010 .se-select { width: auto; }
+  .MGC-CST-TRMNPL-010 .se-select select { padding: 12px 50px 12px 20px; height: auto; border-radius: 100px; border: var(--board); background: var(--ico-select) no-repeat right 20px center; }
 
 /*---------------------------------------------
     #회사소개
@@ -284,6 +289,9 @@ body{
 .MGC-CST-TRMNPL-010 .button-content .lnk-group { gap: 10px; }
 .MGC-CST-TRMNPL-010 .button-content .lnk-group a { width: 100%; text-align: center; }
 .MGC-CST-TRMNPL-010 .link-list li span { display: block }
+/* 셀렉트 박스 */
+.MGC-CST-TRMNPL-010 .se-select { width: 100%; }
+.MGC-CST-TRMNPL-010 .se-select select { font-size: var(--font14); }
 
 /*---------------------------------------------
     #회사소개
