@@ -209,10 +209,20 @@ function headerMenu() {
                     }
                 } else {
                     e.preventDefault();
+                    // 키보드 사용자를 위한 토글 기능
+                    const isOpen = menuItem.classList.contains('on');
+                    if (isOpen) {
+                        menuItem.classList.remove('on');
+                        menuButton.classList.remove('on');
+                    } else {
+                        closeAllMenus();
+                        menuItem.classList.add('on');
+                        menuButton.classList.add('on');
+                    }
                 }
             });
         }
-        
+
         // list-item에 마우스 진입/이탈
         if (listItem) {
             listItem.addEventListener('mouseenter', openMenu);
@@ -223,6 +233,13 @@ function headerMenu() {
     // 2depth - 마우스오버 이벤트
     const submenu2Items = document.querySelectorAll('.lnb .submenu2 > li');
     for (let i = 0; i < submenu2Items.length; i++) {
+        // 20251015 키보드 이벤트
+        const submenu2Link = submenu2Items[i].querySelector('a, button');
+        
+        if (submenu2Link) {
+            submenu2Link.setAttribute('tabindex', '0');
+        }
+
         submenu2Items[i].addEventListener('mouseenter', function(e) {
             e.stopPropagation();
             
@@ -238,6 +255,17 @@ function headerMenu() {
             }
             
             this.classList.add('on');
+        });
+    }
+
+    // 20251015 키보드 이벤트
+    const allMenuLinks = document.querySelectorAll('.lnb .menu-tit, .lnb .submenu a, .lnb .submenu button, .lnb .submenu2 a, .lnb .submenu2 button, .lnb .submenu3 a, .lnb .submenu3 button');
+    for (let i = 0; i < allMenuLinks.length; i++) {
+        allMenuLinks[i].addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
+            }
         });
     }
 }
