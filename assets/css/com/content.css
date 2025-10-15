@@ -397,6 +397,11 @@ body{
 .MGC-MMG-CHINF-001 fieldset.form-group {display: flex;}
 .MGC-MMG-CHINF-001 fieldset.form-group label.radio {margin-bottom: 0; gap: 10px; align-items: flex-start;}
 .MGC-MMG-CHINF-001 .address-group {display: flex; flex-direction: column; gap: 10px; }
+.MGC-MMG-CHINF-001 .flex-row:has(> select + span) {align-items: center;}
+.MGC-MMG-CHINF-001 .flex-row:has(> select + span) select {width: 90px;}
+.MGC-MMG-CHINF-001 .flex-row:has(> select + span) span {margin-left: 5px; margin-right: 20px;}
+
+.MGC-MMG-CHINF-001 .flex-row:has(> select + span) span:last-of-type { margin-right: 0;}
 /*---------------------------------------------
     #인증센터
 ---------------------------------------------*/
