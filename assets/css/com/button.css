@@ -110,14 +110,9 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
     .btn-download { width:100%; gap:30px; line-height:1.5; flex-direction:row-reverse; justify-content:flex-end; padding:0 20px 0 80px; background:linear-gradient(to right, var(--primary) 0 60px, var(--white) 60px 100%); }
     .btn-download::after {  position:absolute; left:20px; background-color:var(--white); }
 
-<<<<<<< Updated upstream
-    /**CTA 01**/
-    .btn-content.cta a,
-    .btn-content.cta button { flex:1; height:57px; line-height:57px; font-size:var(--font20); }
-=======
    
    /**링크, 다운로드버튼**/
-  .btn-link { gap:0; flex:1; min-height:60px; font-size:1rem; }
+  .btn-link { gap:0; flex:1; min-height:60px; }
   .btn-link::after { content:""; display:none; }
 
    
@@ -127,7 +122,6 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
 
  
    
->>>>>>> Stashed changes
 
     /** 검색조건 **/
     .search-form .btn-form,
