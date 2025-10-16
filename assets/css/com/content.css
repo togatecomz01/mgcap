@@ -71,8 +71,8 @@ body{
 .sub-process-content ul li:last-of-type:after { display:none; }
 
 /****** 고객센터-업무위탁 및 제 3자 제공현황 **/
-.MGC-CST-TRMNPL-001 .table-group .mo tbody tr th.th-t {background-color: transparent; font-size: var(--font16); font-weight: var(--font-w-r);}
-.MGC-CST-TRMNPL-001 .table-group .mo tbody tr td {text-align: left;}
+.WCC60500VQ .table-group .mo tbody tr th.th-t {background-color: transparent; font-size: var(--font16); font-weight: var(--font-w-r);}
+.WCC60500VQ .table-group .mo tbody tr td {text-align: left;}
 
  /******위법계약해지 요구권**/
  .MGC-PRT-CST-008 .sub-process-content ul.process01 li:nth-of-type(1) > p::before { background-image:var(--ico-cst-01); }
@@ -294,11 +294,11 @@ body{
     #고객센터
 ---------------------------------------------*/
 /****** 고객센터-업무위탁 및 제 3자 제공현황 **/
-.MGC-CST-TRMNPL-001 .table-group table colgroup {display: none;}
-.MGC-CST-TRMNPL-001 .table-group .mo thead {display: none;}
-.MGC-CST-TRMNPL-001 .table-group .mo tbody tr {display: grid; grid-template-columns: 1fr;}
-.MGC-CST-TRMNPL-001 .table-group .mo tbody tr th.th-t {border-right: none; background-color: var(--table-th); font-weight: var(--font-w-b);}
-.MGC-CST-TRMNPL-001 .table-group .mo tbody tr td {text-align: center;}
+.WCC60500VQ .table-group table colgroup {display: none;}
+.WCC60500VQ .table-group .mo thead {display: none;}
+.WCC60500VQ .table-group .mo tbody tr {display: grid; grid-template-columns: 1fr;}
+.WCC60500VQ .table-group .mo tbody tr th.th-t {border-right: none; background-color: var(--table-th); font-weight: var(--font-w-b);}
+.WCC60500VQ .table-group .mo tbody tr td {text-align: center;}
 
 /******고객센터-채무조정안내**/
 .WCC601500VQ .sub-process-content ul { display: inline-flex; gap: 20px 10px; }
