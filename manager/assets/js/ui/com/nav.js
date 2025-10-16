@@ -1,166 +1,98 @@
-/**
- * ï¿½×ºï¿½ï¿½ï¿½Ì¼ï¿½ ï¿½ï¿½ï¿½Úµï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
- * IE11 È£È¯(ES5): let/const, forEach, arrow ï¿½Ô¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
- */
 (function () {
     'use strict';
-    
-    // DOM ï¿½ï¿½ï¿½ Ä³ï¿½ï¿½
+
     var lnb = document.querySelector('#menuWrap');
     if (!lnb) return;
 
-    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+   
     var singleMode = lnb.getAttribute('data-accordion') === 'single';
+
+
     var CLASS_OPEN = 'acitve';
     var CLASS_TOGGLE = 'accordion';
     var SELECTOR_SUBMENU = '.submenu';
-    
-    // Å°ï¿½ï¿½ï¿½ï¿½ ï¿½Ìºï¿½Æ® ï¿½ï¿½ï¿½
+
     var KEY_ENTER = 13;
     var KEY_SPACE = 32;
 
-    /**
-     * ï¿½ï¿½Ò¿ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ï¿½ï¿½ È®ï¿½ï¿½
-     * @param {Element} el - È®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
-     * @param {string} className - È®ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-     * @returns {boolean}
-     */
     function hasClass(el, className) {
         if (!el || !className) return false;
         return (' ' + el.className + ' ').indexOf(' ' + className + ' ') > -1;
     }
-
-    /**
-     * ï¿½ï¿½Ò¿ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½
-     * @param {Element} el - ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
-     * @param {string} className - ï¿½ß°ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-     */
     function addClass(el, className) {
         if (!el || !className || hasClass(el, className)) return;
-        el.className = (el.className + ' ' + className).trim();
+        el.className = (el.className + ' ' + className).replace(/\s+/g, ' ').trim();
     }
-
-    /**
-     * ï¿½ï¿½Ò¿ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
-     * @param {Element} el - ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
-     * @param {string} className - ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-     */
     function removeClass(el, className) {
         if (!el || !className || !hasClass(el, className)) return;
-        el.className = el.className.replace(new RegExp('\\s*' + className + '\\s*', 'g'), ' ').trim();
+        el.className = el.className.replace(new RegExp('\\s*' + className + '\\s*', 'g'), ' ').replace(/\s+/g, ' ').trim();
     }
 
-    /**
-     * ï¿½Þ´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ý±ï¿½
-     * @param {Element} li - ï¿½ï¿½ï¿½ï¿½ li ï¿½ï¿½ï¿½
-     */
+    // IE11¿ë closest ´ëÃ¼: ÁÖ¾îÁø ÅÂ±×(LI)±îÁö »óÇâ Å½»ö
+    function closestTag(el, tagName) {
+        tagName = tagName.toUpperCase();
+        while (el && el !== document && el.nodeType === 1) {
+            if (el.tagName === tagName) return el;
+            el = el.parentNode;
+        }
+        return null;
+    }
+
     function closeItem(li) {
         if (!li) return;
-        
         var btn = li.querySelector('.' + CLASS_TOGGLE);
-        var submenu = li.querySelector(SELECTOR_SUBMENU);
-        
-        if (btn) {
-            btn.setAttribute('aria-expanded', 'false');
-        }
-        
-        // CSS ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ (display ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)
+        if (btn) btn.setAttribute('aria-expanded', 'false');
         removeClass(li, CLASS_OPEN);
     }
-
-    /**
-     * ï¿½Þ´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
-     * @param {Element} li - ï¿½ï¿½ li ï¿½ï¿½ï¿½
-     */
     function openItem(li) {
         if (!li) return;
-        
         var btn = li.querySelector('.' + CLASS_TOGGLE);
-        var submenu = li.querySelector(SELECTOR_SUBMENU);
-        
-        if (btn) {
-            btn.setAttribute('aria-expanded', 'true');
-        }
-        
-        // CSS ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ (display ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)
+        if (btn) btn.setAttribute('aria-expanded', 'true');
         addClass(li, CLASS_OPEN);
     }
-
-    /**
-     * ï¿½ï¿½ï¿½ï¿½ ï¿½Þ´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ûµï¿½ ï¿½ï¿½ï¿½ ï¿½Ý±ï¿½
-     * @param {Element} currentLi - ï¿½ï¿½ï¿½ï¿½ li ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½)
-     */
     function closeSiblings(currentLi) {
         if (!currentLi || !currentLi.parentNode) return;
-        
         var siblings = currentLi.parentNode.children;
         for (var i = 0; i < siblings.length; i++) {
-            if (siblings[i] !== currentLi) {
-                closeItem(siblings[i]);
-            }
+            if (siblings[i] !== currentLi) closeItem(siblings[i]);
         }
     }
-
-    /**
-     * ï¿½Þ´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
-     * @param {Element} li - ï¿½ï¿½ï¿½ï¿½ï¿½ li ï¿½ï¿½ï¿½
-     */
     function toggleItem(li) {
         if (!li) return;
-        
         var isOpen = hasClass(li, CLASS_OPEN);
-        
         if (isOpen) {
             closeItem(li);
         } else {
-            // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Òµï¿½ ï¿½Ý±ï¿½
-            if (singleMode) {
-                closeSiblings(li);
-            }
+            if (singleMode) closeSiblings(li); // ´Ù¸¥ ¸Þ´º ´Ý±â
             openItem(li);
         }
     }
 
-    /**
-     * Å¬ï¿½ï¿½ ï¿½Ìºï¿½Æ® ï¿½Úµé·¯
-     * @param {Event} e - Å¬ï¿½ï¿½ ï¿½Ìºï¿½Æ®
-     */
     function handleClick(e) {
         var target = e.target || e.srcElement;
-        
-        // ï¿½ï¿½Æ° ï¿½ï¿½Ã¼ ï¿½Ç´ï¿½ ï¿½Ú½ï¿½ ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½) Å¬ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+
+        // ¹öÆ°(.accordion)±îÁö °Å½½·¯ ¿Ã¶ó°¨
         while (target && target !== lnb && !hasClass(target, CLASS_TOGGLE)) {
             target = target.parentNode;
         }
-        
         if (!target || target === lnb) return;
 
-        var li = target.parentNode;
+        // #3: ¹öÆ°ÀÇ Á¶»ó LI¸¦ Á¤È®È÷ Ã£À½(ÁßÃ¸ ¸¶Å©¾÷ ´ëºñ)
+        var li = closestTag(target, 'LI');
         toggleItem(li);
     }
 
-    /**
-     * Å°ï¿½ï¿½ï¿½ï¿½ ï¿½Ìºï¿½Æ® ï¿½Úµé·¯
-     * @param {Event} e - Å°ï¿½ï¿½ï¿½ï¿½ ï¿½Ìºï¿½Æ®
-     */
     function handleKeydown(e) {
         var target = e.target || e.srcElement;
         if (!hasClass(target, CLASS_TOGGLE)) return;
-        
         var key = e.keyCode || e.which;
-        
-        // Enter ï¿½Ç´ï¿½ Space Å° Ã³ï¿½ï¿½
         if (key === KEY_ENTER || key === KEY_SPACE) {
-            if (e.preventDefault) {
-                e.preventDefault();
-            } else {
-                e.returnValue = false;
-            }
-            toggleItem(target.parentNode);
+            if (e.preventDefault) e.preventDefault(); else e.returnValue = false;
+            var li = closestTag(target, 'LI');
+            toggleItem(li);
         }
     }
 
-    // ï¿½Ìºï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
     lnb.addEventListener('click', handleClick, false);
     lnb.addEventListener('keydown', handleKeydown, false);
 })();
