@@ -183,31 +183,31 @@ body{
   .WCA20100VQ .greeting-group .signature img { width: 150px; }
 
   /******회사소개-회사개요**/
-  main.contentWrap > .MGC-INT-CMP-002 { padding-top: 0; }
-  .MGC-INT-CMP-002 { text-align: center; }
-  .MGC-INT-CMP-002 h3 { line-height: 150%; font-size: var(--font32); }
-  .MGC-INT-CMP-002 h3::after { content:""; display: block; margin: 32px 0; width: 100%; height: 268px; background: url("../../images/content/INT/w/main_CMP-002.png") no-repeat center; background-size: cover; }
-  .MGC-INT-CMP-002 .text-group p { margin-top: 0; font-size: var(--font20); font-weight: var(--font-w-m); line-height: 150%; }
+  main.contentWrap > .WCA10100VQ { padding-top: 0; }
+  .WCA10100VQ { text-align: center; }
+  .WCA10100VQ h3 { line-height: 150%; font-size: var(--font32); }
+  .WCA10100VQ h3::after { content:""; display: block; margin: 32px 0; width: 100%; height: 268px; background: url("../../images/content/INT/w/main_CMP-002.png") no-repeat center; background-size: cover; }
+  .WCA10100VQ .text-group p { margin-top: 0; font-size: var(--font20); font-weight: var(--font-w-m); line-height: 150%; }
   /* info-cards */
-  .MGC-INT-CMP-002 .info-cards { counter-reset: item; display: flex; justify-content: center; align-items: stretch; gap: 64px; padding: 100px 132px 28px 132px; margin: 0 auto; }
-  .MGC-INT-CMP-002 .info-card { width: calc((100% - 64px * 2) / 3); min-width: 180px; flex: 1; display: flex; flex-direction: column; justify-content: stretch; }
-  .MGC-INT-CMP-002 .info-card h4 { margin-bottom: 38px; font-size: var(--font22); font-weight: var(--font-w-b); }
-  .MGC-INT-CMP-002 .info-card dl { position: relative; flex: 1; padding: 48px 26px 30px 26px; border: var(--board); }
-  .MGC-INT-CMP-002 .info-card dl::before { content: "0"counter(item); counter-increment: item; position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center;
+  .WCA10100VQ .info-cards { counter-reset: item; display: flex; justify-content: center; align-items: stretch; gap: 64px; padding: 100px 132px 28px 132px; margin: 0 auto; }
+  .WCA10100VQ .info-card { width: calc((100% - 64px * 2) / 3); min-width: 180px; flex: 1; display: flex; flex-direction: column; justify-content: stretch; }
+  .WCA10100VQ .info-card h4 { margin-bottom: 38px; font-size: var(--font22); font-weight: var(--font-w-b); }
+  .WCA10100VQ .info-card dl { position: relative; flex: 1; padding: 48px 26px 30px 26px; border: var(--board); }
+  .WCA10100VQ .info-card dl::before { content: "0"counter(item); counter-increment: item; position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center;
     width: 40px; height: 40px; background: var(--primary); color: var(--white); font-size: var(--font20); font-weight: var(--font-w-b); }
-  .MGC-INT-CMP-002 .info-card dt + dd { margin-top: 10px; }
-  .MGC-INT-CMP-002 .info-card dd + dt { margin-top: 16px; }
-  .MGC-INT-CMP-002 .info-card dt { font-size: var(--font18); font-weight: var(--font-w-b); }
-  .MGC-INT-CMP-002 .info-card dd { color: var(--color-6); font-size: var(--font16); font-weight: var(--font-w-r); }
+  .WCA10100VQ .info-card dt + dd { margin-top: 10px; }
+  .WCA10100VQ .info-card dd + dt { margin-top: 16px; }
+  .WCA10100VQ .info-card dt { font-size: var(--font18); font-weight: var(--font-w-b); }
+  .WCA10100VQ .info-card dd { color: var(--color-6); font-size: var(--font16); font-weight: var(--font-w-r); }
   /* button-content */
-  .MGC-INT-CMP-002 .button-content {padding-top:28px}
-  .MGC-INT-CMP-002 .button-content .lnk-group { display: flex; flex-wrap: wrap; gap: 40px; }
-  .MGC-INT-CMP-002 .button-content .lnk-group a { box-sizing: border-box; height: 202px; display: flex; align-items: center; justify-content: center; flex: 1 1 calc(50% - 20px); border-radius: 16px;
+  .WCA10100VQ .button-content {padding-top:28px}
+  .WCA10100VQ .button-content .lnk-group { display: flex; flex-wrap: wrap; gap: 40px; }
+  .WCA10100VQ .button-content .lnk-group a { box-sizing: border-box; height: 202px; display: flex; align-items: center; justify-content: center; flex: 1 1 calc(50% - 20px); border-radius: 16px;
     color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); background-size: cover; background-repeat: no-repeat; background-position: center; }
-  .MGC-INT-CMP-002 .button-content .lnk-group a:nth-child(1) { background-image: url("../../images/content/INT/w/link_1_CMP-002.png") }
-  .MGC-INT-CMP-002 .button-content .lnk-group a:nth-child(2) { background-image: url("../../images/content/INT/w/link_2_CMP-002.png") }
-  .MGC-INT-CMP-002 .button-content .lnk-group a:nth-child(3) { background-image: url("../../images/content/INT/w/link_3_CMP-002.png") }
-  .MGC-INT-CMP-002 .button-content .lnk-group a:nth-child(4) { background-image: url("../../images/content/INT/w/link_4_CMP-002.png") }
+  .WCA10100VQ .button-content .lnk-group a:nth-child(1) { background-image: url("../../images/content/INT/w/link_1_CMP-002.png") }
+  .WCA10100VQ .button-content .lnk-group a:nth-child(2) { background-image: url("../../images/content/INT/w/link_2_CMP-002.png") }
+  .WCA10100VQ .button-content .lnk-group a:nth-child(3) { background-image: url("../../images/content/INT/w/link_3_CMP-002.png") }
+  .WCA10100VQ .button-content .lnk-group a:nth-child(4) { background-image: url("../../images/content/INT/w/link_4_CMP-002.png") }
 
   /* 회사소개 - 회사연혁 (WCA30100VQ) */
   .WCA30100VQ { padding-top: 0 !important; }
@@ -319,20 +319,20 @@ body{
 ---------------------------------------------*/
 
 /******회사소개-회사개요**/
-.MGC-INT-CMP-002 h3 { font-size: var(--font32); font-weight: var(--font-w-m); }
-.MGC-INT-CMP-002 h3 .success { font-weight: var(--font-w-b); }
-.MGC-INT-CMP-002 h3::after { position: relative; left: 50%; transform: translateX(-50%); margin: 28px 0 20px 0; width: 100vw; height: 173px; }
-.MGC-INT-CMP-002 .text-group p { font-size: var(--font18); font-weight: var(--font-w-r) }
+.WCA10100VQ h3 { font-size: var(--font32); font-weight: var(--font-w-m); }
+.WCA10100VQ h3 .success { font-weight: var(--font-w-b); }
+.WCA10100VQ h3::after { position: relative; left: 50%; transform: translateX(-50%); margin: 28px 0 20px 0; width: 100vw; height: 173px; }
+.WCA10100VQ .text-group p { font-size: var(--font18); font-weight: var(--font-w-r) }
 /* info-cards */
-.MGC-INT-CMP-002 .info-cards { flex-direction: column; padding: 52px 0 0 0; gap: 36px; }
-.MGC-INT-CMP-002 .info-card { width: 100%; }
-.MGC-INT-CMP-002 .info-card h4 { font-size: var(--font18); margin-bottom: 12px; }
-.MGC-INT-CMP-002 .info-card dt { font-size: var(--font16); }
-.MGC-INT-CMP-002 .info-card dd { font-size: var(--font14); }
+.WCA10100VQ .info-cards { flex-direction: column; padding: 52px 0 0 0; gap: 36px; }
+.WCA10100VQ .info-card { width: 100%; }
+.WCA10100VQ .info-card h4 { font-size: var(--font18); margin-bottom: 12px; }
+.WCA10100VQ .info-card dt { font-size: var(--font16); }
+.WCA10100VQ .info-card dd { font-size: var(--font14); }
 /* button-content */
-.MGC-INT-CMP-002 .button-content .lnk-group { display: block; }
-.MGC-INT-CMP-002 .button-content .lnk-group a { height: 102px; font-size: var(--font22) }
-.MGC-INT-CMP-002 .button-content .lnk-group a+a { margin-top: 20px; }
+.WCA10100VQ .button-content .lnk-group { display: block; }
+.WCA10100VQ .button-content .lnk-group a { height: 102px; font-size: var(--font22) }
+.WCA10100VQ .button-content .lnk-group a+a { margin-top: 20px; }
 
 /* 회사소개 - 회사연혁 (WCA30100VQ) */
 .WCA30100VQ .history-group .history-range{display:none}
