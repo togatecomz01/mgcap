@@ -14,6 +14,8 @@ body{
 
   --lst-btn-prev:url("../../images/com/svg/ico_link.svg");
   --lst-btn-last:url("../../images/com/svg/ico_last.svg");
+  --ico-file:url("../../images/com/svg/ico_file.svg");
+
   --lst-btn-active:#F1F1F3;
 
 }
@@ -43,17 +45,23 @@ button, a { cursor:pointer; display:inline-block; display:inline-flex; align-ite
 .btn-ico-mod:hover { background-image:url("../../images/com/svg/ico_modify_active.svg"); }
 
 .btn-ico-close {  width:28px; height:28px; background-image:url("../../images/com/svg/ico_close.svg"); background-color:var(--white); background-repeat:no-repeat; background-position:center; background-size:16px; }
-
+.btn-down { text-decoration:underline; }
+.btn-down::before { content:""; display:block; width:28px; height:28px; background-color:var(--color-2); mask-image:var(--ico-file); mask-position:center; mask-repeat:no-repeat; mask-size:12px auto; --webkit-mask-image:var(--ico-file); --webkit-mask-position:center; --webkit-mask-repeat:no-repeat; --webkit-mask-size:13px auto;  }
 
 /**리스트 버튼**/
 .list-content td .btn-ico-mod,
 .list-content td .btn-ico-del {  display:block; margin:0 auto; width:32px; height:32px; background-color:var(--white);; background-repeat:no-repeat; background-position:center; background-size:20px; border-radius:4px; font-size:0;  }
+.list-content td a.btn-down { font-size:0; }
+.list-content td a.btn-down::before { font-size:0; width:32px; height:32px; background-color:var(--color-75);  mask-size:20px auto; --webkit-mask-size:13px auto;  }
+.list-content td a.btn-down:hover::before { background-color:var(--btn-text-color); }
 .list-content td .btn-clear { font-size:var(--font16); right:11px; top:50%; transform:translateY(-50%); }
 .list-content td a { font-weight:var(--font-w-m); }
 .list-content td a.btn-text,
 .list-content td button.btn-text { width:auto; height:auto; color:var(--btn-text-color); font-size:var(--font16); text-decoration:underline !important;  }
 .list-content td a.btn-text.img,
 .list-content td button.btn-text.img { font-weight:var(--font-w-m); color:var(--active); }
+
+
 
 /**페이지네이션 버튼 **/
 .pagination-content { position:relative; display:flex; padding:12px; align-items:center; justify-content:center; gap:8px; }
