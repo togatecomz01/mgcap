@@ -438,7 +438,7 @@ main.contentWrap > .bottom-container { margin-top:72px; }
 	.footer-top > ul li a { font-size:var(--font12); font-weight:var(--font-w-r); color:var(--color-6); }
 	.footer-top > ul li a:hover { font-weight:700; color:var(--color-45); }
 	.footer-top .family-site { padding:0 24px; width:100%; background-color:var(--bg-box); }
-	.footer-top .family-site select { padding:12px 0; height:auto; background-color:var(--bg-box); font-size:var(--font12); font-weight:var(--font-w-r); color:var(--color-45); }
+	.footer-top .family-site select { padding:12px 0; height:auto; background-color:var(--bg-box); background-size:13px; font-size:var(--font12); font-weight:var(--font-w-r); color:var(--color-45); }
 
 	.footer-main { flex-direction:column; align-items:normal; gap:12px; padding:18px 24px 12px; }
 	.footer-main .ft-cts { align-self:flex-start; }

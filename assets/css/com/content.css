@@ -416,6 +416,10 @@ body{
 .WCS10200VQ .underline,
 .MGC-MMG-ISUDM-005 .underline a { color:var(--primary); text-decoration:underline; }
 
+/* 담보권해지신청 */
+.MGC-MMG-ISUDM-006 .btn-form { max-width:200px; }
+.MGC-MMG-ISUDM-006 .search-form input[type="text"].address { flex:0 0 325px; }
+
 /*---------------------------------------------
     #미디어쿼리
 ---------------------------------------------*/

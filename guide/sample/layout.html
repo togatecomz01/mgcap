@@ -91,139 +91,137 @@
                 <section class="page-container MGC-MMG-UST-001">
                     <div class="text-content">
                         <h3>이용상품내역 목록</h3>
-                    </div>
-                    <form>
-                        <!--확인용-->
-                        <fieldset class="form-content">
-                            <legend>납입내역에 대한 조회</legend>
-                            <div class="form-wrap search-form">
-                                <div class="form-group">
-                                    <p class="mo-tit">구분선택</p>
-                                    <label class="radio">
-                                        <input type="radio" name="use" value="" checked="">
-                                        <span>팩스</span>
-                                    </label>
-                                    <label class="radio">
-                                        <input type="radio" name="use" value="">
-                                        <span>이메일</span>
-                                    </label>
-                                    <label class="radio">
-                                        <input type="radio" name="use" value="">
-                                        <span>우편</span>
-                                    </label>
-                                </div>
-                                <div class="group">
+                        <form>
+                            <!--확인용-->
+                            <fieldset class="form-content">
+                                <legend>납입내역에 대한 조회</legend>
+                                <div class="form-wrap search-form">
                                     <div class="form-group">
-                                        <label>납입기간</label>
-                                        <div class="ph">
-                                            <input id="date-input" type="date" name="date" placeholder="디폴트" />
-                                            <span class="ipt-hyphen">-</span>
-                                            <input id="date-input" type="date" name="date" placeholder="디폴트" />
-                                        </div>
+                                        <p class="mo-tit">구분선택</p>
+                                        <label class="radio">
+                                            <input type="radio" name="use" value="" checked="">
+                                            <span>팩스</span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="use" value="">
+                                            <span>이메일</span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="use" value="">
+                                            <span>우편</span>
+                                        </label>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="">제출기간</label>
-                                        <select required="" title="">
-                                            <option value="" hidden="">통신사</option>
-                                            <option value="0">SKT</option>
-                                            <option value="1">KT</option>
-                                            <option value="2">LGU+</option>
-                                            <option value="0">(알뜰)SKT</option>
-                                            <option value="1">(알뜰)KT</option>
-                                            <option value="2">(알뜰)LGU+</option>
-                                        </select>
+                                    <div class="group">
+                                        <div class="form-group">
+                                            <label>납입기간</label>
+                                            <div class="ph">
+                                                <input id="date-input" type="date" name="date" placeholder="디폴트" />
+                                                <span class="ipt-hyphen">-</span>
+                                                <input id="date-input" type="date" name="date" placeholder="디폴트" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">제출기간</label>
+                                            <select required="" title="">
+                                                <option value="" hidden="">통신사</option>
+                                                <option value="0">SKT</option>
+                                                <option value="1">KT</option>
+                                                <option value="2">LGU+</option>
+                                                <option value="0">(알뜰)SKT</option>
+                                                <option value="1">(알뜰)KT</option>
+                                                <option value="2">(알뜰)LGU+</option>
+                                            </select>
 
-                                        <label for="">제출기관명</label>
-                                        <input id="submit-name" type="text" name="submitName" placeholder="제출기관명" />
-                                        <label for="">제출용도</label>
-                                        <input id="submit-name" type="text" name="submitName" placeholder="제출용도" />
-                                    </div>
-                                    <div class="form-group ph">
-                                        <label>팩스 번호</label>
-                                        <div class="ph">
-                                            <input id="fax-number" type="number" name="fax" placeholder="디폴트" />
-                                            <input id="fax-number" type="number" name="fax" placeholder="디폴트" />
-                                            <input id="fax-number" type="number" name="fax" placeholder="디폴트" />
+                                            <label for="">제출기관명</label>
+                                            <input id="submit-name" type="text" name="submitName" placeholder="제출기관명" />
+                                            <label for="">제출용도</label>
+                                            <input id="submit-name" type="text" name="submitName" placeholder="제출용도" />
+                                        </div>
+                                        <div class="form-group ph">
+                                            <label>팩스 번호</label>
+                                            <div class="ph">
+                                                <input id="fax-number" type="number" name="fax" placeholder="디폴트" />
+                                                <input id="fax-number" type="number" name="fax" placeholder="디폴트" />
+                                                <input id="fax-number" type="number" name="fax" placeholder="디폴트" />
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <button class="btn-form">조회</button>
-                            </div><!--//form-wrap-->
-                        </fieldset>
-                        <!--확인용끝-->
-                    </form>
-                    <div class="text-content" style="padding-top:52px;">
-                        <p class="caption">기준일 : 2025-09-22 / 단위: 원</p>
-                        <div class="table-content">
-                            <table class="mo-s">
-                                <caption>번호, 실행번호, 공급자명, 상품명, 여신금액, 잔여회차/총회차, 실행일, 최근납입일, 전액, 진행상태, 만기일, 차기납입일, 진행상태에 대한 표</caption>
-                                <colgroup>
-                                    <col style="width:5%">
-                                    <col style="width:10%">
-                                    <col style="width:11%">
-                                    <col style="width:10%">
-                                    <col style="width:10%">
-                                    <col style="width:7%">
-                                    <col style="width:9%">
-                                    <col style="width:7%">
-                                    <col style="width:5%">
-                                    <col style="width:6%">
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th scope="col" rowspan="2">No.</th>
-                                        <th scope="col" rowspan="2">실행번호</th>
-                                        <th scope="col" rowspan="2">공급자명</th>
-                                        <th scope="col" rowspan="2">상품명</th>
-                                        <th scope="col" rowspan="2">여신금액</th>
-                                        <th scope="col" rowspan="2">잔여회차/총회차</th>
-                                        <th scope="col">실행일</th>
-                                        <th scope="col">최근납입일</th>
-                                        <th scope="col" rowspan="2">전액</th>
-                                        <th scope="col">진행상태</th>
-                                    </tr>
-                                    <tr>
-                                        <th scope="col" class="bor-l">만기일</th>
-                                        <th scope="col">차기납입일</th>
-                                        <th scope="col">진행상태</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td rowspan="2">1</td>
-                                        <td rowspan="2">MI14002240001</td>
-                                        <td rowspan="2">충면화광기고추손도</td>
-                                        <td rowspan="2">내구재/헬스케어</td>
-                                        <td rowspan="2">1,800,000</td>
-                                        <td rowspan="2">6/18</td>
-                                        <td>2014-02-27</td>
-                                        <td>134,050</td>
-                                        <td rowspan="2">0</td>
-                                        <td>중도상환</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="bor-l">2015-02-27</td>
-                                        <td>134,050</td>
-                                        <td>정상</td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <td colspan="4" class="sum">합계</td>
-                                        <td colspan="2">1,800,000</td>
-                                        <td colspan="2"></td>
-                                        <td>0</td>
-                                        <td></td>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="info-content">
-                        <div class="info-list">
-                            <ul class="m-dot">
-                                <li> 납입상태가 연체일 경우 납입상태의 “연체"를 클릭하시면 연체내역을 확인 하실 수 있습니다.</li>
-                            </ul>
+                                    <button class="btn-form">조회</button>
+                                </div><!--//form-wrap-->
+                            </fieldset>
+                            <!--확인용끝-->
+                        </form>
+                        <div class="text-group">
+                            <p class="caption">기준일 : 2025-09-22 / 단위: 원</p>
+                            <div class="table-content">
+                                <table class="mo-s">
+                                    <caption>번호, 실행번호, 공급자명, 상품명, 여신금액, 잔여회차/총회차, 실행일, 최근납입일, 잔액, 진행상태, 만기일, 차기납입일, 진행상태에 대한 표</caption>
+                                    <colgroup>
+                                        <col style="width:5%">
+                                        <col style="width:10%">
+                                        <col style="width:11%">
+                                        <col style="width:10%">
+                                        <col style="width:10%">
+                                        <col style="width:7%">
+                                        <col style="width:9%">
+                                        <col style="width:7%">
+                                        <col style="width:5%">
+                                        <col style="width:6%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" rowspan="2">No.</th>
+                                            <th scope="col" rowspan="2">실행번호</th>
+                                            <th scope="col" rowspan="2">공급자명</th>
+                                            <th scope="col" rowspan="2">상품명</th>
+                                            <th scope="col" rowspan="2">여신금액</th>
+                                            <th scope="col" rowspan="2">잔여회차/총회차</th>
+                                            <th scope="col">실행일</th>
+                                            <th scope="col">최근납입일</th>
+                                            <th scope="col" rowspan="2">잔액</th>
+                                            <th scope="col">진행상태</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col" class="bor-l">만기일</th>
+                                            <th scope="col">차기납입일</th>
+                                            <th scope="col">진행상태</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td rowspan="2">1</td>
+                                            <td rowspan="2">MI14002240001</td>
+                                            <td rowspan="2">충면화광기고추손도</td>
+                                            <td rowspan="2">내구재/헬스케어</td>
+                                            <td rowspan="2">1,800,000</td>
+                                            <td rowspan="2">6/18</td>
+                                            <td>2014-02-27</td>
+                                            <td>134,050</td>
+                                            <td rowspan="2">0</td>
+                                            <td>중도상환</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bor-l">2015-02-27</td>
+                                            <td>134,050</td>
+                                            <td>정상</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="4" class="sum">합계</td>
+                                            <td colspan="2">1,800,000</td>
+                                            <td colspan="2"></td>
+                                            <td>0</td>
+                                            <td></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <div class="info-list">
+                                <ul class="m-dot">
+                                    <li> 납입상태가 연체일 경우 납입상태의 “연체"를 클릭하시면 연체내역을 확인 하실 수 있습니다.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </section>
