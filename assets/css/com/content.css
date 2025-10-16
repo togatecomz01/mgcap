@@ -163,27 +163,28 @@ body{
 /*---------------------------------------------
     #회사소개
 ---------------------------------------------*/
-/* 회사소개 - CEO 인사말 (WCA20100VQ) */
-  .WCA20100VQ { padding-top: 0 !important; }
-  .WCA20100VQ .quote-content { padding-top: 0; border: none; }
-  .WCA20100VQ .br-mo {display: none} 
-  .WCA20100VQ .quote-group { padding: 10px 0; text-align: center; }
-  .WCA20100VQ .quote-group blockquote { position: relative; display: inline-block; padding: 30px 0; }
-  .WCA20100VQ .quote-group blockquote p { padding: 15px 0; font-size: var(--font28); line-height: 1.6; }
-  .WCA20100VQ .quote-group blockquote strong { color: var(--primary); }
-  .WCA20100VQ .quote-group blockquote::before, .WCA20100VQ .quote-group blockquote::after { content: ''; position: absolute; left: 50%; width: 80%; height: 30px; transform: translateX(-50%); box-sizing: border-box; }
-  .WCA20100VQ .quote-group blockquote::before { top: 0; border-top: 4px solid var(--primary); border-left: 4px solid var(--primary); border-right: 4px solid var(--primary); }
-  .WCA20100VQ .quote-group blockquote::after { bottom: 0; border-bottom: 4px solid var(--primary); border-left: 4px solid var(--primary); border-right: 4px solid var(--primary); }
+/* 회사소개 - CEO 인사말 (WCA20100VQ)  */
 
-  .WCA20100VQ .greeting-content { position: relative; left: 50%; width: 100vw; padding-top: 0; margin-left: -50vw; color: var(--white); background-image: url("../../images/content/INT/w/bg_CMP-001.png"); background-repeat: no-repeat; background-position: center bottom; background-size: cover; }
-  .WCA20100VQ .greeting-group { position: relative; display: flex; align-items: flex-end; max-width: 1920px; min-height: 900px; margin: 0 auto; box-sizing: border-box; }
-  .WCA20100VQ .greeting-group::before { content: ''; position: relative; left: -3%; align-self: stretch; flex-basis: 48vw; max-width: 900px; background-image: url('../../images/content/INT/w/pf_CMP-001.png'); background-repeat: no-repeat; background-size: cover; background-position: 40% bottom; }
-  .WCA20100VQ .greeting-group .ceo-text { flex: 1; align-self: center; min-width: 450px; padding-bottom: 100px; }
-  .WCA20100VQ .greeting-group .ceo-text em { display: block; margin-bottom: 52px; font-size: var(--font28); font-weight: var(--font-w-b); }
-  .WCA20100VQ .greeting-group .ceo-text p { margin: 0 0 42px; font-size: var(--font20); color: var(--white); }
-  .WCA20100VQ .greeting-group .signature { position: absolute; bottom: 30px; right: 6%; text-align: right; }
-  .WCA20100VQ .greeting-group .signature span { display: block; margin-bottom: 8px; color: var(--white); }
-  .WCA20100VQ .greeting-group .signature img { width: 150px; }
+.WCA20100VQ{padding-top:0!important}
+.WCA20100VQ .quote-content{padding-top:0}
+.WCA20100VQ .br-mo{display:none}
+.WCA20100VQ .quote-group{padding:10px 0;text-align:center}
+.WCA20100VQ .quote-group blockquote{position:relative;display:inline-block;padding:30px 0}
+.WCA20100VQ .quote-group blockquote p{padding:15px 0;font-size:var(--font28);line-height:1.6}
+.WCA20100VQ .quote-group blockquote strong{color:var(--primary)}
+.WCA20100VQ .quote-group blockquote::before,
+.WCA20100VQ .quote-group blockquote::after{content:'';position:absolute;left:50%;width:80%;height:30px;box-sizing:border-box;transform:translateX(-50%)}
+.WCA20100VQ .quote-group blockquote::before{top:0;border-top:4px solid var(--primary);border-right:4px solid var(--primary);border-left:4px solid var(--primary)}
+.WCA20100VQ .quote-group blockquote::after{bottom:0;border-right:4px solid var(--primary);border-bottom:4px solid var(--primary);border-left:4px solid var(--primary)}
+
+.WCA20100VQ .greeting-container{position:relative;left:50%;width:100vw;padding-top:0;margin-left:-50vw;color:var(--white);background-image:url("../../images/content/INT/w/bg_CMP-001.png");background-repeat:no-repeat;background-position:center bottom;background-size:cover}
+.WCA20100VQ .greeting-group{position:relative;display:flex;align-items:center;min-height:950px;padding:0 52px;margin:0 auto;box-sizing:border-box}.WCA20100VQ .greeting-group::before{content:'';align-self:stretch;flex-basis:55%;max-width:900px;background-image:url('../../images/content/INT/w/pf_CMP-001.png');background-repeat:no-repeat;background-position:right bottom;background-size:auto 85%}
+.WCA20100VQ .greeting-group .ceo-text{flex:1;align-self:center;padding:0 5% 0 0;box-sizing:border-box}
+.WCA20100VQ .greeting-group .ceo-text em{display:block;margin-bottom:52px;font-size:var(--font28);font-weight:var(--font-w-b);color:var(--white)}
+.WCA20100VQ .greeting-group .ceo-text p{margin:0 0 42px;font-size:var(--font20);color:var(--white)}
+.WCA20100VQ .greeting-group .signature{position:absolute;right:7%;bottom:2%;text-align:right}
+.WCA20100VQ .greeting-group .signature span{display:block;margin-bottom:8px;color:var(--white)}
+.WCA20100VQ .greeting-group .signature img{width:150px}
 
   /******회사소개-회사개요**/
   main.contentWrap > .WCA10100VQ { padding-top: 0; }
@@ -214,15 +215,15 @@ body{
 
   /* 회사소개 - 회사연혁 (WCA30100VQ) */
   .WCA30100VQ { padding-top: 0 !important; }
-  .WCA30100VQ .text-content {border: none;}
   .WCA30100VQ .text-content h3 { font-size: var(--font32); }
   .WCA30100VQ .text-content h3 span { color: var(--primary); }
   .WCA30100VQ .text-content p { font-size: var(--font32); font-weight: var(--font-w-b); }
   .WCA30100VQ .text-content p span { color: var(--primary); }
-  .WCA30100VQ .history-group { display: flex; align-items: flex-start; gap: 160px; }
-  .WCA30100VQ .history-range { flex: 0 0 250px; text-align: center; }
+  .WCA30100VQ .history-group { display: flex; align-items: flex-start; gap: 160px; border-top: 1px solid #000000;}
+  .WCA30100VQ .history-range { flex: 0 0 350px; text-align: center; margin-top: 50px;}
   .WCA30100VQ .history-range .sub-title { font-size: var(--font22); font-weight: var(--font-w-m); color: var(--color-9); margin-bottom: 10px; }
-  .WCA30100VQ .history-range .main-title { font-size: var(--font32); font-weight: var(--font-w-b); }
+  .WCA30100VQ .history-range .main-title { font-size: 52px; font-weight: var(--font-w-b); }
+  .WCA30100VQ .timeline-list {margin-top: 50px;}
   .WCA30100VQ .timeline-list li { position: relative; }
   .WCA30100VQ .timeline-list li:not(:last-child) { margin-bottom: 90px; }
   .WCA30100VQ .timeline-list li::before { content: ''; position: absolute; top: 15px; left: -36px; width: 10px; height: 10px; background-color: var(--color-3); border-radius: 50%; z-index: 2; }
@@ -340,13 +341,15 @@ body{
 
 /* 회사소개 - 회사연혁 (WCA30100VQ) */
 .WCA30100VQ .history-group .history-range{display:none}
-.WCA30100VQ .history-group{gap:0}
-.WCA30100VQ .timeline-list{width:100%}
+.WCA30100VQ .history-group{gap:0; border: none;}
+.WCA30100VQ .text-group p { margin-top: 0; }
+.WCA30100VQ .timeline-list{width:100%; margin-top: 0;}
 .WCA30100VQ .timeline-list .date{width:100%;flex:0 0 20px}
 .WCA30100VQ .timeline-list li::before{left:0}
-.WCA30100VQ .timeline-list li::after{left:3px}
+.WCA30100VQ .timeline-list li::after{left:3px; width: 2px;}
 .WCA30100VQ .timeline-list dt{padding-left:30px;font-size:var(--font22)}
-.WCA30100VQ .timeline-list dd{padding-left:30px;flex-direction:column;font-size:var(--font18)}
+.WCA30100VQ .timeline-list dd{padding-left:30px;flex-direction:column;font-size:var(--font18);}
+.WCA30100VQ .timeline-list dd:not(:last-of-type) {margin-bottom: 50px;}
 .WCA30100VQ .timeline-list .date{margin-bottom:12px;color:var(--color-2)}
 
 /******회사소개-채용안내 및 절차**/
@@ -360,7 +363,7 @@ body{
     #인증센터, MY MG 공통
 ---------------------------------------------*/
 
-
+/* 나의 정보 변경 */
 .WCS50300VS .pad {padding: 8px 10px;}
 .WCS50300VS .form-group:has(.info-phone) {flex: 0 0 calc(66% - 20px) !important}
 .WCS50300VS .form-group:has(.email) {flex: 0 0 calc(77% - 20px) !important}
@@ -422,16 +425,16 @@ body{
     /* 회사소개 - ceo인사말 (WCA20100VQ) */
     .WCA20100VQ { max-width: none !important; padding-left: 0 !important; padding-right: 0 !important }
     .WCA20100VQ .quote-content,
-    .WCA20100VQ .greeting-content {max-width: 1400px; margin: 0 auto; padding-left: 52px; padding-right: 52px; box-sizing: border-box;}
+    .WCA20100VQ .greeting-container {max-width: 1400px; margin: 0 auto; padding-left: 52px; padding-right: 52px; box-sizing: border-box;}
     .WCA20100VQ .br-mo {display: block}
     .WCA20100VQ .quote-group {margin: 0 !important;}
     .WCA20100VQ .quote-group blockquote::before,
     .WCA20100VQ .quote-group blockquote::after {display: none;}
-    .WCA20100VQ .greeting-content { position: static; width: auto; margin: 0; background-image: none; }
+    .WCA20100VQ .greeting-container { position: static; width: auto; margin: 0; background-image: none; }
     .WCA20100VQ .greeting-group {  position: relative; display: block; min-height: auto; padding-top: 450px; margin-top: 0 !important; margin-bottom: 0; gap: 0; }
     .WCA20100VQ .greeting-group::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);width: 100vw; height: 450px; z-index: -1; background-image: url("../../images/content/INT/w/bg_CMP-001.png"); background-size: cover; background-position: center;max-width: 1200px;}
     .WCA20100VQ .greeting-group::after { content: ''; position: absolute; top: 0; left: 50%; bottom: auto; width: 100%; height: 450px; background-image: url('../../images/content/INT/w/pf_CMP-001.png'); background-repeat: no-repeat; background-size: contain; background-position: center bottom; transform: translateX(-50%); }
-    .WCA20100VQ .greeting-group .signature { position: absolute; top: 24px; right: 24px; bottom: auto; }
+    .WCA20100VQ .greeting-group .signature { position: absolute; top: 2%; right: 2%; bottom: auto; }
     .WCA20100VQ .greeting-group .signature span { margin-bottom: 0; }
     .WCA20100VQ .greeting-group .signature img { width: 120px; }
     .WCA20100VQ .greeting-group .ceo-text { position: static; min-width: auto; width: 100%; padding: 52px 0 0; box-sizing: border-box; color: var(--color-2); }
