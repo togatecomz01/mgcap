@@ -32,9 +32,9 @@ table.td-al td { text-align:left; }
 .caption { padding-bottom:20px; font-size:var(--font16); font-weight:var(--font-w-r); color:var(--color-6); text-align:right; }
 
 /* Å×ÀÌºí ÇªÅÍ */
-.text-content .table-content table tfoot tr:only-child,
-.text-content .table-content table tfoot tr:last-child { background-color:#EDF9FF; }
-.text-content .table-content table tfoot .sum { font-weight:var(--font-w-m); color:var(--white); background-color:var(--primary); }
+.table-content table tfoot tr:only-child,
+.table-content table tfoot tr:last-child { background-color:#EDF9FF; }
+.table-content table tfoot .sum { font-weight:var(--font-w-m); color:var(--white); background-color:var(--primary); }
 
 @media (max-width:1200px){
     .table-content:has(.mo-s) { overflow-x:auto; }
