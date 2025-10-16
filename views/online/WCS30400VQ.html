@@ -41,95 +41,92 @@
                 <section class="visual-container">
                     <h2>자동차세조회</h2>
                 </section>
-                <section class="page-container WCS10100VQ">
+                <section class="page-container WCS30400VQ">
                     <div class="text-content">
                         <h3>자동차세 조회 목록</h3>
-                    </div>
-                    <form>
-                        <fieldset class="form-content">
-                            <legend>자동차세에 대한 조회</legend>
-                            <div class="form-wrap search-form">
-                                <div class="form-group">
-                                    <p class="mo-tit">구분선택</p>
-                                    <label class="radio">
-                                        <input type="radio" name="use" value="" checked="">
-                                        <span>상품번호</span>
-                                    </label>
-                                    <label class="radio">
-                                        <input type="radio" name="use" value="">
-                                        <span>차량번호</span>
-                                    </label>
-                                    <label class="radio">
-                                        <input type="radio" name="use" value="">
-                                        <span>과세기간</span>
-                                    </label>
-                                </div>
-                                <div class="group">
+                        <form>
+                            <fieldset class="form-content">
+                                <legend>자동차세에 대한 조회</legend>
+                                <div class="form-wrap search-form">
                                     <div class="form-group">
-                                        <label>상품번호</label>
-                                        <select required="" title="">
-                                            <option value="" hidden="">상품번호</option>
-                                            <option value="0">상품번호</option>
-                                            <option value="1">상품번호</option>
-                                            <option value="2">상품번호</option>
-                                            <option value="0">상품번호</option>
-                                            <option value="1">상품번호</option>
-                                            <option value="2">상품번호</option>
-                                        </select>
+                                        <p class="mo-tit">구분선택</p>
+                                        <label class="radio">
+                                            <input type="radio" name="use" value="" checked="">
+                                            <span>상품번호</span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="use" value="">
+                                            <span>차량번호</span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="use" value="">
+                                            <span>과세기간</span>
+                                        </label>
                                     </div>
-                                </div>
-                                <button class="btn-form">조회</button>
-                            </div><!--//form-wrap-->
-                        </fieldset>
-                    </form>
-                    <div class="text-content">
-                        <p class="caption">기준일 : 2025-09-22 / 단위: 원</p>
-                        <div class="table-content">
-                            <table class="mo-s">
-                                <caption>선택, 번호, 실행번호, 상품면, 수신방법(E-mail, 우편물주소, SMS)에 대한 표</caption>
-                                <colgroup>
-                                    <col style="width:8%">
-                                    <col style="width:13%">
-                                    <col style="width:13%">
-                                    <col style="width:25%">
-                                    <col style="width:13%">
-                                    <col style="width:15%">
-                                    <col style="width:13%">
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th scope="col" rowspan="2">선택</th>
-                                        <th scope="col" rowspan="2">번호</th>
-                                        <th scope="col" rowspan="2">실행번호</th>
-                                        <th scope="col" rowspan="2">상품명</th>
-                                        <th scope="col" colspan="3">수신방법</th>
-                                    </tr>
-                                    <tr>
-                                        <th scope="col">E-mail</th>
-                                        <th scope="col">우편물주소</th>
-                                        <th scope="col">SMS</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td colspan="7">데이터가 존재하지 않습니다.</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="info-content">
-                        <div class="info-list">
-                            <ul class="m-dot">
-                                <li>수신방법을 변경할 시 해당 실행번호를 선택하고 변경신청 버튼을 클릭하세요.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-                <section class="bottom-container">
-                    <div class="btn-content cta">
-                        <div class="button-group">
-                            <a herf="javascript:void(0);" class="btn-primary">변경</a>
+                                    <div class="group">
+                                        <div class="form-group">
+                                            <label>상품번호</label>
+                                            <select required="" title="">
+                                                <option value="" hidden="">선택</option>
+                                                <option value="0">상품번호</option>
+                                                <option value="1">상품번호</option>
+                                                <option value="2">상품번호</option>
+                                                <option value="0">상품번호</option>
+                                                <option value="1">상품번호</option>
+                                                <option value="2">상품번호</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <button class="btn-form">조회</button>
+                                </div><!--//form-wrap-->
+                            </fieldset>
+                        </form>
+                        <div class="text-group">
+                            <p class="caption">단위: 원</p>
+                            <div class="table-content">
+                                <table class="mo-s">
+                                    <caption>번호, 실행번호, 차량번호, 고지서번호, 청구예정일, 발생금액, 과제시작일, 과세종료일에 대한 표</caption>
+                                    <colgroup>
+                                        <col style="width:12.5%">
+                                        <col style="width:12.5%">
+                                        <col style="width:12.5%">
+                                        <col style="width:12.5%">
+                                        <col style="width:12.5%">
+                                        <col style="width:12.5%">
+                                        <col style="width:12.5%">
+                                        <col style="width:12.5%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">번호</th>
+                                            <th scope="col">실행번호</th>
+                                            <th scope="col">차량번호</th>
+                                            <th scope="col">고지서번호</th>
+                                            <th scope="col">청구예정일</th>
+                                            <th scope="col">발생금액</th>
+                                            <th scope="col">과세시작일</th>
+                                            <th scope="col">과세종료일</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="8">데이터가 존재하지 않습니다.</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td class="sum">합계</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>0</td>
+                                            <td></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </section>

@@ -177,6 +177,8 @@ label.toggle input + span { font-size:0; }
 }
 
 @media screen and (max-width:480px) {
+  /* 조건검색 */
+  .search-form label.radio { padding:6px 24px 8px 0; }
   .form-wrap.search-form > .group > .form-group .ph input[type="date"] { min-width:100px; width:100%; }
 }
 

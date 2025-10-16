@@ -44,104 +44,102 @@
                 <section class="page-container MGC-MMG-UST-001">
                     <div class="text-content">
                         <h3>이용상품내역 목록</h3>
-                    </div>
-                    <form>
-                        <fieldset class="form-content">
-                            <legend>이용상품내역 목록</legend>
-                            <div class="form-wrap search-form">
-                                <div class="group">
-                                    <div class="form-group">
-                                        <p class="mo-tit">구분선택</p>
-                                        <label class="radio">
-                                            <input type="radio" name="use" value="" checked="">
-                                            <span>팩스</span>
-                                        </label>
-                                        <label class="radio">
-                                            <input type="radio" name="use" value="">
-                                            <span>이메일</span>
-                                        </label>
-                                        <label class="radio">
-                                            <input type="radio" name="use" value="">
-                                            <span>우편</span>
-                                        </label>
+                        <form>
+                            <fieldset class="form-content">
+                                <legend>이용상품내역 목록</legend>
+                                <div class="form-wrap search-form">
+                                    <div class="group">
+                                        <div class="form-group">
+                                            <p class="mo-tit">구분선택</p>
+                                            <label class="radio">
+                                                <input type="radio" name="use" value="" checked="">
+                                                <span>팩스</span>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="use" value="">
+                                                <span>이메일</span>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="use" value="">
+                                                <span>우편</span>
+                                            </label>
+                                        </div>
                                     </div>
+                                    <button class="btn-form">조회</button>
                                 </div>
-                                <button class="btn-form">조회</button>
+                            </fieldset>
+                        </form>
+                        <div class="text-group">
+                            <p class="caption">기준일 : 2025-09-22 / 단위: 원</p>
+                            <div class="table-content">
+                                <table class="mo-s">
+                                    <caption>번호, 실행번호, 공급자명, 상품명, 여신금액, 잔여회차/총회차, 실행일, 최근납입일, 잔액, 진행상태, 만기일, 차기납입일, 진행상태에 대한 표</caption>
+                                    <colgroup>
+                                        <col style="width:5%">
+                                        <col style="width:10%">
+                                        <col style="width:11%">
+                                        <col style="width:10%">
+                                        <col style="width:10%">
+                                        <col style="width:7%">
+                                        <col style="width:9%">
+                                        <col style="width:7%">
+                                        <col style="width:5%">
+                                        <col style="width:6%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" rowspan="2">No.</th>
+                                            <th scope="col" rowspan="2">실행번호</th>
+                                            <th scope="col" rowspan="2">공급자명</th>
+                                            <th scope="col" rowspan="2">상품명</th>
+                                            <th scope="col" rowspan="2">여신금액</th>
+                                            <th scope="col" rowspan="2">잔여회차/총회차</th>
+                                            <th scope="col">실행일</th>
+                                            <th scope="col">최근납입일</th>
+                                            <th scope="col" rowspan="2">잔액</th>
+                                            <th scope="col">진행상태</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col" class="bor-l">만기일</th>
+                                            <th scope="col">차기납입일</th>
+                                            <th scope="col">진행상태</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td rowspan="2">1</td>
+                                            <td rowspan="2">MI14002240001</td>
+                                            <td rowspan="2">충면화광기고추손도</td>
+                                            <td rowspan="2">내구재/헬스케어</td>
+                                            <td rowspan="2">1,800,000</td>
+                                            <td rowspan="2">6/18</td>
+                                            <td>2014-02-27</td>
+                                            <td>134,050</td>
+                                            <td rowspan="2">0</td>
+                                            <td>중도상환</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bor-l">2015-02-27</td>
+                                            <td>134,050</td>
+                                            <td>정상</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="4" class="sum">합계</td>
+                                            <td colspan="2">1,800,000</td>
+                                            <td colspan="2"></td>
+                                            <td>0</td>
+                                            <td></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
                             </div>
-                        </fieldset>
-                    </form>
-                    <div class="text-content">
-                        <p class="caption">기준일 : 2025-09-22 / 단위: 원</p>
-                        <div class="table-content">
-                            <table class="mo-s">
-                                <caption>번호, 실행번호, 공급자명, 상품명, 여신금액, 잔여회차/총회차, 실행일, 최근납입일, 잔액, 진행상태, 만기일, 차기납입일, 진행상태에 대한 표</caption>
-                                <colgroup>
-                                    <col style="width:5%">
-                                    <col style="width:10%">
-                                    <col style="width:11%">
-                                    <col style="width:10%">
-                                    <col style="width:10%">
-                                    <col style="width:7%">
-                                    <col style="width:9%">
-                                    <col style="width:7%">
-                                    <col style="width:5%">
-                                    <col style="width:6%">
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th scope="col" rowspan="2">No.</th>
-                                        <th scope="col" rowspan="2">실행번호</th>
-                                        <th scope="col" rowspan="2">공급자명</th>
-                                        <th scope="col" rowspan="2">상품명</th>
-                                        <th scope="col" rowspan="2">여신금액</th>
-                                        <th scope="col" rowspan="2">잔여회차/총회차</th>
-                                        <th scope="col">실행일</th>
-                                        <th scope="col">최근납입일</th>
-                                        <th scope="col" rowspan="2">잔액</th>
-                                        <th scope="col">진행상태</th>
-                                    </tr>
-                                    <tr>
-                                        <th scope="col" class="bor-l">만기일</th>
-                                        <th scope="col">차기납입일</th>
-                                        <th scope="col">진행상태</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td rowspan="2">1</td>
-                                        <td rowspan="2">MI14002240001</td>
-                                        <td rowspan="2">충면화광기고추손도</td>
-                                        <td rowspan="2">내구재/헬스케어</td>
-                                        <td rowspan="2">1,800,000</td>
-                                        <td rowspan="2">6/18</td>
-                                        <td>2014-02-27</td>
-                                        <td>134,050</td>
-                                        <td rowspan="2">0</td>
-                                        <td>중도상환</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="bor-l">2015-02-27</td>
-                                        <td>134,050</td>
-                                        <td>정상</td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <td colspan="4" class="sum">합계</td>
-                                        <td colspan="2">1,800,000</td>
-                                        <td colspan="2"></td>
-                                        <td>0</td>
-                                        <td></td>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="info-content">
-                        <div class="info-list">
-                            <ul class="m-dot">
-                                <li> 납입상태가 연체일 경우 납입상태의 “연체"를 클릭하시면 연체내역을 확인 하실 수 있습니다.</li>
-                            </ul>
+                            <div class="info-list">
+                                <ul class="m-dot">
+                                    <li> 납입상태가 연체일 경우 납입상태의 “연체"를 클릭하시면 연체내역을 확인 하실 수 있습니다.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </section>
