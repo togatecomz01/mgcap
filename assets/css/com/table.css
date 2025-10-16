@@ -64,3 +64,7 @@ table.td-al td { text-align:left; }
     .col-row.mo tbody td:nth-of-type(2) { grid-area:right2; padding:3px 12px 10px; }
     .col-row.mo colgroup { display:none; } 
 }
+
+@media (max-width:480px) {
+    .caption { padding-top:42px; }
+}

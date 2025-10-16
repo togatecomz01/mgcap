@@ -3,7 +3,7 @@
 <head>
     <meta charset="euc-kr" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>오토리스만기예정처리&gt;진행상태 조회&gt;MY MG&gt;홈</title>
+    <title>만기안내장&gt;서류발급&gt;MY MG&gt;홈</title>
 
     <meta name="keywords" content="MG캐피탈" />
     <meta name="copyright" content="copyrights 2025 MG캐피탈" />
@@ -34,30 +34,50 @@
                     <ol class="breadcrumb">
                         <li><span class="home">홈</span></li>
                         <li><span>MY MG</span></li>
-                        <li><span>진행상태 조회</span></li>
-                        <li><span>오토리스만기예정처리</span></li>
+                        <li><span>서류발급</span></li>
+                        <li><span>만기안내장</span></li>
                     </ol>
                 </nav>
                 <section class="visual-container">
-                    <h2>오토리스만기예정처리</h2>
+                    <h2>만기안내장</h2>
                 </section>
-                <section class="page-container WCS30100VQ">
+                <section class="page-container WCS30400VQ">
                     <div class="text-content">
-                        <h3>오토리스만기예정처리 목록</h3>
+                        <h3>만기안내장 목록</h3>
+                        <form>
+                            <fieldset class="form-content">
+                                <legend>만기안내장 조회</legend>
+                                <div class="form-wrap search-form">
+                                    <div class="group">
+                                        <div class="form-group">
+                                            <label>실행번호</label>
+                                            <select required="" title="">
+                                                <option value="" hidden="">선택</option>
+                                                <option value="0">실행번호</option>
+                                                <option value="1">실행번호</option>
+                                                <option value="2">실행번호</option>
+                                                <option value="0">실행번호</option>
+                                                <option value="1">실행번호</option>
+                                                <option value="2">실행번호</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <button class="btn-form">조회</button>
+                                </div><!--//form-wrap-->
+                            </fieldset>
+                        </form>
                         <div class="text-group">
-                            <p class="caption">기준일 : 2025-09-22 / 단위: 원</p>
+                            <p class="caption">기준일 : 2025-09-22</p>
                             <div class="table-content">
                                 <table class="mo-s">
-                                    <caption>번호, 실행번호, 상품명, 실행일, 실행금액, 만기일, 만기처리일, 만기처리방법에 대한 표</caption>
+                                    <caption>번호, 실행번호, 차량번호, 고지서번호, 청구예정일, 발생금액, 과제시작일, 과세종료일에 대한 표</caption>
                                     <colgroup>
-                                        <col style="width:6%">
-                                        <col style="width:17%">
-                                        <col style="width:17%">
-                                        <col style="width:8%">
                                         <col style="width:10%">
-                                        <col style="width:14%">
-                                        <col style="width:14%">
-                                        <col style="width:14%">
+                                        <col style="width:18%">
+                                        <col style="width:18%">
+                                        <col style="width:18%">
+                                        <col style="width:18%">
+                                        <col style="width:18%">
                                     </colgroup>
                                     <thead>
                                         <tr>
@@ -65,10 +85,8 @@
                                             <th scope="col">실행번호</th>
                                             <th scope="col">상품명</th>
                                             <th scope="col">실행일</th>
-                                            <th scope="col">실행금액</th>
-                                            <th scope="col">만기일</th>
-                                            <th scope="col">만기처리일</th>
-                                            <th scope="col">만기처리방법</th>
+                                            <th scope="col">만기예정일</th>
+                                            <th scope="col">출력</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -78,13 +96,11 @@
                                     </tbody>
                                 </table>
                             </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="bottom-container">
-                    <div class="btn-content cta">
-                        <div class="button-group">
-                            <a herf="javascript:void(0);" class="btn-primary">변경신청</a>
+                            <div class="info-list">
+                                <ul class="m-dot">
+                                    <li>기준일로부터 한달이내의 만기예정건 및 전체 만기완료건이 조회됩니다.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -94,4 +110,3 @@
     </div>
 </body>
 </html>
- 

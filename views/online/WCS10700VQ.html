@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>금융거래확인서&gt;서류발급&gt;MY MG&gt;홈</title>
+
+    <meta name="keywords" content="MG캐피탈" />
+    <meta name="copyright" content="copyrights 2025 MG캐피탈" />
+    <meta name="viewport" content="width=device-width" />
+    <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="No-Cache" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico"/>
+    <link rel="stylesheet" href="../../assets/css/ui-util.css" />
+    <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+    <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+    <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
+    <script src="../../assets/js/include.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div data-include-path="../../views/COMMON/header.html"></div>
+        <div class="bodyWrap">
+            <main class="contentWrap">
+                <nav class="location-container">
+                    <ol class="breadcrumb">
+                        <li><span class="home">홈</span></li>
+                        <li><span>MY MG</span></li>
+                        <li><span>서류발급</span></li>
+                        <li><span>금융거래확인서</span></li>
+                    </ol>
+                </nav>
+                <section class="visual-container">
+                    <h2>금융거래확인서</h2>
+                </section>
+                <section class="page-container WCS30400VQ">
+                    <div class="text-content">
+                        <h3>금융거래확인서 발급신청</h3>
+                        <form>
+                            <fieldset class="form-content">
+                                <legend>금융거래확인서 발급신청에 대한 조회</legend>
+                                <div class="form-wrap search-form">
+                                    <div class="form-group">
+                                        <p class="mo-tit">구분선택</p>
+                                        <label class="radio">
+                                            <input type="radio" name="use" value="" checked="">
+                                            <span>팩스</span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="use" value="">
+                                            <span>이메일</span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="use" value="">
+                                            <span>우편</span>
+                                        </label>
+                                    </div>
+                                    <div class="group">
+                                        <div class="form-group">
+                                            <label>발급기준일</label>
+                                            <div>
+                                                <input id="date-input" type="date" name="date" placeholder="디폴트" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">제출기관</label>
+                                            <select required="" title="">
+                                                <option value="" hidden="">선택</option>
+                                                <option value="0">기관</option>
+                                                <option value="1">기관</option>
+                                                <option value="2">기관</option>
+                                                <option value="0">기관</option>
+                                                <option value="1">기관</option>
+                                                <option value="2">기관</option>
+                                            </select>
+    
+                                            <label for="">제출기관명</label>
+                                            <input id="submit-name" type="text" name="submitName" placeholder="제출기관명" />
+                                            <label for="">제출용도</label>
+                                            <input id="purpose" type="text" name="purpose" placeholder="제출용도"/>
+                                        </div>
+                                        <div class="form-group ph">
+                                            <label>팩스 번호</label>
+                                            <div class="ph">
+                                                <input id="fax-number" type="number" name="fax" placeholder="디폴트" />
+                                                <input id="fax-number" type="number" name="fax" placeholder="디폴트" />
+                                                <input id="fax-number" type="number" name="fax" placeholder="디폴트" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn-form">발급신청</button>
+                                </div><!--//form-wrap-->
+                            </fieldset>
+                            <div class="info-content">
+                                <div class="info-list">
+                                    <ul class="m-dot">
+                                        <li>발급 신청 후 팩스,이메일은 1시간 이내 우편은 5영업일 이내로 받아보실 수 있습니다.</li>
+                                        <li>주말과 휴일은 신청하실 수 없습니다. 신청 가능시간 (영업일 기준 09:00 ~ 17:00)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <div data-include-path="../../views/COMMON/footer.html"></div>
+    </div>
+</body>
+</html>
