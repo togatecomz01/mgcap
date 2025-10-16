@@ -176,13 +176,15 @@ h4.tit-diamond::before { content:"¡ß"; display:inline; color:var(--primary); }
 .form-wrap.search-form > .form-group { display:flex; align-items:center; margin-bottom:30px; }
 .form-wrap.search-form > .group {  padding:40px; background:var(--search-bg); border-radius:12px; }
 .form-wrap.search-form > .group:has(.radio) { padding:32px 27px; }
-.form-wrap.search-form > .group > .form-group { display:inline-flex; flex-wrap: wrap; align-items:center; gap:12px; margin-bottom:24px; padding-bottom:24px; width:100%; border-bottom:1px solid #D6E0EB; }
+.form-wrap.search-form > .group > .form-group { display:inline-flex; flex-wrap: wrap; align-items:center; gap:24px; margin-bottom:24px; padding-bottom:24px; width:100%; border-bottom:1px solid #D6E0EB; }
 .form-wrap.search-form > .group > .form-group .ph { display:inline-flex; flex-wrap:wrap; align-items:center; gap:12px; }
 .form-wrap.search-form > .group > .form-group:has(.radio) { gap:19px; margin-bottom:0; padding:0;  border-bottom:0; }
 .form-wrap.search-form > .group > .form-group:last-of-type { padding-bottom:0; margin-bottom:0; border-bottom:0; }
-.form-wrap.search-form > .group > .form-group label:not(.radio) { width:80px; }
-.form-wrap.search-form > .group > .form-group > input + label,
-.form-wrap.search-form > .group > .form-group > select + label { margin-left:32px; }
+.form-wrap.search-form > .group > .form-group label:not(.radio) { /*width:80px;*/ width:auto; max-width:100px; min-width:72px; } /* 20251016 ¼öÁ¤ */
+/* .form-wrap.search-form > .group > .form-group > input + label,
+.form-wrap.search-form > .group > .form-group > select + label { margin-left:32px; } */
+
+form:has(.info-content) .form-content .form-wrap.search-form { margin-bottom:0; }
 
 .form-wrap.search-form p.mo-tit { display:none; }
 
