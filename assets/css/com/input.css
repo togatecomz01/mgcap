@@ -160,8 +160,7 @@ label.toggle input + span { font-size:0; }
     .form-content select { height:48px; line-height:46px; }
 
     /* 조건검색 */
-    .search-form label.radio { display:inline-flex; margin:0; }
-    .search-form label.radio:first-of-type { padding-left:0; }
+    .search-form label.radio { display:inline-flex; margin:0; padding:6px 24px 8px 0; }
     .search-form input[type="text"],
     .search-form input[type="password"],
     .search-form input[type="email"],
@@ -171,18 +170,12 @@ label.toggle input + span { font-size:0; }
     .search-form input[type="date"],
     .search-form select { flex:1; width:100%; }
     .form-wrap.search-form > .group > .form-group .ph input { width:91px; }
+    .form-wrap.search-form > .group > .form-group .ph input[type="date"] { min-width:100px; width:100%; }
 
     /**버튼**/
     .btn-form { padding:12px; height:48px; }
 
 }
-
-@media screen and (max-width:480px) {
-  /* 조건검색 */
-  .search-form label.radio { padding:6px 24px 8px 0; }
-  .form-wrap.search-form > .group > .form-group .ph input[type="date"] { min-width:100px; width:100%; }
-}
-
 
 @media (min-width: 767px) and (max-width:1400px){
 

@@ -10,7 +10,7 @@ window.addEventListener('load', function() {
 ---------------------------------------------*/
 function updateScrollState() {
     const allMenu = document.getElementById('allMenu');
-    const shouldLockScroll = window.innerWidth <= 480 && allMenu?.classList.contains('on');
+    const shouldLockScroll = window.innerWidth <= 767 && allMenu?.classList.contains('on');
     document.body.classList.toggle('no-scroll', shouldLockScroll);
 }
 
@@ -123,7 +123,7 @@ function searchToggle() {
         }
 
         function handleResize() {
-            if (window.innerWidth < 480) {
+            if (window.innerWidth < 767) {
                 console.log('юлго');
                 searchBtn.style.display = 'none';
             } else {

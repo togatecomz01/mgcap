@@ -154,34 +154,7 @@
 	.header-r .lnb { display:none; }
 }
 
-@media (min-width: 480px) and (max-width:767px) {
-	/*---------------------------------------------
-		#헤더
-	---------------------------------------------*/
-	/* 전체메뉴 */
-	.allmenu-header { padding:15px 24px 20px; }
-	.allmenu-header-inner .title-l p { font-size:var(--font20); }
-	.allmenu-header-inner .btn-wrap { height:40px; }
-	.header-btn-wrap:has(.close-btn.on) .menu-btn { display:none; }
-	.allmenu-header-inner .close-btn { width:40px; height:40px; }
-	.allmenu-header-inner .close-btn::before { width:40px; height:40px; mask-size:auto 24px; -webkit-mask-size:auto 24px; }
-	.menu-cont .menu-inner > li { padding:40px 0; }
-	.menu-cont .menu-inner > li > span { margin-bottom:40px; font-size:var(--font30); }
-	.menu-inner .gnb-2dep { gap:30px 24px; }
-	.menu-inner .gnb-2dep > li > a,
-	.menu-inner .gnb-2dep > li > span { font-size:var(--font18); }
-	.menu-inner .gnb-3dep li a,
-	.menu-inner .gnb-4dep li a { font-size:var(--font16); }
-
-	/* 검색창 */
-	.search-wrap .recomend ul { width:100%; overflow-x:auto; }
-	.search-wrap .ipt-search input { padding:14px 30px; }
-	.search-wrap .ipt-search input:valid { font-size:var(--font20); font-weight:var(--font-w-m); }
-	.search-wrap .search-btn-wrap { gap:12px; }
-	.search-btn-wrap .btn-clear { width:28px; height:28px; background-size:auto 20px; }
-	.search-btn-wrap .btn-search { width:34px; height:34px; background-size:auto 34px; }
-}
-@media screen and (max-width:480px){
+@media (max-width:767px) {
 	/*---------------------------------------------
 		#헤더
 	---------------------------------------------*/
@@ -256,6 +229,5 @@
 
 	.search-wrap .result-tit { display:block; font-size:var(--font14); font-weight:var(--font-w-m); color:var(--color-75); }
 	.search-wrap .search-result { padding:26px 0 38px; border-bottom:1px solid #F0F0F0; border-radius:0; }
-
 }
 
