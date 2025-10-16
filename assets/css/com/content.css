@@ -135,30 +135,30 @@ body{
     #고객센터
 ---------------------------------------------*/
   /******고객센터-채무조정안내**/
-  .MGC-CST-TRMNPL-008 .sub-process-content.bo-none ul { padding: 0; border: 0; }
-  .MGC-CST-TRMNPL-008 .sub-process-content ul { flex-wrap: wrap; gap: 24px 0; }
-  .MGC-CST-TRMNPL-008 .sub-process-content ul li::after { margin: 10px; width: 32px; height: 32px; background-image: var(--ico-arrow-black); background-size: auto; }
-  .MGC-CST-TRMNPL-008 .sub-process-content ul dl { width: 182px; height: 190px; border: 1px solid var(--color-45); text-align: center; }
-  .MGC-CST-TRMNPL-008 .sub-process-content ul dl dt { padding: 8px 0; width: 100%; border-bottom: 1px solid var(--color-45); background-color: var(--color-e); color: var(--color-2); }
-  .MGC-CST-TRMNPL-008 .sub-process-content ul dl dd { margin: 12px 22px; }
-  .MGC-CST-TRMNPL-008 .sub-process-content ul dl dd span { display: block; font-size: var(--font16); word-break: break-all; overflow-wrap: break-word; }
-  .MGC-CST-TRMNPL-008 .sub-process-content ul dl dd span.txt-less-2 { font-size: calc(var(--font16) - 2px); }
-  .MGC-CST-TRMNPL-008 .sub-process-content ul dl dd span+span { margin-top: 8px; }
+  .WCC601500VQ .sub-process-content.bo-none ul { padding: 0; border: 0; }
+  .WCC601500VQ .sub-process-content ul { flex-wrap: wrap; gap: 24px 0; }
+  .WCC601500VQ .sub-process-content ul li::after { margin: 10px; width: 32px; height: 32px; background-image: var(--ico-arrow-black); background-size: auto; }
+  .WCC601500VQ .sub-process-content ul dl { width: 182px; height: 190px; border: 1px solid var(--color-45); text-align: center; }
+  .WCC601500VQ .sub-process-content ul dl dt { padding: 8px 0; width: 100%; border-bottom: 1px solid var(--color-45); background-color: var(--color-e); color: var(--color-2); }
+  .WCC601500VQ .sub-process-content ul dl dd { margin: 12px 22px; }
+  .WCC601500VQ .sub-process-content ul dl dd span { display: block; font-size: var(--font16); word-break: break-all; overflow-wrap: break-word; }
+  .WCC601500VQ .sub-process-content ul dl dd span.txt-less-2 { font-size: calc(var(--font16) - 2px); }
+  .WCC601500VQ .sub-process-content ul dl dd span+span { margin-top: 8px; }
 
   /******고객센터-개인정보처리방침**/
-  .MGC-CST-TRMNPL-010 .font-bold { font-weight: var(--font-w-b); }
-  .MGC-CST-TRMNPL-010 .font-medium { font-weight: var(--font-w-m); }
-  .MGC-CST-TRMNPL-010 .font-color-6 { color: var(--color-6); }
-  .MGC-CST-TRMNPL-010 .button-content .lnk-group { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
-  .MGC-CST-TRMNPL-010 .button-content .lnk-group a { padding: 12px 20px; border: var(--board); }
-  .MGC-CST-TRMNPL-010 em { display: inline-flex; font-weight: var(--font-w-b); }
-  .MGC-CST-TRMNPL-010 .link-list li .btn-text { display: inline-flex }
+  .WCC60300VQ .font-bold { font-weight: var(--font-w-b); }
+  .WCC60300VQ .font-medium { font-weight: var(--font-w-m); }
+  .WCC60300VQ .font-color-6 { color: var(--color-6); }
+  .WCC60300VQ .button-content .lnk-group { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+  .WCC60300VQ .button-content .lnk-group a { padding: 12px 20px; border: var(--board); }
+  .WCC60300VQ em { display: inline-flex; font-weight: var(--font-w-b); }
+  .WCC60300VQ .link-list li .btn-text { display: inline-flex }
   /* 셀렉트 박스 */
-  .MGC-CST-TRMNPL-010 .form-group + div {border:none}
-  .MGC-CST-TRMNPL-010 .form-group { display: flex; justify-content: flex-end; }
-  .MGC-CST-TRMNPL-010 .se-select label { display: none; }
-  .MGC-CST-TRMNPL-010 .se-select { width: auto; }
-  .MGC-CST-TRMNPL-010 .se-select select { padding: 12px 50px 12px 20px; height: auto; border-radius: 100px; border: var(--board); background: var(--ico-select) no-repeat right 20px center; }
+  .WCC60300VQ .form-group + div {border:none}
+  .WCC60300VQ .form-group { display: flex; justify-content: flex-end; }
+  .WCC60300VQ .se-select label { display: none; }
+  .WCC60300VQ .se-select { width: auto; }
+  .WCC60300VQ .se-select select { padding: 12px 50px 12px 20px; height: auto; border-radius: 100px; border: var(--board); background: var(--ico-select) no-repeat right 20px center; }
 
 /*---------------------------------------------
     #회사소개
@@ -235,17 +235,17 @@ body{
   .WCA30100VQ .timeline-list .desc { display: block; color: var(--color-6); }
 
   /******회사소개-채용안내 및 절차**/
-  .MGC-INT-CMP-024 ul.diamond-box { display: flex; padding: 32px 24px; margin-top: 32px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; background: var(--bg-box); }
-  .MGC-INT-CMP-024 ul.diamond-box li::before { content:"◆"; display:inline; color:var(--primary); margin-right: 6px; }
-  .MGC-INT-CMP-024 ul.diamond-box li { color: var(--color-2); font-weight: var(--font-w-m);}
-  .MGC-INT-CMP-024 .process-content li:nth-child(2) .step p { background:var(--process-step2-bg); }
-  .MGC-INT-CMP-024 .process-content li:nth-child(3) .step p { background:var(--process-step3-bg); }
-  .MGC-INT-CMP-024 .process-content li:nth-child(4) .step p { background:var(--process-step4-bg); }
-  .MGC-INT-CMP-024 .process-content li:nth-child(5) .step p { background:var(--process-step5-bg); }
+  .WCR10400VQ ul.diamond-box { display: flex; padding: 32px 24px; margin-top: 32px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; background: var(--bg-box); }
+  .WCR10400VQ ul.diamond-box li::before { content:"◆"; display:inline; color:var(--primary); margin-right: 6px; }
+  .WCR10400VQ ul.diamond-box li { color: var(--color-2); font-weight: var(--font-w-m);}
+  .WCR10400VQ .process-content li:nth-child(2) .step p { background:var(--process-step2-bg); }
+  .WCR10400VQ .process-content li:nth-child(3) .step p { background:var(--process-step3-bg); }
+  .WCR10400VQ .process-content li:nth-child(4) .step p { background:var(--process-step4-bg); }
+  .WCR10400VQ .process-content li:nth-child(5) .step p { background:var(--process-step5-bg); }
   /* 유의사항 안내 */
-  .MGC-INT-CMP-024 .note-content .text-content { padding: 32px 40px; border: var(--board); }
-  .MGC-INT-CMP-024 .note-content .text-content .tit { position:relative; padding-left:55px; padding-bottom:29px; font-size:var(--font28); font-weight:var(--font-w-m); color:var(--color-2); }
-  .MGC-INT-CMP-024 .note-content .text-content .tit::before { content:""; position:absolute; left:0; display:block; width:43px; height:43px; background:var(--ico-info)no-repeat center; background-size:auto 28px; }
+  .WCR10400VQ .note-content .text-content { padding: 32px 40px; border: var(--board); }
+  .WCR10400VQ .note-content .text-content .tit { position:relative; padding-left:55px; padding-bottom:29px; font-size:var(--font28); font-weight:var(--font-w-m); color:var(--color-2); }
+  .WCR10400VQ .note-content .text-content .tit::before { content:""; position:absolute; left:0; display:block; width:43px; height:43px; background:var(--ico-info)no-repeat center; background-size:auto 28px; }
 
  @media (max-width:767px) {
 
@@ -301,22 +301,22 @@ body{
 .MGC-CST-TRMNPL-001 .table-group .mo tbody tr td {text-align: center;}
 
 /******고객센터-채무조정안내**/
-.MGC-CST-TRMNPL-008 .sub-process-content ul { display: inline-flex; gap: 20px 10px; }
-.MGC-CST-TRMNPL-008 .sub-process-content ul li { display: inline-flex; margin-bottom: 0; }
-.MGC-CST-TRMNPL-008 .sub-process-content ul li::after { background-image: none; }
-.MGC-CST-TRMNPL-008 .sub-process-content ul dl { width: 156px; height: 162px; }
-.MGC-CST-TRMNPL-008 .sub-process-content ul dl dt { padding: 6px 0; font-size: var(--font16) }
-.MGC-CST-TRMNPL-008 .sub-process-content ul dl dd { margin: 8px 18px; }
-.MGC-CST-TRMNPL-008 .sub-process-content ul dl dd span { font-size: var(--font14) }
-.MGC-CST-TRMNPL-008 .sub-process-content ul dl dd span.txt-less-2 { font-size: calc(var(--font14) - 2px); }
+.WCC601500VQ .sub-process-content ul { display: inline-flex; gap: 20px 10px; }
+.WCC601500VQ .sub-process-content ul li { display: inline-flex; margin-bottom: 0; }
+.WCC601500VQ .sub-process-content ul li::after { background-image: none; }
+.WCC601500VQ .sub-process-content ul dl { width: 156px; height: 162px; }
+.WCC601500VQ .sub-process-content ul dl dt { padding: 6px 0; font-size: var(--font16) }
+.WCC601500VQ .sub-process-content ul dl dd { margin: 8px 18px; }
+.WCC601500VQ .sub-process-content ul dl dd span { font-size: var(--font14) }
+.WCC601500VQ .sub-process-content ul dl dd span.txt-less-2 { font-size: calc(var(--font14) - 2px); }
 
 /******고객센터-개인정보처리방침**/
-.MGC-CST-TRMNPL-010 .button-content .lnk-group { gap: 10px; }
-.MGC-CST-TRMNPL-010 .button-content .lnk-group a { width: 100%; text-align: center; }
-.MGC-CST-TRMNPL-010 .link-list li span { display: block }
+.WCC60300VQ .button-content .lnk-group { gap: 10px; }
+.WCC60300VQ .button-content .lnk-group a { width: 100%; text-align: center; }
+.WCC60300VQ .link-list li span { display: block }
 /* 셀렉트 박스 */
-.MGC-CST-TRMNPL-010 .se-select { width: 100%; }
-.MGC-CST-TRMNPL-010 .se-select select { font-size: var(--font14); }
+.WCC60300VQ .se-select { width: 100%; }
+.WCC60300VQ .se-select select { font-size: var(--font14); }
 
 /*---------------------------------------------
     #회사소개
@@ -353,8 +353,8 @@ body{
 .WCA30100VQ .timeline-list .date{margin-bottom:12px;color:var(--color-2)}
 
 /******회사소개-채용안내 및 절차**/
-.MGC-INT-CMP-024 ul.diamond-box { padding: 12px 16px; }
-.MGC-INT-CMP-024 .note-content .text-content { padding: 20px }
+.WCR10400VQ ul.diamond-box { padding: 12px 16px; }
+.WCR10400VQ .note-content .text-content { padding: 20px }
 }
 
 
