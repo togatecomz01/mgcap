@@ -31,6 +31,7 @@
         var components = [
             'input.js',
             'layout.js',
+            'nav.js',
             'popup.js',
            
         ];
