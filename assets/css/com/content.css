@@ -323,9 +323,9 @@ body{
 ---------------------------------------------*/
 
 /******회사소개-회사개요**/
-.WCA10100VQ h3 { font-size: var(--font32); font-weight: var(--font-w-m); }
+.WCA10100VQ h3 { font-size: var(--font32); font-weight: var(--font-w-m); margin-bottom: 220px; }
 .WCA10100VQ h3 .success { font-weight: var(--font-w-b); }
-.WCA10100VQ h3::after { position: relative; left: 50%; transform: translateX(-50%); margin: 28px 0 20px 0; width: 100vw; height: 173px; }
+.WCA10100VQ h3::after { position: absolute; left: 50%; transform: translateX(-50%); margin: 28px 0 20px 0; width: 100%; height: 173px; }
 .WCA10100VQ .text-group p { font-size: var(--font18); font-weight: var(--font-w-r) }
 /* info-cards */
 .WCA10100VQ .info-cards { flex-direction: column; padding: 52px 0 0 0; gap: 36px; }
