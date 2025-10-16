@@ -413,7 +413,8 @@ body{
     #MY MG
 ---------------------------------------------*/
 /** 닙입내역 **/
-.WCS10200VQ .underline { color:var(--primary); text-decoration:underline; }
+.WCS10200VQ .underline,
+.MGC-MMG-ISUDM-005 .underline a { color:var(--primary); text-decoration:underline; }
 
 /*---------------------------------------------
     #미디어쿼리
