@@ -65,4 +65,21 @@ table.td-al td { text-align:left; }
     .col-row.mo colgroup { display:none; } 
 
     .caption { padding-top:42px; }
+
+    /**별첨이 있을경우 **/
+    .mo-appendix { border-top:0; }
+    .mo-appendix colgroup{ display:none; }
+    .mo-appendix thead, .mo-appendix thead tr { display:flex; gap:16px; justify-content:flex-end; }
+    .mo-appendix thead tr { margin-bottom:10px; }
+    .mo-appendix thead th { display:inline-flex; align-items:center; gap:4px; padding:0; background:transparent; border:0; font-weight:var(--font-w-m); color:var(--color-45); font-size:var(--font12); }
+    .mo-appendix thead th::before { content:""; display:block; width:10px; height:10px; }
+    .mo-appendix thead th:first-of-type::before { background:var(--table-th); }
+    .mo-appendix thead th:last-of-type::before { background:var(--white); border:1px solid var(--color-d); }
+    .mo-appendix tbody { border-top:1px solid var(--color-2); }
+    .mo-appendix tbody tr {display: grid; grid-template-columns: 1fr;}
+    .mo-appendix tbody tr th.th-t {border-right: none; background-color: var(--table-th); font-weight: var(--font-w-b);}
+
+
+   
+    
 }

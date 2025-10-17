@@ -271,8 +271,7 @@ body{
 .process-content li .step p span:first-of-type { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0, 0, 0, 0); white-space:nowrap; border:0; }
 .process-content li .step + div { padding:0; margin:0; background:transparent; font-size:var(--font18); }
 
-/* step-process */
-.step-content ul {}
+
 
   /*---------------------------------------------
     #소비자보호
@@ -297,8 +296,6 @@ body{
     #고객센터
 ---------------------------------------------*/
 /****** 고객센터-업무위탁 및 제 3자 제공현황 **/
-.WCC60500VQ .table-group table colgroup {display: none;}
-.WCC60500VQ .table-group .mo thead {display: none;}
 .WCC60500VQ .table-group .mo tbody tr {display: grid; grid-template-columns: 1fr;}
 .WCC60500VQ .table-group .mo tbody tr th.th-t {border-right: none; background-color: var(--table-th); font-weight: var(--font-w-b);}
 .WCC60500VQ .table-group .mo tbody tr td {text-align: center;}
@@ -464,4 +461,19 @@ body{
     .WCS30101DQ .mo tbody tr { display:flex; flex-wrap:wrap; align-items:stretch; width:100%; font-size:0; }
     .WCS30101DQ .mo tbody th { display:inline-flex; justify-content: center; align-items:center; padding:10px; width:30%; min-height:24px; border-left:0; }
     .WCS30101DQ .mo tbody td { display:inline-flex; flex-direction:column; justify-content:center; padding:10px; width:calc(70% - 4px); min-height:24px; border-left:0; }
+}
+
+@media screen and (max-width:480px) {
+
+    /*---------------------------------------------
+        #MY MG
+    ---------------------------------------------*/
+    /** 이용상품내역 **/
+    .WCS10100VQ .text-content + .text-content,
+    .WCS10200VQ .text-content + .text-content { padding-top:18px; }
+
+    .WCS10100VQ .text-content .caption,
+    .WCS10200VQ .text-content .caption,
+    .WCS10201DQ .text-content .caption { padding-bottom:18px; }
+
 }
