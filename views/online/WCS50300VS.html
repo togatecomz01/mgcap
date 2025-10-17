@@ -46,7 +46,7 @@
                         <div class="table-content">
                             <h3 class="table-tit">기본정보</h3>
                             <table>
-                                <caption>이름, 주민번호, 아이디, 현재 비밀번호, 휴대폰, SMS 수신동의, 자택전화번호, 자택주소가 포함된 기본정보 테이블</caption>
+                                <caption>기본정보 입력표 (이름, 주민번호, 아이디, 현재 비밀번호, 휴대폰, 휴대폰(SMS)수신동의, 자택전화번호, 자택주소 포함)</caption>
                                 <colgroup>
                                     <col style="width:20%">
                                     <col style="width:80%">
@@ -176,7 +176,7 @@
                         <div class="table-content">
                             <h3 class="table-tit">상세정보</h3>
                             <table>
-                                <caption></caption>
+                                <caption>상세정보 입력 표 (분류, 결혼여부, 결혼기념일, 직장명, 재직기간, 직장주소, E-mail, E-mail 수신동의, 회원탈퇴 포함)</caption>
                                 <colgroup>
                                     <col style="width:25%">
                                     <col style="width:25%">
@@ -242,8 +242,27 @@
                                                 <div class="form-wrap">
                                                     <div class="form-group">
                                                         <div class="flex-row">
-                                                            <select name="year" id="year"></select><span> 년</span>
-                                                            <select name="month" id="month"></select><span> 개월</span>
+                                                            <select name="year" id="year">
+                                                                    <option value="0">0</option>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                            </select><span> 년</span>
+                                                            <select name="month" id="month">
+                                                                <option value="0">0</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+                                                                <option value="6">6</option>
+                                                                <option value="7">7</option>
+                                                                <option value="8">8</option>
+                                                                <option value="9">9</option>
+                                                                <option value="10">10</option>
+                                                                <option value="11">11</option>
+                                                            </select><span> 개월</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -278,7 +297,14 @@
                                                             <input type="text">
                                                             <span>@</span>
                                                             <input type="text">
-                                                            <select name="email" id="email"></select>
+                                                            <select name="email" id="email">
+                                                                <option value="" disabled selected>도메인 선택</option>
+                                                                <option value="">naver.com</option>
+                                                                <option value="">gmail.com</option>
+                                                                <option value="">hanmail.net</option>
+                                                                <option value="">nate.com</option>
+                                                                <option value="">직접입력</option>
+                                                            </select>
                                                         </div>
                                                     </div>
                                                 </div>
