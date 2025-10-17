@@ -13,6 +13,7 @@ body{
  --process-step3-bg:#4277D4;
  --process-step4-bg:#3763C1;
  --process-step5-bg:#204BAB;
+ --process-check:url("../../images/com/svg/ico_form_check.svg"); /** 프로세스 style2 체크 **/
  --ico-arrow:url("../../images/content/ico_arrow.svg");
  --ico-cst-01:url("../../images/content/PRT/w/ico_CST-008_1.png"); /**문서 아이콘**/
  --ico-cst-02:url("../../images/content/PRT/w/ico_CST-008_2.png"); /**프린터 아이콘**/
@@ -56,6 +57,38 @@ body{
  .process-content .process01 li:nth-child(3) .step p { background:var(--process-step3-bg); }
  .process-content .process02 li:nth-child(4) .step p { background:var(--process-step4-bg); }
  .process-content .process02 li:nth-child(5) .step p { background:var(--process-step5-bg); }
+
+ /** style2 **/
+.step-content ul.col2 li { width:calc(100% / 2); }
+.step-content ul.col3 li { width:calc(100% / 3); }
+.step-content ul.col4 li { width:calc(100% / 4); }
+
+.step-content ul { display:flex; margin:0 auto; width:100%; max-width:746px; }
+.step-content ul li { position:relative; width:100%; padding:69px 10px 10px; }
+
+/* 진행 바 */
+.step-content ul li::before {  content:""; display:block; position:absolute; top:38px; left:50%; width:100%; height:6px; background-color:#F1F2F4; }
+.step-content ul li:last-of-type::before { content:none; }
+
+/* step 표시 */
+.step-content ul li::after { content:""; display:block; position:absolute; top:10px; left:50%; transform:translate(-50%, 0); width:60px; height:60px; border-radius:50%; border:5px solid #F1F2F4; background-color:var(--white); font-size:0; text-align:center; box-sizing:border-box; }
+
+.step-content ul li span{ display:block; padding:11px 10px; width:100%; text-align:center; font-size:var(--font20); color:var(--color-6); }
+.step-content ul li span::before { content:""; display:block; position:absolute; top:18px; left:50%; transform:translateX(-50%); font-size:var(--font28); font-weight:var(--font-w-m); color:var(--color-6); z-index:1; }
+.step-content ul li:first-of-type span::before{  content:"1";  }
+.step-content ul li:nth-of-type(2) span::before{  content:"2"; }
+.step-content ul li:nth-of-type(3) span::before{  content:"3"; }
+.step-content ul li:nth-of-type(4) span::before{  content:"4"; }
+
+/* 이전 */
+.step-content ul li.pre::before { background-color:var(--primary); }
+.step-content ul li.pre::after { border-color:var(--primary); background-color:var(--primary); }
+.step-content ul li.pre span::before { content:""; width:40px; height:40px; background-color: var(--white); mask-image:var(--process-check); mask-repeat:no-repeat; mask-size:auto 17px; mask-position:center; -webkit-mask-image:var(--process-check); -webkit-mask-repeat:no-repeat; -webkit-mask-size:auto 17px; -webkit-mask-position:center; }
+
+/* 현재 */
+.step-content ul li.on::after { border-color:var(--primary); }
+.step-content ul li.on span { font-weight:var(--font-w-b); color:var(--primary); }
+.step-content ul li.on span::before { color:var(--primary); }
 
 /*---------------------------------------------
     #소비자보호
