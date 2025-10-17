@@ -13,7 +13,7 @@ table{ border-top:1px solid var(--color-2); border-spacing:0; border-collapse: c
 table tr:first-of-type th,
 table tr:first-of-type td { border-top:var(--color-2); }
 table th,
-table td { padding:16px; text-align:center; color:var(--default-color); font-size:var(--font18); font-weight:var(--font-w-r); text-align:center; border-left:var(--table-border); border-bottom:var(--table-border); }
+table td { padding:16px 10px; text-align:center; color:var(--default-color); font-size:var(--font18); font-weight:var(--font-w-r); text-align:center; border-left:var(--table-border); border-bottom:var(--table-border); }
 table th { background:var(--table-th); font-size:var(--font20);font-weight:var(--font-w-b); color:var(--color-2); }
 table th:first-of-type,
 table td:first-of-type { border-left:0; }
