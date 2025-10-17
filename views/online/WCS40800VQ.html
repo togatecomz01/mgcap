@@ -41,60 +41,123 @@
                     <h2>서류등록</h2>
                     <p>서류등록 페이지 관련 설명 영역</p>
                 </section>
-                <section class="page-container">
+                <section class="step-container">
+                    <div class="step-content">
+                        <ul class="col2">
+                            <li class="on">
+                                <span>서류업로드</span>
+                            </li>
+                            <li class="next">
+                                <span>제출완료</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="page-container WCS40800VQ">
                     <div class="text-content">
-                        <h3>상품 및 담당자 정보 입력</h3>
-                        <div class="step-content">
-                            <ul>
-                                <li class="pre"><span>이전</span></li>
-                                <li class="current"><span>현재</span></li>
-                                <li class="next"><span>다음</span></li>
-                            </ul>
+                        <div class="text-group">
+                            <h3>상품 및 담당자 정보 입력</h3>
+                            <div class="table-content">
+                                <form>
+                                    <table>
+                                        <caption>상품 및 담당자 정보 입력표(상품구분, 담당자명 포함)</caption>
+                                        <colgroup>
+                                            <col style="width:30%">
+                                            <col style="width:70%">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row"><label for="classification" class="essential">상품구분</label></th>
+                                                <td class="tal">
+                                                    <select id="classification" required="" title="">
+                                                        <option value="0">상품을 선택해주세요</option>
+                                                        <option value="1">신차</option>
+                                                        <option value="3">중고차</option>
+                                                        <option value="4">바이크</option>
+                                                        <option value="5">보트/선외기</option>
+                                                        <option value="6">기계설비</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><label for="manager-name" class="essential">담당자명</label></th>
+                                                <td>
+                                                    <input id="manager-name" type="text" placeholder="담당자명을 입력해 주세요.">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
+                            </div>
                         </div>
                         <div class="text-group">
-                            <div class="table-content">
-                                <table class="mo-s">
-                                    <caption>번호, 실행번호, 상품명, 실행일, 실행금액, 만기일, 만기처리일, 만기종료후처리에 대한 표</caption>
-                                    <colgroup>
-                                        <col style="width:9%">
-                                        <col style="width:13%">
-                                        <col style="width:13%">
-                                        <col style="width:13%">
-                                        <col style="width:13%">
-                                        <col style="width:13%">
-                                        <col style="width:13%">
-                                        <col style="width:13%">
-                                    </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">번호</th>
-                                            <th scope="col">실행번호</th>
-                                            <th scope="col">상품명</th>
-                                            <th scope="col">실행일</th>
-                                            <th scope="col">실행금액</th>
-                                            <th scope="col">만기일</th>
-                                            <th scope="col">만기처리일</th>
-                                            <th scope="col">만기종료후처리</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>MI14002240001</td>
-                                            <td>내구재/헬스케어</td>
-                                            <td>2017-09-17</td>
-                                            <td>1,800,000</td>
-                                            <td>YYYY.MM.DD</td>
-                                            <td>YYYY.MM.DD</td>
-                                            <td>자동만기</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <h3>서류 업로드</h3>
+                            <button class="btn-plus" type="button" title="파일 추가하기"></button>
+                            <div class="table-group">
+                                <form>
+                                    <table>
+                                        <caption>서류 업로드표(첨부파일, 파일설명 포함)</caption>
+                                        <colgroup>
+                                            <col style="width:30%">
+                                            <col style="width:70%">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row" class="essential">첨부파일</th>
+                                                <td class="tal">
+                                                    <div class="flex-row">
+                                                        <span class="ipt-file">
+                                                            <input class="form-control upload-text" type="text" placeholder="파일을 입력해주세요" tabindex="0" readonly>
+                                                        </span>
+                                                        <button type="button" class="btn-form uploadButton">파일 선택</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><label for="manager-name" class="essential">파일설명</label></th>
+                                                <td>
+                                                    <label class="upload-label" for="files">
+                                                        <input id="files" class="upload" name="files" type="file" />
+                                                        <span class="fileLabel">파일명을 입력해 주세요.</span>
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
                             </div>
-                            <div class="info-list">
-                                <ul class="m-dot">
-                                    <li>기준일로부터 한달이내의 만기예정건 및 전체 만기완료건이 조회됩니다.</li>
-                                </ul>
+                            <div class="table-group">
+                                <form>
+                                    <table>
+                                        <caption>서류 업로드표(첨부파일, 파일설명 포함)</caption>
+                                        <colgroup>
+                                            <col style="width:30%">
+                                            <col style="width:70%">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row" class="essential">첨부파일</th>
+                                                <td class="tal">
+                                                    <div class="flex-row">
+                                                        <span class="ipt-file">
+                                                            <input class="form-control upload-text" type="text" placeholder="파일을 입력해주세요" tabindex="0" readonly>
+                                                        </span>
+                                                        <button type="button" class="btn-form uploadButton">파일 선택</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><label for="manager-name" class="essential">파일설명</label></th>
+                                                <td>
+                                                    <label class="upload-label" for="files">
+                                                        <input id="files" class="upload" name="files" type="file" />
+                                                        <span class="fileLabel">파일명을 입력해 주세요.</span>
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
                             </div>
                         </div>
                     </div>

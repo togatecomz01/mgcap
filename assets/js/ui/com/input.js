@@ -36,14 +36,15 @@ $(document).ready(function(){
         return {
             init: function () {
                 var $uploadInput = $('.uploadInput');
+                var $upload = $('.uploadInput, .uploadButton');/* 20251017 추가 서류제출에서 사용 */
                 var $fileInput = $('#files');
                 var $fileLabel = $('.fileLabel');
     
-                $uploadInput.on('click', function () {
+                $upload.on('click', function () {
                     $fileInput.trigger('click');
                 });
     
-                $uploadInput.on('keydown', function (e) {
+                $upload.on('keydown', function (e) {
                     if (e.key === 'Enter' || e.key === ' ') {
                         e.preventDefault();
                         $fileInput.trigger('click');
