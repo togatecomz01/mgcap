@@ -261,9 +261,9 @@ body{
   .WCA30100VQ .timeline-list li:not(:last-child) { margin-bottom: 90px; }
   .WCA30100VQ .timeline-list li::before { content: ''; position: absolute; top: 15px; left: -36px; width: 10px; height: 10px; background-color: var(--color-3); border-radius: 50%; z-index: 2; }
   .WCA30100VQ .timeline-list li::after { content: ''; position: absolute; left: -33px; width: 4px; background-color: #e0e0e0; z-index: 1; top: 35px; bottom: -90px; }
-  .WCA30100VQ .timeline-list dt { font-size: var(--font32); font-weight: var(--font-w-b); margin-bottom: 24px; padding-left: 80px; }
-  .WCA30100VQ .timeline-list dd { display: flex; padding-left: 80px; }
-  .WCA30100VQ .timeline-list dd:not(:last-of-type) { margin-bottom: 12px; }
+  .WCA30100VQ .timeline-list dt { font-size: var(--font32); font-weight: var(--font-w-b); margin-bottom: 34px; padding-left: 80px; }
+  .WCA30100VQ .timeline-list dd { display: flex; padding-left: 80px; font-size: var(--font22);}
+  .WCA30100VQ .timeline-list dd:not(:last-of-type) { margin-bottom: 19px; }
   .WCA30100VQ .timeline-list .date { flex: 0 0 90px; color: var(--color-45); }
   .WCA30100VQ .timeline-list .desc { display: block; color: var(--color-6); }
 
@@ -376,13 +376,16 @@ body{
 .WCA30100VQ .history-group .history-range{display:none}
 .WCA30100VQ .history-group{gap:0; border: none;}
 .WCA30100VQ .text-group p { margin-top: 0; }
+.WCA30100VQ .text-content h3,.WCA30100VQ .text-content p {font-size: var(--font22);}
 .WCA30100VQ .timeline-list{width:100%; margin-top: 0;}
 .WCA30100VQ .timeline-list .date{width:100%;flex:0 0 20px}
 .WCA30100VQ .timeline-list li::before{left:0}
 .WCA30100VQ .timeline-list li::after{left:3px; width: 2px;}
 .WCA30100VQ .timeline-list dt{padding-left:30px;font-size:var(--font22)}
-.WCA30100VQ .timeline-list dd{padding-left:30px;flex-direction:column;font-size:var(--font18);}
-.WCA30100VQ .timeline-list dd:not(:last-of-type) {margin-bottom: 50px;}
+.WCA30100VQ .timeline-list dd{padding-left:30px;flex-direction:column;}
+.WCA30100VQ .timeline-list dd,
+.WCA30100VQ .timeline-list dd .desc-group{font-size:var(--font18);}
+.WCA30100VQ .timeline-list dd:not(:last-of-type) {margin-bottom: 40px;}
 .WCA30100VQ .timeline-list .date{margin-bottom:12px;color:var(--color-2)}
 
 /******회사소개-채용안내 및 절차**/
