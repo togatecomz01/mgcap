@@ -450,7 +450,8 @@ body{
     .WCA20100VQ .greeting-group .signature span { margin-bottom: 0; }
     .WCA20100VQ .greeting-group .signature img { width: 120px; }
     .WCA20100VQ .greeting-group .ceo-text { position: static; min-width: auto; width: 100%; padding: 52px 0 0; box-sizing: border-box; color: var(--color-2); }
-    .WCA20100VQ .greeting-group .ceo-text em, .WCA20100VQ .greeting-group .ceo-text p { color: inherit; }
+    .WCA20100VQ .greeting-group .ceo-text em {font-size: var(--font20); color: inherit;}
+    .WCA20100VQ .greeting-group .ceo-text p {font-size: var(--font18); color: var(--color-45);}
 }
 
 @media (max-width:780px){
