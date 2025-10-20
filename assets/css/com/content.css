@@ -306,7 +306,10 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCA60300VQ .card-text-content h4{font-size:var(--font22)}
 .WCA60300VQ .card-text-content p{font-size:var(--font18);color:var(--color-45)}
 .WCA60300VQ .card-text-content .date{font-size:var(--font16);color:var(--primary)}
-.mobile-only{display:none!important}
+/* ---주요활동 - '조회결과 없음' CSS --- */
+.WCA60300VQ .no-results { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 26px; border:1px solid var(--color-d); border-radius: 8px; width: 100%; min-height: 400px; margin-top: 24px;}
+.WCA60300VQ .no-results .icon {display: block; width: 120px; height: 100px; background: url('../../images/content/no-result.png') no-repeat center / contain;}
+.WCA60300VQ .no-results p { font-size: var(--font28); font-weight: var(--font-w-m); color: var(--color-45);}
 
 /*---------------------------------------------
     #인증센터, MY MG, 소비자보호 공통
@@ -573,15 +576,12 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     .WCR10400VQ .note-content .text-content { padding: 20px }
 
     /* 회사소개 - 주요활동 (WCA60300VQ) 모바일 */
-    .pc-only{display:none!important}
-    .mobile-only{display:block!important;width:50%;border:none!important;margin:0 auto}
-    .WCA60300VQ .search-form{width:100%;margin:0 0 32px 0}
-    .WCA60300VQ .search-form .btn-form{display:none}
-    .WCA60300VQ .btn-more{border:1px solid #6a6a6a;background-color:#fff;color:var(--color-45)}
-    .WCA60300VQ .btn-more span{color:var(--color-9)}
+    .WCA60300VQ .no-results {border: none;}
     .WCA60300VQ .card-item{width:100%}
     .WCA60300VQ .card-list{gap:32px 0}
-    
+    /* 주요활동 - 조회결과 없음 모바일 */
+    .WCA60300VQ .no-results .icon {width: 80px; height: 67px;}
+    .WCA60300VQ .no-results p { font-size: var(--font20);}
     /*---------------------------------------------
     #MY MG
     ---------------------------------------------*/
@@ -600,3 +600,6 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     .WCS10200VQ .text-content .caption,
     .WCS10201DQ .text-content .caption { padding-bottom:18px; }
 }
+
+
+
