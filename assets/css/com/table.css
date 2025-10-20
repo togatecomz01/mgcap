@@ -36,6 +36,11 @@ table.td-al td { text-align:left; }
 .table-content table tfoot tr:last-child { background-color:#EDF9FF; }
 .table-content table tfoot .sum { font-weight:var(--font-w-m); color:var(--white); background-color:var(--primary); }
 
+/* 조회결과 없음 --- */
+.no-results { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 26px; border:1px solid var(--color-d); border-radius: 8px;  width: 100%; min-height: 400px; margin-top: 24px;}
+.no-results .icon {display: block; width: 120px; height: 100px; background: url('../../images/content/no-result.png') no-repeat center / contain;}
+.no-results p { font-size: var(--font28); font-weight: var(--font-w-m); color: var(--color-45);}
+
 @media (max-width:1200px){
     .table-content:has(.mo-s) { overflow-x:auto; }
     .table-content:has(.mo-s) table { table-layout:auto; }
@@ -79,7 +84,16 @@ table.td-al td { text-align:left; }
     .mo-appendix tbody tr {display: grid; grid-template-columns: 1fr;}
     .mo-appendix tbody tr th.th-t {border-right: none; background-color: var(--table-th); font-weight: var(--font-w-b);}
 
+    /* 공지사항 리스트 */
+    .mo-list colgroup,
+    .mo-list thead,
+    .mo-list tbody .num { display:none; }
+    .mo-list tbody,
+    .mo-list tbody tr { display:block; }
+    .mo-list tbody tr { padding:20px 0 24px; border-bottom:var(--table-border); text-align:right; }
+    .mo-list tbody tr td { display:inline-block; padding:0; border:0; font-size:var(--font12); color:var(--color-6); }
+    .mo-list tbody tr td.inquiry { position:relative; padding:0 12px 0 24px; }
+    .mo-list tbody tr td.inquiry::before { content:""; display:inline-block; position:absolute; left:0; width:18px; height:18px; background:url("../../images/com/svg/ico_inquiry.svg")no-repeat center center; }
+    .mo-list tbody td.title { display:block; font-size:var(--font16); font-weight:var(--font-w-m); color:var(--color-45); text-align:left; }
 
-   
-    
 }
