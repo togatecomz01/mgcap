@@ -45,29 +45,28 @@
                 </section>
 
                 <section class="page-container WCA60300VQ">
-                    <form class="search-form">
-                        <div class="group">
-                            <div class="form-group">
-                                <div class="flex-row gap10">
-                                    <div class="se-select">
-                                        <select title="검색 조건 선택">
-                                            <option>전체</option>
-                                            <option>제목</option>
-                                            <option>내용</option>
-                                        </select>
-                                    </div>
 
-                                    <div class="flex-row col">
-                                        <input type="text" title="검색어 입력" placeholder="검색어를 입력해주세요">
+                    <form>
+                        <fieldset class="form-content">
+                            <legend>검색</legend>
+                            <div class="form-wrap noti-search">
+                                <div class="form-group">
+                                    <label for="">검색</label>
+                                    <div class="flex-row">
+                                        <select id="search-first" required="" title="" required>
+                                            <option value="0">전체</option>
+                                            <option value="1">제목</option>
+                                            <option value="3">내용</option>
+                                        </select>
+                                        <input id="search" type="search" name="search" placeholder="검색어를 입력해주세요" />
+                                        <button type="submit" class="btn-body">검색</button>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <button type="button" class="btn-form">검색</button>
+                        </fieldset>
                     </form>
 
-                    <div class="content-container">
+                    <div class="post-content">
                         <ul class="card-list">
                             <li class="card-item">
                                 <a href="#">
@@ -170,14 +169,41 @@
                         </ul>
                     </div>
 
-                    <!-- 페이지네이션 추가 예정 (공통 작업 중)-->                
-                    
-                    <!-- 모바일용 더보기 버튼 -->
-                    <div class="btn-content cta mobile-only">
-                        <div class="button-group">
-                            <button class="btn-more">(1<span>/5</span>) 더보기</button>
+                    <div class="pagination-content bo-t0">
+                        <div class="pc">
+                            <div class="first">
+                                <button class="btn-first">처음으로</button>
+                                <button class="btn-prev">이전으로</button>
+                            </div>
+                            
+                            <div>
+                                <button class="active">1</button>
+                                <button>2</button>
+                                <button>3</button>
+                                <button>4</button>
+                            </div>
+
+                            <div class="last">
+                                <button class="btn-next">다음으로</button>
+                                <button class="btn-last">마지막으로</button>
+                            </div>
                         </div>
-                    </div>
+                        <div class="mo">
+                            <button class="btn-more">
+                                <span class="page-counter">(<span>1</span><span>/5</span>)</span>
+                                <span class="load-more-text">더보기</span>
+                            </button>
+                        </div>
+                    </div>            
+                    
+
+                    <!-- D : 검색 시 조회 결과가 없을 때 뜨는 페이지 -->
+                    <!-- D : 필요시 주석 해제 -->
+                    
+                    <!-- <div class="no-results">
+                        <span class="icon"></span>
+                        <p>조회 결과가 없습니다.</p>
+                    </div> -->
                 </section>
             </main>
         </div>
