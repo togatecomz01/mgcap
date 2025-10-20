@@ -20,32 +20,24 @@
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="../../assets/css/ui-util.css" />
-    <link rel="stylesheet" href="../../assets/css/com/style.css" />
-    
-    <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
-    <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
-    <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
-    <!-- (선택) IE11용 폴리필: 안전하게 깔아두면 좋아요 -->
-    <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Promise,Array.from,Object.assign,Number.isNaN"></script>
-    <script>
-      (function () {
-        var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
-        if (isIE11) {
-          // IE11 전용 클래스 추가
-          document.documentElement.className += " ie11";
-          
-          // IE11 전용 CSS 로드
-          var link = document.createElement('link');
-          link.rel = 'stylesheet';
-          link.href = '../../assets/css/com/ie11.css';
-          link.charset = 'euc-kr'; // 꼭 지정
-          document.head.appendChild(link);
-        }
-      })();
-    </script>
+ <!-- CSS -->
+ <link rel="stylesheet" href="../css/sample.css" />  
+ <link rel="stylesheet" href="../../assets/css/com/style.css" />
+ <link rel="stylesheet" href="../../assets/css/com/default.css" />
+ <link rel="stylesheet" href="../../assets/css/com/fonts.css" />
+ <link rel="stylesheet" href="../../assets/css/com/layout.css" />
+ <link rel="stylesheet" href="../../assets/css/com/input.css" />
+ <link rel="stylesheet" href="../../assets/css/com/button.css" />
+ <link rel="stylesheet" href="../../assets/css/com/tab.css" />
+ <link rel="stylesheet" href="../../assets/css/com/table.css" />
+
+
+ <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+ <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+ <script type="text/javascript" src="../../assets/js/ui/com/input.js"></script>
+ <script type="text/javascript" src="../../assets/js/ui/com/nav.js"></script>
+ <script type="text/javascript" src="../../assets/js/ui/com/popup.js"></script>
+
   </head>
 
   <body>

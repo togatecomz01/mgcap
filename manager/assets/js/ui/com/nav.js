@@ -8,7 +8,7 @@
     var singleMode = lnb.getAttribute('data-accordion') === 'single';
 
 
-    var CLASS_OPEN = 'acitve';
+    var CLASS_OPEN = 'active';
     var CLASS_TOGGLE = 'accordion';
     var SELECTOR_SUBMENU = '.submenu';
 
@@ -28,7 +28,7 @@
         el.className = el.className.replace(new RegExp('\\s*' + className + '\\s*', 'g'), ' ').replace(/\s+/g, ' ').trim();
     }
 
-    // IE11¿ë closest ´ëÃ¼: ÁÖ¾îÁø ÅÂ±×(LI)±îÁö »óÇâ Å½»ö
+    // IE11ï¿½ï¿½ closest ï¿½ï¿½Ã¼: ï¿½Ö¾ï¿½ï¿½ï¿½ ï¿½Â±ï¿½(LI)ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Å½ï¿½ï¿½
     function closestTag(el, tagName) {
         tagName = tagName.toUpperCase();
         while (el && el !== document && el.nodeType === 1) {
@@ -63,7 +63,7 @@
         if (isOpen) {
             closeItem(li);
         } else {
-            if (singleMode) closeSiblings(li); // ´Ù¸¥ ¸Þ´º ´Ý±â
+            if (singleMode) closeSiblings(li); // ï¿½Ù¸ï¿½ ï¿½Þ´ï¿½ ï¿½Ý±ï¿½
             openItem(li);
         }
     }
@@ -71,13 +71,13 @@
     function handleClick(e) {
         var target = e.target || e.srcElement;
 
-        // ¹öÆ°(.accordion)±îÁö °Å½½·¯ ¿Ã¶ó°¨
+        // ï¿½ï¿½Æ°(.accordion)ï¿½ï¿½ï¿½ï¿½ ï¿½Å½ï¿½ï¿½ï¿½ ï¿½Ã¶ï¿½
         while (target && target !== lnb && !hasClass(target, CLASS_TOGGLE)) {
             target = target.parentNode;
         }
         if (!target || target === lnb) return;
 
-        // #3: ¹öÆ°ÀÇ Á¶»ó LI¸¦ Á¤È®È÷ Ã£À½(ÁßÃ¸ ¸¶Å©¾÷ ´ëºñ)
+        // #3: ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ LIï¿½ï¿½ ï¿½ï¿½È®ï¿½ï¿½ Ã£ï¿½ï¿½(ï¿½ï¿½Ã¸ ï¿½ï¿½Å©ï¿½ï¿½ ï¿½ï¿½ï¿?)
         var li = closestTag(target, 'LI');
         toggleItem(li);
     }

@@ -20,21 +20,25 @@
     <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/assets/css/ui-util.css" />
+    <link rel="stylesheet" href="../../assets/css/com/style.css" />
+    <link rel="stylesheet" href="../../assets/css/com/default.css" />
+    <link rel="stylesheet" href="../../assets/css/com/fonts.css" />
+    <link rel="stylesheet" href="../../assets/css/com/layout.css" />
+    <link rel="stylesheet" href="../../assets/css/com/input.css" />
+    <link rel="stylesheet" href="../../assets/css/com/button.css" />
+    <link rel="stylesheet" href="../../assets/css/com/tab.css" />
     <link rel="stylesheet" href="../css/sample.css" />
-    
+   
     <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
     <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
-    <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+    <script type="text/javascript" src="../../assets/js/ui/com/input.js"></script>
+    <script type="text/javascript" src="../../assets/js/ui/com/nav.js"></script>
+    <script type="text/javascript" src="../../assets/js/ui/com/popup.js"></script>
 
     <style>
         input[placeholder="포커스"] { border:1px solid #2392FF; }
         textarea { width:100%; height:100px; }
     </style>
-
-    <!-- (선택) IE11용 폴리필: 안전하게 깔아두면 좋아요 -->
-    <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Promise,Array.from,Object.assign,Number.isNaN"></script>
   </head>
 
     <body>
@@ -57,19 +61,25 @@
                             <div class="form-container">
                                 <div class="form-content">
                                     <div class="form-wrap">
-                                        <div class="form-group ipt-clear">
+                                        <div class="form-group">
                                             <input id="password-input" type="text" name="text" class="form-control" placeholder="디폴트" />
                                         </div>
-                                        <div class="form-group ipt-clear">
+                                        <div class="form-group">
                                             <input id="password-input" type="text" name="text" class="form-control" placeholder="포커스" autofocus />
                                         </div>
                                     </div>
                                     <div class="form-wrap">
-                                        <div class="form-group ipt-clear">
-                                            <input id="password-input" type="text" name="text" class="form-control" placeholder="내용을 입력해주세요" value="완료되었습니다." />
+                                        <div class="form-group">
+                                            <p class="ipt-clear"><input id="password-input" type="text" name="text" class="form-control" placeholder="내용을 입력해주세요" value="완료되었습니다." /></p>
                                         </div>
-                                        <div class="form-group ipt-clear">
-                                            <input id="password-input" type="text" name="text" class="form-control" placeholder="비활성" disabled />
+                                        <div class="form-group">
+                                            <input id="password-input" type="text" name="text" class="form-control" placeholder="비활성" disabled  />
+                                        </div>
+                                    </div>
+                                    <div class="form-wrap">
+                                        <div class="form-group">
+                                            <p class="ipt-clear"><input id="password-input" type="text" name="text" class="form-control" placeholder="내용을 입력해주세요" value="유효성체크 에러" aria-invalid="true" /></p>
+                                            <p id="wrt02-error" class="error" role="alert">에러가 생성되었을시 문구생성 성공일시는 p.error태그 삭제나 hidden 처리</p>
                                         </div>
                                     </div>
                                 </div>
@@ -85,7 +95,7 @@
                                 <div class="form-content">
                                     <div class="form-wrap">
                                         <div class="form-group">
-                                            <select name="fruits" class="form-control" required>
+                                            <select name="fruits" required>
                                                 <option value="" disabled selected>선택해주세요.</option>
                                                 <option value="1">옵션1</option>
                                                 <option value="2">옵션2</option>
@@ -94,7 +104,7 @@
                                               </select>
                                         </div>
                                         <div class="form-group">
-                                            <select name="fruits" class="form-control" required style="border:1px solid #2392FF;">
+                                            <select name="fruits" required style="border:1px solid #2392FF;">
                                                 <option value="" disabled selected>선택해주세요.</option>
                                                 <option value="1">옵션1</option>
                                                 <option value="2">옵션2</option>
@@ -105,7 +115,7 @@
                                     </div>
                                     <div class="form-wrap">
                                         <div class="form-group">
-                                            <select name="fruits" class="form-control" required>
+                                            <select name="fruits" required>
                                                 <option value="" disabled>선택해주세요.</option>
                                                 <option value="1">옵션1</option>
                                                 <option value="2">옵션2</option>
@@ -122,6 +132,15 @@
                                             <option value="4" selected>비활성</option>
                                             </select>
                                         </div>
+                                        <div class="form-group">
+                                            <select name="fruits" disabled>
+                                            <option value="" disabled>선택해주세요.</option>
+                                            <option value="1">옵션1</option>
+                                            <option value="2">옵션2</option>
+                                            <option value="3">옵션3</option>
+                                            <option value="4" selected>비활성</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                                 <!--//form-content-->
@@ -129,25 +148,23 @@
                         </div>
                     </div>
                     <div class="tit-wrap">
-                        <h3></h3>
+                        <h3>Input file</h3>
                         <div>
-                            <h4>본분</span></h4>
+                            <p style="padding-bottom:30px;">첨부 기능을 통해 업로드된 파일을 화면에 표시하는 영역이다. 사용자가 첨부한 파일 이름과 삭제 버튼(아이콘)을 함께 제공해,
+                                필요할 때 해당 파일을 손쉽게 제거할 수 있다. 한 화면에 최대 3개까지 배치하며, 파일 간 간격은 16px로 유지한다.</p>
                             <div class="form-container">
                                 <div class="form-content">
                                     <div class="form-wrap">
                                         <div class="form-group">
-                                            <textarea placeholder="디폴트"></textarea>
-                                        </div>
-                                        <div class="form-group">
-                                              <textarea style="border:1px solid #2392FF;">포커스</textarea>
-                                        </div>
-                                    </div>
-                                    <div class="form-wrap">
-                                        <div class="form-group">
-                                            <textarea>입력완료 되었습니다.</textarea>
-                                        </div>
-                                        <div class="form-group">
-                                            <textarea disabled>비활성</textarea>
+                                            <span class="ipt-file">
+                                                <span class="ipt-clear"><input class="form-control upload-text uploadInput" type="text" placeholder="파일을 입력해주세요" tabindex="0" readonly>
+                                                </span>
+                                                <label class="upload-label" for="files">
+                                                    <input id="files" class="upload" name="files" type="file" />
+                                                    <span class="sr-only fileLabel">파일선택</span>
+                                                </label>
+                                            </span>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -155,6 +172,7 @@
                             </div>
                         </div>
                     </div>
+                   
                 </div>
             </main>
         </div>
