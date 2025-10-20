@@ -42,10 +42,10 @@ body{
 }
 .process-content li .step p span { margin-top:-5px; color:var(--white); font-size:var(--font28); font-weight:var(--font-w-m); }
 .process-content li .step p span:first-of-type { font-size:var(--font13); }
-.process-content li .step::before { content:""; z-index:2; display:block; position:absolute; top:50%; right:-9px; transform:translate(0, -50%); width:6px; height:6px; border-radius:30px; background:var(--process-dot); border:var(--process-dot-border); }
+.process-content li .step::before { content:""; z-index:2; display:block; position:absolute; top:calc(50% - 20px); right:-9px; transform:translate(0, -50%); width:6px; height:6px; border-radius:30px; background:var(--process-dot); border:var(--process-dot-border); }
 .process-content li .step::after { content:""; position:absolute; right:0; bottom:0; width:1px; height:100%; background:var(--process-line); }
-.process-content li:first-of-type .step::after {  bottom:0; width:1px; height:50%; background:var(--process-line); }
-.process-content li:last-of-type .step::after { right:0; top:0; bottom:initial; width:1px; height:50%; background:var(--process-line); }
+.process-content li:first-of-type .step::after {  bottom:0; width:1px; height:calc(50% + 20px); background:var(--process-line); }
+.process-content li:last-of-type .step::after { right:0; top:0; bottom:initial; width:1px; height:calc(50% - 20px); background:var(--process-line); }
 
 .process-content li .step + div { margin-left:15px; margin-bottom:40px; padding:20px 40px; background:var(--process-bg); flex:1; border-radius:16px; }
 .process-content li .step + div:has(em) { padding:40px; }
