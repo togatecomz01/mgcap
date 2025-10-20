@@ -599,3 +599,28 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 
 
 
+/* 회사소개 - 주요활동(WCA60301DQ) PC기준(공통으로 사용) */
+.view-header{display:flex;align-items:center;padding-top:40px;border-top:2px solid var(--color-2)}
+.view-header h3{font-size:var(--font24)}
+.view-header .date{font-size:var(--font16);color:var(--color-6);flex-shrink:0;padding-left:20px}
+.view-body{padding:40px 0 72px 0;font-size:var(--font18);color:var(--color-45)}
+.view-body .view-image{max-width:800px;aspect-ratio:16/9;background-color:#f0f0f0;margin-bottom:24px}
+.view-body p{margin-bottom:24px}
+.view-body p:last-child{margin-bottom:0}
+.view-navigation{border-top:1px solid var(--color-d);border-bottom:1px solid var(--color-d)}
+.view-navigation li{display:flex;justify-content:space-between;align-items:center;padding:30px 50px;font-size:var(--font18)}
+.view-navigation .link-group{display:flex;align-items:center}
+.view-navigation .label{width:140px;color:var(--color-75);font-weight:var(--font-w-r)}
+.view-navigation .link-group>a,.view-navigation .link-group>span:not(.label){color:var(--color-45);font-weight:var(--font-w-m)}
+.view-navigation .meta-info, .view-navigation .meta-info .label{font-size:var(--font16)}
+.view-navigation .meta-info{display:flex;align-items:center;color:var(--color-45)}
+.view-navigation .meta-info .label{width:auto;color:var(--color-75);margin-right:12px}
+
+@media (max-width: 767px) {
+    /* 회사소개 - 주요활동(WCA60301DQ) 모바일 기준(공통으로 사용) */
+    .view-header { flex-direction: column; align-items: flex-start;}
+    .view-header .date {padding: 0;}
+    .view-navigation li {padding: 20px 16px;}
+    .view-navigation .meta-info {display: none;}
+    .view-navigation .label {width: 80px;}
+}
