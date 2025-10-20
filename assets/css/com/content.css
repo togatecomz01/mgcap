@@ -2,29 +2,29 @@
 
 body{
 
- --board:1px solid var(--color-d);   
- --process-step:url("../../images/com/svg/ico_step.svg");
- --process-dot:#3C85E5;
- --process-dot-border:6px solid #C4DAF7;
- --process-bg:var(--color-f6);
- --process-line:#E0E0E0;
- --process-step1-bg:#5296F2;
- --process-step2-bg:#4B89E5;
- --process-step3-bg:#4277D4;
- --process-step4-bg:#3763C1;
- --process-step5-bg:#204BAB;
- --process-check:url("../../images/com/svg/ico_form_check.svg"); /** 프로세스 style2 체크 **/
- --ico-arrow:url("../../images/content/ico_arrow.svg");
- --ico-cst-01:url("../../images/content/PRT/w/ico_CST-008_1.png"); /**문서 아이콘**/
- --ico-cst-02:url("../../images/content/PRT/w/ico_CST-008_2.png"); /**프린터 아이콘**/
- --ico-cst-03:url("../../images/content/PRT/w/ico_CST-008_3.png"); /**돋보기 아이콘**/
- --ico-cst-04:url("../../images/content/PRT/w/ico_CST-008_4.png"); /**돈 아이콘**/
- --ico-cst-05:url("../../images/content/PRT/w/ico_CST-008_5.png"); /**펜 아이콘**/
- --ico-cst-06:url("../../images/content/PRT/w/ico_CST-008_6.png"); /**보안 금지 아이콘**/
- --ico-cst-07:url("../../images/content/PRT/w/ico_CST-008_7.png"); /**은행 거절 아이콘**/
+    --board:1px solid var(--color-d);   
+    --process-step:url("../../images/com/svg/ico_step.svg");
+    --process-dot:#3C85E5;
+    --process-dot-border:6px solid #C4DAF7;
+    --process-bg:var(--color-f6);
+    --process-line:#E0E0E0;
+    --process-step1-bg:#5296F2;
+    --process-step2-bg:#4B89E5;
+    --process-step3-bg:#4277D4;
+    --process-step4-bg:#3763C1;
+    --process-step5-bg:#204BAB;
+    --process-check:url("../../images/com/svg/ico_form_check.svg"); /** 프로세스 style2 체크 **/
+    --ico-arrow:url("../../images/content/ico_arrow.svg");
+    --ico-cst-01:url("../../images/content/PRT/w/ico_CST-008_1.png"); /**문서 아이콘**/
+    --ico-cst-02:url("../../images/content/PRT/w/ico_CST-008_2.png"); /**프린터 아이콘**/
+    --ico-cst-03:url("../../images/content/PRT/w/ico_CST-008_3.png"); /**돋보기 아이콘**/
+    --ico-cst-04:url("../../images/content/PRT/w/ico_CST-008_4.png"); /**돈 아이콘**/
+    --ico-cst-05:url("../../images/content/PRT/w/ico_CST-008_5.png"); /**펜 아이콘**/
+    --ico-cst-06:url("../../images/content/PRT/w/ico_CST-008_6.png"); /**보안 금지 아이콘**/
+    --ico-cst-07:url("../../images/content/PRT/w/ico_CST-008_7.png"); /**은행 거절 아이콘**/
 
- --ico-info:url("../../images/com/svg/ico_info_guide.svg");/** 유의사항 안내 **/
- --ico-arrow-black:url("../../images/content/ico_arrow_black.svg");/** 절차 화살표 black **/
+    --ico-info:url("../../images/com/svg/ico_info_guide.svg");/** 유의사항 안내 **/
+    --ico-arrow-black:url("../../images/content/ico_arrow_black.svg");/** 절차 화살표 black **/
 
 }
 
@@ -39,24 +39,24 @@ body{
 .process-content li .step p { 
     content:""; margin-right:30px; display:inline-flex; justify-content:center; align-items:center; flex-direction:column; width:109px; height:109px; background:#5296F2;
     mask-image:var(--process-step); mask-repeat:no-repeat; mask-size:auto 40px; mask-position:center; -webkit-mask-image:var(--process-step); -webkit-mask-repeat:no-repeat; -webkit-mask-size:85px auto; -webkit-mask-position:center; 
- }
- .process-content li .step p span { margin-top:-5px; color:var(--white); font-size:var(--font28); font-weight:var(--font-w-m); }
- .process-content li .step p span:first-of-type { font-size:var(--font13); }
- .process-content li .step::before { content:""; z-index:2; display:block; position:absolute; top:50%; right:-9px; transform:translate(0, -50%); width:6px; height:6px; border-radius:30px; background:var(--process-dot); border:var(--process-dot-border); }
- .process-content li .step::after { content:""; position:absolute; right:0; bottom:0; width:1px; height:100%; background:var(--process-line); }
+}
+.process-content li .step p span { margin-top:-5px; color:var(--white); font-size:var(--font28); font-weight:var(--font-w-m); }
+.process-content li .step p span:first-of-type { font-size:var(--font13); }
+.process-content li .step::before { content:""; z-index:2; display:block; position:absolute; top:50%; right:-9px; transform:translate(0, -50%); width:6px; height:6px; border-radius:30px; background:var(--process-dot); border:var(--process-dot-border); }
+.process-content li .step::after { content:""; position:absolute; right:0; bottom:0; width:1px; height:100%; background:var(--process-line); }
 .process-content li:first-of-type .step::after {  bottom:0; width:1px; height:50%; background:var(--process-line); }
 .process-content li:last-of-type .step::after { right:0; top:0; bottom:initial; width:1px; height:50%; background:var(--process-line); }
 
- .process-content li .step + div { margin-left:15px; margin-bottom:40px; padding:20px 40px; background:var(--process-bg); flex:1; border-radius:16px; }
- .process-content li .step + div dt, 
- .process-content li .step + div em {  margin-bottom:4px; font-size:var(--font20); color:var(--color-2); font-weight:var(--font-w-b); }
- .process-content li .step + div dd { color:var(--color-6); }
+.process-content li .step + div { margin-left:15px; margin-bottom:40px; padding:20px 40px; background:var(--process-bg); flex:1; border-radius:16px; }
+.process-content li .step + div dt, 
+.process-content li .step + div em {  margin-bottom:4px; font-size:var(--font20); color:var(--color-2); font-weight:var(--font-w-b); }
+.process-content li .step + div dd { color:var(--color-6); }
 
- .process-content .process01 li:nth-child(1) .step p { background:var(--process-step1-bg); }
- .process-content .process01 li:nth-child(2) .step p { background:var(--process-step2-bg); }
- .process-content .process01 li:nth-child(3) .step p { background:var(--process-step3-bg); }
- .process-content .process02 li:nth-child(4) .step p { background:var(--process-step4-bg); }
- .process-content .process02 li:nth-child(5) .step p { background:var(--process-step5-bg); }
+.process-content .process01 li:nth-child(1) .step p { background:var(--process-step1-bg); }
+.process-content .process01 li:nth-child(2) .step p { background:var(--process-step2-bg); }
+.process-content .process01 li:nth-child(3) .step p { background:var(--process-step3-bg); }
+.process-content .process02 li:nth-child(4) .step p { background:var(--process-step4-bg); }
+.process-content .process02 li:nth-child(5) .step p { background:var(--process-step5-bg); }
 
  /** style2 **/
 .step-content ul.col2 li { width:calc(100% / 2); }
@@ -107,20 +107,20 @@ body{
 .WCC60500VQ .table-group .mo tbody tr th.th-t {background-color: transparent; font-size: var(--font16); font-weight: var(--font-w-r);}
 .WCC60500VQ .table-group .mo tbody tr td {text-align: left;}
 
- /******위법계약해지 요구권**/
- .MGC-PRT-CST-008 .sub-process-content ul.process01 li:nth-of-type(1) > p::before { background-image:var(--ico-cst-01); }
- .MGC-PRT-CST-008 .sub-process-content ul.process01 li:nth-of-type(2) > p::before { background-image:var(--ico-cst-02); }
- .MGC-PRT-CST-008 .sub-process-content ul.process01 li:nth-of-type(3) > p::before { background-image:var(--ico-cst-03); }
- .MGC-PRT-CST-008 .sub-process-content ul.process02 li:nth-of-type(1) > p::before { background-image:var(--ico-cst-04); }
- .MGC-PRT-CST-008 .sub-process-content ul.process02 li:nth-of-type(2) > p::before { background-image:var(--ico-cst-05); }
- .MGC-PRT-CST-008 .sub-process-content ul.process03 li:nth-of-type(1) > p::before { background-image:var(--ico-cst-06); }
- .MGC-PRT-CST-008 .sub-process-content ul.process03 li:nth-of-type(2) > p::before { background-image:var(--ico-cst-07); }
+/******위법계약해지 요구권**/
+.MGC-PRT-CST-008 .sub-process-content ul.process01 li:nth-of-type(1) > p::before { background-image:var(--ico-cst-01); }
+.MGC-PRT-CST-008 .sub-process-content ul.process01 li:nth-of-type(2) > p::before { background-image:var(--ico-cst-02); }
+.MGC-PRT-CST-008 .sub-process-content ul.process01 li:nth-of-type(3) > p::before { background-image:var(--ico-cst-03); }
+.MGC-PRT-CST-008 .sub-process-content ul.process02 li:nth-of-type(1) > p::before { background-image:var(--ico-cst-04); }
+.MGC-PRT-CST-008 .sub-process-content ul.process02 li:nth-of-type(2) > p::before { background-image:var(--ico-cst-05); }
+.MGC-PRT-CST-008 .sub-process-content ul.process03 li:nth-of-type(1) > p::before { background-image:var(--ico-cst-06); }
+.MGC-PRT-CST-008 .sub-process-content ul.process03 li:nth-of-type(2) > p::before { background-image:var(--ico-cst-07); }
 
 /******자료열람 요구권**/
-  .MGC-PRT-CST-009 .sub-process-content ul.process01 li:nth-of-type(1) > p::before { background-image:var(--ico-cst-01); }
-  .MGC-PRT-CST-009 .sub-process-content ul.process01 li:nth-of-type(2) > p::before { background-image:var(--ico-cst-03); }
-  .MGC-PRT-CST-009 .sub-process-content ul.process01 li:nth-of-type(3) > p::before { background-image:var(--ico-cst-05); }
-  
+.MGC-PRT-CST-009 .sub-process-content ul.process01 li:nth-of-type(1) > p::before { background-image:var(--ico-cst-01); }
+.MGC-PRT-CST-009 .sub-process-content ul.process01 li:nth-of-type(2) > p::before { background-image:var(--ico-cst-03); }
+.MGC-PRT-CST-009 .sub-process-content ul.process01 li:nth-of-type(3) > p::before { background-image:var(--ico-cst-05); }
+
 
 /******모잡인조회**/
 .MGC-PRT-CST-012 {
@@ -162,36 +162,37 @@ body{
 .MGC-PRT-CST-012 .btn-group.link2 .btn-link:nth-of-type(11) { background-image:var(--logo-cst-12); }
 .MGC-PRT-CST-012 .btn-group.link2 .btn-link:nth-of-type(12) { background-image:var(--logo-cst-13); }
 
-
+/** 장애인 상담 안내 **/
+.WCU11000VQ .text-content h3 { margin-bottom:52px; }
 
 /*---------------------------------------------
     #고객센터
 ---------------------------------------------*/
-  /******고객센터-채무조정안내**/
-  .WCC601500VQ .sub-process-content.bo-none ul { padding: 0; border: 0; }
-  .WCC601500VQ .sub-process-content ul { flex-wrap: wrap; gap: 24px 0; }
-  .WCC601500VQ .sub-process-content ul li::after { margin: 10px; width: 32px; height: 32px; background-image: var(--ico-arrow-black); background-size: auto; }
-  .WCC601500VQ .sub-process-content ul dl { width: 182px; height: 190px; border: 1px solid var(--color-45); text-align: center; }
-  .WCC601500VQ .sub-process-content ul dl dt { padding: 8px 0; width: 100%; border-bottom: 1px solid var(--color-45); background-color: var(--color-e); color: var(--color-2); }
-  .WCC601500VQ .sub-process-content ul dl dd { margin: 12px 22px; }
-  .WCC601500VQ .sub-process-content ul dl dd span { display: block; font-size: var(--font16); word-break: break-all; overflow-wrap: break-word; }
-  .WCC601500VQ .sub-process-content ul dl dd span.txt-less-2 { font-size: calc(var(--font16) - 2px); }
-  .WCC601500VQ .sub-process-content ul dl dd span+span { margin-top: 8px; }
+/******고객센터-채무조정안내**/
+.WCC601500VQ .sub-process-content.bo-none ul { padding: 0; border: 0; }
+.WCC601500VQ .sub-process-content ul { flex-wrap: wrap; gap: 24px 0; }
+.WCC601500VQ .sub-process-content ul li::after { margin: 10px; width: 32px; height: 32px; background-image: var(--ico-arrow-black); background-size: auto; }
+.WCC601500VQ .sub-process-content ul dl { width: 182px; height: 190px; border: 1px solid var(--color-45); text-align: center; }
+.WCC601500VQ .sub-process-content ul dl dt { padding: 8px 0; width: 100%; border-bottom: 1px solid var(--color-45); background-color: var(--color-e); color: var(--color-2); }
+.WCC601500VQ .sub-process-content ul dl dd { margin: 12px 22px; }
+.WCC601500VQ .sub-process-content ul dl dd span { display: block; font-size: var(--font16); word-break: break-all; overflow-wrap: break-word; }
+.WCC601500VQ .sub-process-content ul dl dd span.txt-less-2 { font-size: calc(var(--font16) - 2px); }
+.WCC601500VQ .sub-process-content ul dl dd span+span { margin-top: 8px; }
 
-  /******고객센터-개인정보처리방침**/
-  .WCC60300VQ .font-bold { font-weight: var(--font-w-b); }
-  .WCC60300VQ .font-medium { font-weight: var(--font-w-m); }
-  .WCC60300VQ .font-color-6 { color: var(--color-6); }
-  .WCC60300VQ .button-content .lnk-group { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
-  .WCC60300VQ .button-content .lnk-group a { padding: 12px 20px; border: var(--board); }
-  .WCC60300VQ em { display: inline-flex; font-weight: var(--font-w-b); }
-  .WCC60300VQ .link-list li .btn-text { display: inline-flex }
-  /* 셀렉트 박스 */
-  .WCC60300VQ .form-group + div {border:none}
-  .WCC60300VQ .form-group { display: flex; justify-content: flex-end; }
-  .WCC60300VQ .se-select label { display: none; }
-  .WCC60300VQ .se-select { width: auto; }
-  .WCC60300VQ .se-select select { padding: 12px 50px 12px 20px; height: auto; border-radius: 100px; border: var(--board); background: var(--ico-select) no-repeat right 20px center; }
+/******고객센터-개인정보처리방침**/
+.WCC60300VQ .font-bold { font-weight: var(--font-w-b); }
+.WCC60300VQ .font-medium { font-weight: var(--font-w-m); }
+.WCC60300VQ .font-color-6 { color: var(--color-6); }
+.WCC60300VQ .button-content .lnk-group { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.WCC60300VQ .button-content .lnk-group a { padding: 12px 20px; border: var(--board); }
+.WCC60300VQ em { display: inline-flex; font-weight: var(--font-w-b); }
+.WCC60300VQ .link-list li .btn-text { display: inline-flex }
+/* 셀렉트 박스 */
+.WCC60300VQ .form-group + div {border:none}
+.WCC60300VQ .form-group { display: flex; justify-content: flex-end; }
+.WCC60300VQ .se-select label { display: none; }
+.WCC60300VQ .se-select { width: auto; }
+.WCC60300VQ .se-select select { padding: 12px 50px 12px 20px; height: auto; border-radius: 100px; border: var(--board); background: var(--ico-select) no-repeat right 20px center; }
 
 /*---------------------------------------------
     #회사소개
@@ -219,190 +220,68 @@ body{
 .WCA20100VQ .greeting-group .signature span{display:block;margin-bottom:8px;color:var(--white)}
 .WCA20100VQ .greeting-group .signature img{width:150px}
 
-  /******회사소개-회사개요**/
-  main.contentWrap > .WCA10100VQ { padding-top: 0; }
-  .WCA10100VQ { text-align: center; }
-  .WCA10100VQ h3 { line-height: 150%; font-size: var(--font32); }
-  .WCA10100VQ h3::after { content:""; display: block; margin: 32px 0; width: 100%; height: 268px; background: url("../../images/content/INT/w/main_CMP-002.png") no-repeat center; background-size: cover; }
-  .WCA10100VQ .text-group p { margin-top: 0; font-size: var(--font20); font-weight: var(--font-w-m); line-height: 150%; }
-  /* info-cards */
-  .WCA10100VQ .info-cards { counter-reset: item; display: flex; justify-content: center; align-items: stretch; gap: 64px; padding: 100px 132px 30px 132px; margin: 0 auto; }
-  .WCA10100VQ .info-card { width: calc((100% - 64px * 2) / 3); min-width: 180px; flex: 1; display: flex; flex-direction: column; justify-content: stretch; }
-  .WCA10100VQ .info-card h4 { margin-bottom: 14px; font-size: var(--font22); font-weight: var(--font-w-b); }
-  .WCA10100VQ .info-card dl { position: relative; flex: 1; padding: 48px 26px 30px 26px; border: var(--board); }
-  .WCA10100VQ .info-card dl::before { content: "0"counter(item); counter-increment: item; position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center;
-    width: 40px; height: 40px; background: var(--primary); color: var(--white); font-size: var(--font20); font-weight: var(--font-w-b); }
-  .WCA10100VQ .info-card dt + dd { margin-top: 10px; }
-  .WCA10100VQ .info-card dd + dt { margin-top: 16px; }
-  .WCA10100VQ .info-card dt { font-size: var(--font18); font-weight: var(--font-w-b); }
-  .WCA10100VQ .info-card dd { color: var(--color-6); font-size: var(--font16); font-weight: var(--font-w-r); }
-  /* button-content */
-  .WCA10100VQ .button-content {padding-top:80px}
-  .WCA10100VQ .button-content .lnk-group { display: flex; flex-wrap: wrap; gap: 40px; }
-  .WCA10100VQ .button-content .lnk-group a { box-sizing: border-box; height: 202px; display: flex; align-items: center; justify-content: center; flex: 1 1 calc(50% - 20px); border-radius: 16px;
-    color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); background-size: cover; background-repeat: no-repeat; background-position: center; }
-  .WCA10100VQ .button-content .lnk-group a:nth-child(1) { background-image: url("../../images/content/INT/w/link_1_CMP-002.png") }
-  .WCA10100VQ .button-content .lnk-group a:nth-child(2) { background-image: url("../../images/content/INT/w/link_2_CMP-002.png") }
-  .WCA10100VQ .button-content .lnk-group a:nth-child(3) { background-image: url("../../images/content/INT/w/link_3_CMP-002.png") }
-  .WCA10100VQ .button-content .lnk-group a:nth-child(4) { background-image: url("../../images/content/INT/w/link_4_CMP-002.png") }
-
-  /* 회사소개 - 회사연혁 (WCA30100VQ) */
-  .WCA30100VQ { padding-top: 0 !important; }
-  .WCA30100VQ .text-content h3 { font-size: var(--font32); }
-  .WCA30100VQ .text-content h3 span { color: var(--primary); }
-  .WCA30100VQ .text-content p { font-size: var(--font32); font-weight: var(--font-w-b); }
-  .WCA30100VQ .text-content p span { color: var(--primary); }
-  .WCA30100VQ .history-group { display: flex; align-items: flex-start; gap: 160px; border-top: 1px solid #000000;}
-  .WCA30100VQ .history-range { flex: 0 0 350px; text-align: center; margin-top: 50px;}
-  .WCA30100VQ .history-range .sub-title { font-size: var(--font22); font-weight: var(--font-w-m); color: var(--color-9); margin-bottom: 10px; }
-  .WCA30100VQ .history-range .main-title { font-size: 52px; font-weight: var(--font-w-b); }
-  .WCA30100VQ .timeline-list {margin-top: 50px;}
-  .WCA30100VQ .timeline-list li { position: relative; }
-  .WCA30100VQ .timeline-list li:not(:last-child) { margin-bottom: 90px; }
-  .WCA30100VQ .timeline-list li::before { content: ''; position: absolute; top: 15px; left: -36px; width: 10px; height: 10px; background-color: var(--color-3); border-radius: 50%; z-index: 2; }
-  .WCA30100VQ .timeline-list li::after { content: ''; position: absolute; left: -33px; width: 4px; background-color: #e0e0e0; z-index: 1; top: 35px; bottom: -90px; }
-  .WCA30100VQ .timeline-list dt { font-size: var(--font32); font-weight: var(--font-w-b); margin-bottom: 34px; padding-left: 80px; }
-  .WCA30100VQ .timeline-list dd { display: flex; padding-left: 80px; font-size: var(--font22);}
-  .WCA30100VQ .timeline-list dd:not(:last-of-type) { margin-bottom: 19px; }
-  .WCA30100VQ .timeline-list .date { flex: 0 0 90px; color: var(--color-45); }
-  .WCA30100VQ .timeline-list .desc { display: block; color: var(--color-6); }
-
-  /******회사소개-채용안내 및 절차**/
-  .WCR10400VQ ul.diamond-box { display: flex; padding: 32px 24px; margin-top: 32px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; background: var(--bg-box); }
-  .WCR10400VQ ul.diamond-box li::before { content:"◆"; display:inline; color:var(--primary); margin-right: 6px; }
-  .WCR10400VQ ul.diamond-box li { color: var(--color-2); font-weight: var(--font-w-m);}
-  .WCR10400VQ .process-content li:nth-child(2) .step p { background:var(--process-step2-bg); }
-  .WCR10400VQ .process-content li:nth-child(3) .step p { background:var(--process-step3-bg); }
-  .WCR10400VQ .process-content li:nth-child(4) .step p { background:var(--process-step4-bg); }
-  .WCR10400VQ .process-content li:nth-child(5) .step p { background:var(--process-step5-bg); }
-  /* 유의사항 안내 */
-  .WCR10400VQ .note-content .text-content { padding: 32px 40px; border: var(--board); }
-  .WCR10400VQ .note-content .text-content .tit { position:relative; padding-left:55px; padding-bottom:29px; font-size:var(--font28); font-weight:var(--font-w-m); color:var(--color-2); }
-  .WCR10400VQ .note-content .text-content .tit::before { content:""; position:absolute; left:0; display:block; width:43px; height:43px; background:var(--ico-info)no-repeat center; background-size:auto 28px; }
-
- @media (max-width:767px) {
-
-body{
-    --ico-cst-01:url("../../images/content/PRT/m/ico_CST-008_1.png"); /**문서 아이콘**/
-    --ico-cst-02:url("../../images/content/PRT/m/ico_CST-008_2.png"); /**프린터 아이콘**/
-    --ico-cst-03:url("../../images/content/PRT/m/ico_CST-008_3.png"); /**돋보기 아이콘**/
-    --ico-cst-04:url("../../images/content/PRT/m/ico_CST-008_4.png"); /**돈 아이콘**/
-    --ico-cst-05:url("../../images/content/PRT/m/ico_CST-008_5.png"); /**펜 아이콘**/
-    --ico-cst-06:url("../../images/content/PRT/m/ico_CST-008_6.png"); /**보안 금지 아이콘**/
-    --ico-cst-07:url("../../images/content/PRT/m/ico_CST-008_7.png"); /**은행 거절 아이콘**/
-}
-
-/*---------------------------------------------
-    #프로세스
----------------------------------------------*/
-.process-content li { gap:18px; background:var(--process-bg); margin-bottom:22px; padding:18px 16px; border-radius:12px; }
-.process-content li .step { width:56px; align-items:flex-start; flex:0 0 56px; padding-bottom:0; }
-.process-content li .step p { margin:0; width:54.55px; height:54.55px; -webkit-mask-size:100% 100%; }
-.process-content li .step::after,
-.process-content li .step::before { display:none; }
-.process-content li .step p span { margin-top:0; }
-.process-content li .step p span:first-of-type { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0, 0, 0, 0); white-space:nowrap; border:0; }
-.process-content li .step + div { padding:0; margin:0; background:transparent; font-size:var(--font18); }
-
-
-
-  /*---------------------------------------------
-    #소비자보호
----------------------------------------------*/
-.sub-process-content ul { display:block; padding:32px 24px; }
-.sub-process-content ul li { display:block; min-height:74px; margin-bottom:32px; }
-.sub-process-content ul li:last-of-type { margin-bottom:0; }
-.sub-process-content ul li::after { display:none; }
-.sub-process-content ul li p { display:flex; flex-direction:column; justify-content:center; min-height:74px; position:relative; padding-left:96px; text-align:left; }
-.sub-process-content ul li p::before { position:absolute; left:0; margin-bottom:0; width:74px; height:74px; background-size:35px auto; }
-.sub-process-content ul li > p span { font-size:14px; max-width:100%; }
-.sub-process-content ul li span.sr-only.mo { color:var(--color-6); font-size:var(--font14);  }
-
-/******모잡인조회**/
-.MGC-PRT-CST-012 .btn-group { flex-direction:column; }
-.MGC-PRT-CST-012 .btn-link { width:100%; }
-.MGC-PRT-CST-012 .btn-link:nth-child(odd),
-.MGC-PRT-CST-012 .btn-link:nth-child(even) { margin:0 0 20px; }
-.MGC-PRT-CST-012 .btn-link:last-of-type { margin-bottom:0; }
-
-/*---------------------------------------------
-    #고객센터
----------------------------------------------*/
-/****** 고객센터-업무위탁 및 제 3자 제공현황 **/
-.WCC60500VQ .table-group .mo tbody tr {display: grid; grid-template-columns: 1fr;}
-.WCC60500VQ .table-group .mo tbody tr th.th-t {border-right: none; background-color: var(--table-th); font-weight: var(--font-w-b);}
-.WCC60500VQ .table-group .mo tbody tr td {text-align: center;}
-
-/******고객센터-채무조정안내**/
-.WCC601500VQ .sub-process-content ul { display: inline-flex; gap: 20px 10px; }
-.WCC601500VQ .sub-process-content ul li { display: inline-flex; margin-bottom: 0; }
-.WCC601500VQ .sub-process-content ul li::after { background-image: none; }
-.WCC601500VQ .sub-process-content ul dl { width: 156px; height: 162px; }
-.WCC601500VQ .sub-process-content ul dl dt { padding: 6px 0; font-size: var(--font16) }
-.WCC601500VQ .sub-process-content ul dl dd { margin: 8px 18px; }
-.WCC601500VQ .sub-process-content ul dl dd span { font-size: var(--font14) }
-.WCC601500VQ .sub-process-content ul dl dd span.txt-less-2 { font-size: calc(var(--font14) - 2px); }
-
-/******고객센터-개인정보처리방침**/
-.WCC60300VQ .button-content .lnk-group { gap: 10px; }
-.WCC60300VQ .button-content .lnk-group a { width: 100%; text-align: center; }
-.WCC60300VQ .link-list li span { display: block }
-/* 셀렉트 박스 */
-.WCC60300VQ .se-select { width: 100%; }
-.WCC60300VQ .se-select select { font-size: var(--font14); }
-
-/******고객센터-영상정보처리기기 운영관리방침**/
-.WCC602000VQ .col-row.mo-row colgroup, .col-row.mo-row thead { display: none; }
-.WCC602000VQ .col-row.mo-row tr { display: block; }
-.WCC602000VQ .col-row.mo-row td { display: flex; padding: 0; border-left: none; }
-.WCC602000VQ .col-row.mo-row td span { width: 50%; padding: 10px; }
-.WCC602000VQ .col-row.mo-row td::before { content: attr(data-label); padding: 10px; width: 50%; border-right: var(--table-border); background: var(--table-th); font-weight: var(--font-w-b); }
-
-/*---------------------------------------------
-    #회사소개
----------------------------------------------*/
-
 /******회사소개-회사개요**/
-.WCA10100VQ h3 { font-size: var(--font32); font-weight: var(--font-w-m); margin-bottom: 220px; }
-.WCA10100VQ h3 .success { font-weight: var(--font-w-b); }
-.WCA10100VQ h3::after { position: absolute; left: 50%; transform: translateX(-50%); margin: 28px 0 20px 0; width: 100%; height: 173px; }
-.WCA10100VQ .text-group p { font-size: var(--font18); font-weight: var(--font-w-r) }
+main.contentWrap > .WCA10100VQ { padding-top: 0; }
+.WCA10100VQ { text-align: center; }
+.WCA10100VQ h3 { line-height: 150%; font-size: var(--font32); }
+.WCA10100VQ h3::after { content:""; display: block; margin: 32px 0; width: 100%; height: 268px; background: url("../../images/content/INT/w/main_CMP-002.png") no-repeat center; background-size: cover; }
+.WCA10100VQ .text-group p { margin-top: 0; font-size: var(--font20); font-weight: var(--font-w-m); line-height: 150%; }
 /* info-cards */
-.WCA10100VQ .info-cards { flex-direction: column; padding: 52px 0 0 0; gap: 36px; }
-.WCA10100VQ .info-card { width: 100%; }
-.WCA10100VQ .info-card h4 { font-size: var(--font18); margin-bottom: 12px; }
-.WCA10100VQ .info-card dt { font-size: var(--font16); }
-.WCA10100VQ .info-card dd { font-size: var(--font14); }
+.WCA10100VQ .info-cards { counter-reset: item; display: flex; justify-content: center; align-items: stretch; gap: 64px; padding: 100px 132px 30px 132px; margin: 0 auto; }
+.WCA10100VQ .info-card { width: calc((100% - 64px * 2) / 3); min-width: 180px; flex: 1; display: flex; flex-direction: column; justify-content: stretch; }
+.WCA10100VQ .info-card h4 { margin-bottom: 14px; font-size: var(--font22); font-weight: var(--font-w-b); }
+.WCA10100VQ .info-card dl { position: relative; flex: 1; padding: 48px 26px 30px 26px; border: var(--board); }
+.WCA10100VQ .info-card dl::before { content: "0"counter(item); counter-increment: item; position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center;
+width: 40px; height: 40px; background: var(--primary); color: var(--white); font-size: var(--font20); font-weight: var(--font-w-b); }
+.WCA10100VQ .info-card dt + dd { margin-top: 10px; }
+.WCA10100VQ .info-card dd + dt { margin-top: 16px; }
+.WCA10100VQ .info-card dt { font-size: var(--font18); font-weight: var(--font-w-b); }
+.WCA10100VQ .info-card dd { color: var(--color-6); font-size: var(--font16); font-weight: var(--font-w-r); }
 /* button-content */
-.WCA10100VQ .button-content { padding-top: 32px; }
-.WCA10100VQ .button-content .lnk-group { display: block; }
-.WCA10100VQ .button-content .lnk-group a { height: 102px; font-size: var(--font22) }
-.WCA10100VQ .button-content .lnk-group a+a { margin-top: 20px; }
+.WCA10100VQ .button-content {padding-top:80px}
+.WCA10100VQ .button-content .lnk-group { display: flex; flex-wrap: wrap; gap: 40px; }
+.WCA10100VQ .button-content .lnk-group a { box-sizing: border-box; height: 202px; display: flex; align-items: center; justify-content: center; flex: 1 1 calc(50% - 20px); border-radius: 16px;
+color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); background-size: cover; background-repeat: no-repeat; background-position: center; }
+.WCA10100VQ .button-content .lnk-group a:nth-child(1) { background-image: url("../../images/content/INT/w/link_1_CMP-002.png") }
+.WCA10100VQ .button-content .lnk-group a:nth-child(2) { background-image: url("../../images/content/INT/w/link_2_CMP-002.png") }
+.WCA10100VQ .button-content .lnk-group a:nth-child(3) { background-image: url("../../images/content/INT/w/link_3_CMP-002.png") }
+.WCA10100VQ .button-content .lnk-group a:nth-child(4) { background-image: url("../../images/content/INT/w/link_4_CMP-002.png") }
 
 /* 회사소개 - 회사연혁 (WCA30100VQ) */
-.WCA30100VQ .history-group .history-range{display:none}
-.WCA30100VQ .history-group{gap:0; border: none;}
-.WCA30100VQ .text-group p { margin-top: 0; }
-.WCA30100VQ .text-content h3,.WCA30100VQ .text-content p {font-size: var(--font22);}
-.WCA30100VQ .timeline-list{width:100%; margin-top: 0;}
-.WCA30100VQ .timeline-list .date{width:100%;flex:0 0 20px}
-.WCA30100VQ .timeline-list li::before{left:0}
-.WCA30100VQ .timeline-list li::after{left:3px; width: 2px;}
-.WCA30100VQ .timeline-list dt{padding-left:30px;font-size:var(--font22)}
-.WCA30100VQ .timeline-list dd{padding-left:30px;flex-direction:column;}
-.WCA30100VQ .timeline-list dd,
-.WCA30100VQ .timeline-list dd .desc-group{font-size:var(--font18);}
-.WCA30100VQ .timeline-list dd:not(:last-of-type) {margin-bottom: 40px;}
-.WCA30100VQ .timeline-list .date{margin-bottom:12px;color:var(--color-2)}
+.WCA30100VQ { padding-top: 0 !important; }
+.WCA30100VQ .text-content h3 { font-size: var(--font32); }
+.WCA30100VQ .text-content h3 span { color: var(--primary); }
+.WCA30100VQ .text-content p { font-size: var(--font32); font-weight: var(--font-w-b); }
+.WCA30100VQ .text-content p span { color: var(--primary); }
+.WCA30100VQ .history-group { display: flex; align-items: flex-start; gap: 160px; border-top: 1px solid #000000;}
+.WCA30100VQ .history-range { flex: 0 0 350px; text-align: center; margin-top: 50px;}
+.WCA30100VQ .history-range .sub-title { font-size: var(--font22); font-weight: var(--font-w-m); color: var(--color-9); margin-bottom: 10px; }
+.WCA30100VQ .history-range .main-title { font-size: 52px; font-weight: var(--font-w-b); }
+.WCA30100VQ .timeline-list {margin-top: 50px;}
+.WCA30100VQ .timeline-list li { position: relative; }
+.WCA30100VQ .timeline-list li:not(:last-child) { margin-bottom: 90px; }
+.WCA30100VQ .timeline-list li::before { content: ''; position: absolute; top: 15px; left: -36px; width: 10px; height: 10px; background-color: var(--color-3); border-radius: 50%; z-index: 2; }
+.WCA30100VQ .timeline-list li::after { content: ''; position: absolute; left: -33px; width: 4px; background-color: #e0e0e0; z-index: 1; top: 35px; bottom: -90px; }
+.WCA30100VQ .timeline-list dt { font-size: var(--font32); font-weight: var(--font-w-b); margin-bottom: 34px; padding-left: 80px; }
+.WCA30100VQ .timeline-list dd { display: flex; padding-left: 80px; font-size: var(--font22);}
+.WCA30100VQ .timeline-list dd:not(:last-of-type) { margin-bottom: 19px; }
+.WCA30100VQ .timeline-list .date { flex: 0 0 90px; color: var(--color-45); }
+.WCA30100VQ .timeline-list .desc { display: block; color: var(--color-6); }
 
 /******회사소개-채용안내 및 절차**/
-.WCR10400VQ ul.diamond-box { padding: 12px 16px; }
-.WCR10400VQ .note-content .text-content { padding: 20px }
-}
+.WCR10400VQ ul.diamond-box { display: flex; padding: 32px 24px; margin-top: 32px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; background: var(--bg-box); }
+.WCR10400VQ ul.diamond-box li::before { content:"◆"; display:inline; color:var(--primary); margin-right: 6px; }
+.WCR10400VQ ul.diamond-box li { color: var(--color-2); font-weight: var(--font-w-m);}
+.WCR10400VQ .process-content li:nth-child(2) .step p { background:var(--process-step2-bg); }
+.WCR10400VQ .process-content li:nth-child(3) .step p { background:var(--process-step3-bg); }
+.WCR10400VQ .process-content li:nth-child(4) .step p { background:var(--process-step4-bg); }
+.WCR10400VQ .process-content li:nth-child(5) .step p { background:var(--process-step5-bg); }
+/* 유의사항 안내 */
+.WCR10400VQ .note-content .text-content { padding: 32px 40px; border: var(--board); }
+.WCR10400VQ .note-content .text-content .tit { position:relative; padding-left:55px; padding-bottom:29px; font-size:var(--font28); font-weight:var(--font-w-m); color:var(--color-2); }
+.WCR10400VQ .note-content .text-content .tit::before { content:""; position:absolute; left:0; display:block; width:43px; height:43px; background:var(--ico-info)no-repeat center; background-size:auto 28px; }
 
-
-
- /*---------------------------------------------
+/*---------------------------------------------
     #인증센터, MY MG 공통
 ---------------------------------------------*/
 
@@ -523,7 +402,125 @@ body{
     .WCA20100VQ .greeting-group .ceo-text p {font-size: var(--font18); color: var(--color-45);}
 }
 
-@media (max-width:780px){
+@media (max-width:767px) {
+
+    body{
+        --ico-cst-01:url("../../images/content/PRT/m/ico_CST-008_1.png"); /**문서 아이콘**/
+        --ico-cst-02:url("../../images/content/PRT/m/ico_CST-008_2.png"); /**프린터 아이콘**/
+        --ico-cst-03:url("../../images/content/PRT/m/ico_CST-008_3.png"); /**돋보기 아이콘**/
+        --ico-cst-04:url("../../images/content/PRT/m/ico_CST-008_4.png"); /**돈 아이콘**/
+        --ico-cst-05:url("../../images/content/PRT/m/ico_CST-008_5.png"); /**펜 아이콘**/
+        --ico-cst-06:url("../../images/content/PRT/m/ico_CST-008_6.png"); /**보안 금지 아이콘**/
+        --ico-cst-07:url("../../images/content/PRT/m/ico_CST-008_7.png"); /**은행 거절 아이콘**/
+    }
+
+    /*---------------------------------------------
+        #프로세스
+    ---------------------------------------------*/
+    .process-content li { gap:18px; background:var(--process-bg); margin-bottom:22px; padding:18px 16px; border-radius:12px; }
+    .process-content li .step { width:56px; align-items:flex-start; flex:0 0 56px; padding-bottom:0; }
+    .process-content li .step p { margin:0; width:54.55px; height:54.55px; -webkit-mask-size:100% 100%; mask-size:100% 100%; }
+    .process-content li .step::after,
+    .process-content li .step::before { display:none; }
+    .process-content li .step p span { margin-top:0; }
+    .process-content li .step p span:first-of-type { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0, 0, 0, 0); white-space:nowrap; border:0; }
+    .process-content li .step + div { padding:0; margin:0; background:transparent; font-size:var(--font18); }
+
+
+
+    /*---------------------------------------------
+        #소비자보호
+    ---------------------------------------------*/
+    .sub-process-content ul { display:block; padding:32px 24px; }
+    .sub-process-content ul li { display:block; min-height:74px; margin-bottom:32px; }
+    .sub-process-content ul li:last-of-type { margin-bottom:0; }
+    .sub-process-content ul li::after { display:none; }
+    .sub-process-content ul li p { display:flex; flex-direction:column; justify-content:center; min-height:74px; position:relative; padding-left:96px; text-align:left; }
+    .sub-process-content ul li p::before { position:absolute; left:0; margin-bottom:0; width:74px; height:74px; background-size:35px auto; }
+    .sub-process-content ul li > p span { font-size:14px; max-width:100%; }
+    .sub-process-content ul li span.sr-only.mo { color:var(--color-6); font-size:var(--font14);  }
+
+    /******모잡인조회**/
+    .MGC-PRT-CST-012 .btn-group { flex-direction:column; }
+    .MGC-PRT-CST-012 .btn-link { width:100%; }
+    .MGC-PRT-CST-012 .btn-link:nth-child(odd),
+    .MGC-PRT-CST-012 .btn-link:nth-child(even) { margin:0 0 20px; }
+    .MGC-PRT-CST-012 .btn-link:last-of-type { margin-bottom:0; }
+
+    /*---------------------------------------------
+        #고객센터
+    ---------------------------------------------*/
+    /****** 고객센터-업무위탁 및 제 3자 제공현황 **/
+    .WCC60500VQ .table-group .mo tbody tr {display: grid; grid-template-columns: 1fr;}
+    .WCC60500VQ .table-group .mo tbody tr th.th-t {border-right: none; background-color: var(--table-th); font-weight: var(--font-w-b);}
+    .WCC60500VQ .table-group .mo tbody tr td {text-align: center;}
+
+    /******고객센터-채무조정안내**/
+    .WCC601500VQ .sub-process-content ul { display: inline-flex; gap: 20px 10px; }
+    .WCC601500VQ .sub-process-content ul li { display: inline-flex; margin-bottom: 0; }
+    .WCC601500VQ .sub-process-content ul li::after { background-image: none; }
+    .WCC601500VQ .sub-process-content ul dl { width: 156px; height: 162px; }
+    .WCC601500VQ .sub-process-content ul dl dt { padding: 6px 0; font-size: var(--font16) }
+    .WCC601500VQ .sub-process-content ul dl dd { margin: 8px 18px; }
+    .WCC601500VQ .sub-process-content ul dl dd span { font-size: var(--font14) }
+    .WCC601500VQ .sub-process-content ul dl dd span.txt-less-2 { font-size: calc(var(--font14) - 2px); }
+
+    /******고객센터-개인정보처리방침**/
+    .WCC60300VQ .button-content .lnk-group { gap: 10px; }
+    .WCC60300VQ .button-content .lnk-group a { width: 100%; text-align: center; }
+    .WCC60300VQ .link-list li span { display: block }
+    /* 셀렉트 박스 */
+    .WCC60300VQ .se-select { width: 100%; }
+    .WCC60300VQ .se-select select { font-size: var(--font14); }
+
+    /******고객센터-영상정보처리기기 운영관리방침**/
+    .WCC602000VQ .col-row.mo-row colgroup, .col-row.mo-row thead { display: none; }
+    .WCC602000VQ .col-row.mo-row tr { display: block; }
+    .WCC602000VQ .col-row.mo-row td { display: flex; padding: 0; border-left: none; }
+    .WCC602000VQ .col-row.mo-row td span { width: 50%; padding: 10px; }
+    .WCC602000VQ .col-row.mo-row td::before { content: attr(data-label); padding: 10px; width: 50%; border-right: var(--table-border); background: var(--table-th); font-weight: var(--font-w-b); }
+
+    /*---------------------------------------------
+        #회사소개
+    ---------------------------------------------*/
+
+    /******회사소개-회사개요**/
+    .WCA10100VQ h3 { font-size: var(--font32); font-weight: var(--font-w-m); margin-bottom: 220px; }
+    .WCA10100VQ h3 .success { font-weight: var(--font-w-b); }
+    .WCA10100VQ h3::after { position: absolute; left: 50%; transform: translateX(-50%); margin: 28px 0 20px 0; width: 100%; height: 173px; }
+    .WCA10100VQ .text-group p { font-size: var(--font18); font-weight: var(--font-w-r) }
+    /* info-cards */
+    .WCA10100VQ .info-cards { flex-direction: column; padding: 52px 0 0 0; gap: 36px; }
+    .WCA10100VQ .info-card { width: 100%; }
+    .WCA10100VQ .info-card h4 { font-size: var(--font18); margin-bottom: 12px; }
+    .WCA10100VQ .info-card dt { font-size: var(--font16); }
+    .WCA10100VQ .info-card dd { font-size: var(--font14); }
+    /* button-content */
+    .WCA10100VQ .button-content { padding-top: 32px; }
+    .WCA10100VQ .button-content .lnk-group { display: block; }
+    .WCA10100VQ .button-content .lnk-group a { height: 102px; font-size: var(--font22) }
+    .WCA10100VQ .button-content .lnk-group a+a { margin-top: 20px; }
+
+    /* 회사소개 - 회사연혁 (WCA30100VQ) */
+    .WCA30100VQ .history-group .history-range{display:none}
+    .WCA30100VQ .history-group{gap:0; border: none;}
+    .WCA30100VQ .text-group p { margin-top: 0; }
+    .WCA30100VQ .text-content h3,.WCA30100VQ .text-content p {font-size: var(--font22);}
+    .WCA30100VQ .timeline-list{width:100%; margin-top: 0;}
+    .WCA30100VQ .timeline-list .date{width:100%;flex:0 0 20px}
+    .WCA30100VQ .timeline-list li::before{left:0}
+    .WCA30100VQ .timeline-list li::after{left:3px; width: 2px;}
+    .WCA30100VQ .timeline-list dt{padding-left:30px;font-size:var(--font22)}
+    .WCA30100VQ .timeline-list dd{padding-left:30px;flex-direction:column;}
+    .WCA30100VQ .timeline-list dd,
+    .WCA30100VQ .timeline-list dd .desc-group{font-size:var(--font18);}
+    .WCA30100VQ .timeline-list dd:not(:last-of-type) {margin-bottom: 40px;}
+    .WCA30100VQ .timeline-list .date{margin-bottom:12px;color:var(--color-2)}
+
+    /******회사소개-채용안내 및 절차**/
+    .WCR10400VQ ul.diamond-box { padding: 12px 16px; }
+    .WCR10400VQ .note-content .text-content { padding: 20px }
+
     /*---------------------------------------------
     #MY MG
     ---------------------------------------------*/
@@ -533,13 +530,7 @@ body{
     .WCS30101DQ .mo tbody tr { display:flex; flex-wrap:wrap; align-items:stretch; width:100%; font-size:0; }
     .WCS30101DQ .mo tbody th { display:inline-flex; justify-content: center; align-items:center; padding:10px; width:30%; min-height:24px; border-left:0; }
     .WCS30101DQ .mo tbody td { display:inline-flex; flex-direction:column; justify-content:center; padding:10px; width:calc(70% - 4px); min-height:24px; border-left:0; }
-}
 
-@media screen and (max-width:480px) {
-
-    /*---------------------------------------------
-        #MY MG
-    ---------------------------------------------*/
     /** 이용상품내역 **/
     .WCS10100VQ .text-content + .text-content,
     .WCS10200VQ .text-content + .text-content { padding-top:18px; }
@@ -547,5 +538,4 @@ body{
     .WCS10100VQ .text-content .caption,
     .WCS10200VQ .text-content .caption,
     .WCS10201DQ .text-content .caption { padding-bottom:18px; }
-
 }
