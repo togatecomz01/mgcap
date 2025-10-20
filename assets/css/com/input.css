@@ -23,9 +23,12 @@ body{
   --fonm-file-button:#F6F7FB;
   --form-radio-bg:var(--color-f7);
   --form-date-ico:url("../../images/com/svg/ico_date.svg");
- /* --ico-search:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16.625' height='16.624'%3E%3Cpath fill='%23999' d='M11.093 11.942a6.731 6.731 0 0 1-4.335 1.573A6.757 6.757 0 0 1 0 6.758 6.758 6.758 0 0 1 6.758 0a6.758 6.758 0 0 1 6.758 6.758 6.729 6.729 0 0 1-1.574 4.335l4.683 4.683-.849.848ZM1.199 6.758a5.558 5.558 0 0 0 5.558 5.557 5.558 5.558 0 0 0 5.557-5.557A5.558 5.558 0 0 0 6.757 1.2 5.558 5.558 0 0 0 1.2 6.758Z'/%3E%3C/svg%3E");*/
- --ico-search:url("../../images/com/svg/ico_search.svg");
- --ico-file:url("../../images/com/svg/ico_file.svg");
+  /* --ico-search:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16.625' height='16.624'%3E%3Cpath fill='%23999' d='M11.093 11.942a6.731 6.731 0 0 1-4.335 1.573A6.757 6.757 0 0 1 0 6.758 6.758 6.758 0 0 1 6.758 0a6.758 6.758 0 0 1 6.758 6.758 6.729 6.729 0 0 1-1.574 4.335l4.683 4.683-.849.848ZM1.199 6.758a5.558 5.558 0 0 0 5.558 5.557 5.558 5.558 0 0 0 5.557-5.557A5.558 5.558 0 0 0 6.757 1.2 5.558 5.558 0 0 0 1.2 6.758Z'/%3E%3C/svg%3E");*/
+  --ico-search:url("../../images/com/svg/ico_search.svg");
+  --ico-file:url("../../images/com/svg/ico_file.svg");
+
+  --ico-noti-search:url("../../images/com/svg/ico_noti_search.svg");
+  --ico-noti-reset:url("../../images/com/svg/ico_noti_reset.svg");
 
 }
 
@@ -135,7 +138,19 @@ label.toggle input + span { font-size:0; }
 .search-form label { margin-bottom:0; font-size:var(--font16); }
 /**조건검색**/
 
-
+/** 공지사항 검색 **/
+.noti-search label { display:none; font-size:0; }
+.noti-search input[type="text"],
+.noti-search input[type="password"],
+.noti-search input[type="email"],
+.noti-search input[type="number"],
+.noti-search input[type="tel"],
+.noti-search input[type="search"],
+.noti-search input[type="date"],
+.noti-search select { flex:0 0 360px; padding:12px 20px; width:306px; height:48px; border-radius:100px; font-size:var(--font16); }
+.noti-search select { flex:0 0 136px; width:136px; }
+.noti-search input[type="search"] { background-image:var(--ico-noti-search); background-size:24px; }
+/** 공지사항 검색 **/
 
 @media (max-width:767px) {
     body{
@@ -171,6 +186,20 @@ label.toggle input + span { font-size:0; }
     .search-form select { flex:1; width:100%; }
     .form-wrap.search-form > .group > .form-group .ph input { width:91px; }
     .form-wrap.search-form > .group > .form-group .ph input[type="date"] { min-width:100px; width:100%; }
+
+    /** 공지사항 검색 **/
+    .noti-search input[type="text"],
+    .noti-search input[type="password"],
+    .noti-search input[type="email"],
+    .noti-search input[type="number"],
+    .noti-search input[type="tel"],
+    .noti-search input[type="search"],
+    .noti-search input[type="date"],
+    .noti-search select { flex:0 0 223px; padding:10px 16px; width:223px; height:41px; font-size:var(--font14); line-height:16px; }
+    .noti-search select { flex:0 0 92px; width:92px; }
+    .noti-search input[type="search"] { background-size:20px; }
+    /** 공지사항 검색 **/
+
 
     /**버튼**/
     .btn-form { padding:12px; height:48px; }
