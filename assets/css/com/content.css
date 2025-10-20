@@ -178,6 +178,18 @@ body{
 .WCU11000VQ .process-content .text-list li { display:block; padding-top:12px; }
 .WCU11000VQ .process-content .text-list li:first-of-type { padding-top:0; }
 
+/** 유용한 정보 **/
+.WCU11001VQ .btn-link { margin-top:24px; padding-left:73px; width:calc(50% - 16px); background-repeat:no-repeat; background-position:left 20px center; background-size:40px; }
+.WCU11001VQ .btn-link:nth-child(odd) { margin-right:16px; }
+.WCU11001VQ .btn-link:nth-child(even) { margin-left:16px; }
+
+.WCU11001VQ .btn-group { display:flex; flex-wrap:wrap; }
+.WCU11001VQ .btn-group.link1 .btn-link:first-of-type { margin-top:0; background-image:url("../../images/content/PRT/w/ico_hand.png"); }
+.WCU11001VQ .cap-form { display:flex; align-items:center; justify-content:space-between; }
+.WCU11001VQ .cap-form .caption { margin:38px 0 24px; padding-bottom:0; }
+.WCU11001VQ .cap-form form { margin-top:0; }
+.WCU11001VQ .cap-form .form-wrap.noti-search { margin-bottom:0; }
+
 /*---------------------------------------------
     #고객센터
 ---------------------------------------------*/
