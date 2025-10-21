@@ -187,9 +187,18 @@ body{
 
 /** 민원처리안내 **/
 .WCC20700VS {
-    --logo-207-01:url("../../images/content/PRT/w/ico_CST-008_1.png"); /**민원사무편람, 개인정보필수동의서**/
+    --logo-207-01:url("../../images/content/PRT/w/ico_207_01.png"); /**민원사무편람, 개인정보필수동의서**/
+    --logo-207-02:url("../../images/content/PRT/w/ico_207_02.png"); /**민원신청서, 민원취하서**/
 }
-.WCC20700VS .btn-group .btn-link:nth-of-type(1) { background-image:var(--logo-cst-04); }
+.WCC20700VS .btn-group .btn-download { padding:20px 30px 24px 84px; }
+.WCC20700VS .btn-group .btn-download span { font-size:var(--font20); color:var(--color-2); }
+.WCC20700VS .btn-group .btn-download .txt { display:block; font-size:1rem; color:var(--color-6); }
+.WCC20700VS .btn-group .btn-download::after { width:32px; height:32px; mask-size:23.111px auto; -webkit-mask-size:23.111px auto; }
+
+.WCC20700VS .btn-group .btn-download:nth-of-type(1),
+.WCC20700VS .btn-group .btn-download:nth-of-type(3) { background-image:var(--logo-207-01); background-size:36px; }
+.WCC20700VS .btn-group .btn-download:nth-of-type(2),
+.WCC20700VS .btn-group .btn-download:nth-of-type(4) { background-image:var(--logo-207-02); background-size:43px; }
 
 /*---------------------------------------------
     #고객센터
@@ -615,12 +624,17 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     /*---------------------------------------------
     #MY MG
     ---------------------------------------------*/
-    /** 청구내역조회 **/
-    .WCS30101DQ .mo colgroup { display:none; }
-    .WCS30101DQ .mo tbody { display:block; width:100%; }
-    .WCS30101DQ .mo tbody tr { display:flex; flex-wrap:wrap; align-items:stretch; width:100%; font-size:0; }
-    .WCS30101DQ .mo tbody th { display:inline-flex; justify-content: center; align-items:center; padding:10px; width:30%; min-height:24px; border-left:0; }
-    .WCS30101DQ .mo tbody td { display:inline-flex; flex-direction:column; justify-content:center; padding:10px; width:calc(70% - 4px); min-height:24px; border-left:0; }
+    /** 청구내역조회, 신고센터 처리현황 조회 **/
+    .WCS30101DQ .mo colgroup,
+    .WCA90105VQ .mo colgroup { display:none; }
+    .WCS30101DQ .mo tbody,
+    .WCA90105VQ .mo tbody { display:block; width:100%; }
+    .WCS30101DQ .mo tbody tr,
+    .WCA90105VQ .mo tbody tr { display:flex; flex-wrap:wrap; align-items:stretch; width:100%; font-size:0; }
+    .WCS30101DQ .mo tbody th,
+    .WCA90105VQ .mo tbody th { display:inline-flex; justify-content: center; align-items:center; padding:10px; width:30%; min-height:24px; border-left:0; }
+    .WCS30101DQ .mo tbody td,
+    .WCA90105VQ .mo tbody td { display:inline-flex; flex-direction:column; justify-content:center; padding:10px; width:calc(70% - 4px); min-height:24px; border-left:0; }
 
     /** 이용상품내역 **/
     .WCS10100VQ .text-content + .text-content,
