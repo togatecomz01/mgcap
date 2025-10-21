@@ -319,6 +319,8 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCA60300VQ .card-text-content p{font-size:var(--font18);color:var(--color-45)}
 .WCA60300VQ .card-text-content .date{font-size:var(--font16);color:var(--primary)}
 
+/* 회사소개 - 클린신고센터 (WCA90107VQ) */
+.WCA90107VQ label.radio {padding-left: 0;}
 /*---------------------------------------------
     #인증센터, MY MG, 소비자보호 공통
 ---------------------------------------------*/
