@@ -179,16 +179,17 @@ body{
 .WCU11000VQ .process-content .text-list li:first-of-type { padding-top:0; }
 
 /** 유용한 정보 **/
-.WCU11001VQ .btn-link { margin-top:24px; padding-left:73px; width:calc(50% - 16px); background-repeat:no-repeat; background-position:left 20px center; background-size:40px; }
-.WCU11001VQ .btn-link:nth-child(odd) { margin-right:16px; }
-.WCU11001VQ .btn-link:nth-child(even) { margin-left:16px; }
-
-.WCU11001VQ .btn-group { display:flex; flex-wrap:wrap; }
-.WCU11001VQ .btn-group.link1 .btn-link:first-of-type { margin-top:0; background-image:url("../../images/content/PRT/w/ico_hand.png"); }
+.WCU11001VQ .btn-group.w50 .btn-link:first-of-type { margin-top:0; background-image:url("../../images/content/PRT/w/ico_hand.png"); }
 .WCU11001VQ .cap-form { display:flex; align-items:center; justify-content:space-between; }
 .WCU11001VQ .cap-form .caption { margin:38px 0 24px; padding-bottom:0; }
 .WCU11001VQ .cap-form form { margin-top:0; }
 .WCU11001VQ .cap-form .form-wrap.noti-search { margin-bottom:0; }
+
+/** 민원처리안내 **/
+.WCC20700VS {
+    --logo-207-01:url("../../images/content/PRT/w/ico_CST-008_1.png"); /**민원사무편람, 개인정보필수동의서**/
+}
+.WCC20700VS .btn-group .btn-link:nth-of-type(1) { background-image:var(--logo-cst-04); }
 
 /*---------------------------------------------
     #고객센터
@@ -220,7 +221,8 @@ body{
 .WCC60300VQ .se-select select { padding: 12px 50px 12px 20px; height: auto; border-radius: 100px; border: var(--board); background: var(--ico-select) no-repeat right 20px center; }
 
 /* 고객센터 - 개인신용평가 대응권 */
-.WCC601400VQ .btn-group .btn-download+.btn-download {margin-left: 26px;}
+.WCC601400VQ .btn-group { font-size:0; }
+.WCC601400VQ .btn-group .btn-download + .btn-download {margin-left: 26px;}
 
 
 /*---------------------------------------------
@@ -445,6 +447,14 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     .WCA20100VQ .greeting-group .ceo-text { position: static; min-width: auto; width: 100%; padding: 52px 0 0; box-sizing: border-box; color: var(--color-2); }
     .WCA20100VQ .greeting-group .ceo-text em {font-size: var(--font20); color: inherit;}
     .WCA20100VQ .greeting-group .ceo-text p {font-size: var(--font18); color: var(--color-45);}
+}
+
+@media (max-width:920px) {
+     /*---------------------------------------------
+        #고객센터
+    ---------------------------------------------*/
+    /* 고객센터 - 개인신용평가 대응권 */
+    .WCC601400VQ .btn-group .btn-download + .btn-download { margin-left:0; margin-top:20px; }
 }
 
 @media (max-width:767px) {
