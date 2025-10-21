@@ -205,6 +205,9 @@ body{
 .WCC601500VQ .sub-process-content ul dl dd span.txt-less-2 { font-size: calc(var(--font16) - 2px); }
 .WCC601500VQ .sub-process-content ul dl dd span+span { margin-top: 8px; }
 
+.WCC601500VQ .btn-group { font-size:0; }
+.WCC601500VQ .btn-group .btn-download + .btn-download {margin-left: 26px;}
+
 /******고객센터-개인정보처리방침**/
 .WCC60300VQ .font-bold { font-weight: var(--font-w-b); }
 .WCC60300VQ .font-medium { font-weight: var(--font-w-m); }
@@ -213,6 +216,10 @@ body{
 .WCC60300VQ .button-content .lnk-group a { padding: 12px 20px; border: var(--board); }
 .WCC60300VQ em { display: inline-flex; font-weight: var(--font-w-b); }
 .WCC60300VQ .link-list li .btn-text { display: inline-flex }
+
+.WCC60300VQ .btn-group { font-size:0; }
+.WCC60300VQ .btn-group .btn-download + .btn-download {margin-left: 26px;}
+
 /* 셀렉트 박스 */
 .WCC60300VQ .form-group + div {border:none}
 .WCC60300VQ .form-group { display: flex; justify-content: flex-end; }
@@ -453,8 +460,10 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
      /*---------------------------------------------
         #고객센터
     ---------------------------------------------*/
-    /* 고객센터 - 개인신용평가 대응권 */
-    .WCC601400VQ .btn-group .btn-download + .btn-download { margin-left:0; margin-top:20px; }
+    /* 고객센터 - 개인신용평가대응권, 채무조정안내, 개인정보처리방침 */
+    .WCC601400VQ .btn-group .btn-download + .btn-download,
+    .WCC601500VQ .btn-group .btn-download + .btn-download,
+    .WCC60300VQ .btn-group .btn-download + .btn-download { margin-left:0; margin-top:20px; }
 }
 
 @media (max-width:767px) {
