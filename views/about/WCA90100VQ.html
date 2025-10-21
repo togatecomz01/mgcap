@@ -3,7 +3,7 @@
 <head>
     <meta charset="euc-kr" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>클린신고센터&gt;윤리 경영&gt;회사소개&gt;홈</title>
+    <title>성희롱 및 직장내 괴롭힘 신고센터&gt;윤리 경영&gt;회사소개&gt;홈</title>
 
     <meta name="keywords" content="MG캐피탈" />
     <meta name="copyright" content="copyrights 2025 MG캐피탈" />
@@ -35,32 +35,34 @@
                         <li><span class="home">홈</span></li>
                         <li><span>회사소개</span></li>
                         <li><span>윤리 경영</span></li>
-                        <li><span>클린신고센터</span></li>
+                        <li><span>성희롱 및 직장내 괴롭힘 신고센터</span></li>
                     </ol>
                 </nav>
                 <section class="visual-container">
-                    <h2>클린신고센터</h2>
+                    <h2>성희롱 및 직장내 괴롭힘 신고센터</h2>
                     <p>시장의 신뢰와 사회의 존경을 받을 수 있는 기업이 되겠습니다.</p>
                 </section>
-                <section class="page-container WCA90107VQ">
+                <section class="page-container WCA90100VQ">
                     <div class="text-content">
                         <h3>정보 입력</h3>
                         <form>
                             <fieldset class="form-content">
-                                <legend>클린 신고센터 정보 입력</legend>
+                                <legend>성희롱 및 직장내 괴롭힘 신고센터 정보 입력</legend>
                                 <div class="form-wrap">
                                     <div class="form-group">
-                                        <label for="">구분</label>
-                                        <div class="flex-row">
-                                            <label class="radio">
-                                                <input type="radio" name="use" value="" checked="">
-                                                <span>익명</span>
-                                            </label>
-                                            <label class="radio">
-                                                <input type="radio" name="use" value="">
-                                                <span>실명</span>
-                                            </label>
-                                        </div>
+                                        <label for="name">이름</label>
+                                        <input id="name" name="name" type="text" placeholder="이름을 입력해주세요." required>
+                                    </div>    
+                                    <div class="form-group">
+                                        <label for="birth">생년월일</label>
+                                        <input id="birth" name="birth" type="number" maxlength="8" placeholder="예) 19800131" required>
+                                    </div>    
+                                </div>
+
+                                <div class="form-wrap">
+                                    <div class="form-group">
+                                        <label for="password">비밀번호</label>
+                                        <input id="password" type="text" name="password" placeholder="비밀번호를 입력해주세요" />
                                     </div>
                                 </div>
 
@@ -93,12 +95,7 @@
                                     </div>
                                 </div>
 
-                                <div class="form-wrap">
-                                    <div class="form-group">
-                                        <label for="password">비밀번호</label>
-                                        <input id="password" type="text" name="password" placeholder="비밀번호를 입력해주세요" />
-                                    </div>
-                                </div>
+                                
                                 <div class="form-wrap">
                                     <div class="form-group">
                                         <label for="title">제목</label>
@@ -118,13 +115,18 @@
                         <div class="note-group">
                             <p class="tit">유의사항 안내</p>
                             <ul class="dot">
-                                <li><strong>임직원의 성희롱 및 금융사고 등 부정한 사항에 대해 알려주세요. 제보자의 신원은 철저히 보장해 드리겠습니다.</strong></li>
-                                <li>제보자의 신분 및 제출한 증거자료 등 제보자의 관련된 어떠한 정보도 제보 관련자에게 공개되지 않습니다.</li>
-                                <li>제보자 및 제보 내용에 대해 IP추적 등이 불가합니다.</li>
-                                <li>제보한 모든 내용은 제보조사 이외에 다른 용도로는 활용되지 않으며 성심 성의껏 조사할 것을 약속드립니다.</li>
-                                <li><strong>제보대상 : 성희롱, 횡령, 배임, 금융사고, 금품수수, 향응, 신용정보유출, 불공정거래 등</strong></li>
-                                <li>본인이 관련된 부정 및 비리를 제보할 경우에는 충분한 정상 참작을 통하여 합리적으로 처리됩니다.</li>
-                                <li>성희롱 및 부정 제보 이외에는 답변을 생략하오니 이점 양해 바라며, 고객님의 불편, 불만사항은 MG캐피탈 고객센터의 전자민원접수에 신청하여 주시기 바랍니다.</li>
+                                <li><strong>임직원의 직장 내 괴롭힘 피해 사항에 대해 알려주세요.</strong></li>
+                                <li><strong>신고자의 신원 등 비밀은 철저히 보장되며, 신고에 따른 불이익이 없습니다.</strong></li>
+                                <li>신고한 모든 내용은 신고조사 이외에 다른 용도로는 활용되지 않으며 성심 성의껏 조사할 것을 약속드립니다.</li>
+                                <li>
+                                    <strong>직장 내 괴롭힘의 정의 : 사용자 또는 근로자가</strong>
+                                    <ol class="text-list">
+                                        <li><span>①</span> <span>지위 또는 관계 등의 우위를 이용하여</span></li>
+                                        <li><span>②</span> <span>업무상 적정범위를 넘어</span></li>
+                                        <li><span>③</span> <span>신체적-정신적 고통을 주거나 근무환경을 악화시키는 행위</span></li>
+                                    </ol>
+                                </li>
+                                <li>직장내 괴롭힘 피해 신고 이외에는 답변을 생략하오니 이점 양해 바라며, 고객님의 불편, 불만사항은 MG캐피탈 고객센터의 전자민원접수에 신청하여 주시기 바랍니다.</li>
                             </ul>
                         </div>
                     </div>
