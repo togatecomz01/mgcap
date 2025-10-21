@@ -219,6 +219,10 @@ body{
 .WCC60300VQ .se-select { width: auto; }
 .WCC60300VQ .se-select select { padding: 12px 50px 12px 20px; height: auto; border-radius: 100px; border: var(--board); background: var(--ico-select) no-repeat right 20px center; }
 
+/* 고객센터 - 개인신용평가 대응권 */
+.WCC601400VQ .btn-group .btn-download+.btn-download {margin-left: 26px;}
+
+
 /*---------------------------------------------
     #회사소개
 ---------------------------------------------*/
@@ -319,8 +323,10 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCA60300VQ .card-text-content p{font-size:var(--font18);color:var(--color-45)}
 .WCA60300VQ .card-text-content .date{font-size:var(--font16);color:var(--primary)}
 
-/* 회사소개 - 클린신고센터 (WCA90107VQ) */
-.WCA90107VQ label.radio {padding-left: 0;}
+/* 회사소개 - 클린신고센터 (WCA90107VQ), 신고센터 처리현황(WCA90103VQ) */
+.WCA90107VQ label.radio,
+.WCA90103VQ label.radio {padding-left: 0;}
+
 /* 회사소개 - 성희롱신고센터 (WCA90100VQ) */
 .WCA90100VQ strong+ol {margin-top: 18px;}
 /*---------------------------------------------
