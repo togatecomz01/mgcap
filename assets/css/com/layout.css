@@ -193,6 +193,37 @@ form:has(.info-content) .form-content .form-wrap.search-form { margin-bottom:0; 
 .form-content > .form-wrap.noti-search > .form-group > .flex-row { gap:12px;     justify-content:flex-end; width:100%; }
 /** 공지사항 검색 **/
 
+/** 상세보기 **/
+.view-header{display:flex;align-items:center;padding-top:40px;border-top:2px solid var(--color-2)}
+.view-header h3{font-size:var(--font24)}
+.view-header .date{font-size:var(--font16);color:var(--color-6);flex-shrink:0;padding-left:20px}
+
+.view-body{padding:40px 0 72px 0;font-size:var(--font18);color:var(--color-45)}
+.view-body .view-image{max-width:800px;aspect-ratio:16/9;background-color:#f0f0f0;margin-bottom:24px}
+.view-body p{margin-bottom:24px}
+.view-body p:last-child{margin-bottom:0}
+
+.view-navigation{border-top:1px solid var(--color-d);border-bottom:1px solid var(--color-d)}
+.view-navigation li{display:flex; justify-content:space-between;align-items:center; gap:10px; padding:28px 28px 28px 20px; font-size:var(--font18); }
+.view-navigation > .label{padding-right:20px; min-width:93px; width:100%; font-size:var(--font18); color:var(--color-75);font-weight:var(--font-w-r); line-height:18px; }
+.view-navigation .link-group > a { display:inline-block; padding-left:28px; font-size:var(--font18); color:var(--color-6); font-weight:var(--font-w-r); line-height:18px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; word-break:break-all; }
+.view-navigation .link-group > a:hover { font-weight:var(--font-w-m); color:var(--color-45); }
+.view-navigation .link-group > a.non { cursor:auto; }
+.view-navigation .meta-info{ font-size:0;}
+.view-navigation .meta-info span { font-size:var(--font16); color:var(--color-45);}
+.view-navigation .meta-info .label{ padding-right:10px; color:var(--color-75); }
+
+@media (max-width: 767px) {
+    /* 상세보기 */
+    .view-header { flex-direction: column; align-items: flex-start;}
+    .view-header .date {padding: 0;}
+    .view-navigation li { display:block; padding:18px 16px 18px 20px;}
+    .view-navigation li .label { padding-right:20px; font-size:var(--font14); line-height:14px; }
+    .view-navigation .link-group > a { padding-left:16px; max-width:calc(100% - 78px); font-size:var(--font14); line-height:14px; }
+    .view-navigation .meta-info {display: none;}
+    .view-navigation .label {width: 80px;}
+}
+
 /**캡챠이미지**/
 .form-content > .form-wrap > .form-group .captcha { display:flex; flex:0 0 268px; }
 .form-content > .form-wrap > .form-group p.img-captcha { flex:1; margin-right:10px; height:var(--form-height); background:#222; color:#fff; text-align:center;  }

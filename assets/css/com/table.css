@@ -37,7 +37,6 @@ table.td-al td { text-align:left; }
 .table-content table tfoot .sum { font-weight:var(--font-w-m); color:var(--white); background-color:var(--primary); }
 
 /* 조회결과 없음 */
-
 table:has(.no-results) { border:0; }
 table:has(.no-results) thead { display:none; }
 table:has(.no-results) td { margin:0; padding:0; border:0; }
@@ -100,4 +99,7 @@ table:has(.no-results) td { margin:0; padding:0; border:0; }
     .mo-list tbody tr td.inquiry::before { content:""; display:inline-block; position:absolute; left:0; width:18px; height:18px; background:url("../../images/com/svg/ico_inquiry.svg")no-repeat center center; }
     .mo-list tbody td.title { display:block; font-size:var(--font16); font-weight:var(--font-w-m); color:var(--color-45); text-align:left; }
 
+    /* 조회결과 없음 */
+    table:has(.no-results) tbody tr td { display:block; }
+    .no-results { border:0; }
 }
