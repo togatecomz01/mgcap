@@ -89,6 +89,7 @@ h3,
 .group > .text-group:has(h5) > h4{ display:block; font-size:var(--font28);  }
 h3 + p,
 .tit + dl { margin-top:20px; }
+h3.rfrnc { font-size:var(--font28) !important; color:var(--color-2) !important; }
 h4.tit-diamond::before { content:"◆"; display:inline; color:var(--primary); }
 h5, p.tit { color:var(--color-2); font-size:1rem; font-weight:var(--font-w-b); }
 
@@ -204,35 +205,36 @@ form:has(.info-content) .form-content .form-wrap.search-form { margin-bottom:0; 
 /** 공지사항 검색 **/
 
 /** 상세보기 **/
-.view-header{display:flex;align-items:center;padding-top:40px;border-top:2px solid var(--color-2)}
-.view-header h3{font-size:var(--font24)}
-.view-header .date{font-size:var(--font16);color:var(--color-6);flex-shrink:0;padding-left:20px}
+.view-content {
+    --view-p-top:52px;
+    --view-tit:var(--font28);
+    --view-p:56px 0 72px 0;
+    --view-link-board:1px solid var(--color-d);
+    --view-lable-p:28px 20px 28px 28px; 
+    --view-a-p:28px 28px 28px 20px;
+}
+.view-subject{ display:flex; align-items:center; padding-top:var(--view-p-top); border-top:1px solid var(--color-9); font-size:var(--view-tit); color:var(--color-2); font-weight:var(--font-w-b); }
+.view-subject .date{ display:inline;  margin-left:24px; color:var(--color-75); font-size:1rem; font-weight:var(--font-w-m); }
 
-.view-body{padding:40px 0 72px 0;font-size:var(--font18);color:var(--color-45)}
-.view-body .view-image{max-width:800px;aspect-ratio:16/9;background-color:#f0f0f0;margin-bottom:24px}
-.view-body p{margin-bottom:24px}
-.view-body p:last-child{margin-bottom:0}
 
-.view-navigation{border-top:1px solid var(--color-d);border-bottom:1px solid var(--color-d)}
-.view-navigation li{display:flex; justify-content:space-between;align-items:center; gap:10px; padding:28px 28px 28px 20px; font-size:var(--font18); }
-.view-navigation > .label{padding-right:20px; min-width:93px; width:100%; font-size:var(--font18); color:var(--color-75);font-weight:var(--font-w-r); line-height:18px; }
-.view-navigation .link-group > a { display:inline-block; padding-left:28px; font-size:var(--font18); color:var(--color-6); font-weight:var(--font-w-r); line-height:18px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; word-break:break-all; }
-.view-navigation .link-group > a:hover { font-weight:var(--font-w-m); color:var(--color-45); }
+.view-cont{padding:var(--view-p); font-size:1rem; color:var(--color-45); }
+.view-cont .view-image{ max-width:800px; aspect-ratio:16/9; background-color:#f0f0f0;margin-bottom:24px; }
+.view-cont p{ margin-bottom:24px; }
+.view-cont p:last-child{ margin-bottom:0; }
+
+.view-navigation{border-top:var(--view-link-board); }
+.view-navigation li{ position:relative; border-bottom:var(--view-link-board); }
+.view-navigation li .label,
+.view-navigation li a { display:inline-block; font-size:var(--font16); font-weight:var(--font-w-r); line-height:1.5; }
+.view-navigation .label{ padding:var(--view-lable-p); vertical-align:top; width:131px; color:var(--color-75); }
+.view-navigation .link-group > a { padding:var(--view-a-p); font-size:1rem; color:var(--color-6); overflow:hidden; white-space:nowrap; text-overflow:ellipsis; word-break:break-all; }
 .view-navigation .link-group > a.non { cursor:auto; }
+.view-navigation .link-group > .date { position:absolute; right:28px; top:50%; transform:translate(0, -50%); }
+.view-navigation .link-group > .date::before { content:"등록일 : "; color:var(--color-75);  }
 .view-navigation .meta-info{ font-size:0;}
 .view-navigation .meta-info span { font-size:var(--font16); color:var(--color-45);}
 .view-navigation .meta-info .label{ padding-right:10px; color:var(--color-75); }
 
-@media (max-width: 767px) {
-    /* 상세보기 */
-    .view-header { flex-direction: column; align-items: flex-start;}
-    .view-header .date {padding: 0;}
-    .view-navigation li { display:block; padding:18px 16px 18px 20px;}
-    .view-navigation li .label { padding-right:20px; font-size:var(--font14); line-height:14px; }
-    .view-navigation .link-group > a { padding-left:16px; max-width:calc(100% - 78px); font-size:var(--font14); line-height:14px; }
-    .view-navigation .meta-info {display: none;}
-    .view-navigation .label {width: 80px;}
-}
 
 /**캡챠이미지**/
 .form-content > .form-wrap > .form-group .captcha { display:flex; flex:0 0 268px; }
@@ -397,6 +399,7 @@ main.contentWrap > .bottom-container { margin-top:72px; }
     [class*="-group"] h3 + * ~ *,
     [class*="-group"] h4 + * ~ * { margin-top:18px; }
     [class*="-group"] h4 + * ~ .rfrnc { margin-top:18px; }
+    h3.rfrnc { font-size:var(--font20) !important; background:transparent !important; }
  
 
 
@@ -415,7 +418,7 @@ main.contentWrap > .bottom-container { margin-top:72px; }
     .text-content .dot li,
     .text-content .text-list li,
     .text-content .text-list dd { margin-bottom:16px; }
-
+        
 
     /**유의사항**/
     .page-container .note-content { padding-top:52px; }
@@ -459,6 +462,21 @@ main.contentWrap > .bottom-container { margin-top:72px; }
     /** 공지사항 검색 **/
     .form-wrap.noti-search { margin-bottom:20px; }
     /** 공지사항 검색 **/
+
+      /** 상세보기 **/
+      .view-content {
+        --view-p-top:32px;
+        --view-tit:var(--font20);
+        --view-p:42px 0 52px 0;
+        --view-lable-p:18px 14px 18px 16px; 
+        --view-a-p:18px 16px 18px 14px;
+    }
+    /* 상세보기 */
+    .view-subject { flex-direction:column; align-items:flex-start; gap:8px; }
+    .view-subject .date {padding:0; margin-left:0; }
+    .view-navigation li .label { padding-right:20px; width:80px; font-size:var(--font14); line-height:14px; }
+    .view-navigation .link-group > a { padding-left:16px; max-width:calc(100% - 78px); font-size:var(--font14); line-height:14px; }
+    .view-navigation .date {display: none;}
 
     /*---------------------------------------------
 		#푸터
