@@ -321,6 +321,8 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 
 /* 회사소개 - 클린신고센터 (WCA90107VQ) */
 .WCA90107VQ label.radio {padding-left: 0;}
+/* 회사소개 - 성희롱신고센터 (WCA90100VQ) */
+.WCA90100VQ strong+ol {margin-top: 18px;}
 /*---------------------------------------------
     #인증센터, MY MG, 소비자보호 공통
 ---------------------------------------------*/
@@ -333,7 +335,8 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCS50300VS fieldset.form-group label.radio {margin-bottom: 0; gap: 10px; align-items: flex-start;}
 .WCS50300VS .address-group {display: flex; flex-direction: column; gap: 10px; }
 .WCS50300VS .flex-row:has(> select + span), 
-.WCS50300VS .flex-row:has(> input + span) {align-items: center;}
+.WCS50300VS .flex-row:has(> input + span),
+.WCA90107VQ .flex-row:has(> input + span){align-items: center;} /* 클린정보센터 1줄 추가 */ /* 공통으로 변경 해야할것 같음 (이메일 부분)*/
 .WCS50300VS .flex-row:has(> select + span) select {width: 90px;}
 .WCS50300VS .flex-row:has(> select + span) span {margin-left: 5px; margin-right: 20px;}
 .WCS50300VS .flex-row:has(> select + span) span:last-of-type { margin-right: 0;}
