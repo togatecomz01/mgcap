@@ -57,51 +57,60 @@
                         <div class="form-content">
                             <div class="form-wrap multi-filter">
                                 <div class="filter-group">
-                                    <fieldset>
-                                        <legend class="le-visible">채용구분</legend>
-                                        <label class="radio">
-                                            <input type="radio" name="row2-active-1" value="" checked="" />
-                                            <span>전체</span>
-                                        </label>
-                                        <label class="radio">
-                                            <input type="radio" name="row2-active-1" value="" />
-                                            <span>정기</span>
-                                        </label>
-                                        <label class="radio">
-                                            <input type="radio" name="row2-active-1" value="" />
-                                            <span>수시</span>
-                                        </label>
-                                    </fieldset>
-                                    <fieldset>
-                                        <legend class="le-visible">진행구분</legend>
-                                        <label class="radio">
-                                            <input type="radio" name="row2-active-2" value="" checked="" />
-                                            <span>전체</span>
-                                        </label>
-                                        <label class="radio">
-                                            <input type="radio" name="row2-active-2" value="" />
-                                            <span>진행중</span>
-                                        </label>
-                                        <label class="radio">
-                                            <input type="radio" name="row2-active-2" value="" />
-                                            <span>마감</span>
-                                        </label>
-                                    </fieldset>
-                                    <fieldset>
-                                        <legend class="le-visible">공개구분</legend>
-                                        <label class="radio">
-                                            <input type="radio" name="row2-active-3" value="" checked="" />
-                                            <span>전체</span>
-                                        </label>
-                                        <label class="radio">
-                                            <input type="radio" name="row2-active-3" value="" />
-                                            <span>공개</span>
-                                        </label>
-                                        <label class="radio">
-                                            <input type="radio" name="row2-active-3" value="" />
-                                            <span>비공개</span>
-                                        </label>
-                                    </fieldset>
+                                    <div class="fieldset-wrap">
+                                        <span class="radio-tit">채용구분</span>
+                                        <fieldset>
+                                            <legend>채용구분</legend>
+                                            <label class="radio">
+                                                <input type="radio" name="row2-active-1" value="" checked="" />
+                                                <span>전체</span>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="row2-active-1" value="" />
+                                                <span>정기</span>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="row2-active-1" value="" />
+                                                <span>수시</span>
+                                            </label>
+                                        </fieldset>
+                                    </div>
+                                    <div class="fieldset-wrap">
+                                        <span class="radio-tit">진행구분</span>
+                                        <fieldset>
+                                            <legend>진행구분</legend>
+                                            <label class="radio">
+                                                <input type="radio" name="row2-active-2" value="" checked="" />
+                                                <span>전체</span>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="row2-active-2" value="" />
+                                                <span>진행중</span>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="row2-active-2" value="" />
+                                                <span>마감</span>
+                                            </label>
+                                        </fieldset>
+                                    </div>
+                                    <div class="fieldset-wrap">
+                                        <span class="radio-tit">공개구분</span>
+                                        <fieldset>
+                                            <legend>공개구분</legend>
+                                            <label class="radio">
+                                                <input type="radio" name="row2-active-3" value="" checked="" />
+                                                <span>전체</span>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="row2-active-3" value="" />
+                                                <span>공개</span>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="row2-active-3" value="" />
+                                                <span>비공개</span>
+                                            </label>
+                                        </fieldset>
+                                    </div>
                                 </div>
                                 <fieldset class="search">
                                     <legend>검색</legend>
@@ -128,6 +137,7 @@
                                     <col class="ico-btn" />
                                     <col class="auto" />
                                     <col class="num" />
+                                    <col class="num" />
                                     <col style="width: 240px" />
                                     <col class="num" />
                                     <col style="width: 150px" />
@@ -140,6 +150,7 @@
                                         <th id="th-type" scope="col">구분</th>
                                         <th id="th-title" scope="col">제목</th>
                                         <th id="th-state" scope="col">상태</th>
+                                        <th id="th-release" scope="col">공개여부</th>
                                         <th id="th-period" scope="col">기간</th>
                                         <th id="th-writer" scope="col">등록자</th>
                                         <th id="th-date" scope="col">등록일</th>
@@ -152,7 +163,8 @@
                                         <td><span>286</span></td>
                                         <td><span>정기</span></td>
                                         <td class="sbject"><span>2025년 MG캐피탈 일반직 신입직원 채용</span></td>
-                                        <td><span>진행중</span></td>
+                                        <td><span class="blue-txt">진행중</span></td>
+                                        <td><span>공개</span></td>
                                         <td><span>YYYY.MM.DD- YYYY.MM.DD</span></td>
                                         <td><span>홍길동</span></td>
                                         <td><span>YYYY.MM.DD</span></td>
@@ -164,6 +176,7 @@
                                         <td><span>수시</span></td>
                                         <td class="sbject"><span>중고차(오토론) 경력직 수시 채용</span></td>
                                         <td><span>마감</span></td>
+                                        <td><span>비공개</span></td>
                                         <td><span>YYYY.MM.DD- YYYY.MM.DD</span></td>
                                         <td><span>강길동</span></td>
                                         <td><span>YYYY.MM.DD</span></td>
@@ -174,7 +187,8 @@
                                         <td><span>284</span></td>
                                         <td><span>수시</span></td>
                                         <td class="sbject"><span>리테일 금융 경력직 수시 채용</span></td>
-                                        <td><span>진행중</span></td>
+                                        <td><span class="blue-txt">진행중</span></td>
+                                        <td><span>공개</span></td>
                                         <td><span>YYYY.MM.DD- YYYY.MM.DD</span></td>
                                         <td><span>홍길동</span></td>
                                         <td><span>YYYY.MM.DD</span></td>
@@ -185,7 +199,8 @@
                                         <td><span>283</span></td>
                                         <td><span>정기</span></td>
                                         <td class="sbject"><span>2025년 MG캐피탈 IT 경력직 채용</span></td>
-                                        <td><span>진행중</span></td>
+                                        <td><span class="blue-txt">진행중</span></td>
+                                        <td><span>공개</span></td>
                                         <td><span>YYYY.MM.DD- YYYY.MM.DD</span></td>
                                         <td><span>홍길동</span></td>
                                         <td><span>YYYY.MM.DD</span></td>
@@ -196,7 +211,8 @@
                                         <td><span>282</span></td>
                                         <td><span>정기</span></td>
                                         <td class="sbject"><span>2025년 MG캐피탈 준법감시팀 경력직 채용</span></td>
-                                        <td><span>진행중</span></td>
+                                        <td><span class="blue-txt">진행중</span></td>
+                                        <td><span>공개</span></td>
                                         <td><span>YYYY.MM.DD- YYYY.MM.DD</span></td>
                                         <td><span>홍길동</span></td>
                                         <td><span>YYYY.MM.DD</span></td>
@@ -208,6 +224,7 @@
                                         <td><span>수시</span></td>
                                         <td class="sbject"><span>전산 시스템 유지보수(SM) 수시 채용</span></td>
                                         <td><span>마감</span></td>
+                                        <td><span>비공개</span></td>
                                         <td><span>YYYY.MM.DD- YYYY.MM.DD</span></td>
                                         <td><span>강길동</span></td>
                                         <td><span>YYYY.MM.DD</span></td>
@@ -219,6 +236,7 @@
                                         <td><span>정기</span></td>
                                         <td class="sbject"><span>2024년 MG캐피탈 일반직 신입직원 채용</span></td>
                                         <td><span>마감</span></td>
+                                        <td><span>비공개</span></td>
                                         <td><span>YYYY.MM.DD- YYYY.MM.DD</span></td>
                                         <td><span>강길동</span></td>
                                         <td><span>YYYY.MM.DD</span></td>
@@ -230,6 +248,7 @@
                                         <td><span>수시</span></td>
                                         <td class="sbject"><span>중고차(오토론) 경력직 수시 채용</span></td>
                                         <td><span>마감</span></td>
+                                        <td><span>비공개</span></td>
                                         <td><span>YYYY.MM.DD- YYYY.MM.DD</span></td>
                                         <td><span>강길동</span></td>
                                         <td><span>YYYY.MM.DD</span></td>
@@ -241,6 +260,7 @@
                                         <td><span>수시</span></td>
                                         <td class="sbject"><span>리테일 금융 경력직 수시 채용</span></td>
                                         <td><span>마감</span></td>
+                                        <td><span>비공개</span></td>
                                         <td><span>YYYY.MM.DD- YYYY.MM.DD</span></td>
                                         <td><span>홍길동</span></td>
                                         <td><span>YYYY.MM.DD</span></td>
@@ -252,6 +272,7 @@
                                         <td><span>정기</span></td>
                                         <td class="sbject"><span>2024년 MG캐피탈 IT 경력직 채용</span></td>
                                         <td><span>마감</span></td>
+                                        <td><span>비공개</span></td>
                                         <td><span>YYYY.MM.DD- YYYY.MM.DD</span></td>
                                         <td><span>강길동</span></td>
                                         <td><span>YYYY.MM.DD</span></td>
