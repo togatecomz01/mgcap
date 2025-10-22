@@ -518,10 +518,11 @@ h3 {
 }
 
 .form-wrap.multi-filter { padding: 24px; border-radius: 20px; background: #f8fafc; }
-/* .form-wrap.multi-filter .filter-group fieldset + fieldset { border-left: 1px solid var(--color-d); } */
-.form-wrap.multi-filter .filter-group fieldset { gap: 20px; }
-.form-wrap.multi-filter .filter-group label.radio { padding: 0; background: transparent; }
-.le-visible { visibility: visible; position: static; margin-bottom: 20px; font-size: var(--font16); font-weight: var(--font-w-m); }
+.form-wrap.multi-filter .filter-group { display: flex; }
+.form-wrap.multi-filter .fieldset-wrap { display: flex; flex-direction: column; gap: 6px; }
+.form-wrap.multi-filter .fieldset-wrap + .fieldset-wrap { margin-left: 20px; padding-left: 20px; border-left: 1px solid var(--color-d); }
+.form-wrap.multi-filter label.radio { padding: 6px 8px; background: transparent; }
+.form-wrap.multi-filter .radio-tit { padding: 0 8px; margin-bottom: 14px; font-size: var(--font16); font-weight: var(--font-w-m); }
 .form-wrap.multi-filter fieldset.search { align-items: end; }
 .form-wrap.multi-filter .select-bg { width: 120px; height: 40px; background: var(--white); }
 
