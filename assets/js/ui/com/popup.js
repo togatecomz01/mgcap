@@ -26,7 +26,7 @@ $(document).ready(function () {
                 if (!$target.length) return;
 
                 $target.addClass("on");
-                $target.find(".pop-con-wrap").scrollTop(0);
+                $target.find(".pop-content").scrollTop(0);
                 $(".contentWrap").css("overflow", "hidden");
 
                 console.log("initPopup: " + "공통 실행");
@@ -132,7 +132,7 @@ $(document).ready(function () {
                 var $target = $("#" + id);
                 if (!$target.length) return;
 
-                var $contentWrap = $target.find(".pop-con-wrap");
+                var $contentWrap = $target.find(".pop-content");
                 $target.toggleClass("active");
 
                 console.log("btmAti: " + "바텀시트토글 실행");
@@ -183,7 +183,7 @@ $(document).ready(function () {
             // 바텀시트 dim 클릭 시 닫기
             var $dimLayer = $target.closest(".layerPopup.btmSheet");
             if ($dimLayer.length && $target.is($dimLayer)) {
-                $dimLayer.removeClass("active").find(".pop-con-wrap").removeAttr("tabindex");
+                $dimLayer.removeClass("active").find(".pop-content").removeAttr("tabindex");
                 popupL.closePopup($dimLayer.attr("id"));
                 return;
             }

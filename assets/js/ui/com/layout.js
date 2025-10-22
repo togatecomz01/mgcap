@@ -4,27 +4,27 @@ $(document).ready(function () {
     ---------------------------------------------*/
     $(window).on("load", function () {
         if ($(".fullPopupOn .pop-con-wrap").length > 0) {
-            // DOM ì¡´ì¬ ì—¬ë¶€ ë¨¼ì € ì²´í¬í•œ ë’¤ì— ì´ë²¤íŠ¸ ë°”ì¸ë”©
+            // DOM Á¸Àç ¿©ºÎ ¸ÕÀú Ã¼Å©ÇÑ µÚ¿¡ ÀÌº¥Æ® ¹ÙÀÎµù
             headerPopupL.scrolling();
         }
 
         if ($(".contentWrap").length > 0) {
-            sideToolsL.scrolling(); // ì´ˆê¸° ìƒíƒœ í™•ì¸
+            sideToolsL.scrolling(); // ÃÊ±â »óÅÂ È®ÀÎ
         }
 
         if ($("#gnbFull").length > 0) {
-            gnbFullL.init(); // ë¶ˆí•„ìš”í•œ DOM íƒìƒ‰ì„ ì¤„ì´ê³  ì˜ˆì™¸ë¥¼ ë°©ì§€
+            gnbFullL.init(); // ºÒÇÊ¿äÇÑ DOM Å½»öÀ» ÁÙÀÌ°í ¿¹¿Ü¸¦ ¹æÁö
         }
 
         if ($("#gnb").length > 0) {
-            gnbL.init(); // ë¶ˆí•„ìš”í•œ DOM íƒìƒ‰ì„ ì¤„ì´ê³  ì˜ˆì™¸ë¥¼ ë°©ì§€
+            gnbL.init(); // ºÒÇÊ¿äÇÑ DOM Å½»öÀ» ÁÙÀÌ°í ¿¹¿Ü¸¦ ¹æÁö
         }
 
         if ($("#skipnavi").length > 0) {
-            skipNaviL.init(); // init ì‹¤í–‰ ì „ì— ì¡´ì¬ ì—¬ë¶€ í™•ì¸
+            skipNaviL.init(); // init ½ÇÇà Àü¿¡ Á¸Àç ¿©ºÎ È®ÀÎ
         }
 
-        console.log("[layout.js] ì´ˆê¸°í™” ì™„ë£Œ");
+        console.log("[layout.js] ÃÊ±âÈ­ ¿Ï·á");
     });
 
     /*---------------------------------------------
@@ -44,18 +44,18 @@ $(document).ready(function () {
         // }
     });
     /*---------------------------------------------
-        GNB ë©”ë‰´ ì œì–´ ëª¨ë“ˆ
+        GNB ¸Ş´º Á¦¾î ¸ğµâ
     ---------------------------------------------*/
     var gnbFullL = (function () {
         return {
             $gnbItem: null,
 
-            // ë§ˆìš°ìŠ¤ ì˜¤ë²„ ë˜ëŠ” í¬ì»¤ìŠ¤
+            // ¸¶¿ì½º ¿À¹ö ¶Ç´Â Æ÷Ä¿½º
             mouseOverFocusIn: function () {
                 this.$gnbItem.on("mouseenter focusin", function () {
                     var $this = $(this);
 
-                    // ì´ë¯¸ ì—´ë ¤ìˆìœ¼ë©´ ë‹¤ì‹œ ì—´ì§€ ì•ŠìŒ (ì¤‘ë³µ ë°©ì§€)
+                    // ÀÌ¹Ì ¿­·ÁÀÖÀ¸¸é ´Ù½Ã ¿­Áö ¾ÊÀ½ (Áßº¹ ¹æÁö)
                     if (!$this.hasClass("on")) {
                         $this.addClass("on").siblings().removeClass("on");
 
@@ -65,7 +65,7 @@ $(document).ready(function () {
                 });
             },
 
-            // ë§ˆìš°ìŠ¤ ë¦¬ë¸Œ
+            // ¸¶¿ì½º ¸®ºê
             mouseLeave: function () {
                 this.$gnbItem.on("mouseleave", function () {
                     var $this = $(this);
@@ -74,7 +74,7 @@ $(document).ready(function () {
                 });
             },
 
-            // ì™¸ë¶€ í¬ì»¤ìŠ¤ ì´ë™ ì‹œ ë©”ë‰´ ë‹«ê¸°
+            // ¿ÜºÎ Æ÷Ä¿½º ÀÌµ¿ ½Ã ¸Ş´º ´İ±â
             focusOutGnb: function () {
                 $("body").on("focusin", function (e) {
                     if (!$(e.target).closest("#gnbFull").length) {
@@ -84,7 +84,7 @@ $(document).ready(function () {
                 });
             },
 
-            // ì´ˆê¸°í™”
+            // ÃÊ±âÈ­
             init: function () {
                 this.$gnbItem = $("#gnbFull .menu-list .menu-item"); // DOM
                 this.mouseOverFocusIn();
@@ -97,9 +97,9 @@ $(document).ready(function () {
     var gnbL = (function () {
         return {
             init: function () {
-                this.bindDepthToggle(); // ê³µí†µ ëìŠ¤ ì´ë²¤íŠ¸
-                this.bindMenuClick(); // 1ëìŠ¤ ì´ë²¤íŠ¸
-                this.bindResize(); // ë¦¬ì‚¬ì´ì¦ˆ ì´ë²¤íŠ¸
+                this.bindDepthToggle(); // °øÅë µª½º ÀÌº¥Æ®
+                this.bindMenuClick(); // 1µª½º ÀÌº¥Æ®
+                this.bindResize(); // ¸®»çÀÌÁî ÀÌº¥Æ®
             },
 
             bindMenuClick: function () {
@@ -135,13 +135,13 @@ $(document).ready(function () {
                 var _this = this;
 
                 $(window).on("resize", function () {
-                    // GNB ìƒíƒœ ì´ˆê¸°í™” ë˜ëŠ” ì¬ë°”ì¸ë”© í•„ìš” ì‹œ ì‚¬ìš©
-                    _this.resetGnb(); // ì„ íƒì 
+                    // GNB »óÅÂ ÃÊ±âÈ­ ¶Ç´Â Àç¹ÙÀÎµù ÇÊ¿ä ½Ã »ç¿ë
+                    _this.resetGnb(); // ¼±ÅÃÀû
                 });
             },
 
             resetGnb: function () {
-                // ëª¨ë“  on í´ë˜ìŠ¤ ì œê±° ë° ë©”ë‰´ ì´ˆê¸°í™”
+                // ¸ğµç on Å¬·¡½º Á¦°Å ¹× ¸Ş´º ÃÊ±âÈ­
                 $("#gnb .menu-item, #gnb li").removeClass("on");
                 $("#gnb .menu-sub, #gnb .depth02, #gnb .depth03").removeAttr("style");
             },
@@ -149,7 +149,7 @@ $(document).ready(function () {
     })();
 
     /*---------------------------------------------
-        Skip Navi í¬ì»¤ìŠ¤ ì´ë™ ëª¨ë“ˆ
+        Skip Navi Æ÷Ä¿½º ÀÌµ¿ ¸ğµâ
     ---------------------------------------------*/
     var skipNaviL = (function () {
         return {
@@ -165,9 +165,9 @@ $(document).ready(function () {
                             if (homeLink.length > 0) {
                                 homeLink.focus();
                             } else if ($(".shortcut-area > .btn-wrap > a").length > 0) {
-                                $(".shortcut-area > .btn-wrap > a").first().focus(); // ë°”ë¡œê°€ê¸° ë²„íŠ¼ì´ ìˆì„ ë•Œ
+                                $(".shortcut-area > .btn-wrap > a").first().focus(); // ¹Ù·Î°¡±â ¹öÆ°ÀÌ ÀÖÀ» ¶§
                             } else {
-                                $("#gotoContentArea").focus(); // fallback í¬ì»¤ìŠ¤
+                                $("#gotoContentArea").focus(); // fallback Æ÷Ä¿½º
                             }
                         } else if (this.id === "gnbFull") {
                             location.href = "#gnbFull";
@@ -184,7 +184,7 @@ $(document).ready(function () {
     })();
 
     /**
-     * header oní´ë˜ìŠ¤ ì¶”ê°€
+     * header onÅ¬·¡½º Ãß°¡
      **/
     var headerL = (function () {
         var scrollY = 0;
@@ -197,9 +197,9 @@ $(document).ready(function () {
                     $(".headerOn:visible, .btmWrap:visible").removeClass("on");
                 }
             },
-            // ìŠ¤í¬ë¡¤ ì²˜ë¦¬
+            // ½ºÅ©·Ñ Ã³¸®
             scrolling: function () {
-                scrollY = $(".wrap .contentWrap").length > 0 ? $(".wrap .contentWrap").scrollTop() : 0; //.length ì¡°ê±´ìœ¼ë¡œ ì¡´ì¬í•  ë•Œë§Œ .scrollTop() í˜¸ì¶œí•´ì„œ ìŠ¤í¬ë¦½íŠ¸ê°€ ë©ˆì¶”ëŠ” ìƒí™© ë°©ì§€
+                scrollY = $(".wrap .contentWrap").length > 0 ? $(".wrap .contentWrap").scrollTop() : 0; //.length Á¶°ÇÀ¸·Î Á¸ÀçÇÒ ¶§¸¸ .scrollTop() È£ÃâÇØ¼­ ½ºÅ©¸³Æ®°¡ ¸ØÃß´Â »óÈ² ¹æÁö
                 this.headerAni();
             },
         };
@@ -213,7 +213,7 @@ $(document).ready(function () {
     }
 
     /**
-     * íŒì—… header on í´ë˜ìŠ¤ ì¶”ê°€
+     * ÆË¾÷ header on Å¬·¡½º Ãß°¡
      **/
     var headerPopupL = (function () {
         var scrollY = 0;
@@ -242,7 +242,7 @@ $(document).ready(function () {
     }
 
     /**
-     * ìŠ¤í¬ë¡¤ ì—… ë²„íŠ¼ on í´ë˜ìŠ¤ ì œì–´
+     * ½ºÅ©·Ñ ¾÷ ¹öÆ° on Å¬·¡½º Á¦¾î
      **/
     var sideToolsL = (function () {
         var isOn = false;
@@ -267,7 +267,7 @@ $(document).ready(function () {
                 // this.updatePosition();
             },
 
-            // ìŠ¤í¬ë¡¤ ë§¨ ìœ„ë¡œ ì´ë™
+            // ½ºÅ©·Ñ ¸Ç À§·Î ÀÌµ¿
             moveTop: function () {
                 $(".contentWrap").animate({ scrollTop: 0 }, 300);
                 console.log("moveTop: " + "scrollUp");
@@ -317,13 +317,13 @@ $(document).ready(function () {
                         $overlay.removeClass("on");
                         $(".sideMenu").removeClass("on");
                         $("#sideTools").css({ "z-index": "9" });
-                        $(".sideMenu > button").text("í€µë©”ë‰´ ì—´ê¸°");
+                        $(".sideMenu > button").text("Äü¸Ş´º ¿­±â");
                     } else {
                         $thisUl.stop(true, true).slideDown(200);
                         $overlay.addClass("on");
                         $(".sideMenu").addClass("on");
                         $("#sideTools").css({ "z-index": "12" });
-                        $(".sideMenu > button").text("í€µë©”ë‰´ ë‹«ê¸°");
+                        $(".sideMenu > button").text("Äü¸Ş´º ´İ±â");
                     }
                 });
             },
@@ -331,19 +331,19 @@ $(document).ready(function () {
     })();
 
     if ($("#sideTools").length > 0) {
-        // ìŠ¤í¬ë¡¤ ì´ë²¤íŠ¸ ë°”ì¸ë”©
+        // ½ºÅ©·Ñ ÀÌº¥Æ® ¹ÙÀÎµù
         if ($(".contentWrap").length > 0) {
             $(".contentWrap").on("scroll", function () {
                 sideToolsL.scrolling();
             });
         }
 
-        // TOP ë²„íŠ¼ í´ë¦­ ì´ë²¤íŠ¸
+        // TOP ¹öÆ° Å¬¸¯ ÀÌº¥Æ®
         $(document).on("click", "#sideTools .scrollUpBtn", function () {
             sideToolsL.moveTop();
         });
 
-        // ìœ„ì¹˜ ë° ë©”ë‰´ ì´ˆê¸° ì„¸íŒ…
+        // À§Ä¡ ¹× ¸Ş´º ÃÊ±â ¼¼ÆÃ
         // sideToolsL.updatePosition();
         sideToolsL.plusMenu();
     }

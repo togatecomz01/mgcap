@@ -37,6 +37,7 @@
             'popup.js',
             'tab.js',
             'nav.js',
+            'terms.js',
         ];
         
         var basePath = '../../assets/js/ui/com/';

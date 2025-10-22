@@ -40,6 +40,9 @@ body{
   --lst-btn-pprev:url("../../images/com/svg/ico_pprev.svg");
   --lst-btn-prev:url("../../images/com/svg/ico_prev.svg");
   --ico-file:url("../../images/com/svg/ico_file.svg");
+
+  --ico-close: url("../../images/com/svg/ico_close.svg");
+
 }
 
 a, button { position:relative; }
@@ -51,6 +54,7 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
 .btn-text { color:var(--btn-text); text-decoration:underline;  }
 .btn-text.inline { display:inline; text-decoration:none; }
 
+
 /**Form btn**/
 .btn-form { width:100%; max-width:152px; height:67px; padding:var(--btn-padding); border:var(--btn-board); color:var(--btn-font-color); box-sizing:border-box; text-align:center; }
 .btn-form:hover { border-color:var(--btn-active); color:var(--btn-active);}
@@ -59,13 +63,15 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
 
 /**Popup Btn**/
 .btn-pop-primary,
-.btn-pop-secondary { padding:0 60px; width:100%; height:60px; line-height:60px; box-sizing:"border-box"; font-size:var(--btn-pop-font-color); font-weight:var(--btn-pop-font-w); border-radius:100px; border:1px solid transparent; }
+.btn-pop-secondary { padding:15px 30px; width:100%; max-width:212px; height:60px; line-height:1; box-sizing:"border-box"; font-size:var(--btn-pop-font-size); color:var(--btn-pop-font-color); font-weight:var(--btn-pop-font-w); border-radius:100px; border:1px solid transparent; }
 .btn-pop-primary{ background:var(--btn-pop-background); color:var(--btn-pop-font-color); }
-.btn-pop-primary:hover { background:var(--primary); }
+.btn-pop-primary:hover { background:var(--primary); color:var(--btn-pop-font-color); }
 .btn-pop-secondary{ border:var(--btn-pop-s-border); background:var(--btn-pop-s-background); }
 
 .btn-terms-modal { padding: 2px 10px 4px; border: 1px solid var(--btn-modal-border); color:var(--btn-modal-font-color); font-size:var(--btn-download-font-size); }
 .btn-terms-modal:hover { border-color: #222222; color: #222222; }
+
+.btn-close { display:block; position:absolute; top:44px; right:34px; width:40px; height:40px; background: var(--ico-close) no-repeat center; background-size:22px; font-size:0;  }
 
 /**링크, 다운로드버튼**/
 .btn-group.w50 { display:flex; flex-wrap:wrap; }
@@ -174,6 +180,11 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
     .pagination-content .mo .btn-more span { font-size:var(--font14); }
     .pagination-content .mo .btn-more .page-counter { display:inline-block; margin-right:6px; }
     .pagination-content .mo .btn-more .page-counter span:last-child { color:var(--color-9); }
+
+
+    /**Popup Btn**/
+  .btn-pop-primary,
+  .btn-pop-secondary { width:100%; max-width:100%; height:auto; }
 }
 
 @media (min-width: 767px) and (max-width:1023px){}

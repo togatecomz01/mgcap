@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="euc-kr" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>리스트&gt;샘플&gt;mg캐피탈</title>
+
+    <meta name="keywords" content="MG캐피탈" />
+    <meta name="copyright" content="copyrights 2025 MG캐피탈" />
+    <meta name="description" content="MG캐피탈 리스금융, 할부금융, 스탁론, 기업대출, 장기렌트카, PF대출 등 금융 서비스 제공." />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="No-Cache" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/ui-util.css" />
+    <link rel="stylesheet" href="http://gallery2gate.kr/project/mgcapital_re/assets/css/com/layout.css" />
+    
+    <link rel="stylesheet" href="../css/sample.css" />
+    
+    <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+    <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+  </head>
+
+    <body>
+        <div class="wrap">
+            <main class="contentWrap">
+                <div class="visual-content">
+                    <h2>
+                        <em>약관동의</em>
+                    </h2>
+                </div>
+                <div class="sample-content">
+                    <form>
+                        <div class="form-group">
+                            <ul class="check-box terms">
+                                <li class="check-all-area">
+                                    <input type="checkbox" id="chkAll" />
+                                    <label for="chkAll" class="check-button">
+                                        <span>전체 약관에 동의합니다.</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="check-required-1" class="chkReq" />
+                                    <label for="check-required-1" class="check-button" data-popup-open="fullPopup1">
+                                        <span>개인정보 수집&#183;이용&#183;취급위탁 동의</span>
+                                    </label>
+                                    <button title="개인정보 수집&#183;이용&#183;취급위탁 동의 내용보기" type="button" class="modal" data-popup-open="fullPopup1">내용보기</button>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="check-required-2" class="chkReq" />
+                                    <label for="check-required-2" class="check-button" data-popup-open="fullPopup2">
+                                        <span>본인확인서비스 이용약관</span>
+                                    </label>
+                                    <button title="본인확인서비스 이용약관 내용보기" class="modal" type="button" data-popup-open="fullPopup2">내용보기</button>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="check-required-3" class="chkReq" />
+                                    <label for="check-required-3" class="check-button" data-popup-open="fullPopup3">
+                                        <span>고유식별정보처리 동의</span>
+                                    </label>
+                                    <button title="고유식별정보처리 동의 내용보기" class="modal" type="button" data-popup-open="fullPopup3">내용보기</button>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="check-required-4" class="chkReq" />
+                                    <label for="check-required-4" class="check-button" data-popup-open="fullPopup4">
+                                        <span>통신사 이용약관 동의</span>
+                                    </label>
+                                    <button title="통신사 이용약관 동의 내용보기" class="modal" type="button" data-popup-open="fullPopup4">내용보기</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </form>
+         
+                </div>
+            </main>
+        </div>
+        <div id="fullPopup1" class="layerPopup full fullPopupOn">
+            <!--[D] fullPopupOn 클래스 :: 헤더 스크립트 적용중-->
+            <div class="pop-area">
+                <div class="pop-header">
+                    <h2 class="pop-tit">타이틀</h2>
+                </div>
+                <div class="pop-body">
+                    <div class="pop-content">
+                        컨넽츠내용
+                    </div>
+                </div>
+                <div class="pop-footer">
+                    <button type="button" class="btn-pop-primary" data-popup-close="fullPopup1">확인했어요</button>
+                </div>
+                <button type="button" name="button" class="btn btn-close right" data-popup-close="fullPopup1">닫기</button>
+            </div>
+        </div>
+    </body>
+</html>
