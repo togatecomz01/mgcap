@@ -357,6 +357,17 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 
 /* 회사소개 - 성희롱신고센터 (WCA90100VQ) */
 .WCA90100VQ strong+ol {margin-top: 18px;}
+
+/* 회사소개 - 공시정보 (WCA50100VQ) */
+.WCA50100VQ { --logo-cst-14:url("../../images/content/dart.png"); /**DART 전자공시시스템**/ }
+/* (table.css) 공시정보 페이지에 tfoot의 컨텐츠가 1개가 아니라 2개라 적용이 안되어 따로 정리  */
+.WCA50100VQ .table-content table tbody .sum  { font-weight:var(--font-w-m); color:var(--white); background-color:var(--primary); }
+.WCA50100VQ .table-content th.sum ~ td {background-color: #EDF9FF;}
+.WCA50100VQ .table-titcap { display: flex; justify-content: space-between; align-items:center; }
+.WCA50100VQ .table-mobile {display: none;}
+.WCA50100VQ .table-desktop {display: block;}
+.WCA50100VQ .table-desktop table + p.caption { margin-top: 16px; margin-bottom: 72px; }
+.WCA50100VQ .text-group .btn-group.link1 .btn-link:first-of-type { background-image:var(--logo-cst-14); }
 /*---------------------------------------------
     #인증센터, MY MG, 소비자보호 공통
 ---------------------------------------------*/
@@ -650,20 +661,30 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     /* 주요활동 - 조회결과 없음 모바일 */
     .WCA60300VQ .no-results .icon {width: 80px; height: 67px;}
     .WCA60300VQ .no-results p { font-size: var(--font20);}
+
+    /* 회사소개 - 공시정보 (WCA50100VQ) */
+    .WCA50100VQ .caption {padding-top: 0;}
+    .WCA50100VQ thead {display: none;}
+    .WCA50100VQ .table-desktop {display: none;}
+    .WCA50100VQ .table-mobile {display: block;}
+    .WCA50100VQ .tab-content .tab-panel:not(.active) {display: none;}
+    .WCA50100VQ .tab-content .tab-panel.active {display: block;}
+    .WCA50100VQ .tab-select-mobile .se-select select{color: var(--color-45); border: 1px solid var(--form-board); border-radius: 100px; margin-bottom: 24px; height: 48px; line-height: 1;}
+    .WCA50100VQ .tab-select-mobile .se-btn {display: none;}
     /*---------------------------------------------
     #MY MG
     ---------------------------------------------*/
     /** 청구내역조회, 신고센터 처리현황 조회 **/
     .WCS30101DQ .mo colgroup,
-    .WCA90105VQ .mo colgroup { display:none; }
+    .WCA90105VQ .mo colgroup, .WCA50100VQ .mo colgroup { display:none; }
     .WCS30101DQ .mo tbody,
-    .WCA90105VQ .mo tbody { display:block; width:100%; }
+    .WCA90105VQ .mo tbody, .WCA50100VQ .mo tbody { display:block; width:100%; }
     .WCS30101DQ .mo tbody tr,
-    .WCA90105VQ .mo tbody tr { display:flex; flex-wrap:wrap; align-items:stretch; width:100%; font-size:0; }
+    .WCA90105VQ .mo tbody tr, .WCA50100VQ .mo tbody tr { display:flex; flex-wrap:wrap; align-items:stretch; width:100%; font-size:0; }
     .WCS30101DQ .mo tbody th,
-    .WCA90105VQ .mo tbody th { display:inline-flex; justify-content: center; align-items:center; padding:10px; width:30%; min-height:24px; border-left:0; }
+    .WCA90105VQ .mo tbody th, .WCA50100VQ .mo tbody th { display:inline-flex; justify-content: center; align-items:center; padding:10px; width:30%; min-height:24px; border-left:0; }
     .WCS30101DQ .mo tbody td,
-    .WCA90105VQ .mo tbody td { display:inline-flex; flex-direction:column; justify-content:center; padding:10px; width:calc(70% - 4px); min-height:24px; border-left:0; }
+    .WCA90105VQ .mo tbody td, .WCA50100VQ .mo tbody td { display:inline-flex; flex-direction:column; justify-content:center; padding:10px; width:calc(70% - 4px); min-height:24px; border-left:0; }
 
     /** 이용상품내역 **/
     .WCS10100VQ .text-content + .text-content,
