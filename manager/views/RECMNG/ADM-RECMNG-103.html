@@ -19,7 +19,7 @@
         <meta http-equiv="Cache-Control" content="No-Cache" />
 
         <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico" />
-       
+
         <link rel="stylesheet" href="../../assets/css/com/style.css" />
         <link rel="stylesheet" href="../../assets/css/com/default.css" />
         <link rel="stylesheet" href="../../assets/css/com/fonts.css" />
@@ -61,19 +61,23 @@
                             <colgroup>
                                 <col style="width: 210px" />
                                 <col class="auto" />
+                                <col style="width: 150px" />
+                                <col style="width: 98px" />
+                                <col style="width: 150px" />
+                                <col style="width: 300px" />
                             </colgroup>
                             <tbody>
                                 <tr>
                                     <th id="th-writer" scope="row"><span>작성자</span></th>
-                                    <td><span>홍길동</span></td>
+                                    <td colspan="5"><span>홍길동</span></td>
                                 </tr>
                                 <tr>
                                     <th id="th-date" scope="row"><span>작성일</span></th>
-                                    <td><span>YYYY.MM.DD</span></td>
+                                    <td colspan="5"><span>YYYY.MM.DD</span></td>
                                 </tr>
                                 <tr>
                                     <th id="th-type" scope="row"><span class="essential">구분</span></th>
-                                    <td>
+                                    <td colspan="5">
                                         <select>
                                             <option value="" disabled="" selected="">선택</option>
                                             <option value="">정기</option>
@@ -84,21 +88,21 @@
                                 <!-- [D]:수정 페이지에서만 -->
                                 <!-- <tr>
                                     <th id="th-state" scope="row"><span>상태</span></th>
-                                    <td><span>진행중</span></td>
+                                    <td colspan="5"><span>진행중</span></td>
                                 </tr> -->
                                 <tr>
                                     <th id="th-title" scope="row"><span class="essential">제목</span></th>
-                                    <td>
+                                    <td colspan="5">
                                         <span><input type="text" placeholder="내용을 입력해주세요." required /></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th id="th-content" scope="row"><span class="essential">내용</span></th>
-                                    <td><div class="edt">나모웹에디터 추가 예정</div></td>
+                                    <td colspan="5"><div class="edt">나모웹에디터 추가 예정</div></td>
                                 </tr>
                                 <tr>
                                     <th id="th-file" scope="row"><span>첨부파일</span></th>
-                                    <td>
+                                    <td colspan="5">
                                         <div class="form-group">
                                             <span class="ipt-file">
                                                 <span class="ipt-clear">
@@ -136,28 +140,40 @@
                                 </tr>
                                 <tr>
                                     <th id="th-period" scope="row"><span class="essential">게시기간</span></th>
-                                    <td>
+                                    <td class="td-period">
                                         <fieldset>
                                             <legend>기간</legend>
-                                            <label for="">
-                                                <input id="password-input" type="date" name="date" placeholder="디폴트" aria-invalid="true" />
+                                            <label>
+                                                <input id="date-start" type="date" name="date-start" placeholder="디폴트" aria-invalid="true" />
                                             </label>
                                             <span class="ipt-hyphen">-</span>
-                                            <label for="">
-                                                <input id="password-input" type="date" name="date" placeholder="디폴트" aria-invalid="true" />
+                                            <label>
+                                                <input id="date-end" type="date" name="date-end" placeholder="디폴트" aria-invalid="true" />
                                             </label>
                                         </fieldset>
                                     </td>
-                                </tr>
-                                <!-- [D]:수정 페이지에서만 -->
-                                <!-- <tr>
-                                    <th id="th-early" scope="row"><span>공고 조기마감</span></th>
-                                    <td>
-                                        <label class="check">
-                                            <input type="checkbox" name="row1-active" value="" checked="" />
+                                    <!-- [D]:수정 페이지에서만 -->
+                                    <!-- <th id="th-early" class="th-checkbox" scope="row">공고 조기마감</th>
+                                    <td class="td-checkbox">
+                                        <label class="check center">
+                                            <input type="checkbox" name="row1-active" value="" checked />
                                         </label>
                                     </td>
-                                </tr> -->
+                                    <th id="th-release" class="th-radiobtn" scope="row">공개여부</th>
+                                    <td class="td-radiobtn">
+                                        <fieldset>
+                                            <legend>구분</legend>
+                                            <label class="radio">
+                                                <input type="radio" name="row2-active" value="" checked="" />
+                                                <span>공개</span>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="row2-active" value="" />
+                                                <span>비공개</span>
+                                            </label>
+                                        </fieldset>
+                                    </td> -->
+                                </tr>
                             </tbody>
                         </table>
                     </section>
