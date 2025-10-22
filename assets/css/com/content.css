@@ -103,6 +103,10 @@ body{
 .sub-process-content ul li > p em { color:var(--primary); font-weight:var(--font-w-m); }
 .sub-process-content ul li > p span { margin-bottom:0; max-width:200px; font-size:var(--font16); }
 .sub-process-content ul li:last-of-type:after { display:none; }
+/*****금융소비자보호부***/
+.WCU10200VQ .img-box {  padding:70px; width:100%; border:1px solid var(--color-d); }
+.WCU10200VQ .img-box img { content:url("../../images/content/custportal/w/custportal_organization.png"); display:block; margin:0 auto 0 38%; }
+
 
 /****** 고객센터-업무위탁 및 제 3자 제공현황 **/
 .WCC60500VQ .table-group .mo tbody tr th.th-t {background-color: transparent; font-size: var(--font16); font-weight: var(--font-w-r);}
@@ -519,6 +523,11 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     .sub-process-content ul li p::before { position:absolute; left:0; margin-bottom:0; width:74px; height:74px; background-size:35px auto; }
     .sub-process-content ul li > p span { font-size:14px; max-width:100%; }
     .sub-process-content ul li span.sr-only.mo { color:var(--color-6); font-size:var(--font14);  }
+    
+    /*****금융소비자보호부***/
+    .WCU10200VQ .img-box {  padding:0; width:100%; border:0; }
+    .WCU10200VQ .img-box img { content:url("../../images/content/custportal/m/custportal_organization.png"); display:block; margin:0; }
+
 
     /******모잡인조회**/
     .MGC-PRT-CST-012 .btn-group { flex-direction:column; }

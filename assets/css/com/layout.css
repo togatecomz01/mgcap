@@ -31,6 +31,7 @@ main.contentWrap > * { margin:0 auto; max-width:1400px; width:100%; padding:0;  
 .mt-20 { margin-top:20px; }
 .point-r { color:var(--point-r) !important; }
 .bo-t0 { border-top:0 !important; }
+.w-auto { width:auto; }
 
 /*---------------------------------------------
     #header
@@ -361,6 +362,7 @@ main.contentWrap > .bottom-container { margin-top:72px; }
 	.footer-top > ul { flex-wrap:wrap; }
 }
 @media (max-width:767px) {
+    img.w-auto { width:100%; }
     /*---------------------------------------------
 		#Çì´õ
 	---------------------------------------------*/
