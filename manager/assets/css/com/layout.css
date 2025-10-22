@@ -535,12 +535,12 @@ h3 {
 .list-container td fieldset { gap: 18px; margin: 4px; }
 /* 리스트 하단 구분선 */
 .info-content + .pagination-content { border-top: 1px solid var(--color-d) }
-/* 다운로드 버튼 */
-.btn-download-wrap { position: absolute; left:0; display: flex; gap: 20px }
-.btn-download-wrap a.btn-excel::before,
-.btn-download-wrap a.btn-pdf::before { content: ""; display: inline-block; width: 26px; height: 26px; margin-right: 10px; background-size: contain; background-repeat: no-repeat; }
-.btn-download-wrap a.btn-excel::before { background-image: url("../../images/com/ico_excel.png"); }
-.btn-download-wrap a.btn-pdf::before { background-image: url("../../images/com/ico_pdf.png"); }
+/* 좌측 버튼 그룹 */
+.left-btn-group { position: absolute; left:0; display: flex; gap: 20px }
+.left-btn-group a.btn-excel::before,
+.left-btn-group a.btn-pdf::before { content: ""; display: inline-block; width: 26px; height: 26px; margin-right: 10px; background-size: contain; background-repeat: no-repeat; }
+.left-btn-group a.btn-excel::before { background-image: url("../../images/com/ico_excel.png"); }
+.left-btn-group a.btn-pdf::before { background-image: url("../../images/com/ico_pdf.png"); }
 
 /** 관리자 채널 대쉬보드 메인화면 **/
 .intro-container {
