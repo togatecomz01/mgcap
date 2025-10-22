@@ -54,29 +54,54 @@
                     </section>
                     <section class="form-container">
                         <div class="form-content">
-                            <div class="form-wrap">
-                                <fieldset>
-                                    <legend>구분</legend>
-                                    <label class="radio">
-                                        <input type="radio" name="row2-active" value="" checked="" />
-                                        <span>전체</span>
-                                    </label>
-                                    <label class="radio">
-                                        <input type="radio" name="row2-active" value="" />
-                                        <span>정기</span>
-                                    </label>
-                                    <label class="radio">
-                                        <input type="radio" name="row2-active" value="" />
-                                        <span>수시</span>
-                                    </label>
-                                </fieldset>
+                            <div class="form-wrap multi-filter">
+                                <div class="filter-group">
+                                    <div class="fieldset-wrap">
+                                        <span class="radio-tit">채용구분</span>
+                                        <fieldset>
+                                            <legend>채용구분</legend>
+                                            <label class="radio">
+                                                <input type="radio" name="row2-active-1" value="" checked="" />
+                                                <span>전체</span>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="row2-active-1" value="" />
+                                                <span>정기</span>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="row2-active-1" value="" />
+                                                <span>수시</span>
+                                            </label>
+                                        </fieldset>
+                                    </div>
+                                    <div class="fieldset-wrap">
+                                        <span class="radio-tit">합격구분</span>
+                                        <fieldset>
+                                            <legend>합격구분</legend>
+                                            <label class="radio">
+                                                <input type="radio" name="row2-active-2" value="" checked="" />
+                                                <span>전체</span>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="row2-active-2" value="" />
+                                                <span>합격</span>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="row2-active-2" value="" />
+                                                <span>불합격</span>
+                                            </label>
+                                        </fieldset>
+                                    </div>
+                                </div>
                                 <fieldset class="search">
                                     <legend>검색</legend>
-                                    <select id="category" name="category">
-                                        <option value="applicant">지원자</option>
-                                        <option value="work">지원업무</option>
-                                        <option value="workplace">희망근무지</option>
-                                    </select>
+                                    <div class="select-bg">
+                                        <select id="category" name="category">
+                                            <option value="applicant">지원자</option>
+                                            <option value="work">지원업무</option>
+                                            <option value="workplace">희망근무지</option>
+                                        </select>
+                                    </div>
                                     <input id="q" name="q" type="search" autocomplete="off" inputmode="search" placeholder="검색어를 입력해주세요" />
                                     <button type="submit" class="btn-body">검색</button>
                                 </fieldset>
@@ -92,156 +117,300 @@
                                 <colgroup>
                                     <col style="width: 100px" />
                                     <col class="ico-btn" />
-                                    <col class="ico-btn" />
+                                    <col style="width: 100px" />
+                                    <col class="num" />
                                     <col class="num" />
                                     <col class="auto" />
                                     <col class="auto" />
+                                    <col style="width: 250px" />
                                     <col style="width: 150px" />
                                 </colgroup>
                                 <thead>
                                     <tr>
-                                        <th id="th-no" scope="col">No</th>
                                         <th id="th-allcheck" scope="col">
                                             <label class="check center" for="chkAll">
                                                 <input id="chkAll" type="checkbox" name="row1-active" value="" checked />
                                             </label>
                                         </th>
+                                        <th id="th-no" scope="col">No</th>
                                         <th id="th-type" scope="col">구분</th>
                                         <th id="th-applicant" scope="col">지원자</th>
+                                        <th id="th-pass" scope="col">합불</th>
                                         <th id="th-work" scope="col">지원업무</th>
                                         <th id="th-workplace" scope="col">희망근무지</th>
+                                        <th id="th-pass-setting" scope="col">합불여부 설정</th>
                                         <th id="th-date" scope="col">접수일</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
+                                        <td>
+                                            <label class="check">
+                                                <input type="checkbox" name="row1-active-1" value="" checked />
+                                            </label>
+                                        </td>
                                         <td><span>286</span></td>
-                                        <td>
-                                            <label class="check">
-                                                <input type="checkbox" name="row1-active" value="" checked />
-                                            </label>
-                                        </td>
                                         <td><span>정기</span></td>
                                         <td><span>홍길동</span></td>
+                                        <td><span class="">불합격</span></td>
                                         <td><span>지원업무명 노출</span></td>
                                         <td><span>희망근무지 노출</span></td>
+                                        <td>
+                                            <fieldset>
+                                                <legend>구분</legend>
+                                                <label class="radio">
+                                                    <input type="radio" name="row2-active-1" value="" checked="" />
+                                                    <span>합격</span>
+                                                </label>
+                                                <label class="radio">
+                                                    <input type="radio" name="row2-active-1" value="" />
+                                                    <span>불합격</span>
+                                                </label>
+                                            </fieldset>
+                                        </td>
                                         <td><span>YYYY.MM.DD</span></td>
                                     </tr>
                                     <tr>
+                                        <td>
+                                            <label class="check">
+                                                <input type="checkbox" name="row1-active-2" value="" checked />
+                                            </label>
+                                        </td>
                                         <td><span>285</span></td>
-                                        <td>
-                                            <label class="check">
-                                                <input type="checkbox" name="row1-active" value="" checked />
-                                            </label>
-                                        </td>
-                                        <td><span>수시</span></td>
-                                        <td><span>강길동</span></td>
+                                        <td><span>정기</span></td>
+                                        <td><span>홍길동</span></td>
+                                        <td><span class="blue-txt">합격</span></td>
                                         <td><span>지원업무명 노출</span></td>
                                         <td><span>희망근무지 노출</span></td>
+                                        <td>
+                                            <fieldset>
+                                                <legend>구분</legend>
+                                                <label class="radio">
+                                                    <input type="radio" name="row2-active-2" value="" checked="" />
+                                                    <span>합격</span>
+                                                </label>
+                                                <label class="radio">
+                                                    <input type="radio" name="row2-active-2" value="" />
+                                                    <span>불합격</span>
+                                                </label>
+                                            </fieldset>
+                                        </td>
                                         <td><span>YYYY.MM.DD</span></td>
                                     </tr>
                                     <tr>
+                                        <td>
+                                            <label class="check">
+                                                <input type="checkbox" name="row1-active-3" value="" checked />
+                                            </label>
+                                        </td>
                                         <td><span>284</span></td>
-                                        <td>
-                                            <label class="check">
-                                                <input type="checkbox" name="row1-active" value="" checked />
-                                            </label>
-                                        </td>
-                                        <td><span>정기</span></td>
+                                        <td><span>수시</span></td>
                                         <td><span>홍길동</span></td>
+                                        <td><span class="blue-txt">합격</span></td>
                                         <td><span>지원업무명 노출</span></td>
                                         <td><span>희망근무지 노출</span></td>
+                                        <td>
+                                            <fieldset>
+                                                <legend>구분</legend>
+                                                <label class="radio">
+                                                    <input type="radio" name="row2-active-3" value="" checked="" />
+                                                    <span>합격</span>
+                                                </label>
+                                                <label class="radio">
+                                                    <input type="radio" name="row2-active-3" value="" />
+                                                    <span>불합격</span>
+                                                </label>
+                                            </fieldset>
+                                        </td>
                                         <td><span>YYYY.MM.DD</span></td>
                                     </tr>
                                     <tr>
+                                        <td>
+                                            <label class="check">
+                                                <input type="checkbox" name="row1-active-4" value="" checked />
+                                            </label>
+                                        </td>
                                         <td><span>283</span></td>
-                                        <td>
-                                            <label class="check">
-                                                <input type="checkbox" name="row1-active" value="" checked />
-                                            </label>
-                                        </td>
                                         <td><span>수시</span></td>
-                                        <td><span>강길동</span></td>
+                                        <td><span>홍길동</span></td>
+                                        <td><span class="">불합격</span></td>
                                         <td><span>지원업무명 노출</span></td>
                                         <td><span>희망근무지 노출</span></td>
+                                        <td>
+                                            <fieldset>
+                                                <legend>구분</legend>
+                                                <label class="radio">
+                                                    <input type="radio" name="row2-active-4" value="" checked="" />
+                                                    <span>합격</span>
+                                                </label>
+                                                <label class="radio">
+                                                    <input type="radio" name="row2-active-4" value="" />
+                                                    <span>불합격</span>
+                                                </label>
+                                            </fieldset>
+                                        </td>
                                         <td><span>YYYY.MM.DD</span></td>
                                     </tr>
                                     <tr>
+                                        <td>
+                                            <label class="check">
+                                                <input type="checkbox" name="row1-active-5" value="" checked />
+                                            </label>
+                                        </td>
                                         <td><span>282</span></td>
-                                        <td>
-                                            <label class="check">
-                                                <input type="checkbox" name="row1-active" value="" checked />
-                                            </label>
-                                        </td>
                                         <td><span>정기</span></td>
                                         <td><span>홍길동</span></td>
+                                        <td><span class="">불합격</span></td>
                                         <td><span>지원업무명 노출</span></td>
                                         <td><span>희망근무지 노출</span></td>
+                                        <td>
+                                            <fieldset>
+                                                <legend>구분</legend>
+                                                <label class="radio">
+                                                    <input type="radio" name="row2-active-5" value="" checked="" />
+                                                    <span>합격</span>
+                                                </label>
+                                                <label class="radio">
+                                                    <input type="radio" name="row2-active-5" value="" />
+                                                    <span>불합격</span>
+                                                </label>
+                                            </fieldset>
+                                        </td>
                                         <td><span>YYYY.MM.DD</span></td>
                                     </tr>
                                     <tr>
+                                        <td>
+                                            <label class="check">
+                                                <input type="checkbox" name="row1-active-6" value="" checked />
+                                            </label>
+                                        </td>
                                         <td><span>281</span></td>
-                                        <td>
-                                            <label class="check">
-                                                <input type="checkbox" name="row1-active" value="" checked />
-                                            </label>
-                                        </td>
-                                        <td><span>수시</span></td>
-                                        <td><span>강길동</span></td>
+                                        <td><span>정기</span></td>
+                                        <td><span>홍길동</span></td>
+                                        <td><span class="blue-txt">합격</span></td>
                                         <td><span>지원업무명 노출</span></td>
                                         <td><span>희망근무지 노출</span></td>
+                                        <td>
+                                            <fieldset>
+                                                <legend>구분</legend>
+                                                <label class="radio">
+                                                    <input type="radio" name="row2-active-6" value="" checked="" />
+                                                    <span>합격</span>
+                                                </label>
+                                                <label class="radio">
+                                                    <input type="radio" name="row2-active-6" value="" />
+                                                    <span>불합격</span>
+                                                </label>
+                                            </fieldset>
+                                        </td>
                                         <td><span>YYYY.MM.DD</span></td>
                                     </tr>
                                     <tr>
+                                        <td>
+                                            <label class="check">
+                                                <input type="checkbox" name="row1-active-7" value="" checked />
+                                            </label>
+                                        </td>
                                         <td><span>280</span></td>
-                                        <td>
-                                            <label class="check">
-                                                <input type="checkbox" name="row1-active" value="" checked />
-                                            </label>
-                                        </td>
                                         <td><span>정기</span></td>
                                         <td><span>홍길동</span></td>
+                                        <td><span class="">불합격</span></td>
                                         <td><span>지원업무명 노출</span></td>
                                         <td><span>희망근무지 노출</span></td>
+                                        <td>
+                                            <fieldset>
+                                                <legend>구분</legend>
+                                                <label class="radio">
+                                                    <input type="radio" name="row2-active-7" value="" checked="" />
+                                                    <span>합격</span>
+                                                </label>
+                                                <label class="radio">
+                                                    <input type="radio" name="row2-active-7" value="" />
+                                                    <span>불합격</span>
+                                                </label>
+                                            </fieldset>
+                                        </td>
                                         <td><span>YYYY.MM.DD</span></td>
                                     </tr>
                                     <tr>
+                                        <td>
+                                            <label class="check">
+                                                <input type="checkbox" name="row1-active-8" value="" checked />
+                                            </label>
+                                        </td>
                                         <td><span>279</span></td>
-                                        <td>
-                                            <label class="check">
-                                                <input type="checkbox" name="row1-active" value="" checked />
-                                            </label>
-                                        </td>
                                         <td><span>수시</span></td>
-                                        <td><span>강길동</span></td>
-                                        <td><span>지원업무명 노출</span></td>
-                                        <td><span>희망근무지 노출</span></td>
-                                        <td><span>YYYY.MM.DD</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><span>278</span></td>
-                                        <td>
-                                            <label class="check">
-                                                <input type="checkbox" name="row1-active" value="" checked />
-                                            </label>
-                                        </td>
-                                        <td><span>정기</span></td>
                                         <td><span>홍길동</span></td>
+                                        <td><span class="blue-txt">합격</span></td>
                                         <td><span>지원업무명 노출</span></td>
                                         <td><span>희망근무지 노출</span></td>
+                                        <td>
+                                            <fieldset>
+                                                <legend>구분</legend>
+                                                <label class="radio">
+                                                    <input type="radio" name="row2-active-8" value="" checked="" />
+                                                    <span>합격</span>
+                                                </label>
+                                                <label class="radio">
+                                                    <input type="radio" name="row2-active-8" value="" />
+                                                    <span>불합격</span>
+                                                </label>
+                                            </fieldset>
+                                        </td>
                                         <td><span>YYYY.MM.DD</span></td>
                                     </tr>
                                     <tr>
-                                        <td><span>277</span></td>
                                         <td>
                                             <label class="check">
-                                                <input type="checkbox" name="row1-active" value="" checked />
+                                                <input type="checkbox" name="row1-active-9" value="" checked />
                                             </label>
                                         </td>
+                                        <td><span>278</span></td>
                                         <td><span>수시</span></td>
-                                        <td><span>강길동</span></td>
+                                        <td><span>홍길동</span></td>
+                                        <td><span class="blue-txt">합격</span></td>
                                         <td><span>지원업무명 노출</span></td>
                                         <td><span>희망근무지 노출</span></td>
+                                        <td>
+                                            <fieldset>
+                                                <legend>구분</legend>
+                                                <label class="radio">
+                                                    <input type="radio" name="row2-active-9" value="" checked="" />
+                                                    <span>합격</span>
+                                                </label>
+                                                <label class="radio">
+                                                    <input type="radio" name="row2-active-9" value="" />
+                                                    <span>불합격</span>
+                                                </label>
+                                            </fieldset>
+                                        </td>
+                                        <td><span>YYYY.MM.DD</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="check">
+                                                <input type="checkbox" name="row1-active-10" value="" checked />
+                                            </label>
+                                        </td>
+                                        <td><span>277</span></td>
+                                        <td><span>수시</span></td>
+                                        <td><span>홍길동</span></td>
+                                        <td><span class="blue-txt">합격</span></td>
+                                        <td><span>지원업무명 노출</span></td>
+                                        <td><span>희망근무지 노출</span></td>
+                                        <td>
+                                            <fieldset>
+                                                <legend>구분</legend>
+                                                <label class="radio">
+                                                    <input type="radio" name="row2-active-10" value="" checked="" />
+                                                    <span>합격</span>
+                                                </label>
+                                                <label class="radio">
+                                                    <input type="radio" name="row2-active-10" value="" />
+                                                    <span>불합격</span>
+                                                </label>
+                                            </fieldset>
+                                        </td>
                                         <td><span>YYYY.MM.DD</span></td>
                                     </tr>
                                 </tbody>
@@ -272,7 +441,12 @@
                     <section class="button-ccontainer">
                         <div class="button-content cta">
                             <div class="button-wrap">
-                                <a href="javascript:void(0);" class="btn-primary">이력서 삭제</a>
+                                <div class="btn-download-wrap">
+                                    <a href="javascript:void(0);" class="btn-secondary btn-excel">Row Data(Excel) 다운로드</a>
+                                    <a href="javascript:void(0);" class="btn-secondary btn-pdf">이력서(pdf) 다운로드</a>
+                                </div>
+                                <a href="javascript:void(0);" class="btn-primary">합불여부 저장</a>
+                                <a href="javascript:void(0);" class="btn-secondary">이력서 삭제</a>
                             </div>
                         </div>
                     </section>
