@@ -535,7 +535,7 @@ h3 {
 .list-container td fieldset { gap: 18px; margin: 4px; }
 /* 리스트 하단 구분선 */
 .info-content + .pagination-content { border-top: 1px solid var(--color-d) }
-/* 다운로드 버튼 */
+/* 좌측 버튼 그룹 */
 .left-btn-group { position: absolute; left:0; display: flex; gap: 20px }
 .left-btn-group a.btn-excel::before,
 .left-btn-group a.btn-pdf::before { content: ""; display: inline-block; width: 26px; height: 26px; margin-right: 10px; background-size: contain; background-repeat: no-repeat; }
