@@ -526,9 +526,6 @@ h3 {
 .form-wrap.multi-filter fieldset.search { align-items: end; }
 .form-wrap.multi-filter .select-bg { width: 120px; height: 40px; background: var(--white); }
 
-/** 로그 관리 **/
-#th-allcheck .check { justify-content: center; }
-
 /** 관리자 채널 대쉬보드 메인화면 **/
 .intro-container {
   width: 100%;
