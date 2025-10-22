@@ -208,7 +208,7 @@ body{
 /** ¹Î¿ø Á¢¼ö **/
 .WCC20710VS .form-group .mo-phn { display:none; }
 .WCC20710VS .form-group textarea { min-height:268px; }
-.WCC20710VS .info-list .rfrnc li { margin-top:18px; font-size:var(--font18); color:var(--color-6); }
+.WCC20710VS .info-list .rfrnc li { margin-top:18px; font-size:1rem; color:var(--color-6); }
 
 /*---------------------------------------------
     #°í°´¼¾ÅÍ
