@@ -517,6 +517,17 @@ h3 {
   margin-top: 36px;
 }
 
+.form-wrap.multi-filter { padding: 24px; border-radius: 20px; background: #f8fafc; }
+/* .form-wrap.multi-filter .filter-group fieldset + fieldset { border-left: 1px solid var(--color-d); } */
+.form-wrap.multi-filter .filter-group fieldset { gap: 20px; }
+.form-wrap.multi-filter .filter-group label.radio { padding: 0; background: transparent; }
+.le-visible { visibility: visible; position: static; margin-bottom: 20px; font-size: var(--font16); font-weight: var(--font-w-m); }
+.form-wrap.multi-filter fieldset.search { align-items: end; }
+.form-wrap.multi-filter .select-bg { width: 120px; height: 40px; background: var(--white); }
+
+/** 로그 관리 **/
+#th-allcheck .check { justify-content: center; }
+
 /** 관리자 채널 대쉬보드 메인화면 **/
 .intro-container {
   width: 100%;
