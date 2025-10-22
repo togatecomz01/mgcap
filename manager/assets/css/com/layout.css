@@ -525,6 +525,10 @@ h3 {
 .form-wrap.multi-filter .radio-tit { padding: 0 8px; margin-bottom: 14px; font-size: var(--font16); font-weight: var(--font-w-m); }
 .form-wrap.multi-filter fieldset.search { align-items: end; }
 .form-wrap.multi-filter .select-bg { width: 120px; height: 40px; background: var(--white); }
+.td-period { min-width: 458px; }
+.th-checkbox, .th-radiobtn { min-width: 150px; }
+.td-checkbox { min-width: 98px; }
+.td-radiobtn { padding: 0 20px; }
 
 /** 관리자 채널 대쉬보드 메인화면 **/
 .intro-container {
