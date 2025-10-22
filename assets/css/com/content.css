@@ -566,6 +566,9 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     .WCC20710VS .form-group:has(.mo-phn) select { flex:none; width:106px; }
     .WCC20710VS .form-group .pc-phn { display:none; }
     .WCC20710VS .form-group .mo-phn { display:block; flex:1; }
+    .WCC20710VS .form-group .mail > div { flex-wrap:wrap; }
+    .WCC20710VS .form-group .mail input { min-width:106px; }
+    .WCC20710VS .form-group .mail select { display:block; min-width:327px; }
     /*---------------------------------------------
         #∞Ì∞¥ºæ≈Õ
     ---------------------------------------------*/

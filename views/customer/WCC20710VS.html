@@ -16,7 +16,17 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Cache-Control" content="No-Cache" />
     <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico"/>
-    <link rel="stylesheet" href="../../assets/css/ui-util.css" />
+    <link rel="stylesheet" href="../../assets/css/com/default.css" />
+    <link rel="stylesheet" href="../../assets/css/com/common.css" />
+    <link rel="stylesheet" href="../../assets/css/com/style.css" />
+    <link rel="stylesheet" href="../../assets/css/com/fonts.css" />
+    <link rel="stylesheet" href="../../assets/css/com/layout.css" />
+    <link rel="stylesheet" href="../../assets/css/com/nav.css" />
+    <link rel="stylesheet" href="../../assets/css/com/input.css" />
+    <link rel="stylesheet" href="../../assets/css/com/button.css" />
+    <link rel="stylesheet" href="../../assets/css/com/tab.css" />
+    <link rel="stylesheet" href="../../assets/css/com/table.css" />
+    <link rel="stylesheet" href="../../assets/css/com/content.css" />
     <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
     <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
@@ -90,8 +100,11 @@
                                             <div>
                                                 <select id="phn-first" required="" title="">
                                                     <option value="0">010</option>
-                                                    <option value="1">017</option>
-                                                    <option value="3">019</option>
+                                                    <option value="1">011</option>
+                                                    <option value="2">016</option>
+                                                    <option value="3">017</option>
+                                                    <option value="4">018</option>
+                                                    <option value="5">019</option>
                                                 </select>
                                                 <input id="phn-second" name="phn-second" type="tel" inputmode="numeric" class="pc-phn" autocomplete="tel-local-prefix" pattern="[0-9]{3,4}" maxlength="4" aria-describedby="desc-phone" value="1234">
                                                 <input id="phn-third" name="phn-third" type="tel" inputmode="numeric" class="pc-phn" autocomplete="tel-local-suffix" pattern="[0-9]{4}" maxlength="4" aria-describedby="desc-phone" value="5678">
@@ -101,7 +114,7 @@
                                     </div><!--//form-group-->
                                     <div class="form-group">
                                         <label for="phn-first">이메일</label>
-                                        <div class="flex-row mo-column">
+                                        <div class="flex-row mo-column mail">
                                             <div>
                                                 <input id="mail-first" name="mail-first" type="text" value="abc">
                                                 <span class="ipt-hyphen">@</span>
@@ -152,11 +165,12 @@
     <!-- s: 개인정보 수집이용 팝업(fullPopup1) -->
     <div id="fullPopup1" class="layerPopup full fullPopupOn">
         <!--[D] fullPopupOn 클래스 :: 헤더 스크립트 적용중-->
-        <div class="pop-area">
+        <div class="pop-content">
             <div class="pop-header">
                 <h2 class="pop-tit">개인정보 수집&#183;이용 동의</h2>
+                <button type="button" class="btn-ico-close" data-popup-close="fullPopup1"><span class="sr-only">닫기</span></button>
             </div>
-            <div class="pop-con-wrap">
+            <div class="pop-body">
                 <h5>제1조 (목적)</h5>
                 <p>
                     이 약관은 MG캐피탈 주식회사(이하 "회사"라 합니다.)가 운영하는 모든 사이트(이하 "사이트"라 합니다.)에서 제공하는 인터넷 서비스(이하 "서비스"라
@@ -367,12 +381,11 @@
                 <p>부 칙</p>
                 <p>제1조(시행일) 본 약관은 2012년 1 월 1 일부터 시행합니다.</p>
             </div>
-            <div class="pop-btm-wrap">
-                <div class="btm-btn-area">
-                    <button type="button" class="btn btn-primary" data-popup-close="fullPopup1">확인</button>
+            <div class="pop-footer">
+                <div class="button-content">
+                    <button type="button" class="btn-pop-primary" data-popup-close="fullPopup1">확인했어요</button>
                 </div>
             </div>
-            <button type="button" name="button" class="btn btn-close right" data-popup-close="fullPopup1"><span class="sr-only">닫기</span></button>
         </div>
     </div>
     <!-- e: 개인정보 수집이용 팝업(fullPopup1) -->
