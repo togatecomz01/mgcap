@@ -9,7 +9,7 @@ body{
   --from-placeholder-color:var(--color-6);
   --form-board:var(--color-d);
   --form-height:67px;
-  --form-padding:20px 16px;
+  --form-padding:0 16px;
   --form-transition: all 0.2s ease;
   --form-active:var(--primary);
   --form-disabled:var(--color-f6);
@@ -29,7 +29,7 @@ body{
 
   --ico-noti-search:url("../../images/com/svg/ico_noti_search.svg");
   --ico-noti-reset:url("../../images/com/svg/ico_noti_reset.svg");
-
+  --ico-move: url("../../images/com/svg/ico_move.svg");
 }
 
 
@@ -46,9 +46,9 @@ input[type="email"],
 input[type="number"],
 input[type="tel"],
 input[type="search"], 
-select{ width:100%; height:var(--form-height); background:var(--form-bg); border: 1px solid var(--form-board); padding:var(--form-padding); color:var(--from-font-color); box-sizing:border-box; }
+select{ width:100%; min-height:var(--form-height); background:var(--form-bg); border: 1px solid var(--form-board); padding:var(--form-padding); color:var(--from-font-color); box-sizing:border-box; }
 textarea { width:100%; border: 1px solid var(--form-board); padding:var(--form-padding); color:var(--from-font-color); box-sizing:border-box;  }
-select {  padding-right:54px; -webkit-appearance:none; -moz-appearance:none; appearance:none; background:var(--ico-select) no-repeat right 14px center; }
+select {  padding-right:54px; -webkit-appearance:none; -moz-appearance:none; appearance:none; background:var(--ico-select) no-repeat right 14px center; line-height:var(--form-height); }
 input[type="search"] { background-image:var(--ico-search); background-size:18px; background-repeat:no-repeat; background-position:right 14px center; padding-left:40px;  }
 
 input::placeholder,
@@ -72,7 +72,8 @@ textarea:disabled { background-color:var(--form-disabled); color:var(--form-disa
 .form-group input[type="number"],
 .form-group input[type="tel"],
 .form-group input[type="search"], 
-.form-group select{ flex:1; }
+.form-group select,
+.form-group textarea{ flex:1; }
 
 label:has(input) { display:flex; align-items:center; font-size:var(--form-font-size) }
 label.check{ gap:14px; }
@@ -94,10 +95,26 @@ label input[type="radio"]:not(:checked) { border:7px solid var(--form-board);  }
 label input[type="radio"]:checked { border:7px solid var(--form-checked);  }
 label input[type="radio"]:disabled { border:7px solid var(--form-check-dissbled);  }
 
-.terms li { display:flex; align-items:center; gap:14px; margin-bottom:16px; }
-.terms input[type="checkbox"] + label { display:inline-block; position:relative; margin:0; min-height:30px; line-height:30px; color:var(--form-check-font-color); font-weight:var(--font-w-l); font-size:1rem; }
+/** 약관동의 **/
+[class*="-container"] form:has(.terms) { margin:32px 0 72px; }
+.terms li { position: relative; display:flex; align-items:center; gap:14px; padding:23px 20px; border-bottom:1px solid var(--color-d); font-size:0; }
+.terms li:first-child:not(.check-all-area),
+.terms li.check-all-area + li { border-top:1px solid var(--color-2); }
+.terms input[type="checkbox"] { display:inline-block; }
+.terms input[type="checkbox"] + label { display:inline-block; position:relative; margin:0; min-height:30px; line-height:30px; color:var(--color-45); font-weight:var(--font-w-m); font-size:1rem; }
 .terms input[type="checkbox"]:checked  + label span { font-weight:var(--font-w-m); color:var(--from-font-color); }
 
+/* 전체동의 */
+.terms li.check-all-area { margin-bottom:9px; border-bottom:0; }
+.terms li.check-all-area input[type="checkbox"]:checked { background-color:var(--primary); }
+
+/* 내용보기 버튼 */
+ul.check-box.terms li .modal { position:absolute; top:50%; right:20px; transform: translateY(-50%); }
+.form-group .modal { padding:10px 24px; background: var(--white); border: 1px solid var(--color-d); border-radius:100px; color: var(--color-6); font-size: var(--font16); font-weight:var(--font-w-m); }
+
+/* 약관동의 인포 */
+.form-content:has(.terms) .info-list .m-dot li { margin-top:18px; font-size:var(--font18); color:var(--color-6); }
+.form-content:has(.terms) .info-list .m-dot li::before { content: "·"; margin-right: 5px; }
 
 label.toggle {
     --w: 40px;
@@ -172,7 +189,22 @@ label.toggle input + span { font-size:0; }
     .form-content input[type="number"],
     .form-content input[type="tel"],
     .form-content input[type="search"],
-    .form-content select { height:48px; line-height:46px; }
+    .form-content select { height:48px; line-height:46px; background-size:18px auto; }
+
+    /** 약관동의 **/
+    [class*="-container"] form:has(.terms) { margin:32px 0 42px; }
+    .terms li { gap:6px; padding:14px 18px; }
+    .terms li input[type="checkbox"] { width:20px; height:20px; }
+    .terms input[type="checkbox"]::before { mask-size:10px auto;     --webkit-mask-size:10px auto; }
+    .terms li input[type="checkbox"] + label { width:100%; font-size:var(--font14); }
+    .terms li input[type="checkbox"] + label::after { content:""; position:absolute; top: 50%; right:0; transform:translateY(-50%); width:20px; height:20px; background-color:var(--color-2); mask-image:var(--ico-move); mask-repeat: no-repeat; mask-size:auto 13px; mask-position:center; -webkit-mask-image:var(--ico-move); -webkit-mask-repeat:no-repeat; -webkit-mask-size:auto 13px; -webkit-mask-position:center; transition:0.2s linear; }
+    .terms li.check-all-area input[type="checkbox"] + label::after { display: none; }
+  
+    .terms li .modal { display: none; }
+    .terms li.check-all-area { margin-bottom:4px; }
+
+    /* 약관동의 인포 */
+    .form-content:has(.terms) .info-list .m-dot li { margin-top:10px; font-size:var(--font14); }
 
     /* 조건검색 */
     .search-form label.radio { display:inline-flex; margin:0; padding:6px 24px 8px 0; }

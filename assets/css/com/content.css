@@ -190,15 +190,21 @@ body{
     --logo-207-01:url("../../images/content/PRT/w/ico_207_01.png"); /**민원사무편람, 개인정보필수동의서**/
     --logo-207-02:url("../../images/content/PRT/w/ico_207_02.png"); /**민원신청서, 민원취하서**/
 }
-.WCC20700VS .btn-group .btn-download { padding:20px 30px 24px 84px; }
-.WCC20700VS .btn-group .btn-download span { font-size:var(--font20); color:var(--color-2); }
-.WCC20700VS .btn-group .btn-download .txt { display:block; font-size:1rem; color:var(--color-6); }
+.WCC20700VS .btn-group .btn-download { padding:20px 30px 24px 104px; background-size:36px; background-position:left 37px center; }
 .WCC20700VS .btn-group .btn-download::after { width:32px; height:32px; mask-size:23.111px auto; -webkit-mask-size:23.111px auto; }
+.WCC20700VS .btn-group .btn-download:hover span:not(.txt) { color:var(--primary); }
+.WCC20700VS .btn-group .btn-download span { font-size:var(--font20); font-weight:var(--font-w-m); color:var(--color-2); }
+.WCC20700VS .btn-group .btn-download .txt { display:block; font-size:1rem; font-weight:var(--font-w-r); color:var(--color-6); }
 
 .WCC20700VS .btn-group .btn-download:nth-of-type(1),
-.WCC20700VS .btn-group .btn-download:nth-of-type(3) { background-image:var(--logo-207-01); background-size:36px; }
+.WCC20700VS .btn-group .btn-download:nth-of-type(3) { background-image:var(--logo-207-01); }
 .WCC20700VS .btn-group .btn-download:nth-of-type(2),
-.WCC20700VS .btn-group .btn-download:nth-of-type(4) { background-image:var(--logo-207-02); background-size:43px; }
+.WCC20700VS .btn-group .btn-download:nth-of-type(4) { background-image:var(--logo-207-02); }
+
+/** 민원 접수 **/
+.WCC20710VS .form-group .mo-phn { display:none; }
+.WCC20710VS .form-group textarea { min-height:268px; }
+.WCC20710VS .info-list .rfrnc li { margin-top:18px; font-size:var(--font18); color:var(--color-6); }
 
 /*---------------------------------------------
     #고객센터
@@ -539,7 +545,18 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     .WCU11000VQ .process-content li .step + div:has(em) { padding:0; }
     .WCU11000VQ .text-list li { padding:0; margin:0; background-color:transparent; }
 
+    /** 민원처리안내 **/
+    .WCC20700VS .btn-group .btn-download { padding:20px 20px 20px 80px; }
+    .WCC20700VS .btn-group .btn-download:nth-child(odd),
+    .WCC20700VS .btn-group .btn-download:nth-child(even) { width:100%; background:linear-gradient(to right, var(--primary) 0 60px, var(--white) 60px 100%); }
+    .WCC20700VS .btn-group .btn-download::after { width:24px; height:24px; }
+    .WCC20700VS .btn-group .btn-download .txt { display:none; }
 
+    /** 민원 접수 **/
+    .WCC20710VS .form-group textarea { min-height:192px; }
+    .WCC20710VS .form-group:has(.mo-phn) select { flex:none; width:106px; }
+    .WCC20710VS .form-group .pc-phn { display:none; }
+    .WCC20710VS .form-group .mo-phn { display:block; flex:1; }
     /*---------------------------------------------
         #고객센터
     ---------------------------------------------*/
