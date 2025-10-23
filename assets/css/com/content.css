@@ -457,16 +457,26 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 /* 회사소개 - 성희롱신고센터 (WCA90100VQ) */
 .WCA90100VQ strong+ol {margin-top: 18px;}
 
-/* 회사소개 - 공시정보 (WCA50100VQ) */
+/* 회사소개 - 공시정보 (WCA50100VQ) + 신용평가(WCA50300VQ) */
 .WCA50100VQ { --logo-cst-14:url("../../images/content/dart.png"); /**DART 전자공시시스템**/ }
 /* (table.css) 공시정보 페이지에 tfoot의 컨텐츠가 1개가 아니라 2개라 적용이 안되어 따로 정리  */
 .WCA50100VQ .table-content table tbody .sum  { font-weight:var(--font-w-m); color:var(--white); background-color:var(--primary); }
 .WCA50100VQ .table-content th.sum ~ td {background-color: #EDF9FF;}
-.WCA50100VQ .table-titcap { display: flex; justify-content: space-between; align-items:center; }
-.WCA50100VQ .table-mobile {display: none;}
-.WCA50100VQ .table-desktop {display: block;}
+.WCA50100VQ .table-titcap, .WCA50300VQ .table-titcap { display: flex; justify-content: space-between; align-items:center; }
+.WCA50100VQ .table-mobile, .WCA50300VQ .table-mobile {display: none;}
 .WCA50100VQ .table-desktop table + p.caption { margin-top: 16px; margin-bottom: 72px; }
 .WCA50100VQ .text-group .btn-group.link1 .btn-link:first-of-type { background-image:var(--logo-cst-14); }
+
+.WCA50300VQ .table-group {margin-bottom: 72px;}
+.WCA50300VQ .table-group:last-child {margin-bottom: 0;}
+/* 회사소개 - 채용공고(WCR50100VQ) */
+.WCR50100VQ .table-info {margin-bottom: 12px;}
+.WCR50100VQ .total-count {font-size: 1rem; color: var(--color-45);}
+.WCR50100VQ strong {color: var(--primary);}
+.WCR50100VQ td.title {display: flex; align-items: center;}
+.WCR50100VQ td.title::before {display: inline-block; min-width: 80px; text-align: center; margin-right: 12px; padding: 8px 16px; border: 1px solid; border-radius: 100px; font-size: 0.875rem; box-sizing: border-box; }
+.WCR50100VQ td.title.status-ing::before {content: '진행중'; border-color: var(--primary); color: var(--primary);}
+.WCR50100VQ td.title.status-closed::before {content: '마감'; border-color: var(--error); color: var(--error);}
 /*---------------------------------------------
     #인증센터, MY MG, 소비자보호 공통
 ---------------------------------------------*/
@@ -815,15 +825,27 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     .WCA60300VQ .no-results .icon {width: 80px; height: 67px;}
     .WCA60300VQ .no-results p { font-size: var(--font20);}
 
-    /* 회사소개 - 공시정보 (WCA50100VQ) */
-    .WCA50100VQ .caption {padding-top: 0;}
+    /* 회사소개 - 공시정보 (WCA50100VQ) + WCA50300VQ(신용평가) */ 
+    .WCA50100VQ .caption, .WCA50300VQ .caption {padding-top: 0;} 
     .WCA50100VQ thead {display: none;}
-    .WCA50100VQ .table-desktop {display: none;}
-    .WCA50100VQ .table-mobile {display: block;}
-    .WCA50100VQ .tab-content .tab-panel:not(.active) {display: none;}
-    .WCA50100VQ .tab-content .tab-panel.active {display: block;}
-    .WCA50100VQ .tab-select-mobile .se-select select{color: var(--color-45); border: 1px solid var(--form-board); border-radius: 100px; margin-bottom: 24px; height: 48px; line-height: 1;}
-    .WCA50100VQ .tab-select-mobile .se-btn {display: none;}
+    .WCA50100VQ .table-mobile,
+    .WCA50300VQ .table-mobile {display: block;}
+    .WCA50100VQ .table-desktop,
+    .WCA50300VQ .table-desktop {display: none;}
+    .WCA50100VQ .tab-content .tab-panel:not(.active),
+    .WCA50300VQ .tab-content .tab-panel:not(.active) {display: none;}
+    .WCA50100VQ .tab-content .tab-panel.active,
+    .WCA50300VQ .tab-content .tab-panel.active { display: block; }
+    .WCA50100VQ .tab-select-mobile .se-select select,
+    .WCA50300VQ .tab-select-mobile .se-select select {color: var(--color-45); border: 1px solid var(--form-board); border-radius: 100px; margin-bottom: 24px; height: 48px; line-height: 1;}
+    .WCA50100VQ .tab-select-mobile .se-btn, 
+    .WCA50300VQ .tab-select-mobile .se-btn {display: none;}
+
+    /* 회사소개 - 신용평가(WCA50300VQ) */
+    .WCA50300VQ .table-group {margin-bottom: 42px;}
+    /* 회사소개 - 채용공고 */
+    .WCR50100VQ .mo-list td.title::before { display: block; width: fit-content; margin-bottom: 10px; }
+    
     /*---------------------------------------------
     #MY MG
     ---------------------------------------------*/
