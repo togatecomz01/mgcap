@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>로그인&gt;홈</title>
+
+    <meta name="keywords" content="MG캐피탈" />
+    <meta name="copyright" content="copyrights 2025 MG캐피탈" />
+    <meta name="viewport" content="width=device-width" />
+    <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="No-Cache" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico"/>
+    <link rel="stylesheet" href="../../assets/css/com/default.css" />
+    <link rel="stylesheet" href="../../assets/css/com/common.css" />
+    <link rel="stylesheet" href="../../assets/css/com/style.css" />
+    <link rel="stylesheet" href="../../assets/css/com/fonts.css" />
+    <link rel="stylesheet" href="../../assets/css/com/layout.css" />
+    <link rel="stylesheet" href="../../assets/css/com/nav.css" />
+    <link rel="stylesheet" href="../../assets/css/com/input.css" />
+    <link rel="stylesheet" href="../../assets/css/com/button.css" />
+    <link rel="stylesheet" href="../../assets/css/com/tab.css" />
+    <link rel="stylesheet" href="../../assets/css/com/table.css" />
+    <link rel="stylesheet" href="../../assets/css/com/content.css" />
+    <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+    <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+    <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
+    <script src="../../assets/js/include.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div data-include-path="../../views/COMMON/header.html"></div>
+        <div class="bodyWrap">
+            <main class="contentWrap">
+                <nav class="location-container">
+                    <ol class="breadcrumb">
+                        <li><span class="home">홈</span></li>
+                        <li><span>로그인</span></li>
+                    </ol>
+                </nav>
+                <section class="visual-container">
+                    <h2>로그인</h2>
+                </section>
+                <section class="page-container">
+                    <div class="tab-container jsTab">
+                        <nav class="tab-list depth1">
+                            <button type="button" class="tab-item active" data-tab="tab2-1" title="선택됨" aria-selected="true">공동인증서</button>
+                            <button type="button" class="tab-item" data-tab="tab2-2" aria-selected="false">금융인증서</button>
+                            <button type="button" class="tab-item" data-tab="tab2-3" aria-selected="false">아이핀(i-Pin) 인증</button>
+                            <button type="button" class="tab-item" data-tab="tab2-4" aria-selected="false">민간(사설) 인증서</button>
+                        </nav>
+                        <div class="tab-content">
+                            <div id="tab2-1" class="tab-panel" aria-hidden="false">
+                                <form>
+                                    <fieldset class="form-content">
+                                        <legend>공동인증서 로그인</legend>
+                                        <div class="form-wrap login-form">
+                                            <div class="group">
+                                                <div class="form-group">
+                                                    <label class="radio">
+                                                        <span>동의</span>
+                                                        <input type="radio" name="row1-active" value="" checked>
+                                                    </label>
+                                                    <label class="radio">
+                                                        <span>거절</span>
+                                                        <input type="radio" name="row1-active" value="">
+                                                    </label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="toggle">
+                                                        <input type="checkbox" name="row3-active" title="체크" value="" checked="">
+                                                        <span>개인</span>
+                                                        <span>사업자</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div><!--//form-wrap-->
+                                    </fieldset>
+                                </form>
+                                <div class="text-group">
+                                    <p class="caption">기준일 : 2025-09-22 / 단위: 원</p>
+                                    <div class="table-content">
+                                        <table class="mo-s">
+                                            <caption>중도상환 조회 목록표(번호, 구분, 실행번호, 상품명, 실행일, 실행금액, 입금금액, 상환일 포함)</caption>
+                                            <colgroup>
+                                                <col style="width:auto">
+                                                <col style="width:13%">
+                                                <col style="width:13%">
+                                                <col style="width:13%">
+                                                <col style="width:13%">
+                                                <col style="width:13%">
+                                                <col style="width:13%">
+                                                <col style="width:13%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">번호</th>
+                                                    <th scope="col">구분</th>
+                                                    <th scope="col">실행번호</th>
+                                                    <th scope="col">상품명</th>
+                                                    <th scope="col">실행일</th>
+                                                    <th scope="col">실행금액</th>
+                                                    <th scope="col">입금금액</th>
+                                                    <th scope="col">상환일</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="8">실행번호를 선택 후 조회하여주세요.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab2-2" class="tab-panel" aria-hidden="false">
+                                <div class="text-group">
+                                    <h3>중도상환 신청 목록</h3>
+                                </div>
+                                <form>
+                                    <fieldset class="form-content">
+                                        <legend>중도상환 신청 조회</legend>
+                                        <div class="form-wrap search-form">
+                                            <div class="group">
+                                                <div class="form-group">
+                                                    <label>상품번호</label>
+                                                    <select required="" title="">
+                                                        <option value="" hidden="">상품명 선택</option>
+                                                        <option value="0">상품명</option>
+                                                        <option value="1">상품명</option>
+                                                        <option value="2">상품명</option>
+                                                        <option value="3">상품명</option>
+                                                        <option value="4">상품명</option>
+                                                        <option value="5">상품명</option>
+                                                    </select>
+                                                    <label>실행번호 선택</label>
+                                                    <select required="" title="">
+                                                        <option value="" hidden="">선택</option>
+                                                        <option value="0">실행번호</option>
+                                                        <option value="1">실행번호</option>
+                                                        <option value="2">실행번호</option>
+                                                        <option value="3">실행번호</option>
+                                                        <option value="4">실행번호</option>
+                                                        <option value="5">실행번호</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <button class="btn-form">조회</button>
+                                        </div><!--//form-wrap-->
+                                    </fieldset>
+                                    <div class="info-content">
+                                        <div class="info-list">
+                                            <ul class="m-dot">
+                                                <li>전액 중도상환만 신청 가능합니다.</li>
+                                                <li>해당 금액은 영업일 당일 기준으로 계산된 금액입니다.</li>
+                                                <li>주말과 휴일은 신청하실 수 없습니다.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="btn-content cta">
+                                    <div class="button-group">
+                                        <a herf="javascript:void(0);" class="btn-primary">상담신청</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab2-3" class="tab-panel" aria-hidden="false"></div>
+                            <div id="tab2-4" class="tab-panel" aria-hidden="false"></div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <div data-include-path="../../views/COMMON/footer.html"></div>
+    </div>
+</body>
+</html>
