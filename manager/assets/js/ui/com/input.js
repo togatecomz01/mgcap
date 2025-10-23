@@ -144,6 +144,34 @@
         $thCheck.prop('checked', false);
       });
     }
+
+    /*---------------------------
+      체크박스 전체선택,해제
+    ---------------------------*/
+    function checktoggle() {
+        var $chkAllLabel = $('label[for="chkAllToggle"]');
+        var $chkAll = $('#chkAllToggle');
+        var $thCheck = $('tbody td input[type="checkbox"]');
+
+      if (!$chkAllLabel.length) {
+          console.log('전체 해제가 없습니다');
+          return;
+      }
+
+      // 전체선택,해제 토글
+      $chkAll.off('change').on('change', function () {
+        var isChecked = $(this).is(':checked');
+        $thCheck.prop('checked', isChecked);
+      });
+      // 개별 체크박스에 따라 전체선택,해제
+      $thCheck.off('change').on('change', function () {
+        var total = $thCheck.length;
+        var checked = $thCheck.filter(':checked').length;
+
+        $chkAll.prop('checked', total === checked);
+      });
+    }
+
     /*---------------------------
       DOM Ready
     ---------------------------*/
@@ -161,7 +189,10 @@
 
       // 체크박스 전체해제 초기화
       uncheck();
-  
+
+      // 체크박스 전체선택,해제 초기화
+      checktoggle();
+
       // 동적 추가 대응
       $(document).on('focusin', 'input[type="text"]', function () {
         bindClearOnce($(this));
