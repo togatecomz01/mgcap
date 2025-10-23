@@ -30,8 +30,6 @@
     function loadUIComponents() {
         var components = [
             'accordion.js',
-            'datepicker.js', 
-            'fake_select.js',
             'input.js',
             'layout.js',
             'popup.js',
