@@ -213,6 +213,18 @@ body{
 .WCC20710VS .info-list .rfrnc li,
 .WCC20720VS .info-list .rfrnc li { margin-top:18px; font-size:1rem; color:var(--color-6); }
 
+/* 팝업 */
+.WCC20710VS .text-group > .tit,
+.WCC20720VS .text-group > .tit { font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-45); }
+.WCC20710VS .text-group .tit-f-square,
+.WCC20720VS .text-group .tit-f-square { font-weight:var(--font-w-m); }
+.WCC20710VS .text-group .tit-f-square:before,
+.WCC20720VS .text-group .tit-f-square:before { content:"■"; margin-right:2px; }
+.WCC20710VS .text-group p,
+.WCC20710VS .text-group .text-list li span,
+.WCC20720VS .text-group p,
+.WCC20720VS .text-group .text-list li span { color:var(--color-6); }
+
 /** 고객(신용)정보 고객권리 신청 정보입력 **/
 .WCC80100VS fieldset { margin-bottom:72px; }
 .WCC80100VS fieldset + .table-content { padding-top:52px; border-top:1px solid var(--color-d); }
