@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>고객(신용)정보 고객권리 신청&gt;고객의 목소리&gt;소비자보호&gt;홈</title>
+
+    <meta name="keywords" content="MG캐피탈" />
+    <meta name="copyright" content="copyrights 2025 MG캐피탈" />
+    <meta name="viewport" content="width=device-width" />
+    <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="No-Cache" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico"/>
+    <link rel="stylesheet" href="../../assets/css/com/default.css" />
+    <link rel="stylesheet" href="../../assets/css/com/common.css" />
+    <link rel="stylesheet" href="../../assets/css/com/style.css" />
+    <link rel="stylesheet" href="../../assets/css/com/fonts.css" />
+    <link rel="stylesheet" href="../../assets/css/com/layout.css" />
+    <link rel="stylesheet" href="../../assets/css/com/nav.css" />
+    <link rel="stylesheet" href="../../assets/css/com/input.css" />
+    <link rel="stylesheet" href="../../assets/css/com/button.css" />
+    <link rel="stylesheet" href="../../assets/css/com/tab.css" />
+    <link rel="stylesheet" href="../../assets/css/com/table.css" />
+    <link rel="stylesheet" href="../../assets/css/com/content.css" />
+    <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+    <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+    <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
+    <script src="../../assets/js/include.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div data-include-path="../COMMON/header.html"></div>
+        <div class="bodyWrap">
+            <main class="contentWrap">
+                <nav class="location-container">
+                    <ol class="breadcrumb">
+                        <li><span class="home">홈</span></li>
+                        <li><span>소비자보호</span></li>
+                        <li><span>고객의 목소리</span></li>
+                        <li><span>고객(신용)정보 고객권리 신청</span></li>
+                    </ol>
+                </nav>
+                <section class="visual-container">
+                    <h2>고객(신용)정보 고객권리 신청</h2>
+                </section>
+                <section class="page-container WCC80100VS">
+                    <div class="form-container">
+                        <div class="text-content">
+                            <div class="text-group">
+                                <h3>고객(신용)정보 고객권리 신청 정보입력</h3>
+                            </div>
+                        </div>
+                        <form>
+                            <fieldset class="form-content">
+                                <legend>고객(신용)정보 고객권리 신청 정보입력 입력폼</legend>
+                                <div class="form-wrap">
+                                    <div class="form-group">
+                                        <label for="mg-name">고객명</label>
+                                        <input id="mg-name" type="text" name="text" value="고객명 노출" disabled>
+                                    </div><!--//form-group-->
+                                    <div class="form-group">
+                                        <label for="mg-name">생년월일</label>
+                                        <input id="mg-name" type="text" name="text" value="YYYY.MM.DD" disabled>
+                                    </div><!--//form-group-->
+                                </div><!--//form-wrap-->
+
+                                <!-- radio-tab -->
+                                <div class="form-wrap tab-list">
+                                    <p class="mo-tit">구분선택</p>
+                                    <div class="form-group">
+                                        <label class="radio" data-tab="radio-tab01" class="tab-item">
+                                            <input type="radio" name="use" value="" checked="">
+                                            <span>이메일</span>
+                                        </label>
+                                        <label class="radio" data-tab="radio-tab02" class="tab-item">
+                                            <input type="radio" name="use" value="">
+                                            <span>우편</span>
+                                        </label>
+                                        <label class="radio" data-tab="radio-tab03" class="tab-item">
+                                            <input type="radio" name="use" value="">
+                                            <span>FAX</span>
+                                        </label>
+                                    </div>
+                                </div><!--//form-wrap-->
+                                <div class="tab-content">
+                                    <!-- 이메일 -->
+                                    <div class="form-wrap" id="radio-tab01">
+                                        <div class="form-group tab-panel">
+                                            <label for="phn-first">휴대전화번호</label>
+                                            <div class="flex-row mo-column">
+                                                <div>
+                                                    <select id="phn-first" required="" title="">
+                                                        <option value="0">010</option>
+                                                        <option value="1">011</option>
+                                                        <option value="2">016</option>
+                                                        <option value="3">017</option>
+                                                        <option value="4">018</option>
+                                                        <option value="5">019</option>
+                                                    </select>
+                                                    <input id="phn-second" name="phn-second" type="tel" inputmode="numeric" maxlength="8" aria-describedby="desc-phone" placeholder="숫자만 입력해주세요">
+                                                </div>
+                                                <!--[D]:공통 - 알럿참고 -->
+                                                <button class="btn-form" data-modal-open="modal">휴대폰인증</button>
+                                            </div><!--//flex-row-->
+                                        </div><!--//form-group-->
+                                        <div class="form-group tab-panel">
+                                            <label for="phn-first">이메일</label>
+                                            <div class="flex-row mo-column mail">
+                                                <div>
+                                                    <input id="mail-first" name="mail-first" type="text" value="abc">
+                                                    <span class="ipt-hyphen">@</span>
+                                                    <input id="mail-second" name="mail-second" type="text" value="gmail.com">
+                                                    <select id="mail-third" required="" title="">
+                                                        <option value="0">gmail.com</option>
+                                                        <option value="1">naver.com</option>
+                                                        <option value="3">hanmail.net</option>
+                                                        <option value="4">daum.net</option>
+                                                        <option value="5">nate.com</option>
+                                                    </select>
+                                                </div>
+                                            </div><!--//flex-row-->
+                                        </div><!--//form-group-->
+                                    </div>
+                                    <!-- 우편 -->
+                                    <div class="form-wrap" id="radio-tab02">
+                                        <div class="form-group tab-panel">
+                                            <label for="phn-first">휴대전화번호</label>
+                                            <div class="flex-row mo-column">
+                                                <div>
+                                                    <select id="phn-first" required="" title="">
+                                                        <option value="0">010</option>
+                                                        <option value="1">011</option>
+                                                        <option value="2">016</option>
+                                                        <option value="3">017</option>
+                                                        <option value="4">018</option>
+                                                        <option value="5">019</option>
+                                                    </select>
+                                                    <input id="phn-second" name="phn-second" type="tel" inputmode="numeric" maxlength="8" aria-describedby="desc-phone" placeholder="숫자만 입력해주세요">
+                                                </div>
+                                                <!--[D]:공통 - 알럿참고 -->
+                                                <button class="btn-form" data-modal-open="modal">휴대폰인증</button>
+                                            </div><!--//flex-row-->
+                                        </div><!--//form-group-->
+                                        <div class="form-group tab-panel address">
+                                            <label for="phn-first">주소</label>
+                                            <div class="flex-row">
+                                                <input id="address" type="text" name="address" value="06504" disabled/>
+                                                <!--[D]:공통 - 알럿참고 -->
+                                                <button class="btn-form" data-modal-open="modal">우편번호 검색</button>
+                                            </div>
+                                            <input id="address" type="text" name="address" value="서울 강남구 도산대로 306" disabled/>
+                                            <input id="detailed-address" type="text" class="address" name="detailed-address" placeholder="상세주소를 입력하세요"/>
+                                        </div><!--//form-group-->
+                                    </div>
+                                    <!-- 팩스 -->
+                                    <div class="form-wrap" id="radio-tab03">
+                                        <div class="form-group tab-panel">
+                                            <label for="phn-first">휴대전화번호</label>
+                                            <div class="flex-row mo-column">
+                                                <div>
+                                                    <select id="phn-first" required="" title="">
+                                                        <option value="0">010</option>
+                                                        <option value="1">011</option>
+                                                        <option value="2">016</option>
+                                                        <option value="3">017</option>
+                                                        <option value="4">018</option>
+                                                        <option value="5">019</option>
+                                                    </select>
+                                                    <input id="phn-second" name="phn-second" type="tel" inputmode="numeric" maxlength="8" aria-describedby="desc-phone" placeholder="숫자만 입력해주세요">
+                                                </div>
+                                                <!--[D]:공통 - 알럿참고 -->
+                                                <button class="btn-form" data-modal-open="modal">휴대폰인증</button>
+                                            </div><!--//flex-row-->
+                                        </div><!--//form-group-->
+                                        <div class="form-group tab-panel">
+                                            <label for="phn-first">팩스번호</label>
+                                            <div class="flex-row mo-column">
+                                                <div>
+                                                    <select id="phn-first" required="" title="">
+                                                        <option value="0">선택</option>
+                                                        <option value="1">02</option>
+                                                        <option value="2">016</option>
+                                                        <option value="3">017</option>
+                                                        <option value="4">018</option>
+                                                        <option value="5">019</option>
+                                                    </select>
+                                                    <input id="phn-second" name="phn-second" type="tel" inputmode="numeric" class="pc-phn" autocomplete="tel-local-prefix" pattern="[0-9]{3,4}" maxlength="4" aria-describedby="desc-phone" value="1234">
+                                                    <input id="phn-third" name="phn-third" type="tel" inputmode="numeric" class="pc-phn" autocomplete="tel-local-suffix" pattern="[0-9]{4}" maxlength="4" aria-describedby="desc-phone" value="5678">
+                                                </div>
+                                            </div><!--//flex-row-->
+                                        </div><!--//form-group-->
+                                    </div>
+                                </div>
+                                <!--//radio-tab -->
+                            </fieldset>
+                            <div class="table-content">
+                                <table>
+                                    <caption>서류 업로드표(첨부파일, 파일설명 포함)</caption>
+                                    <colgroup>
+                                        <col style="width:30%">
+                                        <col style="width:70%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" rowspan="10">요구내용</th>
+                                            <td>
+                                                <label class="check">
+                                                    <input type="checkbox" name="row1-active" value="" checked="">
+                                                    <span>개인(신용)정보 수집이용 및 제공 내역 통지 요청</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="check">
+                                                    <input type="checkbox" name="row2-active" value="" checked="">
+                                                    <span>개인(신용)정보 처리 정지 요청</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="check">
+                                                    <input type="checkbox" name="row3-active" value="">
+                                                    <span>개인(신용)정보 제 3자 제공현황 및 마케팅 목적의 연락중지</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="check">
+                                                    <input type="checkbox" name="row4-active" value="" >
+                                                    <span>개인(신용)정보처리에 동의한 사실 및 내용 조회 요청</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="check">
+                                                    <input type="checkbox" name="row5-active" value="">
+                                                    <span>개인(신용)정보 제공 동의 철회 및 연락중지 요청</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="check">
+                                                    <input type="checkbox" name="row6-active" value="">
+                                                    <span>개인(신용)정보 열람 및 정정청구 요청</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="check">
+                                                    <input type="checkbox" name="row7-active" value="">
+                                                    <span>개인(신용)정보 상거래 거절 근거 신용정보, 고지요구 요청</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="check">
+                                                    <input type="checkbox" name="row8-active" value="">
+                                                    <span>개인(신용)정보 채권자 변동정보 교부, 열람 요청</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="note-group">
+                                    <p><span class="success">「개인정보 보호법」</span>제 41조 제 1항, 제43조 제1항 또는 제44조 제1항 및<br><span class="success">「신용정보의 이용 및 보호에 관한 법률」</span>제 33조의 2, 제 35조 제36조, 36조의 2, 제37조, 제38조 및 제38조의 2, 38조의 3에 따라 위와 같이 요구합니다.</p>
+                                    <p class="date">2025년 9월 23일</p>
+                                </div>
+                            </div>
+                            <div class="btn-content cta">
+                                <div class="button-group">
+                                    <a href="javascript:void(0);" class="btn-primary">작성 완료</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <div data-include-path="../../views/COMMON/footer.html"></div>
+    </div>
+</body>
+</html>

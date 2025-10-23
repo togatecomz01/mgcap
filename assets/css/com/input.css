@@ -170,6 +170,10 @@ label.toggle input + span { font-size:0; }
 .noti-search input[type="search"] { background-image:var(--ico-noti-search); background-size:24px; }
 /** 공지사항 검색 **/
 
+/** 라디오 탭 **/
+.tab-content > .form-wrap > .form-group > .flex-row select { max-width:178px; }
+.tab-content > .form-wrap > .form-group.address > input { margin-top:10px; }
+
 @media (max-width:767px) {
     body{
         --form-label-font-size:var(--font16);

@@ -131,6 +131,39 @@ $(document).ready(function(){
     });
 
     /**
+     *   RADIO TAB 2025.10.22 추가
+    **/
+    $('.radio[data-tab]').on('change', 'input[type="radio"]', function() {
+        if ($(this).is(':checked')) {
+            var $radioLabel = $(this).closest('.radio[data-tab]');
+            var targetId = $radioLabel.attr('data-tab');
+            var $targetPanel = $('#' + targetId);
+            
+            // 같은 그룹의 모든 패널 숨기기
+            var radioName = $(this).attr('name');
+            $('input[name="' + radioName + '"]').closest('.radio[data-tab]').each(function() {
+                var panelId = $(this).attr('data-tab');
+                $('#' + panelId).hide();
+            });
+            
+            // 선택된 패널만 표시
+            $targetPanel.show();
+        }
+    });
+
+    // 초기 로드 시 모든 패널 숨기기
+    $('.radio[data-tab]').each(function() {
+        var panelId = $(this).attr('data-tab');
+        $('#' + panelId).hide();
+    });
+
+    // 초기 로드 시 체크된 라디오의 패널만 표시
+    $('.radio[data-tab] input[type="radio"]:checked').each(function() {
+        var targetId = $(this).closest('.radio[data-tab]').attr('data-tab');
+        $('#' + targetId).show();
+    });
+    
+    /**
      *   TAB Swiper - IE11 호환성 처리
     **/
     var tabSwiperL = (function () {

@@ -27,6 +27,17 @@ body {
 .tab-container .tab-list.depth1 .tab-item:focus-visible { border-bottom:0; border:2px solid var(--tab-active); z-index:2; background:var(--focus-bg); }
 .tab-container .tab-list.depth2 .tab-item:focus-visible { border-bottom:0; outline:2px solid var(--tab-active); outline-offset:2px; z-index:2;  }
 
+/** ╤С╣П©ю ег **/
+.form-wrap.tab-list { display:block; }
+.form-wrap.tab-list .mo-tit { margin-bottom:16px; font-size:var(--font20); font-weight:var(--font-w-m); }
+.form-wrap.tab-list .form-group { display:flex; gap:24px; }
+.form-wrap.tab-list .form-group label.radio { gap:14px; padding:0; }
+
+.tab-content > .form-wrap { display:flex; gap:40px; }
+.tab-content > .form-wrap > .form-group { flex:1; }
+.tab-content > .form-wrap > .form-group > .flex-row > div:only-of-type { flex:1; width:100%; }
+.tab-content > .form-wrap > .form-group > .flex-row,
+.tab-content > .form-wrap > .form-group > .flex-row > div { display:flex; gap:10px; }
 
 @media (max-width: 767px) {
 
