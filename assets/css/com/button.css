@@ -120,9 +120,9 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
 .pagination-content button, 
 .pagination-content a { min-width:40px; font-size:var(--font18); font-weight:var(--font-w-r); color:var(--color-45); }
 .pagination-content .active { color:var(--primary); font-weight:var(--font-w-b); }
-.pagination-content div { text-align:center; }
+.pagination-content div { padding:0 8px; text-align:center; }
 .pagination-content .first,
-.pagination-content .last {  flex:0 0 64px; display:flex; gap:16px; }
+.pagination-content .last {  flex:0 0 64px; display:flex; gap:8px; }
 .pagination-content .first { left:20px; }
 .pagination-content .last { right:20px; }
 .pagination-content .first *,

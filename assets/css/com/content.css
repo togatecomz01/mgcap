@@ -265,6 +265,53 @@ body{
 /*---------------------------------------------
     #고객센터
 ---------------------------------------------*/
+/******자주묻는 질문**/
+.WCC10100VQ {
+    --qna-padding:42px 28px;
+    --qna-icon:var(--ico-arrow);
+    --qna-q:url("../../images/com/svg/txt_Q.svg");
+    --qna-a:url("../../images/com/svg/txt_A.svg");
+    --qna-gap:24px;
+    --tit-font-size:var(--font22);
+    --txt-font-size:var(--font20);
+    --ico-q:url("../../images/com/svg/ico_accordin.svg");
+    --ico-q-position:28px;
+}
+.WCC10100VQ .qna-list { border-top:3px solid var(--color-3);  }
+.WCC10100VQ .qna-list dt,
+.WCC10100VQ .qna-list dd { border-bottom:1px solid var(--color-d); }
+.WCC10100VQ .qna-list dt button,
+.WCC10100VQ .qna-list dd.cont { display:flex; align-items:center; gap:var(--qna-gap); width:100%; padding:var(--qna-padding); font-size:var(--tit-font-size); text-align:left; }
+.WCC10100VQ .qna-list dt button span,
+.WCC10100VQ .qna-list dd.cont span  { display:block; font-size:0; }
+.WCC10100VQ .qna-list dt button span::before,
+.WCC10100VQ .qna-list dd.cont span::before {  content:""; display:block; width:40px; height:40px; font-size:0; background-color:var(--color-d); }
+.WCC10100VQ .qna-list dt button span::before {
+    mask-image:var(--qna-q); mask-repeat:no-repeat; mask-size:28px auto; mask-position:center; -webkit-mask-image:var(--qna-q); -webkit-mask-repeat:no-repeat; -webkit-mask-size:28px auto; -webkit-mask-position:center; 
+}
+.WCC10100VQ .qna-list dt button { padding-right:50px; color:var(--color-45); }
+.WCC10100VQ .qna-list dt button::after { content:""; position:absolute; top:50%; right:var(--ico-q-position); transform:translate(0, -50%); display:block; width:40px; height:40px; background-color:var(--color-d); transition: 0.2s linear;
+    mask-image:var(--ico-q); mask-repeat:no-repeat; mask-size:28px auto; mask-position:center; -webkit-mask-image:var(--ico-q); -webkit-mask-repeat:no-repeat; -webkit-mask-size:28px auto; -webkit-mask-position:center; 
+}
+
+.WCC10100VQ .qna-list dt button:hover { color:var(--color-2); border:1px solid var(--primary); }
+.WCC10100VQ .qna-list dt button:hover::after,
+.WCC10100VQ .qna-list dt button:hover span::before { background-color:var(--color-2); }
+.WCC10100VQ .qna-list dd.cont { display:none; }
+.WCC10100VQ .qna-list dd.cont div { font-size:var(--txt-font-size); }
+.WCC10100VQ .qna-list dd.cont span::before {
+    mask-image:var(--qna-a); mask-repeat:no-repeat; mask-size:auto 40px; mask-position:center; -webkit-mask-image:var(--qna-a); -webkit-mask-repeat:no-repeat; -webkit-mask-size:28px auto; -webkit-mask-position:center; 
+}
+
+.WCC10100VQ .accordion-item.on dt button { color:var(--primary); font-weight:var(--font-w-m); }
+.WCC10100VQ .accordion-item.on dt button span::before,
+.WCC10100VQ .accordion-item.on dt button::after { background-color:var(--primary); }
+.WCC10100VQ .accordion-item.on dt button::after { transform:translate(0, -50%) rotate(180deg);  }
+
+.WCC10100VQ .accordion-item.on dd.cont {  display:flex; background-color:var(--color-f6); }
+.WCC10100VQ .accordion-item.on dd.cont span::before { background-color:var(--color-2); }
+
+
 /******고객센터-채무조정안내**/
 .WCC601500VQ .sub-process-content.bo-none ul { padding: 0; border: 0; }
 .WCC601500VQ .sub-process-content ul { flex-wrap: wrap; gap: 24px 0; }
@@ -661,6 +708,34 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     /*---------------------------------------------
         #고객센터
     ---------------------------------------------*/
+     /****** 자주묻는 질문 **/
+    .WCC10100VQ {
+        --qna-padding:24px 0;
+        --qna-gap:10px;
+        --tit-font-size:var(--font18);
+        --txt-font-size:var(--font18);
+        --ico-q-position:0;
+    }
+    .WCC10100VQ .qna-list { border-top:1px solid var(--color-3);  }
+    .WCC10100VQ .qna-list dt button,
+    .WCC10100VQ .qna-list dd.cont { align-items:flex-start; }
+    .WCC10100VQ .qna-list dt button span::before,
+    .WCC10100VQ .qna-list dd.cont span::before { width:24px; height:24px; }
+    .WCC10100VQ .qna-list dt button span,
+    .WCC10100VQ .qna-list dd.cont span { padding-top:5px; }
+    .WCC10100VQ .qna-list dt button span::before { mask-size:17px auto;  -webkit-mask-size:17px auto; }
+    .WCC10100VQ .qna-list dt button { padding-right:36px; color:var(--color-45); }
+    .WCC10100VQ .qna-list dt button::after {  width:24px; height:24px;  mask-size:9px auto; -webkit-mask-size:16px auto; }
+
+    .WCC10100VQ .qna-list dt button span::before,
+    .WCC10100VQ .qna-list dd.cont span::before { mask-size:16px auto; -webkit-mask-size:16px auto; }
+    .WCC10100VQ .qna-list dt button::after { top:24px; transform:translate(0, 0);  }
+    .WCC10100VQ .accordion-item.on dt button::after { top:24px; transform:translate(0, 0) rotate(180deg);  }
+
+
+
+
+
     /****** 고객센터-업무위탁 및 제 3자 제공현황 **/
     .WCC60500VQ .table-group .mo tbody tr {display: grid; grid-template-columns: 1fr;}
     .WCC60500VQ .table-group .mo tbody tr th.th-t {border-right: none; background-color: var(--table-th); font-weight: var(--font-w-b);}

@@ -165,7 +165,7 @@ label.toggle input + span { font-size:0; }
 .noti-search input[type="tel"],
 .noti-search input[type="search"],
 .noti-search input[type="date"],
-.noti-search select { flex:0 0 360px; padding:0 20px; width:306px; min-height:48px; line-height:48px; border-radius:100px; font-size:var(--font16); }
+.noti-search select { flex:0 0 360px; padding:0 20px; width:306px; height:48px; max-height:48px; line-height:48px; border-radius:100px; font-size:var(--font16); }
 .noti-search select { flex:0 0 136px; width:136px; }
 .noti-search input[type="search"] { background-image:var(--ico-noti-search); background-size:24px; }
 /** 공지사항 검색 **/
