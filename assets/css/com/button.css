@@ -32,6 +32,7 @@ body{
   --btm-btn-primary:var(--primary);
   --btm-btn-primary-active:var(--active);
   --btm-btn-secondary:var(--color-d);
+  --btm-btn-secondary-active:var(--color-c);
   --btm-btn-font-size:var(--font22);  
   --btm-btn-font-weight:var(--font-w-m);
 
@@ -42,6 +43,9 @@ body{
   --ico-file:url("../../images/com/svg/ico_file.svg");
 
   --ico-close: url("../../images/com/svg/ico_close.svg");
+
+  --ico-login: url("../../images/content/register/w/ico_login.svg");
+  --ico-register: url("../../images/content/register/w/ico_register.svg");
 
 }
 
@@ -54,6 +58,21 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
 .btn-text { color:var(--btn-text); text-decoration:underline;  }
 .btn-text.inline { display:inline; text-decoration:none; }
 
+/** 로그인 버튼 **/
+.btn-content.login { margin-top:38px; }
+
+.btn-content.login .button-group:first-child { display:flex; gap:50px; justify-content:center; width:100%; text-align:center; }
+.btn-content.login .button-group:first-child a { padding:0 10px; width:100%; height:98px; border-radius:10px; font-size:var(--font26); line-height:98px; }
+.btn-content.login .button-group:first-child a::before { content:""; display:inline-block; margin-right:21px; width:40px; height:40px; vertical-align:text-bottom; }
+.btn-content.login .btn-primary { background-color:var(--primary); color:var(--white); }
+.btn-content.login .btn-primary::before { background:var(--ico-login)no-repeat center;  }
+.btn-content.login .btn-primary:hover { background-color:var(--active); }
+.btn-content.login .btn-secondary { border:1px solid var(--primary); background-color:var(--white); }
+.btn-content.login .btn-secondary:hover { border-color:var(--active); color:var(--active); }
+.btn-content.login .btn-secondary::before { background:var(--ico-register)no-repeat center; }
+
+.btn-content.login .button-group:last-child { padding-top:20px; text-align:center; }
+.btn-content.login .button-group:last-child a { margin-top:18px; padding:12px 10px; border-radius:10px; background-color:var(--bg-box); font-size:var(--font20); font-weight:var(--font-w-m); }
 
 /**Form btn**/
 .btn-form { width:100%; max-width:152px; height:67px; padding:var(--btn-padding); border:var(--btn-board); color:var(--btn-font-color); box-sizing:border-box; text-align:center; }
@@ -67,6 +86,7 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
 .btn-pop-primary{ background:var(--btn-pop-background); color:var(--btn-pop-font-color); }
 .btn-pop-primary:hover { background:var(--primary); color:var(--btn-pop-font-color); }
 .btn-pop-secondary{ border:var(--btn-pop-s-border); background:var(--btn-pop-s-background); }
+.btn-pop-secondary:hover{ background:var(--btm-btn-secondary-active); color:var(--color-45); }
 
 .btn-terms-modal { padding: 2px 10px 4px; border: 1px solid var(--btn-modal-border); color:var(--btn-modal-font-color); font-size:var(--btn-download-font-size); }
 .btn-terms-modal:hover { border-color: #222222; color: #222222; }
@@ -112,6 +132,7 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
 .btn-content.cta .btn-primary { background-color: var(--btm-btn-primary); color:var(--white); }
 .btn-content.cta .btn-primary:hover { background-color: var(--active); }
 .btn-content.cta .btn-secondary { background-color: var(--btm-btn-secondary); }
+.btn-content.cta .btn-secondary:hover{ background:var(--btm-btn-secondary-active); color:var(--color-45); }
 .btn-content.cta button:disabled,
 .btn-content.cta a[aria-disabled="true"] { text-decoration:none; cursor: not-allowed; background-color:var(--color-d); color:var(--color-75); pointer-events:none;}
 

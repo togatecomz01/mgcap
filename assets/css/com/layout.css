@@ -186,24 +186,46 @@ h5, p.tit { color:var(--color-2); font-size:1rem; font-weight:var(--font-w-b); }
 .form-content > .form-wrap > .form-group .mo-column .flex-row .se-select,
 .form-content > .form-wrap > .form-group .mo-column > .col:last-of-type { flex:0 0 152px; }
 
-/** 로그인 폼 **/
-.form-wrap.login-form label.toggle {
-    --w:74px;
-    --h:32px;
-    --pad-y:3px;
-    font-size:0;
-    border:1px solid var(--color-d);
-    background-color:var(--white);
-}
-.form-wrap.login-form label.toggle::before { width:18px; height:18px; background-color:#AAAAAA; }
-.form-wrap.login-form label.toggle input + span { font-size:var(--font16); }
-.form-wrap.login-form label.toggle input + span:first-of-type { display:none; }
-.form-wrap.login-form label.toggle input + span:last-of-type { position:absolute; right:6px; color:#AAAAAA; }
+/** 로그인 **/
+.page-container.login { margin:0 auto; width:100%; max-width:900px; }
 
-.form-wrap.login-form label.toggle:has(input:checked)::before { width:28px; height:28px; background-color:var(--white); }
-.form-wrap.login-form label.toggle:has(input:checked) { padding-left:7px; border-color:var(--primary); background-color:var(--primary); }
-.form-wrap.login-form label.toggle input:checked + span:first-of-type { left:6px; color:var(--white); }
-.form-wrap.login-form label.toggle input:checked + span:last-of-type { display:none; }
+/* 폼 */
+.form-wrap.login-form .group { display:flex; justify-content:space-between; width:100%; }
+.form-wrap.login-form label.radio { display:inline-flex; gap:14px; padding:0 28px 0 0; }
+.form-wrap.login-form label.toggle {
+    --w:89px;
+    --h:32px;
+    --pad-x:2px;
+    --pad-y:2px;
+    --knob:28px;
+    background-color:var(--color-d);
+}
+.form-wrap.login-form label.toggle::before { width:28px; height:28px; background-color:var(--white); }
+
+.form-wrap.login-form label.toggle input + span:first-of-type,
+.form-wrap.login-form label.toggle input ~ span:last-of-type { position:absolute; font-size:var(--font16); line-height:26px; }
+
+.form-wrap.login-form label.toggle input + span:first-of-type { display:none; }
+.form-wrap.login-form label.toggle input ~ span:last-of-type { right:10px; color:var(--color-6); }
+
+.form-wrap.login-form label.toggle:has(input:checked) { padding-left:7px; background-color:var(--primary); }
+
+.form-wrap.login-form label.toggle input:checked + span:first-of-type { display:block; left:10px; color:var(--white); }
+.form-wrap.login-form label.toggle input:checked ~ span:last-of-type { display:none; }
+
+/* 로그인 유의사항 */
+.page-container.login .note-content { margin-top:52px; padding:24px; border-radius:10px; background-color:var(--color-f6); }
+.page-container.login .note-content .tit { padding:0 0 2px 36px; font-size:var(--font18); font-weight:var(--font-w-b); }
+.page-container.login .note-content .tit::before { content:""; display:block; top:50%; transform:translateY(-50%); width:20px; height:20px; background:url("../../images/content/register/w/ico_info.svg")no-repeat center; background-size:auto 20px; }
+.page-container.login .note-content li { padding-top:8px; padding-left:36px; }
+
+/* 민간 인증서 */
+.private-group button {  }
+.private-group button::before { content:""; display:block; width:82px; height:82px; background-repeat:no-repeat; background-size:82px auto; }
+.private-group button:nth-child(1):before { background-image:url("../../images/content/register/w/logo_kakao.png"); }
+.private-group button:nth-child(2):before { background-image:url("../../images/content/register/w/logo_naver.png"); }
+.private-group button:nth-child(3):before { background-image:url("../../images/content/register/w/logo_toss.png"); }
+.private-group button:nth-child(4):before { background-image:url("../../images/content/register/w/logo_pass.png"); }
 
 /**검색 폼**/
 .form-wrap.search-form { position:relative; display:block; margin-bottom:36px; font-size:var(--font16); }
