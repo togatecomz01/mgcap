@@ -47,6 +47,8 @@ body{
   --ico-login: url("../../images/content/register/w/ico_login.svg");
   --ico-register: url("../../images/content/register/w/ico_register.svg");
 
+  --tab-active:var(--primary);
+
 }
 
 a, button { position:relative; }
