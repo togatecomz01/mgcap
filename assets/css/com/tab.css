@@ -1,10 +1,11 @@
 @charset "euc-kr";
-body {
+.tab-container {
   --tab-height: 40px;
+  --tab1-mb:72px;
   --tab-font-color: var(--color-6);
   --tab-font-szie: var(--font22);
   --tab-bg: var(--color-fd);
-  --tab-border: var(--color-d);
+  --tab-border: 1px solid var(--color-d);
   --tab-active: var(--primary);
 
   --tab2-background: #f1f2f4;
@@ -14,8 +15,12 @@ body {
   --tab3-active: var(--primary);
 }
 
-.tab-list { display:flex; width:100%; margin-bottom:72px; }
-.tab-container .tab-list.depth1{ gap:2px; justify-content:center; border-bottom:1px solid var(--tab-border); overflow-y:hidden; overflow-x:auto; }
+.tab-list { display:flex; width:100%; margin-bottom:var(--tab1-mb); }
+.page-container:has(.tab-list.depth1) { max-width:100%; padding-left:0; padding-right:0; }
+.tab-container .tab-list.depth1{  margin:0 auto; max-width:100%; border-bottom:var(--tab-border);  }
+.page-container:has(.tab-list.depth1) .btn-group,
+.page-container:has(.tab-list.depth1) .tab-content { max-width:1400px; margin:0 auto; }
+.page-container:has(.tab-list.depth1) .btn-group { display:flex; gap:2px; justify-content:center;  width:100%; overflow-y:hidden; overflow-x:auto;  }
 .tab-container .tab-list.depth1 .tab-item{  flex:0 0 auto; text-align:center; line-height:51px; padding:8px 32px; width:auto; height:69px; font-size:var(--tab-font-szie); background:var(--tab-bg); color:var(--tab-font-color); border-bottom:1px solid transparent; font-weight: var(--font-w-m); }
 .tab-container .tab-list.depth1 .active{ text-align: center; color: var(--tab-active); border-bottom:4px solid var(--tab-active); background:var(--white); font-weight:var(--font-w-b); }
 
@@ -42,10 +47,16 @@ body {
 .tab-content > .form-wrap > .form-group > .flex-row > div { display:flex; gap:10px; }
 
 @media (max-width: 767px) {
-
-  .tab-container .tab-list.depth1 .tab-item {  padding:8px 12px; line-height:32px; height:48px; font-size:var(--font16); }
+  .tab-container {
+    --tab-height: 40px;
+    --tab1-mb:72px;
+    --tab-font-szie: var(--font16);  
+  }
+  .page-container:has(.tab-list.depth1) .btn-group { padding:0 24px; }  
+  .tab-container .tab-list.depth1 .tab-item {  padding:8px 12px; line-height:32px; height:48px; }
   .tab-container .tab-list.depth2 { margin-bottom:32px; }
   .tab-container .tab-list.depth2 .tab-item {  padding:0 20px; line-height:45px; height:45px; }
+
 
 
   .tab-container .tab-list.depth2 {
