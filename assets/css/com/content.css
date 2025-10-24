@@ -224,7 +224,8 @@ body{
 
 /* 팝업 */
 .WCC20710VS .text-group > .tit,
-.WCC20720VS .text-group > .tit { font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-45); }
+.WCC20720VS .text-group > .tit,
+.WCC21400VQ .text-group > .tit { font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-45); }
 .WCC20710VS .text-group .tit-f-square,
 .WCC20720VS .text-group .tit-f-square { font-weight:var(--font-w-m); }
 .WCC20710VS .text-group .tit-f-square:before,
@@ -349,7 +350,19 @@ body{
 .WCC601400VQ .btn-group { font-size:0; }
 .WCC601400VQ .btn-group .btn-download + .btn-download {margin-left: 26px;}
 
+/** 채무조정신청 **/
+.WCC21400VQ .form-group select { max-width:120px; }
+/* 팝업 */
+.WCC21400VQ .text-group > .tit + p { font-weight:var(--font-w-m); }
+.WCC21400VQ .text-list > li { margin-bottom:32px; }
+.WCC21400VQ .text-list > li > span { color:var(--color-2); font-weight:var(--font-w-m); }
+.WCC21400VQ .text-list > li > span.precious { color:var(--primary); font-weight:var(--font-w-b); }
+.WCC21400VQ .text-list > li > span.precious + p { margin-top:14px; }
+.WCC21400VQ .text-list > li > ol { margin-top:14px; }
+.WCC21400VQ .text-list > li > ol li { margin-bottom:10px; }
 
+.WCC21400VQ .text-group .square { margin-bottom:18px; color:var(--color-2); font-weight:var(--font-w-m); }
+.WCC21400VQ .text-group .square + ol li p { margin-top:10px;}
 /*---------------------------------------------
     #회사소개
 ---------------------------------------------*/
