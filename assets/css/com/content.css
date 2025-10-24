@@ -363,6 +363,9 @@ body{
 
 .WCC21400VQ .text-group .square { margin-bottom:18px; color:var(--color-2); font-weight:var(--font-w-m); }
 .WCC21400VQ .text-group .square + ol li p { margin-top:10px;}
+
+.WCC21401DS .btn-group { font-size:0; }
+.WCC21401DS .btn-group .btn-download + .btn-download {margin-left: 26px;}
 /*---------------------------------------------
     #회사소개
 ---------------------------------------------*/
@@ -790,6 +793,7 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     .WCC21400VQ .mo-column:has(.mo-phn) select:first-of-type { display:block; width:100%; max-width:none; }
     .WCC21400VQ .form-group input[type="text"], .WCC21400VQ .form-group input[type="password"], .WCC21400VQ .form-group input[type="email"], .WCC21400VQ .form-group input[type="number"], .WCC21400VQ .form-group input[type="tel"], .WCC21400VQ .form-group input[type="search"], .WCC21400VQ .form-group select { flex:auto; }
     .WCC21400VQ .form-group input.mo-phn { width:214px; }
+    .WCC21401DS .btn-group .btn-download + .btn-download {margin-left:0;}
 
     /*---------------------------------------------
         #회사소개

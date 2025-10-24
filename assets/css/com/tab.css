@@ -55,7 +55,7 @@
   .tab-container .tab-list.depth2 { margin-bottom:32px; }
   .tab-container .tab-list.depth2 .tab-item {  padding:0 20px; line-height:45px; height:45px; }
 
-
+  .page-container .tab-content { padding:0 24px; }
 
   .tab-container .tab-list.depth2 {
     flex-wrap: nowrap;

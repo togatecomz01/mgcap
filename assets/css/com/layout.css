@@ -290,6 +290,10 @@ form:has(.info-content) .form-content .form-wrap.search-form { margin-bottom:0; 
 .attach dd { display:inline-block; }
 .attach dd a { font-size:var(--font16); font-weight:var(--font-w-r); color:var(--color-2); }
 .attach dd a + a { margin-top:16px; }
+/* 다운로드 버튼 */
+.list-download a.btn-download { padding:0; margin-left:10px; min-height:25px; border:0; }
+.list-download a.btn-download:first-child { margin-left:0; }
+.list-download a.btn-download:hover::after { background-color:var(--primary); }
 
 /**캡챠이미지**/
 .form-content > .form-wrap > .form-group .captcha { display:flex; flex:0 0 268px; }
@@ -523,8 +527,8 @@ main.contentWrap > .bottom-container { margin-top:72px; }
     .form-wrap.noti-search { margin-bottom:20px; }
     /** 공지사항 검색 **/
 
-      /** 상세보기 **/
-      .view-content {
+    /** 상세보기 **/
+    .view-content {
         --view-p-top:32px;
         --view-tit:var(--font20);
         --view-p:42px 0 52px 0;
@@ -537,12 +541,15 @@ main.contentWrap > .bottom-container { margin-top:72px; }
     .view-navigation li .label { padding-right:20px; width:80px; font-size:var(--font14); line-height:14px; }
     .view-navigation .link-group > a { padding-left:16px; max-width:calc(100% - 78px); font-size:var(--font14); line-height:14px; }
     .view-navigation .date {display: none;}
+    /* 다운로드 버튼 */
+    .list-download a.btn-download { display:none; }
 
     /** 첨부파일 **/
     .attach { padding:12px; margin-bottom:36px; }
     .attach dt { font-size:var(--font14); }
     .attach dd a { font-size:var(--font14); }
     .attach dd a + a { margin-top:12px; }
+
 
     /*---------------------------------------------
 		#푸터
