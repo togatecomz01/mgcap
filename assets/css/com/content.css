@@ -542,11 +542,6 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 /* 담보권해지신청 */
 .WCS40700VQ .btn-form { max-width:200px; }
 .WCS40700VQ .search-form input[type="text"].address { flex:0 0 325px; }
-.WCS10400VQ .tab-container .tab-list.depth1,
-.WCS40700VQ .tab-container .tab-list.depth1 { justify-content:flex-start; }
-.WCS10400VQ .tab-container .tab-list.depth1 .tab-item,
-.WCS40700VQ .tab-container .tab-list.depth1 .tab-item { font-size:var(--font16); }
-
 
 /* 서류제출 */
 .WCS40800VQ .text-group:has(.btn-plus) { position:relative; }
