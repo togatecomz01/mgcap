@@ -16,7 +16,7 @@ body {
 
 .tab-list { display:flex; width:100%; margin-bottom:72px; }
 .tab-container .tab-list.depth1{ gap:2px; justify-content:center; border-bottom:1px solid var(--tab-border); overflow-y:hidden; overflow-x:auto; }
-.tab-container .tab-list.depth1 .tab-item{  flex:0 0 auto; text-align:center; line-height:51px; padding:8px 32px; width:auto; height:69px; font-size:var(--font22); background:var(--tab-bg); color:var(--tab-font-color); border-bottom:1px solid transparent; font-weight: var(--font-w-m); }
+.tab-container .tab-list.depth1 .tab-item{  flex:0 0 auto; text-align:center; line-height:51px; padding:8px 32px; width:auto; height:69px; font-size:var(--tab-font-szie); background:var(--tab-bg); color:var(--tab-font-color); border-bottom:1px solid transparent; font-weight: var(--font-w-m); }
 .tab-container .tab-list.depth1 .active{ text-align: center; color: var(--tab-active); border-bottom:4px solid var(--tab-active); background:var(--white); font-weight:var(--font-w-b); }
 
 
