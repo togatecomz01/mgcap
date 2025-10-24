@@ -12,14 +12,6 @@ $(document).ready(function () {
             sideToolsL.scrolling(); // 초기 상태 확인
         }
 
-        if ($("#gnbFull").length > 0) {
-            gnbFullL.init(); // 불필요한 DOM 탐색을 줄이고 예외를 방지
-        }
-
-        if ($("#gnb").length > 0) {
-            gnbL.init(); // 불필요한 DOM 탐색을 줄이고 예외를 방지
-        }
-
         if ($("#skipnavi").length > 0) {
             skipNaviL.init(); // init 실행 전에 존재 여부 확인
         }
