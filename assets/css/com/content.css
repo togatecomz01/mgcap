@@ -404,7 +404,7 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCA10100VQ .button-content .lnk-group a:nth-child(4) { background-image: url("../../images/content/INT/w/link_4_CMP-002.png") }
 
 /* 회사소개 - 회사연혁 (WCA30100VQ) */
-.WCA30100VQ { padding-top: 0 !important; }
+main.contentWrap > .page-container.WCA30100VQ {max-width: 1450px;padding: 0 25px;}
 .WCA30100VQ .text-content h3 { font-size: var(--font32); }
 .WCA30100VQ .text-content h3 span { color: var(--primary); }
 .WCA30100VQ .text-content p { font-size: var(--font32); font-weight: var(--font-w-b); }

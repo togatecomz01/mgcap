@@ -3,7 +3,7 @@
 <head>
     <meta charset="euc-kr" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>공지사항&gt;고객센터&gt;홈</title>
+    <title>회사소식&gt;사회공헌&gt;회사소개&gt;홈</title>
 
     <meta name="keywords" content="MG캐피탈" />
     <meta name="copyright" content="copyrights 2025 MG캐피탈" />
@@ -43,19 +43,20 @@
                 <nav class="location-container">
                     <ol class="breadcrumb">
                         <li><span class="home">홈</span></li>
-                        <li><span>고객센터</span></li>
-                        <li><span>공지사항</span></li> 
+                        <li><span>회사소개</span></li>
+                        <li><span>사회공헌</span></li> 
+                        <li><span>회사 소식</span></li> 
                     </ol>
                 </nav>
                 <section class="visual-container">
-                    <h2>공지사항</h2> 
-                    <p>고객과 함께하는 MG캐피탈 소식을 바로바로 안내해 드립니다.</p>
+                    <h2>회사소식</h2> 
+                    <p>MG캐피탈의 새로운 소식을 안내합니다</p>
                 </section>
                 <section class="page-container">
                     <div class="table-content">
                         <form>
                             <fieldset class="form-content">
-                                <legend>공지사항 조건 검색</legend>
+                                <legend>회사소식 조건 검색</legend>
                                 <div class="form-wrap noti-search">
                                     <div class="form-group">
                                         <label for="">검색</label>
@@ -192,6 +193,26 @@
                         </div>
                     </div>
                 </section>
+
+                <!-- S : 공통 알럿 -->
+                <!-- D: 화면 설계서 바탕으로 메시지 변경 필요. -->
+                <!-- D: 검색버튼 눌렀을 시 검색어가 입력되어 있지 않다면 얼럿메시지 노출 -->
+                <!-- D: 확인 버튼 클릭 시 포커싱은 검색어 입력창으로 이동 -->
+                <section class="modal-container">
+                    <div id="modal" class="layerPopup modal">
+                        <div class="pop-content alert">
+                            <div class="pop-body">
+                                <p>알럿내용을 입력하세요.</p>
+                            </div>
+                            <div class="pop-footer">
+                                <div class="button-content">
+                                    <button type="button" class="btn-pop-primary"  data-popup-close="modal">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- E : 공통 알럿 -->
             </main>
         </div>
         <div data-include-path="../../views/COMMON/footer.html"></div>
