@@ -699,11 +699,13 @@ main.contentWrap > .page-container.WCA30100VQ {max-width: 1450px;padding: 0 25px
     .WCC20710VS .form-group textarea,
     .WCC20720VS .form-group textarea { min-height:192px; }
     .WCC20710VS .form-group:has(.mo-phn) select,
-    .WCC20720VS .form-group:has(.mo-phn) select { flex:none; width:106px; }
+    .WCC20720VS .form-group:has(.mo-phn) select,
+    .WCC21400VQ .form-group:has(.mo-phn) select { flex:none; width:106px; }
     .WCC20710VS .form-group .pc-phn,
-    .WCC20720VS .form-group .pc-phn { display:none; }
+    .WCC20720VS .form-group .pc-phn,
+    .WCC21400VQ .form-group .pc-phn { display:none; }
     .WCC20710VS .form-group .mo-phn,
-    .WCC20720VS .form-group .mo-phn { display:block; flex:1; }
+    .WCC20710VS .form-group .mo-phn { display:block; flex:1; }
     .WCC20710VS .form-group .mail > div,
     .WCC20720VS .form-group .mail > div { flex-wrap:wrap; }
     .WCC20710VS .form-group .mail input,
@@ -783,6 +785,12 @@ main.contentWrap > .page-container.WCA30100VQ {max-width: 1450px;padding: 0 25px
     .WCC602000VQ .col-row.mo-row td { display: flex; padding: 0; border-left: none; }
     .WCC602000VQ .col-row.mo-row td span { width: 50%; padding: 10px; }
     .WCC602000VQ .col-row.mo-row td::before { content: attr(data-label); padding: 10px; width: 50%; border-right: var(--table-border); background: var(--table-th); font-weight: var(--font-w-b); }
+
+    /** 채무조정신청 **/
+    .WCC21400VQ .mo-column:has(.mo-phn) div { flex-wrap:wrap; }
+    .WCC21400VQ .mo-column:has(.mo-phn) select:first-of-type { display:block; width:100%; max-width:none; }
+    .WCC21400VQ .form-group input[type="text"], .WCC21400VQ .form-group input[type="password"], .WCC21400VQ .form-group input[type="email"], .WCC21400VQ .form-group input[type="number"], .WCC21400VQ .form-group input[type="tel"], .WCC21400VQ .form-group input[type="search"], .WCC21400VQ .form-group select { flex:auto; }
+    .WCC21400VQ .form-group input.mo-phn { width:214px; }
 
     /*---------------------------------------------
         #회사소개
