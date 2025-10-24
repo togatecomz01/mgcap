@@ -367,8 +367,6 @@ body{
     #회사소개
 ---------------------------------------------*/
 /* 회사소개 - CEO 인사말 (WCA20100VQ)  */
-
-.WCA20100VQ{padding-top:0!important}
 .WCA20100VQ .quote-content{padding-top:0}
 .WCA20100VQ .br-mo{display:none}
 .WCA20100VQ .quote-group{padding:10px 0;text-align:center}
@@ -417,7 +415,8 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCA10100VQ .button-content .lnk-group a:nth-child(4) { background-image: url("../../images/content/INT/w/link_4_CMP-002.png") }
 
 /* 회사소개 - 회사연혁 (WCA30100VQ) */
-main.contentWrap > .page-container.WCA30100VQ {max-width: 1450px;padding: 0 25px;}
+.WCA30100VQ .text-content.bo-t0 {max-width: 1400px; margin: 0 auto;}
+.WCA30100VQ.page-container > div + div {padding-top: 0;}
 .WCA30100VQ .text-content h3 { font-size: var(--font32); }
 .WCA30100VQ .text-content h3 span { color: var(--primary); }
 .WCA30100VQ .text-content p { font-size: var(--font32); font-weight: var(--font-w-b); }
@@ -795,6 +794,9 @@ main.contentWrap > .page-container.WCA30100VQ {max-width: 1450px;padding: 0 25px
     /*---------------------------------------------
         #회사소개
     ---------------------------------------------*/
+    /* 회사소개-ceo인사말 */
+    .WCA20100VQ .quote-group {padding-top: 0;}
+    .WCA20100VQ .quote-group blockquote {padding-top: 0;}
 
     /******회사소개-회사개요**/
     .WCA10100VQ h3 { font-size: var(--font32); font-weight: var(--font-w-m); margin-bottom: 220px; }
