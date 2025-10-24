@@ -187,7 +187,8 @@ h5, p.tit { color:var(--color-2); font-size:1rem; font-weight:var(--font-w-b); }
 .form-content > .form-wrap > .form-group .mo-column > .col:last-of-type { flex:0 0 152px; }
 
 /** ·Î±×ÀÎ **/
-.page-container.login { margin:0 auto; width:100%; max-width:900px; }
+.page-container:has(.tab-list.depth1).login .tab-content { margin:0 auto; width:100%; max-width:900px; }
+.page-container.login .tab-content form { margin-top:0; }
 
 /* Æû */
 .form-wrap.login-form .group { display:flex; justify-content:space-between; width:100%; }
