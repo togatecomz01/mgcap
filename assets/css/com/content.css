@@ -553,6 +553,9 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCS10200VQ .underline,
 .WCS40500VQ .underline a { color:var(--primary); text-decoration:underline; }
 
+/* 상환일정 조회 */
+.WCS10300VQ .text-content .info-list .m-dot li { font-size:var(--font16); }
+
 /* 중도상환 조회/신청 팝업 */
 .WCS10401PQ .btn-link { padding:24px 30px 24px 24px; width:calc(50% - 16px); background-repeat:no-repeat; background-position:left 20px center; background-size:40px; }
 

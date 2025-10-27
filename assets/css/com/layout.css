@@ -108,7 +108,7 @@ h5, p.tit { color:var(--color-2); font-size:1rem; font-weight:var(--font-w-b); }
 [class*="-group"] h4 + * ~ .rfrnc { margin-top:12px; }
 
 /**텍스트**/
-.page-container > .text-content > .group > h3 + .text-group:first-of-type { margin-top:72px; }
+/* .page-container > .text-content > .group > h3 + .text-group:first-of-type { margin-top:72px; } */
 .text-content * + p { margin-top:18px; }
 .text-content p.hypn, .text-content .star, .text-content .rfrnc, .text-content .square { color:var(--color-6);  }
 .text-content p.hypn:before,
@@ -241,14 +241,12 @@ h5, p.tit { color:var(--color-2); font-size:1rem; font-weight:var(--font-w-b); }
 .form-wrap.search-form > .group > .form-group .ph { display:inline-flex; flex-wrap:wrap; align-items:center; gap:12px; }
 .form-wrap.search-form > .group > .form-group:has(.radio) { gap:19px; margin-bottom:0; padding:0;  border-bottom:0; }
 .form-wrap.search-form > .group > .form-group:last-of-type { padding-bottom:0; margin-bottom:0; border-bottom:0; }
-.form-wrap.search-form > .group > .form-group label:not(.radio) { /*width:80px;*/ width:auto; max-width:100px; min-width:72px; } /* 20251016 수정 */
+.form-wrap.search-form > .group > .form-group label:not(.radio) { /*width:80px;*/ width:auto; max-width:100px; min-width:72px; font-weight:var(--font-w-b); color:var(--color-2); } /* 20251027 수정 */
 /* 팝업용 검색폼 라디오탭 */
-.form-wrap.search-form > .group > div[id] > .form-group label:not(.radio) { width:auto; max-width:100px; min-width:72px; } 
+.form-wrap.search-form > .group > div[id] > .form-group label:not(.radio) { width:auto; max-width:100px; min-width:72px; }
 .form-wrap.search-form > .group > div[id] > .form-group { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 24px; margin-bottom: 24px; padding-bottom: 24px; width: 100%; border-bottom: 1px solid #D6E0EB;}
 .form-wrap.search-form > .group > div[id] > .form-group:last-of-type { padding-bottom: 0; margin-bottom: 0; border-bottom: 0; }
 .search-form #old-address .form-group:last-of-type input {flex: 1; width: 170px; min-width: 0;}
-/* .form-wrap.search-form > .group > .form-group > input + label,
-.form-wrap.search-form > .group > .form-group > select + label { margin-left:32px; } */
 
 form:has(.info-content) .form-content .form-wrap.search-form { margin-bottom:0; }
 
