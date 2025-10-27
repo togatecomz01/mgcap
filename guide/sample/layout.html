@@ -33,6 +33,27 @@
     <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
     <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
     <script src="../../assets/js/include.js"></script>
+    <style>
+        /*---------------------------------------------
+    #스크롤탑버튼
+---------------------------------------------*/
+#sideTools { z-index: 9; position: fixed; bottom: 30px; display:flex; right:30px;  display:flex; flex-direction: column; gap:20px; align-items: center;  transition: bottom 0.3s linear; }
+#sideTools > div > button { width:48px; height:48px; }
+#sideTools .scrollUpBtn { opacity: 0; visibility: hidden; background-color: var(--white); transition: all 0.2s ease-in-out;}
+#sideTools.on .scrollUpBtn { opacity: 1; visibility: visible; }
+#sideTools .scrollUpBtn > button { background: var(--ico-top) no-repeat center/32px auto; display: block; text-align: center; color: transparent; }
+
+#sideTools .scrollUpBtn,
+#sideTools .sideMenu { position: relative; display:flex; justify-content: center; width:48px; height:48px; border-radius: 50%; box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.2); }
+#sideTools .sideMenu {   background-color: var(--color-2); }
+#sideTools .sideMenu.on { z-index:11;}
+#sideTools .sideMenu > button { background: var(--ico-w-plus)no-repeat center/20px auto; display:block; text-align: center; color:transparent; transform: rotate(180deg); transition:all .2s; }
+#sideTools .sideMenu.on > button { transform: rotate(45deg); }
+#sideTools .sideMenu > ul { display:none; position: absolute; bottom:58px; }
+#sideTools .sideMenu > ul > li { margin-top:10px; }
+#sideTools .sideMenu > ul > li > a { display: flex; align-items: center; justify-content:center; width:48px; height:48px;  border-radius: 50%; text-align: center; border:1px solid red; background-color: #fff;}
+
+    </style>
 </head>
 
 <body>
@@ -195,6 +216,9 @@
                         </div>
                     </div>
                 </section>
+                <section id="sideTools" class="">
+                    <div class="scrollUpBtn"><button type="button">TOP</button></div>
+                 </section>
             </main>
         </div>
         <div data-include-path="../../views/COMMON/footer.html"></div>
