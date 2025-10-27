@@ -241,6 +241,7 @@ body{
 .WCC80100VS .table-content td { padding:16px 16px 0 16px; border-bottom:0; }
 .WCC80100VS .table-content tr:last-child td { padding:16px 16px 16px 16px; border-bottom:1px solid var(--color-d); }
 .WCC80100VS .table-content tr td label.check { margin-bottom:0; }
+.WCC80100VS .note-group { margin-top:52px; } /* 2025.10.27 Ãß°¡ */
 .WCC80100VS .note-group p { text-align:center; }
 .WCC80100VS .note-group p.date { margin-top:42px; font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-2); }
 
