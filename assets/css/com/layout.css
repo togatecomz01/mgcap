@@ -355,6 +355,7 @@ main.contentWrap > .bottom-container { margin-top:72px; }
 .layerPopup.full > .pop-area { display:flex; flex-direction:column;  position:fixed; width:80%; height:80%; max-width:800px; max-height:730px; top:50%; left:50%; transform:translate(-50%, -50%); background:var(--white); border-radius:28px; }
 .layerPopup.full .pop-header { padding:44px 34px 12px; margin-bottom:0; }
 .layerPopup.full .pop-header h2 { font-size:var(--font24); font-weight:var(--font-w-b); }
+.layerPopup.full .pop-header2 h2 { font-size:var(--font24); font-weight:var(--font-w-b); margin-bottom: 20px;}
 .layerPopup.full .pop-body { padding:24px 34px 24px; flex:1; overflow-y:auto; }
 .layerPopup.full .pop-footer { margin-top:0; padding:28px 34px 38px; display:flex; align-items:center; justify-content:center; }
 
