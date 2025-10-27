@@ -532,7 +532,6 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCM10106DS table td span { font-size:1rem; }
 
 /* ±›¿∂¿Œ¡ıº≠ */
-.WCM10106DS .text-content .text-group { margin-bottom:16px; }
 .WCM10106DS .img-list li { position:relative; padding-top:200px; width:calc(100% / 3); text-align:center; }
 .WCM10106DS .img-list li:nth-child(1)::before { background:url("../../images/content/AUTH/auth_002_01.png")no-repeat 50%/180px auto; }
 .WCM10106DS .img-list li:nth-child(2)::before { background:url("../../images/content/AUTH/auth_002_02.png")no-repeat 50%/180px auto; }
