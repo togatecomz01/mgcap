@@ -492,6 +492,9 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCR50100VQ td.title::before {display: inline-block; min-width: 80px; text-align: center; margin-right: 12px; padding: 8px 16px; border: 1px solid; border-radius: 100px; font-size: 0.875rem; box-sizing: border-box; }
 .WCR50100VQ td.title.status-ing::before {content: '진행중'; border-color: var(--primary); color: var(--primary);}
 .WCR50100VQ td.title.status-closed::before {content: '마감'; border-color: var(--error); color: var(--error);}
+
+/* 회사소개 - 입사지원 동의 */
+
 /*---------------------------------------------
     #인증센터, MY MG, 소비자보호 공통
 ---------------------------------------------*/
