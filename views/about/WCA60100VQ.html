@@ -44,23 +44,28 @@
                 <section class="page-container">
                     <div class="table-content">
                         <form>
+                            <!-- s: 2025.10.27 변경 -->
                             <fieldset class="form-content">
                                 <legend>검색</legend>
                                 <div class="form-wrap noti-search">
                                     <div class="form-group">
                                         <label for="">검색</label>
-                                        <div class="flex-row">
+                                        <div class="flex-end">
                                             <select id="search-first" required="" title="" required>
                                                 <option value="0">전체</option>
                                                 <option value="1">제목</option>
                                                 <option value="3">내용</option>
                                             </select>
-                                            <input id="search" type="search" name="search" placeholder="검색어를 입력해주세요" />
-                                            <button type="submit" class="btn-body">검색</button>
+                                            <div class="search-row">
+                                                <input id="search" type="search" name="search" placeholder="검색어를 입력해주세요" />
+                                                <button type="submit" class="btn-search">검색버튼</button>
+                                            </div>
+                                            <button type="submit" class="btn-body">새로고침</button>
                                         </div>
                                     </div>
                                 </div>
                             </fieldset>
+                            <!-- e: 2025.10.27 변경 -->
                             <div class="table-content">
                                 <table class="mo-s mo-list">
                                     <caption>납입내역 목록표(번호, 실행번호, 상품명, 수납회차/총회차, 상환원금, 상환이자, 기타금액, 연체이자, 합계, 상태 포함)</caption>

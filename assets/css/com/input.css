@@ -166,8 +166,13 @@ label.toggle input + span { font-size:0; }
 .noti-search input[type="search"],
 .noti-search input[type="date"],
 .noti-search select { flex:0 0 360px; padding:0 20px; width:306px; height:48px; max-height:48px; line-height:48px; border-radius:100px; font-size:var(--font16); }
+/*S: 2025.10.27 변경*/
+.noti-search .flex-end { gap:12px; }
 .noti-search select { flex:0 0 136px; width:136px; }
-.noti-search input[type="search"] { background-image:var(--ico-noti-search); background-size:24px; }
+.noti-search .search-row { position:relative; display:inline-block; }
+.noti-search input[type="search"] { padding-right:50px; background:none; }
+.noti-search .search-row .btn-search { position:absolute; top:50%; transform:translateY(-50%); right:20px; width:24px; height:24px; background:var(--ico-noti-search)no-repeat center center; background-size:24px; font-size:0; }
+/*E: 2025.10.27 변경*/
 /** 공지사항 검색 **/
 
 /** 라디오 탭 **/

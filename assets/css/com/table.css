@@ -111,5 +111,6 @@ table:has(.no-results) td { margin:0; padding:0; border:0; }
     .mo-list tbody tr td.date + td.date::before {content: "~"; margin: 0 4px 0 0;}
     /* 조회결과 없음 */
     table:has(.no-results) tbody tr td { display:block; }
-    .no-results { border:0; }
+    .no-results { padding-top:98px; border:0; }
+    .no-results p { padding-top:86px; min-height:200px; font-size:var(--font20); background-size:80px 66px;}
 }
