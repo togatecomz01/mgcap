@@ -183,7 +183,7 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
    
    /**CTA 01**/
    .btn-content.cta a,
-   .btn-content.cta button { flex:1; height:60px; line-height:60px; font-size:var(--font20); }
+   .btn-content.cta button { flex:1; padding:0 10px; height:60px; line-height:60px; font-size:var(--font20); }
 
  
    
