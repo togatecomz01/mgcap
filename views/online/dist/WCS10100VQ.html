@@ -16,7 +16,17 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Cache-Control" content="No-Cache" />
     <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico"/>
-    <link rel="stylesheet" href="../../assets/css/ui-util.css" />
+    <link rel="stylesheet" href="../../assets/css/com/default.css" />
+    <link rel="stylesheet" href="../../assets/css/com/common.css" />
+    <link rel="stylesheet" href="../../assets/css/com/style.css" />
+    <link rel="stylesheet" href="../../assets/css/com/fonts.css" />
+    <link rel="stylesheet" href="../../assets/css/com/layout.css" />
+    <link rel="stylesheet" href="../../assets/css/com/nav.css" />
+    <link rel="stylesheet" href="../../assets/css/com/input.css" />
+    <link rel="stylesheet" href="../../assets/css/com/button.css" />
+    <link rel="stylesheet" href="../../assets/css/com/tab.css" />
+    <link rel="stylesheet" href="../../assets/css/com/table.css" />
+    <link rel="stylesheet" href="../../assets/css/com/content.css" />
     <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
     <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
@@ -72,8 +82,8 @@
                         <div class="text-group">
                             <p class="caption">기준일 : 2025-09-22 / 단위: 원</p>
                             <div class="table-content">
-                                <table class="mo-s">
-                                    <caption>NO, 실행번호, 공급자명, 상품명, 여신금액, 잔여회차/총회차, 실행일, 최근납입일, 잔액, 진행상태, 만기일, 차기납입일, 진행상태에 구분으로 구성된 이용상품내역 목록표</caption>
+                                <table class="mo-s td-l"><!--td-l 클래스 추가-->
+                                    <caption>이용상품 내역 목록표 (NO, 실행번호, 공급자명, 상품명, 여신금액, 잔여회차/총회차, 실행일, 최근납입일, 잔액, 진행상태, 만기일, 차기납입일 포함)</caption>
                                     <colgroup>
                                         <col style="width:84px">
                                         <col style="width:175px">
@@ -153,7 +163,139 @@
             </main>
         </div>
         <div data-include-path="../../views/COMMON/footer.html"></div>
+      <div data-include-path="../../views/COMMON/header.html"></div>
+      <div class="bodyWrap">
+        <main class="contentWrap">
+          <nav class="location-container">
+            <ol class="breadcrumb">
+              <li><span class="home">홈</span></li>
+              <li><span>MY MG</span></li>
+              <li><span>이용현황</span></li>
+              <li><span>이용상품내역</span></li>
+            </ol>
+          </nav>
+          <section class="visual-container">
+            <h2>이용상품내역</h2>
+          </section>
+          <section class="page-container">
+            <div class="text-content">
+              <h3>이용상품내역 목록</h3>
+              <form>
+                <fieldset class="form-content">
+                  <legend>이용상품내역 목록</legend>
+                  <div class="form-wrap search-form">
+                    <div class="group">
+                      <div class="form-group">
+                        <p class="mo-tit">구분선택</p>
+                        <label class="radio">
+                          <input type="radio" name="use" value="" checked="" />
+                          <span>팩스</span>
+                        </label>
+                        <label class="radio">
+                          <input type="radio" name="use" value="" />
+                          <span>이메일</span>
+                        </label>
+                        <label class="radio">
+                          <input type="radio" name="use" value="" />
+                          <span>우편</span>
+                        </label>
+                      </div>
+                    </div>
+                    <button class="btn-form">조회</button>
+                  </div>
+                </fieldset>
+              </form>
+              <div class="text-group">
+                <p class="caption">기준일 : 2025-09-22 / 단위: 원</p>
+                <div class="table-content">
+                  <table class="mo-s">
+                    <caption>
+                      이용상품 내역 목록표 (NO, 실행번호, 공급자명, 상품명,
+                      여신금액, 잔여회차/총회차, 실행일, 최근납입일, 잔액,
+                      진행상태, 만기일, 차기납입일 포함)
+                    </caption>
+                    <colgroup>
+                      <col style="width: 84px" />
+                      <col style="width: 175px" />
+                      <col style="width: 218px" />
+                      <col style="width: 158px" />
+                      <col style="width: 115px" />
+                      <col style="width: 130px" />
+                      <col style="width: 130px" />
+                      <col style="width: 125px" />
+                      <col style="width: 147px" />
+                      <col style="width: 121px" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col" rowspan="2">No.</th>
+                        <th scope="col" rowspan="2">실행번호</th>
+                        <th scope="col" rowspan="2">공급자명</th>
+                        <th scope="col" rowspan="2">상품명</th>
+                        <th scope="col" rowspan="2">여신금액</th>
+                        <th scope="col" rowspan="2">잔여회차/총회차</th>
+                        <th scope="col">실행일</th>
+                        <th scope="col">최근납입일</th>
+                        <th scope="col" rowspan="2">잔액</th>
+                        <th scope="col">진행상태</th>
+                      </tr>
+                      <tr>
+                        <th scope="col" class="bor-l">만기일</th>
+                        <th scope="col">차기납입일</th>
+                        <th scope="col">진행상태</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td rowspan="2">1</td>
+                        <td rowspan="2">MI14002240001</td>
+                        <td rowspan="2">충면화광기고추손도</td>
+                        <td rowspan="2">내구재/헬스케어</td>
+                        <td rowspan="2">1,800,000</td>
+                        <td rowspan="2">6/18</td>
+                        <td>2014-02-27</td>
+                        <td>134,050</td>
+                        <td rowspan="2">0</td>
+                        <td>중도상환</td>
+                      </tr>
+                      <tr>
+                        <td class="bor-l">2015-02-27</td>
+                        <td>134,050</td>
+                        <td>정상</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td colspan="4" class="sum">합계</td>
+                        <td colspan="2">1,800,000</td>
+                        <td colspan="2"></td>
+                        <td>0</td>
+                        <td></td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+                <div class="info-list">
+                  <ul class="m-dot">
+                    <li>
+                      납입상태가 연체일 경우 납입상태의 “연체"를 클릭하시면
+                      연체내역을 확인 하실 수 있습니다.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="bottom-container">
+            <div class="btn-content cta">
+              <div class="button-group">
+                <a herf="javascript:void(0);" class="btn-primary">출력</a>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+      <div data-include-path="../../views/COMMON/footer.html"></div>
     </div>
-</body>
+  </body>
 </html>
- 

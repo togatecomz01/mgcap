@@ -96,8 +96,8 @@ h3.rfrnc { font-size:var(--font28) !important; color:var(--color-2) !important; 
 h4.tit-diamond::before { content:"¡ß"; display:inline; color:var(--primary); }
 h5, p.tit { color:var(--color-2); font-size:1rem; font-weight:var(--font-w-b); }
 
-[class*="-container"] > form { margin:52px 0 32px; }
-[class*="-container"] > form:last-of-type { margin-bottom:0; }
+[class*="-container"] form { margin:52px 0 32px; }
+[class*="-container"] form:last-of-type { margin-bottom:0; }
 [class*="-content"] * ~ h3 { margin-top:72px; }
 [class*="-content"] > .group > h3 + [class*="-group"],
 [class*="-content"] > .group > h3 + p + [class*="-group"] { margin-top:52px; }

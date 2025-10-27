@@ -13,7 +13,7 @@ $(document).ready(function(){
     var commaFormatter = (function () {
         return {
             format: function (input) {
-                // acc 클래스가 없으면 그냥 종료
+                // unit 클래스가 없으면 그냥 종료
                 if (!input.classList.contains('unit')) return;
     
                 var value = input.value.replace(/[^0-9]/g, ''); // 숫자 이외 제거
