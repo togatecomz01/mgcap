@@ -44,6 +44,10 @@ table:has(.no-results) thead { display:none; }
 table:has(.no-results) td { margin:0; padding:0; border:0; }
 .no-results { padding-top:150px; width: 100%; border:var(--table-border); border-radius:8px; }
 .no-results p { padding-top:124px; width:100%; min-height:400px; font-size: var(--font28); font-weight: var(--font-w-m); text-align:center; background: url('../../images/content/no-result.png') no-repeat center top; background-size:120px 100px;}
+/* 완료 */
+.completed { padding-top:150px; width: 100%; border:var(--table-border); border-radius:8px; }
+.completed p { padding-top:124px; width:100%;  font-size: var(--font28); font-weight: var(--font-w-b); text-align:center; background: url('../../images/content/contrackComp.png') no-repeat center top; background-size:120px 100px;}
+.completed span {display: block; margin-top: 16px; min-height:200px;width: 100%; font-weight: var(--font-w-r); color: var(--color-45); text-align: center;}
 
 /* 공지사항 리스트 */
 .mo-list tbody tr td.title { text-align:left; }
@@ -92,7 +96,7 @@ table:has(.no-results) td { margin:0; padding:0; border:0; }
     .mo-appendix tbody tr {display: grid; grid-template-columns: 1fr;}
     .mo-appendix tbody tr th.th-t {border-right: none; background-color: var(--table-th); font-weight: var(--font-w-b);}
 
-    /* 공지사항 리스트 */
+    /* 공지사항 리스트 + result 클래스로 스타일링 추가 */
     .mo-list colgroup,
     .mo-list thead,
     .mo-list tbody .num,
@@ -105,12 +109,26 @@ table:has(.no-results) td { margin:0; padding:0; border:0; }
     .mo-list tbody tr td.inquiry { position:relative; padding:0 12px 0 24px; }
     .mo-list tbody tr td.inquiry::before { content:""; display:inline-block; position:absolute; left:0; width:18px; height:18px; background:url("../../images/com/svg/ico_inquiry.svg")no-repeat center center; }
     .mo-list tbody td.title { display:block; font-size:var(--font16); font-weight:var(--font-w-m); color:var(--color-45); text-align:left; }
+    
+    .mo-list.result tbody tr {position: relative; padding: 20px 40px 20px 24px;}
+    .mo-list.result tbody tr::after {content: ''; position: absolute; right: 24px; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background: url('../../images/com/svg/ico_arr.svg') no-repeat center center; background-size: contain;}
+    .mo-list.result tbody tr td {display: block; text-align: left; font-size: var(--font16);}
+    .mo-list.result tbody tr td:first-of-type {margin-bottom: 10px; font-weight: var(--font-w-m); color: var(--primary);}
+    .mo-list.result tbody tr td:first-of-type::before {content: '[';}
+    .mo-list.result tbody tr td:first-of-type::after {content: ']';}
+
     /* date 항목 추가 */
     .mo-list tbody tr td.date:only-of-type,
     .mo-list tbody tr td.date + td.date {margin-right: 10px;}
     .mo-list tbody tr td.date + td.date::before {content: "~"; margin: 0 4px 0 0;}
     /* 조회결과 없음 */
     table:has(.no-results) tbody tr td { display:block; }
+<<<<<<< Updated upstream
     .no-results { padding-top:98px; border:0; }
     .no-results p { padding-top:86px; min-height:200px; font-size:var(--font20); background-size:80px 66px;}
+=======
+    .no-results { border:0; }
+    /* 완료 */
+    .completed p {font-size: var(--font20); font-weight: var(--font-w-m);}
+>>>>>>> Stashed changes
 }

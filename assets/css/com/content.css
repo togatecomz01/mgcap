@@ -802,6 +802,16 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     .WCC21400VQ .form-group input.mo-phn { width:214px; }
     .WCC21401DS .btn-group .btn-download + .btn-download {margin-left:0;}
 
+    /* 법인계약 약정 */
+    .WCC21200VQ table,
+    .WCC21200VQ tbody,
+    .WCC21200VQ tr,
+    .WCC21200VQ th,
+    .WCC21200VQ td {display: block; width: 100%;}
+    .WCC21200VQ table {border-top: none; margin-top: 42px;}
+    .WCC21200VQ th {border: none; padding: 0; margin-bottom: 8px; text-align: left; background: none;}
+    .WCC21200VQ td {border: none; padding: 0; margin-bottom: 24px;}
+    .WCC21200VQ .btn-content.cta a, .btn-content.cta button {padding-left: 53px; white-space: nowrap; } 
     /*---------------------------------------------
         #회사소개
     ---------------------------------------------*/
