@@ -274,4 +274,21 @@ $(document).ready(function(){
         }, 1000);
     }
 
+    /**
+     * 금융상품
+     */
+    // 모든 앵커 링크 선택
+    const anchorLinks = document.querySelectorAll('.anchor-list .btn-group a');
+
+    // 각 링크에 클릭 이벤트 추가
+    anchorLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            // 모든 링크에서 active 클래스 제거
+            anchorLinks.forEach(l => l.classList.remove('active'));
+            
+            // 클릭된 링크에만 active 클래스 추가
+            this.classList.add('active');
+        });
+    });
+
 });

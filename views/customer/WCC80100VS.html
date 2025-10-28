@@ -184,14 +184,7 @@
                                             <label for="phn-first">팩스번호</label>
                                             <div class="flex-row mo-column">
                                                 <div>
-                                                    <select id="phn-first" required="" title="">
-                                                        <option value="0">선택</option>
-                                                        <option value="1">02</option>
-                                                        <option value="2">016</option>
-                                                        <option value="3">017</option>
-                                                        <option value="4">018</option>
-                                                        <option value="5">019</option>
-                                                    </select>
+                                                    <input id="phn-first" name="phn-second" type="tel" inputmode="numeric" class="pc-phn" autocomplete="tel-local-prefix" pattern="[0-9]{3,4}" maxlength="4" aria-describedby="desc-phone" value="1234">
                                                     <input id="phn-second" name="phn-second" type="tel" inputmode="numeric" class="pc-phn" autocomplete="tel-local-prefix" pattern="[0-9]{3,4}" maxlength="4" aria-describedby="desc-phone" value="1234">
                                                     <input id="phn-third" name="phn-third" type="tel" inputmode="numeric" class="pc-phn" autocomplete="tel-local-suffix" pattern="[0-9]{4}" maxlength="4" aria-describedby="desc-phone" value="5678">
                                                 </div>
