@@ -109,7 +109,7 @@ h5, p.tit { color:var(--color-2); font-size:1rem; font-weight:var(--font-w-b); }
 [class*="-group"] h4 + * ~ .rfrnc { margin-top:12px; }
 
 /**ÅØ½ºÆ®**/
-.page-container > .text-content > .group > h3 + .text-group:first-of-type { margin-top:72px; }
+/* .page-container > .text-content > .group > h3 + .text-group:first-of-type { margin-top:72px; } */
 .text-content * + p { margin-top:18px; }
 .text-content p.hypn, .text-content .star, .text-content .rfrnc, .text-content .square { color:var(--color-6);  }
 .text-content p.hypn:before,
