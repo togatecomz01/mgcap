@@ -636,7 +636,7 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCC70102PS .note-group .tit {font-size: 20px; font-weight: var(--font-w-b); padding-left: 40px; padding-bottom: 20px; left: -20px;}
 .WCC70102PS .note-group .tit::before { content:""; position:absolute; top:6px; left:5px; display:block; width:20px; height:20px; background:var(--ico-info-squere)no-repeat center; background-size:auto 20px; }
 .WCC70102PS .pop-body .info-content li {color:var(--color-6); font-size: 14px; left:13px; }
-.WCC70102PS .pop-body .info-content .note-group{background-color: var(--color-f6); }
+.WCC70102PS .pop-body .info-content .note-group{background-color: var(--color-f6); border-radius: 10px;}
 
 /*---------------------------------------------
     #미디어쿼리
@@ -886,16 +886,22 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     .WCC21400VQ .form-group input.mo-phn { width:214px; }
     .WCC21401DS .btn-group .btn-download + .btn-download {margin-left:0;}
 
-    /* 법인계약 약정 */
-    .WCC21200VQ table,
-    .WCC21200VQ tbody,
-    .WCC21200VQ tr,
-    .WCC21200VQ th,
-    .WCC21200VQ td {display: block; width: 100%;}
-    .WCC21200VQ table {border-top: none; margin-top: 42px;}
-    .WCC21200VQ th {border: none; padding: 0; margin-bottom: 8px; text-align: left; background: none;}
-    .WCC21200VQ td {border: none; padding: 0; margin-bottom: 24px;}
-    .WCC21200VQ .btn-content.cta a, .btn-content.cta button {padding-left: 53px; white-space: nowrap; } 
+    /* 법인계약 약정 + 상담신청 팝업 모바일용*/
+    .WCC21200VQ table, .WCC70102PS table,
+    .WCC21200VQ tbody, .WCC70102PS tbody,
+    .WCC21200VQ tr, .WCC70102PS tr,
+    .WCC21200VQ th, .WCC70102PS th,
+    .WCC21200VQ td, .WCC70102PS td {display: block; width: 100%;}
+    .WCC21200VQ table, .WCC70102PS table {border-top: none; margin-top: 42px;}
+    .WCC21200VQ th, .WCC70102PS th {border: none; padding: 0; margin-bottom: 8px; text-align: left; background: none;}
+    .WCC21200VQ td, .WCC70102PS td {border: none; padding: 0; margin-bottom: 24px;}
+
+    .WCC21200VQ .btn-content.cta a, 
+    .WCC21200VQ .btn-content.cta button {padding-left: 53px; white-space: nowrap; }
+    
+    .WCC70102PS label.radio {padding: 10px 0 0 0;}
+    .WCC70102PS .check {margin-top: 10px;}
+    .WCC70102PS .note-group .tit {left: 0;}
     /*---------------------------------------------
         #회사소개
     ---------------------------------------------*/
@@ -998,4 +1004,5 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     .WCS10100VQ .text-content .caption,
     .WCS10200VQ .text-content .caption,
     .WCS10201DQ .text-content .caption { padding-bottom:18px; }
+    
 }
