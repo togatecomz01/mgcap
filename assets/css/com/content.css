@@ -24,6 +24,7 @@ body{
     --ico-cst-07:url("../../images/content/PRT/w/ico_CST-008_7.png"); /**은행 거절 아이콘**/
 
     --ico-info:url("../../images/com/svg/ico_info_guide.svg");/** 유의사항 안내 **/
+    --ico-info-squere:url("../../images/content/finance/WCC70102PS_notice.png");/* 팝업 유의사항 안내 */
     --ico-arrow-black:url("../../images/content/ico_arrow_black.svg");/** 절차 화살표 black **/
 
 }
@@ -622,6 +623,20 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCS40800VQ .upload-label { margin-bottom:0; }
 .WCS40800VQ .upload-label input[type="file"] { display:none; }
 .WCS40800VQ .upload-label .fileLabel { padding:20px 16px; width:100%; max-width:680px; border:var(--board); text-align:left; }
+
+/* 상담신청 팝업 */
+.WCC70102PS .flex-row:has(> input + span) {align-items: center;} /* 이메일 */
+.WCC70102PS label.radio {margin-bottom: 0;}
+.WCC70102PS tr td p {margin-top: 10px;}
+.WCC70102PS #email-select {margin-top: 10px;}
+.WCC70102PS tr td textarea { min-height:200px; }
+.WCC70102PS .error { border: 1px solid var(--error); }
+.WCC70102PS .check { margin-top: 30px; }
+.WCC70102PS .note-group .dot li::before { background-color: var(--color-6); }
+.WCC70102PS .note-group .tit {font-size: 20px; font-weight: var(--font-w-b); padding-left: 40px; padding-bottom: 20px; left: -20px;}
+.WCC70102PS .note-group .tit::before { content:""; position:absolute; top:6px; left:5px; display:block; width:20px; height:20px; background:var(--ico-info-squere)no-repeat center; background-size:auto 20px; }
+.WCC70102PS .pop-body .info-content li {color:var(--color-6); font-size: 14px; left:13px; }
+.WCC70102PS .pop-body .info-content .note-group{background-color: var(--color-f6); }
 
 /*---------------------------------------------
     #미디어쿼리

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>상담신청 정보입력 팝업</title>
+
+    <meta name="keywords" content="MG캐피탈" />
+    <meta name="copyright" content="copyrights 2025 MG캐피탈" />
+    <meta name="viewport" content="width=device-width" />
+    <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="No-Cache" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico"/>
+    <link rel="stylesheet" href="../../assets/css/com/default.css" />
+    <link rel="stylesheet" href="../../assets/css/com/common.css" />
+    <link rel="stylesheet" href="../../assets/css/com/style.css" />
+    <link rel="stylesheet" href="../../assets/css/com/fonts.css" />
+    <link rel="stylesheet" href="../../assets/css/com/layout.css" />
+    <link rel="stylesheet" href="../../assets/css/com/nav.css" />
+    <link rel="stylesheet" href="../../assets/css/com/input.css" />
+    <link rel="stylesheet" href="../../assets/css/com/button.css" />
+    <link rel="stylesheet" href="../../assets/css/com/tab.css" />
+    <link rel="stylesheet" href="../../assets/css/com/table.css" />
+    <link rel="stylesheet" href="../../assets/css/com/content.css" />
+    <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+    <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="bodyWrap">
+            <main class="contentWrap"></main>
+        </div>
+
+        <div id="fullPopup1" class="layerPopup full on WCC70102PS">
+            <div class="pop-area">
+                <div class="pop-header">
+                    <h2 class="pop-tit">상품명 + 상담신청</h2>
+                </div>
+
+                <div class="pop-body">
+                    <div class="pop-content">
+                        <form>
+                            <div class="table-content">
+                                <table>
+                                    <caption>상품명 + 상담신청 입력 폼</caption>
+                                    <colgroup>
+                                        <col style="width: 180px;"> 
+                                        <col style="width: auto;">  
+                                    </colgroup>
+                                    <tbody>
+                                        <!-- 상품 분류 -->
+                                        <tr>
+                                            <th scope="row">상품 분류</th>
+                                            <td>
+                                                <select id="product" title="상품 분류 선택">
+                                                    <option>신차</option>
+                                                    <option>중고차</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <!-- 고객명 -->
+                                        <tr>
+                                            <th scope="row">고객명</th>
+                                            <td><input id="customer" type="text" placeholder="고객명 입력"></td>
+                                        </tr>
+                                        <!-- 회신방법 -->
+                                        <tr>
+                                            <th scope="row">회신방법</th>
+                                            <td>
+                                                <div class="flex-row gap20"> 
+                                                    <label class="radio">
+                                                        <input type="radio" name="reply" value="phone" checked>
+                                                        <span>휴대폰</span>
+                                                    </label>
+                                                    <label class="radio">
+                                                        <input type="radio" name="reply" value="email">
+                                                        <span>이메일</span>
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- 연락처 -->
+                                        <tr>
+                                            <th scope="row">연락처</th>
+                                            <td>
+                                                <input id="phone-number" type="tel" class="error" placeholder="숫자만 입력"> <!-- 입력시 클래스 제거 -->
+                                                <p class="point-r tal">휴대폰번호를 입력해주세요</p>
+                                            </td>
+                                        </tr>
+                                        <!-- 이메일 -->
+                                        <tr>
+                                            <th scope="row">이메일</th>
+                                            <td>
+                                                <div class="flex-row gap10">
+                                                    <input id="email-id" type="email">
+                                                    <span>@</span>
+                                                    <input id="email-domain" type="email">
+                                                </div>
+                                                <select id="email-select" title="이메일 도메인 선택">
+                                                    <option>직접입력</option>
+                                                    <option>naver.com</option>
+                                                    <option>gmail.com</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <!-- 상담내용 -->
+                                        <tr>
+                                            <th scope="row">상담내용</th>
+                                            <td>
+                                                <textarea placeholder="상담내용 입력"></textarea>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="form-content">
+                                <div class="form-wrap">
+                                    <fieldset>
+                                        <legend>상담 정보 이용 동의</legend>
+                                        <label class="check">
+                                            <input type="checkbox" name="agree" value="" required>
+                                            <p>위 내용을 상담을 위한 정보로 이용하는 것에 동의합니다.</p>
+                                        </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="info-content bo-t0">
+                        <div class="note-group">
+                            <p class="tit">유의사항 안내</p>
+                            <ul class="dot">
+                                <li>입력하신 정보는 본인확인 및 상담 용도로만 사용되며 상담 처리를 위해 일정기간동안 보관됩니다.</li>
+                                <li>담당자의 업무가 많을 경우 답변이 늦어질 수 있습니다.</li>
+                                <li>답변이 지연될 경우 죄송하지만 "1111-1111"로 전화주시기 바랍니다</li>
+                                <li>로그인 후 상담신청을 하신 경우에만 작성내용을 확인 할 수 있으며, 비로그인 상태에서 상담신청을 하신 경우에는 그 내용을 고객님은 확인하실 수 없습니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                        
+                    </div>
+                </div>
+                <div class="pop-footer">
+                    <div class="btn-content cta">
+                        <div class="button-group">
+                            <button type="button" class="btn-pop-secondary" data-popup-close="fullPopup1">닫기</button>
+                            <button type="button" class="btn-pop-primary" data-popup-close="fullPopup1">신청</button>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" name="button" class="btn btn-close right" data-popup-close="fullPopup1">닫기</button>
+            </div>
+        </div>
+        <!-- e: 상담신청 팝업(fullPopup1) -->
+
+        <!-- S : 공통 알럿 -->
+        <!-- D: 화면 설계서 바탕으로 메시지 변경 필요. -->
+        <!-- D: 신청 버튼 눌렀을 때 신청완료 얼럿메시지 노출 -->
+        <!-- D: 얼럿에서 확인 버튼 클릭 시 해당 페이지 메인으로 이동 -->
+        <section class="modal-container">
+            <div id="modal" class="layerPopup modal">
+                <div class="pop-content alert">
+                    <div class="pop-body">
+                        <p>알럿내용을 입력하세요.</p>
+                    </div>
+                    <div class="pop-footer">
+                        <div class="button-content">
+                            <button type="button" class="btn-pop-primary" data-popup-close="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 페이지 열자마자 팝업창 뜨도록 추가한 임시 스크립트 -->
+    <script>
+        $(document).ready(function() {
+            $(".contentWrap").css("overflow", "hidden");
+        });
+    </script>
+</body>
+</html>
