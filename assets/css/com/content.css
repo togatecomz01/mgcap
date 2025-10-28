@@ -692,7 +692,6 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCS40800VQ .flex-row:has(.ipt-file) { justify-content:space-between; }
 .WCS40800VQ .ipt-file input[type="text"] { height:58px; border:0; cursor:auto; }
 .WCS40800VQ .ipt-file input[type="text"]:focus-visible { outline:0; }
-.WCS40800VQ .btn-form.uploadButton { max-width:119px; height:58px; background-color:var(--color-2); color:var(--white); }
 .WCS40800VQ .upload-label { margin-bottom:0; }
 .WCS40800VQ .upload-label input[type="file"] { display:none; }
 .WCS40800VQ .upload-label .fileLabel { padding:20px 16px; width:100%; max-width:680px; border:var(--board); text-align:left; }
