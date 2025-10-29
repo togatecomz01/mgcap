@@ -282,25 +282,27 @@ $(document).ready(function(){
 
     // 초기 상태 설정 함수
     function initPanels() {
+        const activeButton = document.querySelector('.anchor-list .btn-group button.active');
+
         if (isMobile()) {
-            // 모바일: 모든 패널 숨기고 첫 번째만 표시
+            // 모바일: 현재 active 패널만 표시
             $('.anchor-panel').hide();
-            const firstButton = buttons[0];
-            if (firstButton) {
-                $(firstButton.dataset.target).show();
-                firstButton.classList.add('active');
+            const targetButton = activeButton || buttons[0];
+            if (targetButton) {
+                $(targetButton.dataset.target).show();
+                if (!activeButton) targetButton.classList.add('active');
             }
         } else {
             // PC: 모든 패널 표시
             $('.anchor-panel').show();
-            buttons.forEach(btn => btn.classList.remove('active'));
+            if (!activeButton && buttons[0]) buttons[0].classList.add('active');
         }
     }
 
     // 페이지 로드 시 초기화
     initPanels();
 
-    // 화면 크기 변경 시 재초기화
+    // 화면 크기 변경 시 재초기화 (debounce 적용)
     let resizeTimer;
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimer);
@@ -312,17 +314,25 @@ $(document).ready(function(){
         button.addEventListener('click', function(e) {
             const targetId = this.dataset.target;
             
+            // 버튼 활성화 상태 변경
+            buttons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            
             if (isMobile()) {
+                // 모바일: 패널 전환
                 e.preventDefault();
-                // 버튼 활성화 상태
-                buttons.forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
-
                 $('.anchor-panel').hide();
                 $(targetId).show();
             } else {
-                // PC: 앵커 이동 (기본 동작)
-                document.querySelector(targetId).scrollIntoView({behavior: 'smooth'});
+                // PC: 헤더 높이 계산하여 앵커 이동
+                e.preventDefault();
+                const targetElement = document.querySelector(targetId);
+                const targetPosition = targetElement.offsetTop;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
             }
         });
     });

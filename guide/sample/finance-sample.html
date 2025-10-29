@@ -221,12 +221,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="btn-content cta">
-                            <div class="button-group">
-                                <a href="javascript:void(0);" class="btn-secondary">금융계산</a>
-                                <a href="javascript:void(0);" class="btn-primary">상담신청</a>
-                            </div>
-                        </div>
                     </div>
                 </section>
             </main>
@@ -237,7 +231,7 @@
         function updateButton() {
             if (window.innerWidth > 768) return;
             
-            const btn = document.querySelector('.anchor-container > .btn-content.cta');
+            const btn = document.querySelector('.fi-bottom-container');
             const footer = document.querySelector('footer');
             const pageContainer = document.querySelector('.page-container');
             const header = document.querySelector('header');
@@ -255,9 +249,13 @@
             // page-container가 header에 붙었는지 확인 (현재 화면 기준)
             const isPageContainerSticky = pageContainerRect.top <= headerHeight;
 
-            // page-container가 header에 붙기 전이면 버튼 숨김
+            // page-container가 header에 붙기 전이면 버튼 숨김 (초기 상태)
             if (!isPageContainerSticky) {
                 btn.classList.remove('on');
+                btn.style.position = '';
+                btn.style.bottom = '';
+                btn.style.zIndex = '';
+                btn.style.backgroundColor = '';
                 return;
             }
 
@@ -268,9 +266,11 @@
             if (scrollTop + windowHeight >= footerTop) {
                 // absolute로 전환 (푸터 바로 위에 고정)
                 btn.classList.remove('on');
+                btn.style.cssText = 'position:absolute; bottom:0; z-index:1; background-color:var(--white); padding-bottom:0;';
             } else {
                 // fixed로 하단 고정
                 btn.classList.add('on');
+                btn.style.cssText = '';
             }
         }
 
