@@ -317,7 +317,7 @@ main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
 .WCC80100VS .table-content tr:last-child td { padding:16px 16px 16px 16px; border-bottom:1px solid var(--color-d); }
 .WCC80100VS .table-content tr td label.check { margin-bottom:0; }
 .WCC80100VS .note-group { margin-top:52px; } /* 2025.10.27 추가 */
-.WCC80100VS .note-group p { text-align:center; }
+.WCC80100VS .note-group p { text-align:center; font-size: var(--font20); }
 .WCC80100VS .note-group p.date { margin-top:42px; font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-2); }
 
 /** 금융분쟁정보 및 유용한 사이트 정보 **/
@@ -456,6 +456,9 @@ main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
 .WCC60300VQ .se-select { width: auto; }
 .WCC60300VQ .se-select select { padding: 12px 50px 12px 20px; height: auto; border-radius: 100px; border: var(--board); background: var(--ico-select) no-repeat right 20px center; }
 
+/* 고객센터 - 분리보존된 개인신용정보의 활용안내 */
+.WCC601300VQ .tac {margin: 20px 0 52px 0;}
+
 /* 고객센터 - 개인신용평가 대응권 */
 .WCC601400VQ .btn-group { font-size:0; }
 .WCC601400VQ .btn-group .btn-download + .btn-download {margin-left: 26px;}
@@ -572,10 +575,10 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCA60300VQ .search-form{display:block;position:relative;width:530px;margin:0 0 0 auto}
 .WCA60300VQ .form-wrap.search-form>.group{background:none}
 .WCA60300VQ .search-form .group:only-of-type+.btn-form{right:7px}
-.WCA60300VQ .card-list{display:flex;flex-wrap:wrap;margin-top:24px;gap:40px 20px}
-.WCA60300VQ .card-item{width:calc((100% - 46px)/3)}
+.WCA60300VQ .card-list{display:flex;flex-wrap:wrap;margin-top:24px;gap:56px 46px}
+.WCA60300VQ .card-item{width:calc((100% - 100px)/3)}
 .WCA60300VQ .card-item a{display:flex;flex-direction:column}
-.WCA60300VQ .card-image{width:100%;aspect-ratio:109/60;background-color:#f0f0f0;margin-bottom:20px}
+.WCA60300VQ .card-image{width:100%;aspect-ratio:109/60;background-color:#f0f0f0; border-radius: 8px; margin-bottom:20px}
 .WCA60300VQ .card-text-content h4,.WCA60300VQ .card-text-content p{margin-bottom:16px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical}
 .WCA60300VQ .card-text-content h4{font-size:var(--font22)}
 .WCA60300VQ .card-text-content p{font-size:var(--font18);color:var(--color-45)}
@@ -584,9 +587,10 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 /* 회사소개 - 클린신고센터 (WCA90107VQ), 신고센터 처리현황(WCA90103VQ) */
 .WCA90107VQ label.radio,
 .WCA90103VQ label.radio {padding-left: 0;}
-
+.WCA90107VQ .text-content, .WCA90100VQ .text-content {margin-bottom: 56px;}
 /* 회사소개 - 성희롱신고센터 (WCA90100VQ) */
 .WCA90100VQ strong+ol {margin-top: 18px;}
+
 
 /* 회사소개 - 공시정보 (WCA50100VQ) + 신용평가(WCA50300VQ) */
 .WCA50100VQ { --logo-cst-14:url("../../images/content/dart.png"); /**DART 전자공시시스템**/ }
@@ -1117,6 +1121,8 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     .WCA50300VQ .table-group {margin-bottom: 42px;}
     /* 회사소개 - 채용공고 */
     .WCR50100VQ .mo-list td.title::before { display: block; width: fit-content; margin-bottom: 10px; }
+    /* 회사소개 - 클린신고센터 + 성희롱 및 직장내 괴롭힘 신고센터 */
+    .WCA90107VQ .text-content, .WCA90100VQ .text-content {margin-bottom: 32px;}
 
     /** 찾아오시는 길 **/
     .WCA70100VQ .map-content { padding-top:32px; }
