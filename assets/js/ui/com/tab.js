@@ -277,17 +277,53 @@ $(document).ready(function(){
     /**
      * 금융상품
      */
-    // 모든 앵커 링크 선택
-    const anchorLinks = document.querySelectorAll('.anchor-list .btn-group a');
+    const buttons = document.querySelectorAll('.anchor-list .btn-group button');
+    const isMobile = () => window.innerWidth <= 768;
 
-    // 각 링크에 클릭 이벤트 추가
-    anchorLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            // 모든 링크에서 active 클래스 제거
-            anchorLinks.forEach(l => l.classList.remove('active'));
+    // 초기 상태 설정 함수
+    function initPanels() {
+        if (isMobile()) {
+            // 모바일: 모든 패널 숨기고 첫 번째만 표시
+            $('.anchor-panel').hide();
+            const firstButton = buttons[0];
+            if (firstButton) {
+                $(firstButton.dataset.target).show();
+                firstButton.classList.add('active');
+            }
+        } else {
+            // PC: 모든 패널 표시
+            $('.anchor-panel').show();
+            buttons.forEach(btn => btn.classList.remove('active'));
+        }
+    }
+
+    // 페이지 로드 시 초기화
+    initPanels();
+
+    // 화면 크기 변경 시 재초기화
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(initPanels, 150);
+    });
+
+    // 버튼 클릭 이벤트
+    buttons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            const targetId = this.dataset.target;
             
-            // 클릭된 링크에만 active 클래스 추가
-            this.classList.add('active');
+            if (isMobile()) {
+                e.preventDefault();
+                // 버튼 활성화 상태
+                buttons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+
+                $('.anchor-panel').hide();
+                $(targetId).show();
+            } else {
+                // PC: 앵커 이동 (기본 동작)
+                document.querySelector(targetId).scrollIntoView({behavior: 'smooth'});
+            }
         });
     });
 
