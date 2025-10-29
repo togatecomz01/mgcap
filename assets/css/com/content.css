@@ -15,13 +15,13 @@ body{
     --process-step5-bg:#204BAB;
     --process-check:url("../../images/com/svg/ico_form_check.svg"); /** 프로세스 style2 체크 **/
     --ico-arrow:url("../../images/content/ico_arrow.svg");
-    --ico-cst-01:url("../../images/content/PRT/w/ico_CST-008_1.png"); /**문서 아이콘**/
-    --ico-cst-02:url("../../images/content/PRT/w/ico_CST-008_2.png"); /**프린터 아이콘**/
-    --ico-cst-03:url("../../images/content/PRT/w/ico_CST-008_3.png"); /**돋보기 아이콘**/
-    --ico-cst-04:url("../../images/content/PRT/w/ico_CST-008_4.png"); /**돈 아이콘**/
-    --ico-cst-05:url("../../images/content/PRT/w/ico_CST-008_5.png"); /**펜 아이콘**/
-    --ico-cst-06:url("../../images/content/PRT/w/ico_CST-008_6.png"); /**보안 금지 아이콘**/
-    --ico-cst-07:url("../../images/content/PRT/w/ico_CST-008_7.png"); /**은행 거절 아이콘**/
+    --ico-cst-01:url("../../images/content/custportal/w/custportal_document.png"); /**문서 아이콘**/
+    --ico-cst-02:url("../../images/content/custportal/w/custportal_printer.png"); /**프린터 아이콘**/
+    --ico-cst-03:url("../../images/content/custportal/w/custportal_magnifier.png"); /**돋보기 아이콘**/
+    --ico-cst-04:url("../../images/content/custportal/w/custportal_money.png"); /**돈 아이콘**/
+    --ico-cst-05:url("../../images/content/custportal/w/custportal_pen.png"); /**펜 아이콘**/
+    --ico-cst-06:url("../../images/content/custportal/w/custportal_no_security.png"); /**보안 금지 아이콘**/
+    --ico-cst-07:url("../../images/content/custportal/w/custportal_bank_reject.png"); /**은행 거절 아이콘**/
 
     --ico-info:url("../../images/com/svg/ico_info_guide.svg");/** 유의사항 안내 **/
     --ico-info-squere:url("../../images/content/finance/WCC70102PS_notice.png");/* 팝업 유의사항 안내 */
@@ -204,20 +204,20 @@ main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
 /******모잡인조회**/
 .MGC-PRT-CST-012 {
     /** 모집인 조회 MGC-PRT-CST-012 **/
-    --logo-cst-01:url("../../images/content/PRT/w/logo_KFOB.png"); /**은행엽합회**/
+    --logo-cst-01:url("../../images/content/custportal/w/logo_KFOB.png"); /**은행엽합회**/
 
-    --logo-cst-02:url("../../images/content/PRT/w/logo_autoplus.png"); /**오토플러스(주)**/
-    --logo-cst-03:url("../../images/content/PRT/w/logo_A1auto.png"); /**(주)에이원오토**/
-    --logo-cst-04:url("../../images/content/PRT/w/logo_SIgroup.png"); /**(주)에스아이그룹**/
-    --logo-cst-05:url("../../images/content/PRT/w/logo_carmento.png"); /**주식회사 카멘토**/
-    --logo-cst-06:url("../../images/content/PRT/w/logo_CScar.png"); /**주식회사 씨에스카**/
-    --logo-cst-07:url("../../images/content/PRT/w/logo_SM network.png"); /**주식회사 성문네트웍스**/
-    --logo-cst-08:url("../../images/content/PRT/w/logo_surecar.png"); /**㈜슈어카**/
-    --logo-cst-09:url("../../images/content/PRT/w/logo_SmartDirectCar.png"); /**스마트다이렉트카**/
-    --logo-cst-10:url("../../images/content/PRT/w/logo_chanawa.png"); /**주식회사 카베이**/
-    --logo-cst-11:url("../../images/content/PRT/w/logo_sihyun.png"); /**주식회사 시현신차장기렌터카**/
-    --logo-cst-12:url("../../images/content/PRT/w/logo_getcha.png"); /**㈜겟차**/
-    --logo-cst-13:url("../../images/content/PRT/w/logo_automobile.png"); /**(주)스타오토모빌**/
+    --logo-cst-02:url("../../images/content/custportal/w/logo_autoplus.png"); /**오토플러스(주)**/
+    --logo-cst-03:url("../../images/content/custportal/w/logo_A1auto.png"); /**(주)에이원오토**/
+    --logo-cst-04:url("../../images/content/custportal/w/logo_SIgroup.png"); /**(주)에스아이그룹**/
+    --logo-cst-05:url("../../images/content/custportal/w/logo_carmento.png"); /**주식회사 카멘토**/
+    --logo-cst-06:url("../../images/content/custportal/w/logo_CScar.png"); /**주식회사 씨에스카**/
+    --logo-cst-07:url("../../images/content/custportal/w/logo_SM network.png"); /**주식회사 성문네트웍스**/
+    --logo-cst-08:url("../../images/content/custportal/w/logo_surecar.png"); /**㈜슈어카**/
+    --logo-cst-09:url("../../images/content/custportal/w/logo_SmartDirectCar.png"); /**스마트다이렉트카**/
+    --logo-cst-10:url("../../images/content/custportal/w/logo_chanawa.png"); /**주식회사 카베이**/
+    --logo-cst-11:url("../../images/content/custportal/w/logo_sihyun.png"); /**주식회사 시현신차장기렌터카**/
+    --logo-cst-12:url("../../images/content/custportal/w/logo_getcha.png"); /**㈜겟차**/
+    --logo-cst-13:url("../../images/content/custportal/w/logo_automobile.png"); /**(주)스타오토모빌**/
   
 }
 
@@ -247,17 +247,17 @@ main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
 .WCU11000VQ .img-list li { position:relative; padding-top:200px; width:calc(100% / 5); }
 .WCU11000VQ .img-list li:has(.s-tit) { padding-top:132px; padding-bottom:88px; }
 .WCU11000VQ .img-list li p { text-align:center; }
-.WCU11000VQ .img-list li:nth-child(even)::before { background:url("../../images/content/PRT/w/ico_rotation.png")no-repeat 50%/48px auto; }
-.WCU11000VQ .img-list li:nth-child(1)::before { background:url("../../images/content/PRT/w/prt_013_01.png")no-repeat 50%/180px auto; }
-.WCU11000VQ .img-list li:nth-child(3)::before { background:url("../../images/content/PRT/w/prt_013_02.png")no-repeat 50%/180px auto; }
-.WCU11000VQ .img-list li:nth-child(5)::before { background:url("../../images/content/PRT/w/prt_013_03.png")no-repeat 50%/180px auto; }
+.WCU11000VQ .img-list li:nth-child(even)::before { background:url("../../images/content/custportal/w/ico_rotation.png")no-repeat 50%/48px auto; }
+.WCU11000VQ .img-list li:nth-child(1)::before { background:url("../../images/content/custportal/w/prt_013_01.png")no-repeat 50%/180px auto; }
+.WCU11000VQ .img-list li:nth-child(3)::before { background:url("../../images/content/custportal/w/prt_013_02.png")no-repeat 50%/180px auto; }
+.WCU11000VQ .img-list li:nth-child(5)::before { background:url("../../images/content/custportal/w/prt_013_03.png")no-repeat 50%/180px auto; }
 
 .WCU11000VQ .process-content .tit { margin-bottom:0; }
 .WCU11000VQ .process-content .text-list li { display:block; padding-top:12px; }
 .WCU11000VQ .process-content .text-list li:first-of-type { padding-top:0; }
 
 /** 유용한 정보 **/
-.WCU11001VQ .btn-group.w50 .btn-link:first-of-type { margin-top:0; background-image:url("../../images/content/PRT/w/ico_hand.png"); }
+.WCU11001VQ .btn-group.w50 .btn-link:first-of-type { margin-top:0; background-image:url("../../images/content/custportal/w/ico_hand.png"); }
 .WCU11001VQ .cap-form,
 .WCU10900VQ .cap-form { display:flex; align-items:center; justify-content:space-between; }
 .WCU11001VQ .cap-form .caption,
@@ -269,8 +269,8 @@ main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
 
 /** 민원처리안내 **/
 .WCC20700VS {
-    --logo-207-01:url("../../images/content/PRT/w/ico_207_01.png"); /**민원사무편람, 개인정보필수동의서**/
-    --logo-207-02:url("../../images/content/PRT/w/ico_207_02.png"); /**민원신청서, 민원취하서**/
+    --logo-207-01:url("../../images/content/custportal/w/ico_207_01.png"); /**민원사무편람, 개인정보필수동의서**/
+    --logo-207-02:url("../../images/content/custportal/w/ico_207_02.png"); /**민원신청서, 민원취하서**/
 }
 .WCC20700VS .btn-group .btn-download,
 .WCU40130VQ .btn-group .btn-link { padding:20px 30px 24px 104px; background-size:36px; background-position:left 37px center; }
@@ -751,13 +751,13 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 @media (max-width:767px) {
 
     body{
-        --ico-cst-01:url("../../images/content/PRT/m/ico_CST-008_1.png"); /**문서 아이콘**/
-        --ico-cst-02:url("../../images/content/PRT/m/ico_CST-008_2.png"); /**프린터 아이콘**/
-        --ico-cst-03:url("../../images/content/PRT/m/ico_CST-008_3.png"); /**돋보기 아이콘**/
-        --ico-cst-04:url("../../images/content/PRT/m/ico_CST-008_4.png"); /**돈 아이콘**/
-        --ico-cst-05:url("../../images/content/PRT/m/ico_CST-008_5.png"); /**펜 아이콘**/
-        --ico-cst-06:url("../../images/content/PRT/m/ico_CST-008_6.png"); /**보안 금지 아이콘**/
-        --ico-cst-07:url("../../images/content/PRT/m/ico_CST-008_7.png"); /**은행 거절 아이콘**/
+        --ico-cst-01:url("../../images/content/custportal/m/custportal_document.png"); /**문서 아이콘**/
+        --ico-cst-02:url("../../images/content/custportal/m/custportal_printer.png"); /**프린터 아이콘**/
+        --ico-cst-03:url("../../images/content/custportal/m/custportal_magnifier.png"); /**돋보기 아이콘**/
+        --ico-cst-04:url("../../images/content/custportal/m/custportal_money.png"); /**돈 아이콘**/
+        --ico-cst-05:url("../../images/content/custportal/m/custportal_pen.png"); /**펜 아이콘**/
+        --ico-cst-06:url("../../images/content/custportal/m/custportal_no_security.png"); /**보안 금지 아이콘**/
+        --ico-cst-07:url("../../images/content/custportal/m/custportal_bank_reject.png"); /**은행 거절 아이콘**/
     }
 
     /*---------------------------------------------
@@ -843,10 +843,10 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     .WCU11000VQ .img-list li:nth-child(odd) { padding:22px 18px; border:1px solid var(--color-e); border-radius:8px; }
     .WCU11000VQ .img-list li::before { width:52px; height:52px; }
     .WCU11000VQ .img-list li:nth-child(odd)::before { top:50%; left:20px; transform:translate(0,-50%); }
-    .WCU11000VQ .img-list li:nth-child(even)::before { width:18px; height:18px; background:url("../../images/content/PRT/w/ico_rotation.png")no-repeat 50%/18px auto; }
-    .WCU11000VQ .img-list li:nth-child(1)::before { background:url("../../images/content/PRT/m/prt_013_01.png")no-repeat 50%/52px auto; }
-    .WCU11000VQ .img-list li:nth-child(3)::before { background:url("../../images/content/PRT/m/prt_013_02.png")no-repeat 50%/52px auto; }
-    .WCU11000VQ .img-list li:nth-child(5)::before { background:url("../../images/content/PRT/m/prt_013_03.png")no-repeat 50%/52px auto; }
+    .WCU11000VQ .img-list li:nth-child(even)::before { width:18px; height:18px; background:url("../../images/content/custportal/w/ico_rotation.png")no-repeat 50%/18px auto; }
+    .WCU11000VQ .img-list li:nth-child(1)::before { background:url("../../images/content/custportal/m/prt_013_01.png")no-repeat 50%/52px auto; }
+    .WCU11000VQ .img-list li:nth-child(3)::before { background:url("../../images/content/custportal/m/prt_013_02.png")no-repeat 50%/52px auto; }
+    .WCU11000VQ .img-list li:nth-child(5)::before { background:url("../../images/content/custportal/m/prt_013_03.png")no-repeat 50%/52px auto; }
     .WCU11000VQ .img-list li .tit { display:inline-block; margin-bottom:0; padding-left:72px; }
 
     .WCU11000VQ .process-content li { align-items:center; padding:18px 16px; }
