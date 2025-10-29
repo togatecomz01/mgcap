@@ -100,7 +100,6 @@
                                 </form>
                             </div>
                         </div>
-                        <!-- s: 2025.10.27 첨부파일 수정 -->
                         <div class="text-group">
                             <h3>서류 업로드</h3>
                             <button class="btn-plus" type="button" title="파일 추가하기"></button>
@@ -113,13 +112,15 @@
                                             <col style="width:70%">
                                         </colgroup>
                                         <tbody>
+                                            <!-- s: 2025.10.28 첨부파일 수정-->
                                             <tr>
                                                 <th scope="row" class="essential">첨부파일</th>
                                                 <td class="tal">
-                                                    <div class="flex-row">
-                                                        <span class="ipt-file">
-                                                            <input class="form-control upload-text uploadInput" type="text" placeholder="파일을 입력해주세요" tabindex="0" readonly>
-                                                        </span>
+                                                    <div class="ipt-file flex-row">
+                                                        <label class="upload-label " for="files">
+                                                            <input id="files" class="upload" name="files" type="file" />
+                                                            <span class="fileLabel">선택된 파일 없음</span>
+                                                        </label>
                                                         <button type="button" class="btn-form uploadButton">파일 선택</button>
                                                     </div>
                                                 </td>
@@ -130,6 +131,7 @@
                                                     <input id="files-description" type="text" name="files-description" placeholder="파일명을 입력해 주세요.">
                                                 </td>
                                             </tr>
+                                            <!-- s: 2025.10.28 ipt-file 수정-->
                                         </tbody>
                                     </table>
                                 </form>
@@ -143,13 +145,15 @@
                                             <col style="width:70%">
                                         </colgroup>
                                         <tbody>
+                                            <!-- s: 2025.10.28 첨부파일 수정-->
                                             <tr>
                                                 <th scope="row" class="essential">첨부파일</th>
                                                 <td class="tal">
-                                                    <div class="flex-row">
-                                                        <span class="ipt-file">
-                                                            <input class="form-control upload-text uploadInput" type="text" placeholder="파일을 입력해주세요" tabindex="0" readonly>
-                                                        </span>
+                                                    <div class="ipt-file flex-row">
+                                                        <label class="upload-label " for="files2">
+                                                            <input id="files2" class="upload" name="files2" type="file" />
+                                                            <span class="fileLabel">선택된 파일 없음</span>
+                                                        </label>
                                                         <button type="button" class="btn-form uploadButton">파일 선택</button>
                                                     </div>
                                                 </td>
@@ -160,12 +164,12 @@
                                                     <input id="files-description" type="text" name="files-description" placeholder="파일명을 입력해 주세요.">
                                                 </td>
                                             </tr>
+                                            <!-- s: 2025.10.28 ipt-file 수정-->
                                         </tbody>
                                     </table>
                                 </form>
                             </div>
                         </div>
-                        <!-- e: 2025.10.27 첨부파일 수정 -->
                     </div>
                 </section>
             </main>
