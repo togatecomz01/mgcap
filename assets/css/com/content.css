@@ -554,6 +554,9 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCA30100VQ .timeline-list .desc { display: block; color: var(--color-6); }
 
 /******회사소개-채용안내 및 절차**/
+.WCR10400VQ .text-content, .WCR10400VQ .jsTab {max-width: 1400px; margin: 0 auto;}
+.WCR10400VQ.page-container:has(.tab-list.depth1) {padding:24px}
+.WCR10400VQ .text-content {border-top: none;}
 .WCR10400VQ ul.diamond-box { display: flex; padding: 32px 24px; margin-top: 32px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; background: var(--bg-box); }
 .WCR10400VQ ul.diamond-box li::before { content:"◆"; display:inline; color:var(--primary); margin-right: 6px; }
 .WCR10400VQ ul.diamond-box li { color: var(--color-2); font-weight: var(--font-w-m);}
@@ -564,7 +567,7 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 /* 유의사항 안내 */
 .WCR10400VQ .note-content .text-content { padding: 32px 40px; border: var(--board); }
 .WCR10400VQ .note-content .text-content .tit { position:relative; padding-left:55px; padding-bottom:29px; font-size:var(--font28); font-weight:var(--font-w-m); color:var(--color-2); }
-.WCR10400VQ .note-content .text-content .tit::before { content:""; position:absolute; left:0; display:block; width:43px; height:43px; background:var(--ico-info)no-repeat center; background-size:auto 28px; }
+.WCR10400VQ .note-content .text-content .tit::before { content:""; position:absolute; top:0; left:0; display:block; width:43px; height:43px; background:var(--ico-info)no-repeat center; background-size:auto 28px; }
 
 /* 회사소개 - 주요활동 (WCA60300VQ) */
 .WCA60300VQ .search-form{display:block;position:relative;width:530px;margin:0 0 0 auto}
