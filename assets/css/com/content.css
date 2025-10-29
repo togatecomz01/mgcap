@@ -504,8 +504,11 @@ main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
 
 /******회사소개-회사개요**/
 .WCA10100VQ { text-align: center; }
+.WCA10100VQ.page-container:has(.tab-list.depth1) .text-content, .WCA10100VQ.page-container:has(.tab-list.depth1) .button-content {margin: 0 auto; max-width: 1400px;}
+.WCA10100VQ.page-container:has(.tab-list.depth1) {padding:24px}
 .WCA10100VQ h3 { line-height: 150%; font-size: var(--font32); }
 .WCA10100VQ h3::after { content:""; display: block; margin: 32px 0; width: 100%; height: 268px; background: url("../../images/content/about/w/main_WCA10100VQ.png") no-repeat center; background-size: cover; }
+.WCA10100VQ .text-content { padding-top: 0; }
 .WCA10100VQ .text-group p { margin-top: 0; font-size: var(--font20); font-weight: var(--font-w-m); line-height: 150%; }
 /* info-cards */
 .WCA10100VQ .info-cards { counter-reset: item; display: flex; justify-content: center; align-items: stretch; gap: 64px; padding: 100px 132px 30px 132px; margin: 0 auto; }
@@ -519,7 +522,7 @@ width: 40px; height: 40px; background: var(--primary); color: var(--white); font
 .WCA10100VQ .info-card dt { font-size: var(--font18); font-weight: var(--font-w-b); }
 .WCA10100VQ .info-card dd { color: var(--color-6); font-size: var(--font16); font-weight: var(--font-w-r); }
 /* button-content */
-.WCA10100VQ .button-content {padding-top:80px}
+.WCA10100VQ.page-container:has(.tab-list.depth1) .button-content {padding:80px 0 22px 0;}
 .WCA10100VQ .button-content .lnk-group { display: flex; flex-wrap: wrap; gap: 40px; }
 .WCA10100VQ .button-content .lnk-group a { box-sizing: border-box; height: 202px; display: flex; align-items: center; justify-content: center; flex: 1 1 calc(50% - 20px); border-radius: 16px;
 color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); background-size: cover; background-repeat: no-repeat; background-position: center; }
@@ -1055,10 +1058,11 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     .WCA10100VQ .info-card dt { font-size: var(--font16); }
     .WCA10100VQ .info-card dd { font-size: var(--font14); }
     /* button-content */
-    .WCA10100VQ .button-content { padding-top: 32px; }
+    .WCA10100VQ.page-container:has(.tab-list.depth1) .button-content { padding:32px 0 0 0; }
     .WCA10100VQ .button-content .lnk-group { display: block; }
     .WCA10100VQ .button-content .lnk-group a { height: 102px; font-size: var(--font22) }
     .WCA10100VQ .button-content .lnk-group a+a { margin-top: 20px; }
+    main.contentWrap:has(.WCA10100VQ){padding-bottom:6px;}
 
     /* 회사소개 - 회사연혁 (WCA30100VQ) */
     .WCA30100VQ .history-group .history-range{display:none}
