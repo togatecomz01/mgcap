@@ -187,6 +187,7 @@ main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
 .WCC60500VQ .table-group .mo tbody tr th.th-t {background-color: transparent; font-size: var(--font16); font-weight: var(--font-w-r);}
 .WCC60500VQ .table-group .mo tbody tr td {text-align: left;}
 
+
 /******위법계약해지 요구권**/
 .MGC-PRT-CST-008 .sub-process-content ul.process01 li:nth-of-type(1) > p::before { background-image:var(--ico-cst-01); }
 .MGC-PRT-CST-008 .sub-process-content ul.process01 li:nth-of-type(2) > p::before { background-image:var(--ico-cst-02); }
@@ -463,6 +464,12 @@ main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
 .WCC601400VQ .btn-group { font-size:0; }
 .WCC601400VQ .btn-group .btn-download + .btn-download {margin-left: 26px;}
 
+/* 개인정보 조회, 동의 안내문 */
+.WCC60900VQ h5,.WCC60900VQ ul.dot,.WCC60900VQ p.dot,.WCC60900VQ span + ol {margin-top: 56px;}
+.WCC60900VQ h3 {margin-bottom: 18px;}
+/* 신용정보 활용체제 */
+.WCC601200VQ li + span, .WCC601200VQ ul.dot, .WCC601200VQ span + ol {margin-top: 18px;} 
+
 /** 채무조정신청 **/
 .WCC21400VQ .form-group select { max-width:120px; }
 .WCC21400VQ .form-group input.mo-phn { display:none; }
@@ -480,6 +487,8 @@ main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
 
 .WCC21401DS .btn-group { font-size:0; }
 .WCC21401DS .btn-group .btn-download + .btn-download {margin-left: 26px;}
+
+
 /*---------------------------------------------
     #회사소개
 ---------------------------------------------*/
@@ -1002,7 +1011,11 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     .WCC60500VQ .table-group .mo tbody tr {display: grid; grid-template-columns: 1fr;}
     .WCC60500VQ .table-group .mo tbody tr th.th-t {border-right: none; background-color: var(--table-th); font-weight: var(--font-w-b);}
     .WCC60500VQ .table-group .mo tbody tr td {text-align: center;}
-
+    
+    /* 개인정보 조회, 동의 안내문 */
+    .WCC60900VQ .group > .text-group:has(h5) > h4 {font-size: 20px;}
+    .WCC60900VQ h5, .WCC60900VQ ul.dot, .WCC60900VQ p.dot, .WCC60900VQ span + ol {margin-top: 20px;}
+    
     /******고객센터-채무조정안내**/
     .WCC601500VQ .sub-process-content ul { display: inline-flex; gap: 20px 10px; }
     .WCC601500VQ .sub-process-content ul li { display: inline-flex; margin-bottom: 0; }
@@ -1051,6 +1064,7 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     .WCC70102PS label.radio {padding: 10px 0 0 0;}
     .WCC70102PS .check {margin-top: 10px;}
     .WCC70102PS .note-group .tit {left: 0;}
+    
     /*---------------------------------------------
         #회사소개
     ---------------------------------------------*/
