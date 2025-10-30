@@ -507,7 +507,6 @@ main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
 /******회사소개-회사개요**/
 .WCA10100VQ { text-align: center; }
 .WCA10100VQ.page-container:has(.tab-list.depth1) .text-content, .WCA10100VQ.page-container:has(.tab-list.depth1) .button-content {margin: 0 auto; max-width: 1400px;}
-.WCA10100VQ.page-container:has(.tab-list.depth1) {padding:24px}
 .WCA10100VQ h3 { line-height: 150%; font-size: var(--font32); }
 .WCA10100VQ h3::after { content:""; display: block; margin: 32px 0; width: 100%; height: 268px; background: url("../../images/content/about/w/main_WCA10100VQ.png") no-repeat center; background-size: cover; }
 .WCA10100VQ .text-content { padding-top: 0; }
@@ -557,7 +556,6 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 
 /******회사소개-채용안내 및 절차**/
 .WCR10400VQ .text-content, .WCR10400VQ .jsTab {max-width: 1400px; margin: 0 auto;}
-.WCR10400VQ.page-container:has(.tab-list.depth1) {padding:24px}
 .WCR10400VQ .text-content {border-top: none;}
 .WCR10400VQ ul.diamond-box { display: flex; padding: 32px 24px; margin-top: 32px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; background: var(--bg-box); }
 .WCR10400VQ ul.diamond-box li::before { content:"◆"; display:inline; color:var(--primary); margin-right: 6px; }
@@ -724,6 +722,11 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 /*---------------------------------------------
     #미디어쿼리
 ---------------------------------------------*/
+@media (max-width: 1448px) {
+    .WCA10100VQ.page-container:has(.tab-list.depth1) > :not(.tab-container) { padding-left:24px; padding-right:24px }
+    .WCR10400VQ.page-container:has(.tab-list.depth1) > .text-content, .WCR10400VQ.page-container:has(.tab-list.depth1) > .jsTab, .WCR10400VQ.bottom-container > .note-content { padding-left:24px; padding-right:24px }
+}
+
 @media (max-width:1200px){
     /*---------------------------------------------
     #금융상품
@@ -1067,7 +1070,7 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     .WCA10100VQ .info-card dt { font-size: var(--font16); }
     .WCA10100VQ .info-card dd { font-size: var(--font14); }
     /* button-content */
-    .WCA10100VQ.page-container:has(.tab-list.depth1) .button-content { padding:32px 0 0 0; }
+    .WCA10100VQ.page-container:has(.tab-list.depth1) .button-content { padding:32px 24px 0 24px; }
     .WCA10100VQ .button-content .lnk-group { display: block; }
     .WCA10100VQ .button-content .lnk-group a { height: 102px; font-size: var(--font22) }
     .WCA10100VQ .button-content .lnk-group a+a { margin-top: 20px; }
@@ -1092,6 +1095,8 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     /******회사소개-채용안내 및 절차**/
     .WCR10400VQ ul.diamond-box { padding: 12px 16px; }
     .WCR10400VQ .note-content .text-content { padding: 20px }
+    .WCR10400VQ.page-container .tab-content {padding:0}
+    .WCR10400VQ.bottom-container .note-content {padding:0}
 
     /* 회사소개 - 주요활동 (WCA60300VQ) 모바일 */
     .WCA60300VQ .no-results {border: none;}
