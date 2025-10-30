@@ -1092,6 +1092,7 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 
     /* 회사소개 - 회사연혁 (WCA30100VQ) */
     .WCA30100VQ .history-group .history-range{display:none}
+    .WCA30100VQ .text-content.bo-t0 {padding: 0 20px;}
     .WCA30100VQ .history-group{gap:0; border: none;}
     .WCA30100VQ .text-group p { margin-top: 0; }
     .WCA30100VQ .text-content h3,.WCA30100VQ .text-content p {font-size: var(--font22);}
