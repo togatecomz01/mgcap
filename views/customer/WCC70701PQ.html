@@ -34,99 +34,89 @@
 </head>
 
 <body>
-    <div class="wrap">
-        <div class="bodyWrap">
-            <main class="contentWrap"></main>
-        </div>
+    <!-- s&e: 2025.10.31 팝업띄우기 위해 생성한 임시 wrap 제거 -->
+    <div id="fullPopup1" class="layerPopup full on">
+        <div class="pop-area">
+            <div class="pop-header">
+                <h2 class="pop-tit">차량 검색</h2>
+            </div>
 
-        <div id="fullPopup1" class="layerPopup full on">
-            <div class="pop-area">
-                <div class="pop-header">
-                    <h2 class="pop-tit">차량 검색</h2>
-                </div>
-
-                <div class="pop-body">
-                    <div class="pop-content">
-                        <form>
-                            <fieldset class="form-content">
-                                <legend>차량 검색 조회</legend>
-                                <div class="form-wrap search-form">
-                                    <div class="group">
-                                        <div class="form-group">
-                                            <label>발급기준일</label>
-                                            <div>
-                                                <input id="" type="text" name="text" placeholder="검색어 입력"/>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>모델명</label>
-                                            <div>
-                                                <input id="" type="text" name="text" placeholder="검색어 입력"/>
-                                            </div>
+            <div class="pop-body">
+                <div class="pop-content">
+                    <form>
+                        <fieldset class="form-content">
+                            <legend>차량 검색 조회</legend>
+                            <div class="form-wrap search-form">
+                                <div class="group">
+                                    <div class="form-group">
+                                        <label>발급기준일</label>
+                                        <div>
+                                            <input id="" type="text" name="text" placeholder="검색어 입력"/>
                                         </div>
                                     </div>
-                                    <button class="btn-form mo">조회</button>
+                                    <div class="form-group">
+                                        <label>모델명</label>
+                                        <div>
+                                            <input id="" type="text" name="text" placeholder="검색어 입력"/>
+                                        </div>
+                                    </div>
                                 </div>
-                            </fieldset>
-                        </form>
-                    </div>
+                                <button class="btn-form mo">조회</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
 
-                    <div class="pop-header2">
-                        <h2 class="pop-tit">검색결과</h2> 
-                    </div>
+                <div class="pop-header2">
+                    <h2 class="pop-tit">검색결과</h2> 
+                </div>
 
-                    <div class="pop-content">
-                        <div class="table-group">
-                            <table class="mo-list result">
-                                <caption>
-                                    차량검색 결과표 (제조사 모델명 포함 )
-                                </caption>
-                                <colgroup>
-                                    <col style="width:200px" />
-                                    <col style="width:auto" />
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th scope="col">제조사</th>
-                                        <th scope="col">모델명</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>현대</td>
-                                        <td>[CM] 아반떼XD DOHC GLS AT</td>
-                                    </tr>
-                                    <tr>
-                                        <td>현대</td>
-                                        <td>[CM] 아반떼XD DOHC GLS AT</td>
-                                    </tr>
-                                    <tr>
-                                        <td>현대</td>
-                                        <td>[CM] 아반떼XD DOHC GLS AT</td>
-                                    </tr>
-                                    <tr>
-                                        <td>현대</td>
-                                        <td>[CM] 아반떼XD DOHC GLS AT</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                <div class="pop-content">
+                    <div class="table-group">
+                        <table class="mo-list result">
+                            <caption>
+                                차량검색 결과표 (제조사 모델명 포함 )
+                            </caption>
+                            <colgroup>
+                                <col style="width:200px" />
+                                <col style="width:auto" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">제조사</th>
+                                    <th scope="col">모델명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>현대</td>
+                                    <td>[CM] 아반떼XD DOHC GLS AT</td>
+                                </tr>
+                                <tr>
+                                    <td>현대</td>
+                                    <td>[CM] 아반떼XD DOHC GLS AT</td>
+                                </tr>
+                                <tr>
+                                    <td>현대</td>
+                                    <td>[CM] 아반떼XD DOHC GLS AT</td>
+                                </tr>
+                                <tr>
+                                    <td>현대</td>
+                                    <td>[CM] 아반떼XD DOHC GLS AT</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-                <div class="pop-footer">
-                    <button type="button" class="btn-pop-primary" data-popup-close="fullPopup1">확인</button>
-                </div>
-                <button type="button" name="button" class="btn btn-close right" data-popup-close="fullPopup1">닫기</button>
             </div>
+            <div class="pop-footer">
+                <button type="button" class="btn-pop-primary" data-popup-close="fullPopup1">확인</button>
+            </div>
+            <button type="button" name="button" class="btn btn-close right" data-popup-close="fullPopup1">닫기</button>
         </div>
-        <!-- e: 차량검색 팝업(fullPopup1) -->
     </div>
-
-    <!-- 페이지 열자마자 팝업창 뜨도록 추가한 임시 스크립트 -->
-    <script>
-        $(document).ready(function() {
-            $(".contentWrap").css("overflow", "hidden");
-        });
-    </script>
+    <!-- e: 차량검색 팝업(fullPopup1) -->
+    
+    <!-- s&e: 2025.10.31 임시 스크립트 삭제 -->
 </body>
 </html>
