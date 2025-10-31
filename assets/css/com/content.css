@@ -261,13 +261,18 @@ main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
 /** 유용한 정보 **/
 .WCU11001VQ .btn-group.w50 .btn-link:first-of-type { margin-top:0; background-image:url("../../images/content/custportal/w/ico_hand.png"); }
 .WCU11001VQ .cap-form,
-.WCU10900VQ .cap-form { display:flex; align-items:center; justify-content:space-between; }
+.WCU10900VQ .cap-form,
+.WCC30100VQ .cap-form { display:flex; align-items:center; justify-content:space-between; }
 .WCU11001VQ .cap-form .caption,
-.WCU10900VQ .cap-form .caption { margin:38px 0 24px; padding-bottom:0; }
+.WCU10900VQ .cap-form .caption,
+.WCC30100VQ .cap-form .caption { margin:38px 0 24px; padding-bottom:0; }
 .WCU11001VQ .cap-form form,
-.WCU10900VQ .cap-form form { margin-top:0; }
+.WCU10900VQ .cap-form form,
+.WCC30100VQ .cap-form form,
+.WCC30110VQ .cap-form form { margin-top:0; }
 .WCU11001VQ .cap-form .form-wrap.noti-search,
-.WCU10900VQ .cap-form .form-wrap.noti-search { margin-bottom:0; }
+.WCU10900VQ .cap-form .form-wrap.noti-search,
+.WCC30100VQ .cap-form .form-wrap.noti-search { margin-bottom:0; }
 
 /** 민원처리안내 **/
 .WCC20700VS {
@@ -423,6 +428,11 @@ main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
 .WCF90100VQ .result_content .btn-content { margin-top:0 !important; }
 .WCF90100VQ .result_content .btn-content button, .WCF90100VQ .result_content .btn-content a { margin-left:24px; }
 
+/** 입찰공고 **/
+.WCC30110VQ .mo-list tbody tr td.error,
+.WCC30110VQ .mo-list tbody tr td.success { margin-bottom:8px; width:100%; font-size:var(--font14); font-weight:var(--font-w-m); text-align: left; }
+.WCC30110VQ .mo-list tbody tr td.error { color:var(--failure); }
+.WCC30110VQ .mo-list tbody tr td.success { color:var(--success); }
 
 /******고객센터-채무조정안내**/
 .WCC601500VQ .sub-process-content.bo-none ul { padding: 0; border: 0; }
@@ -904,9 +914,11 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 
     /** 유용한 정보 **/
     .WCU11001VQ .cap-form,
-    .WCU10900VQ .cap-form { display:block; margin:26px 0 20px; width:100%; }
+    .WCU10900VQ .cap-form,
+    .WCC30100VQ .cap-form { display:block; margin:26px 0 20px; width:100%; }
     .WCU11001VQ .cap-form .caption,
-    .WCU10900VQ .cap-form .caption { display:none; }
+    .WCU10900VQ .cap-form .caption,
+    .WCC30100VQ .cap-form .caption { display:none; }
 
     /** 민원처리안내 **/
     .WCC20700VS .btn-group .btn-download { padding:20px 20px 20px 80px; }

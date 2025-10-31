@@ -38,7 +38,7 @@ main.contentWrap > * { margin:0 auto; max-width:1400px; width:100%; padding:0;  
     #header
 ---------------------------------------------*/
 /** 헤더 레이아웃 **/
-#headerWrap { position:fixed; z-index:2; width:100%; background:var(--white); border-bottom:1px solid #E5E5E5; }
+#headerWrap { position:fixed; z-index:11; width:100%; background:var(--white); border-bottom:1px solid #E5E5E5; }
 #headerWrap:has(.menu-item.on) { background-color:var(--white); }
 .gnb{ display:flex; justify-content:space-between; align-items:center; margin:0 auto; max-width:1400px; width:100%; background:var(--white); }
 .gnb h1{ display:block; width:137px; height:36px; font-size:0; }
