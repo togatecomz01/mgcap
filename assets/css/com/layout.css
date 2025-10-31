@@ -351,6 +351,7 @@ main.contentWrap > .bottom-container { margin-top:72px; }
 .layerPopup .pop-footer { margin-top:48px; }
 .layerPopup .pop-footer .button-content { text-align:center; }
 .layerPopup .pop-footer .button-content .btn-pop-primary { max-width:157px; }
+.layerPopup .alert .pop-footer .button-content .btn-pop-primary { max-width:100%; }
 
 
 /* ÆË¾÷_Ç®ÆË¾÷ */

@@ -141,11 +141,11 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
 .btn-content.cta a[aria-disabled="true"] { text-decoration:none; cursor: not-allowed; background-color:var(--color-d); color:var(--color-75); pointer-events:none;}
 
 /**페이지네이션 버튼 **/
-.pagination-content .pc { position:relative; display:flex; padding:48px 12px 12px; align-items:center; justify-content:center; gap:8px; }
+.pagination-content > div { position:relative; display:flex; padding:48px 12px 12px; align-items:center; justify-content:center; gap:8px; }
 .pagination-content button, 
-.pagination-content a { min-width:40px; font-size:var(--font18); font-weight:var(--font-w-r); color:var(--color-45); }
+.pagination-content a { display:inline-block; min-width:40px; font-size:1rem; font-weight:var(--font-w-r); color:var(--color-45); }
 .pagination-content .active { color:var(--primary); font-weight:var(--font-w-b); }
-.pagination-content div { padding:0 8px; text-align:center; }
+.pagination-content > div > div { padding:0 8px; text-align:center; }
 .pagination-content .first,
 .pagination-content .last {  flex:0 0 64px; display:flex; gap:8px; }
 .pagination-content .first { left:20px; }
@@ -200,12 +200,12 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
     /** 공지사항 검색 **/
 
     /**페이지네이션 버튼 **/
-    .pagination-content .pc { display:none; }
-    .pagination-content .mo { display:block; padding-top:32px; }
-    .pagination-content .mo .btn-more { padding:12px 32px; border:1px solid #6A6A6A; border-radius:100px; }
-    .pagination-content .mo .btn-more span { font-size:var(--font14); }
-    .pagination-content .mo .btn-more .page-counter { display:inline-block; margin-right:6px; }
-    .pagination-content .mo .btn-more .page-counter span:last-child { color:var(--color-9); }
+
+    .pagination-content > div { padding:32px 0px 0px; }
+    .pagination-content .btn-first,
+    .pagination-content .btn-last { display:none; }
+    .pagination-content .first, .pagination-content .last { flex:0 0 40px; }
+
 
 
     /**Popup Btn**/

@@ -39,13 +39,12 @@
     <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
 
     <style>
+        
         input[placeholder="포커스"] { border:1px solid #2392FF; }
         textarea { width:100%; height:100px; }
-		.button-content { margin-top:30px; }
+        .button-content,
+		.bottom-container{ margin-top:30px; }
     </style>
-
-    <!-- (선택) IE11용 폴리필: 안전하게 깔아두면 좋아요 -->
-    <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Promise,Array.from,Object.assign,Number.isNaN"></script>
   </head>
 
     <body>
@@ -54,32 +53,44 @@
                 <div class="visual-content">
                     <h2>
                         <em>Button</em>
+                        <p>버튼은 사용자의 행동을 결정하는 주요 요소로 수행하고자 하는 내용을 미리 인지시키고 수행할 수 있도록 액션 간의 계층을 만들어 준다.</p>
                     </h2>
                 </div>
                 <div class="sample-content">
                     <div class="tit-wrap">
                         <h3>CTP</h3>
                         <div>
-                            <p>컨텐츠 우측 하단에 고정되어 표시되며, 페이지 전반의 주요 행동을 제어하는 메인 버튼 역할을 한다.<br />
-							수정, 목록, 삭제, 등록과 같은 핵심 기능을 제공하며, 사용자가 페이지 내 모든 주요 작업을 신속하게 수행할 수 있도록 지원한다. 여러 버튼이 함께 배치되는 경우 버튼 간 간격은 16px을 유지한다.</p>
-                            <div class="button-content cta">
-								<div class="button-wrap">
-                                    <a href="javascript:void(0);" class="btn-primary" data-modal-open="modal">알럿창 기본</a>
-									<a href="javascript:void(0);" class="btn-primary">순서저장</a>
-									<a href="javascript:void(0);" class="btn-secondary">신규등록</a>
-								</div>
-							</div>
+                            <p>CTA 01 버튼은 화면 하단에 고정적으로 위치하고 있는 버튼으로 주요 행동을 결정하는 신청, 확인, 다음 등 페이지 전체를 컨트롤 하는 메인 버튼 역할을 한다. <br />
+                                PC에서 같이 사용하는 경우 24px을 간격을 사용하며, 모바일에서는 각 버튼 넓이 50%를 기준으로 20px 간격으로 사용한다.</p>
+                            <div class="bottom-container">
+                                <div class="btn-content cta">
+                                    <div class="button-group">
+                                        <a href="javascript:void(0);" class="btn-primary" data-modal-open="modal">알럿창 기본</a>
+                                        <a href="javascript:void(0);" class="btn-secondary">취소</a>
+                                        <a href="javascript:void(0);" class="btn-primary">확인</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="tit-wrap">
-                        <h3>Body Button</h3>
+                        <h3>Form Btn</h3>
                         <div>
-                            <p>파일을 첨부하기 위해 사용하는 버튼이다. 사용자가 클릭하면 파일 선택 창이 열리며, 선택된 파일은 화면에 표시된다. <br />텍스트와 아이콘을 함께 배치하여 직관적으로 기능을 전달한다.</p>
                             <div class="button-content">
-								<div class="button-wrap">
-									<a href="javascript:void(0);" class="btn-body">검색</a>
-								</div>
-							</div>
+                                <div class="btn-group">
+                                    <button class="btn-form">폼버튼</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tit-wrap">
+                        <h3>다운로드</h3>
+                        <div>
+                            <div class="button-content">
+                                <div class="btn-group">
+                                    <a href="#" class="btn-download" download>다운로드</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="tit-wrap pop-content">
