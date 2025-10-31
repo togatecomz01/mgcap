@@ -78,16 +78,22 @@
                                         <tr>
                                             <th scope="row">회신방법</th>
                                             <td>
-                                                <div class="flex-row gap20"> 
-                                                    <label class="radio">
-                                                        <input type="radio" name="reply" value="phone" checked>
-                                                        <span>휴대폰</span>
-                                                    </label>
-                                                    <label class="radio">
-                                                        <input type="radio" name="reply" value="email">
-                                                        <span>이메일</span>
-                                                    </label>
-                                                </div>
+                                                <fieldset class="form-content">
+                                                    <div class="form-wrap">
+                                                        <div class="form-group">
+                                                            <div class="flex-row gap20"> 
+                                                                <label class="radio">
+                                                                    <input type="radio" name="reply" value="phone" checked>
+                                                                    <span>휴대폰</span>
+                                                                </label>
+                                                                <label class="radio">
+                                                                    <input type="radio" name="reply" value="email">
+                                                                    <span>이메일</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
                                             </td>
                                         </tr>
                                         <!-- 연락처 -->
@@ -102,16 +108,20 @@
                                         <tr>
                                             <th scope="row">이메일</th>
                                             <td>
-                                                <div class="flex-row gap10">
-                                                    <input id="email-id" type="email">
-                                                    <span>@</span>
-                                                    <input id="email-domain" type="email">
-                                                </div>
-                                                <select id="email-select" title="이메일 도메인 선택">
-                                                    <option>직접입력</option>
-                                                    <option>naver.com</option>
-                                                    <option>gmail.com</option>
-                                                </select>
+                                                <fieldset class="form-content">
+                                                    <legend>이메일 입력</legend>
+                                                    <div class="flex-row gap10">
+                                                        <input id="email-id" type="email">
+                                                        <span>@</span>
+                                                        <input id="email-domain" type="email">
+                                                    </div>
+                                                    <select id="email-select" title="이메일 도메인 선택">
+                                                        <option>직접입력</option>
+                                                        <option>naver.com</option>
+                                                        <option>gmail.com</option>
+                                                    </select>
+                                                </fieldset>
+                                                
                                                 <!-- <p class="point-r tal">이메일을 입력해주세요</p> --> <!-- 필요시 주석 제거 -->
                                             </td>
                                         </tr>
