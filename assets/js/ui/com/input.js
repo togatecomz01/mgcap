@@ -63,7 +63,12 @@ ready, load, init
             var $file  = $box.find('input[type="file"]').first();
             var $label = $box.find('.fileLabel').first();
             if ($file.length)  $file.val('').trigger('change'); // 내부 상태/리스너 동기화
-            if ($label.length) $label.text('파일선택');
+            if ($label.length) {
+              // 원본 텍스트 복원: 원본 텍스트가 있으면 원본으로, 없으면 빈 문자열로
+              var originalText = $label.data('original-text') || '';
+              var restoreText = originalText.trim() !== '' ? originalText : '';
+              $label.text(restoreText);
+            }
           }
 
           // 3) 버튼 제거
@@ -103,6 +108,10 @@ ready, load, init
                   var $fileInput = $container.find('input[type="file"]');
                   var $fileLabel = $container.find('.fileLabel');
                   
+                  // 원본 텍스트 저장 (초기화 시점에 저장) - 빈 문자열도 그대로 저장
+                  var originalText = $fileLabel.text();
+                  $fileLabel.data('original-text', originalText);
+                  
                   // 파일 선택 버튼 클릭
                   $uploadButton.on('click', function () {
                       $fileInput.trigger('click');
@@ -124,15 +133,15 @@ ready, load, init
                       // 현재 컨테이너의 레이블만 업데이트
                       $fileLabel.text(fileName);
                       
-                      // 이미지 미리보기 (첫 번째 .img-photo만)
-                      var $imgPhoto = $('.img-photo').first();
-                      if ($fileInput.attr('id') === 'files' && file && file.type.startsWith('image/')) {
+                      // 이미지 미리보기 (현재 컨테이너의 .img-photo)
+                      var $imgPhoto = $container.closest('.photo-content').find('.img-photo');
+                      if (file && file.type.startsWith('image/')) {
                         var reader = new FileReader();
                         reader.onload = function(e) {
-                          $imgPhoto.html('<img src="' + e.target.result + '" alt="업로드된 이미지" style="max-width: 103px; max-height: 132px;">');
+                          $imgPhoto.html('<img src="' + e.target.result + '" alt="업로드된 이미지" style="max-width:190px; max-height:253px;">');
                         };
                         reader.readAsDataURL(file);
-                      } else if ($fileInput.attr('id') === 'files') {
+                      } else {
                         $imgPhoto.empty();
                       }
                       
@@ -142,19 +151,22 @@ ready, load, init
                         $fileLabel.find('.btn-clear').remove();
                         
                         // 클리어 버튼 생성
-                        $('<button type="button" class="btn-clear" aria-label="입력 지우기" title="지우기">×</button>')
+                        $('<button type="button" class="btn-clear" aria-label="첨부파일 삭제" title="사제">×</button>')
                           .appendTo($fileLabel)
                           .on('click', function (e) {
                             e.preventDefault();
                             
                             // 파일 초기화 (현재 컨테이너만)
                             $fileInput.val('');
-                            $fileLabel.text('');
                             
-                            // 첫 번째 파일 input이면 이미지 미리보기도 제거
-                            if ($fileInput.attr('id') === 'files') {
-                              $imgPhoto.empty();
-                            }
+                            // 텍스트 복원: 원본 텍스트가 있으면 원본으로, 없으면 빈 문자열로
+                            var storedOriginalText = $fileLabel.data('original-text') || '';
+                            var restoreText = storedOriginalText.trim() !== '' ? storedOriginalText : '';
+                            $fileLabel.text(restoreText);
+                            
+                            // 현재 컨테이너의 이미지 미리보기 제거
+                            var $currentImgPhoto = $container.closest('.photo-content').find('.img-photo');
+                            $currentImgPhoto.empty();
                             
                             // 버튼 제거
                             $(this).remove();
@@ -180,5 +192,47 @@ ready, load, init
             });
         }
     }
-
 });
+
+
+ /**
+     * 공통 글자수 카운터
+     * - 각 textarea의 maxlength 값을 읽어 최대치로 사용
+     * - .char-counter 내 .current / .max를 자동 갱신
+     * - aria-live="polite"로 스크린리더에 부드럽게 알림
+     */
+ (function () {
+  function initCounter(wrap) {
+    var ta = wrap.querySelector('textarea');
+    var counter = wrap.querySelector('.char-counter');
+    if (!ta || !counter) return;
+
+    var curEl = counter.querySelector('.current');
+    var maxEl = counter.querySelector('.max');
+
+    // maxlength가 없으면 기본 1000으로
+    var max = parseInt(ta.getAttribute('maxlength'), 10);
+    if (isNaN(max) || max <= 0) max = 1000;
+
+    // 표시 상한 보정
+    if (maxEl) maxEl.textContent = String(max);
+
+    // 입력 시 갱신
+    var update = function () {
+      var len = ta.value.length;
+      if (len > max) {
+        // 혹시나 스크립트로 넘어가면 자르기 (브라우저가 보통 막지만 안전장치)
+        ta.value = ta.value.substring(0, max);
+        len = max;
+      }
+      if (curEl) curEl.textContent = String(len);
+    };
+
+    // 초기 1회 반영
+    update();
+    ta.addEventListener('input', update);
+  }
+
+  // 페이지 내 모든 textarea-wrap 처리
+  document.querySelectorAll('.textarea-wrap').forEach(initCounter);
+})();

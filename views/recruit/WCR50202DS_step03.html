@@ -1,0 +1,300 @@
+<!--[D]:개발스크립트 삭제-->
+<script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+
+
+<div class="form-content">
+    <div class="text-content">
+        <div class="text-group">
+            <h3>경력사항</h3>
+            <ul class="attach diamond">
+                <li>추후 제출서류와 지원서 작성내용이 다를 경우 합격 취소 또는 불합격 처리 됩니다.</li>
+                <li>지원서 작성 시 사전에 제출서류를 구비하여 오류 입력에 따른 합격 취소등의 불이익이 없도록 유의 바랍니다.</li>
+                <li>제출서류는 MG캐피탈 홈페이지의 채용공고 참고 바랍니다.</li> 
+            </ul>
+        </div>
+    </div>
+    <form class="form-content">
+        <!-- 병역특례 경력사항 -->
+        <div class="table-group">
+        <h4>병역특례 경력사항</h4>
+            <table class="td-l">
+                <caption>병역특례 경력사항 입력표(근무처, 근무기간, 담당업무 포함)</caption>
+                <colgroup>
+                    <col style="width:500px">
+                    <col style="width:386px"> 
+                    <col style="width:auto">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th id="th-milCo"   scope="col">근무처</th>
+                    <th id="th-milTerm" scope="col">근무기간</th>
+                    <th id="th-milDuty" scope="col">담당업무</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <label class="sr-only" for="milCompany1">근무처 1</label>
+                        <span class="ipt-clear">
+                            <input id="milCompany1" name="milCompany1" type="text" aria-labelledby="th-milCo milCompany1">
+                        </span>
+                    </td>
+                    <td>
+                        <fieldset class="period-fieldset">
+                            <legend class="sr-only">근무기간 1</legend>
+                            <div class="form-group">
+                                <input id="milStart1" name="milStart1" type="date" aria-label="근무 시작일">
+                                <input id="milEnd1" name="milEnd1" type="date" aria-label="근무 종료일">
+                            </div>
+                        </fieldset>
+                    </td>
+                    <td>
+                        <label class="sr-only" for="milDuty1">담당업무 1</label>
+                        <span class="ipt-clear">
+                            <input id="milDuty1" name="milDuty1" type="text" aria-labelledby="th-milDuty milDuty1">
+                        </span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--경력-->
+        <div class="edu-repeat" data-title="경력" data-max="10">    
+            <div class="table-group" data-index="1">
+                <h4>경력</h4>
+                <table class="td-l">
+                    <caption>경력 입력표(근무처, 근무기간, 직위, 담당업무, 연봉, 퇴직사유, 세부 경력 소개)</caption>
+                    <colgroup>
+                        <col style="width:262px">
+                        <col style="width:auto">
+                        <col style="width:262px">
+                        <col style="width:auto">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                <label for="companyName">근무처</label>
+                            </th>
+                            <td>
+                                <span class="ipt-clear">
+                                    <input id="companyName" name="companyName" type="text">
+                                </span>
+                            </td>
+                            <th scope="row">
+                                <label for="workStart">근무기간</label>
+                            </th>
+                            <td>
+                                <fieldset>
+                                    <legend class="sr-only">근무기간</legend>
+                                    <div class="form-group">
+                                        <input id="workStart" name="workStart" type="date" aria-label="근무 시작일">
+                                        <input id="workEnd" name="workEnd" type="date" aria-label="근무 종료일">
+                                    </div>
+                                </fieldset>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <label for="position">직위</label>
+                            </th>
+                            <td>
+                                <span class="ipt-clear">
+                                    <input id="position" name="position" type="text">
+                                </span>
+                            </td>
+                            <th scope="row">
+                                <label for="duty">담당업무</label>
+                            </th>
+                            <td>
+                                <span class="ipt-clear">
+                                    <input id="duty" name="duty" type="text">
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <label for="salary">연봉</label>
+                            </th>
+                        <td>
+                            <span class="txt-unit ipt-clear">
+                                <input type="text" name="utlr_brdn_amt" id="utlr_brdn_amt1" class="unit" inputmode="numeric" style="padding-right:120px;">
+                                <span>만원</span>
+                            </span>
+                        </td>
+                
+                        <th scope="row">
+                            <label for="leaveReason">퇴직사유</label>
+                        </th>
+                        <td>
+                            <span class="ipt-clear">
+                                <input id="leaveReason" name="leaveReason" type="text">
+                            </span>
+                        </td>
+                        </tr>
+                        <tr>
+                        <th scope="row">
+                            <label for="careerDetail">세부 경력 소개</label>
+                        </th>
+                        <td colspan="3">
+                            <div class="textarea-wrap">
+                                <textarea id="introduceYourself" name="introduceYourself" rows="6" maxlength="1000" ></textarea>
+                                <div class="char-counter" aria-live="polite">
+                                  <span class="current">0</span>/<span class="max">1000</span>자
+                                </div>
+                              </div>
+                        </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button" class="button btn-add">추가</button>
+                <button type="button" class="btn-del">삭제</button>
+            </div>
+        </div>
+    </form>
+</div><!--//form-content-->
+
+<div class="bottom-container">
+    <div class="btn-content cta">
+        <div class="button-group">
+          <a href="javascript:void(0);" class="btn-secondary" data-role="prev">이전</a>
+          <a href="javascript:void(0);" class="btn-primary" data-role="next">다음</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+    /* ===== 기본 설정 ===== */
+    const DEFAULT_MAX = 10;
+  
+    function getMaxFor($wrap){
+      const dmax = parseInt($wrap.attr('data-max'), 10);
+      return isNaN(dmax) ? DEFAULT_MAX : dmax;
+    }
+  
+    function stripTrailingNumber(txt){ return (txt || '').replace(/\s*\d+\s*$/, '').trim(); }
+    function getBaseTitle($wrap){
+      const t = ($wrap.attr('data-title') || '').trim();
+      if (t) return t;
+      const $h4 = $wrap.find('> .table-group').first().children('h4').first();
+      return $h4.length ? stripTrailingNumber($h4.text()) : '항목';
+    }
+  
+    function resetValues($group){
+      $group.find('input[type="text"], input[type="month"], input[type="date"], textarea').val('');
+      $group.find('select').prop('selectedIndex', 0);
+      $group.find('input[type="radio"], input[type="checkbox"]').prop('checked', false);
+
+    }
+  
+    function baseFromId(id){ return (id || '').replace(/_\d+$/, ''); }
+    function baseFromName(name){
+      if (!name) return '';
+      return name.replace(/\[\]$/, '').replace(/_\d+$/, '');
+    }
+  
+    function applyIdsAndFors($group, idx){
+      $group.find('[id]').each(function(){
+        const $el = $(this);
+        const tag = this.tagName.toLowerCase();
+        const base = baseFromId($el.attr('id'));
+        if(!base) return;
+        const newId = base + '_' + idx;
+        if(tag === 'label') $el.attr('for', newId);
+        else $el.attr('id', newId);
+      });
+  
+      $group.find('label[for]').each(function(){
+        const $el = $(this);
+        const base = baseFromId($el.attr('for'));
+        if(!base) return;
+        $el.attr('for', base + '_' + idx);
+      });
+  
+      $group.find('[name]').each(function(){
+        const $el = $(this);
+        const type = ($el.attr('type') || '').toLowerCase();
+        const base = baseFromName($el.attr('name'));
+        if(!base) return;
+        if(type === 'radio' || type === 'checkbox'){
+          $el.attr('name', base + '_' + idx);
+        } else {
+          $el.attr('name', base + '[]');
+        }
+      });
+    }
+  
+    function reindexAll($wrap){
+      const baseTitle = getBaseTitle($wrap);
+      const $groups = $wrap.find('> .table-group');
+      const count = $groups.length;
+  
+      $groups.each(function(i){
+        const $g = $(this);
+        const idx = i + 1;
+        $g.attr('data-index', idx);
+        applyIdsAndFors($g, idx);
+  
+        const $h4 = $g.children('h4').first();
+        if ($h4.length) $h4.text(idx === 1 ? baseTitle : (baseTitle + ' ' + idx));
+  
+        const $add = $g.find('.btn-add');
+        const $del = $g.find('.btn-del');
+  
+        if (count === 1){
+          $add.show();  $del.hide();
+        } else {
+          if (idx === 1){ $add.show();  $del.hide(); }
+          else          { $add.hide();  $del.show(); }
+        }
+      });
+    }
+  
+    // (중요) 기존 바인딩 제거 후, 네임스페이스로 재바인딩
+    $(document).off('click.eduRepeat', '.edu-repeat .btn-add')
+               .on('click.eduRepeat',  '.edu-repeat .btn-add', function(e){
+      e.preventDefault();
+      const $wrap   = $(this).closest('.edu-repeat');
+      const $status = $wrap.find('[role="status"]');
+      const $last   = $wrap.find('> .table-group').last();
+      const count   = $wrap.find('> .table-group').length;
+      const max     = getMaxFor($wrap);
+  
+      if (count >= max){
+        alert('최대 ' + max + '개까지만 등록할 수 있습니다.');
+        if ($status.length) $status.text('최대 ' + max + '개 제한으로 추가되지 않았습니다.');
+        return;
+      }
+  
+      // clone(true, true) 금지 → 이벤트 복제 없이
+      const $clone = $last.clone(false, false);
+      resetValues($clone);
+      $clone.insertAfter($last);
+  
+      reindexAll($wrap);
+  
+      //포커스 첫벗째로 이동
+      //const $firstInput = $clone.find('input, select, textarea').filter(':visible').first();
+      //if($firstInput.length) $firstInput.focus();
+  
+      //if ($status.length) $status.text('새로운 입력 항목이 추가되었습니다.');
+    });
+  
+    $(document).off('click.eduRepeat', '.edu-repeat .btn-del')
+               .on('click.eduRepeat',  '.edu-repeat .btn-del', function(e){
+      e.preventDefault();
+      const $wrap   = $(this).closest('.edu-repeat');
+      const $status = $wrap.find('[role="status"]');
+      const $grp    = $(this).closest('.table-group');
+      if ($grp.is(':first-child')) return;
+      $grp.remove();
+      reindexAll($wrap);
+      //if ($status.length) $status.text('입력 항목이 삭제되었습니다.');
+    });
+  
+    // 초기 실행
+    $('.edu-repeat').each(function(){ reindexAll($(this)); });
+  });
+</script>
+  
+

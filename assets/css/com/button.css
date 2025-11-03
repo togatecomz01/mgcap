@@ -16,7 +16,6 @@ body{
 
   --btn-pop-background:var(--color-2);
   --btn-pop-font-color:var(--white);
-  --btn-pop-font-second-color:var(--color-45);
   --btn-pop-font-size:var(--font18);
   --btn-pop-font-w:var(--font-w-m);
 
@@ -47,7 +46,8 @@ body{
 
   --ico-login: url("../../images/content/register/w/ico_login.svg");
   --ico-register: url("../../images/content/register/w/ico_register.svg");
-
+  --ico-add:url("../../images/com/svg/ico_add.svg");
+  --ico-del:url("../../images/com/svg/ico_del.svg");
   --tab-active:var(--primary);
 
 }
@@ -60,6 +60,22 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
 
 .btn-text { color:var(--btn-text); text-decoration:underline;  }
 .btn-text.inline { display:inline; text-decoration:none; }
+
+.btn-add,
+.btn-del { font-size:0; position:absolute; top:0; right:0; margin-top:0 !important; width:32px; height:32px; }
+.btn-add::before,
+.btn-del::before { content:""; display:block; margin:0 auto; width:24px; height:24px; background-color:var(--white);
+ mask-repeat:no-repeat; mask-size:15.6px auto; mask-position:center; -webkit-mask-repeat:no-repeat; -webkit-mask-size:15.6px auto; -webkit-mask-position:center; }
+
+.btn-add { background-color:var(--primary); }
+.btn-del { background-color:var(--color-2); }
+.btn-add:before { mask-image:var(--ico-add); -webkit-mask-image:var(--ico-add); }
+.btn-del:before { mask-image:var(--ico-del); -webkit-mask-image:var(--ico-del); }
+
+.ipt-clear { position:relative; }
+.ipt-clear input { padding-right:50px }
+.ipt-clear .btn-clear { position:absolute; right:16px; top:50%; transform:translate(0, -50%); }
+
 
 /** 로그인 버튼 **/
 .btn-content.login { margin-top:38px; }
