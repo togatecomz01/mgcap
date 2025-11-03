@@ -32,6 +32,7 @@ main.contentWrap > * { margin:0 auto; max-width:1400px; width:100%; padding:0;  
 .point-r { color:var(--point-r) !important; }
 .bo-t0 { border-top:0 !important; }
 .w-auto { width:auto; }
+.w-406 { width:406px !important; } 
 
 
 /*---------------------------------------------
@@ -288,6 +289,11 @@ form:has(.info-content) .form-content .form-wrap.search-form { margin-bottom:0; 
 .view-navigation .meta-info{ font-size:0;}
 .view-navigation .meta-info span { font-size:var(--font16); color:var(--color-45);}
 .view-navigation .meta-info .label{ padding-right:10px; color:var(--color-75); }
+
+/**다이아몬드박스**/
+.diamond-box { display: flex; padding: 32px 24px; margin-top: 32px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; background: var(--bg-box); }
+.diamond-box li::before { content:"◆"; display:inline; color:var(--primary); margin-right: 6px; }
+.diamond-box li { color: var(--color-2); font-weight: var(--font-w-m);}
 
 /** 첨부파일 **/
 .attach { padding:24px; margin-bottom:42px; background-color:var(--bg-box); }

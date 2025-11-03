@@ -634,38 +634,72 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 /* 회사소개 - 입사지원 동의 */
 
 /* 입사지원서 작성 */
-.WCR50202DS {
+.recruitment {
     --no-photo:url("../../images/content/recruit/profile.png") no-repeat;
 }
-.WCR50202DS .group form .table-group { margin-bottom:52px; }
-.WCR50202DS .upload { display:none; }
-.WCR50202DS label:has(input) { display:inline-flex; }
-.WCR50202DS .photo-content { display:flex; gap:28px; }
-.WCR50202DS .photo-content .img-photo { width:190px; height:253px; background:var(--no-photo);  }
-.WCR50202DS .photo-content .img-photo:has(img) { background:transparent; }
-.WCR50202DS .photo-content dl { flex:1; }
-.WCR50202DS .photo-content dt { margin-bottom:18px; font-weight:var(--font-w-b); text-align:left;  }
-.WCR50202DS .photo-content dt.rfrnc::before { content:"※"; margin-right:3px; }
-.WCR50202DS .photo-content dd { margin-bottom:10px; font-size:var(--font-16); text-align:left; }
-.WCR50202DS .photo-content dd:nth-of-type(2) { margin-bottom:24px; }
-.WCR50202DS .img-photo { border:1px solid var(--color-d); }
-.WCR50202DS .upload-label { display:block; }
-.WCR50202DS .fileLabel { display:flex; align-items:center; margin-top:24px; text-decoration:underline; }
-.WCR50202DS .fileLabel button { margin-left:5px; text-decoration:none; }
-.WCR50202DS td input { max-width:100%; }
-.WCR50202DS td .form-group:first-of-type { display:flex; gap:20px; align-items:center; margin-top:0; max-width:406px; }
-.WCR50202DS td .form-group:first-of-type input { margin-top:0; }
-.WCR50202DS td .form-group input { max-width:100%; margin-top:10px; }
-.WCR50202DS td .form-group,
-.WCR50202DS td .form-group p { position:relative; }
-.WCR50202DS td .form-group p button { z-index:2; position:absolute; top:0; left:0; background:Red; }
-.WCR50202DS span.ipt-clear input { padding-left:50px; }
-.WCR50202DS span.ipt-clear .btn-clear { position:absolute; right:16px; top:50%; transform:translate(0, -50%); }
-.WCR50202DS span.ipt-clear.txt-unit { position:relative; display:block; max-width:406px; }
-.WCR50202DS span.ipt-clear.txt-unit span.txt { position:absolute; right:16px; top:50%; transform:translate(0, -50%); }
-.WCR50202DS span.ipt-clear.txt-unit:has(.btn-clear) span.txt { right:40px; }
+.recruitment .group td { text-align:left; }
+.recruitment .group form .table-group { margin-bottom:52px; position:relative; }
+.recruitment .group form .table-group label { margin-bottom:0; }
+.recruitment .upload { display:none; }
+.recruitment label:has(input) { display:inline-flex; }
+.recruitment .photo-content { display:flex; gap:28px; }
+.recruitment .photo-content .img-photo { width:190px; height:253px; background:var(--no-photo);  }
+.recruitment .photo-content .img-photo:has(img) { background:transparent; }
+.recruitment .photo-content dl { flex:1; }
+.recruitment .photo-content dt { margin-bottom:18px; font-weight:var(--font-w-b); text-align:left;  }
+.recruitment .photo-content dt.rfrnc::before { content:"※"; margin-right:3px; }
+.recruitment .photo-content dd { margin-bottom:10px; font-size:var(--font-16); text-align:left; }
+.recruitment .photo-content dd:nth-of-type(2) { margin-bottom:24px; }
+.recruitment .img-photo { border:1px solid var(--color-d); }
+.recruitment .upload-label { display:block; }
+.recruitment .fileLabel { display:flex; align-items:center; margin-top:24px; text-decoration:underline; }
+.recruitment .fileLabel button { margin-left:5px; text-decoration:none; }
+.recruitment td input { max-width:100%; }
+.recruitment td fieldset.form-group { gap:10px; }
+.recruitment td .form-group:first-of-type { display:flex; gap:20px; align-items:center; margin-top:0; max-width:406px; }
+.recruitment td .form-group:first-of-type input { margin-top:0; }
+.recruitment td .form-group:has(input[type="date"]),
+.recruitment td .form-group:has(input[type="month"]) { gap:10px; }
+.recruitment td .form-group input { max-width:100%; margin-top:10px; }
+.recruitment td .form-group,
+.recruitment td .form-group p { position:relative; }
+.recruitment td .form-group p button { z-index:2; position:absolute; top:0; left:0; background:Red; }
+.recruitment td .form-group .email { display:flex; align-items:center; gap:10px; }
+.recruitment td .form-group .email input { width:240px; }
+.recruitment td .form-group select { width:178px; }
+
+.recruitment span.ipt-clear input { padding-left:50px; }
+.recruitment span.ipt-clear .btn-clear { position:absolute; right:16px; top:50%; transform:translate(0, -50%); }
+.recruitment span.ipt-clear.txt-unit { position:relative; display:block; max-width:406px; }
+.recruitment span.ipt-clear.txt-unit span.txt { position:absolute; right:16px; top:50%; transform:translate(0, -50%); }
+.recruitment span.ipt-clear.txt-unit:has(.btn-clear) span.txt { right:40px; }
+
+.recruitment .group.step2 .form-group.abs { position:absolute; top:-16px; right:0; z-index:2; }
+.recruitment .group.step4 .form-group { margin-bottom:52px; }
+.recruitment .group.step4 .form-group:last-of-type { margin-bottom:0; }
+
+.recruitment .preview-cta { display:none; }
+.recruitment .preview-cta .text-content p { font-size:var(--font28); font-weight:var(--font-w-b);  }
+.recruitment .preview-cta .text-content p:first-of-type { text-align:center; }
+.recruitment .preview-cta .text-content p:first-of-type span { display:block; margin-top:18px; font-size:var(--font22); font-weight:var(--font-w-m); }
+.recruitment .preview-cta .text-content p:last-of-type { text-align:right; }
+.recruitment .preview-cta .text-content p:last-of-type span:first-of-type { margin-right:16px; font-weight:var(--font-w-m); }
+.WCR50202DS.recruitment.is-preview  .preview-cta { display:block; }
 
 
+/* 입사지원서 조회 */
+.WCR50204VQ .form-group.abs { display:none; }
+.WCR50204VQ .group form .table-group label:has(input[type=radio]) input { position:absolute; top:-5000px; width:1px; height:1px; opacity:0; }
+.WCR50204VQ .group form .table-group label:has(input[type=radio]:disabled) { display:none; }
+.WCR50204VQ .group form .table-group input,
+.WCR50204VQ .group form .table-group select,
+.WCR50204VQ .group form .table-group textarea { display:inline; padding:0; margin:0; width:auto; height:auto; line-height:1.5; border:0; background:transparent; color:var(--color-45) !important;  }
+.WCR50204VQ tr:has(.photo-content) { display:table-row!important; aria-hidden:false !important; }
+.WCR50204VQ tr:has(.photo-content) td dl { display:none; }
+
+.WCR50204VQ .text-content .group .text-group { margin-bottom:52px; }
+.WCR50204VQ .text-content .group .text-group:last-of-type { margin-bottom:0; }
+.WCR50204VQ .textarea-wrap { min-height:200px; padding:20px 10px; border:1px solid var(--color-d); }
 
 /** 찾아오시는 길 **/
 .WCA70100VQ .map-content { padding-top:56px; }
