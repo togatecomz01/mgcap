@@ -246,6 +246,8 @@ main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
 
 /** 장애인 상담 안내 **/
 .WCU11000VQ .tit { margin-bottom:20px; font-size:1rem; font-weight:var(--font-w-b); color:var(--color-2); }
+.WCU11000VQ .text-content .text-list li { margin-bottom:12px; }
+.WCU11000VQ .text-content .text-list li:last-child { margin-bottom:20px; }
 .WCU11000VQ .text-content .text-list + .img-list { margin-top:20px; }
 .WCU11000VQ .img-list li { position:relative; padding-top:200px; width:calc(100% / 5); }
 .WCU11000VQ .img-list li:has(.s-tit) { padding-top:132px; padding-bottom:88px; }
@@ -992,7 +994,7 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 
     .WCU11000VQ .process-content li { align-items:center; padding:18px 16px; }
     .WCU11000VQ .process-content li .step + div:has(em) { padding:0; }
-    .WCU11000VQ .text-list li { padding-bottom:12px; margin:0; background-color:transparent; }
+    .WCU11000VQ .text-list li { padding:0; margin:0; background-color:transparent; }
 
     /** 유용한 정보 **/
     .WCU11001VQ .cap-form,
