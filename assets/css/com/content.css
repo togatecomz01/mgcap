@@ -476,8 +476,10 @@ main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
 .WCC601400VQ .btn-group .btn-download + .btn-download {margin-left: 26px;}
 
 /* 개인정보 조회, 동의 안내문 */
-.WCC60900VQ h5,.WCC60900VQ ul.dot,.WCC60900VQ p.dot,.WCC60900VQ span + ol {margin-top: 56px;}
+.WCC60900VQ h5 {margin-top: 56px;}
+.WCC60900VQ p.dot, .WCC60900VQ ul.dot, .WCC60900VQ span + ol {margin-top: 18px;}
 .WCC60900VQ h3 {margin-bottom: 18px;}
+.WCC60900VQ .text-content .success {color: var(--success);}
 /* 신용정보 활용체제 */
 .WCC601200VQ li + span, .WCC601200VQ ul.dot, .WCC601200VQ span + ol {margin-top: 18px;} 
 
