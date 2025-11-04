@@ -711,6 +711,7 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 ---------------------------------------------*/
 
 /* 나의 정보 변경 */
+.WCS50300VS.page-container > div + div {padding-top: 72px;}
 .WCS50300VS .pad {padding: 8px 10px;}
 .WCS50300VS .form-group:has(.info-phone) {flex: 0 0 calc(66% - 20px) !important}
 .WCS50300VS .form-group:has(.email) {flex: 0 0 calc(77% - 20px) !important}
@@ -1132,6 +1133,9 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     .WCC21400VQ .form-group input.mo-phn { display:block; width:214px; }
     .WCC21401DS .btn-group .btn-download + .btn-download {margin-left:0;}
 
+    /* 우편번호 팝업 모바일용 */
+    .pop_find_zipcord .search-form #old-address .form-group:last-of-type input {width: 100%;}
+
     /* 법인계약 약정 + 상담신청 팝업 모바일용*/
     .WCC21200VQ table, .WCC70102PS table,
     .WCC21200VQ tbody, .WCC70102PS tbody,
@@ -1149,6 +1153,13 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     .WCC70102PS .check {margin-top: 10px;}
     .WCC70102PS .note-group .tit {left: 0;}
     
+    /* 상담신청, 차량검색, 우편번호 검색 팝업 공통 */
+    .pop_find_zipcord.layerPopup.full .pop-header h2,
+    .WCC70101PQ.layerPopup.full .pop-header h2,
+    .WCC70102PS.layerPopup.full .pop-header h2 { font-weight: var(--font-w-m);}
+    .pop_find_zipcord.layerPopup .pop-body, 
+    .WCC70101PQ.layerPopup .pop-body, 
+    .WCC70102PS.layerPopup .pop-body {max-height: none;}
     /*---------------------------------------------
         #회사소개
     ---------------------------------------------*/
