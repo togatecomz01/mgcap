@@ -10,8 +10,15 @@ window.addEventListener('load', function() {
 ---------------------------------------------*/
 function updateScrollState() {
     const allMenu = document.getElementById('allMenu');
-    const shouldLockScroll = window.innerWidth <= 767 && allMenu?.classList.contains('on');
+    const menuInner = document.querySelector('.menu-inner');
+    const shouldLockScroll = allMenu?.classList.contains('on');
+
     document.body.classList.toggle('no-scroll', shouldLockScroll);
+
+    if (shouldLockScroll && menuInner) {
+        const headerHeight = document.querySelector('.allmenu-header')?.offsetHeight || 0;
+        menuInner.style.maxHeight = `calc(100vh - ${headerHeight}px)`;
+    }
 }
 
 /*---------------------------------------------
@@ -81,9 +88,19 @@ function menuToggle() {
             });
         }
     }
+    // resize 시 높이 재계산
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            if (allMenu?.classList.contains('on')) {
+                updateScrollState();
+            }
+        }, 100);
+    });
 }
 
-// 검색 토글 20251010 수정
+// 검색 토글
 function searchToggle() {
     const searchBtn = document.querySelector('.search-btn');
     const allSearch = document.getElementById('allSearch');
@@ -96,7 +113,7 @@ function searchToggle() {
             allSearch.classList.add('on');
             searchBtn.style.display = 'none';
             if (searchCloseBtn) {
-                searchCloseBtn.classList.add('on');/* 20250929 수정 */
+                searchCloseBtn.classList.add('on');
             }
         });
         
@@ -104,7 +121,7 @@ function searchToggle() {
             searchCloseBtn.addEventListener('click', function() {
                 allSearch.classList.remove('on');
                 searchBtn.style.display = 'inline-block';
-                this.classList.remove('on');/* 20250929 수정 */
+                this.classList.remove('on');
             });
         }
 
@@ -234,7 +251,7 @@ function headerMenu() {
     // 2depth - 마우스오버 이벤트
     const submenu2Items = document.querySelectorAll('.lnb .submenu2 > li');
     for (let i = 0; i < submenu2Items.length; i++) {
-        // 20251015 키보드 이벤트
+        // 키보드 이벤트
         const submenu2Link = submenu2Items[i].querySelector('a, button');
         
         if (submenu2Link) {
@@ -259,7 +276,7 @@ function headerMenu() {
         });
     }
 
-    // 20251015 키보드 이벤트
+    // 키보드 이벤트
     const allMenuLinks = document.querySelectorAll('.lnb .menu-tit, .lnb .submenu a, .lnb .submenu button, .lnb .submenu2 a, .lnb .submenu2 button, .lnb .submenu3 a, .lnb .submenu3 button');
     for (let i = 0; i < allMenuLinks.length; i++) {
         allMenuLinks[i].addEventListener('keydown', function(e) {

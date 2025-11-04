@@ -94,6 +94,7 @@
 .no-scroll { overflow:hidden; }
 .allmenu { display:none; }
 .allmenu.on { position:absolute; left:0; top:0; right:0; display:block; width:100%; background-color:var(--white); transform: translateZ(0); will-change: transform; z-index:10; }
+.allmenu.on .menu-inner { overflow-y:auto; }
 
 /* 전체메뉴 헤더 */
 .allmenu-header{ padding:27px 0px 32px; background: linear-gradient(-90deg, #41C7F4 0%, var(--primary) 100%); }
@@ -180,7 +181,7 @@
 	/* 전체메뉴 컨텐츠 */
 	.menu-cont { display:flex; height:calc(100% - 51px); overflow:hidden;  -webkit-overflow-scrolling:touch; }
 	.menu-cont .menu-l { display:block; }
-	.menu-cont .menu-inner { flex:1; padding-bottom:84px; height:100vh; overflow-y:auto; }
+	.menu-cont .menu-inner { flex:1; padding-bottom:84px; }
 	.menu-cont .menu-inner > li { display:none; padding-top:24px; border-bottom:0; }
 	.menu-cont .menu-inner > li.on { display:block; }
 	.menu-cont .menu-inner > li > span { display:none; }
