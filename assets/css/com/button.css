@@ -124,7 +124,7 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
 .btn-group.w50 > a:nth-of-type(2) { margin-top:0; }
 
 .btn-link,
-.btn-download { display:inline-flex; align-items:center; justify-content:space-between; gap:10px; min-height:62px; line-height:1.5; padding:0 32px; border-radius:100px; background:var(--btn-download-background); border:var(--btn-download-border); text-align:left; font-size:var(--btn-download-font-size); }
+.btn-download { display:inline-flex; align-items:center; justify-content:space-between; gap:10px; min-height:80px; line-height:1.5; padding:0 32px; border-radius:100px; background:var(--btn-download-background); border:var(--btn-download-border); text-align:left; font-size:var(--btn-download-font-size); }
 .btn-download::after { content:""; display:block; width:24px; height:24px; background-color:var(--color-9); 
   mask-image:var(--ico-download); mask-repeat:no-repeat; mask-size:auto 40px; mask-position:center; -webkit-mask-image:var(--ico-download); -webkit-mask-repeat:no-repeat; -webkit-mask-size:17.333px auto; -webkit-mask-position:center; 
   }

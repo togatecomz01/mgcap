@@ -263,7 +263,8 @@ main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
 .WCU11001VQ .btn-group.w50 .btn-link:first-of-type { margin-top:0; background-image:url("../../images/content/custportal/w/ico_hand.png"); }
 .WCU11001VQ .cap-form,
 .WCU10900VQ .cap-form,
-.WCC30100VQ .cap-form { display:flex; align-items:center; justify-content:space-between; }
+.WCC30100VQ .cap-form,
+.WCS50200VQ .cap-form { display:flex; align-items:center; justify-content:space-between; }
 .WCU11001VQ .cap-form .caption,
 .WCU10900VQ .cap-form .caption,
 .WCC30100VQ .cap-form .caption { margin:38px 0 24px; padding-bottom:0; }
@@ -351,12 +352,12 @@ main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
 ---------------------------------------------*/
 /******자주묻는 질문**/
 .WCC10100VQ {
-    --qna-padding:42px 28px;
+    --qna-padding:24px 28px;
     --qna-icon:var(--ico-arrow);
     --qna-q:url("../../images/com/svg/txt_Q.svg");
     --qna-a:url("../../images/com/svg/txt_A.svg");
     --qna-gap:24px;
-    --tit-font-size:var(--font22);
+    --tit-font-size:var(--font20);
     --txt-font-size:var(--font20);
     --ico-q:url("../../images/com/svg/ico_accordin.svg");
     --ico-q-position:28px;
@@ -369,13 +370,13 @@ main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
 .WCC10100VQ .qna-list dt button span,
 .WCC10100VQ .qna-list dd.cont span  { display:block; font-size:0; }
 .WCC10100VQ .qna-list dt button span::before,
-.WCC10100VQ .qna-list dd.cont span::before {  content:""; display:block; width:40px; height:40px; font-size:0; background-color:var(--color-d); }
+.WCC10100VQ .qna-list dd.cont span::before {  content:""; display:block; width:24px; height:24px; font-size:0; background-color:var(--color-d); }
 .WCC10100VQ .qna-list dt button span::before {
-    mask-image:var(--qna-q); mask-repeat:no-repeat; mask-size:28px auto; mask-position:center; -webkit-mask-image:var(--qna-q); -webkit-mask-repeat:no-repeat; -webkit-mask-size:28px auto; -webkit-mask-position:center; 
+    mask-image:var(--qna-q); mask-repeat:no-repeat; mask-size:28px auto; mask-position:center; -webkit-mask-image:var(--qna-q); -webkit-mask-repeat:no-repeat; -webkit-mask-size:20px auto; -webkit-mask-position:center; 
 }
 .WCC10100VQ .qna-list dt button { padding-right:50px; color:var(--color-45); }
-.WCC10100VQ .qna-list dt button::after { content:""; position:absolute; top:50%; right:var(--ico-q-position); transform:translate(0, -50%); display:block; width:40px; height:40px; background-color:var(--color-d); transition: 0.2s linear;
-    mask-image:var(--ico-q); mask-repeat:no-repeat; mask-size:28px auto; mask-position:center; -webkit-mask-image:var(--ico-q); -webkit-mask-repeat:no-repeat; -webkit-mask-size:28px auto; -webkit-mask-position:center; 
+.WCC10100VQ .qna-list dt button::after { content:""; position:absolute; top:50%; right:var(--ico-q-position); transform:translate(0, -50%); display:block; width:28px; height:28px; background-color:var(--color-d); transition: 0.2s linear;
+    mask-image:var(--ico-q); mask-repeat:no-repeat; mask-size:18px auto; mask-position:center; -webkit-mask-image:var(--ico-q); -webkit-mask-repeat:no-repeat; -webkit-mask-size:18px auto; -webkit-mask-position:center; 
 }
 
 .WCC10100VQ .qna-list dt button:hover { color:var(--color-2); border:1px solid var(--primary); }
@@ -384,7 +385,7 @@ main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
 .WCC10100VQ .qna-list dd.cont { display:none; }
 .WCC10100VQ .qna-list dd.cont div { font-size:var(--txt-font-size); }
 .WCC10100VQ .qna-list dd.cont span::before {
-    mask-image:var(--qna-a); mask-repeat:no-repeat; mask-size:auto 40px; mask-position:center; -webkit-mask-image:var(--qna-a); -webkit-mask-repeat:no-repeat; -webkit-mask-size:28px auto; -webkit-mask-position:center; 
+    mask-image:var(--qna-a); mask-repeat:no-repeat; mask-size:auto 40px; mask-position:center; -webkit-mask-image:var(--qna-a); -webkit-mask-repeat:no-repeat; -webkit-mask-size:20px auto; -webkit-mask-position:center; 
 }
 
 .WCC10100VQ .accordion-item.on dt button { color:var(--primary); font-weight:var(--font-w-m); }
@@ -728,6 +729,12 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCS50300VS .flex-row:has(> select + span) span:last-of-type { margin-right: 0;}
 .WCS50300VS .btn-withdraw {width: 120px; height: 58px; background-color: var(--color-2); color: var(--white);}
 .WCS50300VS .form-group input[type="text"] {flex: none;}
+
+/** 공개매각 입찰내역 **/
+.WCS50200VQ .cap-form { padding-bottom:24px; }
+.WCS50200VQ .cap-form p { padding:0; margin:0; font-size:var(--font16); font-weight:var(--font-w-m); }
+.WCS50200VQ .cap-form p span { color:var(--primary); }
+.WCS50200VQ .text-content .m-dot li, .info-content .m-dot li { font-size:var(--font16); }
 
 /* 금융소비자 & 장애인 상담 안내 */
 .WCM10106DS .img-list,
