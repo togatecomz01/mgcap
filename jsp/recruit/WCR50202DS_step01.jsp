@@ -13,9 +13,7 @@
             </colgroup>
             <tbody>
                 <tr>
-                    <th scope="row">
-                        <label for="newApplicant" class="essential">지원구분</label>
-                    </th>
+                    <th scope="row">지원구분</th>
                     <td class="tal">
                         <fieldset class="radio-group">
                             <legend class="sr-only">지원구분 선택</legend>
@@ -46,16 +44,16 @@
                 </colgroup>
                 <thead>
                 <tr>
-                    <th id="th-place-1"  scope="col">희망근무지</th>
-                    <th id="th-task-1"   scope="col">지원업무</th>
-                    <th id="th-detail-1" scope="col">상세지원업무</th>
+                    <th scope="col">희망근무지</th>
+                    <th scope="col">지원업무</th>
+                    <th scope="col">상세지원업무</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <td>
                         <label for="prefPlace1" class="sr-only">희망근무지</label>
-                        <select id="prefPlace1" name="prefPlace1" aria-labelledby="th-place-1 prefPlace1">
+                        <select id="prefPlace1" name="prefPlace1">
                             <option value="">선택해주세요</option>
                             <!-- 실제 옵션들 -->
                             <option value="서울" selected>서울</option>
@@ -64,15 +62,11 @@
                     </td>
                     <td>
                         <label for="applyTask1" class="sr-only">지원업무</label>
-                        <span class="ipt-clear">
-                            <input id="applyTask1" name="applyTask1" type="text" value="인턴" aria-labelledby="th-task-1 applyTask1">
-                        </span>
+                        <span class="ipt-clear"><input id="applyTask1" name="applyTask1" type="text" value="인턴"></span>
                     </td>
                     <td>
                         <label for="applyDetail1" class="sr-only">상세지원업무</label>
-                        <span class="ipt-clear">
-                            <input id="applyDetail1" name="applyDetail1" type="text"  value="상세지원업무 내용" aria-labelledby="th-detail-1 applyDetail1">
-                        </span>
+                        <span class="ipt-clear"><input id="applyDetail1" name="applyDetail1" type="text"  value="상세지원업무 내용"></span>
                     </td>
                 </tr>
                 </tbody>
@@ -91,29 +85,28 @@
                 </colgroup>
                 <thead>
                     <tr>
-                        <th id="th-place-2"  scope="col">희망근무지</th>
-                        <th id="th-task-2"   scope="col">지원업무</th>
-                        <th id="th-detail-2" scope="col">상세지원업무</th>
+                        <th scope="col">희망근무지</th>
+                        <th scope="col">지원업무</th>
+                        <th scope="col">상세지원업무</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>
-                            <select id="prefPlace2" name="prefPlace2" aria-labelledby="th-place-2 prefPlace2">
-                            <option value="">선택해주세요</option>
-                            <option value="서울">서울</option>
-                            <option value="부산">부산</option>
+                            <label for="prefPlace2" class="sr-only">희망근무지</label>
+                            <select id="prefPlace2" name="prefPlace2">
+                                <option value="">선택해주세요</option>
+                                <option value="서울">서울</option>
+                                <option value="부산">부산</option>
                             </select>
                         </td>
                         <td>
-                            <span class="ipt-clear">
-                                <input id="applyTask2" name="applyTask2" type="text" vallue="" aria-labelledby="th-task-2 applyTask2">
-                            </span>
+                            <label for="applyTask2" class="sr-only">지원업무</label>
+                            <span class="ipt-clear"><input id="applyTask2" name="applyTask2" type="text" vallue=""></span>
                         </td>
                         <td>
-                            <span class="ipt-clear">
-                                <input id="applyDetail2" name="applyDetail2" type="text" aria-labelledby="th-detail-2 applyDetail2">
-                            </span>
+                            <label for="applyDetail2" class="sr-only">상세지원업무</label>
+                            <span class="ipt-clear"><input id="applyDetail2" name="applyDetail2" type="text"></span>
                         </td>
                     </tr>
                 </tbody>
@@ -133,9 +126,9 @@
             </colgroup>
             <tbody>
                 <tr>
-                    <th id="th-photo" scope="row">사진등록</th>
+                    <th scope="row">사진등록</th>
                     <td colspan="3">
-                        <div class="photo-content" aria-labelledby="th-photo">
+                        <div class="photo-content">
                             <p class="img-photo">
                                 <span class="sr-only">등록된 사진이 없습니다.</span>
                             </p>
@@ -157,81 +150,90 @@
                     </td>
                 </tr>
                 <tr>
-                    <th id="th-name" scope="row"><label for="name">성명</label></th>
+                    <th scope="row"><label for="name">성명</label></th>
                     <td colspan="3">
-                        <input type="text" id="name" name="name" class="w-406" value="홍길동"  disabled aria-labelledby="th-name name">
+                        <input id="name" name="name" class="w-406" type="text" value="홍길동"  disabled>
                     </td>
                 </tr>
                 <tr>
                     <th id="th-nationality" scope="row"><label for="nationality">국적</label></th>
                     <td colspan="3">
-                        <input type="text" id="nationality" name="nationality" class="w-406" disabled aria-labelledby="th-nationality nationality">
+                        <input id="nationality" name="nationality" class="w-406" type="text" disabled>
                     </td>
                 </tr>
                 <tr>
                     <th id="th-birthday" scope="row"><label for="birthday">생년월일</label></th>
                     <td colspan="3">
-                        <input type="date" id="birthday" name="birthday" class="w-406" value="2025-10-17" disabled aria-labelledby="th-birthday birthday">
+                        <input id="birthday" name="birthday" class="w-406" type="date" value="2025-10-17" disabled>
                     </td>
                 </tr>
                 <tr>
-                    <th id="th-address" scope="row"><label for="address1">현주소</label></th>
+                    <th id="th-address" scope="row">현주소</th>
                     <td colspan="3" class="address">
-                        <fieldset aria-labelledby="th-address">
+                        <fieldset>
                             <legend class="sr-only">현주소 입력</legend>
                             <div class="form-group">
-                                <input type="text" id="address1" name="address1" placeholder="우편번호" aria-label="우편번호" disabled>
+                                <label for="address1" class="sr-only">우편번호</label>
+                                <input type="text" id="address1" name="address1" placeholder="우편번호" disabled>
                                 <button type="button" class="btn-form">우편번호 검색</button>
                             </div>
                             <div class="form-group">
-                                <input type="text" id="address2" name="address2" placeholder="도로명 주소" aria-label="도로명 주소 입력" disabled>
-                                <input type="text" id="address3" name="address3" placeholder="상세주소" aria-label="상세주소 입력">
+                                <label for="address2" class="sr-only">도로명 주소</label>
+                                <input type="text" id="address2" name="address2" placeholder="도로명 주소" disabled>
+                                <label for="address3" class="sr-only">상세주소</label>
+                                <span class="ipt-clear">
+                                    <input type="text" id="address3" name="address3" placeholder="상세주소">
+                                </span>
                             </div>
                         </fieldset>
                     </td>
                 </tr>
                 <tr>
-                    <th id="th-phone" scope="row"><label for="phoneNumber">전화번호</label></th>
+                    <th scope="row"><label for="phoneNumber">전화번호</label></th>
                     <td>
-                        <input type="tel" id="phoneNumber" name="phoneNumber" inputmode="tel">
+                        <input id="phoneNumber" name="phoneNumber" type="tel">
                     </td>
-                    <th id="th-mobile" scope="row"><label for="mobileNumber">휴대폰</label></th>
+                    <th scope="row"><label for="mobileNumber">휴대폰</label></th>
                     <td>
-                        <input type="tel" id="mobileNumber" name="mobileNumber" inputmode="tel">
+                        <input id="mobileNumber" name="mobileNumber" type="tel">
                     </td>
                 </tr>
                 <tr>
-                    <th id="th-email" scope="row"><label for="emailId">이메일</label></th>
+                    <th scope="row">이메일</th>
                     <td colspan="3">
-                        <fieldset class="form-group" aria-labelledby="th-email">
+                        <fieldset class="form-group email-group">
                             <legend class="sr-only">이메일 입력</legend>
                             <div class="email">
-                                <input id="emailId" name="emailId" type="text" inputmode="email" aria-label="이메일 아이디 입력">
+                                <label for="emailId1" class="sr-only">이메일 아이디</label>
+                                <input id="emailId1" name="emailId1" type="text" class="email-id">
                                 <span>@</span>
-                                <input id="emailDomain" name="emailDomain" type="text" inputmode="email" aria-label="이메일 도메인 입력">
+                                <label for="emailDomain1" class="sr-only">도메인</label>
+                                <input id="emailDomain1" name="emailDomain1" type="text" class="email-domain">
                             </div>
-                            <select id="emailSelect" name="emailSelect" aria-label="이메일 도메인 선택">
+                            <label for="emailSelect1" class="sr-only">도메인 선택</label>
+                            <select id="emailSelect1" name="emailSelect1" class="email-select">
                                 <option value="">직접 입력</option>
                                 <option value="naver.com">naver.com</option>
                                 <option value="gmail.com">gmail.com</option>
                                 <option value="hanmail.net">hanmail.net</option>
                             </select>
+                            <!--<p class="sr-only email-live" aria-live="polite"></p>-->
                         </fieldset>
                     </td>
                 </tr>
                 <tr>
                     <th id="th-hobby" scope="row"><label for="hobby">취미</label></th>
                 <td>
-                    <input type="text" id="hobby" name="hobby" aria-labelledby="th-hobby hobby">
+                    <span class="ipt-clear"><input id="hobby" name="hobby"  type="text"></span>
                 </td>
                     <th id="th-skill" scope="row"><label for="specialAbility">특기</label></th>
                 <td>
-                    <input type="text" id="specialAbility" name="specialAbility" aria-labelledby="th-skill specialAbility">
+                    <span class="ipt-clear"><input type="text" id="specialAbility" name="specialAbility"></span>
                 </td>
                 </tr>
             </tbody>
         </table>
-        <p class="m-dot"> 본인인증 시 사용한 핸드폰 번호와 입력하신 이메일은 채용결과 및 진행사항 안내 등에 활용됩니다. 이메일을 정확하게 입력하시기 바랍니다.</p>
+        <p class="m-dot">본인인증 시 사용한 핸드폰 번호와 입력하신 이메일은 채용결과 및 진행사항 안내 등에 활용됩니다. 이메일을 정확하게 입력하시기 바랍니다.</p>
     </div><!--//table-group-->
 
     <!-- 병역구분 -->
@@ -247,16 +249,17 @@
             </colgroup>
             <thead>
                 <tr>
-                    <th id="th-miltype" scope="col"><label for="milType">병역구분</label></th>
-                    <th id="th-branch" scope="col"><label for="milBranch">군별</label></th>
-                    <th id="th-period" scope="col"><label for="serviceStart">복무기간</label></th>
-                    <th id="th-exempt" scope="col"><label for="exemptReason">면제사유</label></th>
+                    <th scope="col">병역구분</th>
+                    <th scope="col">군별</th>
+                    <th scope="col">복무기간</th>
+                    <th scope="col">면제사유</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>
-                        <select id="milType" name="milType" aria-labelledby="th-miltype milType" aria-label="병역구분 선택">
+                        <label for="milType" class="sr-only">병역구분</label>
+                        <select id="milType" name="milType">
                             <option value="">선택해주세요</option>
                             <option value="served">현역/대체복무</option>
                             <option value="exempt">면제</option>
@@ -264,7 +267,8 @@
                         </select>
                     </td>
                 <td>
-                    <select id="milBranch" name="milBranch" required aria-labelledby="th-branch milBranch" aria-label="군별 선택">
+                    <label for="milBranch" class="sr-only">군별</label>
+                    <select id="milBranch" name="milBranch">
                         <option value="">선택해주세요</option>
                         <option value="army">육군</option>
                         <option value="navy">해군</option>
@@ -273,14 +277,17 @@
                     </select>
                 </td>
                 <td>
-                    <fieldset class="form-group" aria-labelledby="th-period">
+                    <fieldset class="form-group">
                         <legend class="sr-only">복무기간 입력</legend>
-                        <input type="date" id="serviceStart" name="serviceStart" aria-labelledby="th-period serviceStart" aria-label="복무 시작일 입력">
-                        <input type="date" id="serviceEnd" name="serviceEnd" aria-labelledby="th-period serviceEnd" aria-label="복무 종료일 입력">
+                        <label for="serviceStart" class="sr-only">복무 시작일</label>
+                        <input type="date" id="serviceStart" name="serviceStart">
+                        <label for="serviceEnd" class="sr-only">복무 종료일</label>
+                        <input type="date" id="serviceEnd" name="serviceEnd">
                     </fieldset>
                 </td>
                 <td>
-                    <input id="exemptReason" name="exemptReason" type="text" aria-labelledby="th-exempt exemptReason" aria-label="면제사유 입력">
+                    <label for="exemptReason" class="sr-only">면제사유</label>
+                    <span class="ipt-clear"><input id="exemptReason" name="exemptReason" type="text"></span>
                 </td>
                 </tr>
             </tbody>

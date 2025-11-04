@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR" %>
 
-
-
 <div class="form-content">
     <div class="text-content">
         <div class="text-group">
@@ -26,38 +24,40 @@
                 </colgroup>
                 <thead>
                 <tr>
-                    <th id="th-milCo"   scope="col">근무처</th>
-                    <th id="th-milTerm" scope="col">근무기간</th>
-                    <th id="th-milDuty" scope="col">담당업무</th>
+                    <th scope="col">근무처</th>
+                    <th scope="col">근무기간</th>
+                    <th scope="col">담당업무</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <td>
+                        <label for="milCompany1" class="sr-only">근무처</label>
                         <span class="ipt-clear">
-                            <input id="milCompany1" name="milCompany1" type="text" aria-labelledby="th-milCo milCompany1">
+                            <input id="milCompany1" name="milCompany1" type="text">
                         </span>
                     </td>
                     <td>
-                        <fieldset class="period-fieldset">
-                            <legend class="sr-only">근무기간 1</legend>
+                        <fieldset class="form-gruop">
+                            <legend class="sr-only">근무기간</legend>
                             <div class="form-group">
-                                <input id="milStart1" name="milStart1" type="date" aria-label="근무 시작일">
-                                <input id="milEnd1" name="milEnd1" type="date" aria-label="근무 종료일">
+                                <label for="milStart1" class="sr-only">근무 시작일</label>
+                                <input id="milStart1" name="milStart1" type="date">
+                                <label for="milEnd1" class="sr-only">근무 종료일</label>
+                                <input id="milEnd1" name="milEnd1" type="date">
                             </div>
                         </fieldset>
                     </td>
                     <td>
-                        <span class="ipt-clear">
-                            <input id="milDuty1" name="milDuty1" type="text" aria-labelledby="th-milDuty milDuty1">
-                        </span>
+                        <label for="milDuty1" class="sr-only">담당업무</label>
+                        <span class="ipt-clear"><input id="milDuty1" name="milDuty1" type="text"></span>
                     </td>
                 </tr>
                 </tbody>
             </table>
         </div>
         <!--경력-->
-        <div class="edu-repeat" data-title="경력" data-max="10">    
+        <div class="edu-repeat" data-title="경력" data-max="5">    
             <div class="table-group" data-index="1">
                 <h4>경력</h4>
                 <table class="td-l">
@@ -70,77 +70,54 @@
                     </colgroup>
                     <tbody>
                         <tr>
-                            <th scope="row">
-                                <label for="companyName">근무처</label>
-                            </th>
+                            <th scope="row"><label for="companyName">근무처</label></th>
                             <td>
-                                <span class="ipt-clear">
-                                    <input id="companyName" name="companyName" type="text">
-                                </span>
+                                <span class="ipt-clear"><input id="companyName" name="companyName" type="text"></span>
                             </td>
-                            <th scope="row">
-                                <label for="workStart">근무기간</label>
-                            </th>
+                            <th scope="row"><label for="workStart">근무기간</label></th>
                             <td>
-                                <fieldset>
-                                    <legend class="sr-only">근무기간</legend>
-                                    <div class="form-group">
-                                        <input id="workStart" name="workStart" type="date" aria-label="근무 시작일">
-                                        <input id="workEnd" name="workEnd" type="date" aria-label="근무 종료일">
-                                    </div>
-                                </fieldset>
+                            <fieldset class="form-group">
+                                <legend class="sr-only">근무기간</legend>
+                                <label for="workStart" class="sr-only">근무 시작일</label>
+                                <input id="workStart" name="workStart" type="date">
+                                <label for="workEnd" class="sr-only">근무 종료일</label>
+                                <input id="workEnd" name="workEnd" type="date">
+                            </fieldset>
                             </td>
                         </tr>
                         <tr>
-                            <th scope="row">
-                                <label for="position">직위</label>
-                            </th>
+                            <th scope="row"><label for="position">직위</label></th>
                             <td>
-                                <span class="ipt-clear">
-                                    <input id="position" name="position" type="text">
-                                </span>
+                                <span class="ipt-clear"><input id="position" name="position" type="text"></span>
                             </td>
-                            <th scope="row">
-                                <label for="duty">담당업무</label>
-                            </th>
+                            <th scope="row"><label for="duty">담당업무</label></th>
                             <td>
-                                <span class="ipt-clear">
-                                    <input id="duty" name="duty" type="text">
-                                </span>
+                                <span class="ipt-clear"><input id="duty" name="duty" type="text"></span>
                             </td>
                         </tr>
                         <tr>
-                            <th scope="row">
-                                <label for="salary">연봉</label>
-                            </th>
-                        <td>
-                            <span class="txt-unit ipt-clear">
-                                <input type="text" name="utlr_brdn_amt" id="utlr_brdn_amt1" class="unit" inputmode="numeric" style="padding-right:120px;">
-                                <span class="txt">만원</span>
-                            </span>
-                        </td>
-                
-                        <th scope="row">
-                            <label for="leaveReason">퇴직사유</label>
-                        </th>
-                        <td>
-                            <span class="ipt-clear">
-                                <input id="leaveReason" name="leaveReason" type="text">
-                            </span>
-                        </td>
+                            <th scope="row"><label for="salary">연봉</label></th>
+                            <td>
+                                <span class="txt-unit ipt-clear">
+                                    <input id="salary" name="salary" class="unit" type="number" style="padding-right:120px;">
+                                    <span class="txt">만원</span>
+                                </span>
+                            </td>
+                            <th scope="row"><label for="leaveReason">퇴직사유</label></th>
+                            <td>
+                                <span class="ipt-clear"><input id="leaveReason" name="leaveReason" type="text"></span>
+                            </td>
                         </tr>
                         <tr>
-                        <th scope="row">
-                            <label for="careerDetail">세부 경력 소개</label>
-                        </th>
-                        <td colspan="3">
+                            <th scope="row"><label for="careerDetail">세부 경력 소개</label></th>
+                            <td colspan="3">
                             <div class="textarea-wrap">
-                                <textarea id="introduceYourself" name="introduceYourself" rows="6" maxlength="1000" ></textarea>
-                                <div class="char-counter" aria-live="polite">
-                                  <span class="current">0</span>/<span class="max">1000</span>자
+                                <textarea id="careerDetail" name="careerDetail" rows="6" maxlength="1000"></textarea>
+                                <div class="char-counter" id="careerCounter" aria-live="polite">
+                                    <span class="current">0</span>/<span class="max">1000</span>자
                                 </div>
-                              </div>
-                        </td>
+                            </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -150,114 +127,3 @@
         </div>
     </form>
 </div><!--//form-content-->
-
-<!--[D]:WCR50204VQ.js  확인 후 삭제 -->
-<!--<script>
-    $(function () {
-      var $root = $('.WCR50204VQ');
-      if (!$root.length) return;
-    
-      // ---------- 읽기전용 처리 ----------
-      // input/textarea
-      $root.find('input, textarea')
-        .prop('readonly', true)
-        .attr('aria-readonly', 'true');
-    
-      // select는 readonly 대체 처리(값 변경 차단)
-      $root.find('select').each(function () {
-        var $sel = $(this);
-        $sel.data('readonly-prev', $sel.val());
-        $sel.attr('aria-readonly', 'true');
-      });
-      $root.on('focus mousedown keydown wheel touchstart', 'select[aria-readonly="true"]', function (e) {
-        e.preventDefault(); this.blur();
-      });
-      $root.on('change', 'select[aria-readonly="true"]', function () {
-        var $sel = $(this); $sel.val($sel.data('readonly-prev'));
-      });
-    
-      // ---------- 빈 값 판정 ----------
-      function isEmptyField($el, $row) {
-        var tag  = ($el.prop('tagName') || '').toUpperCase();
-        var type = ($el.attr('type') || '').toLowerCase();
-    
-        if (tag === 'SELECT') {
-          var v = $el.val();
-          var $opt = $el.find('option:selected');
-          return (
-            v === '' || v === '0' || $opt.is('[disabled],[data-placeholder]') ||
-            (($opt.text() || '').trim() === '')
-          );
-        }
-        if (type === 'checkbox' || type === 'radio') {
-          var name = $el.attr('name');
-          if (!name) return !$el.is(':checked');
-          var $group = $row.find('input[name="' + name.replace(/([\\[\\].])/g, '\\$1') + '"]');
-          return $group.filter(':checked').length === 0;
-        }
-        // 일반 input/textarea/date/number 등
-        var val = ($el.val() || '').trim();
-        return val === '';
-      }
-    
-      function isRowAllEmpty($tr) {
-        var $fields = $tr.find('input:not([type="hidden"]), select, textarea');
-        if (!$fields.length) return false; // 필드 없는 행은 건너뜀
-        var allEmpty = true;
-        $fields.each(function () {
-          if (!isEmptyField($(this), $tr)) { allEmpty = false; return false; }
-        });
-        return allEmpty;
-      }
-    
-      function getColspan($table) {
-        var ths = $table.find('thead tr:first th').length;
-        if (ths > 0) return ths;
-        var cols = $table.find('colgroup col').length;
-        if (cols > 0) return cols;
-        // fallback: 첫 tbody의 TD 최대 개수
-        var maxTds = 0;
-        $table.find('tbody tr').each(function () {
-          maxTds = Math.max(maxTds, $(this).children('td,th').length);
-        });
-        return Math.max(1, maxTds);
-      }
-    
-      function collapseEmptyRowsPerTbody($table) {
-        var colspan = getColspan($table);
-    
-        $table.find('tbody').each(function () {
-          var $tbody = $(this);
-          var $rows  = $tbody.find('tr');
-          if (!$rows.length) return;
-    
-          var anyVisible = false;
-    
-          $rows.each(function () {
-            var $tr = $(this);
-            if (isRowAllEmpty($tr)) {
-              $tr.hide().attr('aria-hidden', 'true');
-            } else {
-              anyVisible = true;
-            }
-          });
-    
-          // 모두 빈 행이면 '데이터 없음' 1행 삽입
-          $tbody.find('tr.__emptyRow').remove();
-          if (!anyVisible) {
-            $tbody.append(
-              '<tr class="__emptyRow"><td colspan="' + colspan + '">데이터 없음</td></tr>'
-            );
-          }
-        });
-      }
-    
-      // 실행(영역 내 모든 테이블 대상)
-      $root.find('table').each(function () {
-        collapseEmptyRowsPerTbody($(this));
-      });
-    
-      // 비동기 데이터 바인딩 후에도 재호출 가능:
-      // collapseEmptyRowsPerTbody($('.WCR50204VQ .td-l').eq(0));
-    });
-</script>-->

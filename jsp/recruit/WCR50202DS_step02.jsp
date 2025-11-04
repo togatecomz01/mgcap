@@ -38,42 +38,46 @@
                             </td>
                         </tr>
                         <tr>
-                            <th scope="row"><label for="hsPeriodStart">기간</label></th>
+                            <th scope="row">기간</th>
                             <td class="tal">
                                 <fieldset class="form-group">
                                     <legend class="sr-only">기간</legend>
-                                    <input type="month" id="hsPeriodStart" name="hsPeriodStart" aria-label="입학">
-                                    <input type="month" id="hsPeriodEnd" name="hsPeriodEnd" aria-label="졸업">
+                                    <label for="hsPeriodStart" class="sr-only">입학</label>
+                                    <input id="hsPeriodStart" name="hsPeriodStart" type="month">
+                                    <label for="hsPeriodEnd" class="sr-only">졸업</label>
+                                    <input id="hsPeriodEnd" name="hsPeriodEnd" type="month">
                                 </fieldset>
                             </td>
                             <th scope="row"><label for="hs-grad">졸업구분</label></th>
                             <td class="tal">
-                                <select id="hs-grad" name="hsGrad" title="졸업구분 선택">
-                                <option value="" disabled selected hidden>졸업구분 선택</option>
-                                <option value="grad">졸업</option>
-                                <option value="expected">졸업예정</option>
-                                <option value="drop">중퇴</option>
-                                <option value="transfer">전학</option>
+                                <select id="hs-grad" name="hsGrad">
+                                    <option value="" disabled selected hidden>졸업구분 선택</option>
+                                    <option value="grad">졸업</option>
+                                    <option value="expected">졸업예정</option>
+                                    <option value="drop">중퇴</option>
+                                    <option value="transfer">전학</option>
                                 </select>
                             </td>
                         </tr>
                         <tr>
-                        <th scope="row"><label for="hs-major">전공명</label></th>
+                        <th scope="row"><label for="hsMajor">전공명</label></th>
                         <td class="tal" colspan="3">
                             <span class="txt-unit ipt-clear">
-                                <input id="hs-major" name="hsMajor" type="text" style="padding-right:80px;">
+                                <input id="hsMajor" name="hsMajor" type="text" style="padding-right:80px;">
                                 <span class="txt">계열</span>
                             </span>
                         </td>
                         </tr>
                         <tr>
-                        <th scope="row"><label for="hs-gpa"></label>학점</th>
+                        <th scope="row">학점</th>
                         <td class="tal" colspan="3">
                             <fieldset class="form-group">
                                 <legend class="sr-only">학점 입력(취득/만점)</legend>
-                                <input id="hs-gpa" name="hsGpa" type="number" aria-label="취득학점 입력">
+                                <label for="hsGap" class="sr-only">취득학점</label>
+                                <input id="hsGap" name="hsGap" type="number">
                                 /
-                                <input id="hs-gpa-max" name="hsGpaMax" type="number" aria-label="만점 입력">
+                                <label for="hsGpaMax" class="sr-only">만점</label>
+                                <input id="hsGpaMax" name="hsGpaMax" type="number">
                             </fieldset>
                             <p class="m-dot">최종으로 졸업한 학력을 기준으로 입력하세요.</p>
                         </td>
@@ -124,23 +128,25 @@
                         <th scope="row"><label for="techSchool">학교명</label></th>
                         <td class="tal" colspan="3">
                             <span class="txt-unit ipt-clear">
-                                <input id="techSchool" name="" type="text" value="" style="padding-right:120px;">
-                                <span class="txt">고등학교</span>
+                                <input id="techSchool" name="techSchool" type="text" value="" style="padding-right:120px;">
+                                <span class="txt">대학</span>
                             </span>
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row"><label for="techPeriodStart">기간</label></th>
+                        <th scope="row">기간</th>
                         <td class="tal">
                             <fieldset class="form-group">
                                 <legend class="sr-only">기간</legend>
-                                <input type="month" id="techPeriodStart" name="techPeriodStart" aria-label="입학">
-                                <input type="month" id="techPeriodEnd" name="techPeriodEnd" aria-label="졸업">
+                                <label for="techPeriodStart" class="sr-only">입학</label>
+                                <input type="month" id="techPeriodStart" name="techPeriodStart">
+                                <label for="techPeriodEnd" class="sr-only">졸업</label>
+                                <input type="month" id="techPeriodEnd" name="techPeriodEnd">
                             </fieldset>
                         </td>
                         <th scope="row"><label for="techgrad">졸업구분</label></th>
                         <td class="tal">
-                            <select id="techgrad" name="techgrad" title="졸업구분 선택">
+                            <select id="techgrad" name="techgrad">
                                 <option value="" disabled selected hidden>졸업구분 선택</option>
                                 <option value="grad">졸업</option>
                                 <option value="expected">졸업예정</option>
@@ -158,13 +164,15 @@
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row"><label for="techGpa">학점</label></th>
+                        <th scope="row">학점</th>
                         <td class="tal" colspan="3">
                             <fieldset class="form-group">
                                 <legend class="sr-only">학점 입력(취득/만점)</legend>
-                                <input id="techGpa" name="techGpa" type="number" aria-label="취득학점 입력">
+                                <label for="techGpa" class="sr-only">취득학점</label>
+                                <input id="techGpa" name="techGpa" type="number">
                                 /
-                                <input id="techGpaMax" name="techGpaMax" type="number" aria-label="만점 입력">
+                                <label for="techGpaMax" class="sr-only">만점</label>
+                                <input id="techGpaMax" name="techGpaMax" type="number">
                             </fieldset>
                             <p class="m-dot">최종으로 졸업한 학력을 기준으로 입력하시기 바랍니다.</p>
                         </td>
@@ -217,17 +225,19 @@
                 </tr>
         
                 <tr>
-                    <th scope="row"><label for="univPeriodStart">기간</label></th>
+                    <th scope="row">기간</th>
                     <td class="tal">
                         <fieldset class="form-group">
                             <legend class="sr-only">기간</legend>
-                            <input type="month" id="hs-period-start" name="univPeriodStart" aria-label="입학">
-                            <input type="month" id="hs-period-start" name="univPeriodEnd" aria-label="졸업">
+                            <label for="univPeriodStart" class="sr-only">입학</label>
+                            <input type="month" id="univPeriodStart" name="univPeriodStart">
+                            <label for="univPeriodEnd" class="sr-only">졸업</label>
+                            <input type="month" id="univPeriodEnd" name="univPeriodEnd">
                         </fieldset>
                     </td>
                     <th scope="row"><label for="univStatus">졸업구분</label></th>
                     <td class="tal">
-                        <select id="univStatus" name="univStatus" title="졸업구분 선택">
+                        <select id="univStatus" name="univStatus">
                             <option value="">선택해주세요</option>
                             <option>졸업</option>
                             <option>재학</option>
@@ -245,13 +255,15 @@
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row"><label for="univGradeGot">학점</label></th>
+                    <th scope="row">학점</th>
                     <td class="tal" colspan="3">
                         <fieldset class="form-group">
                             <legend class="sr-only">학점 입력(취득/만점)</legend>
-                            <input id="univGradeGot" name="univGradeGot" type="number" aria-label="취득학점 입력">
+                            <label for="univGradeGot" class="sr-only">학점</label>
+                            <input id="univGradeGot" name="univGradeGot" type="number">
                             /
-                            <input id="univGradeMax" name="univGradeMax" type="number" aria-label="만점 입력">
+                            <label for="univGradeMax" class="sr-only">만점</label>
+                            <input id="univGradeMax" name="univGradeMax" type="number">
                         </fieldset>
                         <p class="m-dot">최종으로 졸업한 학력을 기준으로 입력하시기 바랍니다.</p>
                     </td>
@@ -267,7 +279,7 @@
             <div class="table-group" data-index="1">
                 <h4>대학교(석사)</h4>
                 <table class="td-l">
-                    <caption>대학교(석사) 입력표(학교명, 본교/분교, 주간/야간, 기간, 졸업구분, 전공명, 세부정공 소개, 학점 포함)</caption>
+                    <caption>대학교(석사) 입력표(학교명, 본교/분교, 주간/야간, 기간, 졸업구분, 전공명, 세부전공 소개, 학점 포함)</caption>
                     <colgroup>
                         <col style="width:262px">
                         <col style="width:auto">
@@ -287,8 +299,8 @@
                         <td class="tal">
                             <fieldset class="form-group">
                                 <legend class="sr-only">본교/분교 선택</legend>
-                                <label class="radio" for="univCampusMain"><input type="radio" id="univCampusMain2" name="univCampus2" value="main"> 본교</label>
-                                <label class="radio" for="univCampusBranch"><input type="radio" id="univCampusBranch2" name="univCampus2" value="branch"> 분교</label>
+                                <label class="radio" for="univCampusMain2"><input type="radio" id="univCampusMain2" name="univCampus2" value="main"> 본교</label>
+                                <label class="radio" for="univCampusBranch2"><input type="radio" id="univCampusBranch2" name="univCampus2" value="branch"> 분교</label>
                             </fieldset>
                         </td>
                     </tr>
@@ -303,17 +315,19 @@
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row"><label for="univPeriodStart2">기간</label></th>
+                        <th scope="row">기간</th>
                         <td class="tal">
                             <fieldset class="form-group">
                                 <legend class="sr-only">기간</legend>
-                                <input type="month" id="univPeriodStart2" name="univPeriodStart2" aria-label="입학">
-                                <input type="month" id="univPeriodEnd2" name="univPeriodEnd2" aria-label="졸업">
+                                <label for="univPeriodStart2" class="sr-only">입학</label>
+                                <input type="month" id="univPeriodStart2" name="univPeriodStart2">
+                                <label for="univPeriodEnd2" class="sr-only">졸업</label>
+                                <input type="month" id="univPeriodEnd2" name="univPeriodEnd2">
                             </fieldset>
                         </td>
                         <th scope="row"><label for="univStatus2">졸업구분</label></th>
                         <td class="tal">
-                            <select id="univStatus" name="univStatus2" title="졸업구분 선택">
+                            <select id="univStatus" name="univStatus2">
                                 <option value="">선택해주세요</option>
                                 <option>졸업</option>
                                 <option>재학</option>
@@ -324,25 +338,23 @@
                     <tr>
                         <th scope="row"><label for="univMajor2">전공명</label></th>
                         <td class="tal">
-                        <span class="ipt-clear">
-                            <input id="univMajor2" name="univMajor2" type="text">
-                        </span>
+                            <span class="ipt-clear"><input id="univMajor2" name="univMajor2" type="text"></span>
                         </td>
-                        <th scope="row"><label for="univMajor2">세부전공 소개</label></th>
+                        <th scope="row"><label for="detailedMajor2">세부전공 소개</label></th>
                         <td class="tal">
-                        <span class="ipt-clear">
-                            <input id="detailedMajor2" name="detailedMajor2" type="text">
-                        </span>
+                            <span class="ipt-clear"><input id="detailedMajor2" name="detailedMajor2" type="text"></span>
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row"><label for="univGradeGot2">학점</label></th>
+                        <th scope="row">학점</th>
                         <td class="tal" colspan="3">
                             <fieldset class="form-group">
                                 <legend class="sr-only">학점 입력(취득/만점)</legend>
-                                <input id="univGradeGot2" name="univGradeGot2" type="number" aria-label="취득학점 입력">
+                                <label for="univGradeGot2" class="sr-only">취득학점</label>
+                                <input id="univGradeGot2" name="univGradeGot2" type="number">
                                 /
-                                <input id="univGradeMax2" name="univGradeMax2" type="number" aria-label="만점 입력">
+                                <label for="univGradeMax2" class="sr-only">만점</label>
+                                <input id="univGradeMax2" name="univGradeMax2" type="number">
                             </fieldset>
                             <p class="m-dot">최종으로 졸업한 학력을 기준으로 입력하시기 바랍니다.</p>
                         </td>
@@ -379,8 +391,8 @@
                     <td class="tal">
                         <fieldset class="form-group">
                             <legend class="sr-only">본교/분교 선택</legend>
-                            <label class="radio" for="univCampusMain3"><input type="radio" id="univCampusMain3" name="univCampus3" value="main"> 본교</label>
-                            <label class="radio" for="univCampusBranch3"><input type="radio" id="univCampusBranch3" name="univCampus3" value="branch"> 분교</label>
+                            <label class="radio"><input type="radio" id="univCampusMain3" name="univCampus3" value="main"> 본교</label>
+                            <label class="radio"><input type="radio" id="univCampusBranch3" name="univCampus3" value="branch"> 분교</label>
                         </fieldset>
                     </td>
                 </tr>
@@ -390,22 +402,24 @@
                         <fieldset class="form-group">
                             <legend class="sr-only">주간/야간 선택</legend>
                             <label class="radio"><input type="radio" id="univTimeDay3" name="univTime3" value="day"> 주간</label>
-                            <label class="radio"><input type="radio" id="univTimeNight3" name="univTime2" value="night"> 야간</label>
+                            <label class="radio"><input type="radio" id="univTimeNight3" name="univTime3" value="night"> 야간</label>
                         </fieldset>
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row"><label for="univPeriodStart3">기간</label></th>
+                    <th scope="row">기간</th>
                     <td class="tal">
                         <fieldset class="form-group">
                             <legend class="sr-only">기간</legend>
-                            <input type="month" id="univPeriodStart3" name="univPeriodStart3" aria-label="입학">
-                            <input type="month" id="univPeriodEnd3" name="univPeriodEnd3" aria-label="졸업">
+                            <label for="univPeriodStart3" class="sr-only">입학</label>
+                            <input type="month" id="univPeriodStart3" name="univPeriodStart3">
+                            <label for="univPeriodEnd3" class="sr-only">졸업</label>
+                            <input type="month" id="univPeriodEnd3" name="univPeriodEnd3">
                         </fieldset>
                     </td>
                     <th scope="row"><label for="univStatus3">졸업구분</label></th>
                     <td class="tal">
-                        <select id="univStatus" name="univStatus3" title="졸업구분 선택">
+                        <select id="univStatus3" name="univStatus3">
                             <option value="">선택해주세요</option>
                             <option>졸업</option>
                             <option>재학</option>
@@ -416,9 +430,7 @@
                 <tr>
                     <th scope="row"><label for="univMajor3">전공명</label></th>
                     <td class="tal">
-                    <span class="ipt-clear">
-                        <input id="univMajor3" name="univMajor" type="text">
-                    </span>
+                        <span class="ipt-clear"><input id="univMajor3" name="univMajor3" type="text"></span>
                     </td>
                     <th scope="row"><label for="detailedMajor3">연구실적 소개</label></th>
                     <td class="tal">
@@ -432,9 +444,11 @@
                     <td class="tal" colspan="3">
                         <fieldset class="form-group">
                             <legend class="sr-only">학점 입력(취득/만점)</legend>
-                            <input id="univGradeGot3" name="univGradeGot3" type="number" aria-label="취득학점 입력">
+                            <label for="univGradeGot3" class="sr-only">취득학점</label>
+                            <input id="univGradeGot3" name="univGradeGot3" type="number">
                             /
-                            <input id="univGradeMax3" name="univGradeMax3" type="number" aria-label="만점 입력">
+                            <label for="univGradeMax3" class="sr-only">만점</label>
+                            <input id="univGradeMax3" name="univGradeMax3" type="number">
                         </fieldset>
                         <p class="m-dot">최종으로 졸업한 학력을 기준으로 입력하시기 바랍니다.</p>
                     </td>
@@ -460,71 +474,70 @@
                 </colgroup>
                 <thead>
                     <tr>
-                    <th id="th-kind" scope="col">시험종류</th>
-                    <th id="th-score" scope="col">점수/등급</th>
-                    <th id="th-date" scope="col">취득일</th>
+                        <th scope="col">시험종류</th>
+                        <th scope="col">점수/등급</th>
+                        <th scope="col">취득일</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>
-                            <span class="ipt-clear">
-                                <input id="certificateEng1" name="certificateEng1" type="text" aria-labelledby="th-kind certificateEng1">
-                            </span>
-                        </td>
-                        <td>
-                            <span class="ipt-clear">
-                                <input id="scoreEng1" name="scoreEng1" type="text" inputmode="numeric" aria-labelledby="th-score scoreEng1">
-                            </span>
-                        </td>
-                        <td>
-                            <input id="acquisitionEng1" name="acquisitionEng1" type="date" aria-labelledby="th-date acquisitionEng1">
-                        </td>
+                    <td>
+                        <label for="certificateEng1" class="sr-only">시험종류 1</label>
+                        <span class="ipt-clear"><input id="certificateEng1" name="certificateEng1" type="text"></span>
+                    </td>
+                    <td>
+                        <label for="scoreEng1" class="sr-only">점수/등급 1</label>
+                        <span class="ipt-clear"><input id="scoreEng1" name="scoreEng1" type="text" inputmode="numeric"></span>
+                    </td>
+                    <td>
+                        <label for="acquisitionEng1" class="sr-only">취득일 1</label>
+                        <input id="acquisitionEng1" name="acquisitionEng1" type="date">
+                    </td>
                     </tr>
+                
                     <tr>
-                        <td>
-                            <span class="ipt-clear">
-                                <input id="certificateEng2" name="certificateEng2" type="text" aria-labelledby="th-kind certificateEng2">
-                            </span>
-                        </td>
-                        <td>
-                            <span class="ipt-clear">
-                                <input id="scoreEng2" name="scoreEng2" type="text" inputmode="numeric" aria-labelledby="th-score scoreEng2">
-                            </span>
-                        </td>
-                        <td>
-                            <input id="acquisitionEng2" name="acquisitionEng2" type="date" aria-labelledby="th-date acquisitionEng2">
-                        </td>
+                    <td>
+                        <label for="certificateEng2" class="sr-only">시험종류 2</label>
+                        <span class="ipt-clear"><input id="certificateEng2" name="certificateEng2" type="text"></span>
+                    </td>
+                    <td>
+                        <label for="scoreEng2" class="sr-only">점수/등급 2</label>
+                        <span class="ipt-clear"><input id="scoreEng2" name="scoreEng2" type="text" inputmode="numeric"></span>
+                    </td>
+                    <td>
+                        <label for="acquisitionEng2" class="sr-only">취득일 2</label>
+                        <input id="acquisitionEng2" name="acquisitionEng2" type="date">
+                    </td>
                     </tr>
+                
                     <tr>
-                        <td>
-                            <span class="ipt-clear">
-                                <input id="certificateEng3" name="certificateEng3" type="text" aria-labelledby="th-kind certificateEng3">
-                            </span>
-                        </td>
-                        <td>
-                            <span class="ipt-clear">
-                                <input id="scoreEng3" name="scoreEng3" type="text" inputmode="numeric" aria-labelledby="th-score scoreEng3">
-                            </span>
-                        </td>
-                        <td>
-                            <input id="acquisitionEng3" name="acquisitionEng3" type="date" aria-labelledby="th-date acquisitionEng3">
-                        </td>
+                    <td>
+                        <label for="certificateEng3" class="sr-only">시험종류 3</label>
+                        <span class="ipt-clear"><input id="certificateEng3" name="certificateEng3" type="text"></span>
+                    </td>
+                    <td>
+                        <label for="scoreEng3" class="sr-only">점수/등급 3</label>
+                        <span class="ipt-clear"><input id="scoreEng3" name="scoreEng3" type="text" inputmode="numeric"></span>
+                    </td>
+                    <td>
+                        <label for="acquisitionEng3" class="sr-only">취득일 3</label>
+                        <input id="acquisitionEng3" name="acquisitionEng3" type="date">
+                    </td>
                     </tr>
+                
                     <tr>
-                        <td>
-                            <span class="ipt-clear">
-                                <input id="certificateEng4" name="certificateEng4" type="text" aria-labelledby="th-kind certificateEng4">
-                            </span>
-                        </td>
-                        <td>
-                            <span class="ipt-clear">
-                                <input id="scoreEng4" name="scoreEng4" type="text" inputmode="numeric" aria-labelledby="th-score scoreEng4">
-                            </span>
-                        </td>
-                        <td>
-                            <input id="acquisitionEng4" name="acquisitionEng4" type="date" aria-labelledby="th-date acquisitionEng4">
-                        </td>
+                    <td>
+                        <label for="certificateEng4" class="sr-only">시험종류 4</label> <!-- ← 오타 수정 -->
+                        <span class="ipt-clear"><input id="certificateEng4" name="certificateEng4" type="text"></span>
+                    </td>
+                    <td>
+                        <label for="scoreEng4" class="sr-only">점수/등급 4</label>
+                        <span class="ipt-clear"><input id="scoreEng4" name="scoreEng4" type="text" inputmode="numeric"></span>
+                    </td>
+                    <td>
+                        <label for="acquisitionEng4" class="sr-only">취득일 4</label>
+                        <input id="acquisitionEng4" name="acquisitionEng4" type="date">
+                    </td>
                     </tr>
                 </tbody>
             </table>
@@ -540,73 +553,69 @@
                     <col style="width:auto">
                 </colgroup>
                 <thead>
-                <tr>
-                    <th id="th-kindSec" scope="col">시험종류</th>
-                    <th id="th-scoreSec" scope="col">점수/등급</th>
-                    <th id="th-dateSec" scope="col">취득일</th>
-                </tr>
+                    <tr>
+                        <th scope="col">시험종류</th>
+                        <th scope="col">점수/등급</th>
+                        <th scope="col">취득일</th>
+                    </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>
-                        <span class="ipt-clear">
-                            <input id="certificateSec1" name="certificateSec1" type="text" aria-labelledby="th-kindSec certificateSec1">
-                        </span>
-                    </td>
-                    <td>
-                        <span class="ipt-clear">
-                            <input id="scoreSec1" name="scoreSec1" type="text" inputmode="numeric" aria-labelledby="th-scoreSec scoreSec1">
-                        </span>
-                    </td>
-                    <td>
-                        <input id="acquisitionSec1" name="acquisitionSec1" type="date" aria-labelledby="th-dateSec acquisitionSec1">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span class="ipt-clear">
-                            <input id="certificateSec2" name="certificateSec2" type="text" aria-labelledby="th-kindSec certificateSec2">
-                        </span>
-                    </td>
-                    <td>
-                        <span class="ipt-clear">
-                            <input id="scoreSec2" name="scoreSec2" type="text" inputmode="numeric" aria-labelledby="th-scoreSec scoreSec2">
-                        </span>
-                    </td>
-                    <td>
-                        <input id="acquisitionSec2" name="acquisitionSec2" type="date" aria-labelledby="th-dateSec acquisitionSec2">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span class="ipt-clear">
-                            <input id="certificateSec3" name="certificateSec3" type="text" aria-labelledby="th-kindSec certificateSec3">
-                        </span>
-                    </td>
-                    <td>
-                        <span class="ipt-clear">
-                            <input id="scoreSec3" name="scoreSec3" type="text" inputmode="numeric" aria-labelledby="th-scoreSec scoreSec3">
-                        </span>
-                    </td>
-                    <td>
-                        <input id="acquisitionSec3" name="acquisitionSec3" type="date" aria-labelledby="th-dateSec acquisitionSec3">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span class="ipt-clear">
-                            <input id="certificateSec4" name="certificateSec4" type="text" aria-labelledby="th-kindSec certificateSec4">
-                        </span>
-                    </td>
-                    <td>
-                        <span class="ipt-clear">
-                            <input id="scoreSec4" name="scoreSec4" type="text" inputmode="numeric" aria-labelledby="th-scoreSec scoreSec4">
-                        </span>
-                    </td>
-                    <td>
-                        <input id="acquisitionSec4" name="acquisitionSec4" type="date" aria-labelledby="th-dateSec acquisitionSec4">
-                    </td>
-                </tr>
+                    <tr>
+                        <td>
+                            <label for="certificateSec1" class="sr-only">시험종류 1</label>
+                            <span class="ipt-clear"><input id="certificateSec1" name="certificateSec1" type="text"></span>
+                        </td>
+                        <td>
+                            <label for="scoreSec1" class="sr-only">점수/등급 1</label>
+                            <span class="ipt-clear"><input id="scoreSec1" name="scoreSec1" type="text" inputmode="numeric"></span>
+                        </td>
+                        <td>
+                            <label for="acquisitionSec1" class="sr-only">취득일 1</label>
+                            <input id="acquisitionSec1" name="acquisitionSec1" type="date">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="certificateSec2" class="sr-only">시험종류 2</label>
+                            <span class="ipt-clear"><input id="certificateSec2" name="certificateSec2" type="text"></span>
+                        </td>
+                        <td>
+                            <label for="scoreSec2" class="sr-only">점수/등급 2</label>
+                            <span class="ipt-clear"><input id="scoreSec2" name="scoreSec2" type="text" inputmode="numeric"></span>
+                        </td>
+                        <td>
+                            <label for="acquisitionSec2" class="sr-only">취득일 2</label>
+                            <input id="acquisitionSec2" name="acquisitionSec2" type="date">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="certificateSec3" class="sr-only">시험종류 3</label>
+                            <span class="ipt-clear"><input id="certificateSec3" name="certificateSec3" type="text"></span>
+                        </td>
+                        <td>
+                            <label for="scoreSec3" class="sr-only">점수/등급 3</label>
+                            <span class="ipt-clear"><input id="scoreSec3" name="scoreSec3" type="text" inputmode="numeric"></span>
+                        </td>
+                        <td>
+                            <label for="acquisitionSec3" class="sr-only">취득일 3</label>
+                            <input id="acquisitionSec3" name="acquisitionSec3" type="date">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="certificateSec4" class="sr-only">시험종류 4</label>
+                            <span class="ipt-clear"><input id="certificateSec4" name="certificateSec4" type="text"></span>
+                        </td>
+                        <td>
+                            <label for="scoreSec4" class="sr-only">점수/등급 4</label>
+                            <span class="ipt-clear"><input id="scoreSec4" name="scoreSec4" type="text" inputmode="numeric"></span>
+                        </td>
+                        <td>
+                            <label for="acquisitionSec4" class="sr-only">취득일 4</label>
+                            <input id="acquisitionSec4" name="acquisitionSec4" type="date">
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -623,107 +632,101 @@
                 </colgroup>
                 <thead>
                     <tr>
-                        <th id="th-cert"  scope="col">자격증</th>
-                        <th id="th-grade" scope="col">자격등급</th>
-                        <th id="th-date2" scope="col">취득일</th>
-                        <th id="th-period" scope="col">발행기관</th>
+                        <th scope="col">자격증</th>
+                        <th scope="col">자격등급</th>
+                        <th scope="col">취득일</th>
+                        <th  scope="col">발행기관</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>
-                            <span class="ipt-clear">
-                                <input id="licenseCert1" name="licenseCert1" type="text" aria-labelledby="th-cert licenseCert1">
-                            </span>
+                            <label for="licenseCert1" class="sr-only">자격증 1</label>
+                            <span class="ipt-clear"><input id="licenseCert1" name="licenseCert1" type="text"></span>
                         </td>
                         <td>
-                            <span class="ipt-clear">
-                                <input id="licenseGrade1" name="licenseGrade1" type="text" aria-labelledby="th-grade licenseGrade1">
-                            </span>
+                            <label for="licenseGrade1" class="sr-only">자격등급 1</label>
+                            <span class="ipt-clear"><input id="licenseGrade1" name="licenseGrade1" type="text"></span>
                         </td>
                         <td>
-                            <input id="licenseAcq1" name="licenseAcq1" type="date" aria-labelledby="th-date2 licenseAcq1">
+                            <label for="licenseAcq1" class="sr-only">취득일 1</label>
+                            <input id="licenseAcq1" name="licenseAcq1" type="date">
                         </td>
                         <td>
-                            <span class="ipt-clear">
-                                <input id="licensePeriod1" name="licensePeriod1" type="text" aria-labelledby="th-period licensePeriod1">
-                            </span>
+                            <label for="licensePeriod1" class="sr-only">발행기관 1</label>
+                            <span class="ipt-clear"><input id="licensePeriod1" name="licensePeriod1" type="text"></span>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="ipt-clear">
-                                <input id="licenseCert2" name="licenseCert2" type="text" aria-labelledby="th-cert licenseCert2">
-                            </span>
+                            <label for="licenseCert2" class="sr-only">자격증 2</label>
+                            <span class="ipt-clear"><input id="licenseCert2" name="licenseCert2" type="text"></span>
                         </td>
                         <td>
-                            <span class="ipt-clear">
-                                <input id="licenseGrade2" name="licenseGrade2" type="text" aria-labelledby="th-grade licenseGrade2">
-                            </span>
+                            <label for="licenseGrade2" class="sr-only">자격등급 2</label>
+                            <span class="ipt-clear"><input id="licenseGrade2" name="licenseGrade2" type="text"></span>
                         </td>
                         <td>
-                            <input id="licenseAcq2" name="licenseAcq2" type="date" aria-labelledby="th-date2 licenseAcq2">
+                            <label for="licenseAcq2" class="sr-only">취득일 2</label>
+                            <input id="licenseAcq2" name="licenseAcq2" type="date">
                         </td>
                         <td>
-                            <span class="ipt-clear">
-                                <input id="licensePeriod2" name="licensePeriod2" type="text" aria-labelledby="th-period licensePeriod2">
-                            </span>
+                            <label for="licensePeriod2" class="sr-only">발행기관 2</label>
+                            <span class="ipt-clear"><input id="licensePeriod2" name="licensePeriod2" type="text"></span>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="ipt-clear">
-                                <input id="licenseCert3" name="licenseCert3" type="text" aria-labelledby="th-cert licenseCert3">
-                            </span>
+                            <label for="licenseCert3" class="sr-only">자격증 3</label>
+                            <span class="ipt-clear"><input id="licenseCert3" name="licenseCert3" type="text"></span>
                         </td>
                         <td>
-                            <span class="ipt-clear">
-                                <input id="licenseGrade3" name="licenseGrade3" type="text" aria-labelledby="th-grade licenseGrade3">
-                            </span>
+                            <label for="licenseGrade3" class="sr-only">자격등급 3</label>
+                            <span class="ipt-clear"><input id="licenseGrade3" name="licenseGrade3" type="text"></span>
                         </td>
                         <td>
-                            <input id="licenseAcq3" name="licenseAcq3" type="date" aria-labelledby="th-date2 licenseAcq3">
+                            <label for="licenseAcq3" class="sr-only">취득일 3</label>
+                            <input id="licenseAcq3" name="licenseAcq3" type="date">
                         </td>
                         <td>
-                            <span class="ipt-clear">
-                                <input id="licensePeriod3" name="licensePeriod3" type="text" aria-labelledby="th-period licensePeriod3">
-                            </span>
+                            <label for="licensePeriod3" class="sr-only">발행기관 3</label>
+                            <span class="ipt-clear"><input id="licensePeriod3" name="licensePeriod3" type="text"></span>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="ipt-clear"><input id="licenseCert4" name="licenseCert4" type="text" aria-labelledby="th-cert licenseCert4"></span>
+                            <label for="licenseCert4" class="sr-only">자격증 4</label>
+                            <span class="ipt-clear"><input id="licenseCert4" name="licenseCert4" type="text"></span>
                         </td>
                         <td>
-                            <span class="ipt-clear"><input id="licenseGrade4" name="licenseGrade4" type="text" aria-labelledby="th-grade licenseGrade4"></span>
+                            <label for="licenseGrade4" class="sr-only">자격등급 4</label>
+                            <span class="ipt-clear"><input id="licenseGrade4" name="licenseGrade4" type="text"></span>
                         </td>
                         <td>
-                            <input id="licenseAcq4" name="licenseAcq4" type="date" aria-labelledby="th-date2 licenseAcq4">
+                            <label for="licenseAcq4" class="sr-only">취득일 4</label>
+                            <input id="licenseAcq4" name="licenseAcq4" type="date">
                         </td>
                         <td>
-                            <span class="ipt-clear">
-                                <input id="licensePeriod4" name="licensePeriod4" type="text" aria-labelledby="th-period licensePeriod4">
-                            </span>
+                            <label for="licensePeriod4" class="sr-only">발행기관 4</label>
+                            <span class="ipt-clear"><input id="licensePeriod4" name="licensePeriod4" type="text"></span>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="ipt-clear">
-                                <input id="licenseCert5" name="licenseCert5" type="text" aria-labelledby="th-cert licenseCert5">
-                            </span>
+                            <label for="licenseCert5" class="sr-only">자격증 5</label>
+                            <span class="ipt-clear"><input id="licenseCert5" name="licenseCert5" type="text"></span>
                         </td>
                         <td>
-                            <span class="ipt-clear">
-                                <input id="licenseGrade5" name="licenseGrade5" type="text" aria-labelledby="th-grade licenseGrade5">
-                            </span>
+                            <label for="licenseGrade5" class="sr-only">자격등급 5</label>
+                            <span class="ipt-clear"><input id="licenseGrade5" name="licenseGrade5" type="text"></span>
                         </td>
                         <td>
-                            <input id="licenseAcq5" name="licenseAcq5" type="date" aria-labelledby="th-date2 licenseAcq5">
+                            <label for="licenseAcq5" class="sr-only">취득일 5</label>
+                            <input id="licenseAcq5" name="licenseAcq5" type="date">
                         </td>
                         <td>
-                            <span class="ipt-clear">
-                                <input id="licensePeriod5" name="licensePeriod5" type="text" aria-labelledby="th-period licensePeriod5">
-                            </span>
+                            <label for="licensePeriod5" class="sr-only">발행기관 5</label>
+                            <span class="ipt-clear"><input id="licensePeriod5" name="licensePeriod5" type="text"></span>
                         </td>
                     </tr>
                 </tbody>
@@ -742,88 +745,84 @@
                 </colgroup>
                 <thead>
                     <tr>
-                        <th id="th-country" scope="col">체류국가</th>
-                        <th id="th-purpose" scope="col">체류목적</th>
-                        <th id="th-period" scope="col">체류기간</th>
-                        <th id="th-lang" scope="col">사용 외국어</th>
+                        <th scope="col">체류국가</th>
+                        <th scope="col">체류목적</th>
+                        <th scope="col">체류기간</th>
+                        <th scope="col">사용 외국어</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>
-                            <span class="ipt-clear">
-                                <input id="stayCountry1" name="stayCountry1" type="text" aria-labelledby="th-country stayCountry1">
-                            </span>
-                        </td>
-                        <td>
-                            <span class="ipt-clear">
-                                <input id="stayPurpose1" name="stayPurpose1" type="text" aria-labelledby="th-purpose stayPurpose1">
-                            </span>
-                        </td>
-                        <td>
-                            <fieldset class="form-group">
-                                <legend class="sr-only">체류기간</legend>
-                                <input id="stayStart1" name="stayStart1" type="date" aria-labelledby="th-period stayStart1" aria-label="체류기간(시작일)">
-                                <input id="stayEnd1" name="stayEnd1" type="date" aria-labelledby="th-period stayEnd1" aria-label="체류기간(종료일)">
-                            </fieldset>
-                        </td>
-                        <td>
-                            <span class="ipt-clear">
-                                <input id="stayLang1" name="stayLang1" type="text"  aria-labelledby="th-lang stayLang1">
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span class="ipt-clear">
-                                <input id="stayCountry2" name="stayCountry2" type="text" aria-labelledby="th-country stayCountry2">
-                            </span>
-                        </td>
-                        <td>
-                            <span class="ipt-clear">
-                            <input id="stayPurpose2" name="stayPurpose2" type="text" aria-labelledby="th-purpose stayPurpose2">
-                            </span>
-                        </td>
-                        <td>
-                            <fieldset class="form-group">
-                                <legend class="sr-only">체류기간</legend>
-                                <input id="stayStart1" name="stayStart2" type="date" aria-labelledby="th-period stayStart2" aria-label="체류기간(시작일)">
-                                <input id="stayEnd1" name="stayEnd2" type="date" aria-labelledby="th-period stayEnd2" aria-label="체류기간(종료일)">
-                            </fieldset>
-                        </td>
-                        <td>
-                            <span class="ipt-clear">
-                                <input id="stayLang2" name="stayLang2" type="text" aria-labelledby="th-lang stayLang2">
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span class="ipt-clear">
-                                <input id="stayCountry3" name="stayCountry3" type="text" aria-labelledby="th-country stayCountry3">
-                            </span>
-                        </td>
-                        <td>
-                            <span class="ipt-clear">
-                                <input id="stayPurpose3" name="stayPurpose3" type="text" aria-labelledby="th-purpose stayPurpose3">
-                            </span>
-                        </td>
-                        <td>
-                            <fieldset class="form-group">
-                                <legend class="sr-only">체류기간</legend>
-                                <input id="stayStart3" name="stayStart1" type="date" aria-labelledby="th-period stayStart3" aria-label="체류기간(시작일)">
-                                <input id="stayEnd3" name="stayEnd1" type="date" aria-labelledby="th-period stayEnd3" aria-label="체류기간(종료일)">
-                            </fieldset>
-                        </td>
-                        <td>
-                            <span class="ipt-clear">
-                                <input id="stayLang3" name="stayLang3" type="text" aria-labelledby="th-lang stayLang3">
-                            </span>
-                        </td>
-                    </tr>
+                <tr>
+                    <td>
+                        <label for="stayCountry1" class="sr-only">체류국가 1</label>
+                        <span class="ipt-clear"><input id="stayCountry1" name="stayCountry1" type="text"></span>
+                    </td>
+                    <td>
+                        <label for="stayPurpose1" class="sr-only">체류목적 1</label>
+                        <span class="ipt-clear"><input id="stayPurpose1" name="stayPurpose1" type="text"></span>
+                    </td>
+                    <td>
+                        <fieldset class="form-group">
+                            <legend class="sr-only">체류기간 1</legend>
+                            <label for="stayStart1" class="sr-only">체류 시작일 1</label>
+                            <input id="stayStart1" name="stayStart1" type="date">
+                            <label for="stayEnd1" class="sr-only">체류 종료일 1</label>
+                            <input id="stayEnd1" name="stayEnd1" type="date">
+                        </fieldset>
+                    </td>
+                    <td>
+                        <label for="stayLang1" class="sr-only">사용 외국어 1</label>
+                        <span class="ipt-clear"><input id="stayLang1" name="stayLang1" type="text"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="stayCountry2" class="sr-only">체류국가 2</label>
+                        <span class="ipt-clear"><input id="stayCountry2" name="stayCountry2" type="text"></span>
+                    </td>
+                    <td>
+                        <label for="stayPurpose2" class="sr-only">체류목적 2</label>
+                        <span class="ipt-clear"><input id="stayPurpose2" name="stayPurpose2" type="text"></span>
+                    </td>
+                    <td>
+                        <fieldset class="form-group">
+                            <legend class="sr-only">체류기간 2</legend>
+                            <label for="stayStart2" class="sr-only">체류 시작일 2</label>
+                            <input id="stayStart2" name="stayStart2" type="date">
+                            <label for="stayEnd2" class="sr-only">체류 종료일 2</label>
+                            <input id="stayEnd2" name="stayEnd2" type="date">
+                        </fieldset>
+                    </td>
+                    <td>
+                        <label for="stayLang2" class="sr-only">사용 외국어 2</label>
+                        <span class="ipt-clear"><input id="stayLang2" name="stayLang2" type="text"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="stayCountry3" class="sr-only">체류국가 3</label>
+                        <span class="ipt-clear"><input id="stayCountry3" name="stayCountry3" type="text"></span>
+                    </td>
+                    <td>
+                        <label for="stayPurpose3" class="sr-only">체류목적 3</label>
+                        <span class="ipt-clear"><input id="stayPurpose3" name="stayPurpose3" type="text"></span>
+                    </td>
+                    <td>
+                        <fieldset class="form-group">
+                            <legend class="sr-only">체류기간 3</legend>
+                            <label for="stayStart3" class="sr-only">체류 시작일 3</label>
+                            <input id="stayStart3" name="stayStart3" type="date">
+                            <label for="stayEnd3" class="sr-only">체류 종료일 3</label>
+                            <input id="stayEnd3" name="stayEnd3" type="date">
+                        </fieldset>
+                    </td>
+                    <td>
+                        <label for="stayLang3" class="sr-only">사용 외국어 3</label>
+                        <span class="ipt-clear"><input id="stayLang3" name="stayLang3" type="text"></span>
+                    </td>
+                </tr>
                 </tbody>
             </table>
-        
         </div>
         <!-- 수상경력 -->
         <div class="table-group">
@@ -838,83 +837,80 @@
                 </colgroup>
                 <thead>
                     <tr>
-                        <th id="th-country" scope="col">체류국가</th>
-                        <th id="th-purpose" scope="col">체류목적</th>
-                        <th id="th-period"  scope="col">체류기간</th>
-                        <th id="th-lang"    scope="col">사용 외국어</th>
+                        <th scope="col">체류국가</th>
+                        <th scope="col">체류목적</th>
+                        <th scope="col">체류기간</th>
+                        <th scope="col">사용 외국어</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>
-                            <span class="ipt-clear">
-                                <input id="stayCountry1" name="stayCountry1" type="text" aria-labelledby="th-country stayCountry1">
-                            </span>
+                            <label for="stayCountry1" class="sr-only">체류국가 1</label>
+                            <span class="ipt-clear"><input id="stayCountry1" name="stayCountry1" type="text"></span>
                         </td>
                         <td>
-                        <span class="ipt-clear">
-                            <input id="stayPurpose1" name="stayPurpose1" type="text" aria-labelledby="th-purpose stayPurpose1">
-                        </span>
+                            <label for="stayPurpose1" class="sr-only">체류목적 1</label>
+                            <span class="ipt-clear"><input id="stayPurpose1" name="stayPurpose1" type="text"></span>
                         </td>
                         <td>
-                            <fieldset class="form-group" aria-labelledby="th-period">
-                                <legend class="sr-only">체류기간</legend>
-                                <input id="stayStart1" name="stayStart1" type="date" aria-labelledby="th-period stayStart1" aria-label="체류기간(시작일)">
-                                <input id="stayEnd1"   name="stayEnd1" type="date" aria-labelledby="th-period stayEnd1" aria-label="체류기간(종료일)">
+                            <fieldset class="form-group">
+                                <legend class="sr-only">체류기간 1</legend>
+                                <label for="stayStart1" class="sr-only">체류 시작일 1</label>
+                                <input id="stayStart1" name="stayStart1" type="date">
+                                <label for="stayEnd1" class="sr-only">체류 종료일 1</label>
+                                <input id="stayEnd1" name="stayEnd1" type="date">
                             </fieldset>
                         </td>
                         <td>
-                            <span class="ipt-clear">
-                                <input id="stayLang1" name="stayLang1" type="text" aria-labelledby="th-lang stayLang1">
-                            </span>
+                            <label for="stayLang1" class="sr-only">사용 외국어 1</label>
+                            <span class="ipt-clear"><input id="stayLang1" name="stayLang1" type="text"></span>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="ipt-clear">
-                                <input id="stayCountry2" name="stayCountry2" type="text" aria-labelledby="th-country stayCountry2">
-                            </span>
+                            <label for="stayCountry2" class="sr-only">체류국가 2</label>
+                            <span class="ipt-clear"><input id="stayCountry2" name="stayCountry2" type="text"></span>
                         </td>
                         <td>
-                            <span class="ipt-clear">
-                                <input id="stayPurpose2" name="stayPurpose2" type="text" aria-labelledby="th-purpose stayPurpose2">
-                            </span>
+                            <label for="stayPurpose2" class="sr-only">체류목적 2</label>
+                            <span class="ipt-clear"><input id="stayPurpose2" name="stayPurpose2" type="text"></span>
                         </td>
                         <td>
-                            <fieldset class="form-group" aria-labelledby="th-period">
-                                <legend class="sr-only">체류기간</legend>
-                                <input id="stayStart2" name="stayStart2" type="date" aria-labelledby="th-period stayStart2" aria-label="체류기간(시작일)">
-                                <input id="stayEnd2" name="stayEnd2" type="date" aria-labelledby="th-period stayEnd2" aria-label="체류기간(종료일)">
+                            <fieldset class="form-group">
+                                <legend class="sr-only">체류기간 2</legend>
+                                <label for="stayStart2" class="sr-only">체류 시작일 2</label>
+                                <input id="stayStart2" name="stayStart2" type="date">
+                                <label for="stayEnd2" class="sr-only">체류 종료일 2</label>
+                                <input id="stayEnd2" name="stayEnd2" type="date">
                             </fieldset>
                         </td>
                         <td>
-                            <span class="ipt-clear">
-                                <input id="stayLang2" name="stayLang2" type="text" aria-labelledby="th-lang stayLang2">
-                            </span>
+                            <label for="stayLang2" class="sr-only">사용 외국어 2</label>
+                            <span class="ipt-clear"><input id="stayLang2" name="stayLang2" type="text"></span>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="ipt-clear">
-                                <input id="stayCountry3" name="stayCountry3" type="text" aria-labelledby="th-country stayCountry3">
-                            </span>
+                            <label for="stayCountry3" class="sr-only">체류국가 3</label>
+                            <span class="ipt-clear"><input id="stayCountry3" name="stayCountry3" type="text"></span>
                         </td>
                         <td>
-                        <span class="ipt-clear">
-                            <input id="stayPurpose3" name="stayPurpose3" type="text" aria-labelledby="th-purpose stayPurpose3">
-                        </span>
+                            <label for="stayPurpose3" class="sr-only">체류목적 3</label>
+                            <span class="ipt-clear"><input id="stayPurpose3" name="stayPurpose3" type="text"></span>
                         </td>
                         <td>
-                            <fieldset class="form-group" aria-labelledby="th-period">
-                                <legend class="sr-only">체류기간</legend>
-                                <input id="stayStart3" name="stayStart3" type="date" aria-labelledby="th-period stayStart3" aria-label="체류기간(시작일)">
-                                <input id="stayEnd3"   name="stayEnd3"   type="date" aria-labelledby="th-period stayEnd3"   aria-label="체류기간(종료일)">
+                            <fieldset class="form-group">
+                                <legend class="sr-only">체류기간 3</legend>
+                                <label for="stayStart3" class="sr-only">체류 시작일 3</label>
+                                <input id="stayStart3" name="stayStart3" type="date">
+                                <label for="stayEnd3" class="sr-only">체류 종료일 3</label>
+                                <input id="stayEnd3" name="stayEnd3" type="date">
                             </fieldset>
                         </td>
                         <td>
-                            <span class="ipt-clear">
-                                <input id="stayLang3" name="stayLang3" type="text" aria-labelledby="th-lang stayLang3">
-                            </span>
+                            <label for="stayLang3" class="sr-only">사용 외국어 3</label>
+                            <span class="ipt-clear"><input id="stayLang3" name="stayLang3" type="text"></span>
                         </td>
                     </tr>
                 </tbody>
@@ -937,72 +933,71 @@
                 </colgroup>
                 <thead>
                     <tr>
-                    <th id="th-periodClub" scope="col">활동기간</th>
-                    <th id="th-orgClub" scope="col">활동단체명</th>
-                    <th id="th-descClub" scope="col">활동내용</th>
+                        <th scope="col">활동기간</th>
+                        <th scope="col">활동단체명</th>
+                        <th scope="col">활동내용</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>
-                            <fieldset class="form-group" aria-labelledby="th-periodClub">
-                                <legend class="sr-only">활동기간</legend>
-                                <input id="clubStart1" name="clubStart1" type="date" aria-labelledby="th-periodClub clubStart1" aria-label="활동 시작일">
-                                <input id="clubEnd1" name="clubEnd1" type="date" aria-labelledby="th-periodClub clubEnd1" aria-label="활동 종료일">
+                            <fieldset class="form-group">
+                                <legend class="sr-only">활동기간 1</legend>
+                                <label for="clubStart1" class="sr-only">활동 시작일 1</label>
+                                <input id="clubStart1" name="clubStart1" type="date">
+                                <label for="clubEnd1" class="sr-only">활동 종료일 1</label>
+                                <input id="clubEnd1" name="clubEnd1" type="date">
                             </fieldset>
                         </td>
                         <td>
-                            <span class="ipt-clear">
-                                <input id="clubOrg1" name="clubOrg1" type="text" aria-labelledby="th-orgClub clubOrg1">
-                            </span>
+                            <label for="clubOrg1" class="sr-only">활동단체명 1</label>
+                            <span class="ipt-clear"><input id="clubOrg1" name="clubOrg1" type="text"></span>
                         </td>
                         <td>
-                            <span class="ipt-clear">
-                                <input id="clubDesc1" name="clubDesc1" type="text" aria-labelledby="th-descClub clubDesc1">
-                            </span>
+                            <label for="clubDesc1" class="sr-only">활동내용 1</label>
+                            <span class="ipt-clear"><input id="clubDesc1" name="clubDesc1" type="text"></span>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <fieldset class="form-group" aria-labelledby="th-periodClub">
-                                <legend class="sr-only">활동기간</legend>
-                                <input id="clubStart2" name="clubStart2" type="date" aria-labelledby="th-periodClub clubStart2" aria-label="활동 시작일">
-                                <input id="clubEnd2" name="clubEnd2" type="date" aria-labelledby="th-periodClub clubEnd2" aria-label="활동 종료일">
+                            <fieldset class="form-group">
+                                <legend class="sr-only">활동기간 2</legend>
+                                <label for="clubStart2" class="sr-only">활동 시작일 2</label>
+                                <input id="clubStart2" name="clubStart2" type="date">
+                                <label for="clubEnd2" class="sr-only">활동 종료일 2</label>
+                                <input id="clubEnd2" name="clubEnd2" type="date">
                             </fieldset>
                         </td>
                         <td>
-                            <span class="ipt-clear">
-                                <input id="clubOrg2" name="clubOrg2" type="text" aria-labelledby="th-orgClub clubOrg2">
-                            </span>
+                            <label for="clubOrg2" class="sr-only">활동단체명 2</label>
+                            <span class="ipt-clear"><input id="clubOrg2" name="clubOrg2" type="text"></span>
                         </td>
                         <td>
-                            <span class="ipt-clear">
-                                <input id="clubDesc2" name="clubDesc2" type="text" aria-labelledby="th-descClub clubDesc2">
-                            </span>
+                            <label for="clubDesc2" class="sr-only">활동내용 2</label>
+                            <span class="ipt-clear"><input id="clubDesc2" name="clubDesc2" type="text"></span>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <fieldset class="form-group" aria-labelledby="th-periodClub">
-                                <legend class="sr-only">활동기간</legend>
-                                <input id="clubStart3" name="clubStart3" type="date" aria-labelledby="th-periodClub clubStart3" aria-label="활동 시작일">
-                                <input id="clubEnd3" name="clubEnd3" type="date" aria-labelledby="th-periodClub clubEnd3" aria-label="활동 종료일">
+                            <fieldset class="form-group">
+                                <legend class="sr-only">활동기간 3</legend>
+                                <label for="clubStart3" class="sr-only">활동 시작일 3</label>
+                                <input id="clubStart3" name="clubStart3" type="date">
+                                <label for="clubEnd3" class="sr-only">활동 종료일 3</label>
+                                <input id="clubEnd3" name="clubEnd3" type="date">
                             </fieldset>
                         </td>
                         <td>
-                            <span class="ipt-clear">
-                                <input id="clubOrg3" name="clubOrg3" type="text" aria-labelledby="th-orgClub clubOrg3">
-                            </span>
+                            <label for="clubOrg3" class="sr-only">활동단체명 3</label>
+                            <span class="ipt-clear"><input id="clubOrg3" name="clubOrg3" type="text"></span>
                         </td>
                         <td>
-                            <span class="ipt-clear">
-                                <input id="clubDesc3" name="clubDesc3" type="text"  aria-labelledby="th-descClub clubDesc3">
-                            </span>
+                            <label for="clubDesc3" class="sr-only">활동내용 3</label>
+                            <span class="ipt-clear"><input id="clubDesc3" name="clubDesc3" type="text"></span>
                         </td>
                     </tr>
                 </tbody>
             </table>
-
         </div>
         <!-- 사회봉사 활동 -->
         <div class="table-group">
@@ -1016,67 +1011,71 @@
                 </colgroup>
                 <thead>
                     <tr>
-                        <th id="th-periodVol" scope="col">활동기간</th>
-                        <th id="th-orgVol"    scope="col">활동단체명</th>
-                        <th id="th-descVol"   scope="col">활동내용</th>
+                        <th scope="col">활동기간</th>
+                        <th scope="col">활동단체명</th>
+                        <th scope="col">활동내용</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>
-                        <fieldset class="form-group" aria-labelledby="th-periodVol">
-                            <legend class="sr-only">활동기간</legend>
-                            <input id="volunteerStart1" name="volunteerStart1" type="date" aria-labelledby="th-periodVol volunteerStart1" aria-label="활동 시작일">
-                            <input id="volunteerEnd1"   name="volunteerEnd1"   type="date" aria-labelledby="th-periodVol volunteerEnd1"   aria-label="활동 종료일">
-                        </fieldset>
-                        </td>
-                        <td>
-                        <span class="ipt-clear">
-                            <input id="volunteerOrg1" name="volunteerOrg1" type="text" aria-labelledby="th-orgVol volunteerOrg1">
-                        </span>
-                        </td>
-                        <td>
-                        <span class="ipt-clear">
-                            <input id="volunteerDesc1" name="volunteerDesc1" type="text" aria-labelledby="th-descVol volunteerDesc1">
-                        </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <fieldset class="form-group" aria-labelledby="th-periodVol">
-                                <legend class="sr-only">활동기간</legend>
-                                <input id="volunteerStart2" name="volunteerStart2" type="date" aria-labelledby="th-periodVol volunteerStart2" aria-label="활동 시작일">
-                                <input id="volunteerEnd2"   name="volunteerEnd2"   type="date" aria-labelledby="th-periodVol volunteerEnd2"   aria-label="활동 종료일">
+                            <fieldset class="form-group">
+                                <legend class="sr-only">활동기간 1</legend>
+                                <label for="volunteerStart1" class="sr-only">활동 시작일 1</label>
+                                <input id="volunteerStart1" name="volunteerStart1" type="date">
+                                <label for="volunteerEnd1" class="sr-only">활동 종료일 1</label>
+                                <input id="volunteerEnd1" name="volunteerEnd1" type="date">
                             </fieldset>
                         </td>
                         <td>
+                            <label for="volunteerOrg1" class="sr-only">활동단체명 1</label>
                             <span class="ipt-clear">
-                                <input id="volunteerOrg2" name="volunteerOrg2" type="text" aria-labelledby="th-orgVol volunteerOrg2">
+                                <input id="volunteerOrg1" name="volunteerOrg1" type="text">
                             </span>
                         </td>
                         <td>
+                            <label for="volunteerDesc1" class="sr-only">활동내용 1</label>
                             <span class="ipt-clear">
-                                <input id="volunteerDesc2" name="volunteerDesc2" type="text" aria-labelledby="th-descVol volunteerDesc2">
+                                <input id="volunteerDesc1" name="volunteerDesc1" type="text">
                             </span>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <fieldset class="form-group" aria-labelledby="th-periodVol">
-                                <legend class="sr-only">활동기간</legend>
-                                <input id="volunteerStart3" name="volunteerStart3" type="date" aria-labelledby="th-periodVol volunteerStart3" aria-label="활동 시작일">
-                                <input id="volunteerEnd3"   name="volunteerEnd3"   type="date" aria-labelledby="th-periodVol volunteerEnd3"   aria-label="활동 종료일">
+                            <fieldset class="form-group">
+                                <legend class="sr-only">활동기간 2</legend>
+                                <label for="volunteerStart2" class="sr-only">활동 시작일 2</label>
+                                <input id="volunteerStart2" name="volunteerStart2" type="date">
+                                <label for="volunteerEnd2" class="sr-only">활동 종료일 2</label>
+                                <input id="volunteerEnd2" name="volunteerEnd2" type="date">
                             </fieldset>
                         </td>
                         <td>
-                            <span class="ipt-clear">
-                                <input id="volunteerOrg3" name="volunteerOrg3" type="text" aria-labelledby="th-orgVol volunteerOrg3">
-                            </span>
+                            <label for="volunteerOrg2" class="sr-only">활동단체명 2</label>
+                            <span class="ipt-clear"><input id="volunteerOrg2" name="volunteerOrg2" type="text"></span>
                         </td>
                         <td>
-                            <span class="ipt-clear">
-                                <input id="volunteerDesc3" name="volunteerDesc3" type="text" aria-labelledby="th-descVol volunteerDesc3">
-                            </span>
+                            <label for="volunteerDesc2" class="sr-only">활동내용 2</label>
+                            <span class="ipt-clear"><input id="volunteerDesc2" name="volunteerDesc2" type="text"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <fieldset class="form-group">
+                                <legend class="sr-only">활동기간 3</legend>
+                                <label for="volunteerStart3" class="sr-only">활동 시작일 3</label>
+                                <input id="volunteerStart3" name="volunteerStart3" type="date">
+                                <label for="volunteerEnd3" class="sr-only">활동 종료일 3</label>
+                                <input id="volunteerEnd3" name="volunteerEnd3" type="date">
+                            </fieldset>
+                        </td>
+                        <td>
+                            <label for="volunteerOrg3" class="sr-only">활동단체명 3</label>
+                            <span class="ipt-clear"><input id="volunteerOrg3" name="volunteerOrg3" type="text"></span>
+                        </td>
+                        <td>
+                            <label for="volunteerDesc3" class="sr-only">활동내용 3</label>
+                            <span class="ipt-clear"><input id="volunteerDesc3" name="volunteerDesc3" type="text"></span>
                         </td>
                     </tr>
                 </tbody>
