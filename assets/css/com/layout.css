@@ -137,7 +137,7 @@ h5, p.tit { color:var(--color-2); font-size:1rem; font-weight:var(--font-w-b); }
 .text-content p.m-dot::before,
 .text-content .m-dot dd::before,
 .text-content .m-dot li::before,
-.info-content .m-dot li::before { content:"¡¤"; margin-right:5px; }
+.info-content .m-dot li::before { content:"¡¤"; margin:0 5px; }
 .text-content .dot li:last-of-type,
 .text-content .m-dot li:last-of-type,
 .text-content .dot li:last-of-type { margin-bottom:0; }
