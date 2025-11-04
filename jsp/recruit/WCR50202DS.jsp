@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR" %>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -89,7 +91,7 @@
                 <section class="page-container recruitment WCR50202DS">
                       <div class="table-content">
                           <div class="group sept1 active">
-                              <div data-include-path="./WCR50202DS_step01.html"></div>
+                            <jsp:include page="./WCR50202DS_step01.jsp" />
                               <div class="bottom-container">
                                 <div class="btn-content cta">
                                     <div class="button-group">
@@ -99,7 +101,7 @@
                             </div>
                           </div>
                           <div class="group step2">
-                              <div data-include-path="./WCR50202DS_step02.html"></div>
+                            <jsp:include page="./WCR50202DS_step02.jsp" />
                               <div class="bottom-container">
                                 <div class="btn-content cta">
                                     <div class="button-group">
@@ -111,7 +113,7 @@
                           </div>
                           
                           <div class="group step3">
-                            <div data-include-path="./WCR50202DS_step03.html"></div>
+                            <jsp:include page="./WCR50202DS_step03.jsp" />
                             <div class="bottom-container">
                                 <div class="btn-content cta">
                                     <div class="button-group">
@@ -123,7 +125,7 @@
 
                           </div>
                           <div class="group step4">
-                            <div data-include-path="./WCR50202DS_step04.html"></div>
+                            <jsp:include page="./WCR50202DS_step04.jsp" />
                             <div class="bottom-container">
                                 <div class="btn-content cta">
                                     <div class="button-group">

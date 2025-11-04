@@ -1,26 +1,26 @@
-<!--[D]:ê°œë°œìŠ¤í¬ë¦½íŠ¸ ì‚­ì œ-->
-<script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR" %>
+
 <div class="form-content">
-    <h3 class="essential">í•™ë ¥ì‚¬í•­</h3>
+    <h3 class="essential">ÇÐ·Â»çÇ×</h3>
     <form class="form-content">
-        <!--ê³ ë“±í•™êµ/ê²€ì •ê³ ì‹œ-->
+        <!--°íµîÇÐ±³/°ËÁ¤°í½Ã-->
         <div class="table-group">
             <fieldset class="form-group abs">
-                <legend class="sr-only">ê³ ë“±í•™êµ/ê²€ì •ê³ ì‹œ ì„ íƒ</legend>
+                <legend class="sr-only">°íµîÇÐ±³/°ËÁ¤°í½Ã ¼±ÅÃ</legend>
                 <label class="radio" data-tab="radio-tab01" class="tab-item">
                     <input type="radio" name="use" value="" checked="">
-                    <span>ê³ ë“±í•™êµ</span>
+                    <span>°íµîÇÐ±³</span>
                 </label>
                 <label class="radio" data-tab="radio-tab02" class="tab-item">
                     <input type="radio" name="use" value="">
-                    <span>ê²€ì •ê³ ì‹œ</span>
+                    <span>°ËÁ¤°í½Ã</span>
                 </label>
             </fieldset>
             <div id="radio-tab01">
-                <h4 class="essential">ê³ ë“±í•™êµ</h4>
+                <h4 class="essential">°íµîÇÐ±³</h4>
                 <div class="tab-content">
                     <table class="td-l">
-                        <caption>ê³ ë“±í•™êµ ìž…ë ¥í‘œ(í•™êµëª…, ê¸°ê°„, ì¡¸ì—…êµ¬ë¶„, ì „ê³µëª…, í•™ì  í¬í•¨)</caption>
+                        <caption>°íµîÇÐ±³ ÀÔ·ÂÇ¥(ÇÐ±³¸í, ±â°£, Á¹¾÷±¸ºÐ, Àü°ø¸í, ÇÐÁ¡ Æ÷ÇÔ)</caption>
                         <colgroup>
                             <col style="width:262px">
                             <col style="width:auto">
@@ -29,77 +29,77 @@
                         </colgroup>
                         <tbody>
                         <tr>
-                            <th scope="row"><label for="hs-school">í•™êµëª…</label></th>
+                            <th scope="row"><label for="hs-school">ÇÐ±³¸í</label></th>
                             <td class="tal" colspan="3">
                                 <span class="txt-unit ipt-clear">
                                     <input id="hs-school" name="hsSchool" type="text" style="padding-right:120px;">
-                                    <span class="txt" aria-hidden="true">ê³ ë“±í•™êµ</span>
+                                    <span class="txt" aria-hidden="true">°íµîÇÐ±³</span>
                                 </span>
                             </td>
                         </tr>
                         <tr>
-                            <th scope="row"><label for="hsPeriodStart">ê¸°ê°„</label></th>
+                            <th scope="row"><label for="hsPeriodStart">±â°£</label></th>
                             <td class="tal">
                                 <fieldset class="form-group">
-                                    <legend class="sr-only">ê¸°ê°„</legend>
-                                    <input type="month" id="hsPeriodStart" name="hsPeriodStart" aria-label="ìž…í•™">
-                                    <input type="month" id="hsPeriodEnd" name="hsPeriodEnd" aria-label="ì¡¸ì—…">
+                                    <legend class="sr-only">±â°£</legend>
+                                    <input type="month" id="hsPeriodStart" name="hsPeriodStart" aria-label="ÀÔÇÐ">
+                                    <input type="month" id="hsPeriodEnd" name="hsPeriodEnd" aria-label="Á¹¾÷">
                                 </fieldset>
                             </td>
-                            <th scope="row"><label for="hs-grad">ì¡¸ì—…êµ¬ë¶„</label></th>
+                            <th scope="row"><label for="hs-grad">Á¹¾÷±¸ºÐ</label></th>
                             <td class="tal">
-                                <select id="hs-grad" name="hsGrad" title="ì¡¸ì—…êµ¬ë¶„ ì„ íƒ">
-                                <option value="" disabled selected hidden>ì¡¸ì—…êµ¬ë¶„ ì„ íƒ</option>
-                                <option value="grad">ì¡¸ì—…</option>
-                                <option value="expected">ì¡¸ì—…ì˜ˆì •</option>
-                                <option value="drop">ì¤‘í‡´</option>
-                                <option value="transfer">ì „í•™</option>
+                                <select id="hs-grad" name="hsGrad" title="Á¹¾÷±¸ºÐ ¼±ÅÃ">
+                                <option value="" disabled selected hidden>Á¹¾÷±¸ºÐ ¼±ÅÃ</option>
+                                <option value="grad">Á¹¾÷</option>
+                                <option value="expected">Á¹¾÷¿¹Á¤</option>
+                                <option value="drop">ÁßÅð</option>
+                                <option value="transfer">ÀüÇÐ</option>
                                 </select>
                             </td>
                         </tr>
                         <tr>
-                        <th scope="row"><label for="hs-major">ì „ê³µëª…</label></th>
+                        <th scope="row"><label for="hs-major">Àü°ø¸í</label></th>
                         <td class="tal" colspan="3">
                             <span class="txt-unit ipt-clear">
                                 <input id="hs-major" name="hsMajor" type="text" style="padding-right:80px;">
-                                <span class="txt">ê³„ì—´</span>
+                                <span class="txt">°è¿­</span>
                             </span>
                         </td>
                         </tr>
                         <tr>
-                        <th scope="row"><label for="hs-gpa"></label>í•™ì </th>
+                        <th scope="row"><label for="hs-gpa"></label>ÇÐÁ¡</th>
                         <td class="tal" colspan="3">
                             <fieldset class="form-group">
-                                <legend class="sr-only">í•™ì  ìž…ë ¥(ì·¨ë“/ë§Œì )</legend>
-                                <input id="hs-gpa" name="hsGpa" type="number" aria-label="ì·¨ë“í•™ì  ìž…ë ¥">
+                                <legend class="sr-only">ÇÐÁ¡ ÀÔ·Â(Ãëµæ/¸¸Á¡)</legend>
+                                <input id="hs-gpa" name="hsGpa" type="number" aria-label="ÃëµæÇÐÁ¡ ÀÔ·Â">
                                 /
-                                <input id="hs-gpa-max" name="hsGpaMax" type="number" aria-label="ë§Œì  ìž…ë ¥">
+                                <input id="hs-gpa-max" name="hsGpaMax" type="number" aria-label="¸¸Á¡ ÀÔ·Â">
                             </fieldset>
-                            <p class="m-dot">ìµœì¢…ìœ¼ë¡œ ì¡¸ì—…í•œ í•™ë ¥ì„ ê¸°ì¤€ìœ¼ë¡œ ìž…ë ¥í•˜ì„¸ìš”.</p>
+                            <p class="m-dot">ÃÖÁ¾À¸·Î Á¹¾÷ÇÑ ÇÐ·ÂÀ» ±âÁØÀ¸·Î ÀÔ·ÂÇÏ¼¼¿ä.</p>
                         </td>
                         </tr>
                         </tbody>
                     </table>
-                    <p class="m-dot">ìµœì¢…ìœ¼ë¡œ ì¡¸ì—…í•œ í•™ë ¥ì„ ê¸°ì¤€ìœ¼ë¡œ ìž…ë ¥í•˜ì‹œê¸° ë°”ëžë‹ˆë‹¤.</p>
+                    <p class="m-dot">ÃÖÁ¾À¸·Î Á¹¾÷ÇÑ ÇÐ·ÂÀ» ±âÁØÀ¸·Î ÀÔ·ÂÇÏ½Ã±â ¹Ù¶ø´Ï´Ù.</p>
                 </div>
             </div>
             <div id="radio-tab02">
-                <h4 class="essential">ê²€ì •ê³ ì‹œ</h4>
+                <h4 class="essential">°ËÁ¤°í½Ã</h4>
                 <div class="tab-content">
                     <table class="td-l">
-                        <caption>ê²€ì •ê³ ì‹œ ìž…ë ¥í‘œ</caption>
+                        <caption>°ËÁ¤°í½Ã ÀÔ·ÂÇ¥</caption>
                         <colgroup>
                             <col style="width:262px">
                             <col style="width:auto">
                         </colgroup>
                         <tbody>
                             <tr>
-                                <th scope="row"><label for="qualificationExamination">ê²€ì •ê³ ì‹œ</label></th>
+                                <th scope="row"><label for="qualificationExamination">°ËÁ¤°í½Ã</label></th>
                                 <td class="tal">
                                     <span class="txt-unit ipt-clear">
-                                        <span class="txt" style="left:16px;right:initial;">ì œ</span>
+                                        <span class="txt" style="left:16px;right:initial;">Á¦</span>
                                         <input id="qualificationExamination" name="" type="text" style="padding-left:50px; padding-right:60px;">
-                                        <span class="txt">í˜¸</span>
+                                        <span class="txt">È£</span>
                                     </span>
                                 </td>
                             </tr>
@@ -108,11 +108,11 @@
                 </div>
             </div>
         </div><!--//table-group-->
-        <!--ì „ë¬¸ëŒ€í•™-->
+        <!--Àü¹®´ëÇÐ-->
         <div class="table-group">
-            <h4>ì „ë¬¸ëŒ€í•™</h4>
+            <h4>Àü¹®´ëÇÐ</h4>
             <table class="td-l">
-                <caption>ì „ë¬¸ëŒ€í•™ ìž…ë ¥í‘œ(í•™êµëª…, ê¸°ê°„, ì¡¸ì—…êµ¬ë¶„, ì „ê³µëª…, í•™ì  í¬í•¨)</caption>
+                <caption>Àü¹®´ëÇÐ ÀÔ·ÂÇ¥(ÇÐ±³¸í, ±â°£, Á¹¾÷±¸ºÐ, Àü°ø¸í, ÇÐÁ¡ Æ÷ÇÔ)</caption>
                 <colgroup>
                     <col style="width:262px">
                     <col style="width:auto">
@@ -121,36 +121,36 @@
                 </colgroup>
                 <tbody>
                     <tr>
-                        <th scope="row"><label for="techSchool">í•™êµëª…</label></th>
+                        <th scope="row"><label for="techSchool">ÇÐ±³¸í</label></th>
                         <td class="tal" colspan="3">
                             <span class="txt-unit ipt-clear">
                                 <input id="techSchool" name="" type="text" value="" style="padding-right:120px;">
-                                <span class="txt">ê³ ë“±í•™êµ</span>
+                                <span class="txt">°íµîÇÐ±³</span>
                             </span>
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row"><label for="techPeriodStart">ê¸°ê°„</label></th>
+                        <th scope="row"><label for="techPeriodStart">±â°£</label></th>
                         <td class="tal">
                             <fieldset class="form-group">
-                                <legend class="sr-only">ê¸°ê°„</legend>
-                                <input type="month" id="techPeriodStart" name="techPeriodStart" aria-label="ìž…í•™">
-                                <input type="month" id="techPeriodEnd" name="techPeriodEnd" aria-label="ì¡¸ì—…">
+                                <legend class="sr-only">±â°£</legend>
+                                <input type="month" id="techPeriodStart" name="techPeriodStart" aria-label="ÀÔÇÐ">
+                                <input type="month" id="techPeriodEnd" name="techPeriodEnd" aria-label="Á¹¾÷">
                             </fieldset>
                         </td>
-                        <th scope="row"><label for="techgrad">ì¡¸ì—…êµ¬ë¶„</label></th>
+                        <th scope="row"><label for="techgrad">Á¹¾÷±¸ºÐ</label></th>
                         <td class="tal">
-                            <select id="techgrad" name="techgrad" title="ì¡¸ì—…êµ¬ë¶„ ì„ íƒ">
-                                <option value="" disabled selected hidden>ì¡¸ì—…êµ¬ë¶„ ì„ íƒ</option>
-                                <option value="grad">ì¡¸ì—…</option>
-                                <option value="expected">ì¡¸ì—…ì˜ˆì •</option>
-                                <option value="drop">ì¤‘í‡´</option>
-                                <option value="transfer">ì „í•™</option>
+                            <select id="techgrad" name="techgrad" title="Á¹¾÷±¸ºÐ ¼±ÅÃ">
+                                <option value="" disabled selected hidden>Á¹¾÷±¸ºÐ ¼±ÅÃ</option>
+                                <option value="grad">Á¹¾÷</option>
+                                <option value="expected">Á¹¾÷¿¹Á¤</option>
+                                <option value="drop">ÁßÅð</option>
+                                <option value="transfer">ÀüÇÐ</option>
                             </select>
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row"><label for="techMajor">ì „ê³µëª…</label></th>
+                        <th scope="row"><label for="techMajor">Àü°ø¸í</label></th>
                         <td class="tal" colspan="3">
                             <span class="ipt-clear">
                                 <input id="techMajor" name="" type="text" value="">
@@ -158,26 +158,26 @@
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row"><label for="techGpa">í•™ì </label></th>
+                        <th scope="row"><label for="techGpa">ÇÐÁ¡</label></th>
                         <td class="tal" colspan="3">
                             <fieldset class="form-group">
-                                <legend class="sr-only">í•™ì  ìž…ë ¥(ì·¨ë“/ë§Œì )</legend>
-                                <input id="techGpa" name="techGpa" type="number" aria-label="ì·¨ë“í•™ì  ìž…ë ¥">
+                                <legend class="sr-only">ÇÐÁ¡ ÀÔ·Â(Ãëµæ/¸¸Á¡)</legend>
+                                <input id="techGpa" name="techGpa" type="number" aria-label="ÃëµæÇÐÁ¡ ÀÔ·Â">
                                 /
-                                <input id="techGpaMax" name="techGpaMax" type="number" aria-label="ë§Œì  ìž…ë ¥">
+                                <input id="techGpaMax" name="techGpaMax" type="number" aria-label="¸¸Á¡ ÀÔ·Â">
                             </fieldset>
-                            <p class="m-dot">ìµœì¢…ìœ¼ë¡œ ì¡¸ì—…í•œ í•™ë ¥ì„ ê¸°ì¤€ìœ¼ë¡œ ìž…ë ¥í•˜ì‹œê¸° ë°”ëžë‹ˆë‹¤.</p>
+                            <p class="m-dot">ÃÖÁ¾À¸·Î Á¹¾÷ÇÑ ÇÐ·ÂÀ» ±âÁØÀ¸·Î ÀÔ·ÂÇÏ½Ã±â ¹Ù¶ø´Ï´Ù.</p>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div><!--//table-group-->
-        <!--ëŒ€í•™êµ(4ë…„ì œ)-->
-        <div class="edu-repeat" data-title="ëŒ€í•™êµ(4ë…„ì œ)" data-max="2">    
+        <!--´ëÇÐ±³(4³âÁ¦)-->
+        <div class="edu-repeat" data-title="´ëÇÐ±³(4³âÁ¦)" data-max="2">    
             <div class="table-group" data-index="1">
-            <h4>ëŒ€í•™êµ(4ë…„ì œ)</h4>
+            <h4>´ëÇÐ±³(4³âÁ¦)</h4>
             <table class="td-l">
-                <caption>ëŒ€í•™êµ(4ë…„ì œ) ìž…ë ¥í‘œ(í•™êµëª…, ê¸°ê°„, ì¡¸ì—…êµ¬ë¶„, ì „ê³µëª…, í•™ì  í¬í•¨)</caption>
+                <caption>´ëÇÐ±³(4³âÁ¦) ÀÔ·ÂÇ¥(ÇÐ±³¸í, ±â°£, Á¹¾÷±¸ºÐ, Àü°ø¸í, ÇÐÁ¡ Æ÷ÇÔ)</caption>
                 <colgroup>
                     <col style="width:262px">
                     <col style="width:auto">
@@ -187,87 +187,87 @@
                 <tbody>
                 <tr>
                     <th scope="row" rowspan="2">
-                        <label for="univSchool">í•™êµëª…</label>
+                        <label for="univSchool">ÇÐ±³¸í</label>
                     </th>
                     <td class="tal" rowspan="2">
                     <span class="txt-unit ipt-clear">
                         <input id="univSchool" name="univSchool" type="text" style="padding-right:120px;">
-                        <span class="txt">ëŒ€í•™êµ</span>
+                        <span class="txt">´ëÇÐ±³</span>
                     </span>
                     </td>
         
-                    <th scope="row">ë³¸êµ/ë¶„êµ</th>
+                    <th scope="row">º»±³/ºÐ±³</th>
                         <td class="tal">
                         <fieldset class="form-group">
-                            <legend class="sr-only">ë³¸êµ/ë¶„êµ ì„ íƒ</legend>
-                            <label class="radio" for="univCampusMain"><input type="radio" id="univCampusMain" name="univCampus" value="main"> ë³¸êµ</label>
-                            <label class="radio" for="univCampusBranch"><input type="radio" id="univCampusBranch" name="univCampus" value="branch"> ë¶„êµ</label>
+                            <legend class="sr-only">º»±³/ºÐ±³ ¼±ÅÃ</legend>
+                            <label class="radio" for="univCampusMain"><input type="radio" id="univCampusMain" name="univCampus" value="main"> º»±³</label>
+                            <label class="radio" for="univCampusBranch"><input type="radio" id="univCampusBranch" name="univCampus" value="branch"> ºÐ±³</label>
                         </fieldset>
                         </td>
                 </tr>
                 <tr>
-                    <th scope="row">ì£¼ê°„/ì•¼ê°„</th>
+                    <th scope="row">ÁÖ°£/¾ß°£</th>
                     <td class="tal">
                         <fieldset class="form-group">
-                            <legend class="sr-only">ì£¼ê°„/ì•¼ê°„ ì„ íƒ</legend>
-                            <label class="radio"><input type="radio" id="univTimeDay" name="univTime" value="day"> ì£¼ê°„</label>
-                            <label class="radio"><input type="radio" id="univTimeNight" name="univTime" value="night"> ì•¼ê°„</label>
+                            <legend class="sr-only">ÁÖ°£/¾ß°£ ¼±ÅÃ</legend>
+                            <label class="radio"><input type="radio" id="univTimeDay" name="univTime" value="day"> ÁÖ°£</label>
+                            <label class="radio"><input type="radio" id="univTimeNight" name="univTime" value="night"> ¾ß°£</label>
                         </fieldset>
                     </td>
                 </tr>
         
                 <tr>
-                    <th scope="row"><label for="univPeriodStart">ê¸°ê°„</label></th>
+                    <th scope="row"><label for="univPeriodStart">±â°£</label></th>
                     <td class="tal">
                         <fieldset class="form-group">
-                            <legend class="sr-only">ê¸°ê°„</legend>
-                            <input type="month" id="hs-period-start" name="univPeriodStart" aria-label="ìž…í•™">
-                            <input type="month" id="hs-period-start" name="univPeriodEnd" aria-label="ì¡¸ì—…">
+                            <legend class="sr-only">±â°£</legend>
+                            <input type="month" id="hs-period-start" name="univPeriodStart" aria-label="ÀÔÇÐ">
+                            <input type="month" id="hs-period-start" name="univPeriodEnd" aria-label="Á¹¾÷">
                         </fieldset>
                     </td>
-                    <th scope="row"><label for="univStatus">ì¡¸ì—…êµ¬ë¶„</label></th>
+                    <th scope="row"><label for="univStatus">Á¹¾÷±¸ºÐ</label></th>
                     <td class="tal">
-                        <select id="univStatus" name="univStatus" title="ì¡¸ì—…êµ¬ë¶„ ì„ íƒ">
-                            <option value="">ì„ íƒí•´ì£¼ì„¸ìš”</option>
-                            <option>ì¡¸ì—…</option>
-                            <option>ìž¬í•™</option>
-                            <option>íœ´í•™</option>
+                        <select id="univStatus" name="univStatus" title="Á¹¾÷±¸ºÐ ¼±ÅÃ">
+                            <option value="">¼±ÅÃÇØÁÖ¼¼¿ä</option>
+                            <option>Á¹¾÷</option>
+                            <option>ÀçÇÐ</option>
+                            <option>ÈÞÇÐ</option>
                         </select>
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row"><label for="univMajor">ì „ê³µëª…</label></th>
+                    <th scope="row"><label for="univMajor">Àü°ø¸í</label></th>
                     <td class="tal" colspan="3">
                     <span class="txt-unit ipt-clear">
                         <input id="univMajor" name="univMajor" type="text" style="padding-right:80px;">
-                        <span class="txt">ê³„ì—´</span>
+                        <span class="txt">°è¿­</span>
                     </span>
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row"><label for="univGradeGot">í•™ì </label></th>
+                    <th scope="row"><label for="univGradeGot">ÇÐÁ¡</label></th>
                     <td class="tal" colspan="3">
                         <fieldset class="form-group">
-                            <legend class="sr-only">í•™ì  ìž…ë ¥(ì·¨ë“/ë§Œì )</legend>
-                            <input id="univGradeGot" name="univGradeGot" type="number" aria-label="ì·¨ë“í•™ì  ìž…ë ¥">
+                            <legend class="sr-only">ÇÐÁ¡ ÀÔ·Â(Ãëµæ/¸¸Á¡)</legend>
+                            <input id="univGradeGot" name="univGradeGot" type="number" aria-label="ÃëµæÇÐÁ¡ ÀÔ·Â">
                             /
-                            <input id="univGradeMax" name="univGradeMax" type="number" aria-label="ë§Œì  ìž…ë ¥">
+                            <input id="univGradeMax" name="univGradeMax" type="number" aria-label="¸¸Á¡ ÀÔ·Â">
                         </fieldset>
-                        <p class="m-dot">ìµœì¢…ìœ¼ë¡œ ì¡¸ì—…í•œ í•™ë ¥ì„ ê¸°ì¤€ìœ¼ë¡œ ìž…ë ¥í•˜ì‹œê¸° ë°”ëžë‹ˆë‹¤.</p>
+                        <p class="m-dot">ÃÖÁ¾À¸·Î Á¹¾÷ÇÑ ÇÐ·ÂÀ» ±âÁØÀ¸·Î ÀÔ·ÂÇÏ½Ã±â ¹Ù¶ø´Ï´Ù.</p>
                     </td>
                 </tr>
                 </tbody>
             </table>
-            <button type="button" class="button btn-add">ì¶”ê°€</button>
-            <button type="button" class="btn-del">ì‚­ì œ</button>
+            <button type="button" class="button btn-add">Ãß°¡</button>
+            <button type="button" class="btn-del">»èÁ¦</button>
             </div>
         </div>
-        <!--ëŒ€í•™êµ(ì„ì‚¬)-->
-        <div class="edu-repeat" data-title="ëŒ€í•™êµ(ì„ì‚¬)" data-max="2">    
+        <!--´ëÇÐ±³(¼®»ç)-->
+        <div class="edu-repeat" data-title="´ëÇÐ±³(¼®»ç)" data-max="2">    
             <div class="table-group" data-index="1">
-                <h4>ëŒ€í•™êµ(ì„ì‚¬)</h4>
+                <h4>´ëÇÐ±³(¼®»ç)</h4>
                 <table class="td-l">
-                    <caption>ëŒ€í•™êµ(ì„ì‚¬) ìž…ë ¥í‘œ(í•™êµëª…, ë³¸êµ/ë¶„êµ, ì£¼ê°„/ì•¼ê°„, ê¸°ê°„, ì¡¸ì—…êµ¬ë¶„, ì „ê³µëª…, ì„¸ë¶€ì •ê³µ ì†Œê°œ, í•™ì  í¬í•¨)</caption>
+                    <caption>´ëÇÐ±³(¼®»ç) ÀÔ·ÂÇ¥(ÇÐ±³¸í, º»±³/ºÐ±³, ÁÖ°£/¾ß°£, ±â°£, Á¹¾÷±¸ºÐ, Àü°ø¸í, ¼¼ºÎÁ¤°ø ¼Ò°³, ÇÐÁ¡ Æ÷ÇÔ)</caption>
                     <colgroup>
                         <col style="width:262px">
                         <col style="width:auto">
@@ -276,59 +276,59 @@
                     </colgroup>
                     <tbody>
                     <tr>
-                        <th scope="row" rowspan="2"><label for="univSchool2">í•™êµëª…</label></th>
+                        <th scope="row" rowspan="2"><label for="univSchool2">ÇÐ±³¸í</label></th>
                         <td class="tal" rowspan="2">
                         <span class="txt-unit ipt-clear">
                             <input id="univSchool2" name="univSchool2" type="text" style="padding-right:120px;">
-                            <span class="txt">ëŒ€í•™êµ</span>
+                            <span class="txt">´ëÇÐ±³</span>
                         </span>
                         </td>
-                        <th scope="row">ë³¸êµ/ë¶„êµ</th>
+                        <th scope="row">º»±³/ºÐ±³</th>
                         <td class="tal">
                             <fieldset class="form-group">
-                                <legend class="sr-only">ë³¸êµ/ë¶„êµ ì„ íƒ</legend>
-                                <label class="radio" for="univCampusMain"><input type="radio" id="univCampusMain2" name="univCampus2" value="main"> ë³¸êµ</label>
-                                <label class="radio" for="univCampusBranch"><input type="radio" id="univCampusBranch2" name="univCampus2" value="branch"> ë¶„êµ</label>
+                                <legend class="sr-only">º»±³/ºÐ±³ ¼±ÅÃ</legend>
+                                <label class="radio" for="univCampusMain"><input type="radio" id="univCampusMain2" name="univCampus2" value="main"> º»±³</label>
+                                <label class="radio" for="univCampusBranch"><input type="radio" id="univCampusBranch2" name="univCampus2" value="branch"> ºÐ±³</label>
                             </fieldset>
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row">ì£¼ê°„/ì•¼ê°„</th>
+                        <th scope="row">ÁÖ°£/¾ß°£</th>
                         <td class="tal">
                             <fieldset class="form-group">
-                                <legend class="sr-only">ì£¼ê°„/ì•¼ê°„ ì„ íƒ</legend>
-                                <label class="radio"><input type="radio" id="univTimeDay2" name="univTime2">ì£¼ê°„</label>
-                                <label class="radio"><input type="radio" id="univTimeNight2" name="univTime2">ì•¼ê°„</label>
+                                <legend class="sr-only">ÁÖ°£/¾ß°£ ¼±ÅÃ</legend>
+                                <label class="radio"><input type="radio" id="univTimeDay2" name="univTime2">ÁÖ°£</label>
+                                <label class="radio"><input type="radio" id="univTimeNight2" name="univTime2">¾ß°£</label>
                             </fieldset>
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row"><label for="univPeriodStart2">ê¸°ê°„</label></th>
+                        <th scope="row"><label for="univPeriodStart2">±â°£</label></th>
                         <td class="tal">
                             <fieldset class="form-group">
-                                <legend class="sr-only">ê¸°ê°„</legend>
-                                <input type="month" id="univPeriodStart2" name="univPeriodStart2" aria-label="ìž…í•™">
-                                <input type="month" id="univPeriodEnd2" name="univPeriodEnd2" aria-label="ì¡¸ì—…">
+                                <legend class="sr-only">±â°£</legend>
+                                <input type="month" id="univPeriodStart2" name="univPeriodStart2" aria-label="ÀÔÇÐ">
+                                <input type="month" id="univPeriodEnd2" name="univPeriodEnd2" aria-label="Á¹¾÷">
                             </fieldset>
                         </td>
-                        <th scope="row"><label for="univStatus2">ì¡¸ì—…êµ¬ë¶„</label></th>
+                        <th scope="row"><label for="univStatus2">Á¹¾÷±¸ºÐ</label></th>
                         <td class="tal">
-                            <select id="univStatus" name="univStatus2" title="ì¡¸ì—…êµ¬ë¶„ ì„ íƒ">
-                                <option value="">ì„ íƒí•´ì£¼ì„¸ìš”</option>
-                                <option>ì¡¸ì—…</option>
-                                <option>ìž¬í•™</option>
-                                <option>íœ´í•™</option>
+                            <select id="univStatus" name="univStatus2" title="Á¹¾÷±¸ºÐ ¼±ÅÃ">
+                                <option value="">¼±ÅÃÇØÁÖ¼¼¿ä</option>
+                                <option>Á¹¾÷</option>
+                                <option>ÀçÇÐ</option>
+                                <option>ÈÞÇÐ</option>
                             </select>
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row"><label for="univMajor2">ì „ê³µëª…</label></th>
+                        <th scope="row"><label for="univMajor2">Àü°ø¸í</label></th>
                         <td class="tal">
                         <span class="ipt-clear">
                             <input id="univMajor2" name="univMajor2" type="text">
                         </span>
                         </td>
-                        <th scope="row"><label for="univMajor2">ì„¸ë¶€ì „ê³µ ì†Œê°œ</label></th>
+                        <th scope="row"><label for="univMajor2">¼¼ºÎÀü°ø ¼Ò°³</label></th>
                         <td class="tal">
                         <span class="ipt-clear">
                             <input id="detailedMajor2" name="detailedMajor2" type="text">
@@ -336,28 +336,28 @@
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row"><label for="univGradeGot2">í•™ì </label></th>
+                        <th scope="row"><label for="univGradeGot2">ÇÐÁ¡</label></th>
                         <td class="tal" colspan="3">
                             <fieldset class="form-group">
-                                <legend class="sr-only">í•™ì  ìž…ë ¥(ì·¨ë“/ë§Œì )</legend>
-                                <input id="univGradeGot2" name="univGradeGot2" type="number" aria-label="ì·¨ë“í•™ì  ìž…ë ¥">
+                                <legend class="sr-only">ÇÐÁ¡ ÀÔ·Â(Ãëµæ/¸¸Á¡)</legend>
+                                <input id="univGradeGot2" name="univGradeGot2" type="number" aria-label="ÃëµæÇÐÁ¡ ÀÔ·Â">
                                 /
-                                <input id="univGradeMax2" name="univGradeMax2" type="number" aria-label="ë§Œì  ìž…ë ¥">
+                                <input id="univGradeMax2" name="univGradeMax2" type="number" aria-label="¸¸Á¡ ÀÔ·Â">
                             </fieldset>
-                            <p class="m-dot">ìµœì¢…ìœ¼ë¡œ ì¡¸ì—…í•œ í•™ë ¥ì„ ê¸°ì¤€ìœ¼ë¡œ ìž…ë ¥í•˜ì‹œê¸° ë°”ëžë‹ˆë‹¤.</p>
+                            <p class="m-dot">ÃÖÁ¾À¸·Î Á¹¾÷ÇÑ ÇÐ·ÂÀ» ±âÁØÀ¸·Î ÀÔ·ÂÇÏ½Ã±â ¹Ù¶ø´Ï´Ù.</p>
                         </td>
                     </tr>
                     </tbody>
                 </table>
-                <button type="button" class="button btn-add">ì¶”ê°€</button>
-                <button type="button" class="btn-del">ì‚­ì œ</button>
+                <button type="button" class="button btn-add">Ãß°¡</button>
+                <button type="button" class="btn-del">»èÁ¦</button>
             </div>
         </div>
-        <!--ëŒ€í•™êµ(ë°•ì‚¬)-->
+        <!--´ëÇÐ±³(¹Ú»ç)-->
         <div class="table-group">
-            <h4>ëŒ€í•™êµ(ë°•ì‚¬)</h4>
+            <h4>´ëÇÐ±³(¹Ú»ç)</h4>
             <table class="td-l">
-                <caption>ëŒ€í•™êµ(ë°•ì‚¬) ìž…ë ¥í‘œ(í•™êµëª…, ë³¸êµ/ë¶„êµ, ì£¼ê°„/ì•¼ê°„, ê¸°ê°„, ì¡¸ì—…êµ¬ë¶„, ì „ê³µëª…, ì—°êµ¬ì‹¤ì  ì†Œê°œ, í•™ì  í¬í•¨)</caption>
+                <caption>´ëÇÐ±³(¹Ú»ç) ÀÔ·ÂÇ¥(ÇÐ±³¸í, º»±³/ºÐ±³, ÁÖ°£/¾ß°£, ±â°£, Á¹¾÷±¸ºÐ, Àü°ø¸í, ¿¬±¸½ÇÀû ¼Ò°³, ÇÐÁ¡ Æ÷ÇÔ)</caption>
                 <colgroup>
                     <col style="width:262px">
                     <col style="width:auto">
@@ -367,60 +367,60 @@
                 <tbody>
                 <tr>
                     <th scope="row" rowspan="2">
-                    <label for="univSchool3">í•™êµëª…</label>
+                    <label for="univSchool3">ÇÐ±³¸í</label>
                     </th>
                     <td class="tal" rowspan="2">
                         <span class="txt-unit ipt-clear">
                             <input id="univSchool3" name="univSchool3" type="text" style="padding-right:120px;">
-                            <span class="txt">ëŒ€í•™êµ</span>
+                            <span class="txt">´ëÇÐ±³</span>
                         </span>
                     </td>
-                    <th scope="row">ë³¸êµ/ë¶„êµ</th>
+                    <th scope="row">º»±³/ºÐ±³</th>
                     <td class="tal">
                         <fieldset class="form-group">
-                            <legend class="sr-only">ë³¸êµ/ë¶„êµ ì„ íƒ</legend>
-                            <label class="radio" for="univCampusMain3"><input type="radio" id="univCampusMain3" name="univCampus3" value="main"> ë³¸êµ</label>
-                            <label class="radio" for="univCampusBranch3"><input type="radio" id="univCampusBranch3" name="univCampus3" value="branch"> ë¶„êµ</label>
+                            <legend class="sr-only">º»±³/ºÐ±³ ¼±ÅÃ</legend>
+                            <label class="radio" for="univCampusMain3"><input type="radio" id="univCampusMain3" name="univCampus3" value="main"> º»±³</label>
+                            <label class="radio" for="univCampusBranch3"><input type="radio" id="univCampusBranch3" name="univCampus3" value="branch"> ºÐ±³</label>
                         </fieldset>
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row">ì£¼ê°„/ì•¼ê°„</th>
+                    <th scope="row">ÁÖ°£/¾ß°£</th>
                     <td class="tal">
                         <fieldset class="form-group">
-                            <legend class="sr-only">ì£¼ê°„/ì•¼ê°„ ì„ íƒ</legend>
-                            <label class="radio"><input type="radio" id="univTimeDay3" name="univTime3" value="day"> ì£¼ê°„</label>
-                            <label class="radio"><input type="radio" id="univTimeNight3" name="univTime2" value="night"> ì•¼ê°„</label>
+                            <legend class="sr-only">ÁÖ°£/¾ß°£ ¼±ÅÃ</legend>
+                            <label class="radio"><input type="radio" id="univTimeDay3" name="univTime3" value="day"> ÁÖ°£</label>
+                            <label class="radio"><input type="radio" id="univTimeNight3" name="univTime2" value="night"> ¾ß°£</label>
                         </fieldset>
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row"><label for="univPeriodStart3">ê¸°ê°„</label></th>
+                    <th scope="row"><label for="univPeriodStart3">±â°£</label></th>
                     <td class="tal">
                         <fieldset class="form-group">
-                            <legend class="sr-only">ê¸°ê°„</legend>
-                            <input type="month" id="univPeriodStart3" name="univPeriodStart3" aria-label="ìž…í•™">
-                            <input type="month" id="univPeriodEnd3" name="univPeriodEnd3" aria-label="ì¡¸ì—…">
+                            <legend class="sr-only">±â°£</legend>
+                            <input type="month" id="univPeriodStart3" name="univPeriodStart3" aria-label="ÀÔÇÐ">
+                            <input type="month" id="univPeriodEnd3" name="univPeriodEnd3" aria-label="Á¹¾÷">
                         </fieldset>
                     </td>
-                    <th scope="row"><label for="univStatus3">ì¡¸ì—…êµ¬ë¶„</label></th>
+                    <th scope="row"><label for="univStatus3">Á¹¾÷±¸ºÐ</label></th>
                     <td class="tal">
-                        <select id="univStatus" name="univStatus3" title="ì¡¸ì—…êµ¬ë¶„ ì„ íƒ">
-                            <option value="">ì„ íƒí•´ì£¼ì„¸ìš”</option>
-                            <option>ì¡¸ì—…</option>
-                            <option>ìž¬í•™</option>
-                            <option>íœ´í•™</option>
+                        <select id="univStatus" name="univStatus3" title="Á¹¾÷±¸ºÐ ¼±ÅÃ">
+                            <option value="">¼±ÅÃÇØÁÖ¼¼¿ä</option>
+                            <option>Á¹¾÷</option>
+                            <option>ÀçÇÐ</option>
+                            <option>ÈÞÇÐ</option>
                         </select>
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row"><label for="univMajor3">ì „ê³µëª…</label></th>
+                    <th scope="row"><label for="univMajor3">Àü°ø¸í</label></th>
                     <td class="tal">
                     <span class="ipt-clear">
                         <input id="univMajor3" name="univMajor" type="text">
                     </span>
                     </td>
-                    <th scope="row"><label for="detailedMajor3">ì—°êµ¬ì‹¤ì  ì†Œê°œ</label></th>
+                    <th scope="row"><label for="detailedMajor3">¿¬±¸½ÇÀû ¼Ò°³</label></th>
                     <td class="tal">
                         <span class="ipt-clear">
                             <input id="detailedMajor3" name="detailedMajor3" type="text">
@@ -428,31 +428,31 @@
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row"><label for="univGradeGot3">í•™ì </label></th>
+                    <th scope="row"><label for="univGradeGot3">ÇÐÁ¡</label></th>
                     <td class="tal" colspan="3">
                         <fieldset class="form-group">
-                            <legend class="sr-only">í•™ì  ìž…ë ¥(ì·¨ë“/ë§Œì )</legend>
-                            <input id="univGradeGot3" name="univGradeGot3" type="number" aria-label="ì·¨ë“í•™ì  ìž…ë ¥">
+                            <legend class="sr-only">ÇÐÁ¡ ÀÔ·Â(Ãëµæ/¸¸Á¡)</legend>
+                            <input id="univGradeGot3" name="univGradeGot3" type="number" aria-label="ÃëµæÇÐÁ¡ ÀÔ·Â">
                             /
-                            <input id="univGradeMax3" name="univGradeMax3" type="number" aria-label="ë§Œì  ìž…ë ¥">
+                            <input id="univGradeMax3" name="univGradeMax3" type="number" aria-label="¸¸Á¡ ÀÔ·Â">
                         </fieldset>
-                        <p class="m-dot">ìµœì¢…ìœ¼ë¡œ ì¡¸ì—…í•œ í•™ë ¥ì„ ê¸°ì¤€ìœ¼ë¡œ ìž…ë ¥í•˜ì‹œê¸° ë°”ëžë‹ˆë‹¤.</p>
+                        <p class="m-dot">ÃÖÁ¾À¸·Î Á¹¾÷ÇÑ ÇÐ·ÂÀ» ±âÁØÀ¸·Î ÀÔ·ÂÇÏ½Ã±â ¹Ù¶ø´Ï´Ù.</p>
                     </td>
                 </tr>
                 </tbody>
             </table>
-            <p class="m-dot">ìµœì¢…ìœ¼ë¡œ ì¡¸ì—…í•œ í•™ë ¥ì„ ê¸°ì¤€ìœ¼ë¡œ ìž…ë ¥í•˜ì‹œê¸° ë°”ëžë‹ˆë‹¤. </p>
+            <p class="m-dot">ÃÖÁ¾À¸·Î Á¹¾÷ÇÑ ÇÐ·ÂÀ» ±âÁØÀ¸·Î ÀÔ·ÂÇÏ½Ã±â ¹Ù¶ø´Ï´Ù. </p>
         </div>
     </form>
 </div><!--//form-content-->
 <div class="form-content">
-    <h3>ìžê²©Â·ë©´í—ˆ</h3>
+    <h3>ÀÚ°Ý¡¤¸éÇã</h3>
     <form class="form-content">
-        <!--ì˜ì–´ëŠ¥ë ¥-->
+        <!--¿µ¾î´É·Â-->
         <div class="table-group">
-            <h4>ì˜ì–´ëŠ¥ë ¥</h4>
+            <h4>¿µ¾î´É·Â</h4>
             <table class="td-l">
-                <caption>ì˜ì–´ëŠ¥ë ¥ ìž…ë ¥í‘œ(ì‹œí—˜ì¢…ë¥˜, ì ìˆ˜/ë“±ê¸‰, ì·¨ë“ì¼ í¬í•¨)</caption>
+                <caption>¿µ¾î´É·Â ÀÔ·ÂÇ¥(½ÃÇèÁ¾·ù, Á¡¼ö/µî±Þ, ÃëµæÀÏ Æ÷ÇÔ)</caption>
                 <colgroup>
                     <col style="width:33.3%">
                     <col style="width:33.3%">
@@ -460,9 +460,9 @@
                 </colgroup>
                 <thead>
                     <tr>
-                    <th id="th-kind" scope="col">ì‹œí—˜ì¢…ë¥˜</th>
-                    <th id="th-score" scope="col">ì ìˆ˜/ë“±ê¸‰</th>
-                    <th id="th-date" scope="col">ì·¨ë“ì¼</th>
+                    <th id="th-kind" scope="col">½ÃÇèÁ¾·ù</th>
+                    <th id="th-score" scope="col">Á¡¼ö/µî±Þ</th>
+                    <th id="th-date" scope="col">ÃëµæÀÏ</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -529,11 +529,11 @@
                 </tbody>
             </table>
         </div>
-        <!-- ì œ2ì™¸êµ­ì–´ -->
+        <!-- Á¦2¿Ü±¹¾î -->
         <div class="table-group">
-            <h4>ì œ2ì™¸êµ­ì–´</h4>
+            <h4>Á¦2¿Ü±¹¾î</h4>
             <table class="td-l">
-                <caption>ì œ2ì™¸êµ­ì–´ ìž…ë ¥í‘œ(ì‹œí—˜ì¢…ë¥˜, ì ìˆ˜/ë“±ê¸‰, ì·¨ë“ì¼ í¬í•¨)</caption>
+                <caption>Á¦2¿Ü±¹¾î ÀÔ·ÂÇ¥(½ÃÇèÁ¾·ù, Á¡¼ö/µî±Þ, ÃëµæÀÏ Æ÷ÇÔ)</caption>
                 <colgroup>
                     <col style="width:33.3%">
                     <col style="width:33.3%">
@@ -541,9 +541,9 @@
                 </colgroup>
                 <thead>
                 <tr>
-                    <th id="th-kindSec" scope="col">ì‹œí—˜ì¢…ë¥˜</th>
-                    <th id="th-scoreSec" scope="col">ì ìˆ˜/ë“±ê¸‰</th>
-                    <th id="th-dateSec" scope="col">ì·¨ë“ì¼</th>
+                    <th id="th-kindSec" scope="col">½ÃÇèÁ¾·ù</th>
+                    <th id="th-scoreSec" scope="col">Á¡¼ö/µî±Þ</th>
+                    <th id="th-dateSec" scope="col">ÃëµæÀÏ</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -610,11 +610,11 @@
                 </tbody>
             </table>
         </div>
-        <!-- ìžê²©Â·ë©´í—ˆì‚¬í•­ (ì‹œí—˜ìž¥ ê¸°ì¤€) -->
+        <!-- ÀÚ°Ý¡¤¸éÇã»çÇ× (½ÃÇèÀå ±âÁØ) -->
         <div class="table-group">
-            <h4>ìžê²©Â·ë©´í—ˆì‚¬í•­</h4>
+            <h4>ÀÚ°Ý¡¤¸éÇã»çÇ×</h4>
             <table class="td-l">
-                <caption>ìžê²©Â·ë©´í—ˆì‚¬í•­ ìž…ë ¥í‘œ(ìžê²©ì¦, ìžê²©ë“±ê¸‰, ì·¨ë“ì¼, ë°œí–‰ê¸°ê´€ í¬í•¨)</caption>
+                <caption>ÀÚ°Ý¡¤¸éÇã»çÇ× ÀÔ·ÂÇ¥(ÀÚ°ÝÁõ, ÀÚ°Ýµî±Þ, ÃëµæÀÏ, ¹ßÇà±â°ü Æ÷ÇÔ)</caption>
                 <colgroup>
                     <col style="width:28%">
                     <col style="width:22%">
@@ -623,10 +623,10 @@
                 </colgroup>
                 <thead>
                     <tr>
-                        <th id="th-cert"  scope="col">ìžê²©ì¦</th>
-                        <th id="th-grade" scope="col">ìžê²©ë“±ê¸‰</th>
-                        <th id="th-date2" scope="col">ì·¨ë“ì¼</th>
-                        <th id="th-period" scope="col">ë°œí–‰ê¸°ê´€</th>
+                        <th id="th-cert"  scope="col">ÀÚ°ÝÁõ</th>
+                        <th id="th-grade" scope="col">ÀÚ°Ýµî±Þ</th>
+                        <th id="th-date2" scope="col">ÃëµæÀÏ</th>
+                        <th id="th-period" scope="col">¹ßÇà±â°ü</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -729,11 +729,11 @@
                 </tbody>
             </table>
         </div>
-        <!-- í•´ì™¸ì²´ë¥˜ê²½í—˜ -->
+        <!-- ÇØ¿ÜÃ¼·ù°æÇè -->
         <div class="table-group">
-            <h4>í•´ì™¸ì²´ë¥˜ê²½í—˜</h4>
+            <h4>ÇØ¿ÜÃ¼·ù°æÇè</h4>
             <table class="td-l">
-                <caption>í•´ì™¸ì²´ë¥˜ê²½í—˜ ìž…ë ¥í‘œ(ì²´ë¥˜êµ­ê°€, ì²´ë¥˜ëª©ì , ì²´ë¥˜ê¸°ê°„, ì‚¬ìš© ì™¸êµ­ì–´ í¬í•¨)</caption>
+                <caption>ÇØ¿ÜÃ¼·ù°æÇè ÀÔ·ÂÇ¥(Ã¼·ù±¹°¡, Ã¼·ù¸ñÀû, Ã¼·ù±â°£, »ç¿ë ¿Ü±¹¾î Æ÷ÇÔ)</caption>
                 <colgroup>
                     <col style="width:320px">
                     <col style="width:318px">
@@ -742,10 +742,10 @@
                 </colgroup>
                 <thead>
                     <tr>
-                        <th id="th-country" scope="col">ì²´ë¥˜êµ­ê°€</th>
-                        <th id="th-purpose" scope="col">ì²´ë¥˜ëª©ì </th>
-                        <th id="th-period" scope="col">ì²´ë¥˜ê¸°ê°„</th>
-                        <th id="th-lang" scope="col">ì‚¬ìš© ì™¸êµ­ì–´</th>
+                        <th id="th-country" scope="col">Ã¼·ù±¹°¡</th>
+                        <th id="th-purpose" scope="col">Ã¼·ù¸ñÀû</th>
+                        <th id="th-period" scope="col">Ã¼·ù±â°£</th>
+                        <th id="th-lang" scope="col">»ç¿ë ¿Ü±¹¾î</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -762,9 +762,9 @@
                         </td>
                         <td>
                             <fieldset class="form-group">
-                                <legend class="sr-only">ì²´ë¥˜ê¸°ê°„</legend>
-                                <input id="stayStart1" name="stayStart1" type="date" aria-labelledby="th-period stayStart1" aria-label="ì²´ë¥˜ê¸°ê°„(ì‹œìž‘ì¼)">
-                                <input id="stayEnd1" name="stayEnd1" type="date" aria-labelledby="th-period stayEnd1" aria-label="ì²´ë¥˜ê¸°ê°„(ì¢…ë£Œì¼)">
+                                <legend class="sr-only">Ã¼·ù±â°£</legend>
+                                <input id="stayStart1" name="stayStart1" type="date" aria-labelledby="th-period stayStart1" aria-label="Ã¼·ù±â°£(½ÃÀÛÀÏ)">
+                                <input id="stayEnd1" name="stayEnd1" type="date" aria-labelledby="th-period stayEnd1" aria-label="Ã¼·ù±â°£(Á¾·áÀÏ)">
                             </fieldset>
                         </td>
                         <td>
@@ -786,9 +786,9 @@
                         </td>
                         <td>
                             <fieldset class="form-group">
-                                <legend class="sr-only">ì²´ë¥˜ê¸°ê°„</legend>
-                                <input id="stayStart1" name="stayStart2" type="date" aria-labelledby="th-period stayStart2" aria-label="ì²´ë¥˜ê¸°ê°„(ì‹œìž‘ì¼)">
-                                <input id="stayEnd1" name="stayEnd2" type="date" aria-labelledby="th-period stayEnd2" aria-label="ì²´ë¥˜ê¸°ê°„(ì¢…ë£Œì¼)">
+                                <legend class="sr-only">Ã¼·ù±â°£</legend>
+                                <input id="stayStart1" name="stayStart2" type="date" aria-labelledby="th-period stayStart2" aria-label="Ã¼·ù±â°£(½ÃÀÛÀÏ)">
+                                <input id="stayEnd1" name="stayEnd2" type="date" aria-labelledby="th-period stayEnd2" aria-label="Ã¼·ù±â°£(Á¾·áÀÏ)">
                             </fieldset>
                         </td>
                         <td>
@@ -810,9 +810,9 @@
                         </td>
                         <td>
                             <fieldset class="form-group">
-                                <legend class="sr-only">ì²´ë¥˜ê¸°ê°„</legend>
-                                <input id="stayStart3" name="stayStart1" type="date" aria-labelledby="th-period stayStart3" aria-label="ì²´ë¥˜ê¸°ê°„(ì‹œìž‘ì¼)">
-                                <input id="stayEnd3" name="stayEnd1" type="date" aria-labelledby="th-period stayEnd3" aria-label="ì²´ë¥˜ê¸°ê°„(ì¢…ë£Œì¼)">
+                                <legend class="sr-only">Ã¼·ù±â°£</legend>
+                                <input id="stayStart3" name="stayStart1" type="date" aria-labelledby="th-period stayStart3" aria-label="Ã¼·ù±â°£(½ÃÀÛÀÏ)">
+                                <input id="stayEnd3" name="stayEnd1" type="date" aria-labelledby="th-period stayEnd3" aria-label="Ã¼·ù±â°£(Á¾·áÀÏ)">
                             </fieldset>
                         </td>
                         <td>
@@ -825,11 +825,11 @@
             </table>
         
         </div>
-        <!-- ìˆ˜ìƒê²½ë ¥ -->
+        <!-- ¼ö»ó°æ·Â -->
         <div class="table-group">
-            <h4>ìˆ˜ìƒê²½ë ¥</h4>
+            <h4>¼ö»ó°æ·Â</h4>
             <table class="td-l">
-                <caption>í•´ì™¸ì²´ë¥˜ê²½í—˜ ìž…ë ¥í‘œ(ì²´ë¥˜êµ­ê°€, ì²´ë¥˜ëª©ì , ì²´ë¥˜ê¸°ê°„, ì‚¬ìš© ì™¸êµ­ì–´ í¬í•¨)</caption>
+                <caption>ÇØ¿ÜÃ¼·ù°æÇè ÀÔ·ÂÇ¥(Ã¼·ù±¹°¡, Ã¼·ù¸ñÀû, Ã¼·ù±â°£, »ç¿ë ¿Ü±¹¾î Æ÷ÇÔ)</caption>
                 <colgroup>
                     <col style="width:320px">
                     <col style="width:318px">
@@ -838,10 +838,10 @@
                 </colgroup>
                 <thead>
                     <tr>
-                        <th id="th-country" scope="col">ì²´ë¥˜êµ­ê°€</th>
-                        <th id="th-purpose" scope="col">ì²´ë¥˜ëª©ì </th>
-                        <th id="th-period"  scope="col">ì²´ë¥˜ê¸°ê°„</th>
-                        <th id="th-lang"    scope="col">ì‚¬ìš© ì™¸êµ­ì–´</th>
+                        <th id="th-country" scope="col">Ã¼·ù±¹°¡</th>
+                        <th id="th-purpose" scope="col">Ã¼·ù¸ñÀû</th>
+                        <th id="th-period"  scope="col">Ã¼·ù±â°£</th>
+                        <th id="th-lang"    scope="col">»ç¿ë ¿Ü±¹¾î</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -858,9 +858,9 @@
                         </td>
                         <td>
                             <fieldset class="form-group" aria-labelledby="th-period">
-                                <legend class="sr-only">ì²´ë¥˜ê¸°ê°„</legend>
-                                <input id="stayStart1" name="stayStart1" type="date" aria-labelledby="th-period stayStart1" aria-label="ì²´ë¥˜ê¸°ê°„(ì‹œìž‘ì¼)">
-                                <input id="stayEnd1"   name="stayEnd1" type="date" aria-labelledby="th-period stayEnd1" aria-label="ì²´ë¥˜ê¸°ê°„(ì¢…ë£Œì¼)">
+                                <legend class="sr-only">Ã¼·ù±â°£</legend>
+                                <input id="stayStart1" name="stayStart1" type="date" aria-labelledby="th-period stayStart1" aria-label="Ã¼·ù±â°£(½ÃÀÛÀÏ)">
+                                <input id="stayEnd1"   name="stayEnd1" type="date" aria-labelledby="th-period stayEnd1" aria-label="Ã¼·ù±â°£(Á¾·áÀÏ)">
                             </fieldset>
                         </td>
                         <td>
@@ -882,9 +882,9 @@
                         </td>
                         <td>
                             <fieldset class="form-group" aria-labelledby="th-period">
-                                <legend class="sr-only">ì²´ë¥˜ê¸°ê°„</legend>
-                                <input id="stayStart2" name="stayStart2" type="date" aria-labelledby="th-period stayStart2" aria-label="ì²´ë¥˜ê¸°ê°„(ì‹œìž‘ì¼)">
-                                <input id="stayEnd2" name="stayEnd2" type="date" aria-labelledby="th-period stayEnd2" aria-label="ì²´ë¥˜ê¸°ê°„(ì¢…ë£Œì¼)">
+                                <legend class="sr-only">Ã¼·ù±â°£</legend>
+                                <input id="stayStart2" name="stayStart2" type="date" aria-labelledby="th-period stayStart2" aria-label="Ã¼·ù±â°£(½ÃÀÛÀÏ)">
+                                <input id="stayEnd2" name="stayEnd2" type="date" aria-labelledby="th-period stayEnd2" aria-label="Ã¼·ù±â°£(Á¾·áÀÏ)">
                             </fieldset>
                         </td>
                         <td>
@@ -906,9 +906,9 @@
                         </td>
                         <td>
                             <fieldset class="form-group" aria-labelledby="th-period">
-                                <legend class="sr-only">ì²´ë¥˜ê¸°ê°„</legend>
-                                <input id="stayStart3" name="stayStart3" type="date" aria-labelledby="th-period stayStart3" aria-label="ì²´ë¥˜ê¸°ê°„(ì‹œìž‘ì¼)">
-                                <input id="stayEnd3"   name="stayEnd3"   type="date" aria-labelledby="th-period stayEnd3"   aria-label="ì²´ë¥˜ê¸°ê°„(ì¢…ë£Œì¼)">
+                                <legend class="sr-only">Ã¼·ù±â°£</legend>
+                                <input id="stayStart3" name="stayStart3" type="date" aria-labelledby="th-period stayStart3" aria-label="Ã¼·ù±â°£(½ÃÀÛÀÏ)">
+                                <input id="stayEnd3"   name="stayEnd3"   type="date" aria-labelledby="th-period stayEnd3"   aria-label="Ã¼·ù±â°£(Á¾·áÀÏ)">
                             </fieldset>
                         </td>
                         <td>
@@ -923,13 +923,13 @@
     </form>
 </div><!--//form-content-->
 <div class="form-content">
-    <h3>êµë‚´ í™œë™ì‚¬í•­</h3>
+    <h3>±³³» È°µ¿»çÇ×</h3>
     <form class="form-content">
-        <!-- ë™ì•„ë¦¬ í™œë™ -->
+        <!-- µ¿¾Æ¸® È°µ¿ -->
         <div class="table-group">
-            <h4>ë™ì•„ë¦¬ í™œë™</h4>
+            <h4>µ¿¾Æ¸® È°µ¿</h4>
             <table class="td-l">
-                <caption>ë™ì•„ë¦¬ í™œë™ ìž…ë ¥í‘œ(í™œë™ê¸°ê°„, í™œë™ë‹¨ì²´ëª…, í™œë™ë‚´ìš© í¬í•¨)</caption>
+                <caption>µ¿¾Æ¸® È°µ¿ ÀÔ·ÂÇ¥(È°µ¿±â°£, È°µ¿´ÜÃ¼¸í, È°µ¿³»¿ë Æ÷ÇÔ)</caption>
                 <colgroup>
                     <col style="width:420px">
                     <col style="width:420px">
@@ -937,18 +937,18 @@
                 </colgroup>
                 <thead>
                     <tr>
-                    <th id="th-periodClub" scope="col">í™œë™ê¸°ê°„</th>
-                    <th id="th-orgClub" scope="col">í™œë™ë‹¨ì²´ëª…</th>
-                    <th id="th-descClub" scope="col">í™œë™ë‚´ìš©</th>
+                    <th id="th-periodClub" scope="col">È°µ¿±â°£</th>
+                    <th id="th-orgClub" scope="col">È°µ¿´ÜÃ¼¸í</th>
+                    <th id="th-descClub" scope="col">È°µ¿³»¿ë</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>
                             <fieldset class="form-group" aria-labelledby="th-periodClub">
-                                <legend class="sr-only">í™œë™ê¸°ê°„</legend>
-                                <input id="clubStart1" name="clubStart1" type="date" aria-labelledby="th-periodClub clubStart1" aria-label="í™œë™ ì‹œìž‘ì¼">
-                                <input id="clubEnd1" name="clubEnd1" type="date" aria-labelledby="th-periodClub clubEnd1" aria-label="í™œë™ ì¢…ë£Œì¼">
+                                <legend class="sr-only">È°µ¿±â°£</legend>
+                                <input id="clubStart1" name="clubStart1" type="date" aria-labelledby="th-periodClub clubStart1" aria-label="È°µ¿ ½ÃÀÛÀÏ">
+                                <input id="clubEnd1" name="clubEnd1" type="date" aria-labelledby="th-periodClub clubEnd1" aria-label="È°µ¿ Á¾·áÀÏ">
                             </fieldset>
                         </td>
                         <td>
@@ -965,9 +965,9 @@
                     <tr>
                         <td>
                             <fieldset class="form-group" aria-labelledby="th-periodClub">
-                                <legend class="sr-only">í™œë™ê¸°ê°„</legend>
-                                <input id="clubStart2" name="clubStart2" type="date" aria-labelledby="th-periodClub clubStart2" aria-label="í™œë™ ì‹œìž‘ì¼">
-                                <input id="clubEnd2" name="clubEnd2" type="date" aria-labelledby="th-periodClub clubEnd2" aria-label="í™œë™ ì¢…ë£Œì¼">
+                                <legend class="sr-only">È°µ¿±â°£</legend>
+                                <input id="clubStart2" name="clubStart2" type="date" aria-labelledby="th-periodClub clubStart2" aria-label="È°µ¿ ½ÃÀÛÀÏ">
+                                <input id="clubEnd2" name="clubEnd2" type="date" aria-labelledby="th-periodClub clubEnd2" aria-label="È°µ¿ Á¾·áÀÏ">
                             </fieldset>
                         </td>
                         <td>
@@ -984,9 +984,9 @@
                     <tr>
                         <td>
                             <fieldset class="form-group" aria-labelledby="th-periodClub">
-                                <legend class="sr-only">í™œë™ê¸°ê°„</legend>
-                                <input id="clubStart3" name="clubStart3" type="date" aria-labelledby="th-periodClub clubStart3" aria-label="í™œë™ ì‹œìž‘ì¼">
-                                <input id="clubEnd3" name="clubEnd3" type="date" aria-labelledby="th-periodClub clubEnd3" aria-label="í™œë™ ì¢…ë£Œì¼">
+                                <legend class="sr-only">È°µ¿±â°£</legend>
+                                <input id="clubStart3" name="clubStart3" type="date" aria-labelledby="th-periodClub clubStart3" aria-label="È°µ¿ ½ÃÀÛÀÏ">
+                                <input id="clubEnd3" name="clubEnd3" type="date" aria-labelledby="th-periodClub clubEnd3" aria-label="È°µ¿ Á¾·áÀÏ">
                             </fieldset>
                         </td>
                         <td>
@@ -1004,11 +1004,11 @@
             </table>
 
         </div>
-        <!-- ì‚¬íšŒë´‰ì‚¬ í™œë™ -->
+        <!-- »çÈ¸ºÀ»ç È°µ¿ -->
         <div class="table-group">
-            <h4>ì‚¬íšŒë´‰ì‚¬ í™œë™</h4>
+            <h4>»çÈ¸ºÀ»ç È°µ¿</h4>
             <table class="td-l">
-                <caption>ì‚¬íšŒë´‰ì‚¬ í™œë™ ìž…ë ¥í‘œ(í™œë™ê¸°ê°„, í™œë™ë‹¨ì²´ëª…, í™œë™ë‚´ìš© í¬í•¨)</caption>
+                <caption>»çÈ¸ºÀ»ç È°µ¿ ÀÔ·ÂÇ¥(È°µ¿±â°£, È°µ¿´ÜÃ¼¸í, È°µ¿³»¿ë Æ÷ÇÔ)</caption>
                 <colgroup>
                     <col style="width:420px">
                     <col style="width:420px">
@@ -1016,18 +1016,18 @@
                 </colgroup>
                 <thead>
                     <tr>
-                        <th id="th-periodVol" scope="col">í™œë™ê¸°ê°„</th>
-                        <th id="th-orgVol"    scope="col">í™œë™ë‹¨ì²´ëª…</th>
-                        <th id="th-descVol"   scope="col">í™œë™ë‚´ìš©</th>
+                        <th id="th-periodVol" scope="col">È°µ¿±â°£</th>
+                        <th id="th-orgVol"    scope="col">È°µ¿´ÜÃ¼¸í</th>
+                        <th id="th-descVol"   scope="col">È°µ¿³»¿ë</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>
                         <fieldset class="form-group" aria-labelledby="th-periodVol">
-                            <legend class="sr-only">í™œë™ê¸°ê°„</legend>
-                            <input id="volunteerStart1" name="volunteerStart1" type="date" aria-labelledby="th-periodVol volunteerStart1" aria-label="í™œë™ ì‹œìž‘ì¼">
-                            <input id="volunteerEnd1"   name="volunteerEnd1"   type="date" aria-labelledby="th-periodVol volunteerEnd1"   aria-label="í™œë™ ì¢…ë£Œì¼">
+                            <legend class="sr-only">È°µ¿±â°£</legend>
+                            <input id="volunteerStart1" name="volunteerStart1" type="date" aria-labelledby="th-periodVol volunteerStart1" aria-label="È°µ¿ ½ÃÀÛÀÏ">
+                            <input id="volunteerEnd1"   name="volunteerEnd1"   type="date" aria-labelledby="th-periodVol volunteerEnd1"   aria-label="È°µ¿ Á¾·áÀÏ">
                         </fieldset>
                         </td>
                         <td>
@@ -1044,9 +1044,9 @@
                     <tr>
                         <td>
                             <fieldset class="form-group" aria-labelledby="th-periodVol">
-                                <legend class="sr-only">í™œë™ê¸°ê°„</legend>
-                                <input id="volunteerStart2" name="volunteerStart2" type="date" aria-labelledby="th-periodVol volunteerStart2" aria-label="í™œë™ ì‹œìž‘ì¼">
-                                <input id="volunteerEnd2"   name="volunteerEnd2"   type="date" aria-labelledby="th-periodVol volunteerEnd2"   aria-label="í™œë™ ì¢…ë£Œì¼">
+                                <legend class="sr-only">È°µ¿±â°£</legend>
+                                <input id="volunteerStart2" name="volunteerStart2" type="date" aria-labelledby="th-periodVol volunteerStart2" aria-label="È°µ¿ ½ÃÀÛÀÏ">
+                                <input id="volunteerEnd2"   name="volunteerEnd2"   type="date" aria-labelledby="th-periodVol volunteerEnd2"   aria-label="È°µ¿ Á¾·áÀÏ">
                             </fieldset>
                         </td>
                         <td>
@@ -1063,9 +1063,9 @@
                     <tr>
                         <td>
                             <fieldset class="form-group" aria-labelledby="th-periodVol">
-                                <legend class="sr-only">í™œë™ê¸°ê°„</legend>
-                                <input id="volunteerStart3" name="volunteerStart3" type="date" aria-labelledby="th-periodVol volunteerStart3" aria-label="í™œë™ ì‹œìž‘ì¼">
-                                <input id="volunteerEnd3"   name="volunteerEnd3"   type="date" aria-labelledby="th-periodVol volunteerEnd3"   aria-label="í™œë™ ì¢…ë£Œì¼">
+                                <legend class="sr-only">È°µ¿±â°£</legend>
+                                <input id="volunteerStart3" name="volunteerStart3" type="date" aria-labelledby="th-periodVol volunteerStart3" aria-label="È°µ¿ ½ÃÀÛÀÏ">
+                                <input id="volunteerEnd3"   name="volunteerEnd3"   type="date" aria-labelledby="th-periodVol volunteerEnd3"   aria-label="È°µ¿ Á¾·áÀÏ">
                             </fieldset>
                         </td>
                         <td>

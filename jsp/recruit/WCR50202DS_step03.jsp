@@ -1,24 +1,24 @@
-<!--[D]:ê°œë°œìŠ¤í¬ë¦½íŠ¸ ì‚­ì œ-->
-<script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR" %>
+
 
 
 <div class="form-content">
     <div class="text-content">
         <div class="text-group">
-            <h3>ê²½ë ¥ì‚¬í•­</h3>
+            <h3>°æ·Â»çÇ×</h3>
             <ul class="diamond-box">
-                <li>ì¶”í›„ ì œì¶œì„œë¥˜ì™€ ì§€ì›ì„œ ìž‘ì„±ë‚´ìš©ì´ ë‹¤ë¥¼ ê²½ìš° í•©ê²© ì·¨ì†Œ ë˜ëŠ” ë¶ˆí•©ê²© ì²˜ë¦¬ ë©ë‹ˆë‹¤.</li>
-                <li>ì§€ì›ì„œ ìž‘ì„± ì‹œ ì‚¬ì „ì— ì œì¶œì„œë¥˜ë¥¼ êµ¬ë¹„í•˜ì—¬ ì˜¤ë¥˜ ìž…ë ¥ì— ë”°ë¥¸ í•©ê²© ì·¨ì†Œë“±ì˜ ë¶ˆì´ìµì´ ì—†ë„ë¡ ìœ ì˜ ë°”ëžë‹ˆë‹¤.</li>
-                <li>ì œì¶œì„œë¥˜ëŠ” MGìºí”¼íƒˆ í™ˆíŽ˜ì´ì§€ì˜ ì±„ìš©ê³µê³  ì°¸ê³  ë°”ëžë‹ˆë‹¤.</li> 
+                <li>ÃßÈÄ Á¦Ãâ¼­·ù¿Í Áö¿ø¼­ ÀÛ¼º³»¿ëÀÌ ´Ù¸¦ °æ¿ì ÇÕ°Ý Ãë¼Ò ¶Ç´Â ºÒÇÕ°Ý Ã³¸® µË´Ï´Ù.</li>
+                <li>Áö¿ø¼­ ÀÛ¼º ½Ã »çÀü¿¡ Á¦Ãâ¼­·ù¸¦ ±¸ºñÇÏ¿© ¿À·ù ÀÔ·Â¿¡ µû¸¥ ÇÕ°Ý Ãë¼ÒµîÀÇ ºÒÀÌÀÍÀÌ ¾øµµ·Ï À¯ÀÇ ¹Ù¶ø´Ï´Ù.</li>
+                <li>Á¦Ãâ¼­·ù´Â MGÄ³ÇÇÅ» È¨ÆäÀÌÁöÀÇ Ã¤¿ë°ø°í Âü°í ¹Ù¶ø´Ï´Ù.</li> 
             </ul>
         </div>
     </div>
     <form class="form-content">
-        <!-- ë³‘ì—­íŠ¹ë¡€ ê²½ë ¥ì‚¬í•­ -->
+        <!-- º´¿ªÆ¯·Ê °æ·Â»çÇ× -->
         <div class="table-group">
-        <h4>ë³‘ì—­íŠ¹ë¡€ ê²½ë ¥ì‚¬í•­</h4>
+        <h4>º´¿ªÆ¯·Ê °æ·Â»çÇ×</h4>
             <table class="td-l">
-                <caption>ë³‘ì—­íŠ¹ë¡€ ê²½ë ¥ì‚¬í•­ ìž…ë ¥í‘œ(ê·¼ë¬´ì²˜, ê·¼ë¬´ê¸°ê°„, ë‹´ë‹¹ì—…ë¬´ í¬í•¨)</caption>
+                <caption>º´¿ªÆ¯·Ê °æ·Â»çÇ× ÀÔ·ÂÇ¥(±Ù¹«Ã³, ±Ù¹«±â°£, ´ã´ç¾÷¹« Æ÷ÇÔ)</caption>
                 <colgroup>
                     <col style="width:450px">
                     <col style="width:420px"> 
@@ -26,9 +26,9 @@
                 </colgroup>
                 <thead>
                 <tr>
-                    <th id="th-milCo"   scope="col">ê·¼ë¬´ì²˜</th>
-                    <th id="th-milTerm" scope="col">ê·¼ë¬´ê¸°ê°„</th>
-                    <th id="th-milDuty" scope="col">ë‹´ë‹¹ì—…ë¬´</th>
+                    <th id="th-milCo"   scope="col">±Ù¹«Ã³</th>
+                    <th id="th-milTerm" scope="col">±Ù¹«±â°£</th>
+                    <th id="th-milDuty" scope="col">´ã´ç¾÷¹«</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -40,10 +40,10 @@
                     </td>
                     <td>
                         <fieldset class="period-fieldset">
-                            <legend class="sr-only">ê·¼ë¬´ê¸°ê°„ 1</legend>
+                            <legend class="sr-only">±Ù¹«±â°£ 1</legend>
                             <div class="form-group">
-                                <input id="milStart1" name="milStart1" type="date" aria-label="ê·¼ë¬´ ì‹œìž‘ì¼">
-                                <input id="milEnd1" name="milEnd1" type="date" aria-label="ê·¼ë¬´ ì¢…ë£Œì¼">
+                                <input id="milStart1" name="milStart1" type="date" aria-label="±Ù¹« ½ÃÀÛÀÏ">
+                                <input id="milEnd1" name="milEnd1" type="date" aria-label="±Ù¹« Á¾·áÀÏ">
                             </div>
                         </fieldset>
                     </td>
@@ -56,12 +56,12 @@
                 </tbody>
             </table>
         </div>
-        <!--ê²½ë ¥-->
-        <div class="edu-repeat" data-title="ê²½ë ¥" data-max="10">    
+        <!--°æ·Â-->
+        <div class="edu-repeat" data-title="°æ·Â" data-max="10">    
             <div class="table-group" data-index="1">
-                <h4>ê²½ë ¥</h4>
+                <h4>°æ·Â</h4>
                 <table class="td-l">
-                    <caption>ê²½ë ¥ ìž…ë ¥í‘œ(ê·¼ë¬´ì²˜, ê·¼ë¬´ê¸°ê°„, ì§ìœ„, ë‹´ë‹¹ì—…ë¬´, ì—°ë´‰, í‡´ì§ì‚¬ìœ , ì„¸ë¶€ ê²½ë ¥ ì†Œê°œ)</caption>
+                    <caption>°æ·Â ÀÔ·ÂÇ¥(±Ù¹«Ã³, ±Ù¹«±â°£, Á÷À§, ´ã´ç¾÷¹«, ¿¬ºÀ, ÅðÁ÷»çÀ¯, ¼¼ºÎ °æ·Â ¼Ò°³)</caption>
                     <colgroup>
                         <col style="width:262px">
                         <col style="width:auto">
@@ -71,7 +71,7 @@
                     <tbody>
                         <tr>
                             <th scope="row">
-                                <label for="companyName">ê·¼ë¬´ì²˜</label>
+                                <label for="companyName">±Ù¹«Ã³</label>
                             </th>
                             <td>
                                 <span class="ipt-clear">
@@ -79,21 +79,21 @@
                                 </span>
                             </td>
                             <th scope="row">
-                                <label for="workStart">ê·¼ë¬´ê¸°ê°„</label>
+                                <label for="workStart">±Ù¹«±â°£</label>
                             </th>
                             <td>
                                 <fieldset>
-                                    <legend class="sr-only">ê·¼ë¬´ê¸°ê°„</legend>
+                                    <legend class="sr-only">±Ù¹«±â°£</legend>
                                     <div class="form-group">
-                                        <input id="workStart" name="workStart" type="date" aria-label="ê·¼ë¬´ ì‹œìž‘ì¼">
-                                        <input id="workEnd" name="workEnd" type="date" aria-label="ê·¼ë¬´ ì¢…ë£Œì¼">
+                                        <input id="workStart" name="workStart" type="date" aria-label="±Ù¹« ½ÃÀÛÀÏ">
+                                        <input id="workEnd" name="workEnd" type="date" aria-label="±Ù¹« Á¾·áÀÏ">
                                     </div>
                                 </fieldset>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">
-                                <label for="position">ì§ìœ„</label>
+                                <label for="position">Á÷À§</label>
                             </th>
                             <td>
                                 <span class="ipt-clear">
@@ -101,7 +101,7 @@
                                 </span>
                             </td>
                             <th scope="row">
-                                <label for="duty">ë‹´ë‹¹ì—…ë¬´</label>
+                                <label for="duty">´ã´ç¾÷¹«</label>
                             </th>
                             <td>
                                 <span class="ipt-clear">
@@ -111,17 +111,17 @@
                         </tr>
                         <tr>
                             <th scope="row">
-                                <label for="salary">ì—°ë´‰</label>
+                                <label for="salary">¿¬ºÀ</label>
                             </th>
                         <td>
                             <span class="txt-unit ipt-clear">
                                 <input type="text" name="utlr_brdn_amt" id="utlr_brdn_amt1" class="unit" inputmode="numeric" style="padding-right:120px;">
-                                <span class="txt">ë§Œì›</span>
+                                <span class="txt">¸¸¿ø</span>
                             </span>
                         </td>
                 
                         <th scope="row">
-                            <label for="leaveReason">í‡´ì§ì‚¬ìœ </label>
+                            <label for="leaveReason">ÅðÁ÷»çÀ¯</label>
                         </th>
                         <td>
                             <span class="ipt-clear">
@@ -131,39 +131,39 @@
                         </tr>
                         <tr>
                         <th scope="row">
-                            <label for="careerDetail">ì„¸ë¶€ ê²½ë ¥ ì†Œê°œ</label>
+                            <label for="careerDetail">¼¼ºÎ °æ·Â ¼Ò°³</label>
                         </th>
                         <td colspan="3">
                             <div class="textarea-wrap">
                                 <textarea id="introduceYourself" name="introduceYourself" rows="6" maxlength="1000" ></textarea>
                                 <div class="char-counter" aria-live="polite">
-                                  <span class="current">0</span>/<span class="max">1000</span>ìž
+                                  <span class="current">0</span>/<span class="max">1000</span>ÀÚ
                                 </div>
                               </div>
                         </td>
                         </tr>
                     </tbody>
                 </table>
-                <button type="button" class="button btn-add">ì¶”ê°€</button>
-                <button type="button" class="btn-del">ì‚­ì œ</button>
+                <button type="button" class="button btn-add">Ãß°¡</button>
+                <button type="button" class="btn-del">»èÁ¦</button>
             </div>
         </div>
     </form>
 </div><!--//form-content-->
 
-<!--[D]:WCR50204VQ.js  í™•ì¸ í›„ ì‚­ì œ -->
+<!--[D]:WCR50204VQ.js  È®ÀÎ ÈÄ »èÁ¦ -->
 <!--<script>
     $(function () {
       var $root = $('.WCR50204VQ');
       if (!$root.length) return;
     
-      // ---------- ì½ê¸°ì „ìš© ì²˜ë¦¬ ----------
+      // ---------- ÀÐ±âÀü¿ë Ã³¸® ----------
       // input/textarea
       $root.find('input, textarea')
         .prop('readonly', true)
         .attr('aria-readonly', 'true');
     
-      // selectëŠ” readonly ëŒ€ì²´ ì²˜ë¦¬(ê°’ ë³€ê²½ ì°¨ë‹¨)
+      // select´Â readonly ´ëÃ¼ Ã³¸®(°ª º¯°æ Â÷´Ü)
       $root.find('select').each(function () {
         var $sel = $(this);
         $sel.data('readonly-prev', $sel.val());
@@ -176,7 +176,7 @@
         var $sel = $(this); $sel.val($sel.data('readonly-prev'));
       });
     
-      // ---------- ë¹ˆ ê°’ íŒì • ----------
+      // ---------- ºó °ª ÆÇÁ¤ ----------
       function isEmptyField($el, $row) {
         var tag  = ($el.prop('tagName') || '').toUpperCase();
         var type = ($el.attr('type') || '').toLowerCase();
@@ -195,14 +195,14 @@
           var $group = $row.find('input[name="' + name.replace(/([\\[\\].])/g, '\\$1') + '"]');
           return $group.filter(':checked').length === 0;
         }
-        // ì¼ë°˜ input/textarea/date/number ë“±
+        // ÀÏ¹Ý input/textarea/date/number µî
         var val = ($el.val() || '').trim();
         return val === '';
       }
     
       function isRowAllEmpty($tr) {
         var $fields = $tr.find('input:not([type="hidden"]), select, textarea');
-        if (!$fields.length) return false; // í•„ë“œ ì—†ëŠ” í–‰ì€ ê±´ë„ˆëœ€
+        if (!$fields.length) return false; // ÇÊµå ¾ø´Â ÇàÀº °Ç³Ê¶Ü
         var allEmpty = true;
         $fields.each(function () {
           if (!isEmptyField($(this), $tr)) { allEmpty = false; return false; }
@@ -215,7 +215,7 @@
         if (ths > 0) return ths;
         var cols = $table.find('colgroup col').length;
         if (cols > 0) return cols;
-        // fallback: ì²« tbodyì˜ TD ìµœëŒ€ ê°œìˆ˜
+        // fallback: Ã¹ tbodyÀÇ TD ÃÖ´ë °³¼ö
         var maxTds = 0;
         $table.find('tbody tr').each(function () {
           maxTds = Math.max(maxTds, $(this).children('td,th').length);
@@ -242,22 +242,22 @@
             }
           });
     
-          // ëª¨ë‘ ë¹ˆ í–‰ì´ë©´ 'ë°ì´í„° ì—†ìŒ' 1í–‰ ì‚½ìž…
+          // ¸ðµÎ ºó ÇàÀÌ¸é 'µ¥ÀÌÅÍ ¾øÀ½' 1Çà »ðÀÔ
           $tbody.find('tr.__emptyRow').remove();
           if (!anyVisible) {
             $tbody.append(
-              '<tr class="__emptyRow"><td colspan="' + colspan + '">ë°ì´í„° ì—†ìŒ</td></tr>'
+              '<tr class="__emptyRow"><td colspan="' + colspan + '">µ¥ÀÌÅÍ ¾øÀ½</td></tr>'
             );
           }
         });
       }
     
-      // ì‹¤í–‰(ì˜ì—­ ë‚´ ëª¨ë“  í…Œì´ë¸” ëŒ€ìƒ)
+      // ½ÇÇà(¿µ¿ª ³» ¸ðµç Å×ÀÌºí ´ë»ó)
       $root.find('table').each(function () {
         collapseEmptyRowsPerTbody($(this));
       });
     
-      // ë¹„ë™ê¸° ë°ì´í„° ë°”ì¸ë”© í›„ì—ë„ ìž¬í˜¸ì¶œ ê°€ëŠ¥:
+      // ºñµ¿±â µ¥ÀÌÅÍ ¹ÙÀÎµù ÈÄ¿¡µµ ÀçÈ£Ãâ °¡´É:
       // collapseEmptyRowsPerTbody($('.WCR50204VQ .td-l').eq(0));
     });
 </script>-->

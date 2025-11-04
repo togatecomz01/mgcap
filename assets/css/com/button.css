@@ -98,7 +98,9 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
 .btn-form:hover { border-color:var(--btn-active); color:var(--btn-active);}
 .btn-form.reset { font-size:0; flex:0 0 67px; width:67px; height:67px; font-size:0;  }
 .btn-form.reset::before { content:""; display:block; width:30px; height:30px; margin:0 auto; background:var(--ico_reset) no-repeat center; background-size:100%; }
-.btn-form.uploadButton { max-width:119px; height:58px; background-color:var(--color-2); color:var(--white); }
+
+/**파일선택**/
+.uploadButton { max-width:119px; height:58px; background-color:var(--color-2); color:var(--white); }
 
 /**Popup Btn**/
 .btn-pop-primary,

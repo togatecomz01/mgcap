@@ -1,3 +1,5 @@
+<!--[D] : 스크립트 삭제 -->
+<script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
 <h3 class="essential">기본정보</h3>
 <form class="form-content">
     <!-- 지원분야 -->
@@ -52,6 +54,7 @@
                 <tbody>
                 <tr>
                     <td>
+                        <label for="prefPlace1" class="sr-only">희망근무지</label>
                         <select id="prefPlace1" name="prefPlace1" aria-labelledby="th-place-1 prefPlace1">
                             <option value="">선택해주세요</option>
                             <!-- 실제 옵션들 -->
@@ -59,13 +62,14 @@
                             <option value="부산">부산</option>
                         </select>
                     </td>
-            
                     <td>
+                        <label for="applyTask1" class="sr-only">지원업무</label>
                         <span class="ipt-clear">
                             <input id="applyTask1" name="applyTask1" type="text" value="인턴" aria-labelledby="th-task-1 applyTask1">
                         </span>
                     </td>
                     <td>
+                        <label for="applyDetail1" class="sr-only">상세지원업무</label>
                         <span class="ipt-clear">
                             <input id="applyDetail1" name="applyDetail1" type="text"  value="상세지원업무 내용" aria-labelledby="th-detail-1 applyDetail1">
                         </span>
