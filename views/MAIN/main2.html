@@ -114,7 +114,7 @@
                 <section class="contentWrap main-container">
                     <div class="main-content">
                         <div class="quick-group swipe quickSwiper">
-                            <h3>모든 상품을 <em>클릭 한번으로!</em></h3>
+                            <h3>MG캐피탈의 모든 상품을 <em>클릭 한번으로!</em></h3>
                             <div class="btn-content">
                                 <div class="swiper-button-prev"></div>
                                 <div class="swiper-button-next"></div>
@@ -178,22 +178,22 @@
                                         <div class="noti-list">
                                             <div class="noti-group">
                                                 <span class="label">입찰공고</span>
-                                                <span class="sbject">SK텔레콤 이용 회원을 위한 패해예방 수칙입니다.</span>
+                                                <span class="sbject">입찰공고 제목이 들어갑니다.</span>
+                                                <span class="date">2025.08.24</span>
+                                            </div>
+                                            <div class="noti-group">
+                                                <span class="label">입찰공고</span>
+                                                <span class="sbject">입찰공고 제목이 들어갑니다.</span>
                                                 <span class="date">2025.04.29</span>
                                             </div>
                                             <div class="noti-group">
                                                 <span class="label">입찰공고</span>
-                                                <span class="sbject">SK텔레콤 이용 회원을 위한 패해예방 수칙입니다.</span>
+                                                <span class="sbject">입찰공고 제목이 들어갑니다.</span>
                                                 <span class="date">2025.04.29</span>
                                             </div>
                                             <div class="noti-group">
                                                 <span class="label">입찰공고</span>
-                                                <span class="sbject">SK텔레콤 이용 회원을 위한 패해예방 수칙입니다.</span>
-                                                <span class="date">2025.04.29</span>
-                                            </div>
-                                            <div class="noti-group">
-                                                <span class="label">입찰공고</span>
-                                                <span class="sbject">SK텔레콤 이용 회원을 위한 패해예방 수칙입니다.</span>
+                                                <span class="sbject">입찰공고 제목이 들어갑니다.</span>
                                                 <span class="date">2025.04.29</span>
                                             </div>
                                         </div>
@@ -235,14 +235,21 @@
                         <div class="banner-group">
                             <p>고객간편서비스</p>
                             <h3>
-                                마음까지 시원한 금융,<br>MG캐피탈은 고객님과 함께합니다.
+                                마음까지 시원한 금융, MG캐피탈은 <span>고객님과 함께합니다.</span>
                             </h3>
                             <a href="javascript:void(0);" class="btn-main-link">이용안내 바로가기</a>
                             <div class="btn-service">
-                                <a href="#" class="ser01"><span>상담신청</span></a>
-                                <a href="#" class="ser02"><span>민원접수</span></a>
-                                <a href="#" class="ser03"><span>입사지원</span></a>
-                                <a href="#" class="ser04"><span>서비스문의</span></a>
+                                <a href="#" class="ser01"><span>상담신청<span class="mo-t">&nbsp;바로가기</span></span></a>
+                                <a href="#" class="ser02"><span>민원접수<span class="mo-t">&nbsp;바로가기</span></span></a>
+                                <a href="#" class="ser03"><span>입사지원<span class="mo-t">&nbsp;바로가기</span></span></a>
+                                <a href="#" class="ser04"><span>서비스문의<span class="mo-t">&nbsp;바로가기</span></span></a>
+                            </div>
+                        </div>
+                        <div class="shortcut-group">
+                            <div class="mo-shortcut">
+                                <p>마음까지 시원한 금융,
+                                    MG캐피탈이 항상 함께합니다.</p>
+                                <a href="#">이용안내 바로가기</a>
                             </div>
                         </div>
                         <div class="copyright">
@@ -304,9 +311,13 @@
                     nextEl: ".swiper-button-next",
                     prevEl: ".swiper-button-prev",
                 },
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
             });
+
             var quickSwiper = new Swiper(".quickSwiper", {
-                // 기본값 (가장 작은 화면 - 모바일)
                 slidesPerView: 1.5,
                 slidesPerGroup: 1,
                 spaceBetween: 0,
@@ -322,7 +333,6 @@
                     clickable: true,
                 },
                 breakpoints: {
-                    // 768px 이상 (태블릿)
                     768: {
                         slidesPerView: 3,
                         slidesPerGroup: 3,
@@ -331,14 +341,37 @@
                     }
                 },
             });
+
             var alarmSwiper = new Swiper(".alarmSwiper", {
                 slidesPerView: 1,
-                spaceBetween: 20,
+                spaceBetween: 0,
                 loop: true,
+                width: null,
+                centeredSlides: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
                 pagination: {
-                    el: ".swiper-pagination",
+                    el: ".alarmSwiper .swiper-pagination",
                     clickable: true,
                 },
+                observer: true,
+                observeParents: true,
+                on: {
+                    init: function() {
+                        // 초기화 후 슬라이드 너비 강제 설정
+                        const swiperWidth = this.$el[0].offsetWidth;
+                        this.slides.css('width', swiperWidth + 'px');
+                        this.update();
+                    },
+                    resize: function () {
+                        // 리사이즈 시 슬라이드 너비 재설정
+                        const swiperWidth = this.$el[0].offsetWidth;
+                        this.slides.css('width', swiperWidth + 'px');
+                        this.update();
+                    }
+                }
             });
         </script>
 </body>
