@@ -620,6 +620,7 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCA50100VQ .table-desktop table + p.caption { margin-top: 16px; margin-bottom: 72px; }
 .WCA50100VQ .text-group .btn-group.link1 .btn-link:first-of-type { background-image:var(--logo-cst-14); }
 
+.WCA50300VQ .tit {font-size: var(--font22);}
 .WCA50300VQ .table-group {margin-bottom: 72px;}
 .WCA50300VQ .table-group:last-child {margin-bottom: 0;}
 /* 회사소개 - 채용공고(WCR50100VQ) */
@@ -1223,6 +1224,10 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     .WCA50300VQ .tab-select-mobile .se-select select {color: var(--color-45); border: 1px solid var(--form-board); border-radius: 100px; margin-bottom: 24px; height: 48px; line-height: 1;}
     .WCA50100VQ .tab-select-mobile .se-btn, 
     .WCA50300VQ .tab-select-mobile .se-btn {display: none;}
+    .WCA50300VQ.page-container .tab-content {padding: 0;}
+    .WCA50300VQ .tit {font-size: var(--font18);}
+    .WCA50300VQ .caption {font-size: var(--font14);}
+    .WCA50300VQ .table-mobile tbody th {background-color: #fff; font-weight: var(--font-w-r);}
 
     /* 회사소개 - 신용평가(WCA50300VQ) */
     .WCA50300VQ .table-group {margin-bottom: 42px;}
