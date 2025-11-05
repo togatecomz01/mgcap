@@ -198,7 +198,107 @@
                             </div>
                         </div>
                     </div>
-                   
+                    <div class="tit-wrap">
+                        <h3>유효성체크</h3>
+                        <div>
+                            <p style="padding-bottom:30px;"></p>
+                            <div class="pop-content">
+                                <form>
+                                    <fieldset class="form-content">
+                                        <legend>우편번호 조회</legend>
+                                        <div class="form-wrap search-form">
+                                            <div class="form-group">
+                                                <p class="mo-tit">구분선택</p>
+                                                <label class="radio" data-tab="new-address">
+                                                    <input type="radio" name="use" value="road" checked="">
+                                                    <span>도로명주소(신주소)</span>
+                                                </label>
+                                                <label class="radio" data-tab="old-address">
+                                                    <input type="radio" name="use" value="lot">
+                                                    <span>지번주소(구주소)</span>
+                                                </label>
+                                            </div>
+            
+                                            <div class="group">
+                                                <div id="new-address" >
+                                                    <div class="form-group">
+                                                        <label for="newadd-input">도로명주소</label>
+                                                        <input id="newadd-input" type="text" name="new-address" placeholder="예) 도산대로 306"/>
+                                                        <span class="error">도로명 주소 입력</span>
+                                                    </div>
+                                                </div>
+            
+                                                <div id="old-address">
+                                                    <div class="form-group">
+                                                        <label for="oldadd-input">지번주소</label>
+                                                        <input id="oldadd-input" type="text" name="old-address" placeholder="읍면동명"/>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="oldadd-number-input">지번</label>
+                                                        <div class="flex-row gap10">
+                                                            <input id="oldadd-number-input" type="number" name="oldadd_number" placeholder=""/>
+                                                            <input id="oldadd-number-input2" type="number" name="oldadd_number" placeholder=""/>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                        </div>
+            
+                                            <button class="btn-form">조회</button>
+                                        </div><!--//form-wrap-->
+                                    </fieldset>
+                                </form>
+                                <form>
+                                    <div class="table-content WCC70102PS">
+                                        <table>
+                                            <caption>상품명 + 상담신청 입력 폼</caption>
+                                            <colgroup>
+                                                <col style="width: 180px;"> 
+                                                <col style="width: auto;">  
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row"><label for="phone-number">연락처</label></th>
+                                                    <td>
+                                                        <input id="phone-number" type="tel" name="text" class="form-control" placeholder="숫자만 입력" value="유효성체크 에러" aria-invalid="true"> <!-- 입력시 클래스 제거 -->
+                                                        <span class="error">휴대폰번호를 입력해주세요</span>
+                                                    </td>
+                                                </tr>
+                                                <!-- 이메일 -->
+                                                <tr>
+                                                    <th scope="row">이메일</th>
+                                                    <td>
+                                                        <fieldset class="form-content">
+                                                            <legend>이메일 입력</legend>
+                                                            <div class="email flex-row gap10">
+                                                                <input id="email-id" type="email">
+                                                                <span>@</span>
+                                                                <input id="email-domain" type="email">
+                                                            </div>
+                                                            <select id="email-select" title="이메일 도메인 선택">
+                                                                <option>직접입력</option>
+                                                                <option>naver.com</option>
+                                                                <option>gmail.com</option>
+                                                            </select>
+                                                        </fieldset>
+                                                        <span class="error">이메일을 입력해주세요</span>
+                                                    </td>
+                                                </tr>
+                                                <!-- 상담내용 -->
+                                                <tr>
+                                                    <th scope="row">상담내용</th>
+                                                    <td>
+                                                        <textarea placeholder="상담내용 입력"></textarea>
+                                                        <span class="error">상담내용을 입력해주세요</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </main>
         </div>

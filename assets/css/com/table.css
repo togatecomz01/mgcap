@@ -112,8 +112,8 @@ table:has(.no-results) td { margin:0; padding:0; border:0; }
     .mo-list tbody tr td.inquiry::before { content:""; display:inline-block; position:absolute; left:0; width:18px; height:18px; background:url("../../images/com/svg/ico_inquiry.svg")no-repeat center center; }
     .mo-list tbody td.title { display:block; font-size:var(--font16); font-weight:var(--font-w-m); color:var(--color-45); text-align:left; }
     
-    .mo-list.result tbody tr {position: relative; padding: 20px 40px 20px 24px;}
-    .mo-list.result tbody tr::after {content: ''; position: absolute; right: 24px; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background: url('../../images/com/svg/ico_arr.svg') no-repeat center center; background-size: contain;}
+    .mo-list.result tbody tr {position: relative; padding: 20px 0;}
+    .mo-list.result tbody tr::after {content: ''; position: absolute; right:0; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background: url('../../images/com/svg/ico_arr.svg') no-repeat center center; background-size: contain;}
     .mo-list.result tbody tr td {display: block; text-align: left; font-size: var(--font16);}
     .mo-list.result tbody tr td:first-of-type {margin-bottom: 10px; font-weight: var(--font-w-m); color: var(--primary);}
     .mo-list.result tbody tr td:first-of-type::before {content: '[';}
