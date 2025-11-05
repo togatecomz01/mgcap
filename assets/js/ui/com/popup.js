@@ -27,7 +27,7 @@ $(document).ready(function () {
 
                 $target.addClass("on");
                 $target.find(".pop-content").scrollTop(0);
-                $(".contentWrap").css("overflow", "hidden");
+                $("body, .contentWrap").css("overflow", "hidden");
 
                 console.log("initPopup: " + "°øÅë ½ÇÇà");
 
@@ -107,7 +107,7 @@ $(document).ready(function () {
                 var isSelectOpen = $(".stove-option-layer.on").length > 0;
 
                 if (!$(".layerPopup.on").length && !$(".stove-option-layer.on").length) {
-                    $(".contentWrap").css("overflow", "");
+                    $("body, .contentWrap").css("overflow", "");
                     $(".pop-area").removeAttr("tabindex");
 
                     console.log("fkSelAndPopupResetOverflow: " + "¸¶Áö¸· ÆË¾÷ ´ÝÈû");
