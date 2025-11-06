@@ -59,19 +59,22 @@
                             <fieldset class="form-content">
                                 <legend>클린 신고센터 정보 입력</legend>
                                 <div class="form-wrap">
-                                    <div class="form-group">
-                                        <label for="">구분</label>
+                                    <!-- s: 2025.11.06 구조변경 -->
+                                    <fieldset class="form-group">
+                                        <legend>구분</legend>
+                                        <span class="form-label">구분</span>
                                         <div class="flex-row">
                                             <label class="radio">
-                                                <input type="radio" name="use" value="" checked="">
+                                                <input type="radio" id="type-anonymous" name="use" value="anonymous" checked>
                                                 <span>익명</span>
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="use" value="">
+                                                <input type="radio" id="type-real" name="use" value="real">
                                                 <span>실명</span>
                                             </label>
                                         </div>
-                                    </div>
+                                    </fieldset>
+                                    <!-- e: 2025.11.06 구조변경 -->
                                 </div>
 
                                 <div class="form-wrap">

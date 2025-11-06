@@ -34,7 +34,8 @@
 
 /** ╤С╣П©ю ег **/
 .form-wrap.tab-list { display:block; }
-.form-wrap.tab-list .mo-tit { margin-bottom:16px; font-size:var(--font20); font-weight:var(--font-w-m); }
+.form-wrap.tab-list .mo-tit,
+fieldset span.form-label { display:inline-block; margin-bottom:16px; font-size:var(--font20); font-weight:var(--font-w-m); }
 .form-wrap.tab-list .form-group { display:flex; gap:24px; }
 .form-wrap.tab-list .form-group label.radio { gap:14px; padding:0; }
 

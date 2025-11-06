@@ -94,6 +94,19 @@ main.contentWrap > .step-container { margin-top:80px; }
 .step-content ul li.on span::before { color:var(--primary); }
 
 /*---------------------------------------------
+    #회원가입
+---------------------------------------------*/
+.WCM40100DS .private-group.ipin button:nth-child(1)::before { background-image:url("../../images/content/register/w/logo_certified.svg"); }
+.WCM40100DS .private-group.ipin button:nth-child(2)::before { background-image:url("../../images/content/register/w/logo_ipin.png"); }
+.WCM40100DS fieldset label.radio:first-child { padding-left:0; margin-bottom:20px; }
+.WCM40100DS .info-content { margin-top:72px; }
+
+/* 팝업 */
+.WCM40100DS .pop-content .text-group > .tit { font-weight:var(--font-w-m); color:var(--color-2); }
+.WCM40100DS .pop-content .text-group > .text-list li { margin-bottom:10px; }
+.WCM40100DS .pop-content .text-group > .text-list li:last-child { margin-bottom:0; }
+.WCM40100DS .pop-content .text-group > .text-list li .sub-list { padding:5px 0 0 23px; }
+/*---------------------------------------------
     #금융상품
 ---------------------------------------------*/
 /** 금융상품 공통 **/
@@ -310,17 +323,17 @@ main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
 .WCC20720VS .info-list .rfrnc li { margin-top:18px; font-size:1rem; color:var(--color-6); }
 
 /* 팝업 */
-.WCC20710VS .text-group > .tit,
-.WCC20720VS .text-group > .tit,
-.WCC21400VQ .text-group > .tit { font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-45); }
-.WCC20710VS .text-group .tit-f-square,
-.WCC20720VS .text-group .tit-f-square { font-weight:var(--font-w-m); }
-.WCC20710VS .text-group .tit-f-square:before,
-.WCC20720VS .text-group .tit-f-square:before { content:"■"; margin-right:2px; }
-.WCC20710VS .text-group p,
-.WCC20710VS .text-group .text-list li span,
-.WCC20720VS .text-group p,
-.WCC20720VS .text-group .text-list li span { color:var(--color-6); }
+.WCC20710VS .pop-content .text-group > .tit,
+.WCC20720VS .pop-content .text-group > .tit,
+.WCC21400VQ .pop-content .text-group > .tit { font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-45); }
+.WCC20710VS .pop-content .text-group .tit-f-square,
+.WCC20720VS .pop-content .text-group .tit-f-square { font-weight:var(--font-w-m); }
+.WCC20710VS .pop-content .text-group .tit-f-square:before,
+.WCC20720VS .pop-content .text-group .tit-f-square:before { content:"■"; margin-right:2px; }
+.WCC20710VS .pop-content .text-group p,
+.WCC20710VS .pop-content .text-group .text-list li span,
+.WCC20720VS .pop-content .text-group p,
+.WCC20720VS .pop-content .text-group .text-list li span { color:var(--color-6); }
 
 /** 개인(신용)정보 고객권리 신청 정보입력 **/
 .WCC80100VS fieldset { margin-bottom:72px; }
