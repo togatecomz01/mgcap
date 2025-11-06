@@ -51,7 +51,6 @@
                     <h2>나의 정보변경</h2>
                 </section>
                 <section class="page-container WCS50300VS">
-
                     <div class="text-content">
                         <div class="table-content">
                             <h3 class="table-tit">기본정보</h3>
@@ -73,7 +72,7 @@
                                     </tr>
                                     <tr>
                                         <th>아이디</th>
-                                        <td class="tal">mtr9908</td>
+                                        <td class="tal">124erfsdf32f</td>
                                         
                                     </tr>
                                     <tr>
@@ -84,7 +83,7 @@
                                                 <div class="form-wrap">
                                                     <div class="form-group">
                                                         <div class="flex-row">
-                                                            <input id="password-input" type="text" name="text" class="form-control" required />
+                                                            <input id="password-input" type="text" name="text" class="password-change" required />
                                                             <button class="btn-form">비밀번호 변경</button>
                                                         </div>
                                                     </div>
@@ -100,14 +99,14 @@
                                                 <div class="form-wrap">
                                                     <div class="form-group">
                                                         <div class="flex-row">
-                                                            <div class="info-phone">
+                                                            <div class="w-406 info-phone">
                                                                 <select id="phn-first" required="" title="" required>
                                                                     <option value="0">010</option>
                                                                     <option value="1">017</option>
                                                                     <option value="2">019</option>
                                                                 </select>
-                                                                <input id="phn-second" name="phn-second" type="tel" inputmode="numeric" autocomplete="tel-local-prefix" pattern="[0-9]{3,4}" maxlength="4" aria-describedby="desc-phone" required>
-                                                                <input id="phn-third" name="phn-third" type="tel" inputmode="numeric" autocomplete="tel-local-suffix" pattern="[0-9]{4}" maxlength="4" aria-describedby="desc-phone" required>
+                                                                <input id="phn-second" name="phn-second" type="tel" value="83**" inputmode="numeric" autocomplete="tel-local-prefix" pattern="[0-9]{3,4}" maxlength="4" aria-describedby="desc-phone" required>
+                                                                <input id="phn-third" name="phn-third" type="tel" value="67**" inputmode="numeric" autocomplete="tel-local-suffix" pattern="[0-9]{4}" maxlength="4" aria-describedby="desc-phone" required>
                                                             </div>
                                                             <button class="btn-form pad">SMS인증후 변경</button>
                                                         </div>
@@ -124,12 +123,12 @@
                                                     <fieldset class="form-group">
                                                         <legend>휴대폰(SMS) 수신동의 라디오박스</legend>
                                                         <label class="radio">
-                                                            <span>동의</span>
                                                             <input type="radio" name="row1-active" value="" checked>
+                                                            <span>동의</span>
                                                         </label>
                                                         <label class="radio">
-                                                            <span>거절</span>
                                                             <input type="radio" name="row1-active" value="">
+                                                            <span>거절</span>
                                                         </label>
                                                     </fieldset>
                                                 </div>
@@ -144,7 +143,7 @@
                                                 <div class="form-wrap">
                                                     <div class="form-group">
                                                         <div class="flex-row">
-                                                            <div>
+                                                            <div class="info-phone">
                                                                 <select id="phn-first" required="" title="" required>
                                                                     <option value="0">선택</option>
                                                                     <option value="1">02</option>
@@ -167,11 +166,11 @@
                                                 <div class="form-wrap">
                                                     <div class="form-group address-group">
                                                         <div class="flex-row">
-                                                            <input type="text" placeholder="우편번호" disabled />
+                                                            <input type="text" placeholder="우편번호" class="zipcode" disabled />
                                                             <button class="btn-form">우편번호 검색</button>
                                                         </div>
-                                                        <input type="text" placeholder="도로명 주소" disabled />
-                                                        <input type="text" placeholder="상세주소 입력" />
+                                                        <input type="text" class="w-406" placeholder="도로명 주소" disabled />
+                                                        <input type="text" class="w-406" placeholder="상세주소 입력" />
                                                     </div>
                                                 </div>
                                             </fieldset>
@@ -195,12 +194,12 @@
                                 </colgroup>
                                 <tbody>
                                     <tr>
-                                        <th>분류</th>
+                                        <th>생년월일</th>
                                         <td colspan="3" class="tal">
                                             <fieldset class="form-content">
                                                 <div class="form-wrap">
                                                     <div class="form-group">
-                                                        <input id="" type="date" name="date" required />
+                                                        <input id="" type="date" name="date" class="w-406" required />
                                                     </div>
                                                 </div>
                                             </fieldset>
@@ -214,12 +213,12 @@
                                                     <fieldset class="form-group">
                                                         <legend>결혼여부 라디오박스</legend>
                                                         <label class="radio">
-                                                            <span>예</span>
                                                             <input type="radio" name="row2-active" value="" checked>
+                                                            <span>예</span>
                                                         </label>
                                                         <label class="radio">
-                                                            <span>아니오</span>
                                                             <input type="radio" name="row2-active" value="">
+                                                            <span>아니오</span>
                                                         </label>
                                                     </fieldset>
                                                 </div>
@@ -230,7 +229,7 @@
                                             <fieldset class="form-content">
                                                 <div class="form-wrap">
                                                     <div class="form-group">
-                                                        <input id="" type="date" name="date" required />
+                                                        <input id="" type="date" name="date" class="w-406" required />
                                                     </div>
                                                 </div>
                                             </fieldset>
@@ -253,25 +252,27 @@
                                                     <div class="form-group">
                                                         <div class="flex-row">
                                                             <select name="year" id="year">
-                                                                    <option value="0">0</option>
-                                                                    <option value="1">1</option>
-                                                                    <option value="2">2</option>
-                                                                    <option value="3">3</option>
-                                                                    <option value="4">4</option>
+                                                                    <option value="0">선택</option>
+                                                                    <option value="1">0</option>
+                                                                    <option value="2">1</option>
+                                                                    <option value="3">2</option>
+                                                                    <option value="4">3</option>
+                                                                    <option value="5">4</option>
                                                             </select><span> 년</span>
                                                             <select name="month" id="month">
-                                                                <option value="0">0</option>
-                                                                <option value="1">1</option>
-                                                                <option value="2">2</option>
-                                                                <option value="3">3</option>
-                                                                <option value="4">4</option>
-                                                                <option value="5">5</option>
-                                                                <option value="6">6</option>
-                                                                <option value="7">7</option>
-                                                                <option value="8">8</option>
-                                                                <option value="9">9</option>
-                                                                <option value="10">10</option>
-                                                                <option value="11">11</option>
+                                                                <option value="0">선택</option>
+                                                                <option value="1">0</option>
+                                                                <option value="2">1</option>
+                                                                <option value="3">2</option>
+                                                                <option value="4">3</option>
+                                                                <option value="5">4</option>
+                                                                <option value="6">5</option>
+                                                                <option value="7">6</option>
+                                                                <option value="8">7</option>
+                                                                <option value="9">8</option>
+                                                                <option value="10">9</option>
+                                                                <option value="11">10</option>
+                                                                <option value="12">11</option>
                                                             </select><span> 개월</span>
                                                         </div>
                                                     </div>
@@ -287,11 +288,11 @@
                                                 <div class="form-wrap">
                                                     <div class="form-group address-group">
                                                         <div class="flex-row">
-                                                            <input type="text" placeholder="우편번호" disabled />
+                                                            <input type="text" class="zipcode" placeholder="우편번호" disabled />
                                                             <button class="btn-form">우편번호 검색</button>
                                                         </div>
-                                                        <input type="text" placeholder="도로명 주소" disabled />
-                                                        <input type="text" placeholder="상세주소 입력" />
+                                                        <input type="text" class="w-406" placeholder="도로명 주소" disabled />
+                                                        <input type="text" class="w-406" placeholder="상세주소 입력" />
                                                     </div>
                                                 </div>
                                             </fieldset>
@@ -307,7 +308,7 @@
                                                             <input type="email">
                                                             <span>@</span>
                                                             <input type="email">
-                                                            <select name="email" id="email">
+                                                            <select name="email" id="email" class="email-domain">
                                                                 <option value="" disabled selected>도메인 선택</option>
                                                                 <option value="">naver.com</option>
                                                                 <option value="">gmail.com</option>
@@ -329,12 +330,12 @@
                                                     <fieldset class="form-group">
                                                         <legend>E-mail 수신동의 라디오박스</legend>
                                                         <label class="radio">
-                                                            <span>예</span>
                                                             <input type="radio" name="row3-active" value="" checked>
+                                                            <span>예</span>
                                                         </label>
                                                         <label class="radio">
-                                                            <span>아니오</span>
                                                             <input type="radio" name="row3-active" value="">
+                                                            <span>아니오</span>
                                                         </label>
                                                     </fieldset>
                                                 </div>
@@ -344,7 +345,7 @@
                                     <tr>
                                         <th>회원탈퇴</th>
                                         <td colspan="3" class="tal">
-                                            <button class="btn-withdraw">회원탈퇴</button>
+                                            <button class="btn-withdraw">탈퇴하기</button>
                                         </td>
                                     </tr>
                                 </tbody>
