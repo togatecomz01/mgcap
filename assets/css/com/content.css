@@ -750,11 +750,17 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCS50300VS .flex-row:has(> select + span), 
 .WCS50300VS .flex-row:has(> input + span),
 .WCA90107VQ .flex-row:has(> input + span){align-items: center;} /* 클린정보센터 1줄 추가 */ /* 공통으로 변경 해야할것 같음 (이메일 부분)*/
-.WCS50300VS .flex-row:has(> select + span) select {width: 90px;}
-.WCS50300VS .flex-row:has(> select + span) span {margin-left: 5px; margin-right: 20px;}
+.WCS50300VS .flex-row:has(> select + span) select {width: 162px;}
 .WCS50300VS .flex-row:has(> select + span) span:last-of-type { margin-right: 0;}
 .WCS50300VS .btn-withdraw {width: 120px; height: 58px; background-color: var(--color-2); color: var(--white);}
 .WCS50300VS .form-group input[type="text"] {flex: none;}
+.WCS50300VS .form-group input[type="text"].password-change, 
+.WCS50300VS .form-group input[type="text"].zipcode{max-width:244px;}
+.WCS50300VS .form-group input[type="email"]:first-of-type {max-width: 201px;}
+.WCS50300VS .form-group input[type="email"]:last-of-type {max-width: 169px;}
+.WCS50300VS .form-group select.email-domain{max-width: 178px;}
+.WCS50300VS .form-group .info-phone {max-width: 406px;}
+.WCS50300VS .form-group .info-phone select {max-width: 137px;}
 
 /** 공개매각 입찰내역 **/
 .WCS50200VQ .cap-form { padding-bottom:24px; }
