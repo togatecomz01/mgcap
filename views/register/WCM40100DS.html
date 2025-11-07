@@ -171,7 +171,7 @@
         <div data-include-path="../../views/COMMON/footer.html"></div>
     </div>
     <!-- s: 인터넷 서비스 이용약관 동의 여부(WCM40100DSPOP01) -->
-    <div id="WCM40100DSPOP01" class="layerPopup full fullPopupOn on">
+    <div id="WCM40100DSPOP01" class="layerPopup full fullPopupOn">
         <!--[D] fullPopupOn 클래스 :: 헤더 스크립트 적용중-->
         <div class="pop-area">
             <div class="pop-header">
@@ -529,12 +529,14 @@
                 </div>
             </div>
             <div class="pop-footer">
-                <button type="button" class="btn-pop-primary" data-popup-close="fullPopup1">확인했어요</button>
+                <div class="button-content">
+                    <button type="button" class="btn-pop-primary" data-popup-close="WCM40100DSPOP01">확인했어요</button>
+                </div>
             </div>
-            <button type="button" name="button" class="btn btn-close right" data-popup-close="fullPopup1">닫기</button>
+            <button type="button" name="button" class="btn btn-close right" data-popup-close="WCM40100DSPOP01">닫기</button>
         </div>
     </div>
-    <!-- e: 개인정보 수집이용 팝업(fullPopup1) -->
+    <!-- e: 개인정보 수집이용 팝업(WCM40100DSPOP01) -->
 </body>
 </html>
  

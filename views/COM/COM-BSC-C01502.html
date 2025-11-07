@@ -3,7 +3,7 @@
 <head>
     <meta charset="euc-kr" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>알럿</title>
+    <title>로딩</title>
 
     <meta name="keywords" content="MG캐피탈" />
     <meta name="copyright" content="copyrights 2025 MG캐피탈" />
@@ -37,24 +37,40 @@
 
 <body>
     <div class="wrap">
+        <div data-include-path="../../views/COMMON/header.html"></div>
         <div class="bodyWrap">
             <main class="contentWrap">
-                <section class="modal-container">
-                    <div id="com01" class="layerPopup modal on">
-                        <div class="pop-content alert">
-                            <div class="pop-body">
-                                <p>개인정보 수집 이용 동의<br>약관에 동의해 주세요.</p>
-                            </div>
-                            <div class="pop-footer">
-                                <div class="button-content">
-                                    <button type="button" class="btn-pop-primary"  data-popup-close="modal">확인</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <nav class="location-container">
+                    <ol class="breadcrumb">
+                        <li><span class="home">홈</span></li>
+                        <li><span>타이틀</span></li>
+                    </ol>
+                </nav>
+                <section class="visual-container">
+                    <h2>타이틀</h2>
+                </section>
+                <section class="page-container">
                 </section>
             </main>
+        </div>
+        <div data-include-path="../../views/COMMON/footer.html"></div>
+    </div>
+    <div class="modal-container">
+        <div id="dataLoad" class="layerPopup modal on">
+            <div class="pop-content dataload">
+                <div class="pop-body">
+                    <p class="tit">데이터를 불러오고 있어요!</p>
+                    <p>오래 기다리게 해드려서 죄송합니다.<br>잠시만 기다려 주세요!</p>
+                    <div class="data-loader"></div>
+                </div>
+                <div class="pop-footer">
+                    <div class="button-content">
+                        <button type="button" class="btn-pop-primary"  data-popup-close="dataLoad">취소</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
 </html>
+ 

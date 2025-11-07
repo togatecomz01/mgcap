@@ -106,6 +106,17 @@ main.contentWrap > .step-container { margin-top:80px; }
 .WCM40100DS .pop-content .text-group > .text-list li { margin-bottom:10px; }
 .WCM40100DS .pop-content .text-group > .text-list li:last-child { margin-bottom:0; }
 .WCM40100DS .pop-content .text-group > .text-list li .sub-list { padding:5px 0 0 23px; }
+
+/*---------------------------------------------
+    #에러화면
+---------------------------------------------*/
+main.contentWrap > .page-container.errorpage { padding-top:0; }
+.errorpage .error-group { text-align:center; }
+.errorpage .error-group .tit { margin-bottom:24px; font-size:var(--font38); line-height:57px; }
+.errorpage .error-group .tit::before { content:""; display:block; margin:0 auto; width:294px; height:294px; background:url("../../images/com/img_error.png")no-repeat center / 294px; }
+.errorpage .error-group .text-list li { margin-bottom:14px; }
+.errorpage .error-group + .btn-content.cta { margin-top:68px; }
+
 /*---------------------------------------------
     #금융상품
 ---------------------------------------------*/
@@ -938,6 +949,16 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     .process-content li .step + div dt, .process-content li .step + div em { font-size:1rem; }
 
     /*---------------------------------------------
+    #에러화면
+    ---------------------------------------------*/
+    main.contentWrap:has(.errorpage) { position:relative; padding-bottom:108px; min-height:calc(100vh - 54px);  }
+    main.contentWrap > .page-container.errorpage { padding-top:120px; }
+    .errorpage .error-group .tit { margin-bottom:18px; font-size:var(--font22); line-height:33px; }
+    .errorpage .error-group .tit::before { width:153px; height:153px; background-size:153px auto; }
+
+    .errorpage .btn-content.cta { position:absolute; right:22px; bottom:24px; left:22px; }
+    .errorpage .btn-content.cta .btn-primary { font-size: 20px; }
+    /*---------------------------------------------
         #금융상품
     ---------------------------------------------*/
     /** 금융상품 공통 **/
@@ -1316,6 +1337,16 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     /*---------------------------------------------
     #MY MG
     ---------------------------------------------*/
+    /* 중도상환 조회/신청 팝업 */
+    .WCS10401PQ .text-content .text-group { margin-bottom:32px; }
+    .WCS10401PQ .text-content .text-group .button-content { margin-top:20px; }
+    .WCS10401PQ .btn-link { padding:14px 20px; margin-bottom:0; width:100%; }
+    .WCS10401PQ .btn-group { display:flex; flex-wrap:wrap; }
+
+    .WCS10401PQ .text-content p + p { margin-top:10px; }
+    .WCS10401PQ .btn-download { min-height:52px; }
+    .WCS10401PQ .btn-download::after { width:28px; height:28px; mask-size:20.222px; -webkit-mask-size:20.222px; }
+
     /** 청구내역조회, 신고센터 처리현황 조회 **/
     .WCS30101DQ .mo colgroup,
     .WCA90105VQ .mo colgroup, .WCA50100VQ .mo colgroup { display:none; }
