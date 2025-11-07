@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR" %>
 
+</style>
 <h3 class="essential">기본정보</h3>
 <form class="form-content">
     <!-- 지원분야 -->
@@ -156,19 +157,19 @@
                     </td>
                 </tr>
                 <tr>
-                    <th id="th-nationality" scope="row"><label for="nationality">국적</label></th>
+                    <th scope="row"><label for="nationality">국적</label></th>
                     <td colspan="3">
-                        <input id="nationality" name="nationality" class="w-406" type="text" disabled>
+                        <input id="nationality" name="nationality" class="w-406" type="text">
                     </td>
                 </tr>
                 <tr>
-                    <th id="th-birthday" scope="row"><label for="birthday">생년월일</label></th>
+                    <th scope="row"><label for="birthday">생년월일</label></th>
                     <td colspan="3">
                         <input id="birthday" name="birthday" class="w-406" type="date" value="2025-10-17" disabled>
                     </td>
                 </tr>
                 <tr>
-                    <th id="th-address" scope="row">현주소</th>
+                    <th scope="row">현주소</th>
                     <td colspan="3" class="address">
                         <fieldset>
                             <legend class="sr-only">현주소 입력</legend>
@@ -222,11 +223,11 @@
                     </td>
                 </tr>
                 <tr>
-                    <th id="th-hobby" scope="row"><label for="hobby">취미</label></th>
+                    <th scope="row"><label for="hobby">취미</label></th>
                 <td>
                     <span class="ipt-clear"><input id="hobby" name="hobby"  type="text"></span>
                 </td>
-                    <th id="th-skill" scope="row"><label for="specialAbility">특기</label></th>
+                    <th scope="row"><label for="specialAbility">특기</label></th>
                 <td>
                     <span class="ipt-clear"><input type="text" id="specialAbility" name="specialAbility"></span>
                 </td>
@@ -278,12 +279,17 @@
                 </td>
                 <td>
                     <fieldset class="form-group">
-                        <legend class="sr-only">복무기간 입력</legend>
-                        <label for="serviceStart" class="sr-only">복무 시작일</label>
-                        <input type="date" id="serviceStart" name="serviceStart">
-                        <label for="serviceEnd" class="sr-only">복무 종료일</label>
-                        <input type="date" id="serviceEnd" name="serviceEnd">
-                    </fieldset>
+                        <legend>복무기간 입력</legend>
+                        <div class="date-wrap">
+                            <label for="serviceStart" class="sr-only">복무 시작일</label>
+                            <input type="date" id="serviceStart" name="serviceStart" class="js-cal js-cal-date" placeholder="YYYY-MM-DD" />
+                          </div>
+                          <div class="date-wrap">
+                            <label for="serviceEnd" class="sr-only">복무 종료(연·월)</label>
+                            <input type="month" id="serviceEnd" name="serviceEnd" class="js-cal js-cal-month" placeholder="YYYY-MM" />
+                          </div>
+                      </fieldset>
+                  
                 </td>
                 <td>
                     <label for="exemptReason" class="sr-only">면제사유</label>

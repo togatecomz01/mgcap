@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR" %>
 
-
 <div class="form-content">
   <h3>자기소개</h3>
   <form>

@@ -43,10 +43,15 @@
                             <td class="tal">
                                 <fieldset class="form-group">
                                     <legend class="sr-only">기간</legend>
-                                    <label for="hsPeriodStart" class="sr-only">입학</label>
-                                    <input id="hsPeriodStart" name="hsPeriodStart" type="month">
-                                    <label for="hsPeriodEnd" class="sr-only">졸업</label>
-                                    <input id="hsPeriodEnd" name="hsPeriodEnd" type="month">
+                                    <div class="date-wrap">
+                                        <label for="hsPeriodStart" class="sr-only">입학</label>
+                                        <input type="month" id="hsPeriodStart" name="hsPeriodStart" class="js-cal js-cal-month" placeholder="YYYY-MM">
+                                        
+                                    </div>
+                                    <div class="date-wrap">
+                                        <label for="hsPeriodEnd" class="sr-only">졸업</label>
+                                        <input type="month" id="hsPeriodEnd" name="hsPeriodEnd" class="js-cal js-cal-month" placeholder="YYYY-MM">
+                                    </div>
                                 </fieldset>
                             </td>
                             <th scope="row"><label for="hs-grad">졸업구분</label></th>
@@ -139,10 +144,14 @@
                         <td class="tal">
                             <fieldset class="form-group">
                                 <legend class="sr-only">기간</legend>
-                                <label for="techPeriodStart" class="sr-only">입학</label>
-                                <input type="month" id="techPeriodStart" name="techPeriodStart">
-                                <label for="techPeriodEnd" class="sr-only">졸업</label>
-                                <input type="month" id="techPeriodEnd" name="techPeriodEnd">
+                                <div class="date-wrap">
+                                    <label for="techPeriodStart" class="sr-only">입학</label>
+                                    <input id="techPeriodStart" name="techPeriodStart" type="month" class="js-cal js-cal-month" placeholder="YYYY-MM">
+                                </div>
+                                <div class="date-wrap">
+                                    <label for="techPeriodEnd" class="sr-only">졸업</label>
+                                    <input id="techPeriodEnd" name="techPeriodEnd" type="month" class="js-cal js-cal-month" placeholder="YYYY-MM">
+                                </div>
                             </fieldset>
                         </td>
                         <th scope="row"><label for="techgrad">졸업구분</label></th>
@@ -230,10 +239,14 @@
                     <td class="tal">
                         <fieldset class="form-group">
                             <legend class="sr-only">기간</legend>
-                            <label for="univPeriodStart" class="sr-only">입학</label>
-                            <input type="month" id="univPeriodStart" name="univPeriodStart">
-                            <label for="univPeriodEnd" class="sr-only">졸업</label>
-                            <input type="month" id="univPeriodEnd" name="univPeriodEnd">
+                            <div class="date-wrap">
+                                <label for="univPeriodStart" class="sr-only">입학</label>
+                                <input type="month" id="univPeriodStart" name="univPeriodStart" class="js-cal js-cal-month" placeholder="YYYY-MM">
+                            </div>
+                            <div class="date-wrap">
+                                <label for="univPeriodEnd" class="sr-only">졸업</label>
+                                <input type="month" id="univPeriodEnd" name="univPeriodEnd" class="js-cal js-cal-month" placeholder="YYYY-MM">
+                            </div>
                         </fieldset>
                     </td>
                     <th scope="row"><label for="univStatus">졸업구분</label></th>
@@ -320,10 +333,14 @@
                         <td class="tal">
                             <fieldset class="form-group">
                                 <legend class="sr-only">기간</legend>
-                                <label for="univPeriodStart2" class="sr-only">입학</label>
-                                <input type="month" id="univPeriodStart2" name="univPeriodStart2">
-                                <label for="univPeriodEnd2" class="sr-only">졸업</label>
-                                <input type="month" id="univPeriodEnd2" name="univPeriodEnd2">
+                                <div class="date-wrap">
+                                    <label for="univPeriodStart2" class="sr-only">입학</label>
+                                    <input type="month" id="univPeriodStart2" name="univPeriodStart2" class="js-cal js-cal-month" placeholder="YYYY-MM">
+                                </div>
+                                <div class="date-wrap">
+                                    <label for="univPeriodEnd2" class="sr-only">졸업</label>
+                                    <input type="month" id="univPeriodEnd2" name="univPeriodEnd2" class="js-cal js-cal-month" placeholder="YYYY-MM">
+                                </div>
                             </fieldset>
                         </td>
                         <th scope="row"><label for="univStatus2">졸업구분</label></th>
@@ -412,10 +429,14 @@
                     <td class="tal">
                         <fieldset class="form-group">
                             <legend class="sr-only">기간</legend>
-                            <label for="univPeriodStart3" class="sr-only">입학</label>
-                            <input type="month" id="univPeriodStart3" name="univPeriodStart3">
-                            <label for="univPeriodEnd3" class="sr-only">졸업</label>
-                            <input type="month" id="univPeriodEnd3" name="univPeriodEnd3">
+                            <div class="date-wrap">
+                                <label for="univPeriodStart3" class="sr-only">입학</label>
+                                <input type="month" id="univPeriodStart3" name="univPeriodStart3" class="js-cal js-cal-month" placeholder="YYYY-MM">
+                            </div>
+                            <div class="date-wrap">
+                                <label for="univPeriodEnd3" class="sr-only">졸업</label>
+                                <input type="month" id="univPeriodEnd3" name="univPeriodEnd3" class="js-cal js-cal-month" placeholder="YYYY-MM">
+                            </div>
                         </fieldset>
                     </td>
                     <th scope="row"><label for="univStatus3">졸업구분</label></th>
@@ -491,39 +512,43 @@
                         <span class="ipt-clear"><input id="scoreEng1" name="scoreEng1" type="text" inputmode="numeric"></span>
                     </td>
                     <td>
-                        <label for="acquisitionEng1" class="sr-only">취득일 1</label>
-                        <input id="acquisitionEng1" name="acquisitionEng1" type="date">
+                        <div class="date-wrap">
+                            <label for="acquisitionEng1" class="sr-only">취득일 1</label>
+                            <input id="acquisitionEng1" name="acquisitionEng1" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                        </div>
                     </td>
                     </tr>
-                
                     <tr>
-                    <td>
-                        <label for="certificateEng2" class="sr-only">시험종류 2</label>
-                        <span class="ipt-clear"><input id="certificateEng2" name="certificateEng2" type="text"></span>
-                    </td>
-                    <td>
-                        <label for="scoreEng2" class="sr-only">점수/등급 2</label>
-                        <span class="ipt-clear"><input id="scoreEng2" name="scoreEng2" type="text" inputmode="numeric"></span>
-                    </td>
-                    <td>
-                        <label for="acquisitionEng2" class="sr-only">취득일 2</label>
-                        <input id="acquisitionEng2" name="acquisitionEng2" type="date">
-                    </td>
+                        <td>
+                            <label for="certificateEng2" class="sr-only">시험종류 2</label>
+                            <span class="ipt-clear"><input id="certificateEng2" name="certificateEng2" type="text"></span>
+                        </td>
+                        <td>
+                            <label for="scoreEng2" class="sr-only">점수/등급 2</label>
+                            <span class="ipt-clear"><input id="scoreEng2" name="scoreEng2" type="text" inputmode="numeric"></span>
+                        </td>
+                        <td>
+                            <div calss="date-wrap">
+                                <label for="acquisitionEng2" class="sr-only">취득일 2</label>
+                                <input id="acquisitionEng2" name="acquisitionEng2" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                            </div>
+                        </td>
                     </tr>
-                
                     <tr>
-                    <td>
-                        <label for="certificateEng3" class="sr-only">시험종류 3</label>
-                        <span class="ipt-clear"><input id="certificateEng3" name="certificateEng3" type="text"></span>
-                    </td>
-                    <td>
-                        <label for="scoreEng3" class="sr-only">점수/등급 3</label>
-                        <span class="ipt-clear"><input id="scoreEng3" name="scoreEng3" type="text" inputmode="numeric"></span>
-                    </td>
-                    <td>
-                        <label for="acquisitionEng3" class="sr-only">취득일 3</label>
-                        <input id="acquisitionEng3" name="acquisitionEng3" type="date">
-                    </td>
+                        <td>
+                            <label for="certificateEng3" class="sr-only">시험종류 3</label>
+                            <span class="ipt-clear"><input id="certificateEng3" name="certificateEng3" type="text"></span>
+                        </td>
+                        <td>
+                            <label for="scoreEng3" class="sr-only">점수/등급 3</label>
+                            <span class="ipt-clear"><input id="scoreEng3" name="scoreEng3" type="text" inputmode="numeric"></span>
+                        </td>
+                        <td>
+                            <div class="date-wrap">
+                                <label for="acquisitionEng3" class="sr-only">취득일 3</label>
+                                <input id="acquisitionEng3" name="acquisitionEng3" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                            </div>
+                        </td>
                     </tr>
                 
                     <tr>
@@ -536,8 +561,10 @@
                         <span class="ipt-clear"><input id="scoreEng4" name="scoreEng4" type="text" inputmode="numeric"></span>
                     </td>
                     <td>
-                        <label for="acquisitionEng4" class="sr-only">취득일 4</label>
-                        <input id="acquisitionEng4" name="acquisitionEng4" type="date">
+                        <div class="date-wrap">
+                            <label for="acquisitionEng4" class="sr-only">취득일 4</label>
+                            <input id="acquisitionEng4" name="acquisitionEng4" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                        </div>
                     </td>
                     </tr>
                 </tbody>
@@ -571,8 +598,10 @@
                             <span class="ipt-clear"><input id="scoreSec1" name="scoreSec1" type="text" inputmode="numeric"></span>
                         </td>
                         <td>
-                            <label for="acquisitionSec1" class="sr-only">취득일 1</label>
-                            <input id="acquisitionSec1" name="acquisitionSec1" type="date">
+                            <div class="date-wrap">
+                                <label for="acquisitionSec1" class="sr-only">취득일 1</label>
+                                <input id="acquisitionSec1" name="acquisitionSec1" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                            </div>
                         </td>
                     </tr>
                     <tr>
@@ -585,8 +614,10 @@
                             <span class="ipt-clear"><input id="scoreSec2" name="scoreSec2" type="text" inputmode="numeric"></span>
                         </td>
                         <td>
-                            <label for="acquisitionSec2" class="sr-only">취득일 2</label>
-                            <input id="acquisitionSec2" name="acquisitionSec2" type="date">
+                            <div class="date-wrap">
+                                <label for="acquisitionSec2" class="sr-only">취득일 2</label>
+                                <input id="acquisitionSec2" name="acquisitionSec2" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                            </div>
                         </td>
                     </tr>
                     <tr>
@@ -599,8 +630,10 @@
                             <span class="ipt-clear"><input id="scoreSec3" name="scoreSec3" type="text" inputmode="numeric"></span>
                         </td>
                         <td>
-                            <label for="acquisitionSec3" class="sr-only">취득일 3</label>
-                            <input id="acquisitionSec3" name="acquisitionSec3" type="date">
+                            <div class="date-wrap">
+                                <label for="acquisitionSec3" class="sr-only">취득일 3</label>
+                                <input id="acquisitionSec3" name="acquisitionSec3" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                            </div>
                         </td>
                     </tr>
                     <tr>
@@ -613,8 +646,10 @@
                             <span class="ipt-clear"><input id="scoreSec4" name="scoreSec4" type="text" inputmode="numeric"></span>
                         </td>
                         <td>
-                            <label for="acquisitionSec4" class="sr-only">취득일 4</label>
-                            <input id="acquisitionSec4" name="acquisitionSec4" type="date">
+                            <div class="date-wrap">
+                                <label for="acquisitionSec4" class="sr-only">취득일 4</label>
+                                <input id="acquisitionSec4" name="acquisitionSec4" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                            </div>
                         </td>
                     </tr>
                 </tbody>
@@ -650,8 +685,10 @@
                             <span class="ipt-clear"><input id="licenseGrade1" name="licenseGrade1" type="text"></span>
                         </td>
                         <td>
-                            <label for="licenseAcq1" class="sr-only">취득일 1</label>
-                            <input id="licenseAcq1" name="licenseAcq1" type="date">
+                            <div class="date-wrap">
+                                <label for="licenseAcq1" class="sr-only">취득일 1</label>
+                                <input id="licenseAcq1" name="licenseAcq1" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                            </div>
                         </td>
                         <td>
                             <label for="licensePeriod1" class="sr-only">발행기관 1</label>
@@ -668,8 +705,10 @@
                             <span class="ipt-clear"><input id="licenseGrade2" name="licenseGrade2" type="text"></span>
                         </td>
                         <td>
-                            <label for="licenseAcq2" class="sr-only">취득일 2</label>
-                            <input id="licenseAcq2" name="licenseAcq2" type="date">
+                            <div class="date-wrap">
+                                <label for="licenseAcq2" class="sr-only">취득일 2</label>
+                                <input id="licenseAcq2" name="licenseAcq2" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                            </div>
                         </td>
                         <td>
                             <label for="licensePeriod2" class="sr-only">발행기관 2</label>
@@ -686,8 +725,10 @@
                             <span class="ipt-clear"><input id="licenseGrade3" name="licenseGrade3" type="text"></span>
                         </td>
                         <td>
-                            <label for="licenseAcq3" class="sr-only">취득일 3</label>
-                            <input id="licenseAcq3" name="licenseAcq3" type="date">
+                            <div class="date-wrap">
+                                <label for="licenseAcq3" class="sr-only">취득일 3</label>
+                                <input id="licenseAcq3" name="licenseAcq3" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                            </div>
                         </td>
                         <td>
                             <label for="licensePeriod3" class="sr-only">발행기관 3</label>
@@ -704,8 +745,10 @@
                             <span class="ipt-clear"><input id="licenseGrade4" name="licenseGrade4" type="text"></span>
                         </td>
                         <td>
-                            <label for="licenseAcq4" class="sr-only">취득일 4</label>
-                            <input id="licenseAcq4" name="licenseAcq4" type="date">
+                            <div class="date-wrap">
+                                <label for="licenseAcq4" class="sr-only">취득일 4</label>
+                                <input id="licenseAcq4" name="licenseAcq4" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                            </div>
                         </td>
                         <td>
                             <label for="licensePeriod4" class="sr-only">발행기관 4</label>
@@ -722,8 +765,10 @@
                             <span class="ipt-clear"><input id="licenseGrade5" name="licenseGrade5" type="text"></span>
                         </td>
                         <td>
-                            <label for="licenseAcq5" class="sr-only">취득일 5</label>
-                            <input id="licenseAcq5" name="licenseAcq5" type="date">
+                            <div class="date-wrap">
+                                <label for="licenseAcq5" class="sr-only">취득일 5</label>
+                                <input id="licenseAcq5" name="licenseAcq5" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                            </div>
                         </td>
                         <td>
                             <label for="licensePeriod5" class="sr-only">발행기관 5</label>
@@ -765,10 +810,14 @@
                     <td>
                         <fieldset class="form-group">
                             <legend class="sr-only">체류기간 1</legend>
-                            <label for="stayStart1" class="sr-only">체류 시작일 1</label>
-                            <input id="stayStart1" name="stayStart1" type="date">
-                            <label for="stayEnd1" class="sr-only">체류 종료일 1</label>
-                            <input id="stayEnd1" name="stayEnd1" type="date">
+                            <div class="date-wrap">
+                                <label for="stayStart1" class="sr-only">체류 시작일 1</label>
+                                <input id="stayStart1" name="stayStart1" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                            </div>
+                            <div class="date-wrap">
+                                <label for="stayEnd1" class="sr-only">체류 종료일 1</label>
+                                <input id="stayEnd1" name="stayEnd1" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                            </div>
                         </fieldset>
                     </td>
                     <td>
@@ -788,10 +837,14 @@
                     <td>
                         <fieldset class="form-group">
                             <legend class="sr-only">체류기간 2</legend>
-                            <label for="stayStart2" class="sr-only">체류 시작일 2</label>
-                            <input id="stayStart2" name="stayStart2" type="date">
-                            <label for="stayEnd2" class="sr-only">체류 종료일 2</label>
-                            <input id="stayEnd2" name="stayEnd2" type="date">
+                            <div class="date-wrap">
+                                <label for="stayStart2" class="sr-only">체류 시작일 2</label>
+                                <input id="stayStart2" name="stayStart2" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                            </div>
+                            <div class="date-wrap">
+                                <label for="stayEnd2" class="sr-only">체류 종료일 2</label>
+                                <input id="stayEnd2" name="stayEnd2" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                            </div>
                         </fieldset>
                     </td>
                     <td>
@@ -811,10 +864,14 @@
                     <td>
                         <fieldset class="form-group">
                             <legend class="sr-only">체류기간 3</legend>
-                            <label for="stayStart3" class="sr-only">체류 시작일 3</label>
-                            <input id="stayStart3" name="stayStart3" type="date">
-                            <label for="stayEnd3" class="sr-only">체류 종료일 3</label>
-                            <input id="stayEnd3" name="stayEnd3" type="date">
+                            <div class="date-wrap">
+                                <label for="stayStart3" class="sr-only">체류 시작일 3</label>
+                                <input id="stayStart3" name="stayStart3" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                            </div>
+                            <div class="date-wrap">
+                                <label for="stayEnd3" class="sr-only">체류 종료일 3</label>
+                                <input id="stayEnd3" name="stayEnd3" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                            </div>
                         </fieldset>
                     </td>
                     <td>
@@ -857,10 +914,14 @@
                         <td>
                             <fieldset class="form-group">
                                 <legend class="sr-only">체류기간 1</legend>
-                                <label for="stayStart1" class="sr-only">체류 시작일 1</label>
-                                <input id="stayStart1" name="stayStart1" type="date">
-                                <label for="stayEnd1" class="sr-only">체류 종료일 1</label>
-                                <input id="stayEnd1" name="stayEnd1" type="date">
+                                <div class="date-wrap">
+                                    <label for="stayStart1" class="sr-only">체류 시작일 1</label>
+                                    <input id="stayStart1" name="stayStart1" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                                </div>
+                                <div class="date-wrap">
+                                    <label for="stayEnd1" class="sr-only">체류 종료일 1</label>
+                                    <input id="stayEnd1" name="stayEnd1" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                                </div>
                             </fieldset>
                         </td>
                         <td>
@@ -880,10 +941,14 @@
                         <td>
                             <fieldset class="form-group">
                                 <legend class="sr-only">체류기간 2</legend>
-                                <label for="stayStart2" class="sr-only">체류 시작일 2</label>
-                                <input id="stayStart2" name="stayStart2" type="date">
-                                <label for="stayEnd2" class="sr-only">체류 종료일 2</label>
-                                <input id="stayEnd2" name="stayEnd2" type="date">
+                                <div class="date-wrap">
+                                    <label for="stayStart2" class="sr-only">체류 시작일 2</label>
+                                    <input id="stayStart2" name="stayStart2" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                                </div>
+                                <div class="date-wrap">
+                                    <label for="stayEnd2" class="sr-only">체류 종료일 2</label>
+                                    <input id="stayEnd2" name="stayEnd2" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                                </div>
                             </fieldset>
                         </td>
                         <td>
@@ -903,10 +968,14 @@
                         <td>
                             <fieldset class="form-group">
                                 <legend class="sr-only">체류기간 3</legend>
-                                <label for="stayStart3" class="sr-only">체류 시작일 3</label>
-                                <input id="stayStart3" name="stayStart3" type="date">
-                                <label for="stayEnd3" class="sr-only">체류 종료일 3</label>
-                                <input id="stayEnd3" name="stayEnd3" type="date">
+                                <div class="date-wrap">
+                                    <label for="stayStart3" class="sr-only">체류 시작일 3</label>
+                                    <input id="stayStart3" name="stayStart3" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                                </div>
+                                <div class="date-wrap">
+                                    <label for="stayEnd3" class="sr-only">체류 종료일 3</label>
+                                    <input id="stayEnd3" name="stayEnd3" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                                </div>
                             </fieldset>
                         </td>
                         <td>
@@ -944,10 +1013,14 @@
                         <td>
                             <fieldset class="form-group">
                                 <legend class="sr-only">활동기간 1</legend>
-                                <label for="clubStart1" class="sr-only">활동 시작일 1</label>
-                                <input id="clubStart1" name="clubStart1" type="date">
-                                <label for="clubEnd1" class="sr-only">활동 종료일 1</label>
-                                <input id="clubEnd1" name="clubEnd1" type="date">
+                                <div class="date-wrap">                               
+                                    <label for="clubStart1" class="sr-only">활동 시작일 1</label>
+                                    <input id="clubStart1" name="clubStart1" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                                </div>
+                                <div class="date-wrap">
+                                    <label for="clubEnd1" class="sr-only">활동 종료일 1</label>
+                                    <input id="clubEnd1" name="clubEnd1" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                                </div>
                             </fieldset>
                         </td>
                         <td>
@@ -963,10 +1036,14 @@
                         <td>
                             <fieldset class="form-group">
                                 <legend class="sr-only">활동기간 2</legend>
-                                <label for="clubStart2" class="sr-only">활동 시작일 2</label>
-                                <input id="clubStart2" name="clubStart2" type="date">
-                                <label for="clubEnd2" class="sr-only">활동 종료일 2</label>
-                                <input id="clubEnd2" name="clubEnd2" type="date">
+                                <div class="date-wrap">
+                                    <label for="clubStart2" class="sr-only">활동 시작일 2</label>
+                                    <input id="clubStart2" name="clubStart2" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                                </div>
+                                <div class="date-wrap">
+                                    <label for="clubEnd2" class="sr-only">활동 종료일 2</label>
+                                    <input id="clubEnd2" name="clubEnd2" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                                </div>
                             </fieldset>
                         </td>
                         <td>
@@ -982,10 +1059,14 @@
                         <td>
                             <fieldset class="form-group">
                                 <legend class="sr-only">활동기간 3</legend>
-                                <label for="clubStart3" class="sr-only">활동 시작일 3</label>
-                                <input id="clubStart3" name="clubStart3" type="date">
-                                <label for="clubEnd3" class="sr-only">활동 종료일 3</label>
-                                <input id="clubEnd3" name="clubEnd3" type="date">
+                                <div class="date-wrap">
+                                    <label for="clubStart3" class="sr-only">활동 시작일 3</label>
+                                    <input id="clubStart3" name="clubStart3" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                                </div>
+                                <div class="date-wrap">
+                                    <label for="clubEnd3" class="sr-only">활동 종료일 3</label>
+                                    <input id="clubEnd3" name="clubEnd3" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                                </div>
                             </fieldset>
                         </td>
                         <td>
@@ -1022,10 +1103,14 @@
                         <td>
                             <fieldset class="form-group">
                                 <legend class="sr-only">활동기간 1</legend>
-                                <label for="volunteerStart1" class="sr-only">활동 시작일 1</label>
-                                <input id="volunteerStart1" name="volunteerStart1" type="date">
-                                <label for="volunteerEnd1" class="sr-only">활동 종료일 1</label>
-                                <input id="volunteerEnd1" name="volunteerEnd1" type="date">
+                                <div class="date-wrap">
+                                    <label for="volunteerStart1" class="sr-only">활동 시작일 1</label>
+                                    <input id="volunteerStart1" name="volunteerStart1" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                                </div>
+                                <div class="date-wrap">
+                                    <label for="volunteerEnd1" class="sr-only">활동 종료일 1</label>
+                                    <input id="volunteerEnd1" name="volunteerEnd1" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                                </div>
                             </fieldset>
                         </td>
                         <td>
@@ -1045,10 +1130,14 @@
                         <td>
                             <fieldset class="form-group">
                                 <legend class="sr-only">활동기간 2</legend>
-                                <label for="volunteerStart2" class="sr-only">활동 시작일 2</label>
-                                <input id="volunteerStart2" name="volunteerStart2" type="date">
-                                <label for="volunteerEnd2" class="sr-only">활동 종료일 2</label>
-                                <input id="volunteerEnd2" name="volunteerEnd2" type="date">
+                                <div class="date-wrap">
+                                    <label for="volunteerStart2" class="sr-only">활동 시작일 2</label>
+                                    <input id="volunteerStart2" name="volunteerStart2" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                                </div>
+                                <div class="date-wrap">
+                                    <label for="volunteerEnd2" class="sr-only">활동 종료일 2</label>
+                                    <input id="volunteerEnd2" name="volunteerEnd2" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                                </div>
                             </fieldset>
                         </td>
                         <td>
@@ -1064,10 +1153,14 @@
                         <td>
                             <fieldset class="form-group">
                                 <legend class="sr-only">활동기간 3</legend>
-                                <label for="volunteerStart3" class="sr-only">활동 시작일 3</label>
-                                <input id="volunteerStart3" name="volunteerStart3" type="date">
-                                <label for="volunteerEnd3" class="sr-only">활동 종료일 3</label>
-                                <input id="volunteerEnd3" name="volunteerEnd3" type="date">
+                                <div class="date-wrap">
+                                    <label for="volunteerStart2" class="sr-only">활동 시작일 3</label>
+                                    <input id="volunteerStart2" name="volunteerStart2" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                                </div>
+                                <div class="date-wrap">
+                                    <label for="volunteerEnd2" class="sr-only">활동 종료일 3</label>
+                                    <input id="volunteerEnd2" name="volunteerEnd2" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                                </div>
                             </fieldset>
                         </td>
                         <td>
@@ -1084,3 +1177,5 @@
         </div>
     </form>
 </div><!--//form-content-->
+
+

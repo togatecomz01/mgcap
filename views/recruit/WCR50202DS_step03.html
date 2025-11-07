@@ -43,10 +43,14 @@
                         <fieldset class="form-gruop">
                             <legend class="sr-only">근무기간</legend>
                             <div class="form-group">
-                                <label for="milStart1" class="sr-only">근무 시작일</label>
-                                <input id="milStart1" name="milStart1" type="date">
-                                <label for="milEnd1" class="sr-only">근무 종료일</label>
-                                <input id="milEnd1" name="milEnd1" type="date">
+                                <div class="date-wrap">
+                                  <label for="milStart1" class="sr-only">근무 시작일</label>
+                                  <input id="milStart1" name="milStart1" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                                </div>
+                                <div class="date-wrap">
+                                  <label for="milEnd1" class="sr-only">근무 종료일</label>
+                                  <input id="milEnd1" name="milEnd1" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                                </div>
                             </div>
                         </fieldset>
                     </td>
@@ -80,10 +84,14 @@
                             <td>
                             <fieldset class="form-group">
                                 <legend class="sr-only">근무기간</legend>
-                                <label for="workStart" class="sr-only">근무 시작일</label>
-                                <input id="workStart" name="workStart" type="date">
-                                <label for="workEnd" class="sr-only">근무 종료일</label>
-                                <input id="workEnd" name="workEnd" type="date">
+                                <div class="date-wrap">
+                                  <label for="workStart" class="sr-only">근무 시작일</label>
+                                  <input id="workStart" name="workStart" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                                </div>
+                                <div class="date-wrap">
+                                  <label for="workEnd" class="sr-only">근무 종료일</label>
+                                  <input id="workEnd" name="workEnd" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                                </div>
                             </fieldset>
                             </td>
                         </tr>
