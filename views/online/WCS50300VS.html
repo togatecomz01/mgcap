@@ -62,21 +62,22 @@
                                 </colgroup>
                                 <tbody>
                                     <tr>
-                                        <th>이름</th>
+                                        <!-- S : 25.11.07 th 및 td label 추가, input에 의미에 맞는 id, name 추가 aria-label 추가 -->
+                                        <th id="th-name" scope="row"><label for="name">이름</label></th>
                                         <td class="tal">홍길동</td>
                                     </tr>
                                     <tr>
-                                        <th>주민번호</th>
+                                        <th id="th-idnum" scope="row"><label for="idnum">주민번호</label></th>
                                         <td class="tal">990143-*******</td>
                                         
                                     </tr>
                                     <tr>
-                                        <th>아이디</th>
+                                        <th id="th-id" scope="row"><label for="id">아이디</label></th>
                                         <td class="tal">124erfsdf32f</td>
                                         
                                     </tr>
                                     <tr>
-                                        <th>현재 비밀번호</th>
+                                        <th id="th-password-change" scope="row"><label for="password-change">현재 비밀번호</label></th>
                                         <td class="tal">
                                             <fieldset class="form-content">
                                                 <legend class="sr-only">비밀번호 변경</legend>
@@ -92,7 +93,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>휴대폰</th>
+                                        <th id="th-phone" scope="row"><label for="phoneNumber">휴대폰</label></th>
                                         <td class="tal">
                                             <fieldset class="form-content">
                                                 <legend>핸드폰 번호 입력</legend>
@@ -116,18 +117,18 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>휴대폰 (SMS)<br>수신동의</th>
+                                        <th id="th-opt" scope="row"><label for="opt">휴대폰 (SMS)<br>수신동의</label></th>
                                         <td class="tal">
                                             <div class="form-content">
                                                 <div class="form-wrap">
                                                     <fieldset class="form-group">
                                                         <legend>휴대폰(SMS) 수신동의 라디오박스</legend>
                                                         <label class="radio">
-                                                            <input type="radio" name="row1-active" value="" checked>
+                                                            <input type="radio" name="opt-inout" id="agree" value="동의" checked>
                                                             <span>동의</span>
                                                         </label>
                                                         <label class="radio">
-                                                            <input type="radio" name="row1-active" value="">
+                                                            <input type="radio" name="opt-inout" id="disagree" value="거절">
                                                             <span>거절</span>
                                                         </label>
                                                     </fieldset>
@@ -136,7 +137,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>자택전화번호</th>
+                                        <th id="th-phone" scope="row">자택전화번호</th>
                                         <td class="tal">
                                             <fieldset class="form-content">
                                                 <legend>자택 전화번호 번호 입력</legend>
@@ -159,18 +160,18 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>자택주소</th>
+                                        <th id="th-address" scope="row">자택주소</th>
                                         <td class="tal">
-                                            <fieldset class="form-content">
-                                                <legend>자택주소 입력</legend>
+                                            <fieldset class="form-content" aria-labelledby="th-address">
+                                                <legend class="sr-only">자택주소 입력</legend>
                                                 <div class="form-wrap">
                                                     <div class="form-group address-group">
                                                         <div class="flex-row">
-                                                            <input type="text" placeholder="우편번호" class="zipcode" disabled />
+                                                            <input type="text" id="address1" name="address1" class="zipcode" placeholder="우편번호" aria-label="우편번호" disabled>
                                                             <button class="btn-form">우편번호 검색</button>
                                                         </div>
-                                                        <input type="text" class="w-406" placeholder="도로명 주소" disabled />
-                                                        <input type="text" class="w-406" placeholder="상세주소 입력" />
+                                                        <input type="text" id="address2" name="address2" class="w-406" placeholder="도로명 주소" aria-label="도로명 주소 입력" disabled>
+                                                        <input type="text" id="address3" name="address3" class="w-406" placeholder="상세주소" aria-label="상세주소 입력">
                                                     </div>
                                                 </div>
                                             </fieldset>
@@ -194,56 +195,40 @@
                                 </colgroup>
                                 <tbody>
                                     <tr>
-                                        <th>생년월일</th>
+                                        <th id="th-birthday" scope="row"><label for="birthday">생년월일</label></th>
                                         <td colspan="3" class="tal">
-                                            <fieldset class="form-content">
-                                                <div class="form-wrap">
-                                                    <div class="form-group">
-                                                        <input id="" type="date" name="date" class="w-406" required />
-                                                    </div>
-                                                </div>
-                                            </fieldset>
+                                            <input type="date" id="birthday" name="birthday" class="w-406" aria-labelledby="th-birthday birthday">
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>결혼여부</th>
+                                        <th id="married" scope="row">결혼여부</th>
                                         <td class="tal">
                                             <div class="form-content">
                                                 <div class="form-wrap">
                                                     <fieldset class="form-group">
                                                         <legend>결혼여부 라디오박스</legend>
                                                         <label class="radio">
-                                                            <input type="radio" name="row2-active" value="" checked>
+                                                            <input type="radio" name="married" value="married" checked>
                                                             <span>예</span>
                                                         </label>
                                                         <label class="radio">
-                                                            <input type="radio" name="row2-active" value="">
+                                                            <input type="radio" name="married" value="single">
                                                             <span>아니오</span>
                                                         </label>
                                                     </fieldset>
                                                 </div>
                                             </div>
                                         </td>
-                                        <th>결혼기념일</th>
+                                        <th id="th-anniversary" scope="row"><label for="anniversary">결혼기념일</label></th>
                                         <td class="tal">
-                                            <fieldset class="form-content">
-                                                <div class="form-wrap">
-                                                    <div class="form-group">
-                                                        <input id="" type="date" name="date" class="w-406" required />
-                                                    </div>
-                                                </div>
-                                            </fieldset>
+                                            <input id="anniversary" type="date" name="anniversary" class="w-406" aria-labelledby="th-anniversary anniversary" required />  
                                         </td>
                                     </tr>
 
                                     <tr>
-                                        <th>직장명</th>
+                                        <th id="th-companyname">직장명</th>
                                         <td class="tal">
-                                            <div class="form-content">
-                                                <fieldset class="form-group">
-                                                    <input id="text" type="text" />
-                                                </fieldset>
-                                            </div>
+                                            <input type="text" id="companyname" name="companyname" aria-label="직장명"/>
                                         </td>
                                         <th>재직기간</th>
                                         <td class="tal">
@@ -281,39 +266,40 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>직장주소</th>
-                                        <td colspan="3" class="tal">
-                                            <fieldset class="form-content">
-                                                <legend>직장주소 입력</legend>
+                                        <th id="th-address" scope="row">직장주소</th>
+                                        <td class="tal">
+                                            <fieldset class="form-content" aria-labelledby="th-address">
+                                                <legend class="sr-only">직장주소 입력</legend>
                                                 <div class="form-wrap">
                                                     <div class="form-group address-group">
                                                         <div class="flex-row">
-                                                            <input type="text" class="zipcode" placeholder="우편번호" disabled />
+                                                            <input type="text" id="address1" name="address1" class="zipcode" placeholder="우편번호" aria-label="우편번호" disabled>
                                                             <button class="btn-form">우편번호 검색</button>
                                                         </div>
-                                                        <input type="text" class="w-406" placeholder="도로명 주소" disabled />
-                                                        <input type="text" class="w-406" placeholder="상세주소 입력" />
+                                                        <input type="text" id="address2" name="address2" class="w-406" placeholder="도로명 주소" aria-label="도로명 주소 입력" disabled>
+                                                        <input type="text" id="address3" name="address3" class="w-406" placeholder="상세주소" aria-label="상세주소 입력">
                                                     </div>
                                                 </div>
                                             </fieldset>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>E-mail</th>
+                                        <th id="th-email" scope="row"><label for="emailId">E-mail</label></th>
                                         <td colspan="3" class="tal">
-                                            <fieldset class="form-content">
+                                            <fieldset class="form-content" aria-labelledby="th-email">
+                                                <legend class="sr-only">이메일 입력</legend>
                                                 <div class="form-wrap">
                                                     <div class="form-group">
                                                         <div class="flex-row email">
-                                                            <input type="email">
+                                                            <input id="emailId" name="emailId" type="text" inputmode="email" aria-label="이메일 아이디 입력">
                                                             <span>@</span>
-                                                            <input type="email">
-                                                            <select name="email" id="email" class="email-domain">
-                                                                <option value="" disabled selected>도메인 선택</option>
-                                                                <option value="">naver.com</option>
-                                                                <option value="">gmail.com</option>
-                                                                <option value="">hanmail.net</option>
-                                                                <option value="">nate.com</option>
+                                                            <input id="emailDomain" name="emailDomain" type="text" inputmode="email" aria-label="이메일 도메인 입력">
+                                                            <select id="emailSelect" name="emailSelect" aria-label="이메일 도메인 선택">
+                                                                <option value="">직접입력</option>
+                                                                <option value="naver.com">naver.com</option>
+                                                                <option value="gmail.com">gmail.com</option>
+                                                                <option value="hanmail.net">hanmail.net</option>
+                                                                <option value="nate.com">nate.com</option>
                                                                 <option value="">직접입력</option>
                                                             </select>
                                                         </div>
@@ -323,20 +309,21 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>E-mail 수신동의</th>
+                                        <th id="th-emailopt"><label for="emailopt">E-mail 수신동의</label></th>
                                         <td colspan="3" class="tal">
                                             <div class="form-content">
                                                 <div class="form-wrap">
                                                     <fieldset class="form-group">
                                                         <legend>E-mail 수신동의 라디오박스</legend>
                                                         <label class="radio">
-                                                            <input type="radio" name="row3-active" value="" checked>
+                                                            <input type="radio" name="eopt-inout" value="agree" value="예" checked>
                                                             <span>예</span>
                                                         </label>
                                                         <label class="radio">
-                                                            <input type="radio" name="row3-active" value="">
+                                                            <input type="radio" name="eopt-inout" id="disagree" value="아니오" checked>
                                                             <span>아니오</span>
                                                         </label>
+                                                        <!-- E : 25.11.07 th 및 td label 추가, input에 의미에 맞는 id, name 추가 aria-label 추가 -->
                                                     </fieldset>
                                                 </div>
                                             </div>

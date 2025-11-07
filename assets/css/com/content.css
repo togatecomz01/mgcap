@@ -611,8 +611,9 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCA30100VQ .timeline-list dt { font-size: var(--font32); font-weight: var(--font-w-b); margin-bottom: 34px; padding-left: 80px; }
 .WCA30100VQ .timeline-list dd { display: flex; padding-left: 80px; font-size: var(--font22);}
 .WCA30100VQ .timeline-list dd:not(:last-of-type) { margin-bottom: 19px; }
-.WCA30100VQ .timeline-list .date { flex: 0 0 90px; color: var(--color-45); }
+.WCA30100VQ .timeline-list .date { flex: 0 0 107px; color: var(--color-45); }
 .WCA30100VQ .timeline-list .desc { display: block; color: var(--color-6); }
+.WCA30100VQ .timeline-list dd .desc-group{font-size:var(--font22);}
 
 /******회사소개-채용안내 및 절차**/
 .WCR10400VQ .text-content, .WCR10400VQ .jsTab {max-width: 1400px; margin: 0 auto;}
@@ -671,7 +672,9 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCR50100VQ td.title::before {display: inline-block; min-width: 80px; text-align: center; margin-right: 12px; padding: 8px 16px; border: 1px solid; border-radius: 100px; font-size: 0.875rem; box-sizing: border-box; }
 .WCR50100VQ td.title.status-ing::before {content: '진행중'; border-color: var(--primary); color: var(--primary);}
 .WCR50100VQ td.title.status-closed::before {content: '마감'; border-color: var(--error); color: var(--error);}
-
+/* 회사소개 - 채용공고 상세(WCR50101DQ) */
+.WCR50101DQ .view-subject {position: relative;}
+.WCR50101DQ .view-subject::after {position: absolute; content: '34'; font-size: var(--font18); font-weight: var(--font-w-r); color: var(--color-6); right: 0;background-image: url('../../images/com/svg/ico_inquiry.svg'); background-repeat: no-repeat;background-size: 16px 16px;background-position: left center;padding-left: 24px;}
 /* 회사소개 - 입사지원 동의 */
 
 /* 입사지원서 작성 */
@@ -750,6 +753,7 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 ---------------------------------------------*/
 
 /* 나의 정보 변경 */
+.WCS50300VS label {margin-bottom: 0; font-weight: var(--font-w-b); color: var(--color-2);}
 .WCS50300VS.page-container > div + div {padding-top: 72px;}
 .WCS50300VS .pad {padding: 8px 10px;}
 .WCS50300VS .form-group:has(.info-phone) {flex: 0 0 calc(66% - 20px) !important}
@@ -766,9 +770,9 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCS50300VS .form-group input[type="text"] {flex: none;}
 .WCS50300VS .form-group input[type="text"].password-change, 
 .WCS50300VS .form-group input[type="text"].zipcode{max-width:244px;}
-.WCS50300VS .form-group input[type="email"]:first-of-type {max-width: 201px;}
-.WCS50300VS .form-group input[type="email"]:last-of-type {max-width: 169px;}
-.WCS50300VS .form-group select.email-domain{max-width: 178px;}
+.WCS50300VS .form-group input[name="emailId"] {max-width: 201px;}
+.WCS50300VS .form-group input[name="emailDomain"] {max-width: 169px;}
+.WCS50300VS .form-group select#emailSelect{max-width: 178px;}
 .WCS50300VS .form-group .info-phone {max-width: 406px;}
 .WCS50300VS .form-group .info-phone select {max-width: 137px;}
 
@@ -1324,6 +1328,11 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     .WCA50300VQ .table-group {margin-bottom: 42px;}
     /* 회사소개 - 채용공고 */
     .WCR50100VQ .mo-list td.title::before { display: block; width: fit-content; margin-bottom: 10px; }
+    /* 회사소개 - 채용공고 상세*/
+    .WCR50101DQ .view-subject {margin-bottom: 19px;}
+    .WCR50101DQ .view-subject .date {margin-top: 5px; }
+    .WCR50101DQ .error {color:var(--color-75);}
+    .WCR50101DQ .view-subject::after {font-size: 12px; left: 0; top: 105%; background-size: 18px 18px;}
     /* 회사소개 - 클린신고센터 + 성희롱 및 직장내 괴롭힘 신고센터 */
     .WCA90107VQ .text-content, .WCA90100VQ .text-content {margin-bottom: 32px;}
 
