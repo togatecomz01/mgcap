@@ -206,7 +206,6 @@ label.toggle input + span { font-size:0; }
 .tab-content > .form-wrap > .form-group > .flex-row select { max-width:178px; }
 .tab-content > .form-wrap > .form-group.address > input { margin-top:10px; }
 
-<<<<<<< Updated upstream
 /** 유효성체크 **/
 input[aria-invalid="true"] { border:1px solid var(--error); }
 .form-group:has(.error) input,
@@ -217,7 +216,6 @@ li:has(.error) .error,
 tr td .error,
 .form-wrap.search-form > .group .form-group span.error { display:inline-block; width:100%; margin-top:10px; font-size:var(--font16); text-align:left; }
 .form-wrap.search-form > .group .form-group span.error  { grid-column:2; }
-=======
 
 /**달력**/
 .form-group { position:relative; }
@@ -255,7 +253,6 @@ tr td .error,
 .ui-datepicker-current-day a { background:var(--primary) !important; color:var(--white) !important; }
 .ui-state-active { background:var(--primary); color:var(--w); font-weight:var(--font-w-b); }
 
->>>>>>> Stashed changes
 
 @media (max-width:767px) {
     body{
