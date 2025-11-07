@@ -333,19 +333,6 @@ main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
 .WCC20710VS .info-list .rfrnc li,
 .WCC20720VS .info-list .rfrnc li { margin-top:18px; font-size:1rem; color:var(--color-6); }
 
-/* 팝업 */
-.WCC20710VS .pop-content .text-group > .tit,
-.WCC20720VS .pop-content .text-group > .tit,
-.WCC21400VQ .pop-content .text-group > .tit { font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-45); }
-.WCC20710VS .pop-content .text-group .tit-f-square,
-.WCC20720VS .pop-content .text-group .tit-f-square { font-weight:var(--font-w-m); }
-.WCC20710VS .pop-content .text-group .tit-f-square:before,
-.WCC20720VS .pop-content .text-group .tit-f-square:before { content:"■"; margin-right:2px; }
-.WCC20710VS .pop-content .text-group p,
-.WCC20710VS .pop-content .text-group .text-list li span,
-.WCC20720VS .pop-content .text-group p,
-.WCC20720VS .pop-content .text-group .text-list li span { color:var(--color-6); }
-
 /** 개인(신용)정보 고객권리 신청 정보입력 **/
 .WCC80100VS fieldset { margin-bottom:72px; }
 .WCC80100VS fieldset + .table-content { padding-top:52px; border-top:1px solid var(--color-d); }
@@ -516,30 +503,6 @@ main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
 .WCC21400VQ .form-group select { max-width:120px; }
 .WCC21400VQ .form-group input.mo-phn { display:none; }
 
-/* 팝업 */
-.WCC21400VQ .pop-content .text-group > .tit + p { font-weight:var(--font-w-m); }
-.WCC21400VQ .pop-content .text-list > li { margin-bottom:32px; }
-.WCC21400VQ .pop-content .text-list > li > span { color:var(--color-2); font-weight:var(--font-w-m); }
-.WCC21400VQ .pop-content .text-list > li > span.precious { color:var(--primary); font-weight:var(--font-w-b); }
-.WCC21400VQ .pop-content .text-list > li > span.precious + p { margin-top:14px; }
-.WCC21400VQ .pop-content .text-list > li > ol { margin-top:14px; }
-.WCC21400VQ .pop-content .text-list > li > ol li { margin-bottom:10px; }
-
-.WCC21400VQ .pop-content .text-group .square { margin-bottom:18px; color:var(--color-2); font-weight:var(--font-w-m); }
-.WCC21400VQ .pop-content .text-group .square + ol li p { margin-top:10px;}
-
-.WCC21401DS .pop-content .btn-group { font-size:0; }
-.WCC21401DS .pop-content .btn-group .btn-download + .btn-download {margin-left: 26px;}
-
-/* 차량 검색*/
-.WCC70701PQ .pop-content .search-form .group + .btn-form.mo { top:unset; bottom:40px; transform:unset; }
-.WCC70701PQ .pop-content .search-form .group:has(.form-group:last-child .error) + .btn-form.mo { bottom:78px; }
-/* 상품명 + 상담신청 */
-.WCC70102PS .form-group .email { align-items:center; margin-bottom:10px; }
-.WCC70102PS td:has(.error) select,
-.WCC70102PS td:has(.error) textarea { border:1px solid var(--error); }
-
-
 /*---------------------------------------------
     #회사소개
 ---------------------------------------------*/
@@ -611,9 +574,8 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCA30100VQ .timeline-list dt { font-size: var(--font32); font-weight: var(--font-w-b); margin-bottom: 34px; padding-left: 80px; }
 .WCA30100VQ .timeline-list dd { display: flex; padding-left: 80px; font-size: var(--font22);}
 .WCA30100VQ .timeline-list dd:not(:last-of-type) { margin-bottom: 19px; }
-.WCA30100VQ .timeline-list .date { flex: 0 0 107px; color: var(--color-45); }
+.WCA30100VQ .timeline-list .date { flex: 0 0 90px; color: var(--color-45); }
 .WCA30100VQ .timeline-list .desc { display: block; color: var(--color-6); }
-.WCA30100VQ .timeline-list dd .desc-group{font-size:var(--font22);}
 
 /******회사소개-채용안내 및 절차**/
 .WCR10400VQ .text-content, .WCR10400VQ .jsTab {max-width: 1400px; margin: 0 auto;}
@@ -672,9 +634,7 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCR50100VQ td.title::before {display: inline-block; min-width: 80px; text-align: center; margin-right: 12px; padding: 8px 16px; border: 1px solid; border-radius: 100px; font-size: 0.875rem; box-sizing: border-box; }
 .WCR50100VQ td.title.status-ing::before {content: '진행중'; border-color: var(--primary); color: var(--primary);}
 .WCR50100VQ td.title.status-closed::before {content: '마감'; border-color: var(--error); color: var(--error);}
-/* 회사소개 - 채용공고 상세(WCR50101DQ) */
-.WCR50101DQ .view-subject {position: relative;}
-.WCR50101DQ .view-subject::after {position: absolute; content: '34'; font-size: var(--font18); font-weight: var(--font-w-r); color: var(--color-6); right: 0;background-image: url('../../images/com/svg/ico_inquiry.svg'); background-repeat: no-repeat;background-size: 16px 16px;background-position: left center;padding-left: 24px;}
+
 /* 회사소개 - 입사지원 동의 */
 
 /* 입사지원서 작성 */
@@ -753,7 +713,6 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 ---------------------------------------------*/
 
 /* 나의 정보 변경 */
-.WCS50300VS label {margin-bottom: 0; font-weight: var(--font-w-b); color: var(--color-2);}
 .WCS50300VS.page-container > div + div {padding-top: 72px;}
 .WCS50300VS .pad {padding: 8px 10px;}
 .WCS50300VS .form-group:has(.info-phone) {flex: 0 0 calc(66% - 20px) !important}
@@ -770,9 +729,9 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCS50300VS .form-group input[type="text"] {flex: none;}
 .WCS50300VS .form-group input[type="text"].password-change, 
 .WCS50300VS .form-group input[type="text"].zipcode{max-width:244px;}
-.WCS50300VS .form-group input[name="emailId"] {max-width: 201px;}
-.WCS50300VS .form-group input[name="emailDomain"] {max-width: 169px;}
-.WCS50300VS .form-group select#emailSelect{max-width: 178px;}
+.WCS50300VS .form-group input[type="email"]:first-of-type {max-width: 201px;}
+.WCS50300VS .form-group input[type="email"]:last-of-type {max-width: 169px;}
+.WCS50300VS .form-group select.email-domain{max-width: 178px;}
 .WCS50300VS .form-group .info-phone {max-width: 406px;}
 .WCS50300VS .form-group .info-phone select {max-width: 137px;}
 
@@ -819,13 +778,7 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 /* 상환일정 조회 */
 .WCS10300VQ .text-content .info-list .m-dot li { font-size:var(--font16); }
 
-/* 중도상환 조회/신청 팝업 */
-.WCS10401PQ .btn-link { padding:24px 30px 24px 24px; width:calc(50% - 16px); background-repeat:no-repeat; background-position:left 20px center; background-size:40px; }
 
-.WCS10401PQ .btn-group { display:flex; flex-wrap:wrap; }
-.WCS10401PQ .btn-link { width:100%; }
-
-.WCS10401PQ .text-content p + p { margin-top:12px; }
 
 /* 담보권해지신청 */
 .WCS40700VQ .btn-form { max-width:200px; }
@@ -850,7 +803,52 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCS40800VQ .upload-label input[type="file"] { display:none; }
 .WCS40800VQ .upload-label .fileLabel { padding:20px 16px; width:100%; max-width:680px; border:0; text-align:left; }
 
-/* 상담신청 팝업 */
+/*---------------------------------------------
+    #팝업
+---------------------------------------------*/
+/* 민원접수, 칭찬/제안, 채무조정신청, 중도상환 공통 */
+.WCC20710VS .pop-content .text-group > .tit,
+.WCC20720VS .pop-content .text-group > .tit,
+.WCC21400VQ .pop-content .text-group > .tit { font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-45); }
+.WCC20710VS .pop-content .text-group .tit-f-square,
+.WCC20720VS .pop-content .text-group .tit-f-square,
+.WCC21400VQ .pop-content .text-group > .tit + p { font-weight:var(--font-w-m); }
+.WCC20710VS .pop-content .text-group .tit-f-square:before,
+.WCC20720VS .pop-content .text-group .tit-f-square:before { content:"■"; margin-right:2px; }
+.WCS10401PQ .pop-content .text-group p,
+.WCC20710VS .pop-content .text-group p,
+.WCC20710VS .pop-content .text-group .text-list li span,
+.WCC20720VS .pop-content .text-group p,
+.WCC20720VS .pop-content .text-group .text-list li span { color:var(--color-6); }
+
+/* 중도상환 조회/신청 */
+.WCS10401PQ .btn-link { padding:24px 30px 24px 24px; width:100%; background-repeat:no-repeat; background-position:left 20px center; background-size:40px; }
+.WCS10401PQ .btn-group { display:flex; flex-wrap:wrap; }
+.WCS10401PQ .text-content p + p { margin-top:12px; }
+.WCS10401PQ .text-group .button-content .btn-download { min-height:61px; }
+
+/* 채무조정신청 */
+.WCC21400VQ .pop-content .text-list > li { margin-bottom:32px; }
+.WCC21400VQ .pop-content .text-list > li > span { color:var(--color-2); font-weight:var(--font-w-m); }
+.WCC21400VQ .pop-content .text-list > li > span.precious { color:var(--primary); font-weight:var(--font-w-b); }
+.WCC21400VQ .pop-content .text-list > li > span.precious + p,
+.WCC21400VQ .pop-content .text-list > li > ol { margin-top:14px; }
+.WCC21400VQ .pop-content .text-list > li > ol li { margin-bottom:10px; }
+
+.WCC21400VQ .pop-content .text-group .square { margin-bottom:18px; color:var(--color-2); font-weight:var(--font-w-m); }
+.WCC21400VQ .pop-content .text-group .square + ol li p { margin-top:10px;}
+
+.WCC21401DS .pop-content .btn-group { font-size:0; }
+.WCC21401DS .pop-content .btn-group .btn-download + .btn-download {margin-left: 26px;}
+
+/* 차량 검색, 우편번호 */
+.pop-content .mo-tit { display:none; font-size:var(--font12); color:var(--color-75); }
+.pop-content .search-form .group + .btn-form.mo { top:unset; bottom:40px; transform:unset; }
+.pop-content .search-form .group:has(.form-group:last-child .error) + .btn-form.mo { bottom:78px; }
+.pop-content .table-group h3 { font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-2); }
+
+/* 상담신청 */
+.WCC70102PS .pop-content .form-group .email { align-items:center; margin-bottom:10px; }
 .WCC70102PS .pop-content label.radio {margin-bottom: 0;}
 .WCC70102PS .pop-content tr td textarea { min-height:200px; }
 .WCC70102PS .pop-content .check { margin-top:20px; }
@@ -1221,13 +1219,14 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     .WCC21200VQ th, .WCC70102PS .pop-content th,
     .WCC21200VQ td, .WCC70102PS .pop-content td {display: block; width: 100%;}
     .WCC21200VQ table {border-top: none; margin-top: 42px;}
-    .WCC21200VQ th, .WCC70102PS .pop-content th {border: none; padding: 0; margin-bottom: 8px; text-align: left; background: none;}
+    .WCC21200VQ th, 
+    .WCC70102PS .pop-content th {border: none; padding: 0; margin-bottom: 8px; text-align: left; background: none;}
     .WCC21200VQ td, .WCC70102PS .pop-content td {border: none; padding: 0; margin-bottom: 26px;}
 
     .WCC21200VQ .btn-content.cta a, 
     .WCC21200VQ .btn-content.cta button {padding-left: 53px; white-space: nowrap; }
     
-    .WCC70102PS .pop-content table { padding-top:16px; border-top:0; }
+    .WCC70102PS .pop-content table { border-top:0; }
     .WCC70102PS .pop-content table tbody th,
     .WCC70102PS .pop-content table tbody th label { color:var(--color-45); font-size:var(--font16); font-weight:var(--font-w-m); }
     .WCC70102PS .pop-content tr:last-child td { margin-bottom:32px; }
@@ -1328,11 +1327,6 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     .WCA50300VQ .table-group {margin-bottom: 42px;}
     /* 회사소개 - 채용공고 */
     .WCR50100VQ .mo-list td.title::before { display: block; width: fit-content; margin-bottom: 10px; }
-    /* 회사소개 - 채용공고 상세*/
-    .WCR50101DQ .view-subject {margin-bottom: 19px;}
-    .WCR50101DQ .view-subject .date {margin-top: 5px; }
-    .WCR50101DQ .error {color:var(--color-75);}
-    .WCR50101DQ .view-subject::after {font-size: 12px; left: 0; top: 105%; background-size: 18px 18px;}
     /* 회사소개 - 클린신고센터 + 성희롱 및 직장내 괴롭힘 신고센터 */
     .WCA90107VQ .text-content, .WCA90100VQ .text-content {margin-bottom: 32px;}
 
@@ -1346,16 +1340,6 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     /*---------------------------------------------
     #MY MG
     ---------------------------------------------*/
-    /* 중도상환 조회/신청 팝업 */
-    .WCS10401PQ .text-content .text-group { margin-bottom:32px; }
-    .WCS10401PQ .text-content .text-group .button-content { margin-top:20px; }
-    .WCS10401PQ .btn-link { padding:14px 20px; margin-bottom:0; width:100%; }
-    .WCS10401PQ .btn-group { display:flex; flex-wrap:wrap; }
-
-    .WCS10401PQ .text-content p + p { margin-top:10px; }
-    .WCS10401PQ .btn-download { min-height:52px; }
-    .WCS10401PQ .btn-download::after { width:28px; height:28px; mask-size:20.222px; -webkit-mask-size:20.222px; }
-
     /** 청구내역조회, 신고센터 처리현황 조회 **/
     .WCS30101DQ .mo colgroup,
     .WCA90105VQ .mo colgroup, .WCA50100VQ .mo colgroup { display:none; }
@@ -1376,4 +1360,30 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     .WCS10200VQ .text-content .caption,
     .WCS10201DQ .text-content .caption { padding-bottom:18px; }
     
+    /*---------------------------------------------
+    #팝업
+    ---------------------------------------------*/
+    .WCC20710VS .pop-content .text-group > .tit,
+    .WCC20720VS .pop-content .text-group > .tit,
+    .WCC21400VQ .pop-content .text-group > .tit { font-size:var(--font18); }
+
+    /* 중도상환 조회/신청 팝업 */
+    .WCS10401PQ .text-content .text-group { margin-bottom:32px; }
+    .WCS10401PQ .text-content .text-group .button-content { margin-top:20px; }
+    .WCS10401PQ .btn-link { padding:14px 20px; margin-bottom:0; width:100%; }
+    .WCS10401PQ .btn-group { display:flex; flex-wrap:wrap; }
+
+    .WCS10401PQ .text-content p + p { margin-top:10px; }
+    .WCS10401PQ .text-group .button-content .btn-download { min-height:52px; }
+    .WCS10401PQ .text-group .button-content .btn-download::after { width:28px; height:28px; mask-size:20.222px; -webkit-mask-size:20.222px; }
+
+    /* 차량 검색, 우편번호*/
+    .pop-content .mo-tit { display:block; }
+    .pop-content .table-group h3 { font-size:var(--font18); }
+    .pop-content .table-group .mo-list.result { border-top:0; }
+    .pop-content .table-group .mo-list.result tbody tr:first-child { padding-top:10px; }
+
+    /* 우편 번호 */
+    .pop_find_zipcord .pop-content .form-content:has(.mo-tit) .form-wrap.search-form {  margin-bottom:14px; }
+    .pop_find_zipcord .pop-content .mo-tit { margin-bottom:32px; }
 }

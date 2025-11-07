@@ -209,7 +209,9 @@ label.toggle input + span { font-size:0; }
 /** 유효성체크 **/
 input[aria-invalid="true"] { border:1px solid var(--error); }
 .form-group:has(.error) input,
-tr td:has(.error) input { border:1px solid var(--error); }
+tr td:has(.error) input,
+tr td:has(.error) select,
+tr td:has(.error) textarea { border:1px solid var(--error); }
 .form-group:has(input[aria-invalid="true"]) span + .error,
 span:has(input[aria-invalid="true"]) + .error,
 li:has(.error) .error,
