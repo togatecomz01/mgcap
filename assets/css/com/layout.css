@@ -131,10 +131,12 @@ h5, p.tit { color:var(--color-2); font-size:1rem; font-weight:var(--font-w-b); }
 .text-content .dot > li:before,
 .text-content .dot > dt:before,
 .info-content .dot > li:before { content:""; display:inline-block; position:absolute; left:5px; top:10px; width:5px; height:5px; border-radius:10px; background:var(--color-45); margin-right:7px; }
+p.m-dot,
 .text-content p.m-dot,
 .text-content .m-dot dd,
 .text-content .m-dot li,
-.info-content .m-dot li { color:var(--color-6);  margin-top:12px; }
+.info-content .m-dot li { color:var(--color-6);  margin-top:12px; font-size:var(--font16); }
+p.m-dot::before,
 .text-content p.m-dot::before,
 .text-content .m-dot dd::before,
 .text-content .m-dot li::before,

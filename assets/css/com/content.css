@@ -670,6 +670,7 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .recruitment .group td { text-align:left; }
 .recruitment .group form .table-group { margin-bottom:52px; position:relative; }
 .recruitment .group form .table-group label { margin-bottom:0; }
+.recruitment .group form .table-group th label { font-weight:var(--font-w-b); }
 .recruitment .upload { display:none; }
 .recruitment label:has(input) { display:inline-flex; }
 .recruitment .photo-content { display:flex; gap:28px; }
@@ -693,12 +694,10 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .recruitment td .form-group input { max-width:100%; margin-top:10px; }
 .recruitment td .form-group,
 .recruitment td .form-group p { position:relative; }
-.recruitment td .form-group p button { z-index:2; position:absolute; top:0; left:0; background:Red; }
+.recruitment td .form-group p button { z-index:2; position:absolute; top:0; left:0; }
 .recruitment td .form-group .email { display:flex; align-items:center; gap:10px; }
 .recruitment td .form-group .email input { width:240px; }
 .recruitment td .form-group select { width:178px; }
-
-.recruitment span.ipt-clear input { padding-left:50px; }
 .recruitment span.ipt-clear .btn-clear { position:absolute; right:16px; top:50%; transform:translate(0, -50%); }
 .recruitment span.ipt-clear.txt-unit { position:relative; display:block; max-width:406px; }
 .recruitment span.ipt-clear.txt-unit span.txt { position:absolute; right:16px; top:50%; transform:translate(0, -50%); }

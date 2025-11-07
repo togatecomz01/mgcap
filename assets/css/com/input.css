@@ -54,6 +54,7 @@ textarea { width:100%; border:1px solid var(--form-board); padding:12px 16px; co
 select {  padding-right:54px; -webkit-appearance:none; -moz-appearance:none; appearance:none; background:var(--ico-select) no-repeat right 14px center; line-height:var(--form-height); }
 input[type="search"] { background-image:var(--ico-search); background-size:18px; background-repeat:no-repeat; background-position:right 14px center;  }
 
+
 input.upload { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
 
 input::placeholder,
@@ -83,7 +84,7 @@ textarea:disabled { background-color:var(--form-disabled); color:var(--form-disa
 .form-group select,
 .form-group textarea{ flex:1; }
 
-.form-group .search input[type="search"] { background:transparent; padding-left:initial;  }
+.form-group .search input[type="search"] { background:transparent; padding-left:16px; padding-right:56px;  }
 .form-group .search input + button.btn-sch {position:absolute; top:50%; right:16px; transform:translate(0, -50%); font-size:0; }
 .form-group .search input + button.btn-sch::before { content:""; display:block; width:32px; height:32px; background-color:var(--color-2);
   mask-image:var(--ico-search); mask-position:center; mask-repeat:no-repeat; mask-size:90%; --webkit-mask-image:var(--ico-search); --webkit-mask-position:center; --webkit-mask-repeat:no-repeat; --webkit-mask-size:90%; }
@@ -155,6 +156,7 @@ label.toggle::before { content:""; position:absolute; top:var(--pad-y); left:var
 label.toggle:has(input:checked)::before { transform: translateX(var(--travel)); }
 label.toggle:focus-within { outline: 2px solid transparent; }
   /* 모션 민감 사용자 배려 */
+
   @media (prefers-reduced-motion: reduce) {
     label.toggle,
     label.toggle::before {
@@ -204,6 +206,7 @@ label.toggle input + span { font-size:0; }
 .tab-content > .form-wrap > .form-group > .flex-row select { max-width:178px; }
 .tab-content > .form-wrap > .form-group.address > input { margin-top:10px; }
 
+<<<<<<< Updated upstream
 /** 유효성체크 **/
 input[aria-invalid="true"] { border:1px solid var(--error); }
 .form-group:has(.error) input,
@@ -214,6 +217,45 @@ li:has(.error) .error,
 tr td .error,
 .form-wrap.search-form > .group .form-group span.error { display:inline-block; width:100%; margin-top:10px; font-size:var(--font16); text-align:left; }
 .form-wrap.search-form > .group .form-group span.error  { grid-column:2; }
+=======
+
+/**달력**/
+.form-group { position:relative; }
+.date-wrap { flex:1; position:relative; }
+.date-wrap input[type="date"]::-webkit-calendar-picker-indicator,
+.date-wrap input[type="month"]::-webkit-calendar-picker-indicator { display:none; }
+.date-wrap { position:relative; display:inline-flex; }
+.date-wrap input.date,
+.date-wrap input.month { padding-right:54px; background-image:var(--form-date-ico); background-size:18px; background-repeat:no-repeat; background-position:right 14px center; }
+.date-wrap:has(button) input {  background:transparent; }
+ input[type="month"]+ button,
+ input[type="date"] + button { position:absolute; right:10px; top:50%; transform:translate(0, -50%); z-index:2; display:block; width:24px; height:24px; font-size:0; background-image:var(--form-date-ico); background-size:18px; background-repeat:no-repeat;; background-position:center; }
+.date.is-open,
+.date[aria-expanded="true"] { border:1px solid var(--form-active); outline:2px solid var(--form-active); outline-offset:4px; z-index:2;  }
+
+
+.ui-widget.ui-widget-content  {
+ --bg-box:#F3F6FB;
+}
+.ui-widget.ui-widget-content {  z-index:2; background:var(--bg-box); border:1px solid var(--color-d); border-radius:10px; width:350px; }
+.ui-widget-header { background:transparent; border:0; }
+.ui-datepicker .ui-datepicker-title { font-size:var(--font20); }
+.ui-widget.ui-widget-content table { border-top:0; }
+.ui-widget.ui-widget-content th { background:transparent; font-size:var(--font16); color:var(--color-6); }
+.ui-state-default, 
+.ui-widget-content 
+.ui-state-default, 
+.ui-widget-header 
+.ui-state-default, 
+.ui-button, 
+.ui-button.ui-state-disabled:hover, 
+.ui-button.ui-state-disabled:active { display:flex; align-items:center; justify-content:center; width:40px; height:40px; border:0; border-radius:4px; background:transparent; text-align:center; } 
+.ui-state-disabled { color:var(--color-6); }
+.ui-datepicker-today a { background:var(--color-2) !important; color:var(--white) !important; }
+.ui-datepicker-current-day a { background:var(--primary) !important; color:var(--white) !important; }
+.ui-state-active { background:var(--primary); color:var(--w); font-weight:var(--font-w-b); }
+
+>>>>>>> Stashed changes
 
 @media (max-width:767px) {
     body{
