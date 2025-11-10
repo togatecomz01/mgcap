@@ -22,7 +22,7 @@ body {
 	#기본 레이아웃
 ---------------------------------------------*/
 html,body { height:100%; }
-body { position: relative; -webkit-text-size-adjust: none; }
+body { position: relative; height:100%; -webkit-text-size-adjust: none; overflow-y:scroll; }
 .wrap { position: relative; margin: 0 auto; display:-webkit-box; display:-ms-flexbox; display:-webkit-flex; display:flex; -webkit-box-orient:vertical; -webkit-box-direction:normal; -ms-flex-direction:column; flex-direction: column; /*overflow: hidden;*/ }
 
 main.contentWrap { -webkit-box-flex:1; -ms-flex:1 1 auto; flex:1 1 auto; padding-bottom:120px; min-height:0; min-width:0; overflow-y:auto; -webkit-overflow-scrolling:touch; position:relative; overflow-anchor:none; }
@@ -430,7 +430,7 @@ main.contentWrap > .bottom-container { margin-top:72px; }
 .footer-main .ft-logo a { max-width:95px; width:100%; }
 .footer-main .ft-logo a .img-wa { width:100%; }
 
-#scrollTop { position:fixed; right:20px; bottom:30px; opacity:0; visibility:hidden; transition:opacity 0.3s ease, visibility 0.3s ease; z-index:9; }
+#scrollTop { position:fixed; right:30px; bottom:30px; opacity:0; visibility:hidden; transition:opacity 0.3s ease, visibility 0.3s ease; z-index:9; }
 
 #scrollTop.on { opacity: 1; visibility: visible; }
 

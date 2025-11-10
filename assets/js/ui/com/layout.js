@@ -9,7 +9,7 @@ $(document).ready(function () {
         }
 
         if ($(".contentWrap").length > 0) {
-            scrollTop.scrolling(); // 초기 상태 확인
+            scrollTopBtnL.scrolling(); // 초기 상태 확인
         }
 
         if ($("#skipnavi").length > 0) {
@@ -236,24 +236,37 @@ $(document).ready(function () {
     /**
      * 스크롤 업 버튼 on 클래스 제어
      **/
-    const scrollTopBtn = document.querySelector('.scrollUpBtn');
-    const scrollTop = document.getElementById('scrollTop');
-
-    // 스크롤 시 버튼 표시/숨김
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            scrollTop.classList.add('on'); // hidden 대신 on 클래스 추가
-        } else {
-            scrollTop.classList.remove('on'); // on 클래스 제거
-        }
+    var scrollTopBtnL = (function () {
+        var scrollY = 0;
+    
+        return {
+            btnAni: function () {
+                if (scrollY > 200) {
+                    $("#scrollTop").addClass("on");
+                } else {
+                    $("#scrollTop").removeClass("on");
+                }
+            },
+            scrolling: function () {
+                scrollY = $("body").scrollTop();
+                this.btnAni();
+            },
+            btnClick: function () {
+                $(".scrollUpBtn").on("click", function () {
+                    $("body").animate({ scrollTop: 0 }, 200);
+                });
+            },
+            init: function () {
+                this.btnClick();
+            }
+        };
+    })();
+    
+    // event - body의 스크롤 이벤트 감지
+    $("body").on("scroll", function () {
+        scrollTopBtnL.scrolling();
     });
-
-    // 클릭 시 상단 이동
-    scrollTopBtn.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-
+    
+    // init 호출
+    scrollTopBtnL.init();
 });
