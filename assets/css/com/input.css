@@ -222,8 +222,8 @@ tr td .error,
 /**ดÞทย**/
 .form-group { position:relative; }
 .date-wrap { flex:1; position:relative; }
-.date-wrap input[type="date"]::-webkit-calendar-picker-indicator,
-.date-wrap input[type="month"]::-webkit-calendar-picker-indicator { display:none; }
+.date-wrap:has(button) input[type="date"]::-webkit-calendar-picker-indicator,
+.date-wrap:has(button) input[type="month"]::-webkit-calendar-picker-indicator { display:none; }
 .date-wrap { position:relative; display:inline-flex; }
 .date-wrap input.date,
 .date-wrap input.month { padding-right:54px; background-image:var(--form-date-ico); background-size:18px; background-repeat:no-repeat; background-position:right 14px center; }

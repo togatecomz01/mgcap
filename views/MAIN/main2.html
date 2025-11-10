@@ -33,6 +33,9 @@
     <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
     <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+    <!--D: 메인에서만 tab.js 추가-->
+    <script type="text/javascript" src="../../assets/js/ui/com/tab.js"></script>
+
     <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
     <script src="../../assets/js/include.js"></script>
 </head>
@@ -113,33 +116,37 @@
                 </section>
                 <section class="main-container">
                     <div class="main-content">
-                        <div class="quick-group swipe quickSwiper">
-                            <h3>MG캐피탈의 모든 상품을 <em>클릭 한번으로!</em></h3>
-                            <div class="btn-content">
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div>
+                        <div class="quick-group">
+                            <div class="quick-tit">
+                                <h3>MG캐피탈의 모든 상품을 <em>클릭 한번으로!</em></h3>
+                                <div class="btn-content">
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
                             </div>
-                            <div class="swiper-wrapper">
-                                <a href="#" class="swiper-slide">
-                                    <h4 class="icon01">자동차 대출</h4>
-                                    <p>자동차에 관련된 모든 상품은 MG캐피탈에서 쉽고 빠르게 이용해보세요...</p>
-                                </a>
-                                <a href="#" class="swiper-slide">
-                                    <h4 class="icon02">설비/의료</h4>
-                                    <p>다양한 설비/의료·헬스 상품들은 MG캐피탈에서 다뤄보세요!</p>
-                                </a>
-                                <a href="#" class="swiper-slide">
-                                    <h4 class="icon03">주택대출</h4>
-                                    <p>모든 기업 대출은 손쉽게
-                                        MG캐피탈에서 가입하실 수 있습니다!</p>
-                                </a>
-                                <a href="#" class="swiper-slide">
-                                    <h4 class="icon04">기업대출</h4>
-                                    <p>모든 기업 대출은 손쉽게
-                                        MG캐피탈에서 가입하실 수 있습니다!</p>
-                                </a>
+                            <div class="swipe quickSwiper">
+                                <div class="swiper-wrapper">
+                                    <a href="#" class="swiper-slide">
+                                        <h4 class="icon01">자동차 대출</h4>
+                                        <p>자동차에 관련된 모든 상품은 MG캐피탈에서 쉽고 빠르게 이용해보세요...</p>
+                                    </a>
+                                    <a href="#" class="swiper-slide">
+                                        <h4 class="icon02">설비/의료</h4>
+                                        <p>다양한 설비/의료·헬스 상품들은 MG캐피탈에서 다뤄보세요!</p>
+                                    </a>
+                                    <a href="#" class="swiper-slide">
+                                        <h4 class="icon03">주택대출</h4>
+                                        <p>모든 기업 대출은 손쉽게
+                                            MG캐피탈에서 가입하실 수 있습니다!</p>
+                                    </a>
+                                    <a href="#" class="swiper-slide">
+                                        <h4 class="icon04">기업대출</h4>
+                                        <p>모든 기업 대출은 손쉽게
+                                            MG캐피탈에서 가입하실 수 있습니다!</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-pagination"></div>
                             </div>
-                            <div class="swiper-pagination"></div>
                         </div>
                         <div class="notice-group">
                             <div class="tab-container jsTab">
@@ -150,7 +157,7 @@
                                     </div>
                                 </nav>
                                 <div class="tab-content">
-                                    <div id="tab2-1" class="tab-panel" aria-hidden="false">
+                                    <div id="tab2-1" class="tab-panel active">
                                         <div class="noti-list">
                                             <div class="noti-group">
                                                 <span class="label">공지사항</span>
@@ -174,7 +181,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="tab2-2" class="tab-panel" aria-hidden="false">
+                                    <div id="tab2-2" class="tab-panel">
                                         <div class="noti-list">
                                             <div class="noti-group">
                                                 <span class="label">입찰공고</span>
@@ -303,6 +310,11 @@
         <!-- Initialize Swiper -->
         <script>
             var mainSwiper = new Swiper(".mySwiper", {
+                effect: "fade",
+                fadeEffect: {
+                    crossFade: false,
+                },
+                speed: 800,
                 pagination: {
                     el: ".swiper-pagination",
                     type: "fraction",
@@ -323,7 +335,7 @@
                 spaceBetween: 0,
                 centeredSlides: true,
                 resistance: false,
-                loop: true,
+                loop: false,
                 navigation: {
                     nextEl: ".quick-group .swiper-button-next",
                     prevEl: ".quick-group .swiper-button-prev",
