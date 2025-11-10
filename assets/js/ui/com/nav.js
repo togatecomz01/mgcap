@@ -16,8 +16,12 @@ function updateScrollState() {
     document.body.classList.toggle('no-scroll', shouldLockScroll);
 
     if (shouldLockScroll && menuInner) {
-        const headerHeight = document.querySelector('.allmenu-header')?.offsetHeight || 0;
-        menuInner.style.maxHeight = `calc(100vh - ${headerHeight}px)`;
+        if (window.innerWidth < 768) {
+            menuInner.style.maxHeight = '100vh';
+        } else {
+            const headerHeight = document.querySelector('.allmenu-header')?.offsetHeight || 0;
+            menuInner.style.maxHeight = `calc(100vh - ${headerHeight}px)`;
+        }
     }
 }
 

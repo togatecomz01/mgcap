@@ -29,6 +29,25 @@ body{
 
 }
 
+/** 테이블 안 input **/
+.group form .table-group label,
+.table-group label { margin-bottom:0; }
+.radio-group label:has(input),
+.recruitment label:has(input) { display:inline-flex; }
+td.address .form-group:first-of-type,
+.email-group.form-group:first-of-type,
+.recruitment td .form-group:first-of-type { display:flex; gap:20px; align-items:center; margin-top:0; max-width:406px; }
+td.address .form-group input,
+.recruitment td .form-group input { max-width:100%; margin-top:10px; }
+td.address .form-group:first-of-type input,
+.recruitment td .form-group:first-of-type input { margin-top:0; }
+.recruitment td .form-group .email,
+.email-group.form-group .email { display:flex; align-items:center; gap:10px; }
+.recruitment .form-group .email input,
+.email-group.form-group .email input { width:240px; }
+.recruitment .form-group select,
+.email-group.form-group select { width:178px; }
+
 /*---------------------------------------------
     #프로세스
 ---------------------------------------------*/
@@ -646,10 +665,8 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 }
 .recruitment .group td { text-align:left; }
 .recruitment .group form .table-group { margin-bottom:52px; position:relative; }
-.recruitment .group form .table-group label { margin-bottom:0; }
 .recruitment .group form .table-group th label { font-weight:var(--font-w-b); }
 .recruitment .upload { display:none; }
-.recruitment label:has(input) { display:inline-flex; }
 .recruitment .photo-content { display:flex; gap:28px; }
 .recruitment .photo-content .img-photo { width:190px; height:253px; background:var(--no-photo);  }
 .recruitment .photo-content .img-photo:has(img) { background:transparent; }
@@ -664,17 +681,12 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .recruitment .fileLabel button { margin-left:5px; text-decoration:none; }
 .recruitment td input { max-width:100%; }
 .recruitment td fieldset.form-group { gap:10px; }
-.recruitment td .form-group:first-of-type { display:flex; gap:20px; align-items:center; margin-top:0; max-width:406px; }
-.recruitment td .form-group:first-of-type input { margin-top:0; }
 .recruitment td .form-group:has(input[type="date"]),
 .recruitment td .form-group:has(input[type="month"]) { gap:10px; }
-.recruitment td .form-group input { max-width:100%; margin-top:10px; }
 .recruitment td .form-group,
 .recruitment td .form-group p { position:relative; }
 .recruitment td .form-group p button { z-index:2; position:absolute; top:0; left:0; }
-.recruitment td .form-group .email { display:flex; align-items:center; gap:10px; }
-.recruitment td .form-group .email input { width:240px; }
-.recruitment td .form-group select { width:178px; }
+
 .recruitment span.ipt-clear .btn-clear { position:absolute; right:16px; top:50%; transform:translate(0, -50%); }
 .recruitment span.ipt-clear.txt-unit { position:relative; display:block; max-width:406px; }
 .recruitment span.ipt-clear.txt-unit span.txt { position:absolute; right:16px; top:50%; transform:translate(0, -50%); }
@@ -714,28 +726,14 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 /*---------------------------------------------
     #인증센터, MY MG, 소비자보호 공통
 ---------------------------------------------*/
-
 /* 나의 정보 변경 */
-.WCS50300VS label {margin-bottom: 0; font-weight: var(--font-w-b); color: var(--color-2);}
-.WCS50300VS.page-container > div + div {padding-top: 72px;}
 .WCS50300VS .pad {padding: 8px 10px;}
-.WCS50300VS .form-group:has(.info-phone) {flex: 0 0 calc(66% - 20px) !important}
-.WCS50300VS .form-group:has(.email) {flex: 0 0 calc(77% - 20px) !important}
-.WCS50300VS fieldset.form-group {display: flex;}
-.WCS50300VS fieldset.form-group label.radio {margin-bottom: 0; gap: 10px; align-items: flex-start;}
-.WCS50300VS .address-group {display: flex; flex-direction: column; gap: 10px; }
 .WCS50300VS .flex-row:has(> select + span), 
 .WCS50300VS .flex-row:has(> input + span),
 .WCA90107VQ .flex-row:has(> input + span){align-items: center;} /* 클린정보센터 1줄 추가 */ /* 공통으로 변경 해야할것 같음 (이메일 부분)*/
 .WCS50300VS .flex-row:has(> select + span) select {width: 162px;}
 .WCS50300VS .flex-row:has(> select + span) span:last-of-type { margin-right: 0;}
 .WCS50300VS .btn-withdraw {width: 120px; height: 58px; background-color: var(--color-2); color: var(--white);}
-.WCS50300VS .form-group input[type="text"] {flex: none;}
-.WCS50300VS .form-group input[type="text"].password-change, 
-.WCS50300VS .form-group input[type="text"].zipcode{max-width:244px;}
-.WCS50300VS .form-group input[name="emailId"] {max-width: 201px;}
-.WCS50300VS .form-group input[name="emailDomain"] {max-width: 169px;}
-.WCS50300VS .form-group select#emailSelect{max-width: 178px;}
 .WCS50300VS .form-group .info-phone {max-width: 406px;}
 .WCS50300VS .form-group .info-phone select {max-width: 137px;}
 
@@ -810,6 +808,11 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 /*---------------------------------------------
     #팝업
 ---------------------------------------------*/
+.pop-content .mo-tit { display:none; font-size:var(--font12); color:var(--color-75); }
+.pop-content .search-form .group + .btn-form.mo { top:unset; bottom:40px; transform:unset; }
+.pop-content .search-form .group:has(.form-group:last-child .error) + .btn-form.mo { bottom:78px; }
+.pop-content .table-group h3 { font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-2); }
+
 /* 민원접수, 칭찬/제안, 채무조정신청, 중도상환 공통 */
 .WCC20710VS .pop-content .text-group > .tit,
 .WCC20720VS .pop-content .text-group > .tit,
@@ -844,12 +847,6 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 
 .WCC21401DS .pop-content .btn-group { font-size:0; }
 .WCC21401DS .pop-content .btn-group .btn-download + .btn-download {margin-left: 26px;}
-
-/* 차량 검색, 우편번호 */
-.pop-content .mo-tit { display:none; font-size:var(--font12); color:var(--color-75); }
-.pop-content .search-form .group + .btn-form.mo { top:unset; bottom:40px; transform:unset; }
-.pop-content .search-form .group:has(.form-group:last-child .error) + .btn-form.mo { bottom:78px; }
-.pop-content .table-group h3 { font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-2); }
 
 /* 상담신청 */
 .WCC70102PS .pop-content .form-group .email { align-items:center; margin-bottom:10px; }
