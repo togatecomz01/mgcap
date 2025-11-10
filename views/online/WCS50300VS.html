@@ -62,22 +62,22 @@
                                 </colgroup>
                                 <tbody>
                                     <tr>
-                                        <!-- S : 25.11.07 th 및 td label 추가, input에 의미에 맞는 id, name 추가 aria-label 추가 -->
-                                        <th id="th-name" scope="row"><label for="name">이름</label></th>
+                                        <!-- S : 25.11.07 label 추가, input에 의미에 맞는 id, name 추가 aria-label 추가 -->
+                                        <th scope="row"><label for="name">이름</label></th>
                                         <td class="tal">홍길동</td>
                                     </tr>
                                     <tr>
-                                        <th id="th-idnum" scope="row"><label for="idnum">주민번호</label></th>
+                                        <th scope="row"><label for="idnum">주민번호</label></th>
                                         <td class="tal">990143-*******</td>
                                         
                                     </tr>
                                     <tr>
-                                        <th id="th-id" scope="row"><label for="id">아이디</label></th>
+                                        <th scope="row"><label for="id">아이디</label></th>
                                         <td class="tal">124erfsdf32f</td>
                                         
                                     </tr>
                                     <tr>
-                                        <th id="th-password-change" scope="row"><label for="password-change">현재 비밀번호</label></th>
+                                        <th scope="row"><label for="password-change">현재 비밀번호</label></th>
                                         <td class="tal">
                                             <fieldset class="form-content">
                                                 <legend class="sr-only">비밀번호 변경</legend>
@@ -93,7 +93,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th id="th-phone" scope="row"><label for="phoneNumber">휴대폰</label></th>
+                                        <th scope="row"><label for="phoneNumber">휴대폰</label></th>
                                         <td class="tal">
                                             <fieldset class="form-content">
                                                 <legend>핸드폰 번호 입력</legend>
@@ -117,7 +117,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th id="th-opt" scope="row"><label for="opt">휴대폰 (SMS)<br>수신동의</label></th>
+                                        <th scope="row"><label for="opt">휴대폰 (SMS)<br>수신동의</label></th>
                                         <td class="tal">
                                             <div class="form-content">
                                                 <div class="form-wrap">
@@ -137,7 +137,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th id="th-phone" scope="row">자택전화번호</th>
+                                        <th scope="row"><label for="house-phone">자택전화번호</label></th>
                                         <td class="tal">
                                             <fieldset class="form-content">
                                                 <legend>자택 전화번호 번호 입력</legend>
@@ -160,7 +160,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th id="th-address" scope="row">자택주소</th>
+                                        <th scope="row"><label for="address"></label>자택주소</th>
                                         <td class="tal">
                                             <fieldset class="form-content" aria-labelledby="th-address">
                                                 <legend class="sr-only">자택주소 입력</legend>
@@ -195,13 +195,13 @@
                                 </colgroup>
                                 <tbody>
                                     <tr>
-                                        <th id="th-birthday" scope="row"><label for="birthday">생년월일</label></th>
+                                        <th scope="row"><label for="birthday">생년월일</label></th>
                                         <td colspan="3" class="tal">
-                                            <input type="date" id="birthday" name="birthday" class="w-406" aria-labelledby="th-birthday birthday">
+                                            <input type="date" id="birthday" name="birthday" class="w-406" aria-labelledby="birthday">
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th id="married" scope="row">결혼여부</th>
+                                        <th scope="row"><label for="married">결혼여부</label></th>
                                         <td class="tal">
                                             <div class="form-content">
                                                 <div class="form-wrap">
@@ -219,18 +219,18 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <th id="th-anniversary" scope="row"><label for="anniversary">결혼기념일</label></th>
+                                        <th scope="row"><label for="anniversary">결혼기념일</label></th>
                                         <td class="tal">
-                                            <input id="anniversary" type="date" name="anniversary" class="w-406" aria-labelledby="th-anniversary anniversary" required />  
+                                            <input id="anniversary" type="date" name="anniversary" class="w-406" aria-labelledby="anniversary" required />  
                                         </td>
                                     </tr>
 
                                     <tr>
-                                        <th id="th-companyname">직장명</th>
+                                        <th><label for="company">직장명</label></th>
                                         <td class="tal">
                                             <input type="text" id="companyname" name="companyname" aria-label="직장명"/>
                                         </td>
-                                        <th>재직기간</th>
+                                        <th><label for="tenure">재직기간</label></th>
                                         <td class="tal">
                                             <fieldset class="form-content">
                                                 <div class="form-wrap">
@@ -266,9 +266,9 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th id="th-address" scope="row">직장주소</th>
+                                        <th scope="row"><label for="address"></label>직장주소</th>
                                         <td class="tal">
-                                            <fieldset class="form-content" aria-labelledby="th-address">
+                                            <fieldset class="form-content" aria-labelledby="address">
                                                 <legend class="sr-only">직장주소 입력</legend>
                                                 <div class="form-wrap">
                                                     <div class="form-group address-group">
@@ -284,9 +284,9 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th id="th-email" scope="row"><label for="emailId">E-mail</label></th>
+                                        <th scope="row"><label for="email">E-mail</label></th>
                                         <td colspan="3" class="tal">
-                                            <fieldset class="form-content" aria-labelledby="th-email">
+                                            <fieldset class="form-content" aria-labelledby="email">
                                                 <legend class="sr-only">이메일 입력</legend>
                                                 <div class="form-wrap">
                                                     <div class="form-group">
@@ -309,7 +309,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th id="th-emailopt"><label for="emailopt">E-mail 수신동의</label></th>
+                                        <th scope="row"><label for="emailopt">E-mail 수신동의</label></th>
                                         <td colspan="3" class="tal">
                                             <div class="form-content">
                                                 <div class="form-wrap">
