@@ -9,7 +9,7 @@ $(document).ready(function () {
         }
 
         if ($(".contentWrap").length > 0) {
-            sideToolsL.scrolling(); // 초기 상태 확인
+            scrollTop.scrolling(); // 초기 상태 확인
         }
 
         if ($("#skipnavi").length > 0) {
@@ -236,111 +236,24 @@ $(document).ready(function () {
     /**
      * 스크롤 업 버튼 on 클래스 제어
      **/
-    var sideToolsL = (function () {
-        var isOn = false;
+    const scrollTopBtn = document.querySelector('.scrollUpBtn');
+    const scrollTop = document.getElementById('scrollTop');
 
-        return {
-            scrolling: function () {
-                if ($(".contentWrap").length === 0) return;
-
-                var scrollTop = $(".contentWrap").scrollTop();
-                console.log("#sideTools");
-
-                if (scrollTop >= 200 && !isOn) {
-                    $("#sideTools").addClass("on");
-                    isOn = true;
-                    console.log("scrolling: " + "down");
-                } else if (scrollTop < 200 && isOn) {
-                    $("#sideTools").removeClass("on");
-                    isOn = false;
-                    console.log("scrolling: " + "up");
-                }
-
-                // this.updatePosition();
-            },
-
-            // 스크롤 맨 위로 이동
-            moveTop: function () {
-                $(".contentWrap").animate({ scrollTop: 0 }, 300);
-                console.log("moveTop: " + "scrollUp");
-            },
-
-            // updatePosition: function () {
-
-            //     var $sideTools = $('#sideTools');
-            //     var $btmCont = $('.btmCont');
-            //     var contentScrollTop = $('.contentWrap').scrollTop();
-
-            //     if ($btmCont.length === 0 || $btmCont.outerHeight() === 0) {
-            //         $sideTools.css({
-            //             position: 'absolute',
-            //             bottom: '30px'
-            //         });
-            //         return;
-            //     }
-
-            //     var btmHeight = $btmCont.outerHeight();
-
-            //     if (contentScrollTop >= btmHeight) {
-            //         $sideTools.css({
-            //             position: 'fixed',
-            //             bottom: (btmHeight + 30) + 'px'
-            //         });
-            //     } else {
-            //         $sideTools.css({
-            //             position: 'absolute',
-            //             bottom: '30px'
-            //         });
-            //     }
-            // },
-
-            plusMenu: function () {
-                var $plusMenu = $("#sideTools .sideMenu ul");
-                var $overlay = $(".overlay");
-
-                $plusMenu.hide();
-                $overlay.removeClass("on");
-
-                $(document).on("click", "#sideTools .sideMenu > button", function (e) {
-                    e.preventDefault();
-                    var $thisUl = $(this).siblings("ul");
-                    if ($thisUl.is(":visible")) {
-                        $thisUl.stop(true, true).slideUp(200);
-                        $overlay.removeClass("on");
-                        $(".sideMenu").removeClass("on");
-                        $("#sideTools").css({ "z-index": "9" });
-                        $(".sideMenu > button").text("퀵메뉴 열기");
-                    } else {
-                        $thisUl.stop(true, true).slideDown(200);
-                        $overlay.addClass("on");
-                        $(".sideMenu").addClass("on");
-                        $("#sideTools").css({ "z-index": "12" });
-                        $(".sideMenu > button").text("퀵메뉴 닫기");
-                    }
-                });
-            },
-        };
-    })();
-
-    if ($("#sideTools").length > 0) {
-        // 스크롤 이벤트 바인딩
-        if ($(".contentWrap").length > 0) {
-            $(".contentWrap").on("scroll", function () {
-                sideToolsL.scrolling();
-            });
+    // 스크롤 시 버튼 표시/숨김
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            scrollTop.classList.add('on'); // hidden 대신 on 클래스 추가
+        } else {
+            scrollTop.classList.remove('on'); // on 클래스 제거
         }
+    });
 
-        // TOP 버튼 클릭 이벤트
-        $(document).on("click", "#sideTools .scrollUpBtn", function () {
-            sideToolsL.moveTop();
+    // 클릭 시 상단 이동
+    scrollTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
+    });
 
-        // 위치 및 메뉴 초기 세팅
-        // sideToolsL.updatePosition();
-        sideToolsL.plusMenu();
-    }
-
-    // $(window).on('resize', function () {
-    //     sideToolsL.updatePosition();
-    // });
 });
