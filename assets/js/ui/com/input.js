@@ -5,21 +5,21 @@ ready, load, init
   $(document).ready(function(){
       iptFocusScrl();
       fileUploader.init();
-      initClearable(); // Å¬¸®¾î ¹öÆ° ÃÊ±âÈ­
+      initClearable(); // í´ë¦¬ì–´ ë²„íŠ¼ ì´ˆê¸°í™”
   });
 
   /**
-   * 3ÀÚ¸® ¼ö¸¶´Ù ÄŞ¸¶ Àû¿ë
+   * 3ìë¦¬ ìˆ˜ë§ˆë‹¤ ì½¤ë§ˆ ì ìš©
   **/
   var commaFormatter = (function () {
       return {
           format: function (input) {
-              // unit Å¬·¡½º°¡ ¾øÀ¸¸é ±×³É Á¾·á
+              // unit í´ë˜ìŠ¤ê°€ ì—†ìœ¼ë©´ ê·¸ëƒ¥ ì¢…ë£Œ
               if (!input.classList.contains('unit')) return;
   
-              var value = input.value.replace(/[^0-9]/g, ''); // ¼ıÀÚ ÀÌ¿Ü Á¦°Å
-              value = value.replace(/,/g, ''); // ±âÁ¸ ',' Á¦°Å
-              value = value.replace(/\B(?=(\d{3})+(?!\d))/g, ","); // 3ÀÚ¸®¸¶´Ù ',' Ãß°¡
+              var value = input.value.replace(/[^0-9]/g, ''); // ìˆ«ì ì´ì™¸ ì œê±°
+              value = value.replace(/,/g, ''); // ê¸°ì¡´ ',' ì œê±°
+              value = value.replace(/\B(?=(\d{3})+(?!\d))/g, ","); // 3ìë¦¬ë§ˆë‹¤ ',' ì¶”ê°€
   
               input.value = value;
           }
@@ -31,47 +31,47 @@ ready, load, init
   });
 
    /*---------------------------
-    ÀÔ·Â Å¬¸®¾î ¹öÆ° (°ø¿ë)
-    - .ipt-clear ·¡ÆÛ ¾øÀ¸¸é ÀÚµ¿ »ı¼º
-    - readonly Çã¿ë(= ¹öÆ° »ı¼º ¸·Áö ¾ÊÀ½)
+    ì…ë ¥ í´ë¦¬ì–´ ë²„íŠ¼ (ê³µìš©)
+    - .ipt-clear ë˜í¼ ì—†ìœ¼ë©´ ìë™ ìƒì„±
+    - readonly í—ˆìš©(= ë²„íŠ¼ ìƒì„± ë§‰ì§€ ì•ŠìŒ)
   ---------------------------*/
   function ensureClear($input) {
-    // ·¡ÆÛ º¸Àå
+    // ë˜í¼ ë³´ì¥
     var $wrap = $input.closest('.ipt-clear');
     /*if (!$wrap.length) {
       $input.wrap('<span class="ipt-clear"></span>');
       $wrap = $input.parent();
     }*/
 
-    // disabled¸¸ ¸·À½ (readonly´Â Çã¿ë)
+    // disabledë§Œ ë§‰ìŒ (readonlyëŠ” í—ˆìš©)
     var disabled = $input.prop('disabled');
     var hasVal = ($input.val() || '').trim() !== '' && !disabled;
     var $btn = $wrap.find('> .btn-clear');
 
     if (hasVal && !$btn.length) {
-      $('<button type="button" class="btn-clear" aria-label="ÀÔ·Â Áö¿ì±â" title="Áö¿ì±â">\xd7</button>')
+      $('<button type="button" class="btn-clear" aria-label="ì…ë ¥ ì§€ìš°ê¸°" title="ì§€ìš°ê¸°">\xd7</button>')
         .appendTo($wrap)
         .on('click', function (e) {
           e.preventDefault();
 
-          // 1) ÅØ½ºÆ® ÃÊ±âÈ­
+          // 1) í…ìŠ¤íŠ¸ ì´ˆê¸°í™”
           $input.val('').removeClass('up').focus().trigger('input');
 
-          // 2) °°Àº .ipt-file ÄÁÅ×ÀÌ³Ê°¡ ÀÖ´Ù¸é ÆÄÀÏ/¶óº§µµ ÃÊ±âÈ­
+          // 2) ê°™ì€ .ipt-file ì»¨í…Œì´ë„ˆê°€ ìˆë‹¤ë©´ íŒŒì¼/ë¼ë²¨ë„ ì´ˆê¸°í™”
           var $box = $wrap.closest('.ipt-file');
           if ($box.length) {
             var $file  = $box.find('input[type="file"]').first();
             var $label = $box.find('.fileLabel').first();
-            if ($file.length)  $file.val('').trigger('change'); // ³»ºÎ »óÅÂ/¸®½º³Ê µ¿±âÈ­
+            if ($file.length)  $file.val('').trigger('change'); // ë‚´ë¶€ ìƒíƒœ/ë¦¬ìŠ¤ë„ˆ ë™ê¸°í™”
             if ($label.length) {
-              // ¿øº» ÅØ½ºÆ® º¹¿ø: ¿øº» ÅØ½ºÆ®°¡ ÀÖÀ¸¸é ¿øº»À¸·Î, ¾øÀ¸¸é ºó ¹®ÀÚ¿­·Î
+              // ì›ë³¸ í…ìŠ¤íŠ¸ ë³µì›: ì›ë³¸ í…ìŠ¤íŠ¸ê°€ ìˆìœ¼ë©´ ì›ë³¸ìœ¼ë¡œ, ì—†ìœ¼ë©´ ë¹ˆ ë¬¸ìì—´ë¡œ
               var originalText = $label.data('original-text') || '';
               var restoreText = originalText.trim() !== '' ? originalText : '';
               $label.text(restoreText);
             }
           }
 
-          // 3) ¹öÆ° Á¦°Å
+          // 3) ë²„íŠ¼ ì œê±°
           $(this).remove();
         });
     } else if (!hasVal && $btn.length) {
@@ -83,9 +83,9 @@ ready, load, init
     if ($input.data('clear-bound')) return;
     $input
       .on('input', function () { ensureClear($(this)); })
-      .on('keyup change propertychange', function () { ensureClear($(this)); }); // IE ´ëÀÀ
+      .on('keyup change propertychange', function () { ensureClear($(this)); }); // IE ëŒ€ì‘
     $input.data('clear-bound', true);
-    ensureClear($input); // ÃÊ±â »óÅÂ ¹İ¿µ
+    ensureClear($input); // ì´ˆê¸° ìƒíƒœ ë°˜ì˜
   }
 
   function initClearable(scope) {
@@ -96,28 +96,28 @@ ready, load, init
 
 
   /**
-   * ÆÄÀÏ ¾÷·Îµå
+   * íŒŒì¼ ì—…ë¡œë“œ
    */
   var fileUploader = (function () {
       return {
           init: function () {
-              // °¢ .ipt-file ÄÁÅ×ÀÌ³Ê¸¦ °³º°ÀûÀ¸·Î Ã³¸®
+              // ê° .ipt-file ì»¨í…Œì´ë„ˆë¥¼ ê°œë³„ì ìœ¼ë¡œ ì²˜ë¦¬
               $('.ipt-file').each(function() {
                   var $container = $(this);
                   var $uploadButton = $container.find('.uploadButton');
                   var $fileInput = $container.find('input[type="file"]');
                   var $fileLabel = $container.find('.fileLabel');
                   
-                  // ¿øº» ÅØ½ºÆ® ÀúÀå (ÃÊ±âÈ­ ½ÃÁ¡¿¡ ÀúÀå) - ºó ¹®ÀÚ¿­µµ ±×´ë·Î ÀúÀå
+                  // ì›ë³¸ í…ìŠ¤íŠ¸ ì €ì¥ (ì´ˆê¸°í™” ì‹œì ì— ì €ì¥) - ë¹ˆ ë¬¸ìì—´ë„ ê·¸ëŒ€ë¡œ ì €ì¥
                   var originalText = $fileLabel.text();
                   $fileLabel.data('original-text', originalText);
                   
-                  // ÆÄÀÏ ¼±ÅÃ ¹öÆ° Å¬¸¯
+                  // íŒŒì¼ ì„ íƒ ë²„íŠ¼ í´ë¦­
                   $uploadButton.on('click', function () {
                       $fileInput.trigger('click');
                   });
                   
-                  // Å°º¸µå Á¢±Ù¼º
+                  // í‚¤ë³´ë“œ ì ‘ê·¼ì„±
                   $uploadButton.on('keydown', function (e) {
                       if (e.key === 'Enter' || e.key === ' ') {
                           e.preventDefault();
@@ -125,50 +125,50 @@ ready, load, init
                       }
                   });
                   
-                  // ÆÄÀÏ ¼±ÅÃ ½Ã ÆÄÀÏ¸í Ç¥½Ã ¹× ÀÌ¹ÌÁö ¹Ì¸®º¸±â
+                  // íŒŒì¼ ì„ íƒ ì‹œ íŒŒì¼ëª… í‘œì‹œ ë° ì´ë¯¸ì§€ ë¯¸ë¦¬ë³´ê¸°
                   $fileInput.on('change', function () {
                       var file = this.files[0];
                       var fileName = file ? file.name : '';
                       
-                      // ÇöÀç ÄÁÅ×ÀÌ³ÊÀÇ ·¹ÀÌºí¸¸ ¾÷µ¥ÀÌÆ®
+                      // í˜„ì¬ ì»¨í…Œì´ë„ˆì˜ ë ˆì´ë¸”ë§Œ ì—…ë°ì´íŠ¸
                       $fileLabel.text(fileName);
                       
-                      // ÀÌ¹ÌÁö ¹Ì¸®º¸±â (ÇöÀç ÄÁÅ×ÀÌ³ÊÀÇ .img-photo)
+                      // ì´ë¯¸ì§€ ë¯¸ë¦¬ë³´ê¸° (í˜„ì¬ ì»¨í…Œì´ë„ˆì˜ .img-photo)
                       var $imgPhoto = $container.closest('.photo-content').find('.img-photo');
                       if (file && file.type.startsWith('image/')) {
                         var reader = new FileReader();
                         reader.onload = function(e) {
-                          $imgPhoto.html('<img src="' + e.target.result + '" alt="¾÷·ÎµåµÈ ÀÌ¹ÌÁö" style="max-width:190px; max-height:253px;">');
+                          $imgPhoto.html('<img src="' + e.target.result + '" alt="ì—…ë¡œë“œëœ ì´ë¯¸ì§€" style="max-width:190px; max-height:253px;">');
                         };
                         reader.readAsDataURL(file);
                       } else {
                         $imgPhoto.empty();
                       }
                       
-                      // ÆÄÀÏ ¾÷·Îµå ÈÄ Å¬¸®¾î ¹öÆ° »ı¼º
+                      // íŒŒì¼ ì—…ë¡œë“œ í›„ í´ë¦¬ì–´ ë²„íŠ¼ ìƒì„±
                       if (fileName) {
-                        // ±âÁ¸ Å¬¸®¾î ¹öÆ° Á¦°Å
+                        // ê¸°ì¡´ í´ë¦¬ì–´ ë²„íŠ¼ ì œê±°
                         $fileLabel.find('.btn-clear').remove();
                         
-                        // Å¬¸®¾î ¹öÆ° »ı¼º
-                        $('<button type="button" class="btn-clear" aria-label="Ã·ºÎÆÄÀÏ »èÁ¦" title="»çÁ¦">¡¿</button>')
+                        // í´ë¦¬ì–´ ë²„íŠ¼ ìƒì„±
+                        $('<button type="button" class="btn-clear" aria-label="ì²¨ë¶€íŒŒì¼ ì‚­ì œ" title="ì‚¬ì œ">Ã—</button>')
                           .appendTo($fileLabel)
                           .on('click', function (e) {
                             e.preventDefault();
                             
-                            // ÆÄÀÏ ÃÊ±âÈ­ (ÇöÀç ÄÁÅ×ÀÌ³Ê¸¸)
+                            // íŒŒì¼ ì´ˆê¸°í™” (í˜„ì¬ ì»¨í…Œì´ë„ˆë§Œ)
                             $fileInput.val('');
                             
-                            // ÅØ½ºÆ® º¹¿ø: ¿øº» ÅØ½ºÆ®°¡ ÀÖÀ¸¸é ¿øº»À¸·Î, ¾øÀ¸¸é ºó ¹®ÀÚ¿­·Î
+                            // í…ìŠ¤íŠ¸ ë³µì›: ì›ë³¸ í…ìŠ¤íŠ¸ê°€ ìˆìœ¼ë©´ ì›ë³¸ìœ¼ë¡œ, ì—†ìœ¼ë©´ ë¹ˆ ë¬¸ìì—´ë¡œ
                             var storedOriginalText = $fileLabel.data('original-text') || '';
                             var restoreText = storedOriginalText.trim() !== '' ? storedOriginalText : '';
                             $fileLabel.text(restoreText);
                             
-                            // ÇöÀç ÄÁÅ×ÀÌ³ÊÀÇ ÀÌ¹ÌÁö ¹Ì¸®º¸±â Á¦°Å
+                            // í˜„ì¬ ì»¨í…Œì´ë„ˆì˜ ì´ë¯¸ì§€ ë¯¸ë¦¬ë³´ê¸° ì œê±°
                             var $currentImgPhoto = $container.closest('.photo-content').find('.img-photo');
                             $currentImgPhoto.empty();
                             
-                            // ¹öÆ° Á¦°Å
+                            // ë²„íŠ¼ ì œê±°
                             $(this).remove();
                           });
                       }
@@ -179,7 +179,7 @@ ready, load, init
   })();
 
     /**
-     * Android ÀÎÇ² Æ÷Ä¿½º ½ºÅ©·Ñ ÀÌ½´
+     * Android ì¸í’‹ í¬ì»¤ìŠ¤ ìŠ¤í¬ë¡¤ ì´ìŠˆ
     **/
     function iptFocusScrl() {
         if(/Android/i.test(navigator.userAgent) ) {
@@ -196,10 +196,10 @@ ready, load, init
 
 
  /**
-     * °øÅë ±ÛÀÚ¼ö Ä«¿îÅÍ
-     * - °¢ textareaÀÇ maxlength °ªÀ» ÀĞ¾î ÃÖ´ëÄ¡·Î »ç¿ë
-     * - .char-counter ³» .current / .max¸¦ ÀÚµ¿ °»½Å
-     * - aria-live="polite"·Î ½ºÅ©¸°¸®´õ¿¡ ºÎµå·´°Ô ¾Ë¸²
+     * ê³µí†µ ê¸€ììˆ˜ ì¹´ìš´í„°
+     * - ê° textareaì˜ maxlength ê°’ì„ ì½ì–´ ìµœëŒ€ì¹˜ë¡œ ì‚¬ìš©
+     * - .char-counter ë‚´ .current / .maxë¥¼ ìë™ ê°±ì‹ 
+     * - aria-live="polite"ë¡œ ìŠ¤í¬ë¦°ë¦¬ë”ì— ë¶€ë“œëŸ½ê²Œ ì•Œë¦¼
      */
  (function () {
   function initCounter(wrap) {
@@ -210,29 +210,105 @@ ready, load, init
     var curEl = counter.querySelector('.current');
     var maxEl = counter.querySelector('.max');
 
-    // maxlength°¡ ¾øÀ¸¸é ±âº» 1000À¸·Î
+    // maxlengthê°€ ì—†ìœ¼ë©´ ê¸°ë³¸ 1000ìœ¼ë¡œ
     var max = parseInt(ta.getAttribute('maxlength'), 10);
     if (isNaN(max) || max <= 0) max = 1000;
 
-    // Ç¥½Ã »óÇÑ º¸Á¤
+    // í‘œì‹œ ìƒí•œ ë³´ì •
     if (maxEl) maxEl.textContent = String(max);
 
-    // ÀÔ·Â ½Ã °»½Å
+    // ì…ë ¥ ì‹œ ê°±ì‹ 
     var update = function () {
       var len = ta.value.length;
       if (len > max) {
-        // È¤½Ã³ª ½ºÅ©¸³Æ®·Î ³Ñ¾î°¡¸é ÀÚ¸£±â (ºê¶ó¿ìÀú°¡ º¸Åë ¸·Áö¸¸ ¾ÈÀüÀåÄ¡)
+        // í˜¹ì‹œë‚˜ ìŠ¤í¬ë¦½íŠ¸ë¡œ ë„˜ì–´ê°€ë©´ ìë¥´ê¸° (ë¸Œë¼ìš°ì €ê°€ ë³´í†µ ë§‰ì§€ë§Œ ì•ˆì „ì¥ì¹˜)
         ta.value = ta.value.substring(0, max);
         len = max;
       }
       if (curEl) curEl.textContent = String(len);
     };
 
-    // ÃÊ±â 1È¸ ¹İ¿µ
+    // ì´ˆê¸° 1íšŒ ë°˜ì˜
     update();
     ta.addEventListener('input', update);
   }
 
-  // ÆäÀÌÁö ³» ¸ğµç textarea-wrap Ã³¸®
+  // í˜ì´ì§€ ë‚´ ëª¨ë“  textarea-wrap ì²˜ë¦¬
   document.querySelectorAll('.textarea-wrap').forEach(initCounter);
+ })();
+
+/**ì´ë©”ì¼í¼ */
+/*(function () {
+  var emailGroups = document.querySelectorAll('.email-group');
+
+  emailGroups.forEach(function (group) {
+    var sel    = group.querySelector('.email-select');
+    var domain = group.querySelector('.email-domain');
+    var live   = group.querySelector('.email-live');
+
+    if (!sel || !domain) return; 
+
+    sel.addEventListener('change', function () {
+      if (this.value) {
+        domain.value = this.value;
+        domain.readOnly = true;
+        domain.setAttribute('aria-readonly', 'true');
+        if (live) live.textContent = 'ë„ë©”ì¸ ' + this.value + ' ìë™ìœ¼ë¡œ ì…ë ¥ë˜ì—ˆìŠµë‹ˆë‹¤.';
+      } else {
+        domain.readOnly = false;
+        domain.removeAttribute('aria-readonly');
+        domain.value = '';
+        domain.focus();
+        if (live) live.textContent = 'ë„ë©”ì¸ì„ ì§ì ‘ ì…ë ¥í•˜ì„¸ìš”.';
+      }
+    });
+  });
+})();*/
+
+
+(function () {
+  // ì¡°ì • í­(px) â€“ í•„ìš”ì‹œ 1ì´ë‚˜ 3ìœ¼ë¡œ ìˆ˜ì •
+  var DELTA = -2;
+
+  var SELECTORS = [
+    'body','p','li','dt','dd','th','td','caption',
+    'input','select','textarea','button','label',
+    'a','span','small','strong','em','code',
+    'h1','h2','h3','h4','h5','h6'
+  ].join(',');
+
+  var checkbox = document.getElementById('fontSizeNormal');
+  if (!checkbox) return;
+
+  function snapshotBase() {
+    document.querySelectorAll(SELECTORS).forEach(function(el){
+      if (el.dataset.fontBase) return; 
+      var cs = window.getComputedStyle(el);
+      var px = parseFloat(cs.fontSize);
+      if (!isNaN(px)) el.dataset.fontBase = px;
+    });
+  }
+
+  function applyDelta(delta) {
+    document.querySelectorAll(SELECTORS).forEach(function(el){
+      var base = parseFloat(el.dataset.fontBase);
+      if (isNaN(base)) return;
+      var next = base + delta;
+      if (next < 10) next = 10;
+      el.style.fontSize = next + 'px';
+    });
+  }
+
+  snapshotBase();
+  applyDelta(0);
+
+  checkbox.addEventListener('change', function(){
+    applyDelta(this.checked ? 0 : DELTA);
+  });
+
+  var mo = new MutationObserver(function(){
+    snapshotBase();
+    applyDelta(checkbox.checked ? 0 : DELTA);
+  });
+  mo.observe(document.documentElement, { childList: true, subtree: true });
 })();

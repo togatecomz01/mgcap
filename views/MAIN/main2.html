@@ -330,28 +330,37 @@
             });
 
             var quickSwiper = new Swiper(".quickSwiper", {
-                slidesPerView: 1.5,
-                slidesPerGroup: 1,
-                spaceBetween: 0,
-                centeredSlides: true,
-                resistance: false,
-                loop: false,
-                navigation: {
-                    nextEl: ".quick-group .swiper-button-next",
-                    prevEl: ".quick-group .swiper-button-prev",
+            slidesPerView: 1.5,
+            slidesPerGroup: 1,
+            spaceBetween: 0,
+            centeredSlides: true,
+            resistance: false,
+            loop: false,
+            navigation: {
+                nextEl: ".quick-group .swiper-button-next",
+                prevEl: ".quick-group .swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                769: {
+                slidesPerView: 4,
+                slidesPerGroup: 4,
+                spaceBetween: 27,
+                centeredSlides: false,
+                allowTouchMove: false,
+                simulateTouch: false,
                 },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-                breakpoints: {
-                    768: {
-                        slidesPerView: 3,
-                        slidesPerGroup: 3,
-                        spaceBetween: 27,
-                        centeredSlides: false,
-                    }
-                },
+                
+                1301: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+                spaceBetween: 27,
+                centeredSlides: false,
+                }
+            }
             });
 
             var alarmSwiper = new Swiper(".alarmSwiper", {
