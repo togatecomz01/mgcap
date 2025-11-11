@@ -266,8 +266,11 @@ ready, load, init
 })();*/
 
 
+
 (function () {
-  // 조정 폭(px) – 필요시 1이나 3으로 수정
+  // 모바일 전용 조건 (768px 이하에서만 실행)
+  if (window.matchMedia('(max-width: 768px)').matches === false) return;
+
   var DELTA = -2;
 
   var SELECTORS = [
@@ -280,21 +283,23 @@ ready, load, init
   var checkbox = document.getElementById('fontSizeNormal');
   if (!checkbox) return;
 
+
   function snapshotBase() {
     document.querySelectorAll(SELECTORS).forEach(function(el){
-      if (el.dataset.fontBase) return; 
+      if (el.dataset.fontBase) return;
       var cs = window.getComputedStyle(el);
       var px = parseFloat(cs.fontSize);
       if (!isNaN(px)) el.dataset.fontBase = px;
     });
   }
 
+  // delta(0 또는 -2)를 모든 대상에 반영
   function applyDelta(delta) {
     document.querySelectorAll(SELECTORS).forEach(function(el){
       var base = parseFloat(el.dataset.fontBase);
       if (isNaN(base)) return;
       var next = base + delta;
-      if (next < 10) next = 10;
+      if (next < 10) next = 10; // 최소 크기 제한
       el.style.fontSize = next + 'px';
     });
   }
@@ -311,4 +316,6 @@ ready, load, init
     applyDelta(checkbox.checked ? 0 : DELTA);
   });
   mo.observe(document.documentElement, { childList: true, subtree: true });
+
 })();
+
