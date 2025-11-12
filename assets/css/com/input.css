@@ -281,7 +281,7 @@ tr td .error,
     #container > .form-container { padding:54px 0 72px; }
 
     /**¿Œ«≤**/
-    .form-content label { margin-bottom:10px; font-size:var(--font16); font-weight:var(--font-w-b); color:var(--color-2); }
+    .form-content label { margin-bottom:10px; font-size:var(--font16); font-weight:var(--font-w-m); color:var(--color-2); }
     .form-content select {  background-size:12px auto; }
 
     .form-group input[type="text"], .form-group input[type="password"], .form-group input[type="email"], .form-group input[type="number"], .form-group input[type="tel"], .form-group input[type="search"], .form-group input[type="date"], .form-group input[type="month"], .form-group input[type="datepicker"], .form-group select, .form-group textarea { flex: 1 1 var(--fonm-height); }

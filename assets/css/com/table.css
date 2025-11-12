@@ -72,6 +72,7 @@ table:has(.no-results) td { margin:0; padding:0; border:0; }
 @media (max-width: 760px) {
     table th, 
     table td { font-size:1rem; }
+    table th { font-weight:var(--font-w-m); }
 
     .col-row.mo thead { position:absolute; width:1px; height:1px; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); }
     .col-row.mo th, .col-row.mo td { border-bottom:0; border-left:0; font-size:var(--font14); }
@@ -105,7 +106,7 @@ table:has(.no-results) td { margin:0; padding:0; border:0; }
     .mo-appendix thead th:last-of-type::before { background:var(--white); border:1px solid var(--color-d); }
     .mo-appendix tbody { border-top:1px solid var(--color-2); }
     .mo-appendix tbody tr {display: grid; grid-template-columns: 1fr;}
-    .mo-appendix tbody tr th.th-t {border-right: none; background-color: var(--table-th); font-weight: var(--font-w-b);}
+    .mo-appendix tbody tr th.th-t {border-right: none; background-color: var(--table-th); font-weight: var(--font-w-m);}
 
     /* 공지사항 리스트 + result 클래스로 스타일링 추가 */
     .mo-list colgroup,
@@ -117,6 +118,7 @@ table:has(.no-results) td { margin:0; padding:0; border:0; }
     .mo-list tbody tr { padding:20px 0 24px; border-bottom:var(--table-border); text-align:right; }
     .mo-list tbody tr:last-child { border-bottom:0; }
     .mo-list tbody tr td { display:inline-block; padding:0; border:0; font-size:var(--font12); color:var(--color-6); }
+    .mo-list tbody tr td.title span { white-space:unset; }
     .mo-list tbody tr td.inquiry { position:relative; padding:0 12px 0 24px; }
     .mo-list tbody tr td.inquiry::before { content:""; display:inline-block; position:absolute; left:0; width:18px; height:18px; background:url("../../images/com/svg/ico_inquiry.svg")no-repeat center center; }
     .mo-list tbody td.title { display:block; font-size:var(--font16); font-weight:var(--font-w-m); color:var(--color-45); text-align:left; }

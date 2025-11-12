@@ -165,7 +165,8 @@ body:has(.main) .menu .menu-item .list-item { top:78px; }
 .main-container .main-content > .notice-group .noti-group { display:flex; margin-bottom:25px; cursor:pointer; }
 .main-container .main-content > .notice-group .noti-group:last-of-type { margin-bottom:0; }
 .main-container .main-content > .notice-group .noti-group .label { flex:0 0 66px; margin-right:12px; border: 1.5px solid #44C4A1; color:#44C4A1; background:#fff; border-radius:100px; width:66px; padding:5px 6px; text-align:center; font-size:var(--font12); font-weight:var(--font-w-b); }
-.main-container .main-content > .notice-group .noti-group .sbject { flex:1; width:100%; font-size:var(--font16); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.main-container .main-content > .notice-group .tab-panel:nth-child(2) .noti-group .label { border-color:#8844C4; color:#8844C4; }
+.main-container .main-content > .notice-group .noti-group .sbject { flex:1; width:100%; font-size:var(--font16); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; line-height:24px; }
 .main-container .main-content > .notice-group .noti-group .date { flex:0 0 100px; margin-left:12px; font-size:var(--font16); color:var(--color-6); text-align:right; }
 
 .main-container .main-content > .notice-group .btn-more { position:absolute; top:3px; right:0; padding-right:20px; font-size:var(--font12); font-weight:var(--font-w-m); background:url("../../images/com/svg/ico_plus.svg") no-repeat right center; background-size:16px;  }

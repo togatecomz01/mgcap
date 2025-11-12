@@ -505,18 +505,21 @@ main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
 
 /* 고객센터 - 분리보존된 개인신용정보의 활용안내 */
 .WCC601300VQ .tac {margin: 20px 0 52px 0;}
+.WCC601300VQ .btn-text.inline { font-weight:var(--font-w-b); }
 
 /* 고객센터 - 개인신용평가 대응권 */
 .WCC601400VQ .btn-group { font-size:0; }
 .WCC601400VQ .btn-group .btn-download + .btn-download {margin-left: 26px;}
 
 /* 개인정보 조회, 동의 안내문 */
-.WCC60900VQ h5 {margin-top: 56px;}
+.WCC60900VQ h5 {margin-top: 52px;}
+.WCC60900VQ .text-content .text-list li > ol li p.rfrnc2 { margin-top:12px; }
 .WCC60900VQ p.dot, .WCC60900VQ ul.dot, .WCC60900VQ span + ol {margin-top: 18px;}
 .WCC60900VQ h3 {margin-bottom: 18px;}
-.WCC60900VQ .text-content .success {color: var(--success);}
 /* 신용정보 활용체제 */
 .WCC601200VQ li + span, .WCC601200VQ ul.dot, .WCC601200VQ span + ol {margin-top: 18px;} 
+.WCC601200VQ p + .text-list { margin-top:18px; }
+.WCC601200VQ p + .rfrnc { margin-left:16px; }
 
 /** 채무조정신청 **/
 .WCC21400VQ .form-group select { max-width:120px; }
@@ -748,6 +751,9 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCU11000VQ .img-list { display:flex; align-items:center; padding:32px 80px; }
 .WCM10106DS .img-list li::before,
 .WCU11000VQ .img-list li::before { content:""; position:absolute; top:0; left:50%; transform:translateX(-50%); display:block; width:180px; height:180px; }
+
+.WCU11000VQ .process-content:has(.text-group) .process-group,
+.WCC20700VS .process-content:has(.text-group) .process-group { margin-bottom:52px; }
 /*---------------------------------------------
     #인증센터
 ---------------------------------------------*/
@@ -1053,6 +1059,8 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     .WCU11000VQ .process-content li { align-items:center; padding:18px 16px; }
     .WCU11000VQ .process-content li .step + div:has(em) { padding:0; }
     .WCU11000VQ .text-list li { padding:0; margin:0; background-color:transparent; }
+    .WCU11000VQ .process-content:has(.text-group) .process-group,
+    .WCC20700VS .process-content:has(.text-group) .process-group { margin-bottom:42px; }
 
     /** 유용한 정보 **/
     .WCU11001VQ .cap-form,
@@ -1179,7 +1187,13 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     
     /* 개인정보 조회, 동의 안내문 */
     .WCC60900VQ .group > .text-group:has(h5) > h4 {font-size: 20px;}
-    .WCC60900VQ h5, .WCC60900VQ ul.dot, .WCC60900VQ p.dot, .WCC60900VQ span + ol {margin-top: 20px;}
+    .WCC60900VQ h5 { margin-top:42px; }
+    .WCC60900VQ ul.dot, .WCC60900VQ p.dot, .WCC60900VQ span + ol {margin-top: 20px;}
+    /* 신용정보 활용체제 */
+    .WCC601200VQ p + .rfrnc { margin-left:0; }
+
+    /* 고객센터 - 분리보존된 개인신용정보의 활용안내 */
+    .WCC601300VQ .tac { margin:18px 0 42px 0; }
     
     /******고객센터-채무조정안내**/
     .WCC601500VQ .sub-process-content ul { display: inline-flex; gap: 20px 10px; }

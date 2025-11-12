@@ -329,6 +329,76 @@
                 },
             });
 
+            // var mainSwiper;
+
+            //     var $mainSwiper = $('.mySwiper'),		
+            //         // $playBtn = $mainSwiper.find('.swiper-player .se-btn');
+            //     // var autoplayTime = Number($mainSwiper.attr('data-autoplay-time'));
+                
+            //     mainSwiper = new Swiper('.mySwiper',{
+            //         speed: 800,
+            //         loop: true,		
+            //         // autoplay: {
+            //         //     delay: autoplayTime,
+            //         //     disableOnInteraction: false,
+            //         // },
+            //         effect: 'fade',		
+            //         navigation: {
+            //             nextEl: ".swiper-button-next",
+            //             prevEl: ".swiper-button-prev",
+            //         },	
+            //         pagination: {
+            //             el: '.mySwiper .swiper-pagination',
+            //             clickable: true,
+            //         },
+            //         on: {
+            //             // autoplayStop: function(){	
+            //             //     $playBtn.addClass('on');
+            //             //     $playBtn.find('.hidden-txt').text('슬라이드 재생');
+            //             // },
+            //             // autoplayStart: function(){
+            //             //     $playBtn.removeClass('on');
+            //             //     $playBtn.find('.hidden-txt').text('슬라이드 일시정지');
+            //             // },
+            //             slideChange: function(){	
+            //                 var $slide = $('.mySwiper .swiper-wrapper .swiper-slide');
+
+            //                 $slide.removeClass('on')
+            //                 $slide.eq(this.activeIndex).addClass('on');				
+            //             },
+            //         },
+            //         a11y: {
+            //             prevSlideMessage: '이전 슬라이드',
+            //             nextSlideMessage: '다음 슬라이드',
+            //             slideLabelMessage: '총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.',
+            //         },	
+            //     })
+
+
+
+            // /*---------------------------------------------
+            //     main swiper control
+            // ---------------------------------------------*/
+            // // function mainSwiperPlay(trigger){
+            // //     var $trigger = $(trigger);
+
+            // //     if ($trigger.hasClass('on')){
+            // //         $trigger.removeClass('on');
+            // //         mainSwiper.autoplay.start();
+            // //     } else {
+            // //         $trigger.addClass('on');
+            // //         mainSwiper.autoplay.stop();
+            // //     }
+            // // };
+
+
+            // /*
+            //     event
+            // */ 
+            // $(document).on('click', '.main-swiper .swiper-player .se-btn', function(){
+            //     mainSwiperPlay($(this));
+            // });
+
             var quickSwiper = new Swiper(".quickSwiper", {
             slidesPerView: 1.5,
             slidesPerGroup: 1,
