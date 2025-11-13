@@ -36,10 +36,12 @@ body{
 
 /* 포커스 링 */
 input:focus-visible,
+textarea:focus-visible,
 select:focus-visible { outline:2px solid var(--form-active); outline-offset:4px; z-index:2;  }
 
 
-label { display:block; margin-bottom:16px; font-size:var(--form-label-font-size); color:var(--form-label); font-weight:var(--font-label-weight); }
+label,
+.label-tit{ display:block; margin-bottom:16px; font-size:var(--form-label-font-size); color:var(--form-label); font-weight:var(--font-label-weight); }
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -92,7 +94,7 @@ textarea:disabled { background-color:var(--form-disabled); color:var(--form-disa
 .form-group .txt-unit > input { text-align:right; padding-right:40px; }
 .form-group .txt-unit > span { z-index:2; position:absolute; top:50%; right:16px; transform:translate(0, -50%); color:var(--color-6); }
 
-label:has(input) { display:flex; align-items:center; font-size:var(--form-font-size) }
+label:has(input) { display:inline-flex; align-items:center; font-size:var(--form-font-size) }
 label.check{ gap:14px; }
 label.radio { gap:6px; padding:6px 13px 8px; background:var(--form-radio-bg); border-radius:100px;}
 label input[type="radio"] { position:relative; width:28px; height:28px; border-radius:50%; background:var(--white); overflow:hidden; }
@@ -211,11 +213,15 @@ input[aria-invalid="true"] { border:1px solid var(--error); }
 input[aria-invalid="true"]:focus-visible,
 select[aria-invalid="true"]:focus-visible,
 .form-group:has(.error) input:focus-visible,
+.form-group:has(.error) select:focus-visible,
+.form-group:has(.error) textarea:focus-visible,
 tr td:has(.error) input:focus-visible,
 tr td:has(.error) select:focus-visible,
 tr td:has(.error) textarea:focus-visible { outline:2px solid var(--error); outline-offset:4px; z-index:2;  }
 
 .form-group:has(.error) input,
+.form-group:has(.error) select,
+.form-group:has(.error) textarea,
 tr td:has(.error) input,
 tr td:has(.error) select,
 tr td:has(.error) textarea { border:1px solid var(--error); }
@@ -236,8 +242,14 @@ tr td .error,
 .date-wrap:has(button) input[type="date"]::-webkit-calendar-picker-indicator,
 .date-wrap:has(button) input[type="month"]::-webkit-calendar-picker-indicator { display:none; }
 .date-wrap { position:relative; display:inline-flex; }
-.date-wrap input.date,
-.date-wrap input.month { padding-right:54px; background-image:var(--form-date-ico); background-size:18px; background-repeat:no-repeat; background-position:right 14px center; }
+/*.date-wrap input[type="date"],
+.date-wrap input[type="month"] { padding-right:54px; background-image:var(--form-date-ico); background-size:18px; background-repeat:no-repeat; background-position:right 14px center; }*/
+
+.date-wrap input[type="date"]::-webkit-calendar-picker-indicator { width:18px; height:18px; background:var(--form-date-ico) no-repeat center/18px 18px; opacity:1; cursor:pointer; filter:none; }
+.date-wrap input[type="date"] { appearance:none; -webkit-appearance:none; padding-right:16px; }
+
+
+
 .date-wrap:has(button) input {  background:transparent; }
  input[type="month"]+ button,
  input[type="date"] + button { position:absolute; right:10px; top:50%; transform:translate(0, -50%); z-index:2; display:block; width:24px; height:24px; font-size:0; background-image:var(--form-date-ico); background-size:18px; background-repeat:no-repeat;; background-position:center; }
