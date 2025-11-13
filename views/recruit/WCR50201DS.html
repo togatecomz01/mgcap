@@ -56,11 +56,13 @@
                     <div class="text-content">
                         <div class="text-group">
                             <h3>개인정보 수집 이용 동의 및 본인인증</h3>
-                            <ul class="attach">
-                                <li><h4 class="tit-diamond">MG캐피탈은 개인정보를 관리함에 있어서「개인정보보호법」및 관계 법령에 따라 입사지원자의 개인정보를 수집하고 있습니다.</h4></li>
-                                <li><h4 class="tit-diamond mt-20">채용과 관련된 귀하의 개인정보 수집 및 이용과 관련하여 다음의 몇 가지 사항을 안내하여 드리오니, 관련 내용을 숙지하신 후 해당 내용에 동의하여 주시기 바랍니다.</h4></li>
-                                <li><h4 class="tit-diamond mt-20">귀하께서는 동의를 거부할 권리가 있으며, 채용에 필요한 최소한의 개인정보 수집이 불가능할 경우에는 정상적인 채용 절차가 진행되지 않을 수 있음을 알려드립니다.</h4></li>
+                            <!-- s : 25.11.12 클래스 수정 -->
+                            <ul class="diamond-box">
+                                <li>MG캐피탈은 개인정보를 관리함에 있어서「개인정보보호법」및 관계 법령에 따라 입사지원자의 개인정보를 수집하고 있습니다.</h4></li>
+                                <li>채용과 관련된 귀하의 개인정보 수집 및 이용과 관련하여 다음의 몇 가지 사항을 안내하여 드리오니, 관련 내용을 숙지하신 후 해당 내용에 동의하여 주시기 바랍니다.</h4></li>
+                                <li>귀하께서는 동의를 거부할 권리가 있으며, 채용에 필요한 최소한의 개인정보 수집이 불가능할 경우에는 정상적인 채용 절차가 진행되지 않을 수 있음을 알려드립니다.</h4></li>
                             </ul>
+                            <!-- e : 25.11.12 클래스 수정 -->
                         </div>
                     </div>
                     <div class="form-content">
@@ -79,28 +81,28 @@
                                         <label for="check-required-1" class="check-button" data-popup-open="fullPopup1">
                                             <span>개인정보 수집&#183;이용&#183;취급위탁 동의</span>
                                         </label>
-                                        <button title="개인정보 수집&#183;이용&#183;취급위탁 동의 내용보기" type="button" class="modal" data-popup-open="fullPopup1">내용보기</button>
+                                        <button title="개인정보 수집&#183;이용&#183;취급위탁 동의 약관보기" type="button" class="modal" data-popup-open="fullPopup1">약관 보기</button>
                                     </li>
                                     <li>
                                         <input type="checkbox" id="check-required-2" class="chkReq" />
                                         <label for="check-required-2" class="check-button" data-popup-open="fullPopup2">
                                             <span>본인확인서비스 이용약관</span>
                                         </label>
-                                        <button title="본인확인서비스 이용약관 내용보기" class="modal" type="button" data-popup-open="fullPopup2">내용보기</button>
+                                        <button title="본인확인서비스 이용약관 약관 보기" class="modal" type="button" data-popup-open="fullPopup2">약관 보기</button>
                                     </li>
                                     <li>
                                         <input type="checkbox" id="check-required-3" class="chkReq" />
                                         <label for="check-required-3" class="check-button" data-popup-open="fullPopup3">
                                             <span>고유식별정보처리 동의</span>
                                         </label>
-                                        <button title="고유식별정보처리 동의 내용보기" class="modal" type="button" data-popup-open="fullPopup3">내용보기</button>
+                                        <button title="고유식별정보처리 동의 약관 보기" class="modal" type="button" data-popup-open="fullPopup3">약관 보기</button>
                                     </li>
                                     <li>
                                         <input type="checkbox" id="check-required-4" class="chkReq" />
                                         <label for="check-required-4" class="check-button" data-popup-open="fullPopup4">
-                                            <span>통신사 이용약관 동의</span>
+                                            <span>통신사 이용약관</span>
                                         </label>
-                                        <button title="통신사 이용약관 동의 내용보기" class="modal" type="button" data-popup-open="fullPopup4">내용보기</button>
+                                        <button title="통신사 이용약관 동의 약관 보기" class="modal" type="button" data-popup-open="fullPopup4">약관 보기</button>
                                     </li>
                                 </ul>
                             </div>
@@ -113,73 +115,44 @@
                             </div>
                         </div>
                         <form>
+                            <!-- S : 25.11.12 화면설계서 바탕으로 내용, 구조 변경, 인증번호 부분 인풋제거 후 구조 변경 -->
                             <fieldset class="form-content">
                                 <legend>정보입력 입력폼</legend>
                                 <div class="form-wrap">
                                     <div class="form-group">
                                         <label for="mg-name">이름</label>
                                         <input id="mg-name" type="text" name="text" placeholder="이름을 입력해주세요">
-                                    </div><!--//form-group-->
+                                    </div>
                                     <div class="form-group">
-                                        <label for="resident-1">주민등록번호</label>
-                                        <div class="flex-row gap10">
-                                            <input id="resident-1" name="resident-1" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" required placeholder="생년월일 입력">
-                                            <span class="ipt-hyphen">-</span>
-                                            <input id="resident-2" name="resident-2" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" required>
-                                        </div><!--//flex-row-->
-                                    </div><!--//form-group-->
-                                </div><!--//form-wrap-->
+                                        <label for="resident-1">생년월일</label>
+                                        <input id="resident-1" name="resident-1" type="text" inputmode="numeric" pattern="[0-9]{8}" maxlength="8" required placeholder="생년월일을 입력해주세요">
+                                    </div>
+                                </div>
                                 <div class="form-wrap">
                                     <div class="form-group">
-                                        <label for="phn-first">휴대전화번호</label>
-                                        <div class="flex-row mo-column">
-                                            <div>
-                                                <select id="phn-first" required="" title="">
-                                                    <option value="0">SKT</option>
-                                                    <option value="1">KT</option>
-                                                    <option value="3">LG U+</option>
-                                                    <option value="4">SKT 알뜰폰</option>
-                                                    <option value="5">KT 알뜰폰</option>
-                                                    <option value="6">LG U+ 알뜰폰</option>
-                                                </select>
-                                                <select id="phn-second" required="" title="">
-                                                    <option value="0">선택</option>
-                                                    <option value="1">010</option>
-                                                    <option value="2">011</option>
-                                                    <option value="3">016</option>
-                                                    <option value="4">017</option>
-                                                    <option value="5">018</option>
-                                                    <option value="6">019</option>
-                                                </select>
-                                                <input id="phn-third" name="phn-third" type="tel" inputmode="numeric" class="pc-phn" autocomplete="tel-local-prefix" pattern="[0-9]{3,4}" maxlength="4" aria-describedby="desc-phone" value="1234">
-                                                <input id="phn-fourth" name="phn-fourth" type="tel" inputmode="numeric" class="pc-phn" autocomplete="tel-local-suffix" pattern="[0-9]{4}" maxlength="4" aria-describedby="desc-phone" value="5678">
-                                            </div>
-                                            <!--[D]:공통 - 알럿참고 -->
-                                            <button class="btn-form" data-modal-open="modal">인증번호 요청</button>
-                                        </div><!--//flex-row-->
-                                    </div><!--//form-group-->
-                                </div><!--//form-wrap-->
+                                        <label for="mg-gender">성별</label>
+                                        <div class="flex-row">
+                                            <label class="radio">
+                                                <input type="radio" id="male" name="mg-gender" value="male" checked>
+                                                <span>남자</span>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" id="female" name="mg-gender" value="female">
+                                                <span>여자</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="form-wrap">
                                     <div class="form-group">
-                                        <label for="title">인증번호</label>
-                                        <div class="flex-row mo-column">
-                                            <input id="title" name="title" type="text" placeholder="인증번호를 입력해주세요">
+                                        <span class="form-label">인증번호</span>
+                                        <div class="button-group">
                                             <button class="btn-form">확인</button>
                                         </div>
-                                    </div><!--//form-group-->
-                                </div><!--//form-wrap-->
-                                <div class="text-content">
-                                    <div class="text-group">
-                            
-                                        <ul class="dot">
-                                            <li>인증번호를 받지 못한 경우, 입력 정보를 확인해주세요.</li>
-                                            <li>본인인증 시 입력한 이름과 핸드폰 번호는 채용결과 및 진행사항 안내 등에 활용됩니다.</li>
-                                            <li>본인명의의 휴대폰 정보를 입력해 주세요.</li>
-                                        </ul>
                                     </div>
                                 </div>
                             </fieldset>
-                            
+                            <!-- e : 25.11.12 화면설계서 바탕으로 내용, 구조 변경, 인증번호 부분 인풋제거 후 구조 변경 -->
                             <div class="btn-content cta">
                                 <div class="button-group">
                                     <a href="javascript:void(0);" class="btn-primary">지원서 작성하기</a>
@@ -277,12 +250,12 @@
         <!--[D] fullPopupOn 클래스 :: 헤더 스크립트 적용중-->
         <div class="pop-area">
             <div class="pop-header">
-                <h2 class="pop-tit">통신사 이용약관 동의</h2>
+                <h2 class="pop-tit">통신사 이용약관</h2>
             </div>
             <div class="pop-body">
                 <div class="pop-content">
                     <div class="agreement" id="KCB" tabindex="0">
-                        통신사 이용약관 동의 내용
+                        통신사 이용약관 내용
                     </div>
                 </div>
             </div>
