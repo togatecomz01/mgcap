@@ -120,16 +120,17 @@
                                 <div class="form-wrap">
                                     <div class="form-group">
                                         <label for="phn-first">휴대전화번호</label>
+                                        <!-- s: 2025.11.12 구조수정 -->
                                         <div class="flex-row mo-column">
+                                            <select id="phn-first" required="" title="">
+                                                <option value="0">SKT</option>
+                                                <option value="1">KT</option>
+                                                <option value="3">LG U+</option>
+                                                <option value="4">SKT 알뜰폰</option>
+                                                <option value="5">KT 알뜰폰</option>
+                                                <option value="6">LG U+ 알뜰폰</option>
+                                            </select>
                                             <div>
-                                                <select id="phn-first" required="" title="">
-                                                    <option value="0">SKT</option>
-                                                    <option value="1">KT</option>
-                                                    <option value="3">LG U+</option>
-                                                    <option value="4">SKT 알뜰폰</option>
-                                                    <option value="5">KT 알뜰폰</option>
-                                                    <option value="6">LG U+ 알뜰폰</option>
-                                                </select>
                                                 <select id="phn-second" required="" title="">
                                                     <option value="0">선택</option>
                                                     <option value="1">010</option>
@@ -141,11 +142,11 @@
                                                 </select>
                                                 <input id="phn-third" name="phn-third" type="tel" inputmode="numeric" class="pc-phn" autocomplete="tel-local-prefix" pattern="[0-9]{3,4}" maxlength="4" aria-describedby="desc-phone" value="1234">
                                                 <input id="phn-fourth" name="phn-fourth" type="tel" inputmode="numeric" class="pc-phn" autocomplete="tel-local-suffix" pattern="[0-9]{4}" maxlength="4" aria-describedby="desc-phone" value="5678">
-                                                <input id="mo-phn" name="mo-phn" type="tel" class="mo-phn" maxlength="8" aria-describedby="desc-phone" value="12345678">
                                             </div>
                                             <!--[D]:공통 - 알럿참고 -->
                                             <button class="btn-form" data-modal-open="modal">인증번호 요청</button>
                                         </div><!--//flex-row-->
+                                        <!-- e: 2025.11.12 구조수정 -->
                                     </div><!--//form-group-->
                                 </div><!--//form-wrap-->
                                 <div class="form-wrap">

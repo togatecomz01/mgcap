@@ -19,8 +19,8 @@ table tr:first-of-type td { border-top:var(--color-2); }
 table th,
 table td { padding:16px; text-align:center; color:var(--default-color); font-size:var(--font18); font-weight:var(--font-w-r); text-align:center; border-bottom:var(--table-border); }
 table th { background:var(--table-th); border-left:var(--table-border); font-size:var(--font20); font-weight:var(--font-w-b); color:var(--color-2); }
-table.td-l td { border-left:var(--table-border); }
-table.td-l td:first-child { border-left:0; }
+table td { border-left:var(--table-border); }
+table td:first-child { border-left:0; }
 table th:first-of-type,
 table td:first-of-type { border-left:0; }
 table .bor-l { border-left:var(--table-border) !important; }
