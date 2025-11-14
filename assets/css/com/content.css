@@ -1407,6 +1407,7 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     .WCA90105VQ .mo tbody th { display:inline-flex; justify-content: center; align-items:center; padding:10px; width:30%; min-height:24px; border-left:0; }
     .WCS30101DQ .mo tbody td,
     .WCA90105VQ .mo tbody td { display:inline-flex; flex-direction:column; justify-content:center; padding:10px; width:calc(70% - 4px); min-height:24px; border-left:0; }
+    .WCA90105VQ .text-content .text-group { margin-bottom:42px; }
 
     /** 이용상품내역 **/
     .WCS10100VQ .text-content + .text-content,
