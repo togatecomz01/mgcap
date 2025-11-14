@@ -886,6 +886,11 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCC70102PS .pop-content .info-content li:first-child { margin-top:0; }
 .WCC70102PS .pop-body .info-content { margin-top:0; }
 
+
+  /* 우편 번호 */
+  .pop_find_zipcord .search-form .form-group .flex-row div { flex:1; }
+  .pop_find_zipcord .search-form .form-group .flex-row div input { width:100%; }
+
 /*---------------------------------------------
     #미디어쿼리
 ---------------------------------------------*/
