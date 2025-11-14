@@ -652,6 +652,8 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCR50201DS label.radio {padding-left: 0;}
 .WCR50201DS .btn-form {max-width: 100%;}
 .WCA90107VQ .text-content, .WCA90100VQ .text-content {margin-bottom: 56px;}
+
+.WCA90103VQ .tab-content + .text-group { margin-top:18px; }
 /* 회사소개 - 성희롱신고센터 (WCA90100VQ) */
 .WCA90100VQ strong+ol {margin-top: 18px;}
 

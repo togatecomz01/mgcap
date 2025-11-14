@@ -58,42 +58,57 @@
                         <form>
                             <fieldset class="form-content">
                                 <legend>신고센터 처리현황 정보 입력</legend>
-                                <div class="form-wrap">
-                                    <!-- s: 2025.11.06 구조변경 -->
-                                    <fieldset class="form-group">
-                                        <legend>구분</legend>
-                                        <span class="form-label">구분</span>
-                                        <div class="flex-row">
-                                            <label class="radio">
-                                                <input type="radio" id="type-anonymous" name="use" value="anonymous" checked>
-                                                <span>익명</span>
-                                            </label>
-                                            <label class="radio">
-                                                <input type="radio" id="type-real" name="use" value="real">
-                                                <span>실명</span>
-                                            </label>
+                                <!-- radio-tab -->
+                                <div class="form-wrap tab-list">
+                                    <p class="mo-tit">구분선택</p>
+                                    <div class="form-group">
+                                        <label class="radio" data-tab="radio-tab01" class="tab-item">
+                                            <input type="radio" name="use" value="" checked="">
+                                            <span>익명</span>
+                                        </label>
+                                        <label class="radio" data-tab="radio-tab02" class="tab-item">
+                                            <input type="radio" name="use" value="">
+                                            <span>실명</span>
+                                        </label>
+                                    </div>
+                                </div><!--//form-wrap-->
+                                <div class="tab-content">
+                                    <!-- 익명 -->
+                                    <div class="form-wrap" id="radio-tab01">
+                                        <div class="form-group tab-panel">
+                                            <label for="title">일련번호(4자리)</label>
+                                            <input id="auth-code2" type="number" name="auth-code" placeholder="" min="0" step="1" oninput="this.value = this.value.slice(0,4)" />
                                         </div>
-                                    </fieldset>
-                                    <!-- e: 2025.11.06 구조변경 -->
-                                </div>
-
-                                <div class="form-wrap">
-                                    <div class="form-group">
-                                        <label for="title">일련번호(4자리)</label>
-                                        <input id="auth-code2" type="number" name="auth-code" placeholder="" min="0" step="1" oninput="this.value = this.value.slice(0,4)" />
+                                    
+                                        <div class="form-group tab-panel">
+                                            <label for="password">비밀번호</label>
+                                            <input id="password" type="password" name="password" placeholder="" />
+                                        </div>
+                                    </div>
+                                    <!-- 실명 -->
+                                    <div class="form-content" id="radio-tab02">
+                                        <div class="form-wrap">
+                                            <div class="form-group tab-panel">
+                                                <label for="mg-name">이름</label>
+                                                <input id="mg-name" type="text" name="text" placeholder="이름을 입력해주세요">
+                                            </div><!--//form-group-->
+                                            <div class="form-group tab-panel">
+                                                <label for="birth">생년월일</label>
+                                                <input id="birth" name="birth" type="number" maxlength="8" placeholder="예) 19800131" required>
+                                            </div><!--//form-group-->
+                                        </div>
+                                        <div class="form-wrap">
+                                            <div class="form-group tab-panel">
+                                                <label for="password">비밀번호</label>
+                                                <input id="password" type="password" name="password" placeholder="" />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-
-                                <div class="form-wrap">
-                                    <div class="form-group">
-                                        <label for="password">비밀번호</label>
-                                        <input id="password" type="password" name="password" placeholder="" />
-                                    </div>
-                                </div>
-
+                                <!--//radio-tab -->
                                 <div class="text-group">
                                     <div class="text-content">
-                                        <p class="rfrnc point-r bck-k">익명의 경우 성희롱 및 부정 제보센터에서 저장 후 안내되는 일련번호와 사용자가 입력한 비밀번호로 조회 가능합니다.</p>
+                                        <p class="rfrnc point-r">익명의 경우 성희롱 및 부정 제보센터에서 저장 후 안내되는 일련번호와 사용자가 입력한 비밀번호로 조회 가능합니다.</p>
                                     </div>
                                 </div>
                             </fieldset>
