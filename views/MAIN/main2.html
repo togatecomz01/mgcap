@@ -42,6 +42,51 @@
 
 <body>
     <div class="wrap">
+        <!--s:이벤트배너 팝업-->
+        <section class="modal-container">
+            <div id="modal" class="layerPopup modal on">
+                <div class="pop-content event">
+                    <div class="pop-body" style="display:none;">
+                        <div class="swipe eventSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="../../assets/images/content/MAIN/event_banner.png" alt="변화를 넘어, 새로운 시작으로  2026">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../../assets/images/content/MAIN/event_banner.png" alt="변화를 넘어, 새로운 시작으로  2026">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../../assets/images/content/MAIN/event_banner.png" alt="변화를 넘어, 새로운 시작으로  2026">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                    <div class="pop-body">
+                        <div class="swipe eventSwiper swiper-container-initialized swiper-container-horizontal">
+                            <div class="swiper-wrapper" style="transform: translate3d(-1222px, 0px, 0px); transition: all;">
+                                <div class="swiper-slide" style="width: 611px;">
+                                    <img src="../../assets/images/content/MAIN/event_banner.png" alt="변화를 넘어, 새로운 시작으로  2026">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination swiper-pagination-fraction"><span class="swiper-pagination-current">3</span> / <span class="swiper-pagination-total">3</span></div>
+                            <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="false"></div>
+                            <div class="swiper-button-next swiper-button-disabled" tabindex="-1" role="button" aria-label="Next slide" aria-disabled="true"></div>
+                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+                    </div>
+                    <div class="pop-footer">
+                        <div class="button-content">
+                            <button type="button" class="btn-pop-txt"  data-popup-close="modal">오늘 하루 열지 않음</button>
+                            <button type="button" class="btn-pop-txt"  data-popup-close="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+        </section>
+        <!--e:이벤트배너 팝업-->
         <div data-include-path="../COMMON/header.html"></div>
         <div class="bodyWrap contentWrap">
             <main class="main">
@@ -63,54 +108,11 @@
                                         <a href="javascript:void(0);" class="btn-main-link">상품상세 바로가기</a>
                                     </div>
                                 </div><!--//swiper-slide-->
-                                <div class="swiper-slide">
-                                    <div class="text-content">
-                                        <h2>
-                                            나의 설비/의료 금융
-                                            <em>MG캐피탈 설비/의료 상품</em>
-                                        </h2>
-                                        <ul>
-                                            <li>소요 자금의 100% 융자 효과</li>
-                                            <li>자금 운용상의 효과</li>
-                                            <li>신속, 간편한 대출신청 이용절차</li>
-                                        </ul>
-                                        <a href="javascript:void(0);" class="btn-main-link">상품상세 바로가기</a>
-                                    </div>
-                                </div><!--//swiper-slide-->
-                                <div class="swiper-slide">
-                                    <div class="text-content">
-                                        <h2>
-                                            나의 자동차 금융
-                                            <em>MG캐피탈 자동차 대출</em>
-                                        </h2>
-                                        <ul>
-                                            <li>자금부담 최소화, 효과적인 자금관리</li>
-                                            <li>간편하고 신속한 구매절차</li>
-                                            <li>담보력 부족해도 신용거래 가능</li>
-                                        </ul>
-                                        <a href="javascript:void(0);" class="btn-main-link">상품상세 바로가기</a>
-                                    </div>
-                                </div><!--//swiper-slide-->
-                                <div class="swiper-slide">
-                                    <div class="text-content">
-                                        <h2>
-                                            나의 기업금융
-                                            <em>MG캐피탈 기업대출 상품</em>
-                                        </h2>
-                                        <ul>
-                                            <li>신속한 의사결정 및 대규모 지원 및 조달</li>
-                                            <li>투자를 비롯한 다양한 금융서비스 지원 가능</li>
-                                            <li>만기일시상환 등 다양한 방법 협의 가능</li>
-                                        </ul>
-                                        <a href="javascript:void(0);" class="btn-main-link">상품상세 바로가기</a>
-                                    </div>
-                                </div><!--//swiper-slide-->
                             </div><!--//swiper-wrapper-->
-                            <div class="btn-content">
-                                <div class="swiper-pagination"></div>
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div>
-                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+
                         </div>
                     </div>
                 </section>
@@ -309,6 +311,22 @@
         <script src="../../assets/js/lib/swiper-bundle.min.js"></script>
         <!-- Initialize Swiper -->
         <script>
+            var mainSwiper = new Swiper(".eventSwiper", {
+                speed: 800,
+                pagination: {
+                    el: ".swiper-pagination",
+                    type: "fraction",
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+            });
+
             var mainSwiper = new Swiper(".mySwiper", {
                 effect: "fade",
                 fadeEffect: {
@@ -328,76 +346,6 @@
                     disableOnInteraction: false,
                 },
             });
-
-            // var mainSwiper;
-
-            //     var $mainSwiper = $('.mySwiper'),		
-            //         // $playBtn = $mainSwiper.find('.swiper-player .se-btn');
-            //     // var autoplayTime = Number($mainSwiper.attr('data-autoplay-time'));
-                
-            //     mainSwiper = new Swiper('.mySwiper',{
-            //         speed: 800,
-            //         loop: true,		
-            //         // autoplay: {
-            //         //     delay: autoplayTime,
-            //         //     disableOnInteraction: false,
-            //         // },
-            //         effect: 'fade',		
-            //         navigation: {
-            //             nextEl: ".swiper-button-next",
-            //             prevEl: ".swiper-button-prev",
-            //         },	
-            //         pagination: {
-            //             el: '.mySwiper .swiper-pagination',
-            //             clickable: true,
-            //         },
-            //         on: {
-            //             // autoplayStop: function(){	
-            //             //     $playBtn.addClass('on');
-            //             //     $playBtn.find('.hidden-txt').text('슬라이드 재생');
-            //             // },
-            //             // autoplayStart: function(){
-            //             //     $playBtn.removeClass('on');
-            //             //     $playBtn.find('.hidden-txt').text('슬라이드 일시정지');
-            //             // },
-            //             slideChange: function(){	
-            //                 var $slide = $('.mySwiper .swiper-wrapper .swiper-slide');
-
-            //                 $slide.removeClass('on')
-            //                 $slide.eq(this.activeIndex).addClass('on');				
-            //             },
-            //         },
-            //         a11y: {
-            //             prevSlideMessage: '이전 슬라이드',
-            //             nextSlideMessage: '다음 슬라이드',
-            //             slideLabelMessage: '총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.',
-            //         },	
-            //     })
-
-
-
-            // /*---------------------------------------------
-            //     main swiper control
-            // ---------------------------------------------*/
-            // // function mainSwiperPlay(trigger){
-            // //     var $trigger = $(trigger);
-
-            // //     if ($trigger.hasClass('on')){
-            // //         $trigger.removeClass('on');
-            // //         mainSwiper.autoplay.start();
-            // //     } else {
-            // //         $trigger.addClass('on');
-            // //         mainSwiper.autoplay.stop();
-            // //     }
-            // // };
-
-
-            // /*
-            //     event
-            // */ 
-            // $(document).on('click', '.main-swiper .swiper-player .se-btn', function(){
-            //     mainSwiperPlay($(this));
-            // });
 
             var quickSwiper = new Swiper(".quickSwiper", {
             slidesPerView: 1.5,

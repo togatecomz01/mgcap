@@ -26,6 +26,7 @@ table td:first-of-type { border-left:0; }
 table .bor-l { border-left:var(--table-border) !important; }
 table .bor-r { border-right:var(--table-border) !important; }
 table th { font-size:var(--font20); }
+table th label { font-weight:var(--font-w-b); }
 
 table td.title { text-align:left; }
 
