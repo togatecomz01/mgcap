@@ -38,6 +38,8 @@ main.contentWrap > * { margin:0 auto; max-width:1400px; width:100%; padding:0;  
 /*---------------------------------------------
     #header
 ---------------------------------------------*/
+/** skipnavi **/
+
 /** 헤더 레이아웃 **/
 #headerWrap { position:fixed; z-index:11; width:100%; background:var(--white); border-bottom:1px solid #E5E5E5; }
 #headerWrap:has(.menu-item.on) { background-color:var(--white); }
@@ -86,7 +88,7 @@ main.contentWrap > .page-container { padding-top:56px; }
 
 /**성공, 실패**/
 .success { color: var(--success) !important; }
-.error { color:var(--failure); }
+.error { color:var(--failure) !important; }
 
 
 /**타이틀 및 텍스트**/

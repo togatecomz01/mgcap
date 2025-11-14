@@ -114,6 +114,8 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
 .btn-terms-modal:hover { border-color: #222222; color: #222222; }
 
 .btn-close { display:block; position:absolute; top:44px; right:34px; width:40px; height:40px; background: var(--ico-close) no-repeat center; background-size:22px; font-size:0;  }
+.btn-content:has(.btn-pop-more) { display:block; text-align:center; }
+.btn-pop-more { display:block; margin:0 auto; width:auto; text-align:center; font-weight:var(--font-w-m); }
 
 /**링크, 다운로드버튼**/
 .btn-group.w50 { display:flex; flex-wrap:wrap; }
@@ -128,6 +130,13 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
 .btn-download::after { content:""; display:block; width:24px; height:24px; background-color:var(--color-9); 
   mask-image:var(--ico-download); mask-repeat:no-repeat; mask-size:auto 40px; mask-position:center; -webkit-mask-image:var(--ico-download); -webkit-mask-repeat:no-repeat; -webkit-mask-size:17.333px auto; -webkit-mask-position:center; 
   }
+
+.btn-down { position:relative; display:block; padding-left:30px; margin-bottom:5px;  }
+.btn-down:last-child, .btn-down:only-child { margin-bottom:0; }
+.btn-down::before { content:""; position:absolute; top:50%; transform:translateY(-50%); left:0; display:block; width:24px; height:24px; background-image:var(--ico-file); background-repeat:no-repeat; background-size:16px auto; background-position:center; }
+
+.btn-link.down { gap:3px; min-height:auto; border:0; padding:0; line-height:normal; }
+.btn-link.down::after { background-size:16px auto; }
 
 .btn-link::after { content:""; display:block; width:24px; height:24px; background-color:var(--color-9); 
   mask-image:var(--ico-link); mask-repeat:no-repeat; mask-size:auto 40px; mask-position:center; -webkit-mask-image:var(--ico-link); -webkit-mask-repeat:no-repeat; -webkit-mask-size:19px auto; -webkit-mask-position:center; 

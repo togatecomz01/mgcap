@@ -133,6 +133,10 @@ main.contentWrap > .step-container { margin-top:80px; }
 .WCM40100DS .pop-content .text-group > .text-list li { margin-bottom:10px; }
 .WCM40100DS .pop-content .text-group > .text-list li:last-child { margin-bottom:0; }
 .WCM40100DS .pop-content .text-group > .text-list li .sub-list { padding:5px 0 0 23px; }
+/*---------------------------------------------
+    #비밀번호 찾기
+---------------------------------------------*/
+.WCM30100DS .private-group.ipin button:nth-child(1)::before { background-image:url("../../images/content/register/w/logo_certified.svg"); }
 
 /*---------------------------------------------
     #에러화면
@@ -609,6 +613,10 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCA30100VQ .timeline-list .desc { display: block; color: var(--color-6); }
 .WCA30100VQ .timeline-list dd .desc-group{font-size:var(--font22);}
 
+/** 조직도 **/
+.WCA40100VQ .img-box { width:100%; }
+.WCA40100VQ .img-box img { content:url("../../images/content/about/w/img_organization.png"); display:block; margin:0 auto; }
+
 /******회사소개-채용안내 및 절차**/
 .WCR10400VQ .text-content, .WCR10400VQ .jsTab {max-width: 1400px; margin: 0 auto;}
 .WCR10400VQ .text-content {border-top: none;}
@@ -771,7 +779,8 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCU11000VQ .img-list li::before { content:""; position:absolute; top:0; left:50%; transform:translateX(-50%); display:block; width:180px; height:180px; }
 
 .WCU11000VQ .process-content:has(.text-group) .process-group,
-.WCC20700VS .process-content:has(.text-group) .process-group { margin-bottom:52px; }
+.WCC20700VS .process-content:has(.text-group) .process-group,
+.WCR10400VQ .process-content .process-group + .btn-content.cta { margin-top:32px; }
 /*---------------------------------------------
     #인증센터
 ---------------------------------------------*/
@@ -1321,11 +1330,15 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     .WCA30100VQ .timeline-list dd:not(:last-of-type) {margin-bottom: 40px;}
     .WCA30100VQ .timeline-list .date{margin-bottom:12px;color:var(--color-2)}
 
+    /** 조직도 **/
+    .WCA40100VQ .img-box img { content:url("../../images/content/about/m/img_organization.png"); }
+
     /******회사소개-채용안내 및 절차**/
     .WCR10400VQ ul.diamond-box { padding: 12px 16px; }
     .WCR10400VQ .note-content .text-content { padding: 20px }
     .WCR10400VQ.page-container .tab-content {padding:0}
     .WCR10400VQ.bottom-container .note-content {padding:0}
+    .WCR10400VQ .process-content .process-group + .btn-content.cta { margin-top:52px; }
 
     /* 회사소개 - 주요활동 (WCA60300VQ) 모바일 */
     .WCA60300VQ .no-results {border: none;}
@@ -1343,13 +1356,14 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     .WCA50300VQ .table-mobile {display: block;}
     .WCA50100VQ .table-desktop,
     .WCA50300VQ .table-desktop {display: none;}
+    .WCA50300VQ .table-group h3 + .caption, .WCA50100VQ .table-group h4 + .caption { margin-top:0 !important; }
     .WCA50100VQ .tab-content .tab-panel:not(.active),
     .WCA50300VQ .tab-content .tab-panel:not(.active) {display: none;}
     .WCA50100VQ .tab-content .tab-panel.active,
     .WCA50300VQ .tab-content .tab-panel.active { display: block; }
     .WCA50100VQ .tab-select-mobile .se-select select,
-    .WCA50300VQ .tab-select-mobile .se-select select {color: var(--color-45); border: 1px solid var(--form-board); border-radius: 100px; margin-bottom: 24px; height: 48px; line-height: 1;}
-    .WCA50100VQ .tab-select-mobile .se-btn, 
+    .WCA50300VQ .tab-select-mobile .se-select select {color: var(--color-45); border: 1px solid var(--form-board); border-radius: 100px; margin-bottom:20px; height: 48px; line-height: 1;}
+    .WCA50100VQ .tab-select-mobile .se-btn,
     .WCA50300VQ .tab-select-mobile .se-btn {display: none;}
     .WCA50100VQ.page-container .tab-content, .WCA50300VQ.page-container .tab-content {padding: 0 0 42px 0;}
     .WCA50100VQ .tit,.WCA50300VQ .tit {font-size: var(--font18);}

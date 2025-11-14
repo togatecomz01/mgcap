@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>본인확인&gt;비밀번호 재설정&gt;홈</title>
+
+    <meta name="keywords" content="MG캐피탈" />
+    <meta name="copyright" content="copyrights 2025 MG캐피탈" />
+    <meta name="viewport" content="width=device-width" />
+    <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="No-Cache" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico"/>
+    <link rel="stylesheet" href="../../assets/css/com/default.css" />
+    <link rel="stylesheet" href="../../assets/css/com/common.css" />
+    <link rel="stylesheet" href="../../assets/css/com/style.css" />
+    <link rel="stylesheet" href="../../assets/css/com/fonts.css" />
+    <link rel="stylesheet" href="../../assets/css/com/layout.css" />
+    <link rel="stylesheet" href="../../assets/css/com/nav.css" />
+    <link rel="stylesheet" href="../../assets/css/com/input.css" />
+    <link rel="stylesheet" href="../../assets/css/com/button.css" />
+    <link rel="stylesheet" href="../../assets/css/com/tab.css" />
+    <link rel="stylesheet" href="../../assets/css/com/table.css" />
+    <link rel="stylesheet" href="../../assets/css/com/content.css" />
+    <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+    <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+    <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
+    <script src="../../assets/js/include.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div data-include-path="../../views/COMMON/header.html"></div>
+        <div class="bodyWrap">
+            <main class="contentWrap">
+                <nav class="location-container">
+                    <ol class="breadcrumb">
+                        <li><span class="home">홈</span></li>
+                        <li><span>비밀번호 재설정</span></li>
+                    </ol>
+                </nav>
+                <section class="visual-container">
+                    <h2>비밀번호 재설정</h2>
+                </section>
+                <section class="step-container">
+                    <div class="step-content">
+                        <ul class="col2">
+                            <li class="on">
+                                <span>본인확인</span>
+                            </li>
+                            <li class="next">
+                                <span>변경할 비밀번호 입력</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="page-container WCM30100DS">
+                    <div class="tab-container jsTab">
+                        <nav class="tab-list depth2">
+                            <button type="button" class="tab-item active" data-tab="tab2-1">개인회원</button>
+                            <button type="button" class="tab-item" data-tab="tab2-2">사업자회원</button>
+                        </nav>
+                        <div class="tab-content">
+                            <div id="tab2-1" class="tab-panel active">
+                                <div class="text-content">
+                                    <div class="text-group">
+                                        <h3>본인확인</h3>
+                                        <div class="private-content">
+                                            <div class="private-group ipin">
+                                                <button type="button">휴대폰 인증</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn-content cta">
+                                    <div class="button-group">
+                                        <a href="javascript:void(0);" class="btn-primary">본인인증</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab2-2" class="tab-panel">
+                                <div class="form-container">
+                                    <div class="text-content">
+                                        <div class="text-group">
+                                            <h3>실명확인</h3>
+                                        </div>
+                                    </div>
+                                    <form>
+                                        <fieldset class="form-content">
+                                            <legend>실명확인 입력폼</legend>
+                                            <div class="form-wrap">
+                                                <div class="form-group">
+                                                    <label for="mg-name">회사명</label>
+                                                    <input id="mg-name" type="text" name="text" maxlength="20"  placeholder="이름을 입력해주세요">
+                                                </div><!--//form-group-->
+                                                <div class="form-group">
+                                                    <label for="business">사업자번호</label>
+                                                    <div class="flex-row gap10">
+                                                        <input id="business1" type="text" name="business1" inputmode="numeric"
+                                                        pattern="[0-9]*"  maxlength="3" aria-label="사업자등록번호 앞자리">
+                                                        <input id="business2" type="text" inputmode="numeric"
+                                                        pattern="[0-9]*" name="business2" maxlength="2"  aria-label="사업자등록번호 중간자리">
+                                                        <input id="business3" type="text" inputmode="numeric"
+                                                        pattern="[0-9]*" name="business3" maxlength="5"   aria-label="사업자등록번호 뒷자리">
+                                                    </div>
+                                                </div><!--//form-group-->
+                                            </div><!--//form-wrap-->
+                                        </fieldset>
+                                    </form>
+                                    <div class="btn-content cta">
+                                        <div class="button-group">
+                                            <button class="btn-primary">본인인증</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <div data-include-path="../../views/COMMON/footer.html"></div>
+    </div>
+</body>
+</html>
+ 
