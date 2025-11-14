@@ -202,17 +202,36 @@ body:has(.main) .menu .menu-item .list-item { top:78px; }
 /**ÀÌº¥Æ® ÆË¾÷**/
 .layerPopup.modal .pop-content.event {
     --max-width:667px;
+    --content-pd:0 0 34px 0;
     --modal-pd:28px;
-    --pos-abs:28px;
+    --pos-abs:48px;
     --brd:16px;
-}
+    --pagination-pd:8px 30px;
+    --pagination-pos-abs:58px;
+    --pagination-w:auto;
+    --pagination-h:32px;
+    --swiper-button-w:42px;
+    --swiper-button-h:42px;
+    --swiper-button-bg:#F3F3F3;
+    --swiper-button-fs:20px;
 
-.layerPopup.modal .pop-content.event { max-width:var(--max-width); padding:0; }
-.layerPopup.modal .pop-content.event .pop-body { max-height:100%; overflow-y:hidden; padding:var(--modal-pd); position:relative; }
+}
+.layerPopup.modal .pop-content.event { max-width:var(--max-width); padding:var(--content-pd); }
+.layerPopup.modal .pop-content.event .pop-body { margin-bottom:0; max-height:100%; overflow-y:hidden; padding:var(--modal-pd); position:relative; }
 .layerPopup.modal .pop-content.event .pop-body .swipe { overflow:hidden; border-radius:var(--brd); }
-.layerPopup.modal .pop-content.event .pop-body .swiper-pagination { position:absolute; top:0; right:0; }
-.layerPopup.modal .pop-content.event .pop-body .swiper-button-prev { position:absolute !important; top:50%; left:var(--pos-abs) !important; transform:translate(0, -50%); }
-.layerPopup.modal .pop-content.event .pop-body .swiper-button-next { position:absolute !important; top:50%; right:var(--pos-abs) !important; transform:translate(0, -50%); }
+.layerPopup.modal .pop-content.event .pop-body .swiper-pagination { display:inline-flex; align-items:center; justify-content:center; position:absolute; top:var(--pagination-pos-abs); left:inherit; bottom:inherit; right:var(--pagination-pos-abs); padding:var(--pagination-pd); width:var(--pagination-w); height:var(--pagination-h); background:rgba(117, 117, 117, 0.80); color:#d6d6d6; border-radius:100px;  }
+.layerPopup.modal .pop-content.event .pop-body .swiper-pagination .swiper-pagination-current { color:var(--white); font-weight:var(--font-w-m); }
+.layerPopup.modal .pop-content.event .pop-body .swiper-button-prev,
+.layerPopup.modal .pop-content.event .pop-body .swiper-button-next { position:absolute !important; top:50%; transform:translate(0, -50%); width:var(--swiper-button-w); height:var(--swiper-button-h); border-radius:100%; background:var(--swiper-button-bg); text-align:center; }
+.layerPopup.modal .pop-content.event .pop-body .swiper-button-prev { left:var(--pos-abs) !important; }
+.layerPopup.modal .pop-content.event .pop-body .swiper-button-next { right:var(--pos-abs) !important; }
+.layerPopup.modal .pop-content.event .pop-body .swiper-button-prev::after,
+.layerPopup.modal .pop-content.event .pop-body .swiper-button-next::after { width:80%; color:var(--color-45); font-size:var(--swiper-button-fs); }
+.layerPopup.modal .pop-content.event .pop-footer { margin-top:0; padding-left:var(--modal-pd); padding-right:var(--modal-pd);}
+.layerPopup.modal .pop-content.event .pop-footer .button-content { justify-content:space-between; }
+.layerPopup.modal .pop-content.event .pop-footer .button-content button:last-of-type { font-weight:var(--font-w-b); }
+
+
 
 @media (max-width:1300px){
     body {
@@ -373,4 +392,31 @@ body:has(.main) .menu .menu-item .list-item { top:78px; }
 
     .main-container .main-content > .copyright { margin-bottom:0; }
     .main-container .main-content > .copyright .footer-top .family-site { position:unset; }
+
+
+    /**ÀÌº¥Æ® ÆË¾÷**/
+    .layerPopup.modal .pop-content.event {
+        --max-width:80%;
+        --content-pd:0;
+        --modal-pd:0;
+        --pos-abs:5%;
+        --brd:16px 16px 0 0;
+        --pagination-pd:3px 17px;
+        --pagination-pos-abs:24px;
+        --pagination-w:auto;
+        --pagination-h:24px;
+        --swiper-button-w:26px;
+        --swiper-button-h:26px;
+        --swiper-button-fs:px;
+
+    }
+
+   
+    .layerPopup.modal .pop-content.event .pop-body .swiper-button-prev::after,
+    .layerPopup.modal .pop-content.event .pop-body .swiper-button-next::after { width:80%;  }
+
+    .layerPopup.modal .pop-content.event .pop-footer .button-content { justify-content:space-between; }
+    .layerPopup.modal .pop-content.event .pop-footer .button-content button { flex:1; gap:0; padding:18px 0; }
+    .layerPopup.modal .pop-content.event .pop-footer .button-content button:last-of-type { font-weight:var(--font-w-m); border-left:1px solid var(--color-d); }
+
 }
