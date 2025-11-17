@@ -369,7 +369,7 @@ main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
 /** 개인(신용)정보 고객권리 신청 정보입력 **/
 .WCC80100VS fieldset { margin-bottom:72px; }
 .WCC80100VS fieldset + .table-content { padding-top:52px; border-top:1px solid var(--color-d); }
-.WCC80100VS .table-content td { padding:16px 16px 0 16px; border-bottom:0; }
+.WCC80100VS .table-content td { padding:16px 16px 0 16px; border-bottom:0; text-align:left; }
 .WCC80100VS .table-content tr:last-child td { padding:16px 16px 16px 16px; border-bottom:1px solid var(--color-d); }
 .WCC80100VS .table-content tr td label.check { margin-bottom:0; }
 .WCC80100VS .note-group { margin-top:52px; } /* 2025.10.27 추가 */
@@ -819,7 +819,6 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 
 /* 담보권해지신청 */
 .WCS40700VQ .btn-form { max-width:200px; }
-.WCS40700VQ .search-form input[type="text"].address { flex:0 0 325px; }
 
 /* 서류제출 */
 .WCS40800VQ .text-group:has(.btn-plus) { position:relative; }
