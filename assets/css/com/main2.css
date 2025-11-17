@@ -36,7 +36,7 @@ body:has(.main),
 
 .contentWrap:has(.main) { overflow-y:auto; overflow-x:hidden; }
 
-body:has(.main) .menu .menu-item .list-item { top:78px; }
+body:has(.main) .menu .menu-item .list-item { top:75px; }
 
 
 .mySwiper .swiper-slide[aria-hidden="true"] *,
