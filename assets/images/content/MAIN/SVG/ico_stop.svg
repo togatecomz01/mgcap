@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_레이어_2" data-name="레이어 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12 14">
+  <defs>
+    <style>
+      .cls-1 {
+        mask: url(#mask);
+      }
+
+      .cls-2 {
+        fill: #d9d9d9;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+    </style>
+    <mask id="mask" x="-6" y="-5" width="24" height="24" maskUnits="userSpaceOnUse">
+      <g id="a">
+        <path class="cls-2" d="M-6-5h24v24H-6V-5Z"/>
+      </g>
+    </mask>
+  </defs>
+  <g id="_레이어_1-2" data-name="레이어 1">
+    <g class="cls-1">
+      <path class="cls-3" d="M0,0h3v14H0V0ZM9,0h3v14h-3V0Z"/>
+    </g>
+  </g>
+</svg>
