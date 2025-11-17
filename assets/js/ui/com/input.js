@@ -266,56 +266,47 @@ ready, load, init
 })();*/
 
 
-
+//폰트사이즈 추가
 (function () {
-  // 모바일 전용 조건 (768px 이하에서만 실행)
-  if (window.matchMedia('(max-width: 768px)').matches === false) return;
+  const checkbox = document.getElementById('fontSizeToggle');
+  const html = document.documentElement;
+  const baseSize = parseFloat(window.getComputedStyle(html).fontSize);
 
-  var DELTA = -2;
+  function applyFontSize() {
+    const isMobile = window.innerWidth <= 768;
 
-  var SELECTORS = [
-    'body','p','li','dt','dd','th','td','caption',
-    'input','select','textarea','button','label',
-    'a','span','small','strong','em','code',
-    'h1','h2','h3','h4','h5','h6'
-  ].join(',');
+    if (isMobile) {
 
-  var checkbox = document.getElementById('fontSizeNormal');
-  if (!checkbox) return;
+      // 모바일에서는 기본 체크 ON 유지 (사용자 조작 전까지)
+      if (!checkbox.dataset.userChanged) {
+        checkbox.checked = true;
+      }
 
+      // 체크 해제 → baseSize - 2px
+      // 체크 O → baseSize + 2px
+      html.style.fontSize = checkbox.checked
+        ? (baseSize) + 'px'
+        : (baseSize - 2) + 'px';
 
-  function snapshotBase() {
-    document.querySelectorAll(SELECTORS).forEach(function(el){
-      if (el.dataset.fontBase) return;
-      var cs = window.getComputedStyle(el);
-      var px = parseFloat(cs.fontSize);
-      if (!isNaN(px)) el.dataset.fontBase = px;
-    });
+    } else {
+      // PC에서는 기본 사이즈 + 체크 해제
+      html.style.fontSize = baseSize + 'px';
+
+      if (!checkbox.dataset.userChanged) {
+        checkbox.checked = false;
+      }
+    }
   }
 
-  // delta(0 또는 -2)를 모든 대상에 반영
-  function applyDelta(delta) {
-    document.querySelectorAll(SELECTORS).forEach(function(el){
-      var base = parseFloat(el.dataset.fontBase);
-      if (isNaN(base)) return;
-      var next = base + delta;
-      if (next < 10) next = 10; // 최소 크기 제한
-      el.style.fontSize = next + 'px';
-    });
-  }
-
-  snapshotBase();
-  applyDelta(0);
-
-  checkbox.addEventListener('change', function(){
-    applyDelta(this.checked ? 0 : DELTA);
+  // 체크박스 조작 시 사용자 변경표시
+  checkbox.addEventListener('change', function () {
+    checkbox.dataset.userChanged = "true";
+    applyFontSize();
   });
 
-  var mo = new MutationObserver(function(){
-    snapshotBase();
-    applyDelta(checkbox.checked ? 0 : DELTA);
-  });
-  mo.observe(document.documentElement, { childList: true, subtree: true });
+  // 리사이즈 대응
+  window.addEventListener('resize', applyFontSize);
 
+  // 초기 적용
+  applyFontSize();
 })();
-

@@ -140,32 +140,107 @@ $(document).ready(function () {
         };
     })();
 
+
     /*---------------------------------------------
         Skip Navi 포커스 이동 모듈
     ---------------------------------------------*/
     var skipNaviL = (function () {
+
+        // 공통으로 타겟(main 영역) 찾는 함수
+        function getTarget($link) {
+            // 1) data-target 우선
+            var targetSelector = $link.data("target");
+            var $target = null;
+
+            if (targetSelector) {
+                $target = $(targetSelector);
+            }
+
+            // 2) data-target이 없거나 잘못된 경우: fallback
+            if (!$target || $target.length === 0) {
+                var fallbackSelectors = [
+                    ".page-container",
+                    ".contentWrap",
+                    ".bodyWrap",
+                    ".main",
+                    "main"
+                ];
+                for (var i = 0; i < fallbackSelectors.length; i++) {
+                    $target = $(fallbackSelectors[i]);
+                    if ($target.length > 0) {
+                        break;
+                    }
+                }
+            }
+
+            return ($target && $target.length > 0) ? $target.first() : null;
+        }
+
+        // 구조 보정: id, role, href 자동 부여
+        function enhanceStructure() {
+            var $link = $("#skipnavi a").first();
+            if (!$link.length) return;
+
+            var $target = getTarget($link);
+            if (!$target) return;
+
+            // 1) 타겟에 id 없으면 자동 부여
+            var id = $target.attr("id");
+            if (!id) {
+                id = "contentArea";
+                var i = 1;
+                // 혹시 같은 id가 이미 있으면 숫자 붙이기
+                while (document.getElementById(id)) {
+                    id = "contentArea" + (++i);
+                }
+                $target.attr("id", id);
+            }
+
+            // 2) 메인 랜드마크 없으면 role="main" 달아주기 (옵션)
+            if (!$target.is("main") && !$target.attr("role")) {
+                $target.attr("role", "main");
+            }
+
+            // 3) 스킵 링크 href도 진짜 앵커로 만들어주기
+            $link.attr("href", "#" + id);
+        }
+
         return {
             moveFocus: function () {
-                $("#skipnavi a").on("keydown", function (e) {
-                    if (e.keyCode === 13) {
-                        if (this.id === "gotoContentArea") {
-                            location.href = "#gotoContentArea";
 
-                            $("#gotoContentArea").attr("tabindex", "-1");
+                // 먼저 한 번 구조 보정
+                enhanceStructure();
 
-                            const homeLink = $(".home > a");
-                            if (homeLink.length > 0) {
-                                homeLink.focus();
-                            } else if ($(".shortcut-area > .btn-wrap > a").length > 0) {
-                                $(".shortcut-area > .btn-wrap > a").first().focus(); // 바로가기 버튼이 있을 때
-                            } else {
-                                $("#gotoContentArea").focus(); // fallback 포커스
-                            }
-                        } else if (this.id === "gnbFull") {
-                            location.href = "#gnbFull";
-                            $(".menu-list .menu-item > a").first().focus();
+                $("#skipnavi a").on("click keydown", function (e) {
+                    // 클릭 또는 Enter 키만 처리 (탭 키는 포커스만 받고 이동)
+                    if (e.type === "click" || e.keyCode === 13) {
+                        // 기본 동작 방지 (중복 점프 방지)
+                        e.preventDefault();
+
+                        var $link = $(this);
+                        var $target = getTarget($link);
+
+                        if (!$target) return;
+
+                        // 포커스 받을 수 있도록 tabindex가 없으면 붙여줌
+                        if (!$target.attr("tabindex")) {
+                            $target.attr("tabindex", "-1");
                         }
+
+                        // 스크롤 이동
+                        var targetOffset = $target.offset();
+                        if (targetOffset) {
+                            $("html, body").animate({
+                                scrollTop: targetOffset.top - 80 // 헤더 높이 고려
+                            }, 300);
+                        }
+
+                        // 포커스 이동 (스크롤 후에 약간 딜레이)
+                        setTimeout(function () {
+                            $target.focus();
+                        }, 100);
                     }
+
                 });
             },
 
@@ -173,7 +248,10 @@ $(document).ready(function () {
                 this.moveFocus();
             },
         };
+
     })();
+
+    
 
     /**
      * header on클래스 추가
