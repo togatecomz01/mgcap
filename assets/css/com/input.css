@@ -183,6 +183,8 @@ label.toggle input + span { font-size:0; }
 .search-form input[type="date"],
 .search-form select {  flex:0 0 208px; padding:0 16px; width:208px; min-height:48px; max-height:var(--form-height); line-height:48px; background-color:var(--white); border:1px solid var(--color-6); border-radius:6px;  font-size:var(--font16)  }
 .search-form label { margin-bottom:0; font-size:var(--font16); }
+
+.search-form .form-group:has(.address) input { flex:0 0 400px; }
 /**조건검색**/
 
 /** 공지사항 검색 **/
@@ -195,13 +197,16 @@ label.toggle input + span { font-size:0; }
 .noti-search input[type="search"],
 .noti-search input[type="date"],
 .noti-search select { flex:0 0 360px; padding:0 20px; width:306px; height:48px; max-height:48px; line-height:48px; border-radius:100px; font-size:var(--font16); }
-/*S: 2025.10.27 변경*/
 .noti-search .flex-end { gap:12px; }
 .noti-search select { flex:0 0 136px; width:136px; }
 .noti-search .search-row { position:relative; display:inline-block; }
-.noti-search input[type="search"] { padding-right:50px; background:none; }
+.search-form .group .form-group:has(.btn-search) > div { position:relative; }
+.search-form .group .form-group:has(.btn-search) input[type="search"],
+.noti-search input[type="search"] { padding-right:50px; background:none; background-color:var(--white); }
+.search-form .group .form-group:has(.btn-search) .btn-search,
 .noti-search .search-row .btn-search { position:absolute; top:50%; transform:translateY(-50%); right:20px; width:24px; height:24px; background:var(--ico-noti-search)no-repeat center center; background-size:24px; font-size:0; }
-/*E: 2025.10.27 변경*/
+.search-form .group .form-group:has(.btn-search) .btn-search { right:16px; }
+
 /** 공지사항 검색 **/
 
 /** 라디오 탭 **/
@@ -209,7 +214,7 @@ label.toggle input + span { font-size:0; }
 .tab-content > .form-wrap > .form-group.address > input { margin-top:10px; }
 
 /** 유효성체크 **/
-input[aria-invalid="true"] { border:1px solid var(--error); }
+input[aria-invalid="true"] { border:1px solid var(--error) !important; }
 input[aria-invalid="true"]:focus-visible,
 select[aria-invalid="true"]:focus-visible,
 .form-group:has(.error) input:focus-visible,
@@ -315,6 +320,7 @@ tr td .error,
     .form-content:has(.terms) .info-list .m-dot li { margin-top:10px; font-size:var(--font14); }
 
     /* 조건검색 */
+    .form-wrap.search-form.tab-list .form-group label.radio,
     .search-form label.radio { display:inline-flex; margin:0; padding:6px 24px 8px 0; }
     .search-form input[type="text"],
     .search-form input[type="password"],
@@ -326,6 +332,12 @@ tr td .error,
     .search-form select { flex:1; width:100%; }
     .form-wrap.search-form > .group > .form-group .ph input { width:91px; }
     .form-wrap.search-form > .group > .form-group .ph input[type="date"] { min-width:100px; width:100%; }
+    .form-wrap.search-form .tab-content > .group .form-group .mail,
+    .form-wrap.search-form > .group .form-group .mail { width:100%; }
+    .form-wrap.search-form .tab-content > .group .form-group .mail .ph,
+    .form-wrap.search-form > .group .form-group .mail .ph { gap:17px 4px; width:100%; }
+    .form-wrap.search-form .tab-content > .group .form-group .mail .ph select,
+    .form-wrap.search-form > .group .form-group .mail .ph select { flex:unset; }
 
     /** 공지사항 검색 **/
     .noti-search input[type="text"],

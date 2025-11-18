@@ -17,7 +17,7 @@ table{ border-top:1px solid var(--color-2); border-spacing:0; border-collapse: c
 table tr:first-of-type th,
 table tr:first-of-type td { border-top:var(--color-2); }
 table th,
-table td { padding:16px; text-align:center; color:var(--default-color); font-size:var(--font18); font-weight:var(--font-w-r); text-align:center; border-bottom:var(--table-border); }
+table td { padding:16px; text-align:center; color:var(--default-color); font-size:var(--font18); font-weight:var(--font-w-r); border-bottom:var(--table-border); }
 table th { background:var(--table-th); border-left:var(--table-border); font-size:var(--font20); font-weight:var(--font-w-b); color:var(--color-2); }
 table td { border-left:var(--table-border); }
 table.list td,
@@ -44,6 +44,7 @@ table.td-al td { text-align:left; }
 .total em { color:var(--color-2); font-weight:var(--font-w-b); }
 .total em span { color:var(--primary); }
 .caption { padding-bottom:20px; font-size:var(--font16); font-weight:var(--font-w-r); color:var(--color-6); text-align:right; }
+.form-content:has(.caption.total) { display:flex; align-items:center; }
 
 /* Å×ÀÌºí ÇªÅÍ */
 .table-content table tfoot tr:only-child,

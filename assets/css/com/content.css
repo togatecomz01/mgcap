@@ -154,7 +154,7 @@ main.contentWrap > .page-container.errorpage { padding-top:0; }
 /** 금융상품 공통 **/
 .visual-container.bg { position:relative; max-width:100%; }
 .visual-container.bg h2 { line-height:50px; }
-.visual-container.bg::before { content:""; position:absolute; top:-68px; display:block; width:100%; height:660px; background-color:#F7F9FF; z-index:-1; }
+.visual-container.bg::before { content:""; position:absolute; top:-68px; display:block; width:100%; height:647px; background-color:#F7F9FF; z-index:-1; }
 .finance-content {
     --gap:28px;
     --padding:42px 0 64px;
@@ -162,20 +162,22 @@ main.contentWrap > .page-container.errorpage { padding-top:0; }
     display:flex;
     justify-content:center;
     gap:var(--gap);
+    margin:0 auto;
     padding:var(--padding);
     width:100%;
+    max-width:965px;
 }
-.finance-group { padding:32px 10px; width:303px; border-radius:16px; background-color:var(--white); text-align:center; }
+.finance-group { padding:32px 26px; width:calc((100% - var(--gap) * 2) / 3); border-radius:16px; background-color:var(--white); text-align:center; }
 .finance-group dt,
 .finance-group dd { padding-bottom:10px; }
 .finance-group dt { font-size:var(--font20); }
-.finance-group dt::before { content:""; display:block; margin:0 auto 14px; width:var(--size36); height:var(--size36); background-repeat:no-repeat; background-size:var(--size36); background-position:center; }
-.finance-group dd { font-size:var(--font28); font-weight:var(--font-w-m); }
+.finance-group dt::before { content:""; display:block; margin:0 auto 16px; width:var(--size36); height:var(--size36); background-repeat:no-repeat; background-size:var(--size36); background-position:center; }
+.finance-group dd { font-size:var(--font26); font-weight:var(--font-w-m); }
 .finance-group > p { padding:0; font-size:var(--font18); color:var(--color-75); }
 
-.finance-content .finance-group:nth-child(1) dt:before { background-image:url("../../images/content/finance/w/ico_finance01.png"); }
-.finance-content .finance-group:nth-child(2) dt:before { background-image:url("../../images/content/finance/w/ico_finance02.png"); }
-.finance-content .finance-group:nth-child(3) dt:before { background-image:url("../../images/content/finance/w/ico_finance03.png"); }
+.finance-content .finance-group:nth-child(1) dt:before { background-image:url("../../images/content/finance/w/ico_finance03.png"); }
+.finance-content .finance-group:nth-child(2) dt:before { background-image:url("../../images/content/finance/w/ico_finance01.png"); }
+.finance-content .finance-group:nth-child(3) dt:before { background-image:url("../../images/content/finance/w/ico_finance02.png"); }
 
 /* 버튼 */
 .visual-container + .fi-bottom-container { padding-bottom:72px; }
@@ -195,13 +197,16 @@ main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
 
 /* 리스 이용시 장점 */
 .anchor-panel .anchor-group { display:flex; }
-.anchor-panel .anchor-group + .anchor-group{ margin-top:48px; }
+.anchor-panel .anchor-group + .anchor-group{ margin-top:52px; }
 .anchor-group p.tit { max-width:200px; width:100%; font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-2); }
 .anchor-group p { font-size:var(--font20); }
-.anchor-group li { margin-top:28px; font-size:var(--font20); }
+.anchor-group li { margin-top:20px; font-size:var(--font20); }
 .anchor-group li:first-of-type { margin-top:0; }
-.anchor-group li > span:not(.list-card li > span) { display:inline-block; margin-bottom:12px; font-weight:var(--font-w-m); }
+.anchor-group li > span:not(.list-card li > span, .anchor-group li > span:only-of-type) { display:inline-block; margin-bottom:12px; font-weight:var(--font-w-m); }
 .anchor-group li span > span { font-weight:var(--font-w-b); color:var(--primary); }
+.anchor-group li span + ul { margin-top:16px; }
+.anchor-group li .m-dot li { margin-top:12px; }
+.anchor-group li .m-dot li:first-child { margin-top:0; }
 .anchor-group li p { color:var(--color-6); }
 
 /* 리스 이용절차 */
@@ -211,15 +216,17 @@ main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
 .anchor-group .lease li p { font-size:var(--font14); color:var(--color-75); }
 
 /* list */
+.anchor-group p + .list-card { margin-top:20px; }
 .list-card { display:flex; flex-wrap:wrap; gap:24px; width:100%; }
 .list-card li { margin:0; padding:40px 20px; width:301px; height:253px; border:1px solid var(--color-d); border-radius:20px; text-align:center; }
 .list-card li::before { content:""; display:block; margin:0 auto 20px; width:65px; height:65px; background-repeat:no-repeat; background-size:65px; background-position:center; }
 .list-card li span { display:inline-block; margin-bottom:6px; font-size:var(--font20); font-weight:var(--font-w-b); color:var(--color-3); }
-.list-card li p { margin:0 auto; max-width:162px; font-size:var(--font16); color:var(--color-75); }
+.list-card li p { margin:0 auto; font-size:var(--font16); color:var(--color-75); }
 
-.list-card li:nth-child(1)::before { background-image:url("../../images/content/finance/w/ico_finance04.png") }
-.list-card li:nth-child(2)::before { background-image:url("../../images/content/finance/w/ico_finance05.png") }
-.list-card li:nth-child(3)::before { background-image:url("../../images/content/finance/w/ico_finance06.png") }
+.list-card li.rental::before { background-image:url("../../images/content/finance/w/ico_rental.png") }/* 월 렌탈료 납부 */
+.list-card li.expiration::before { background-image:url("../../images/content/finance/w/ico_expiration.png") } /* 원금균등분할상환 */
+.list-card li.divide::before { background-image:url("../../images/content/finance/w/ico_divide.png") } /* 원리금균등분할상환 */
+.list-card li.principal::before { background-image:url("../../images/content/finance/w/ico_principal.png") } /* 만기일시상환 */
 
 /*---------------------------------------------
     #소비자보호

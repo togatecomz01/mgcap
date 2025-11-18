@@ -58,51 +58,92 @@
                             <fieldset class="form-content">
                                 <legend>금융거래확인서 발급신청에 대한 조회</legend>
                                 <div class="form-wrap search-form">
-                                    <div class="form-group">
-                                        <p class="mo-tit">구분선택</p>
-                                        <label class="radio">
-                                            <input type="radio" name="use" value="" checked="">
-                                            <span>팩스</span>
-                                        </label>
-                                        <label class="radio">
-                                            <input type="radio" name="use" value="">
-                                            <span>이메일</span>
-                                        </label>
-                                        <label class="radio">
-                                            <input type="radio" name="use" value="">
-                                            <span>우편</span>
-                                        </label>
-                                    </div>
-                                    <div class="group">
+                                    <div class="tab-list">
                                         <div class="form-group">
-                                            <label>발급기준일</label>
-                                            <div>
-                                                <input id="date-input" type="date" name="date" placeholder="디폴트" />
+                                            <p class="mo-tit">구분선택</p>
+                                            <label class="radio tab-item" data-tab="radio-tab01">
+                                                <input type="radio" name="use" value="" checked="">
+                                                <span>팩스</span>
+                                            </label>
+                                            <label class="radio tab-item" data-tab="radio-tab02">
+                                                <input type="radio" name="use" value="">
+                                                <span>이메일</span>
+                                            </label>
+                                            <label class="radio tab-item" data-tab="radio-tab03">
+                                                <input type="radio" name="use" value="">
+                                                <span>우편</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="tab-content">
+                                        <div class="group" id="radio-tab01">
+                                            <div class="form-group">
+                                                <label>발급기준일</label>
+                                                <div>
+                                                    <input id="date-input" type="date" name="date" placeholder="디폴트" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="">제출기관</label>
+                                                <select required="" title="">
+                                                    <option value="" hidden="">선택</option>
+                                                    <option value="0">기관</option>
+                                                    <option value="1">기관</option>
+                                                    <option value="2">기관</option>
+                                                    <option value="0">기관</option>
+                                                    <option value="1">기관</option>
+                                                    <option value="2">기관</option>
+                                                </select>
+        
+                                                <label for="">제출기관명</label>
+                                                <input id="submit-name" type="text" name="submitName" placeholder="제출기관명" />
+                                                <label for="">제출용도</label>
+                                                <input id="purpose" type="text" name="purpose" placeholder="제출용도"/>
+                                            </div>
+                                            <div class="form-group ph">
+                                                <label>팩스 번호</label>
+                                                <div class="ph">
+                                                    <input id="fax-number" type="number" name="fax" placeholder="디폴트" />
+                                                    <input id="fax-number" type="number" name="fax" placeholder="디폴트" />
+                                                    <input id="fax-number" type="number" name="fax" placeholder="디폴트" />
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="">제출기관</label>
-                                            <select required="" title="">
-                                                <option value="" hidden="">선택</option>
-                                                <option value="0">기관</option>
-                                                <option value="1">기관</option>
-                                                <option value="2">기관</option>
-                                                <option value="0">기관</option>
-                                                <option value="1">기관</option>
-                                                <option value="2">기관</option>
-                                            </select>
-    
-                                            <label for="">제출기관명</label>
-                                            <input id="submit-name" type="text" name="submitName" placeholder="제출기관명" />
-                                            <label for="">제출용도</label>
-                                            <input id="purpose" type="text" name="purpose" placeholder="제출용도"/>
+                                        <div class="group" id="radio-tab02">
+                                            <!-- 이메일 -->
+                                            <div class="form-group">
+                                                <label for="phn-first">이메일</label>
+                                                <div class="flex-row mo-column mail">
+                                                    <div class="ph">
+                                                        <input id="mail-first" name="mail-first" type="text" value="abc">
+                                                        <span class="ipt-hyphen">@</span>
+                                                        <input id="mail-second" name="mail-second" type="text" value="gmail.com">
+                                                        <select id="mail-third" required="" title="">
+                                                            <option value="0">gmail.com</option>
+                                                            <option value="1">naver.com</option>
+                                                            <option value="3">hanmail.net</option>
+                                                            <option value="4">daum.net</option>
+                                                            <option value="5">nate.com</option>
+                                                        </select>
+                                                    </div>
+                                                </div><!--//flex-row-->
+                                            </div><!--//form-group-->
+                                            <!-- 이메일 -->
                                         </div>
-                                        <div class="form-group ph">
-                                            <label>팩스 번호</label>
-                                            <div class="ph">
-                                                <input id="fax-number" type="number" name="fax" placeholder="디폴트" />
-                                                <input id="fax-number" type="number" name="fax" placeholder="디폴트" />
-                                                <input id="fax-number" type="number" name="fax" placeholder="디폴트" />
+                                        <div class="group" id="radio-tab03">
+                                            <!-- 주소 -->
+                                            <div class="form-group">
+                                                <label for="">우편번호</label>
+                                                <div>
+                                                    <input id="address" type="search" name="address" placeholder="우편번호 검색" />
+                                                    <button type="button" class="btn-search">우편번호검색</button>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="">주소</label>
+                                                <input id="address" type="text" name="address" placeholder="주소" />
+                                                <label for="">상세주소</label>
+                                                <input id="detailed-address" type="text" class="address" name="detailed-address" placeholder="상세주소"/>
                                             </div>
                                         </div>
                                     </div>
