@@ -123,10 +123,12 @@
                                         <label for="mg-name">이름</label>
                                         <input id="mg-name" type="text" name="text" placeholder="이름을 입력해주세요">
                                     </div>
+                                    <!-- S : 25.11.17 기존 text 인풋 date로 type변경 -->
                                     <div class="form-group">
-                                        <label for="resident-1">생년월일</label>
-                                        <input id="resident-1" name="resident-1" type="text" inputmode="numeric" pattern="[0-9]{8}" maxlength="8" required placeholder="생년월일을 입력해주세요">
+                                        <label for="birthday">생년월일</label>
+                                        <input id="birthday" name="birthday" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD" required>
                                     </div>
+                                    <!-- E : 25.11.17 기존 text 인풋 date로 type변경 -->
                                 </div>
                                 <div class="form-wrap">
                                     <div class="form-group">
@@ -147,7 +149,7 @@
                                     <div class="form-group">
                                         <span class="form-label">인증번호</span>
                                         <div class="button-group">
-                                            <button class="btn-form">확인</button>
+                                            <button class="btn-form">인증번호 요청</button>
                                         </div>
                                     </div>
                                 </div>

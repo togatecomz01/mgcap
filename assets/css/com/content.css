@@ -542,25 +542,19 @@ main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
     #회사소개
 ---------------------------------------------*/
 /* 회사소개 - CEO 인사말 (WCA20100VQ)  */
-.WCA20100VQ .quote-content { padding-top: 0; }
 .WCA20100VQ .br-mo { display: none; }
-.WCA20100VQ .quote-group { padding: 10px 0; text-align: center; }
-.WCA20100VQ .quote-group blockquote { position: relative; display: inline-block; padding: 30px 0; }
-.WCA20100VQ .quote-group blockquote p { padding: 15px 0; font-size: var(--font28); line-height: 1.6; }
-.WCA20100VQ .quote-group blockquote strong { color: var(--primary); }
-.WCA20100VQ .quote-group blockquote::before,
-.WCA20100VQ .quote-group blockquote::after { content: ''; position: absolute; left: 50%; width: 80%; height: 30px; box-sizing: border-box; transform: translateX(-50%); }
-.WCA20100VQ .quote-group blockquote::before { top: 0; border-top: 4px solid var(--primary); border-right: 4px solid var(--primary); border-left: 4px solid var(--primary); }
-.WCA20100VQ .quote-group blockquote::after { bottom: 0; border-right: 4px solid var(--primary); border-bottom: 4px solid var(--primary); border-left: 4px solid var(--primary); }
-.WCA20100VQ .greeting-container{position:relative;left:50%;width:100vw;margin-left:-50vw;color:var(--white);background-image:url("../../images/content/about/w/bg_WCA20100.png");background-repeat:no-repeat;background-position:center bottom;background-size:cover;}
-.WCA20100VQ .greeting-group{max-width:1450px;margin:0 auto;box-sizing:border-box;display:flex;align-items:center;min-height:817px;}
-.WCA20100VQ .greeting-group::before{content:'';display:block;align-self:stretch;flex-basis:45%;background-image:url('../../images/content/about/w/pf_WCA20100.png');background-repeat:no-repeat;background-position:left bottom;background-size:640px 740px;}
-.WCA20100VQ .greeting-group .ceo-text{flex:1;box-sizing:border-box;position:relative;padding-bottom:100px;}
-.WCA20100VQ .greeting-group .ceo-text em{display:block;margin-bottom:52px;font-size:var(--font28);font-weight:var(--font-w-b);color:var(--white);}
-.WCA20100VQ .greeting-group .ceo-text p{margin:0 0 42px;font-size:var(--font20);font-weight:var(--font-w-r);color:var(--white);}
-.WCA20100VQ .greeting-group .signature{position:absolute;right:3%;bottom:0;text-align:right;}
-.WCA20100VQ .greeting-group .signature span{display:block;color:var(--white);}
-.WCA20100VQ .greeting-group .signature .signature-image{width:140px;height:100px;background-image:url("../../images/content/about/w/sg_WCA20100.png");background-size:contain;background-repeat:no-repeat;}
+.WCA20100VQ .quote-content {padding: 32px 0 72px 0;}
+.WCA20100VQ .quote-group blockquote p {font-size: var(--font32); font-weight: var(--font-w-b);}
+.WCA20100VQ .quote-group blockquote p span { color: var(--primary); }
+.WCA20100VQ .greeting-group {max-width: 1400px; margin: 0 auto; display: flex; gap: 60px;}
+.WCA20100VQ .greeting-group::before {content: ''; display: block; flex: 0 0 42%; max-width: 617px; min-height: 618px; background-image: url("../../images/content/about/w/pf_WCA20100.png"); background-repeat: no-repeat; background-size: contain; background-position: top;}
+.WCA20100VQ .greeting-group .ceo-text {flex: 1; position: relative; color: var(--color-2);}
+.WCA20100VQ .greeting-group .ceo-text em { display: block; margin-bottom: 28px; font-size: var(--font24); font-weight: var(--font-w-b); }
+.WCA20100VQ .greeting-group .ceo-text p { margin: 0 0 20px; font-size: var(--font18); color: var(--color-45); }
+.WCA20100VQ .greeting-group .ceo-text p strong { color: var(--primary); font-weight: var(--font-w-m); }
+.WCA20100VQ .greeting-group .signature { position: static; text-align: right; margin-top: 40px; }
+.WCA20100VQ .greeting-group .signature span { display: block; color: var(--color-45); margin-bottom: 10px; }
+.WCA20100VQ .greeting-group .signature .signature-image {width: 111px; height: 64px; margin-left: auto; background-image: url("../../images/content/about/w/sg_WCA20100.png"); background-size: contain; background-repeat: no-repeat; background-position: right bottom;}
 
 /******회사소개-회사개요**/
 .WCA10100VQ { text-align: center; }
@@ -656,6 +650,8 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCA90103VQ .tab-content + .text-group { margin-top:18px; }
 /* 회사소개 - 성희롱신고센터 (WCA90100VQ) */
 .WCA90100VQ strong+ol {margin-top: 18px;}
+.WCA90100VQ .point-r {color: #F00 !important;} 
+.WCA90100VQ .info-content .dot > li:last-child::before {background-color: #F00;}
 
 
 /* 회사소개 - 공시정보 (WCA50100VQ) + 신용평가(WCA50300VQ) */
@@ -932,25 +928,8 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     #회사소개
     ---------------------------------------------*/
     /* 회사소개 - ceo인사말 (WCA20100VQ) */
-    .WCA20100VQ { max-width: none !important; padding-left: 0 !important; padding-right: 0 !important }
-    .WCA20100VQ .tab-container .tab-list.depth1 {margin-bottom: 0;}
-    .WCA20100VQ div + div.bo-t0 {margin-bottom: 0;}
-    .WCA20100VQ .quote-content,
-    .WCA20100VQ .greeting-container {margin: 0 auto; padding-left: 24px; padding-right: 24px; box-sizing: border-box;}
-    .WCA20100VQ .br-mo {display: block}
-    .WCA20100VQ .quote-group {margin: 0 !important; font-weight: var(--font-w-m);}
-    .WCA20100VQ .quote-group blockquote::before,
-    .WCA20100VQ .quote-group blockquote::after {display: none;}
-    .WCA20100VQ .greeting-container { position: static; width: auto; margin: 0; background-image: none; padding-top: 0;}
-    .WCA20100VQ .greeting-group {  position: relative; display: block; min-height: auto; padding:500px 0 0 0; margin-top: 0 !important; margin-bottom: 0; gap: 0; }
-    .WCA20100VQ .greeting-group::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);width: 100vw; height: 500px; z-index: -1; background-image: url("../../images/content/about/w/bg_WCA20100.png"); background-size: cover; background-position: center;max-width: 1200px;}
-    .WCA20100VQ .greeting-group::after { content: ''; position: absolute; top: 50px; left: 50%; bottom: auto; width: 100%; height: 450px; background-image: url('../../images/content/about/w/pf_WCA20100.png'); background-repeat: no-repeat; background-size: contain; background-position: center bottom; transform: translateX(-50%); }
-    .WCA20100VQ .greeting-group .signature { position: absolute; top: 102%; right: 2%; bottom: auto; }
-    .WCA20100VQ .greeting-group .signature span { margin-bottom: 0; color: var(--color-45); }
-    .WCA20100VQ .greeting-group .signature .signature-image {width: 120px !important; background-image: url("../../images/content/about/m/sg_m_WCA20100.png"); background-size: contain; margin-top: 5px; margin-left: 15px; background-repeat: no-repeat;}
-    .WCA20100VQ .greeting-group .ceo-text { position: static; min-width: auto; width: 100%; padding: 52px 0 0; box-sizing: border-box; color: var(--color-2); }
-    .WCA20100VQ .greeting-group .ceo-text em {font-size: var(--font20); color: inherit; margin-bottom: 28px;}
-    .WCA20100VQ .greeting-group .ceo-text p {font-size: var(--font18); color: var(--color-45); margin-bottom: 20px;}
+    /* */
+    
 }
 
 @media (max-width:920px) {
@@ -1288,15 +1267,16 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
     /*---------------------------------------------
         #회사소개
     ---------------------------------------------*/
-    /* 회사소개-ceo인사말 */
-    main.contentWrap.WCA20100VQ {padding-bottom: 130px;}
-    .WCA20100VQ .quote-group {padding-top: 0;}
-    .WCA20100VQ .quote-group blockquote {padding-top: 0;}
-    .WCA20100VQ .greeting-group {padding:350px 0 0 0;}
-    .WCA20100VQ .greeting-group::before {height: 350px;}
-    .WCA20100VQ .greeting-group::after {height: 300px;}
-    .WCA20100VQ .greeting-group .signature-image { width: 100px !important; margin-top: 5px; margin-left: 15px; background-repeat: no-repeat; }
-    /******회사소개-회사개요**/
+    /* 회사소개 - CEO인사말 (WCA20100VQ) */
+    .WCA20100VQ .br-mo { display: block; }
+    .WCA20100VQ .quote-content {padding: 28px 0 35px 0;}
+    .WCA20100VQ .quote-group blockquote p { font-size: var(--font22); }
+    .WCA20100VQ .greeting-group {display: block;gap: 0;}
+    .WCA20100VQ .greeting-group::before {content: ''; display: block; position: relative; left: 50%; transform: translateX(-50%); margin-bottom: 35px; aspect-ratio: 1125 / 981; min-height: auto; background-image: url("../../images/content/about/m/pf_WCA20100.png");}
+    .WCA20100VQ .greeting-group .ceo-text em { font-size: var(--font20); }
+    .WCA20100VQ .greeting-group .ceo-text p { font-size: var(--font16); }
+    .WCA20100VQ .greeting-group .signature .signature-image {background-image: url("../../images/content/about/m/sg_WCA20100.png");width: 111px; height: 71px;}
+
     .WCA10100VQ h3 { font-size: var(--font32); font-weight: var(--font-w-m); margin-bottom: 220px; }
     .WCA10100VQ h3 .success { font-weight: var(--font-w-b); }
     .WCA10100VQ h3::after { position: absolute; left: 50%; transform: translateX(-50%); margin: 28px 0 20px 0; width: 100%; height: 173px; }
