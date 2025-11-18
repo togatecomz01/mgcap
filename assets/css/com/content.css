@@ -550,8 +550,8 @@ main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
 ---------------------------------------------*/
 /* 회사소개 - CEO 인사말 (WCA20100VQ)  */
 .WCA20100VQ .br-mo { display: none; }
-.WCA20100VQ .quote-content {padding: 32px 0 72px 0;}
-.WCA20100VQ .quote-group blockquote p {font-size: var(--font32); font-weight: var(--font-w-b);}
+.page-container.WCA20100VQ > div + div {margin: 0; padding: 0;}
+.WCA20100VQ .quote-group blockquote p {font-size: var(--font32); font-weight: var(--font-w-b); padding-top: 32px;}
 .WCA20100VQ .quote-group blockquote p span { color: var(--primary); }
 .WCA20100VQ .greeting-group {max-width: 1400px; margin: 0 auto; display: flex; gap: 60px;}
 .WCA20100VQ .greeting-group::before {content: ''; display: block; flex: 0 0 42%; max-width: 617px; min-height: 618px; background-image: url("../../images/content/about/w/pf_WCA20100.png"); background-repeat: no-repeat; background-size: contain; background-position: top;}
@@ -569,10 +569,11 @@ main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
 .WCA10100VQ h3 { line-height: 150%; font-size: var(--font32); }
 .WCA10100VQ h3::after { content:""; display: block; margin: 32px 0; width: 100%; height: 268px; background: url("../../images/content/about/w/main_WCA10100VQ.png") no-repeat center; background-size: cover; }
 .WCA10100VQ .text-content { padding-top: 0; }
+
 .WCA10100VQ .text-group p { margin-top: 0; font-size: var(--font20); font-weight: var(--font-w-m); line-height: 150%; }
 /* info-cards */
-.WCA10100VQ .info-cards { display: flex; justify-content: center; align-items: stretch; gap: 64px; padding: 100px 132px 100px 132px; margin: 0 auto; }
-.WCA10100VQ .info-card { position: relative; width: calc((100% - 64px * 2) / 3); min-width: 180px; flex: 1; display: flex; flex-direction: column; justify-content: stretch; }
+.WCA10100VQ .info-cards { display: flex; justify-content: center; align-items: stretch; gap: 64px; padding: 100px 132px 28px 132px; margin: 0 auto; border-bottom: var(--border);}
+.WCA10100VQ .info-card { position: relative; width: calc((100% - 64px * 2) / 3); min-width: 180px; flex: 1; display: flex; flex-direction: column; justify-content: stretch;}
 .WCA10100VQ .info-card dl {flex: 1; padding: 68px 26px 58px 26px; border: var(--board); height: 100%; box-sizing: border-box;}
 /* .WCA10100VQ .info-card dl::before { content: "0"counter(item); counter-increment: item; position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center;
 width: 40px; height: 40px; background: var(--primary); color: var(--white); font-size: var(--font20); font-weight: var(--font-w-b); } */
@@ -582,7 +583,7 @@ width: 40px; height: 40px; background: var(--primary); color: var(--white); font
 .WCA10100VQ .info-card dt { font-size: var(--font20); font-weight: var(--font-w-b); }
 .WCA10100VQ .info-card dd { color: var(--color-6); font-size: var(--font18); font-weight: var(--font-w-r); }
 /* button-content */
-.WCA10100VQ.page-container:has(.tab-list.depth1) .button-content {padding:80px 0 22px 0; border-top: var(--board);}
+.WCA10100VQ.page-container:has(.tab-list.depth1) .button-content {padding:80px 0 22px 0; }
 .WCA10100VQ .button-content .lnk-group { display: flex; flex-wrap: wrap; gap: 40px; }
 .WCA10100VQ .button-content .lnk-group a { box-sizing: border-box; height: 202px; display: flex; align-items: center; justify-content: center; flex: 1 1 calc(50% - 20px); border-radius: 16px;
 color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); background-size: cover; background-repeat: no-repeat; background-position: center; }
@@ -600,13 +601,14 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCA30100VQ .text-content p span { color: var(--primary); }
 .WCA30100VQ .history-group { display: flex; align-items: flex-start; gap: 160px; border-top: 1px solid #000000; margin-top: 80px;}
 .WCA30100VQ .history-range { flex: 0 0 350px; text-align: center; margin-top: 50px;}
-.WCA30100VQ .history-range .sub-title { font-size: var(--font22); font-weight: var(--font-w-m); color: var(--color-9); margin-bottom: 10px; }
+.WCA30100VQ .history-range .sub-title { font-size: var(--font22); font-weight: var(--font-w-m); color: var(--color-45); margin-bottom: 10px; }
 .WCA30100VQ .history-range .main-title { font-size: 52px; font-weight: var(--font-w-b); }
 .WCA30100VQ .timeline-list {margin-top: 50px;}
 .WCA30100VQ .timeline-list li { position: relative; }
 .WCA30100VQ .timeline-list li:not(:last-child) { margin-bottom: 90px; }
 .WCA30100VQ .timeline-list li::before { content: ''; position: absolute; top: 15px; left: -36px; width: 10px; height: 10px; background-color: var(--color-3); border-radius: 50%; z-index: 2; }
 .WCA30100VQ .timeline-list li::after { content: ''; position: absolute; left: -33px; width: 4px; background-color: #e0e0e0; z-index: 1; top: 35px; bottom: -90px; }
+.WCA30100VQ .timeline-list li:last-child::after {bottom:0px;}
 .WCA30100VQ .timeline-list dt { font-size: var(--font32); font-weight: var(--font-w-b); margin-bottom: 34px; padding-left: 80px; }
 .WCA30100VQ .timeline-list dd { display: flex; padding-left: 80px; font-size: var(--font22);}
 .WCA30100VQ .timeline-list dd:not(:last-of-type) { margin-bottom: 19px; }
@@ -922,6 +924,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 @media (max-width: 1448px) {
     .WCA10100VQ.page-container:has(.tab-list.depth1) > :not(.tab-container) { padding-left:24px; padding-right:24px }
     .WCR10400VQ.page-container:has(.tab-list.depth1) > .text-content, .WCR10400VQ.page-container:has(.tab-list.depth1) > .jsTab, .WCR10400VQ.bottom-container > .note-content { padding-left:24px; padding-right:24px }
+    .WCA20100VQ .greeting-group {padding: 0 24px;}
 }
 
 @media (max-width:1200px){
@@ -1287,34 +1290,39 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
         #회사소개
     ---------------------------------------------*/
     /* 회사소개 - CEO인사말 (WCA20100VQ) */
+    .WCA20100VQ {overflow-x: hidden;}
     .WCA20100VQ .br-mo { display: block; }
     .WCA20100VQ .quote-content {padding: 28px 0 35px 0;}
     .WCA20100VQ .quote-group blockquote p { font-size: var(--font22); }
     .WCA20100VQ .greeting-group {display: block;gap: 0;}
-    .WCA20100VQ .greeting-group::before {content: ''; display: block; position: relative; left: 50%; transform: translateX(-50%); margin-bottom: 35px; aspect-ratio: 1125 / 981; width: 100vw; min-height: auto; background-image: url("../../images/content/about/m/pf_WCA20100.png");}
-    .WCA20100VQ .greeting-group .ceo-text em { font-size: var(--font20); }
-    .WCA20100VQ .greeting-group .ceo-text p { font-size: var(--font16); }
+    .WCA20100VQ .greeting-group::before {content: ''; display: block; position: relative; left: 50%; transform: translateX(-50%);  margin-bottom: 35px; aspect-ratio: 1125 / 981; width: 100.2vw; max-width: 767px; min-height: auto; background-image: url("../../images/content/about/m/pf_WCA20100.png");}
+    .WCA20100VQ .greeting-group .ceo-text em { font-size: var(--font20); word-break: break-word;}
+    .WCA20100VQ .greeting-group .ceo-text p { font-size: var(--font16); word-break: break-word; line-height: 24px;}
+    .WCA20100VQ .greeting-group .signature {margin-top: 20px;}
     .WCA20100VQ .greeting-group .signature .signature-image {background-image: url("../../images/content/about/m/sg_WCA20100.png");width: 111px; height: 71px;}
 
     .WCA10100VQ h3 { font-size: var(--font22); font-weight: var(--font-w-m); margin-top: 52px; margin-bottom: 220px; }
     .WCA10100VQ h3 .success { font-weight: var(--font-w-b); }
     .WCA10100VQ h3::after { position: absolute; left: 50%; transform: translateX(-50%); margin: 28px 0 20px 0; width: 100%; height: 173px; }
-    .WCA10100VQ .text-group p { font-size: var(--font18); font-weight: var(--font-w-r) }
+    .WCA10100VQ .text-group p {padding: 0 24px; font-size: var(--font18); font-weight: var(--font-w-r);}
     .WCA10100VQ .info-card h4 {padding: 0 24px; font-size: var(--font18);}
+    .WCA10100VQ.page-container:has(.tab-list.depth1) > :not(.tab-container) { padding-left:0; padding-right:0; }
     /* info-cards */
-    .WCA10100VQ .info-cards { flex-direction: column; padding: 52px 0 42px 0; gap: 36px; }
+    .WCA10100VQ .info-cards { flex-direction: column; padding: 52px 24px 0 24px; gap: 36px; }
     .WCA10100VQ .info-card { width: 100%; }
     .WCA10100VQ .info-card dl {padding: 48px 26px 30px 26px;}
     .WCA10100VQ .info-card dt { font-size: var(--font18); }
     .WCA10100VQ .info-card dd { font-size: var(--font16); }
     /* button-content */
-    .WCA10100VQ.page-container:has(.tab-list.depth1) .button-content { padding:32px 0 24px; }
+    
+    .WCA10100VQ.page-container:has(.tab-list.depth1) .button-content { margin: 0 24px 24px 24px; padding-top:32px; border-top: var(--board);}
     .WCA10100VQ .button-content .lnk-group { display: block; }
     .WCA10100VQ .button-content .lnk-group a { height: 102px; font-size: var(--font22) }
     .WCA10100VQ .button-content .lnk-group a+a { margin-top: 20px; }
     main.contentWrap:has(.WCA10100VQ){padding-bottom:6px;}
 
     /* 회사소개 - 회사연혁 (WCA30100VQ) */
+    .WCA30100VQ .text-content.bo-t0 {padding:0 24px;}
     .WCA30100VQ .history-group .history-range{display:none}
     .WCA30100VQ .history-group{margin-top: 42px; gap:0; border: none;}
     .WCA30100VQ .text-group p { margin-top: 0; }
@@ -1332,6 +1340,8 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCA30100VQ .timeline-list dd:not(:last-of-type) {margin-bottom: 40px;}
     .WCA30100VQ .timeline-list .date{margin-bottom:12px;color:var(--color-2)}
     .WCA30100VQ .pc-only {display: none;}
+    .WCA30100VQ .timeline-list li:not(:last-child) {margin-bottom: 60px;}
+    .WCA30100VQ .timeline-list li::after { bottom: -60px; }
     /** 조직도 **/
     .WCA40100VQ .img-box img { content:url("../../images/content/about/m/img_organization.png"); }
 
