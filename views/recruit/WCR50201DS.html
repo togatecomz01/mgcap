@@ -58,9 +58,9 @@
                             <h3>개인정보 수집 이용 동의 및 본인인증</h3>
                             <!-- s : 25.11.12 클래스 수정 -->
                             <ul class="diamond-box">
-                                <li>MG캐피탈은 개인정보를 관리함에 있어서「개인정보보호법」및 관계 법령에 따라 입사지원자의 개인정보를 수집하고 있습니다.</h4></li>
-                                <li>채용과 관련된 귀하의 개인정보 수집 및 이용과 관련하여 다음의 몇 가지 사항을 안내하여 드리오니, 관련 내용을 숙지하신 후 해당 내용에 동의하여 주시기 바랍니다.</h4></li>
-                                <li>귀하께서는 동의를 거부할 권리가 있으며, 채용에 필요한 최소한의 개인정보 수집이 불가능할 경우에는 정상적인 채용 절차가 진행되지 않을 수 있음을 알려드립니다.</h4></li>
+                                <li>MG캐피탈은 개인정보를 관리함에 있어서「개인정보보호법」및 관계 법령에 따라 입사지원자의 개인정보를 수집하고 있습니다.></li>
+                                <li>채용과 관련된 귀하의 개인정보 수집 및 이용과 관련하여 다음의 몇 가지 사항을 안내하여 드리오니, 관련 내용을 숙지하신 후 해당 내용에 동의하여 주시기 바랍니다.</li>
+                                <li>귀하께서는 동의를 거부할 권리가 있으며, 채용에 필요한 최소한의 개인정보 수집이 불가능할 경우에는 정상적인 채용 절차가 진행되지 않을 수 있음을 알려드립니다.</li>
                             </ul>
                             <!-- e : 25.11.12 클래스 수정 -->
                         </div>
@@ -126,14 +126,16 @@
                                     <!-- S : 25.11.17 기존 text 인풋 date로 type변경 -->
                                     <div class="form-group">
                                         <label for="birthday">생년월일</label>
-                                        <input id="birthday" name="birthday" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD" required>
+                                        <div class="date-wrap w-100p">
+                                            <input id="birthday" name="birthday" type="date" class="js-cal js-cal-date" placeholder="YYYY-MM-DD">
+                                        </div>
                                     </div>
                                     <!-- E : 25.11.17 기존 text 인풋 date로 type변경 -->
                                 </div>
                                 <div class="form-wrap">
                                     <div class="form-group">
-                                        <label for="mg-gender">성별</label>
-                                        <div class="flex-row">
+                                        <p class="label-tit">성별</p>
+                                        <fieldset>
                                             <label class="radio">
                                                 <input type="radio" id="male" name="mg-gender" value="male" checked>
                                                 <span>남자</span>
@@ -142,15 +144,13 @@
                                                 <input type="radio" id="female" name="mg-gender" value="female">
                                                 <span>여자</span>
                                             </label>
-                                        </div>
+                                        </fieldset>
                                     </div>
                                 </div>
                                 <div class="form-wrap">
                                     <div class="form-group">
-                                        <span class="form-label">인증번호</span>
-                                        <div class="button-group">
-                                            <button class="btn-form">인증번호 요청</button>
-                                        </div>
+                                        <p class="label-tit">본인인증</p>
+                                        <button type="button" class="btn-form mw-100p">인증번호 요청</button>
                                     </div>
                                 </div>
                             </fieldset>
