@@ -687,9 +687,13 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 /* 회사소개 - 입사지원 동의 */
 
 /* 입사지원서 작성 */
+.recruitment [class*="-content"] * ~ h3 { margin-top:0; }
+.recruitment h4 { font-size:var(--font22); }
 .recruitment {
     --no-photo:url("../../images/content/recruit/profile.png") no-repeat;
 }
+.recruitment table.td-l td { border-left:var(--table-border); }
+.recruitment td .date-wrap { display:flex; }
 .recruitment .group td { text-align:left; }
 .recruitment .group form .table-group { margin-bottom:52px; position:relative; }
 .recruitment .group form .table-group th label { font-weight:var(--font-w-b); }
@@ -719,9 +723,13 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .recruitment span.ipt-clear.txt-unit span.txt { position:absolute; right:16px; top:50%; transform:translate(0, -50%); }
 .recruitment span.ipt-clear.txt-unit:has(.btn-clear) span.txt { right:40px; }
 
+.recruitment .group .form-content .table-group:last-child { margin-bottom:72px; }
+.recruitment .group .form-content + .form-content { border-top:1px solid var(--color-d); }
+.recruitment .group .form-content + .form-content h3 { margin-top:56px; }
 .recruitment .group.step2 .form-group.abs { position:absolute; top:-16px; right:0; z-index:2; }
 .recruitment .group.step4 .form-group { margin-bottom:52px; }
 .recruitment .group.step4 .form-group:last-of-type { margin-bottom:0; }
+.recruitment .group.step4 textarea { min-height:268px; }
 
 .recruitment .preview-cta { display:none; }
 .recruitment .preview-cta .text-content p { font-size:var(--font28); font-weight:var(--font-w-b);  }
@@ -733,6 +741,9 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 
 
 /* 입사지원서 조회 */
+main:has(.WCR50204VQ_0) .visual-container h2 { padding-bottom:50px; }
+main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
+
 .WCR50204VQ .form-group.abs { display:none; }
 .WCR50204VQ .group form .table-group label:has(input[type=radio]) input { position:absolute; top:-5000px; width:1px; height:1px; opacity:0; }
 .WCR50204VQ .group form .table-group label:has(input[type=radio]:disabled) { display:none; }

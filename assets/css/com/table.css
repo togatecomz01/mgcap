@@ -20,6 +20,8 @@ table th,
 table td { padding:16px; text-align:center; color:var(--default-color); font-size:var(--font18); font-weight:var(--font-w-r); text-align:center; border-bottom:var(--table-border); }
 table th { background:var(--table-th); border-left:var(--table-border); font-size:var(--font20); font-weight:var(--font-w-b); color:var(--color-2); }
 table td { border-left:var(--table-border); }
+table.list td,
+table.td-l td { border-left:0; }
 table td:first-child { border-left:0; }
 table th:first-of-type,
 table td:first-of-type { border-left:0; }
@@ -27,9 +29,7 @@ table .bor-l { border-left:var(--table-border) !important; }
 table .bor-r { border-right:var(--table-border) !important; }
 table th { font-size:var(--font20); }
 table th label { font-weight:var(--font-w-b); }
-
 table td.title { text-align:left; }
-
 
 table tbody th { border-right:var(--table-border); }
 
@@ -40,6 +40,9 @@ table.td-al td { text-align:left; }
 .table-group + .m-dot { margin-top:-22px; }
 
 /* 테이블 위에 텍스트 */
+.total { padding-bottom:20px; font-size:var(--font16); font-weight:var(--font-w-r); color:var(--color-6); text-align:left; }
+.total em { color:var(--color-2); font-weight:var(--font-w-b); }
+.total em span { color:var(--primary); }
 .caption { padding-bottom:20px; font-size:var(--font16); font-weight:var(--font-w-r); color:var(--color-6); text-align:right; }
 
 /* 테이블 푸터 */
