@@ -250,13 +250,15 @@ tr td .error,
 /*.date-wrap input[type="date"],
 .date-wrap input[type="month"] { padding-right:54px; background-image:var(--form-date-ico); background-size:18px; background-repeat:no-repeat; background-position:right 14px center; }*/
 
-.date-wrap input[type="date"]::-webkit-calendar-picker-indicator { width:18px; height:18px; background:var(--form-date-ico) no-repeat center/18px 18px; opacity:1; cursor:pointer; filter:none; }
-.date-wrap input[type="date"] { appearance:none; -webkit-appearance:none; padding-right:16px; }
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="month"]::-webkit-calendar-picker-indicator { width:18px; height:18px; background:var(--form-date-ico) no-repeat center/18px 18px; opacity:1; cursor:pointer; filter:none; }
+input[type="date"],
+input[type="month"] { appearance:none; -webkit-appearance:none; padding-right:16px; }
 
 
 
 .date-wrap:has(button) input {  background:transparent; }
- input[type="month"]+ button,
+input[type="month"]+ button,
  input[type="date"] + button { position:absolute; right:10px; top:50%; transform:translate(0, -50%); z-index:2; display:block; width:24px; height:24px; font-size:0; background-image:var(--form-date-ico); background-size:18px; background-repeat:no-repeat;; background-position:center; }
 .date.is-open,
 .date[aria-expanded="true"] { border:1px solid var(--form-active); outline:2px solid var(--form-active); outline-offset:4px; z-index:2;  }

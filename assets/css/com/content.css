@@ -152,9 +152,12 @@ main.contentWrap > .page-container.errorpage { padding-top:0; }
     #금융상품
 ---------------------------------------------*/
 /** 금융상품 공통 **/
-.visual-container.bg { position:relative; max-width:100%; }
-.visual-container.bg h2 { line-height:50px; }
-.visual-container.bg::before { content:""; position:absolute; top:-68px; display:block; width:100%; height:647px; background-color:#F7F9FF; z-index:-1; }
+.contentWrap.finance .location-container,
+.contentWrap.finance .visual-container { max-width:100%; background-color:#F7F9FF; }
+.contentWrap.finance .visual-container { padding-bottom:72px; }
+.contentWrap.finance .visual-container h2 { line-height:50px; }
+.contentWrap.finance .page-container + .bottom-container { display:none; }
+
 .finance-content {
     --gap:28px;
     --padding:42px 0 64px;
@@ -179,23 +182,22 @@ main.contentWrap > .page-container.errorpage { padding-top:0; }
 .finance-content .finance-group:nth-child(2) dt:before { background-image:url("../../images/content/finance/w/ico_finance01.png"); }
 .finance-content .finance-group:nth-child(3) dt:before { background-image:url("../../images/content/finance/w/ico_finance02.png"); }
 
-/* 버튼 */
-.visual-container + .fi-bottom-container { padding-bottom:72px; }
-
 /* 엥커이동 */
-main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
 .anchor-list { margin:0 auto; max-width:1400px; width:100%; }
+.anchor-list.fixed { position: static; }
 .anchor-list .btn-group { display:flex; justify-content:center; width:100%; }
 .anchor-list .btn-group button { display:inline-block; padding:8px; width:calc(100% / 3); border:1px solid var(--color-d); font-size:var(--font24); font-weight:var(--font-w-b); color:var(--color-9); text-align:center; line-height:67px; }
 .anchor-list .btn-group button.active { border-top:2px solid var(--primary); border-bottom:0; color:var(--primary); }
 
-.anchor-panel { padding:72px 0; }
+.anchor-content { padding-top:20px; }
+.anchor-panel { padding:52px 0 72px; }
+.anchor-panel:last-child { padding-bottom:0; }
 .anchor-panel + .anchor-panel { border-top:1px solid var(--color-d); }
 .anchor-panel .text-content li { padding-top:32px; font-size:var(--font20); }
 .anchor-panel .text-content li.error { padding-top:12px; }
 .anchor-panel .text-content li:first-of-type.error { padding-top:0; }
 
-/* 리스 이용시 장점 */
+/* 상품소개 */
 .anchor-panel .anchor-group { display:flex; }
 .anchor-panel .anchor-group + .anchor-group{ margin-top:52px; }
 .anchor-group p.tit { max-width:200px; width:100%; font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-2); }
@@ -208,8 +210,9 @@ main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
 .anchor-group li .m-dot li { margin-top:12px; }
 .anchor-group li .m-dot li:first-child { margin-top:0; }
 .anchor-group li p { color:var(--color-6); }
+.anchor-group .table-content .table-group .caption { padding:26px 0 20px; font-size:var(--font20); color:var(--color-45); text-align:left; }
+.anchor-group .table-content .table-group .rfrnc { margin-top:20px; font-size:var(--font16); }
 
-/* 리스 이용절차 */
 .anchor-group .lease_process { padding:38px 38px 39px 40px; max-width:881px; width:100%; height:310px; border:1px solid var(--color-d); border-radius:12px; background:url("../../images/content/finance/w/procedures01.png")no-repeat center; background-size:auto 233px; }
 .anchor-group .lease { display:none; }
 .anchor-group .lease li span { font-size:var(--font18); }
@@ -227,6 +230,15 @@ main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
 .list-card li.expiration::before { background-image:url("../../images/content/finance/w/ico_expiration.png") } /* 원금균등분할상환 */
 .list-card li.divide::before { background-image:url("../../images/content/finance/w/ico_divide.png") } /* 원리금균등분할상환 */
 .list-card li.principal::before { background-image:url("../../images/content/finance/w/ico_principal.png") } /* 만기일시상환 */
+
+/* 유의사항 */
+.anchor-panel .info-content .note-group { border:1px solid #41C7F4; }
+.anchor-panel .info-content .diamond-box p > span { font-weight:var(--font-w-m); }
+
+/* 준법감시심의필 */
+.page-container > .anchor-container + .text-content:has(.compliance-box) { padding-top:24px; margin-bottom:0; border-top:0; }
+.compliance-box { display:flex; justify-content:space-between; align-items:center; }
+.compliance-box li { font-size:var(--font16); color:var(--color-75); }
 
 /*---------------------------------------------
     #소비자보호
@@ -320,8 +332,8 @@ main.contentWrap > .fi-bottom-container + .page-container { padding-top:72px; }
 .WCU11000VQ .img-list li:nth-child(5)::before { background:url("../../images/content/custportal/w/prt_013_03.png")no-repeat 50%/180px auto; }
 
 .WCU11000VQ .process-content .tit { margin-bottom:0; }
-.WCU11000VQ .process-content .text-list li { display:block; padding-top:12px; }
-.WCU11000VQ .process-content .text-list li:first-of-type { padding-top:0; }
+.WCU11000VQ .process-content .text-list li { display:block; padding-top:0; margin-bottom:12px; }
+.WCU11000VQ .process-content .text-list li:last-of-type { margin-bottom:0; }
 
 /** 유용한 정보 **/
 .WCU11001VQ .btn-group.w50 .btn-link:first-of-type { margin-top:0; background-image:url("../../images/content/custportal/w/ico_hand.png"); }
@@ -714,7 +726,7 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .recruitment .photo-content dl { flex:1; }
 .recruitment .photo-content dt { margin-bottom:18px; font-weight:var(--font-w-b); text-align:left;  }
 .recruitment .photo-content dt.rfrnc::before { content:"※"; margin-right:3px; }
-.recruitment .photo-content dd { margin-bottom:10px; font-size:var(--font-16); text-align:left; }
+.recruitment .photo-content dd { margin-bottom:10px; font-size:var(--font16); text-align:left; }
 .recruitment .photo-content dd:nth-of-type(2) { margin-bottom:24px; }
 .recruitment .img-photo { border:1px solid var(--color-d); }
 .recruitment .upload-label { display:block; }
@@ -838,8 +850,10 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 .WCS40700VQ .btn-form { max-width:200px; }
 
 /* 서류제출 */
+.WCS40800VQ h3 { font-size:var(--font22); }
 .WCS40800VQ .text-group:has(.btn-plus) { position:relative; }
 .WCS40800VQ .btn-plus { position:absolute; top:4px; right:0; margin-top:0; width:33px; height:33px; border:var(--board); background:url("../../images/com/svg/ico_plus.svg")no-repeat center; }
+.WCS40800VQ .table-group form { margin-top:0; }
 .WCS40800VQ th label { margin-bottom:0; font-weight:var(--font-w-b); color:var(--color-2); }
 .WCS40800VQ td > input[type="text"],
 .WCS40800VQ td > input[type="password"],
@@ -929,20 +943,6 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 
 @media (max-width:1200px){
     /*---------------------------------------------
-    #금융상품
-    ---------------------------------------------*/
-    .visual-container.bg::before { height:565px; }
-    
-    .finance-content {
-        --gap:12px;
-    }
-    .finance-content .finance-group { padding:16px 10px; width:250px; border-radius:12px; }
-    .finance-content .finance-group dt { position:relative; display:inline-block; font-size:var(--font18); }
-    .finance-content .finance-group dd { padding-bottom:5px; font-size:var(--font20); }
-    .finance-content .finance-group p { font-size:var(--font16); }
-
-    .visual-container + .fi-bottom-container { padding-bottom:34px; }
-    /*---------------------------------------------
     #고객센터
     ---------------------------------------------*/
     .WCC30110VQ td.title { max-width:300px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
@@ -955,6 +955,20 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 }
 
 @media (max-width:920px) {
+    /*---------------------------------------------
+    #금융상품
+    ---------------------------------------------*/
+    .visual-container.bg::before { height:565px; }
+    
+    .finance-content {
+        --gap:12px;
+    }
+    .finance-content .finance-group { padding:16px 10px; width:250px; border-radius:12px; }
+    .finance-content .finance-group dt { position:relative; display:inline-block; font-size:var(--font18); }
+    .finance-content .finance-group dd { padding-bottom:5px; font-size:var(--font20); }
+    .finance-content .finance-group p { font-size:var(--font16); }
+
+
      /*---------------------------------------------
         #고객센터
     ---------------------------------------------*/
@@ -1005,45 +1019,53 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
         #금융상품
     ---------------------------------------------*/
     /** 금융상품 공통 **/
-    .visual-container.bg { padding:0; }
-    .visual-container.bg::before { top:0; }
-    .visual-container.bg h2 { line-height:29px; }
-    .visual-container.bg p { font-size:var(--font16); }
+    .contentWrap.finance .visual-container { /*position:sticky; top:54px; z-index:1;*/ padding-bottom:38px; }
+    .contentWrap.finance .visual-container h2 { line-height:29px; }
+    .contentWrap.finance .visual-container p { font-size:var(--font16); }
+    .contentWrap.finance .page-container,
+    .contentWrap.finance .bottom-container { position:relative; top:54px; z-index:11; background:var(--white); }
+    /* .contentWrap.finance .page-container { box-shadow:0 0 15px 0 rgb(215 217 230); } */
+    /* .contentWrap.finance .page-container,
+    .contentWrap.finance .bottom-container { position:relative; background-color:var(--white); z-index:10; } */
+    .contentWrap.finance .visual-container.sticky { position:sticky; top:54px; z-index:10; }
+    /* .contentWrap.finance .visual-container.sticky + .page-container {position:relative; background-color:var(--white); z-index:10; } */
+    .contentWrap.finance .page-container + .bottom-container { display:block; margin-top:0; padding-top:52px; }
+
     .finance-content {
         --gap:18px;
         --padding:32px 24px 32px;
         --size36:24px;
         flex-direction:column;
     }
-    .finance-content .finance-group { padding:16px 10px; width:100%; border-radius:12px; }
-    .finance-content .finance-group dt { position:relative; display:inline-block; padding-left:34px; font-size:var(--font18); }
+    .finance-content .finance-group { padding:16px 24px; width:100%; border-radius:12px; }
+    .finance-content .finance-group dt { position:relative; display:inline-block; padding-left:34px; font-size:var(--font18); line-height:30px; }
     .finance-content .finance-group dt::before { position:absolute; left:0; margin:0; }
     .finance-content .finance-group dd { padding-bottom:0; font-size:var(--font20); }
     .finance-content .finance-group p { display:none; font-size:0; }
 
-    .visual-container + .fi-bottom-container { padding-bottom:32px; background-color:#F7F9FF; transition: all 0.5s ease }
-    .fi-bottom-container.on { position:fixed; bottom:0; z-index:1; padding:32px 24px; width:100%; background-color:var(--white); }
 
     /* 엥커이동 */
+    .anchor-list.fixed { position:fixed; top:54px; left:0; right:0; z-index:90; padding-top:28px; background:var(--white); box-shadow:0 2px 4px rgba(0,0,0,0.1); }
     .page-container:has(.anchor-list) .anchor-content { padding:0 24px; }
-    main.contentWrap > .fi-bottom-container + .page-container { padding:32px 0 0; }
-    .anchor-list { margin:0 auto 10px; }
     .anchor-list .btn-group button { padding:0 0 18px; width:calc(100% / 3); border:0; border-bottom:1px solid var(--color-e); font-size:var(--font18); line-height:normal; }
     .anchor-list .btn-group button.active { border:0; border-bottom:2px solid var(--primary); }
 
-    .anchor-panel { padding:42px 0 52px; }
+    .anchor-content { padding-top:0; }
+    .anchor-panel,
+    .anchor-panel:last-child { padding:42px 0 52px; }
     .anchor-panel + .anchor-panel { border-top:0; }
     .anchor-panel:has(.text-content) { padding:25px 0 52px; }
     .anchor-panel .anchor-group { flex-direction:column; gap:18px; }
     .anchor-panel .anchor-group + .anchor-group { margin-top:42px; }
-    .anchor-group p.tit { font-size:var(--font20); }
-    .anchor-group li { margin-top:18px; }
+    .anchor-group p.tit { font-size:var(--font18); }
+    .anchor-group li { margin-top:18px; font-size:var(--font18); }
+    .anchor-group li span + ul { margin-top:14px; }
     .anchor-group p { font-size:var(--font18); }
 
     .anchor-group .lease_process { width:auto; background-image:url("../../images/content/finance/m/procedures01.png"); background-size:318px 239px; }
     .anchor-group .lease { display:block; }
 
-    .list-card li { position:relative; padding:20px 98px 20px 90px; width:100%; height:100%; text-align:left; }
+    .list-card li { position:relative; padding:20px 20px 20px 90px; width:100%; height:100%; text-align:left; }
     .list-card li::before { position:absolute; top:20px; left:20px; margin:0; width:50px; height:50px; background-size:50px; }
     .list-card li span { margin-bottom:8px; }
     .list-card li p { margin:0; max-width:unset; }
@@ -1052,6 +1074,10 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .anchor-panel .text-content li { padding-top:24px; font-size:var(--font18); }
     .anchor-panel .text-content li.error { padding-top:12px; }
 
+    /* 준법감시심의필 */
+    .page-container > .anchor-container + .text-content:has(.compliance-box) { padding-top:32px;  border-top:1px solid var(--color-d); }
+    .compliance-box { flex-direction:column; align-items:flex-start; gap:12px; }
+    .compliance-box li { font-size:var(--font14); }
     /*---------------------------------------------
         #소비자보호
     ---------------------------------------------*/

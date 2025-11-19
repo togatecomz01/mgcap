@@ -39,7 +39,7 @@
     <div class="wrap">
         <div data-include-path="../../views/COMMON/header.html"></div>
         <div class="bodyWrap">
-            <main class="contentWrap">
+            <main class="contentWrap finance">
                 <nav class="location-container">
                     <ol class="breadcrumb">
                         <li><span class="home">홈</span></li>
@@ -47,7 +47,7 @@
                         <li><span>장기렌터카</span></li>
                     </ol>
                 </nav>
-                <section class="visual-container bg">
+                <section class="visual-container">
                     <h2>장기렌터카</h2>
                     <p>고객이 원하는 차량을 대여기간 동안 매월 정해진 사용료(렌탈료)를 납부하고 이용할 수 있는 장기 대여 서비스</p>
                     <div class="finance-content">
@@ -70,8 +70,6 @@
                             </dl>
                         </div>
                     </div>
-                </section>
-                <section class="fi-bottom-container">
                     <div class="btn-content cta">
                         <div class="button-group">
                             <a href="javascript:void(0);" class="btn-secondary">금융계산</a>
@@ -154,7 +152,7 @@
                                     <div class="table-content">
                                         <div class="table-group">
                                             <table>
-                                                <caption>캡션내용</caption>
+                                                <caption>렌탈료 포함 내역표</caption>
                                                 <colgroup>
                                                     <col style="width:30%">
                                                     <col style="width:70%">
@@ -168,35 +166,65 @@
                                             </table>
                                         </div>
                                         <div class="table-group">
-                                            <p>중도해지위약금:잔여대여료X중도해지위약금율*</p>
+                                            <p class="caption">중도해지위약금:잔여대여료X중도해지위약금율*</p>
                                             <table>
-                                                <caption>캡션내용</caption>
+                                                <caption>중도해지위약금률, 반납지연금, 초과운행수수료로 구성된 표</caption>
                                                 <colgroup>
                                                     <col style="width:30%">
                                                     <col style="width:70%">
                                                 </colgroup>
                                                 <tbody>
                                                     <tr>
-                                                        <th scope="row">렌탈료 포함 내역</th>
-                                                        <td>취득세, 보험료, 자동차세, 정비료 만기시차량인수/반납/재렌탈선택가능</td>
+                                                        <th scope="row">중도해지위약금률</th>
+                                                        <td>1년 이하 35%, 2년 미만 20%, 2년 이상 20%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">반납지연금</th>
+                                                        <td>일대여료X경과일수X200%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">초과운행수수료</th>
+                                                        <td>(초과운행km)X(km당초과운행수수료율*)</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
+                                            <p class="rfrnc"> 초과운행수수료율km당300원</p>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
                             <div id="precautions" class="anchor-panel" aria-hidden="false">
-                                <div class="text-content">
-                                    <ul class="rfrnc">
-                                        <li class="error"> 유의사항 강조 내용이 들어갑니다.</li>
-                                        <li class="error"> 유의사항 내용이 들어갑니다. 내용이 길어질 경우 자동으로 줄바꿈 처리합니다.</li>
-                                        <li> 유의사항 일반 내용이 들어갑니다.</li>
-                                        <li> 준법감시심의필 : 제2025-001호(2025.04.11~2026.04.10) / 광고제작월 : 2025.04</li>
-                                    </ul>
+                                <div class="info-content">
+                                    <div class="note-group">
+                                        <p class="tit">유의사항</p>
+                                        <ul class="m-dot">
+                                            <li>당사는 취급수수료, 중개수수료를 별도로 요구하지 않습니다. 대출이자 및 원금 연체시신용상 불이익이 발생할 수 있습니다.</li>
+                                            <li>계약 체결 전 상품설명서및 약관을 읽어 보시기 바랍니다.</li>
+                                            <li>렌터카 취급이 부적정한 경우(연체금 보유, 개인신용평점 낮음) 취급이 제한될 수 있습니다.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="diamond-box">
+                                        <p><span>[담당부서]</span> 오토금융부(02-2018-0683)</p>
+                                        <p><span>[MG캐피탈 민원상담]</span> www.mgcap.co.kr / 대표번호 1588-9688</p>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="text-content">
+                        <div class="text-group">
+                            <ul class="compliance-box">
+                                <li>준법감시심의필 제2025-033호 (2025.11.10 ~ 2026.11.09)</li>
+                                <li>여신금융협회 심의필 제000호</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="bottom-container">
+                    <div class="btn-content cta">
+                        <div class="button-group">
+                            <a href="javascript:void(0);" class="btn-secondary">금융계산</a>
+                            <a href="javascript:void(0);" class="btn-primary">상담신청</a>
                         </div>
                     </div>
                 </section>
@@ -205,55 +233,126 @@
         <div data-include-path="../../views/COMMON/footer.html"></div>
     </div>
     <script>
-        function updateButton() {
-            if (window.innerWidth > 768) return;
-            
-            const btn = document.querySelector('.fi-bottom-container');
-            const footer = document.querySelector('footer');
-            const pageContainer = document.querySelector('.page-container');
-            const header = document.querySelector('header');
-            
-            if (!btn || !footer || !pageContainer) return;
+        $(document).ready(function() {
+    // 모바일 체크
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
 
-            const scrollTop = window.scrollY;
-            const windowHeight = window.innerHeight;
-            const btnHeight = btn.offsetHeight;
-            
-            // page-container의 현재 위치 (초기 위치 아님)
-            const pageContainerRect = pageContainer.getBoundingClientRect();
-            const headerHeight = header ? header.offsetHeight : 0;
+    // 초기 상태 설정 함수
+    function initPanels() {
+        const activeButton = document.querySelector('.anchor-list .btn-group button.active');
+        const buttons = document.querySelectorAll('.anchor-list .btn-group button');
 
-            // page-container가 header에 붙었는지 확인 (현재 화면 기준)
-            const isPageContainerSticky = pageContainerRect.top <= headerHeight;
-
-            // page-container가 header에 붙기 전이면 버튼 숨김 (초기 상태)
-            if (!isPageContainerSticky) {
-                btn.classList.remove('on');
-                btn.style.position = '';
-                btn.style.bottom = '';
-                btn.style.zIndex = '';
-                btn.style.backgroundColor = '';
-                return;
+        if (isMobile()) {
+            // 모바일: 현재 active 패널만 표시
+            $('.anchor-panel').hide();
+            const targetButton = activeButton || buttons[0];
+            if (targetButton) {
+                $(targetButton.dataset.target).show();
+                if (!activeButton) targetButton.classList.add('active');
             }
+        } else {
+            // PC: 모든 패널 표시
+            $('.anchor-panel').show();
+            if (!activeButton && buttons[0]) buttons[0].classList.add('active');
+        }
+    }
 
-            // footer 위치 계산
-            const footerTop = footer.getBoundingClientRect().top + scrollTop;
+    // 페이지 로드 시 초기화
+    initPanels();
 
-            // 스크롤 + 화면높이가 푸터 시작점에 도달하면
-            if (scrollTop + windowHeight >= footerTop) {
-                // absolute로 전환 (푸터 바로 위에 고정)
-                btn.classList.remove('on');
-                btn.style.cssText = 'position:absolute; bottom:0; z-index:1; background-color:var(--white); padding-bottom:0;';
+    if (isMobile()) {
+        const $header = $('.headerOn');
+        const $visualContainer = $('.visual-container');
+        const $anotherSection = $('main.contentWrap.finance > .page-container, .finance .bottom-container');
+        const $anchorList = $('.anchor-list');
+        const $body = $('body');
+        
+        let headerHeight = 0;
+        let visualHeight = 0;
+        
+        // 높이 계산
+        function calculateHeights() {
+            headerHeight = $header.outerHeight() || 0;
+            visualHeight = $visualContainer.outerHeight() || 0;
+        }
+        
+        calculateHeights();
+        console.log(headerHeight);
+        console.log(visualHeight);
+        
+        // body 스크롤 이벤트
+        $body.on('scroll', function() {
+            const scrollTop = $body.scrollTop();
+            console.log(scrollTop);
+            
+            // 1, 2. header 높이만큼 스크롤되면 visual-container에 sticky 추가
+            if (scrollTop >= headerHeight) {
+                $visualContainer.addClass('sticky');
             } else {
-                // fixed로 하단 고정
-                btn.classList.add('on');
-                btn.style.cssText = '';
+                $visualContainer.removeClass('sticky');
+            }
+            
+            // 3, 4. header + visual-container 높이만큼 스크롤되면 anchor-list에 fixed 추가/제거
+            if (scrollTop >= headerHeight + visualHeight) {
+                $anchorList.addClass('fixed');
+            } else {
+                $anchorList.removeClass('fixed');
+            }
+        });
+        
+        // 리사이즈 시 높이 재계산
+        $(window).on('resize', function() {
+            if (isMobile()) {
+                calculateHeights();
+                initPanels();
+            } else {
+                // PC 버전으로 전환시 클래스 제거
+                $visualContainer.removeClass('sticky');
+                $anchorList.removeClass('fixed');
+                initPanels();
+            }
+        });
+    }
+    
+    // 버튼 클릭 이벤트
+    $('.anchor-list button').on('click', function(e) {
+        const target = $(this).data('target');
+        
+        // 버튼 활성화 상태 변경
+        $('.anchor-list button').removeClass('active');
+        $(this).addClass('active');
+        
+        if (isMobile()) {
+            // 모바일: 탭 기능
+            e.preventDefault();
+            $('.anchor-panel').hide();
+            $(target).show();
+        } else {
+            // PC: 스크롤 이동
+            e.preventDefault();
+            const targetElement = document.querySelector(target);
+            if (targetElement) {
+                const targetPosition = targetElement.offsetTop;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
             }
         }
+    });
 
-        window.addEventListener('scroll', updateButton);
-        window.addEventListener('resize', updateButton);
-        window.addEventListener('DOMContentLoaded', updateButton);
-    </script>
+    // 화면 크기 변경 시 재초기화 (debounce 적용)
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            initPanels();
+        }, 150);
+    });
+});
+        </script>
 </body>
 </html>
