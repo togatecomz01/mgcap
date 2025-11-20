@@ -92,9 +92,11 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
 
 .btn-content.login .button-group:last-child { padding-top:20px; text-align:center; }
 .btn-content.login .button-group:last-child a { margin-top:18px; padding:12px 10px; border-radius:10px; background-color:var(--bg-box); font-size:var(--font20); font-weight:var(--font-w-m); }
-
+/** select + button **/
+.btn-box { padding:0 12px; border-radius:5px; background-color:#0072BC; color:var(--white); }
+.btn-box:hover { color:var(--white); }
 /**Form btn**/
-.btn-form { width:100%; max-width:152px; height:67px; padding:var(--btn-padding); border:var(--btn-board); color:var(--btn-font-color); box-sizing:border-box; text-align:center; }
+.btn-form { width:100%; max-width:182px; height:67px; padding:var(--btn-padding); border:var(--btn-board); color:var(--btn-font-color); box-sizing:border-box; text-align:center; }
 .btn-form:hover { border-color:var(--btn-active); color:var(--btn-active);}
 .btn-form.reset { font-size:0; flex:0 0 67px; width:67px; height:67px; font-size:0;  }
 .btn-form.reset::before { content:""; display:block; width:30px; height:30px; margin:0 auto; background:var(--ico_reset) no-repeat center; background-size:100%; }
