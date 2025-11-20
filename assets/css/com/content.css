@@ -157,7 +157,8 @@ main.contentWrap > .page-container.errorpage { padding-top:0; }
 .contentWrap.finance .visual-container { padding-bottom:72px; }
 .contentWrap.finance .visual-container h2 { line-height:50px; }
 .contentWrap.finance .page-container + .bottom-container { display:none; }
-
+.m-dot .bulls-eye > li.error {display: list-item;} /* 25.11.20 bulls-eye 추가 */
+.m-dot .bulls-eye > li::before {content: "◎";}
 .finance-content {
     --gap:28px;
     --padding:42px 0 64px;
@@ -187,6 +188,7 @@ main.contentWrap > .page-container.errorpage { padding-top:0; }
 .anchor-list.fixed { position: static; }
 .anchor-list .btn-group { display:flex; justify-content:center; width:100%; }
 .anchor-list .btn-group button { display:inline-block; padding:8px; width:calc(100% / 3); border:1px solid var(--color-d); font-size:var(--font24); font-weight:var(--font-w-b); color:var(--color-9); text-align:center; line-height:67px; }
+.anchor-list .btn-group.two-tab button {width:calc(100% / 2);} /* 25.11.20 버튼이 두개 있는 경우 width 변경 */
 .anchor-list .btn-group button.active { border-top:2px solid var(--primary); border-bottom:0; color:var(--primary); }
 
 .anchor-content { padding-top:20px; }
@@ -198,7 +200,7 @@ main.contentWrap > .page-container.errorpage { padding-top:0; }
 .anchor-panel .text-content li:first-of-type.error { padding-top:0; }
 
 /* 상품소개 */
-.anchor-panel .anchor-group { display:flex; }
+.anchor-panel .anchor-group { display:flex; gap: 72px;} /* 25.11.20 p.tit이 길어지면 간격이 줄어보이는 현상 때문에 gap 추가 (피그마상 72px)*/
 .anchor-panel .anchor-group + .anchor-group{ margin-top:52px; }
 .anchor-group p.tit { max-width:200px; width:100%; font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-2); }
 .anchor-group p { font-size:var(--font20); }
@@ -211,7 +213,9 @@ main.contentWrap > .page-container.errorpage { padding-top:0; }
 .anchor-group li .m-dot li:first-child { margin-top:0; }
 .anchor-group li p { color:var(--color-6); }
 .anchor-group .table-content .table-group .caption { padding:26px 0 20px; font-size:var(--font20); color:var(--color-45); text-align:left; }
-.anchor-group .table-content .table-group .rfrnc { margin-top:20px; font-size:var(--font16); }
+.anchor-group .table-content .table-group .rfrnc,
+.anchor-group .table-content .table-group .desc /* 25.11.20 테이블 밑 추가 설명 클래스 */
+{ margin-top:20px; font-size:var(--font16); }
 
 .anchor-group .lease_process { padding:38px 38px 39px 40px; max-width:881px; width:100%; height:310px; border:1px solid var(--color-d); border-radius:12px; background:url("../../images/content/finance/w/procedures01.png")no-repeat center; background-size:auto 233px; }
 .anchor-group .lease { display:none; }
@@ -227,9 +231,9 @@ main.contentWrap > .page-container.errorpage { padding-top:0; }
 .list-card li p { margin:0 auto; font-size:var(--font16); color:var(--color-75); }
 
 .list-card li.rental::before { background-image:url("../../images/content/finance/w/ico_rental.png") }/* 월 렌탈료 납부 */
-.list-card li.expiration::before { background-image:url("../../images/content/finance/w/ico_expiration.png") } /* 원금균등분할상환 */
+.list-card li.expiration::before { background-image:url("../../images/content/finance/w/ico_expiration.png") } /* 만기일시상환 */
 .list-card li.divide::before { background-image:url("../../images/content/finance/w/ico_divide.png") } /* 원리금균등분할상환 */
-.list-card li.principal::before { background-image:url("../../images/content/finance/w/ico_principal.png") } /* 만기일시상환 */
+.list-card li.principal::before { background-image:url("../../images/content/finance/w/ico_principal.png") } /* 원금균등분할상환 */
 
 /* 유의사항 */
 .anchor-panel .info-content .note-group { border:1px solid #41C7F4; }
@@ -1041,7 +1045,6 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .contentWrap.finance .visual-container.sticky { position:sticky; top:54px; z-index:10; }
     /* .contentWrap.finance .visual-container.sticky + .page-container {position:relative; background-color:var(--white); z-index:10; } */
     .contentWrap.finance .page-container + .bottom-container { display:block; margin-top:0; padding-top:52px; }
-
     .finance-content {
         --gap:18px;
         --padding:32px 24px 32px;
