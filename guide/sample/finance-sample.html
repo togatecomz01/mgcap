@@ -31,6 +31,7 @@
     <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
     <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+    <script type="text/javascript" src="../../assets/js/ui/com/finance.js"></script>
     <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
     <script src="../../assets/js/include.js"></script>
 </head>
@@ -232,127 +233,5 @@
         </div>
         <div data-include-path="../../views/COMMON/footer.html"></div>
     </div>
-    <script>
-        $(document).ready(function() {
-    // 모바일 체크
-    function isMobile() {
-        return window.innerWidth <= 768;
-    }
-
-    // 초기 상태 설정 함수
-    function initPanels() {
-        const activeButton = document.querySelector('.anchor-list .btn-group button.active');
-        const buttons = document.querySelectorAll('.anchor-list .btn-group button');
-
-        if (isMobile()) {
-            // 모바일: 현재 active 패널만 표시
-            $('.anchor-panel').hide();
-            const targetButton = activeButton || buttons[0];
-            if (targetButton) {
-                $(targetButton.dataset.target).show();
-                if (!activeButton) targetButton.classList.add('active');
-            }
-        } else {
-            // PC: 모든 패널 표시
-            $('.anchor-panel').show();
-            if (!activeButton && buttons[0]) buttons[0].classList.add('active');
-        }
-    }
-
-    // 페이지 로드 시 초기화
-    initPanels();
-
-    if (isMobile()) {
-        const $header = $('.headerOn');
-        const $visualContainer = $('.visual-container');
-        const $anotherSection = $('main.contentWrap.finance > .page-container, .finance .bottom-container');
-        const $anchorList = $('.anchor-list');
-        const $body = $('body');
-        
-        let headerHeight = 0;
-        let visualHeight = 0;
-        
-        // 높이 계산
-        function calculateHeights() {
-            headerHeight = $header.outerHeight() || 0;
-            visualHeight = $visualContainer.outerHeight() || 0;
-        }
-        
-        calculateHeights();
-        console.log(headerHeight);
-        console.log(visualHeight);
-        
-        // body 스크롤 이벤트
-        $body.on('scroll', function() {
-            const scrollTop = $body.scrollTop();
-            console.log(scrollTop);
-            
-            // 1, 2. header 높이만큼 스크롤되면 visual-container에 sticky 추가
-            if (scrollTop >= headerHeight) {
-                $visualContainer.addClass('sticky');
-            } else {
-                $visualContainer.removeClass('sticky');
-            }
-            
-            // 3, 4. header + visual-container 높이만큼 스크롤되면 anchor-list에 fixed 추가/제거
-            if (scrollTop >= headerHeight + visualHeight) {
-                $anchorList.addClass('fixed');
-            } else {
-                $anchorList.removeClass('fixed');
-            }
-        });
-        
-        // 리사이즈 시 높이 재계산
-        $(window).on('resize', function() {
-            if (isMobile()) {
-                calculateHeights();
-                initPanels();
-            } else {
-                // PC 버전으로 전환시 클래스 제거
-                $visualContainer.removeClass('sticky');
-                $anchorList.removeClass('fixed');
-                initPanels();
-            }
-        });
-    }
-    
-    // 버튼 클릭 이벤트
-    $('.anchor-list button').on('click', function(e) {
-        const target = $(this).data('target');
-        
-        // 버튼 활성화 상태 변경
-        $('.anchor-list button').removeClass('active');
-        $(this).addClass('active');
-        
-        if (isMobile()) {
-            // 모바일: 탭 기능
-            e.preventDefault();
-            $('.anchor-panel').hide();
-            $(target).show();
-        } else {
-            // PC: 스크롤 이동
-            e.preventDefault();
-            const targetElement = document.querySelector(target);
-            if (targetElement) {
-                const targetPosition = targetElement.offsetTop;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        }
-    });
-
-    // 화면 크기 변경 시 재초기화 (debounce 적용)
-    let resizeTimer;
-    window.addEventListener('resize', () => {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(() => {
-            initPanels();
-        }, 150);
-    });
-});
-        </script>
 </body>
 </html>

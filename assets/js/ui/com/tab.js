@@ -277,64 +277,64 @@ $(document).ready(function(){
     /**
      * 금융상품
      */
-    // const buttons = document.querySelectorAll('.anchor-list .btn-group button');
-    // const isMobile = () => window.innerWidth <= 768;
+    const buttons = document.querySelectorAll('.anchor-list .btn-group button');
+    const isMobile = () => window.innerWidth <= 768;
 
-    // // 초기 상태 설정 함수
-    // function initPanels() {
-    //     const activeButton = document.querySelector('.anchor-list .btn-group button.active');
+    // 초기 상태 설정 함수
+    function initPanels() {
+        const activeButton = document.querySelector('.anchor-list .btn-group button.active');
 
-    //     if (isMobile()) {
-    //         // 모바일: 현재 active 패널만 표시
-    //         $('.anchor-panel').hide();
-    //         const targetButton = activeButton || buttons[0];
-    //         if (targetButton) {
-    //             $(targetButton.dataset.target).show();
-    //             if (!activeButton) targetButton.classList.add('active');
-    //         }
-    //     } else {
-    //         // PC: 모든 패널 표시
-    //         $('.anchor-panel').show();
-    //         if (!activeButton && buttons[0]) buttons[0].classList.add('active');
-    //     }
-    // }
+        if (isMobile()) {
+            // 모바일: 현재 active 패널만 표시
+            $('.anchor-panel').hide();
+            const targetButton = activeButton || buttons[0];
+            if (targetButton) {
+                $(targetButton.dataset.target).show();
+                if (!activeButton) targetButton.classList.add('active');
+            }
+        } else {
+            // PC: 모든 패널 표시
+            $('.anchor-panel').show();
+            if (!activeButton && buttons[0]) buttons[0].classList.add('active');
+        }
+    }
 
-    // // 페이지 로드 시 초기화
-    // initPanels();
+    // 페이지 로드 시 초기화
+    initPanels();
 
-    // // 화면 크기 변경 시 재초기화 (debounce 적용)
-    // let resizeTimer;
-    // window.addEventListener('resize', () => {
-    //     clearTimeout(resizeTimer);
-    //     resizeTimer = setTimeout(initPanels, 150);
-    // });
+    // 화면 크기 변경 시 재초기화 (debounce 적용)
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(initPanels, 150);
+    });
 
-    // // 버튼 클릭 이벤트
-    // buttons.forEach(button => {
-    //     button.addEventListener('click', function(e) {
-    //         const targetId = this.dataset.target;
+    // 버튼 클릭 이벤트
+    buttons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            const targetId = this.dataset.target;
             
-    //         // 버튼 활성화 상태 변경
-    //         buttons.forEach(btn => btn.classList.remove('active'));
-    //         this.classList.add('active');
+            // 버튼 활성화 상태 변경
+            buttons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
             
-    //         if (isMobile()) {
-    //             // 모바일: 패널 전환
-    //             e.preventDefault();
-    //             $('.anchor-panel').hide();
-    //             $(targetId).show();
-    //         } else {
-    //             // PC: 헤더 높이 계산하여 앵커 이동
-    //             e.preventDefault();
-    //             const targetElement = document.querySelector(targetId);
-    //             const targetPosition = targetElement.offsetTop;
+            if (isMobile()) {
+                // 모바일: 패널 전환
+                e.preventDefault();
+                $('.anchor-panel').hide();
+                $(targetId).show();
+            } else {
+                // PC: 헤더 높이 계산하여 앵커 이동
+                e.preventDefault();
+                const targetElement = document.querySelector(targetId);
+                const targetPosition = targetElement.offsetTop;
                 
-    //             window.scrollTo({
-    //                 top: targetPosition,
-    //                 behavior: 'smooth'
-    //             });
-    //         }
-    //     });
-    // });
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
 
 });
