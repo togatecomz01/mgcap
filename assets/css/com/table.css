@@ -98,7 +98,7 @@ table:has(.no-results) td { margin:0; padding:0; border:0; }
     .col-row.mo tbody td:nth-of-type(2) { grid-area:right2; padding:3px 12px 10px; }
     .col-row.mo colgroup { display:none; } 
 
-    .caption { padding-top:42px; }
+    .caption { padding-top:42px; padding-bottom:18px; }
     .caption.total { display:none; }
     
     /**별첨이 있을경우 **/

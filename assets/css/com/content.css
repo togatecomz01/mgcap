@@ -875,25 +875,28 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 /*---------------------------------------------
     #팝업
 ---------------------------------------------*/
+.layerPopup [class*="-content"] > .group > [class*="-group"] { margin-bottom:46px; }
+.layerPopup [class*="-content"] > .group > [class*="-group"]:last-child { margin-bottom:0; }
 .pop-content .mo-tit { display:none; font-size:var(--font12); color:var(--color-75); }
 .pop-content .search-form .group + .btn-form.mo { top:unset; bottom:40px; transform:unset; }
 .pop-content .search-form .group:has(.form-group:last-child .error) + .btn-form.mo { bottom:78px; }
-.pop-content .table-group h3 { font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-2); }
+.pop-content .group h3 + * { margin-top:36px; }
+.pop-content .text-group p.tit,
+.pop-content h3 { font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-2); }
+.pop-content dl dt { color:var(--color-2); }
+.pop-content dl dd { color:var(--color-45); }
+.pop-content dl dd p.rfrnc { padding:10px 0 0 14px; }
+.pop-content .text-list li { margin-bottom:10px; }
+.pop-content .text-list li:last-child { margin-bottom:10px; }
+.pop-content .bo-t1 { margin-top:32px; padding-top:32px; }
+
 
 /* 민원접수, 칭찬/제안, 채무조정신청, 중도상환 공통 */
-.WCC20710VS .pop-content .text-group > .tit,
-.WCC20720VS .pop-content .text-group > .tit,
-.WCC21400VQ .pop-content .text-group > .tit { font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-45); }
 .WCC20710VS .pop-content .text-group .tit-f-square,
 .WCC20720VS .pop-content .text-group .tit-f-square,
 .WCC21400VQ .pop-content .text-group > .tit + p { font-weight:var(--font-w-m); }
 .WCC20710VS .pop-content .text-group .tit-f-square:before,
 .WCC20720VS .pop-content .text-group .tit-f-square:before { content:"■"; margin-right:2px; }
-.WCS10401PQ .pop-content .text-group p,
-.WCC20710VS .pop-content .text-group p,
-.WCC20710VS .pop-content .text-group .text-list li span,
-.WCC20720VS .pop-content .text-group p,
-.WCC20720VS .pop-content .text-group .text-list li span { color:var(--color-6); }
 
 /* 중도상환 조회/신청 */
 .WCS10401PQ .btn-link { padding:24px 30px 24px 24px; width:100%; background-repeat:no-repeat; background-position:left 20px center; background-size:40px; }
@@ -1046,11 +1049,10 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
         flex-direction:column;
     }
     .finance-content .finance-group { padding:16px 24px; width:100%; border-radius:12px; }
-    .finance-content .finance-group dt { position:relative; display:inline-block; padding-left:34px; font-size:var(--font18); line-height:30px; }
+    .finance-content .finance-group dt { position:relative; display:inline-block; padding-left:34px; font-size:var(--font18); line-height:24px; }
     .finance-content .finance-group dt::before { position:absolute; left:0; margin:0; }
     .finance-content .finance-group dd { padding-bottom:0; font-size:var(--font20); }
     .finance-content .finance-group p { display:none; font-size:0; }
-
 
     /* 엥커이동 */
     .anchor-list.fixed { position:fixed; top:54px; left:0; right:0; z-index:90; padding-top:28px; background:var(--white); box-shadow:0 2px 4px rgba(0,0,0,0.1); }
@@ -1077,6 +1079,11 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .list-card li::before { position:absolute; top:20px; left:20px; margin:0; width:50px; height:50px; background-size:50px; }
     .list-card li span { margin-bottom:8px; }
     .list-card li p { margin:0; max-width:unset; }
+
+    .list-card li.rental::before { background-image:url("../../images/content/finance/m/ico_rental.png") }/* 월 렌탈료 납부 */
+    .list-card li.expiration::before { background-image:url("../../images/content/finance/m/ico_expiration.png") } /* 원금균등분할상환 */
+    .list-card li.divide::before { background-image:url("../../images/content/finance/m/ico_divide.png") } /* 원리금균등분할상환 */
+    .list-card li.principal::before { background-image:url("../../images/content/finance/m/ico_principal.png") } /* 만기일시상환 */
 
     .anchor-panel .text-content .rfrnc { padding:0; background-color:transparent; }
     .anchor-panel .text-content li { padding-top:24px; font-size:var(--font18); }
@@ -1395,7 +1402,10 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCA60300VQ .no-results p { font-size: var(--font20);}
 
     /* 회사소개 - 공시정보 (WCA50100VQ) + WCA50300VQ(신용평가) */ 
-    .WCA50100VQ .caption, .WCA50300VQ .caption {padding-top: 0;} 
+    .WCA50100VQ .caption,
+    .WCA50300VQ .caption,
+    .WCS70100VQ .caption,
+    .WCS30101DQ .caption {padding-top: 0;} 
     .WCA50100VQ .table-titcap, .WCA50300VQ .table-titcap { padding-bottom:24px; }
     .WCA50100VQ thead {display: none;}
     .WCA50100VQ .table-mobile,
@@ -1464,6 +1474,9 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     /*---------------------------------------------
     #팝업
     ---------------------------------------------*/
+    .layerPopup [class*="-content"] > .group > [class*="-group"] { margin-bottom:38px; }
+    .pop-content dl dd { margin-top:14px; }
+
     .WCC20710VS .pop-content .text-group > .tit,
     .WCC20720VS .pop-content .text-group > .tit,
     .WCC21400VQ .pop-content .text-group > .tit { font-size:var(--font18); }
