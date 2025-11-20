@@ -32,7 +32,7 @@ main.contentWrap > * { margin:0 auto; max-width:1400px; width:100%; padding:0;  
 .point-r { color:var(--point-r) !important; }
 .bo-t0 { border-top:0 !important; }
 .w-auto { width:auto; }
-.w-406 { width:406px !important; flex:0 0 406px !important; } 
+.w-406 { width:406px !important; } 
 .w-100p { width:100% !important; } 
 .mw-100p { max-width:100% !important; }
 /*---------------------------------------------
@@ -54,13 +54,13 @@ main.contentWrap > * { margin:0 auto; max-width:1400px; width:100%; padding:0;  
 .gnb h1{ display:block; width:137px; height:36px; font-size:0; }
 .gnb h1 a{ display:block; width:100%; height:100%; text-indent:-9999px; background:url("../../images/com/topLogo.png") no-repeat; background-size:100%; }
 
-.bodyWrap { padding-top:76px; }
+.bodyWrap { padding-top:78px; }
 /*---------------------------------------------
     #브레드크럼
 ---------------------------------------------*/
 
 main.contentWrap > .location-container { padding:24px 0; width:100%;  }
-.location-container ol { display:flex; align-items:center; justify-content:flex-end; gap:0; margin:0 auto; max-width:1400px; }
+.location-container ol { display:flex; align-items:center; justify-content:flex-end; gap:0; }
 .location-container ol li { display:flex; align-items:center; }
 .location-container ol li span { font-size:var(--font14); color:var(--color-6); font-weight:var(--font-w-r); }
 .location-container ol li::before { content:""; display:block; margin:0 8px; width:14px; height:14px; background:var(--ico-location) no-repeat center; }
@@ -72,7 +72,7 @@ main.contentWrap > .location-container { padding:24px 0; width:100%;  }
 /*---------------------------------------------
     #서브이미지
 ---------------------------------------------*/
-.visual-container:not(.finance .visual-container) { font-family:"mg"; }
+.visual-container { font-family:"mg"; }
 .visual-container > * { text-align:center; }
 .visual-container h2 { font-size:var(--font45); font-weight:700;  -webkit-font-smoothing:antialiased; text-rendering:geometricPrecision; }
 .visual-container p { padding:20px 0; font-size:var(--font20); color:var(--color-6); }
@@ -123,6 +123,7 @@ h5, p.tit, h4.tit { color:var(--color-2); font-size:1rem; font-weight:var(--font
 /**텍스트**/
 /* .page-container > .text-content > .group > h3 + .text-group:first-of-type { margin-top:72px; } */
 .text-content * + p { margin-top:18px; }
+.text-content p + p { margin-top:0; }
 p.hypn, .star, .rfrnc, .square { color:var(--color-6);  }
 p.hypn:before,
 .hypn li:before { content:"-"; }
@@ -519,6 +520,8 @@ main.contentWrap > .bottom-container { margin-top:72px; }
     #컨텐츠
     ---------------------------------------------*/
     main.contentWrap > .page-container { padding-top:32px; }
+    main.contentWrap > .page-container:has(.tab-list.depth1) { padding-top:0; }
+
     .page-container > [class*="-content"] > .group,
     .page-container > [class*="-content"] > [class*="-group"],
     .page-container > div + div.bo-t0  { margin-bottom:52px; }
@@ -650,6 +653,9 @@ main.contentWrap > .bottom-container { margin-top:72px; }
     .view-navigation li .label { padding-right:20px; width:80px; font-size:var(--font14); line-height:14px; }
     .view-navigation .link-group > a { padding-left:16px; max-width:calc(100% - 80px); font-size:var(--font14); line-height:14px; }
     .view-navigation .date {display: none;}
+
+    .view-content .btn-content.cta a, .btn-content.cta button { flex:0 0 auto; height:54px; line-height:54px; }
+
     /* 다운로드 버튼 */
     .list-download a.btn-download { display:none; }
 

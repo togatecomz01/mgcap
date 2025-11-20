@@ -99,7 +99,8 @@ table:has(.no-results) td { margin:0; padding:0; border:0; }
     .col-row.mo colgroup { display:none; } 
 
     .caption { padding-top:42px; }
-
+    .caption.total { display:none; }
+    
     /**별첨이 있을경우 **/
     .mo-appendix { border-top:0; }
     .mo-appendix colgroup{ display:none; }

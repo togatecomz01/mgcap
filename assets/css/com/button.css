@@ -92,11 +92,9 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
 
 .btn-content.login .button-group:last-child { padding-top:20px; text-align:center; }
 .btn-content.login .button-group:last-child a { margin-top:18px; padding:12px 10px; border-radius:10px; background-color:var(--bg-box); font-size:var(--font20); font-weight:var(--font-w-m); }
-/** select + button **/
-.btn-box { padding:0 12px; border-radius:5px; background-color:#0072BC; color:var(--white); }
-.btn-box:hover { color:var(--white); }
+
 /**Form btn**/
-.btn-form { width:100%; max-width:182px; height:67px; padding:var(--btn-padding); border:var(--btn-board); color:var(--btn-font-color); box-sizing:border-box; text-align:center; }
+.btn-form { width:100%; max-width:152px; height:67px; padding:var(--btn-padding); border:var(--btn-board); color:var(--btn-font-color); box-sizing:border-box; text-align:center; }
 .btn-form:hover { border-color:var(--btn-active); color:var(--btn-active);}
 .btn-form.reset { font-size:0; flex:0 0 67px; width:67px; height:67px; font-size:0;  }
 .btn-form.reset::before { content:""; display:block; width:30px; height:30px; margin:0 auto; background:var(--ico_reset) no-repeat center; background-size:100%; }
@@ -129,9 +127,11 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
 
 .btn-link,
 .btn-download { display:inline-flex; align-items:center; justify-content:space-between; gap:10px; min-height:80px; line-height:1.5; padding:0 32px; border-radius:100px; background:var(--btn-download-background); border:var(--btn-download-border); text-align:left; font-size:var(--btn-download-font-size); }
+.btn-download { min-height:60px; }
 .btn-download::after { content:""; display:block; width:24px; height:24px; background-color:var(--color-9); 
   mask-image:var(--ico-download); mask-repeat:no-repeat; mask-size:auto 40px; mask-position:center; -webkit-mask-image:var(--ico-download); -webkit-mask-repeat:no-repeat; -webkit-mask-size:17.333px auto; -webkit-mask-position:center; 
-  }
+}
+
 
 .btn-down { position:relative; display:block; padding-left:30px; margin-bottom:5px;  }
 .btn-down:last-child, .btn-down:only-child { margin-bottom:0; }
@@ -231,10 +231,13 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
 
     /**페이지네이션 버튼 **/
 
-    .pagination-content > div { padding:32px 0px 0px; }
+    .pagination-content > div { padding:32px 0px 0px; gap:0; }
+    .pagination-content > div > div { padding:0 4px; }
     .pagination-content .btn-first,
     .pagination-content .btn-last { display:none; }
-    .pagination-content .first, .pagination-content .last { flex:0 0 40px; }
+    .pagination-content button, .pagination-content a { min-width:35px; }
+    .pagination-content .first, .pagination-content .last { flex:0 0 35px; width:35px; }
+    
 
 
 
