@@ -181,7 +181,7 @@ label.toggle input + span { font-size:0; }
 .search-form input[type="search"],
 .search-form input[type="date"],
 .search-form select {  flex:0 0 208px; padding:0 16px; width:208px; min-height:48px; max-height:var(--form-height); line-height:48px; background-color:var(--white); border:1px solid var(--color-6); border-radius:6px;  font-size:var(--font16)  }
-.search-form label { margin-bottom:0; font-size:var(--font16); }
+.search-form label { margin-bottom:0; font-size:var(--font18); }
 
 .search-form .form-group:has(.address) input { flex:0 0 400px; }
 /**조건검색**/

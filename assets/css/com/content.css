@@ -807,6 +807,8 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 .WCS50200VQ .cap-form { padding-bottom:24px; }
 .WCS50200VQ .cap-form p { padding:0; margin:0; font-size:var(--font16); font-weight:var(--font-w-m); }
 .WCS50200VQ .cap-form p span { color:var(--primary); }
+.WCS50200VQ table td { border-left:0; border-bottom:0; }
+.WCS50200VQ table tr:last-child td { border-bottom:1px solid var(--color-d); }
 .WCS50200VQ .text-content .m-dot li, .info-content .m-dot li { font-size:var(--font16); }
 
 /* 금융소비자 & 장애인 상담 안내 */
@@ -845,7 +847,8 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 ---------------------------------------------*/
 /** 닙입내역 **/
 .WCS10200VQ .underline,
-.WCS40500VQ .underline a { color:var(--primary); text-decoration:underline; }
+.WCS40500VQ .underline a,
+.WCC21202VQ .underline { color:var(--primary); text-decoration:underline; }
 
 /* 상환일정 조회 */
 .WCS10300VQ .text-content .info-list .m-dot li { font-size:var(--font16); }
@@ -936,10 +939,24 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 .WCC70102PS .pop-content .info-content li:first-child { margin-top:0; }
 .WCC70102PS .pop-body .info-content { margin-top:0; }
 
+/* 차량 검색, 우편 번호 */
+.WCC70101PQ .pop-content .form-content,
+.pop_find_zipcord .pop-content .form-content { margin-bottom:38px; }
+.WCC70101PQ .form-wrap.search-form > .group .form-group label:not(.radio):first-child { margin-top:0; }
 
-  /* 우편 번호 */
-  .pop_find_zipcord .search-form .form-group .flex-row div { flex:1; }
-  .pop_find_zipcord .search-form .form-group .flex-row div input { width:100%; }
+/* 우편 번호 */
+.pop_find_zipcord .search-form .form-group .flex-row div { flex:1; }
+.pop_find_zipcord .search-form .form-group .flex-row div input { width:100%; }
+.pop_find_zipcord .form-wrap.search-form + .mo-tit { display:block; padding:20px 0 0; margin-bottom:0; font-size:var(--font14); }
+
+/* 보안프로그램 설치 팝업 */
+.layerPopup.full > .pop-area:has(.installAnySign) { min-height:502px; height:auto; max-height:unset; }
+.layerPopup.full > .pop-area:has(.installAnySign) .pop-header { padding-top:36px; }
+
+/*---------------------------------------------
+    #기타
+---------------------------------------------*/
+.WCC21202VQ .table-group p.tit { margin-bottom:20px; font-size:var(--font22); }
 
 /*---------------------------------------------
     #미디어쿼리
@@ -1518,12 +1535,15 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCS10401PQ .text-group .button-content .btn-download::after { width:28px; height:28px; mask-size:20.222px; -webkit-mask-size:20.222px; }
 
     /* 차량 검색, 우편번호*/
+    .WCC70101PQ .pop-content .form-wrap.search-form { margin-bottom:0; }
+    .pop_find_zipcord .pop-content .form-wrap.search-form { margin-bottom:0; }
+
     .pop-content .mo-tit { display:block; }
     .pop-content .table-group h3 { font-size:var(--font18); }
     .pop-content .table-group .mo-list.result { border-top:0; }
     .pop-content .table-group .mo-list.result tbody tr:first-child { padding-top:10px; }
 
     /* 우편 번호 */
-    .pop_find_zipcord .pop-content .form-content:has(.mo-tit) .form-wrap.search-form {  margin-bottom:14px; }
     .pop_find_zipcord .pop-content .mo-tit { margin-bottom:32px; }
+    .pop_find_zipcord .form-wrap.search-form + .mo-tit { padding-top:14px; font-size:var(--font12); }
 }

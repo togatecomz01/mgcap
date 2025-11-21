@@ -537,7 +537,7 @@ main.contentWrap > .bottom-container { margin-top:72px; }
     
     h3, .group > .text-group > h4 { font-size:var(--font20);  }
     h3 + p { margin-top:18px; }
-    [class*="-container"] form { margin:32px 0 24px; }
+    [class*="-container"] form { margin:42px 0 32px; }
     [class*="-content"] * ~ h3 { margin-top:52px; }
     [class*="-group"] h3 + *,
     [class*="-group"] h4 + * { margin-top:18px !important; }
@@ -550,6 +550,7 @@ main.contentWrap > .bottom-container { margin-top:72px; }
 
     /**텍스트**/
     .page-container > .text-content > .group > h3 + .text-group:first-of-type { margin-top:52px; }
+    .page-container > .text-content > .group > h3 + .text-group:first-of-type .caption { margin-top:-10px; }
     .text-content * + p,
     .text-content p + ul,
     .text-content p + p{ margin-top:16px; }
@@ -599,7 +600,8 @@ main.contentWrap > .bottom-container { margin-top:72px; }
     main.contentWrap > .bottom-container{ margin-top:52px; }
 
     /** 검색 폼 **/
-    .form-wrap.search-form { margin-bottom:32px; padding:28px 20px; background-color:var(--search-bg); border-radius:6px; text-align:center; }
+    form:has(.form-wrap.search-form) + [class*="-group"] { margin-top:32px; }
+    .form-wrap.search-form { padding:28px 20px; background-color:var(--search-bg); border-radius:6px; text-align:center; }
     .form-wrap.search-form .tab-content > .group,
     .form-wrap.search-form > .group,
     .form-wrap.search-form > .group:has(.radio) { padding:0; margin-bottom:36px; }
@@ -611,7 +613,7 @@ main.contentWrap > .bottom-container { margin-top:72px; }
     .form-wrap.search-form .tab-content > .group .form-group label:not(.radio), .form-wrap.search-form > .group .form-group label:not(.radio) { margin:26px 0 10px; }
     .form-wrap.search-form > .group .form-group > input + label,
     .form-wrap.search-form > .group .form-group > select + label { margin:10px 0; }
-    .form-wrap.search-form > .group .form-group label { margin-bottom:18px; }
+    /* .form-wrap.search-form > .group .form-group label { margin-bottom:18px; } */
 
     .form-wrap.search-form .tab-list .form-group,
     .form-content > .form-wrap > .form-group { display:block; text-align:left; }
