@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>상세&gt;청구정보변경&gt;청구정보조회&gt;MY MG&gt;홈</title>
+
+    <meta name="keywords" content="MG캐피탈" />
+    <meta name="copyright" content="copyrights 2025 MG캐피탈" />
+    <meta name="viewport" content="width=device-width" />
+    <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="No-Cache" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico"/>
+    <link rel="stylesheet" href="../../assets/css/com/default.css" />
+    <link rel="stylesheet" href="../../assets/css/com/common.css" />
+    <link rel="stylesheet" href="../../assets/css/com/style.css" />
+    <link rel="stylesheet" href="../../assets/css/com/fonts.css" />
+    <link rel="stylesheet" href="../../assets/css/com/layout.css" />
+    <link rel="stylesheet" href="../../assets/css/com/nav.css" />
+    <link rel="stylesheet" href="../../assets/css/com/input.css" />
+    <link rel="stylesheet" href="../../assets/css/com/button.css" />
+    <link rel="stylesheet" href="../../assets/css/com/tab.css" />
+    <link rel="stylesheet" href="../../assets/css/com/table.css" />
+    <link rel="stylesheet" href="../../assets/css/com/content.css" />
+    <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+    <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+    <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
+    <script src="../../assets/js/include.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div data-include-path="../../views/COMMON/header.html"></div>
+        <div class="bodyWrap">
+            <main class="contentWrap">
+                <nav class="location-container">
+                    <ol class="breadcrumb">
+                        <li><span class="home">홈</span></li>
+                        <li><span>MY MG</span></li>
+                        <li><span>청구정보조회</span></li>
+                        <li><span>청구정보변경</span></li>
+                    </ol>
+                </nav>
+                <section class="visual-container">
+                    <h2>청구정보변경</h2>
+                </section>
+                <section class="page-container WCS30301VS">
+                    <div class="text-content">
+                        <div class="group">
+                            <h3>청구정보변경 상세</h3>
+                            <form>
+                                <fieldset class="form-content">
+                                    <legend>청구정보변경 조회</legend>
+                                    <div class="form-wrap search-form">
+                                        <div class="tab-list">
+                                            <div class="form-group">
+                                                <p class="mo-tit">구분선택</p>
+                                                <label class="radio tab-item" data-tab="radio-tab01">
+                                                    <input type="radio" name="use" value="" checked="">
+                                                    <span>주소</span>
+                                                </label>
+                                                <label class="radio tab-item" data-tab="radio-tab02">
+                                                    <input type="radio" name="use" value="">
+                                                    <span>이메일</span>
+                                                </label>
+                                                <label class="radio tab-item" data-tab="radio-tab03">
+                                                    <input type="radio" name="use" value="">
+                                                    <span>휴대폰</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="tab-content">
+                                            <div class="group" id="radio-tab01">
+                                                <!-- 주소 -->
+                                                 <!-- 주소 -->
+                                                <div class="form-group">
+                                                    <label for="">우편번호</label>
+                                                    <div>
+                                                        <input id="address" type="search" name="address" placeholder="우편번호 검색" />
+                                                        <button type="button" class="btn-search">우편번호검색</button>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="">주소</label>
+                                                    <input id="address" type="text" name="address" placeholder="주소" />
+                                                    <label for="">상세주소</label>
+                                                    <input id="detailed-address" type="text" class="address" name="detailed-address" placeholder="상세주소"/>
+                                                </div>
+                                            </div>
+                                            <div class="group" id="radio-tab02">
+                                                <!-- 이메일 -->
+                                                <div class="form-group">
+                                                    <label for="phn-first">이메일</label>
+                                                    <div class="flex-row mo-column mail">
+                                                        <div class="ph">
+                                                            <input id="mail-first" name="mail-first" type="text" value="abc">
+                                                            <span class="ipt-hyphen">@</span>
+                                                            <input id="mail-second" name="mail-second" type="text" value="gmail.com">
+                                                            <select id="mail-third" required="" title="">
+                                                                <option value="0">gmail.com</option>
+                                                                <option value="1">naver.com</option>
+                                                                <option value="3">hanmail.net</option>
+                                                                <option value="4">daum.net</option>
+                                                                <option value="5">nate.com</option>
+                                                            </select>
+                                                        </div>
+                                                    </div><!--//flex-row-->
+                                                </div><!--//form-group-->
+                                            </div>
+                                            <div class="group" id="radio-tab03">
+                                                <!-- 휴대폰 -->
+                                                <div class="form-group">
+                                                    <label for="phn-first">휴대폰</label>
+                                                    <div class="flex-row mo-column">
+                                                        <div class="ph">
+                                                            <select id="phn-first" required="" title="">
+                                                                <option value="0">선택</option>
+                                                                <option value="1">010</option>
+                                                                <option value="2">011</option>
+                                                                <option value="3">016</option>
+                                                                <option value="4">017</option>
+                                                                <option value="5">018</option>
+                                                                <option value="6">019</option>
+                                                            </select>
+                                                            <input id="phn-second" name="phn-second" type="tel" inputmode="numeric" class="pc-phn" autocomplete="tel-local-prefix" pattern="[0-9]{3,4}" maxlength="4" aria-describedby="desc-phone" value="1234">
+                                                            <input id="phn-third" name="phn-third" type="tel" inputmode="numeric" class="pc-phn" autocomplete="tel-local-suffix" pattern="[0-9]{4}" maxlength="4" aria-describedby="desc-phone" value="5678">
+                                                            <!-- 2025.11.12 input 1개 삭제 -->
+                                                        </div>
+                                                    </div><!--//flex-row-->
+                                                </div><!--//form-group-->
+                                            </div>
+                                        </div>
+                                    </div><!--//form-wrap-->
+                                </fieldset>
+                            </form>
+                            <div class="text-group">
+                                <p class="caption">현재청구정보</p>
+                                <div class="table-content">
+                                    <table class="mo-s">
+                                        <caption>청구정보변경 상세표(실행번호, 상품명, E-mail, 우편물주소, SMS 포함)</caption>
+                                        <colgroup>
+                                            <col style="width:280px">
+                                            <col style="width:280px">
+                                            <col style="width:280px">
+                                            <col style="width:280px">
+                                            <col style="width:280px">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">실행번호</th>
+                                                <th scope="col">상품명</th>
+                                                <th scope="col">E-mail</th>
+                                                <th scope="col">우편물주소</th>
+                                                <th scope="col">SMS</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>MI14002240001</td>
+                                                <td>할부금융</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>MI14002240001</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="info-list">
+                                    <ul class="m-dot">
+                                        <li>MG캐피탈의 웹 사이트의 회원정보와는 별개입니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="bottom-container">
+                    <div class="btn-content cta">
+                        <div class="button-group">
+                            <a href="javascript:void(0);" class="btn-primary">변경</a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <div data-include-path="../../views/COMMON/footer.html"></div>
+    </div>
+</body>
+</html>

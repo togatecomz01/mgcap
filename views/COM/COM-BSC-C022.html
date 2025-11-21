@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>팝업</title>
+
+    <meta name="keywords" content="MG캐피탈" />
+    <meta name="copyright" content="copyrights 2025 MG캐피탈" />
+    <meta name="viewport" content="width=device-width" />
+    <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="No-Cache" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico"/>
+    <link rel="stylesheet" href="../../assets/css/com/default.css" />
+    <link rel="stylesheet" href="../../assets/css/com/common.css" />
+    <link rel="stylesheet" href="../../assets/css/com/style.css" />
+    <link rel="stylesheet" href="../../assets/css/com/fonts.css" />
+    <link rel="stylesheet" href="../../assets/css/com/layout.css" />
+    <link rel="stylesheet" href="../../assets/css/com/nav.css" />
+    <link rel="stylesheet" href="../../assets/css/com/input.css" />
+    <link rel="stylesheet" href="../../assets/css/com/button.css" />
+    <link rel="stylesheet" href="../../assets/css/com/tab.css" />
+    <link rel="stylesheet" href="../../assets/css/com/table.css" />
+    <link rel="stylesheet" href="../../assets/css/com/content.css" />
+    <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+    <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+    <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
+    <script src="../../assets/js/include.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div data-include-path="../../views/COMMON/header.html"></div>
+        <div class="bodyWrap">
+            <main class="contentWrap">
+            </main>
+        </div>
+        <div data-include-path="../../views/COMMON/footer.html"></div>
+    </div>
+    <div id="fulPopup01" class="layerPopup full fullPopupOn on">
+        <!--[D] fullPopupOn 클래스 :: 헤더 스크립트 적용중-->
+        <div class="pop-area">
+            <div class="pop-header">
+                <h2 class="pop-tit">매입(양수) 안내문</h2>
+            </div>
+            <div class="pop-body">
+                <div class="pop-content">
+                    <div class="group">
+                        <div class="text-group">
+                            <h3>리스만기 처리유형에 따른 안내사항</h3>
+                            <dl class="m-dot">
+                                <dt>매입(양수)</dt>
+                                <dd>매입(양수)시 명의자는 리스이용자 본인명의로만 가능합니다.<br>(자동차관리법 12조 3항에 의거 3자 양도불가능)</dd>
+                                <dd>매입(양수)시 잔존가치 금액 입금 또는 보증금과 상계 후 양도 가능합니다.</dd>
+                                <dd>리스 차량 매입(양수)후 15일 이내에 명의 미이전 시 과태료가 발생합니다.<br>(자산매각 계산서 발행일 기준)</dd>
+                                <dd>자동차 등록명의 이전 후 이전된 등록증 사본은 fax로 당사에 접수하여야 이전절차가 마무리 됩니다.</dd>
+                                <dd>
+                                    소유권 이전 비용과 명의이전 시까지 발생하는 자동차세, 환경개선부담금, 범칙금 등은 고객이 부담하셔야 하며 이에 따라 만기정산금이 발생할 수 있으며, 마지막회차 리스료에 합산청구 됩니다.
+                                    <p class="rfrnc point-r">반납, 양도, 재리스의 옵션을 선택하여 처리 완료 후 선택을 번복하실 수 없습니다.</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="text-group">
+                            <h3>리스기간 만료 후 처리 신청서</h3>
+                            <dl class="m-dot">
+                                <dt class="point-b">매입(양수)</dt>
+                                <dd>차량의 소유권 이전등록 또는 근저당권 해지에 필요한 제반서류 발급을 요청합니다.</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="form-content">
+                        <div class="bo-t1">
+                            <label class="check">
+                                <input type="checkbox" name="row1-active" value="" checked="">
+                                <span>리스만기 처리유형에 따른 안내사항을 확인하였습니다.</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pop-footer">
+                <div class="button-content">
+                    <button type="button" class="btn-pop-primary"  data-popup-close="WCM40100DSPOP01">확인했어요</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+ 

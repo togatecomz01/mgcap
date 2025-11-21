@@ -186,8 +186,8 @@ main.contentWrap > .page-container.errorpage { padding-top:0; }
 /* 엥커이동 */
 .anchor-list { margin:0 auto; max-width:1400px; width:100%; }
 .anchor-list.fixed { position: static; }
-.anchor-list .btn-group { display:flex; justify-content:center; width:100%; }
-.anchor-list .btn-group button { display:inline-block; padding:8px; width:calc(100% / 3); border:1px solid var(--color-d); font-size:var(--font24); font-weight:var(--font-w-b); color:var(--color-9); text-align:center; line-height:67px; }
+.anchor-list .btn-group { display:flex; width:100%; }
+.anchor-list .btn-group button { display:inline-block; padding:8px; width:100%; border:1px solid var(--color-d); font-size:var(--font24); font-weight:var(--font-w-b); color:var(--color-9); text-align:center; line-height:67px; }
 .anchor-list .btn-group button.active { border-top:2px solid var(--primary); border-bottom:0; color:var(--primary); }
 
 .anchor-content { padding-top:20px; }
@@ -199,7 +199,7 @@ main.contentWrap > .page-container.errorpage { padding-top:0; }
 .anchor-panel .text-content li:first-of-type.error { padding-top:0; }
 
 /* 상품소개 */
-.anchor-panel .anchor-group { display:flex; gap: 72px;} /* 25.11.20 p.tit이 길어지면 간격이 줄어보이는 현상 때문에 gap 추가 (피그마상 72px)*/
+.anchor-panel .anchor-group { display:flex; gap:72px;}
 .anchor-panel .anchor-group + .anchor-group{ margin-top:52px; }
 .anchor-group p.tit { max-width:200px; width:100%; font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-2); }
 .anchor-group p { font-size:var(--font20); }
@@ -1059,7 +1059,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     /* 엥커이동 */
     .anchor-list.fixed { position:fixed; top:54px; left:0; right:0; z-index:90; padding-top:28px; background:var(--white); box-shadow:0 2px 4px rgba(0,0,0,0.1); }
     .page-container:has(.anchor-list) .anchor-content { padding:0 24px; }
-    .anchor-list .btn-group button { padding:0 0 18px; width:calc(100% / 3); border:0; border-bottom:1px solid var(--color-e); font-size:var(--font18); line-height:normal; }
+    .anchor-list .btn-group button { padding:0 0 18px; border:0; border-bottom:1px solid var(--color-e); font-size:var(--font18); line-height:normal; }
     .anchor-list .btn-group button.active { border:0; border-bottom:2px solid var(--primary); }
 
     .anchor-content { padding-top:0; }
@@ -1414,7 +1414,8 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCA50100VQ .caption,
     .WCA50300VQ .caption,
     .WCS70100VQ .caption,
-    .WCS30101DQ .caption {padding-top: 0;} 
+    .WCS30101DQ .caption,
+    .WCS30301VS .caption {padding-top: 0;} 
     .WCA50100VQ .table-titcap, .WCA50300VQ .table-titcap { padding-bottom:24px; }
     .WCA50100VQ thead {display: none;}
     .WCA50100VQ .table-mobile,
@@ -1479,6 +1480,9 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCS10100VQ .text-content .caption,
     .WCS10200VQ .text-content .caption,
     .WCS10201DQ .text-content .caption { padding-bottom:18px; }
+
+    /** 청구정보변경 **/
+    .WCS30301VS .text-content > .group > .text-group { margin-top:0; }
     
     /*---------------------------------------------
     #팝업

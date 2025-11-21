@@ -3,7 +3,7 @@
 <head>
     <meta charset="euc-kr" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>법인계약약정&gt;고객센터&gt;홈</title>
+    <title>로그인&gt;홈</title>
 
     <meta name="keywords" content="MG캐피탈" />
     <meta name="copyright" content="copyrights 2025 MG캐피탈" />
@@ -43,63 +43,83 @@
                 <nav class="location-container">
                     <ol class="breadcrumb">
                         <li><span class="home">홈</span></li>
-                        <li><span>고객센터</span></li>
-                        <li><span>법인계약약정</span></li>
+                        <li><span>로그인</span></li>
                     </ol>
                 </nav>
                 <section class="visual-container">
-                    <h2>법인계약약정</h2>
-                    <p>당사 홈페이지를 통해 법인 계약 약정을 진행하실 수 있습니다.</p>
+                    <h2>로그인</h2>
                 </section>
-                <section class="page-container WCC21200VQ">
-                    <div class="text-content">
-                        <div class="table-content">
-                            <div class="table-group">
-                                <h3>법인계약 약정조회</h3>
-                                <p>고객님의 안전한 전자약정을 위해, SMS로 수신하신 <strong>일련번호</strong>와 <strong>사업자등록번호</strong>를 입력해 주세요.</p>
-                                <table>
-                                    <caption>법인계약 약정조회 입력표 (일련번호, 사업자등록번호 포함)</caption>
-                                    <colgroup>
-                                        <col style="width:262px;">
-                                        <col style="width:auto">
-                                    </colgroup>
-                                    <tbody>
-                                        <tr>
-                                            <th>일련번호</th>
-                                            <td class="tal">
-                                                <fieldset class="form-content">
-                                                    <div class="form-wrap">
-                                                        <div class="form-group">
-                                                            <input id="" type="text" name="text" class="form-control" required /> <!-- 일련번호가 숫자만인지, 영문 + 숫자인지에 따라 type 변경 -->
-                                                        </div>
-                                                    </div>
-                                                </fieldset>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>사업자등록번호</th>
-                                            <td class="tal">
-                                                <fieldset class="form-content">
-                                                    <div class="form-wrap">
-                                                        <div class="form-group">
-                                                            <input id="" type="text" name="text" class="form-control" required /> <!-- 일련번호가 숫자만인지, 영문 + 숫자인지에 따라 type 변경 -->
-                                                        </div>
-                                                    </div>
-                                                </fieldset>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                <section class="page-container login">
+                    <div class="tab-container jsTab">
+                        <nav class="tab-list depth1">
+                            <div class="btn-group">
+                                <button type="button" class="tab-item active" data-tab="tab2-1" aria-selected="true">공동인증서</button>
+                                <button type="button" class="tab-item" data-tab="tab2-2" aria-selected="false">민간(사설) 인증서</button>
                             </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="bottom-container">
-                    <div class="btn-content cta">
-                        <div class="button-group">
-                            <button class="btn-secondary">초기화</button>
-                            <a href="javascript:void(0);" class="btn-primary">조회</a>
+                        </nav>
+                        <div class="tab-content">
+                            <!-- 공동인증서 -->
+                            <div id="tab2-1" class="tab-panel" aria-hidden="false">
+                                <form>
+                                    <fieldset class="form-content">
+                                        <legend>공동인증서 로그인</legend>
+                                        <div class="form-wrap login-form">
+                                            <div class="group">
+                                                <div class="form-group">
+                                                    <label class="radio">
+                                                        <input type="radio" name="row1-active" value="" checked>
+                                                        <span>일반금융상품</span>
+                                                    </label>
+                                                    <label class="radio">
+                                                        <input type="radio" name="row1-active" value="">
+                                                        <span>장기렌터카</span>
+                                                    </label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="toggle">
+                                                        <input type="checkbox" name="row3-active" title="체크" value="" checked="">
+                                                        <span>개인</span>
+                                                        <span>사업자</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div><!--//form-wrap-->
+                                    </fieldset>
+                                    <div class="btn-content login">
+                                        <div class="button-group">
+                                            <a href="javascript:void(0);" class="btn-primary">공동인증서 로그인</a>
+                                            <a href="javascript:void(0);" class="btn-secondary">공동인증서 등록</a>
+                                        </div>
+                                        <div class="button-group">
+                                            <a href="javascript:void(0);">공동인증서 안내</a>
+                                            <a href="javascript:void(0);">회원가입</a>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="note-content">
+                                    <p class="tit">유의사항 안내</p>
+                                    <ul>
+                                        <li>공동인증서 등록은 최초 1회만 등록하면 됩니다.</li>
+                                        <li>기존에 회원가입한 고객만 이용 가능합니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- 민간 인증서 -->
+                            <div id="tab2-2" class="tab-panel" aria-hidden="false">
+                                <div class="private-content">
+                                    <div class="private-group">
+                                        <button type="button">카카오 인증</button>
+                                        <button type="button">네이버 인증</button>
+                                        <button type="button">토스 인증</button>
+                                        <button type="button">패스 인증</button>
+                                    </div>
+                                </div>
+                                <div class="btn-content cta">
+                                    <div class="button-group">
+                                        <a href="javascript:void(0);" class="btn-primary">로그인</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
