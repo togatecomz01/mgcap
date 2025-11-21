@@ -77,7 +77,9 @@
 
     <!-- 2지망 -->
     <div class="table-group">
-        <h4 class="essential">2지망</h4>
+        <!--s : 2025-11-20 : essential 클래스 삭제-->
+        <h4>2지망</h4>
+        <!--e : 2025-11-20 : essential 클래스 삭제-->
         <table class="td-l">
             <caption>2지망 입력표(희망근무지, 지원업무, 상세지원업무 포함)</caption>
                 <colgroup>
@@ -117,7 +119,8 @@
 
     <!-- 개인정보 -->
     <div class="table-group">
-        <h4 class="essential">개인정보</h4>
+        <!--s : 2025-11-20 : h4 essential 클래스 삭제 th에서는 취미, 특기, 보훈여부(추가) 제외하고 essential 추가-->
+        <h4>개인정보</h4>
         <table class="td-l">
             <caption>개인정보 입력표(사진등록, 성명, 국적, 생년월일, 현주소, 전화번호, 휴대폰, 이메일, 취미, 특기 포함)</caption>
             <colgroup>
@@ -128,7 +131,7 @@
             </colgroup>
             <tbody>
                 <tr>
-                    <th scope="row">사진등록</th>
+                    <th class="essential" scope="row">사진등록</th>
                     <td colspan="3">
                         <div class="photo-content">
                             <p class="img-photo">
@@ -152,25 +155,25 @@
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row"><label for="name">성명</label></th>
+                    <th scope="row"><label class="essential" for="name">성명</label></th>
                     <td colspan="3">
                         <input id="name" name="name" class="w-406" type="text" value="홍길동"  disabled>
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row"><label for="nationality">국적</label></th>
+                    <th scope="row"><label class="essential" for="nationality">국적</label></th>
                     <td colspan="3">
                         <input id="nationality" name="nationality" class="w-406" type="text">
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row"><label for="birthday">생년월일</label></th>
+                    <th scope="row"><label class="essential" for="birthday">생년월일</label></th>
                     <td colspan="3">
                         <input id="birthday" name="birthday" class="w-406" type="date" value="2025-10-17" disabled>
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row">현주소</th>
+                    <th class="essential" scope="row">현주소</th>
                     <td colspan="3" class="address">
                         <fieldset>
                             <legend class="sr-only">현주소 입력</legend>
@@ -190,18 +193,18 @@
                         </fieldset>
                     </td>
                 </tr>
-                <tr>
-                    <th scope="row"><label for="phoneNumber">전화번호</label></th>
-                    <td>
-                        <input id="phoneNumber" name="phoneNumber" type="tel">
-                    </td>
-                    <th scope="row"><label for="mobileNumber">휴대폰</label></th>
+                <tr class="row-mobile-2col">
+                    <th scope="row"><label class="essential" for="mobileNumber">휴대폰</label></th>
                     <td>
                         <input id="mobileNumber" name="mobileNumber" type="tel">
                     </td>
+                    <th scope="row"><labe class="essential" for="phoneNumber">비상연락망</labe></th>
+                    <td>
+                        <input id="phoneNumber" name="phoneNumber" type="tel">
+                    </td>
                 </tr>
                 <tr>
-                    <th scope="row">이메일</th>
+                    <th class="essential" scope="row">이메일</th>
                     <td colspan="3">
                         <fieldset class="form-group email-group">
                             <legend class="sr-only">이메일 입력</legend>
@@ -219,22 +222,28 @@
                                 <option value="gmail.com">gmail.com</option>
                                 <option value="hanmail.net">hanmail.net</option>
                             </select>
-                            <!--<p class="sr-only email-live" aria-live="polite"></p>-->
                         </fieldset>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row"><label for="hobby">취미</label></th>
-                <td>
-                    <span class="ipt-clear"><input id="hobby" name="hobby"  type="text"></span>
-                </td>
-                    <th scope="row"><label for="specialAbility">특기</label></th>
-                <td>
-                    <span class="ipt-clear"><input type="text" id="specialAbility" name="specialAbility"></span>
-                </td>
+                    <td>
+                        <span class="ipt-clear"><input id="hobby" name="hobby"  type="text"></span>
+                    </td>
+                        <th scope="row"><label for="specialAbility">특기</label></th>
+                    <td>
+                        <span class="ipt-clear"><input type="text" id="specialAbility" name="specialAbility"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th scpop="row"><label for="veteran">보훈여부</label></th>
+                    <td colspan="3">
+                        <span class="ipt-clear"><input id="veteran" class="w-406" name="veteran" type="text"></span>
+                    </td>
                 </tr>
             </tbody>
         </table>
+        <!--e : 2025-11-20 : h4 essential 클래스 삭제 th에서는 취미, 특기, 보훈여부(추가) 제외하고 essential 추가-->
         <p class="m-dot">본인인증 시 사용한 핸드폰 번호와 입력하신 이메일은 채용결과 및 진행사항 안내 등에 활용됩니다. 이메일을 정확하게 입력하시기 바랍니다.</p>
     </div><!--//table-group-->
 
@@ -284,13 +293,13 @@
                         <div class="date-wrap">
                             <label for="serviceStart" class="sr-only">복무 시작일</label>
                             <input type="date" id="serviceStart" name="serviceStart" class="js-cal js-cal-date" placeholder="YYYY-MM-DD" />
-                          </div>
-                          <div class="date-wrap">
+                        </div>
+                        <div class="date-wrap">
                             <label for="serviceEnd" class="sr-only">복무 종료(연·월)</label>
                             <input type="date" id="serviceEnd" name="serviceEnd" class="js-cal js-cal-date" placeholder="YYYY-MM-DD" />
-                          </div>
-                      </fieldset>
-                  
+                        </div>
+                    </fieldset>
+                
                 </td>
                 <td>
                     <label for="exemptReason" class="sr-only">면제사유</label>

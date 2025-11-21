@@ -765,6 +765,7 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .recruitment .preview-cta .text-content p:last-of-type { text-align:right; }
 .recruitment .preview-cta .text-content p:last-of-type span:first-of-type { margin-right:16px; font-weight:var(--font-w-m); }
 .WCR50202DS.recruitment.is-preview  .preview-cta { display:block; }
+.WCR50202DS.recruitment.is-preview .group.step3 .diamond-box { display:none; }
 
 
 /* 입사지원서 조회 */
@@ -961,6 +962,18 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     /* */
     
 }
+
+
+
+@media (max-width: 1200px) {
+      /**입사지원서 작성**/
+    .recruitment > .table-content { min-width:1200px; overflow-x:auto; }
+    .recruitment .group.step2 .form-group.abs { top:0; }
+    .recruitment .form-group .email input, .email-group.form-group .email input { width:25vw; }
+    .recruitment .form-group select, .email-group.form-group select { width:30vw; }
+    .recruitment tr:has(> th[rowspan], > td[rowspan]) + tr th:first-of-type { border-left:var(--table-border); }
+}
+  
 
 @media (max-width:920px) {
     /*---------------------------------------------
