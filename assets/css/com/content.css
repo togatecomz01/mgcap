@@ -187,7 +187,7 @@ main.contentWrap > .page-container.errorpage { padding-top:0; }
 .anchor-list { margin:0 auto; max-width:1400px; width:100%; }
 .anchor-list.fixed { position: static; }
 .anchor-list .btn-group { display:flex; width:100%; }
-.anchor-list .btn-group button { display:inline-block; padding:8px; width:100%; border:1px solid var(--color-d); font-size:var(--font24); font-weight:var(--font-w-b); color:var(--color-9); text-align:center; line-height:67px; }
+.anchor-list .btn-group button { display:inline-block; padding:8px; width:100%; border:1px solid var(--color-d); font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-9); text-align:center; line-height:67px; }
 .anchor-list .btn-group button.active { border-top:2px solid var(--primary); border-bottom:0; color:var(--primary); }
 
 .anchor-content { padding-top:20px; }
@@ -201,7 +201,7 @@ main.contentWrap > .page-container.errorpage { padding-top:0; }
 /* 상품소개 */
 .anchor-panel .anchor-group { display:flex; gap:72px;}
 .anchor-panel .anchor-group + .anchor-group{ margin-top:52px; }
-.anchor-group p.tit { max-width:200px; width:100%; font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-2); }
+.anchor-group p.tit { max-width:200px; width:100%; font-size:var(--font20); font-weight:var(--font-w-b); color:var(--color-2); }
 .anchor-group p { font-size:var(--font20); }
 .anchor-group li { margin-top:20px; font-size:var(--font20); }
 .anchor-group li:first-of-type { margin-top:0; }
@@ -235,7 +235,10 @@ main.contentWrap > .page-container.errorpage { padding-top:0; }
 .list-card li.principal::before { background-image:url("../../images/content/finance/w/ico_principal.png") } /* 원금균등분할상환 */
 
 /* 유의사항 */
-.anchor-panel .info-content .note-group { border:1px solid #41C7F4; }
+.anchor-panel .info-content .note-group { padding:32px 36px; border:1px solid #41C7F4; }
+.anchor-panel .info-content .note-group .tit { padding-bottom:12px; }
+.anchor-panel .info-content .note-group .m-dot li { font-size:var(--font18); color:var(--color-45); }
+.anchor-panel .info-content .diamond-box { gap:10px; padding:28px 36px; }
 .anchor-panel .info-content .diamond-box p > span { font-weight:var(--font-w-m); }
 
 /* 준법감시심의필 */
@@ -506,6 +509,11 @@ main.contentWrap > .page-container.errorpage { padding-top:0; }
 .WCC30110VQ .mo-list tbody tr td.success { font-size:var(--font18); font-weight:var(--font-w-m); }
 .WCC30110VQ .mo-list tbody tr td.error { color:var(--failure); }
 .WCC30110VQ .mo-list tbody tr td.success { color:var(--success); }
+
+/** 기한이익상실 예정 공지 **/
+.WCC21101DS .table-content .table-group { overflow-x:auto; }
+/* .WCC21101DS .table-content .table-group table { table-layout:auto; } */
+.WCC21101DS .table-content .group .table-group + .m-dot { margin-top:-32px; }
 
 /******고객센터-채무조정안내**/
 .WCC601500VQ .sub-process-content.bo-none ul { padding: 0; border: 0; }
@@ -846,9 +854,8 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     #MY MG
 ---------------------------------------------*/
 /** 닙입내역 **/
-.WCS10200VQ .underline,
-.WCS40500VQ .underline a,
-.WCC21202VQ .underline { color:var(--primary); text-decoration:underline; }
+.underline,
+.underline a { color:var(--primary); text-decoration:underline; }
 
 /* 상환일정 조회 */
 .WCS10300VQ .text-content .info-list .m-dot li { font-size:var(--font16); }
@@ -862,6 +869,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 .WCS40800VQ h3 { font-size:var(--font22); }
 .WCS40800VQ .text-group:has(.btn-plus) { position:relative; }
 .WCS40800VQ .btn-plus { position:absolute; top:4px; right:0; margin-top:0; width:33px; height:33px; border:var(--board); background:url("../../images/com/svg/ico_plus.svg")no-repeat center; }
+.WCS40800VQ .text-group > .table-group + .table-group { margin-top:52px; }
 .WCS40800VQ .table-group form { margin-top:0; }
 .WCS40800VQ th label { margin-bottom:0; font-weight:var(--font-w-b); color:var(--color-2); }
 .WCS40800VQ td > input[type="text"],
@@ -878,6 +886,10 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 .WCS40800VQ .upload-label { margin-bottom:0; }
 .WCS40800VQ .upload-label input[type="file"] { display:none; }
 .WCS40800VQ .upload-label .fileLabel { padding:20px 16px; width:100%; max-width:680px; border:0; text-align:left; }
+
+/** 나의 상담내역 **/
+.WCS50100VQ table td { border:0; }
+.WCS50100VQ table tr:last-child td { border-bottom: 1px solid var(--color-d); }
 
 /*---------------------------------------------
     #팝업
@@ -906,6 +918,8 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 .WCC20720VS .pop-content .text-group .tit-f-square:before { content:"■"; margin-right:2px; }
 
 /* 중도상환 조회/신청 */
+.layerPopup.full > .pop-area:has(.WCS10401PQ) { height:auto; }
+.layerPopup.full .pop-body.WCS10401PQ { max-height:415px; }
 .WCS10401PQ .btn-link { padding:24px 30px 24px 24px; width:100%; background-repeat:no-repeat; background-position:left 20px center; background-size:40px; }
 .WCS10401PQ .btn-group { display:flex; flex-wrap:wrap; }
 .WCS10401PQ .text-content p + p { margin-top:12px; }
@@ -1076,7 +1090,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .contentWrap.finance .page-container + .bottom-container { display:block; margin-top:0; padding-top:52px; }
     .finance-content {
         --gap:18px;
-        --padding:32px 24px 32px;
+        --padding:32px 0 32px;
         --size36:24px;
         flex-direction:column;
     }
@@ -1088,7 +1102,6 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 
     /* 엥커이동 */
     .anchor-list.fixed { position:fixed; top:54px; left:0; right:0; z-index:90; padding-top:28px; background:var(--white); box-shadow:0 2px 4px rgba(0,0,0,0.1); }
-    .page-container:has(.anchor-list) .anchor-content { padding:0 24px; }
     .anchor-list .btn-group button { padding:0 0 18px; border:0; border-bottom:1px solid var(--color-e); font-size:var(--font18); line-height:normal; }
     .anchor-list .btn-group button.active { border:0; border-bottom:2px solid var(--primary); }
 
@@ -1502,6 +1515,8 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCS30101DQ .mo tbody td,
     .WCA90105VQ .mo tbody td { display:inline-flex; flex-direction:column; justify-content:center; padding:10px; width:calc(70% - 4px); min-height:24px; border-left:0; }
     .WCA90105VQ .text-content .text-group { margin-bottom:42px; }
+
+    .WCS30101DQ ~ .bottom-container .btn-content.cta a { flex:0 0 auto; height:54px; line-height:54px; }
 
     /** 이용상품내역 **/
     .WCS10100VQ .text-content + .text-content,
