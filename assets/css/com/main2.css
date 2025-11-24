@@ -425,7 +425,7 @@ body:has(.main) .menu .menu-item .list-item { top:75px; }
         --ser03:url("../../images/content/MAIN/m/ico_ser03.png");
         --ser04:url("../../images/content/MAIN/m/ico_ser04.png");
     }
-    .main-container .main-content > .banner-group { padding:20px 24px 34px; margin-bottom:0; background-color:var(--body-color); background-size:104px auto; background-position:top 40px right 24px; }
+    .main-container .main-content > .banner-group { padding:20px 24px 34px; margin-bottom:0; border-radius:0; background-color:var(--body-color); background-size:104px auto; background-position:top 40px right 24px; }
     .main-container .main-content > .banner-group > p { display:none; }
     .main-container .main-content > .banner-group h3 { padding-top:18px; max-width:300px; font-size:var(--font16); font-weight:var(--font-w-m); }
     .main-container .main-content > .banner-group h3 span { font-size:var(--font20); font-weight:var(--font-w-b); color:var(--color-2); line-height:38px; }
@@ -468,7 +468,7 @@ body:has(.main) .menu .menu-item .list-item { top:75px; }
     .layerPopup.modal .pop-content.event .pop-body .swiper-button-next::after { width:80%;  }
 
     .layerPopup.modal .pop-content.event .pop-footer .button-content { justify-content:space-between; }
-    .layerPopup.modal .pop-content.event .pop-footer .button-content button { flex:1; gap:0; padding:18px 0; }
+    .layerPopup.modal .pop-content.event .pop-footer .button-content button { flex:1; gap:0; padding:18px 0; font-size:var(--font14); }
     .layerPopup.modal .pop-content.event .pop-footer .button-content button:last-of-type { flex:0 0 40%; font-weight:var(--font-w-m); border-left:1px solid var(--color-d); }
 
 }
