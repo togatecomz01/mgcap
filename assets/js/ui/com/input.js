@@ -151,7 +151,7 @@ ready, load, init
                         $fileLabel.find('.btn-clear').remove();
                         
                         // 클리어 버튼 생성
-                        $('<button type="button" class="btn-clear" aria-label="첨부파일 삭제" title="사제">×</button>')
+                        $('<button type="button" class="btn-clear" aria-label="첨부파일 삭제" title="사제">&times;</button>')
                           .appendTo($fileLabel)
                           .on('click', function (e) {
                             e.preventDefault();
