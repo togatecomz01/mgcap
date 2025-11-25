@@ -718,8 +718,10 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 .WCR50100VQ td.title.status-ing::before {content: '진행중'; border-color: var(--primary); color: var(--primary);}
 .WCR50100VQ td.title.status-closed::before {content: '마감'; border-color: var(--error); color: var(--error);}
 /* 회사소개 - 채용공고 상세(WCR50101DQ) */
-.WCR50101DQ .view-subject {position: relative;}
-.WCR50101DQ .view-subject::after {position: absolute; content: '34'; font-size: var(--font18); font-weight: var(--font-w-r); color: var(--color-6); right: 0;background-image: url('../../images/com/svg/ico_inquiry.svg'); background-repeat: no-repeat;background-size: 16px 16px;background-position: left center;padding-left: 24px;}
+.WCR50101DQ .view-subject {display: flex; flex-wrap: wrap; gap: 8px;}
+.WCR50101DQ .view-subject .date {margin-top: 0; font-weight: var(--font-w-r);}
+.WCR50101DQ .view-subject .inquiry {margin-left: auto; display: inline-flex; align-items: center; font-size: 1rem; color: var(--color-6); font-weight: var(--font-w-r);}
+.WCR50101DQ .view-subject .inquiry::before {content: ''; display: block; width: 16px; height: 16px; margin-right: 6px; background: url('../../images/com/svg/ico_inquiry.svg') no-repeat center / contain;}
 /* 회사소개 - 입사지원 동의 */
 
 /* 입사지원서 작성 */
@@ -1487,10 +1489,8 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCR50100VQ table tr:last-child {border-bottom: 0;}
     /* .WCR50100VQ .mo-list tbody tr:last-child {border-bottom: var(--table-border);} */
     /* 회사소개 - 채용공고 상세*/
-    .WCR50101DQ .view-subject {margin-bottom: 19px;}
-    .WCR50101DQ .view-subject .date {margin-top: 5px; }
-    .WCR50101DQ .error {color:var(--color-75);}
-    .WCR50101DQ .view-subject::after {font-size: 12px; left: 0; top: 105%; background-size: 18px 18px;}
+    .WCR50101DQ .error {color:var(--color-75) !important;}
+    .WCR50101DQ .view-subject .inquiry {margin-left: 0; font-size: var(--font12);}
     /* 회사소개 - 클린신고센터 + 성희롱 및 직장내 괴롭힘 신고센터 */
     .WCA90107VQ .text-content, .WCA90100VQ .text-content {margin-bottom: 32px;}
 
