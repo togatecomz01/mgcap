@@ -206,7 +206,7 @@ function headerMenu() {
             }
         }
         
-        // 메뉴 닫기 예약
+        // 메뉴 닫기
         function scheduleClose() {
             closeTimer = setTimeout(function() {
                 menuItem.classList.remove('on');
@@ -287,6 +287,19 @@ function headerMenu() {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 this.click();
+            }
+        });
+    }
+
+    // 포커스가 헤더 메뉴 영역을 벗어나면 메뉴 닫기
+    const headerWrap = document.getElementById('headerWrap');
+    if (headerWrap) {
+        document.addEventListener('focusin', function(e) {
+            const isInsideHeader = headerWrap.contains(e.target);
+
+            // 헤더 외부로 포커스가 이동하면 모든 메뉴 닫기
+            if (!isInsideHeader) {
+                closeAllMenus();
             }
         });
     }
