@@ -566,6 +566,7 @@ main.contentWrap > .page-container.errorpage { padding-top:0; }
 /* 고객센터 - 개인신용평가 대응권 */
 .WCC601400VQ .btn-group { font-size:0; }
 .WCC601400VQ .btn-group .btn-download + .btn-download {margin-left: 26px;}
+.WCC601400VQ .rfrnc.success li { color:#0072BC; }
 
 /* 개인정보 조회, 동의 안내문 */
 .WCC60900VQ h5 {margin-top: 52px;}
@@ -702,6 +703,7 @@ color: var(--white); font-size: var(--font28); font-weight: var(--font-w-b); bac
 /* 회사소개 - 공시정보 (WCA50100VQ) + 신용평가(WCA50300VQ) */
 .WCA50100VQ { --logo-cst-14:url("../../images/content/dart.png"); /**DART 전자공시시스템**/ }
 /* (table.css) 공시정보 페이지에 tfoot의 컨텐츠가 1개가 아니라 2개라 적용이 안되어 따로 정리  */
+.WCA50100VQ .table-content .table-group.bo-t1 { padding-top:56px; }
 .WCA50100VQ .table-group table .sum  { font-weight:var(--font-w-m); color:var(--white); background-color:var(--primary); }
 .WCA50100VQ .table-group th.sum ~ td {background-color: #EDF9FF;}
 .WCA50100VQ .table-titcap, .WCA50300VQ .table-titcap { display: flex; justify-content: space-between; align-items:center; padding-bottom: 20px; }
@@ -1149,6 +1151,8 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .anchor-group .table-content .table-group ul li { margin-top:12px; font-size:var(--font14); }
     .anchor-group .table-content .table-group ul li:first-child { margin-top:14px; }
 
+    .anchor-group .table-content .table-group td .rfrnc { font-size:var(--font14); }
+
     .anchor-panel .info-content .note-group { padding:20px 20px 20px 14px; }
     .anchor-panel .info-content .note-group .tit { padding-bottom:14px; }
     .anchor-panel .info-content .note-group .m-dot { padding-left:6px; }
@@ -1350,6 +1354,9 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCC60300VQ .se-select { width: 100%; }
     .WCC60300VQ .se-select select { font-size: var(--font14); }
 
+    .WCC60300VQ .text-group h4.tit { font-size:var(--font16); }
+
+
     /******고객센터-영상정보처리기기 운영관리방침**/
     .WCC602000VQ .col-row.mo-row colgroup, .col-row.mo-row thead { display: none; }
     .WCC602000VQ .col-row.mo-row tr { display: block; }
@@ -1481,6 +1488,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCS30101DQ .caption,
     .WCS30301VS .caption {padding-top: 0;} 
     .WCA50100VQ .caption {padding-top: 16px; padding-bottom: 0;}
+    .WCA50100VQ .table-content .table-group.bo-t1 { padding-top:32px; }
     .WCA50100VQ .table-titcap, .WCA50300VQ .table-titcap { padding-bottom:24px; }
     .WCA50100VQ thead {display: none;}
     .WCA50100VQ .table-mobile,
@@ -1496,7 +1504,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCA50300VQ .tab-select-mobile .se-select select {color: var(--color-45); border: 1px solid var(--form-board); border-radius: 100px; margin-bottom:20px; height: 48px; line-height: 1;}
     .WCA50100VQ .tab-select-mobile .se-btn,
     .WCA50300VQ .tab-select-mobile .se-btn {display: none;}
-    .WCA50100VQ.page-container .tab-content, .WCA50300VQ.page-container .tab-content {padding: 0 0 42px 0;}
+    .WCA50300VQ.page-container .tab-content {padding: 0 0 42px 0;}
     .WCA50100VQ .tit,.WCA50300VQ .tit {font-size: var(--font18);}
     .WCA50100VQ .caption, .WCA50300VQ .caption {font-size: var(--font14);}
     .WCA50300VQ .table-mobile tbody th {background-color: #fff; font-weight: var(--font-w-r);}

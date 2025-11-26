@@ -55,7 +55,7 @@
 .header-btn-wrap .menu-btn { background:url("../../images/com/svg/ico_menu_btn.svg") no-repeat center; }
 
 /** °Ë»öÃ¢ **/
-.allsearch { position:absolute; top:79px; left:0; display:none; width:100%; z-index:10; }
+.allsearch { position:absolute; top:76px; left:0; display:none; width:100%; z-index:10; }
 .search-wrap { margin:0 auto; max-width:900px; width:100%; }
 .allsearch.on::before { content:""; position:fixed; top:79px; left:0; bottom:0; width:100%; height:100%; background-color:rgba(0, 0, 0, 0.4); z-index:-1; }
 .allsearch-header { display:none; }
