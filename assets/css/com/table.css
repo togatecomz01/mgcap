@@ -107,7 +107,7 @@ table:has(.no-results) td { margin:0; padding:0; border:0; }
     .mo-appendix thead, .mo-appendix thead tr { display:flex; gap:16px; justify-content:flex-end; }
     .mo-appendix thead tr { margin-bottom:10px; }
     .mo-appendix thead th { display:inline-flex; align-items:center; gap:4px; padding:0; background:transparent; border:0; font-weight:var(--font-w-m); color:var(--color-45); font-size:var(--font12); }
-    .mo-appendix thead th::before { content:""; display:block; width:10px; height:10px; }
+    .mo-appendix thead th::before { content:""; display:block; width:10px; height:10px; box-sizing:border-box; }
     .mo-appendix thead th:first-of-type::before { background:var(--table-th); }
     .mo-appendix thead th:last-of-type::before { background:var(--white); border:1px solid var(--color-d); }
     .mo-appendix tbody { border-top:1px solid var(--color-2); }
