@@ -64,31 +64,31 @@
                                     </li>
                                     <li>
                                         <input type="checkbox" id="check-required-1" class="chkReq" />
-                                        <label for="check-required-1" class="check-button" data-popup-open="fullPopup1">
+                                        <label for="check-required-1" class="check-button" data-popup-open="provisionHs1">
                                             <span>개인정보 수집&#183;이용&#183;취급위탁 동의</span>
                                         </label>
-                                        <button title="개인정보 수집&#183;이용&#183;취급위탁 동의 내용보기" type="button" class="modal" data-popup-open="fullPopup1">내용보기</button>
+                                        <button title="개인정보 수집&#183;이용&#183;취급위탁 동의 내용보기" type="button" class="modal" data-popup-open="provisionHs1">내용보기</button>
                                     </li>
                                     <li>
                                         <input type="checkbox" id="check-required-2" class="chkReq" />
-                                        <label for="check-required-2" class="check-button" data-popup-open="fullPopup2">
+                                        <label for="check-required-2" class="check-button" data-popup-open="provisionHs2">
                                             <span>본인확인서비스 이용약관</span>
                                         </label>
-                                        <button title="본인확인서비스 이용약관 내용보기" class="modal" type="button" data-popup-open="fullPopup2">내용보기</button>
+                                        <button title="본인확인서비스 이용약관 내용보기" class="modal" type="button" data-popup-open="provisionHs2">내용보기</button>
                                     </li>
                                     <li>
                                         <input type="checkbox" id="check-required-3" class="chkReq" />
-                                        <label for="check-required-3" class="check-button" data-popup-open="fullPopup3">
+                                        <label for="check-required-3" class="check-button" data-popup-open="provisionHs3">
                                             <span>고유식별정보처리 동의</span>
                                         </label>
-                                        <button title="고유식별정보처리 동의 내용보기" class="modal" type="button" data-popup-open="fullPopup3">내용보기</button>
+                                        <button title="고유식별정보처리 동의 내용보기" class="modal" type="button" data-popup-open="provisionHs3">내용보기</button>
                                     </li>
                                     <li>
                                         <input type="checkbox" id="check-required-4" class="chkReq" />
-                                        <label for="check-required-4" class="check-button" data-popup-open="fullPopup4">
-                                            <span>통신사 이용약관 동의</span>
+                                        <label for="check-required-4" class="check-button" data-popup-open="provisionHs4">
+                                            <span>통신사 이용약관</span>
                                         </label>
-                                        <button title="통신사 이용약관 동의 내용보기" class="modal" type="button" data-popup-open="fullPopup4">내용보기</button>
+                                        <button title="통신사 이용약관 내용보기" class="modal" type="button" data-popup-open="provisionHs4">내용보기</button>
                                     </li>
                                 </ul>
                             </div>
@@ -172,88 +172,18 @@
         <div data-include-path="../../views/COMMON/footer.html"></div>
     </div>
     <!--s :팝업-->
-    <!-- s: 개인정보 수집이용 팝업(fullPopup1) -->
-    <div id="fullPopup1" class="layerPopup full fullPopupOn">
-        <!--[D] fullPopupOn 클래스 :: 헤더 스크립트 적용중-->
-        <div class="pop-area">
-            <div class="pop-header">
-                <h2 class="pop-tit">개인정보 수집&#183;이용&#183;취급위탁 동의</h2>
-            </div>
-            <div class="pop-body WCC21400VQ">
-                <div class="pop-content">
-                    개인정보 수집&#183;이용&#183;취급위탁 동의 내용
-                </div>
-            </div>
-            <div class="pop-footer">
-                <div class="button-content">
-                    <button type="button" class="btn-pop-primary"  data-popup-close="fullPopup1">확인했어요</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- e: 개인정보 수집이용 팝업(fullPopup1) -->
-    <!-- s: 본인확인서비스 팝업(fullPopup2) -->
-    <div id="fullPopup2" class="layerPopup full fullPopupOn">
-        <!--[D] fullPopupOn 클래스 :: 헤더 스크립트 적용중-->
-        <div class="pop-area">
-            <div class="pop-header">
-                <h2 class="pop-tit">본인확인서비스 이용약관</h2>
-            </div>
-            <div class="pop-body">
-                <div class="pop-content">
-                    본인확인서비스 이용약관 내용
-                </div>
-            </div>
-            <div class="pop-footer">
-                <div class="button-content">
-                    <button type="button" class="btn-pop-primary"  data-popup-close="fullPopup2">확인했어요</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- e: 본인확인서비스 팝업(fullPopup2) -->
-    <!-- s: 고유식별정보처리 팝업(fullPopup3) -->
-    <div id="fullPopup3" class="layerPopup full fullPopupOn">
-        <!--[D] fullPopupOn 클래스 :: 헤더 스크립트 적용중-->
-        <div class="pop-area">
-            <div class="pop-header">
-                <h2 class="pop-tit">고유식별정보처리 동의</h2>
-            </div>
-            <div class="pop-body">
-                <div class="pop-content">
-                    고유식별정보처리 동의 내용
-                </div>
-            </div>
-            <div class="pop-footer">
-                <div class="button-content">
-                    <button type="button" class="btn-pop-primary"  data-popup-close="fullPopup3">확인했어요</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- e: 고유식별정보처리 팝업(fullPopup3) -->
-    <!-- s: 통신사 이용약관 팝업(fullPopup4) -->
-    <div id="fullPopup4" class="layerPopup full fullPopupOn">
-        <!--[D] fullPopupOn 클래스 :: 헤더 스크립트 적용중-->
-        <div class="pop-area">
-            <div class="pop-header">
-                <h2 class="pop-tit">통신사 이용약관 동의</h2>
-            </div>
-            <div class="pop-body">
-                <div class="pop-content">
-                    <div class="agreement" id="KCB" tabindex="0">
-                        통신사 이용약관 동의 내용
-                    </div>
-                </div>
-            </div>
-            <div class="pop-footer">
-                <div class="button-content">
-                    <button type="button" class="btn-pop-primary"  data-popup-close="fullPopup4">확인했어요</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- e: 통신사 이용약관 팝업(fullPopup4) -->
+    <!-- s: 개인정보 수집·이용/취급위탁 동의 팝업(provisionHs1) -->
+    <div data-include-path="./WCC21400VQ_provisionHs1.html"></div>
+    <!-- e: 개인정보 수집·이용/취급위탁 동의 팝업(provisionHs1) -->
+    <!-- s: 본인확인서비스 팝업(provisionHs2) -->
+    <div data-include-path="./WCC21400VQ_provisionHs2.html"></div>
+    <!-- e: 본인확인서비스 팝업(provisionHs2) -->
+    <!-- s: 고유식별정보처리 팝업(provisionHs3) -->
+    <div data-include-path="./WCC21400VQ_provisionHs3.html"></div>
+    <!-- e: 고유식별정보처리 팝업(provisionHs3) -->
+    <!-- s: 통신사 이용약관 팝업(provisionHs4) -->
+    <div data-include-path="./WCC21400VQ_provisionHs4.html"></div>
+    <!-- e: 통신사 이용약관 팝업(provisionHs4) -->
     <!--e: 팝업-->
 </body>
 </html>

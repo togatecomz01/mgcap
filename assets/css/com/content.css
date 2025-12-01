@@ -962,15 +962,18 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 .WCS10401PQ .text-group .button-content .btn-download { min-height:61px; }
 
 /* 채무조정신청 */
-.WCC21400VQ .pop-content .text-list > li { margin-bottom:32px; }
+.layerPopup.full .pop-body.WCC21400VQ:has(.tab-container) { overflow-y:unset; }
+.WCC21400VQ .pop-content .tab-container .tab-content { max-height:294px; overflow-y:auto; }
+
 .WCC21400VQ .pop-content .text-list > li > span { color:var(--color-2); font-weight:var(--font-w-m); }
-.WCC21400VQ .pop-content .text-list > li > span.precious { color:var(--primary); font-weight:var(--font-w-b); }
-.WCC21400VQ .pop-content .text-list > li > span.precious + p,
-.WCC21400VQ .pop-content .text-list > li > ol { margin-top:14px; }
+.WCC21400VQ .pop-content .text-list > li > p { padding-left:18px; }
+.WCC21400VQ .pop-content .text-list > li > a { display:inline-block; }
 .WCC21400VQ .pop-content .text-list > li > ol li { margin-bottom:10px; }
 
 .WCC21400VQ .pop-content .text-group .square { margin-bottom:18px; color:var(--color-2); font-weight:var(--font-w-m); }
-.WCC21400VQ .pop-content .text-group .square + ol li p { margin-top:10px;}
+.WCC21400VQ .pop-content .text-group .square:before { content:"□"; }
+
+.WCC21400VQ .pop-content .table-group p { padding:18px 0; font-weight:var(--font-w-b); }
 
 .WCC21401DS .btn-group { font-size:0; }
 .WCC21401DS .btn-group .btn-download + .btn-download { margin-left: 26px; }
@@ -1591,7 +1594,16 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 
     .WCC20710VS .pop-content .text-group > .tit,
     .WCC20720VS .pop-content .text-group > .tit,
-    .WCC21400VQ .pop-content .text-group > .tit { font-size:var(--font18); }
+    .WCC21400VQ .pop-content h3 { font-size:var(--font18); }
+
+    /* 채무조정신청 팝업 */
+    .layerPopup.full .pop-body.WCC21400VQ:has(.tab-container) { height:calc(100% - 165px); }
+    .WCC21400VQ .pop-content:has(.tab-container),
+    .WCC21400VQ .pop-content .tab-container { height:100%; }
+    .WCC21400VQ .pop-content .tab-container .tab-list.depth2 { margin-bottom:20px; }
+    .WCC21400VQ .pop-content .tab-container .tab-content { max-height:initial; height:calc(100% - 58px); }
+
+    .WCC21400VQ .pop-content h4.tit { font-size:var(--font16); }
 
     /* 중도상환 조회/신청 팝업 */
     .WCS10401PQ .text-content .text-group { margin-bottom:32px; }
