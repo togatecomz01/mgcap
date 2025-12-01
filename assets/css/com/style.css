@@ -65,6 +65,7 @@ body {
     --color-e:#EEEEEE;
     --color-d:#DDDDDD;
     --color-f6:#F6F6F6;
+    --color-fa:#FAFAFA;
     --bg-box:#F3F6FB;
 
 
@@ -99,7 +100,7 @@ body {
     --font42: 2.625rem;
     }
 
-    html:has(#fontSizeNormal:not(:checked)) {
+    /*html:has(#fontSizeNormal:not(:checked)) {
         font-size:14px;
 
         --font12: 0.625rem;
@@ -118,6 +119,30 @@ body {
         --font38: 2.25rem;
         --font40: 2.375rem;
         --font42: 2.5rem;
+        
+    }*/
+
+    html:has(#fontSizeNormal:checked) {
+        font-size:18px;
+
+        --font12: 0.667rem;  
+        --font13: 0.722rem; 
+        --font14: 0.778rem;  
+        --font16: 0.889rem; 
+        --font18: 1rem;      
+        --font20: 1.111rem;  
+        --font22: 1.222rem;  
+        --font24: 1.333rem;  
+        --font26: 1.444rem;  
+        --font28: 1.556rem;  
+        --font30: 1.667rem;  
+        --font32: 1.778rem;  
+        --font34: 1.889rem;  
+        --font36: 2rem;     
+        --font38: 2.111rem;  
+        --font40: 2.222rem; 
+        --font42: 2.333rem; 
+        --font45: 2.5rem;
         
     }
 }

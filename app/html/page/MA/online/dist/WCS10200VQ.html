@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+	<meta charset='utf-8'>
+	<meta content='width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0,
+	maximum-scale=1.0' name='viewport'>
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta name="format-detection" content="telephone=no" />
+	
+	<title>납입내역</title>
+	
+	<!-- Publishing CSS -->
+	<link rel="stylesheet" href="../../../../resource/css/ui_plugin.css">
+	<link rel="stylesheet" href="../../../../resource/css/ui_style.css">
+    <link rel="stylesheet" href="../../../../resource/css/ui_contents_mymg.css">
+	
+	<!-- Publishing JS -->
+	<script src="../../../../resource/js/jquery-3.2.0.min.js"></script>
+	<script src="../../../../resource/js/jquery-ui-1.12.1.min.js"></script>
+	<script src="../../../../resource/js/ui_plugin.js"></script>
+	<script src="../../../../resource/js/ui_common.js"></script>
+</head>
+<body>
+
+
+
+<!-- layout -->
+<div id="layout" class="layout">
+
+	<!-- header -->
+	<div id="header" class="header">
+		<div class="header-inner">
+			<div class="left">
+				<button type="button" class="se-btn back">
+					<span>뒤로가기</span>
+				</button>
+			</div>
+			<div class="title">
+				납입내역
+			</div>
+			<div class="right">
+				<!-- <button type="button" class="se-btn close">
+					<span>닫기</span>
+				</button> -->
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="contents">
+			<!-- 여기부터 컨텐츠 -->
+
+			<!-- contents-inner -->
+			<div class="contents-inner my-mg">
+				<div class="section">
+                    <!--<hr class="section-linebar">-->
+                    <div class="conts-part">
+                        <div class="conts">
+                            <h6 class="se-title">납입내역 목록</h6>
+                            <div class="sp-tbl ty-view">
+                                <div class="sub-text tar">단위: 원</div>
+                                <div class="table-scroll">
+                                    <table class="mo-s">
+                                        <caption>납입내역 목록표(번호, 실행번호, 상품명, 수납회차/총회차, 상환원금, 상환이자, 기타금액, 연체이자, 합계, 상태 포함)</caption>
+                                        <colgroup>
+                                            <col style="width:50px">
+                                            <col style="width:120px">
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" rowspan="3">No.</th>
+                                                <th scope="col" rowspan="3">실행번호</th>
+                                                <th scope="col" rowspan="3" colspan="2">상품명</th>
+                                                <th scope="col" rowspan="3">수납회차<br />/총회차</th>
+                                            </tr>
+                                            <tr class="bt-1">
+                                                <th scope="col">상환원금</th>
+                                                <th scope="col">상환이자</th>
+                                                <th scope="col">기타금액</th>
+                                            </tr>
+                                            <tr class="bt-1">
+                                                <th scope="col">연체이자</th>
+                                                <th scope="col">합계</th>
+                                                <th scope="col">상태</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody >
+                                            <tr class="bb-1">
+                                                <td rowspan="3">1</td>
+                                                <td rowspan="3" class="clr-02">MI14002240001</td>
+                                                <td rowspan="3" colspan="2">내구재/헬스케어</td>
+                                                <td rowspan="3">6/18</td>
+                                            </tr>
+                                            <tr class="bt-1">
+                                                <td>1,800,000</td>
+                                                <td>0</td>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr class="bt-1  bb-1">
+                                                <td>16,180</td>
+                                                <td>1,816,246</td>
+                                                <td class="error">중도상환</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+			</div>
+			<!-- //contents-inner -->
+
+			<!-- //여기까지 컨텐츠 -->
+		</div>
+	</div>
+	<!-- //container -->	
+	
+</div>
+<!-- //layout -->
+
+
+</body>
+</html>

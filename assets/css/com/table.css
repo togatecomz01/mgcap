@@ -11,14 +11,14 @@ body {
 }
 
 
-table{ border-top:1px solid var(--color-2); border-spacing:0; border-collapse: collapse; table-layout:fixed; max-width:1400px; }
+table{ border-top:1px solid var(--color-2); border-spacing:0; border-collapse: collapse; table-layout:fixed; max-width:1200px; }
 
 
 table tr:first-of-type th,
 table tr:first-of-type td { border-top:var(--color-2); }
 table th,
 table td { padding:16px; text-align:center; color:var(--default-color); font-size:var(--font18); font-weight:var(--font-w-r); border-bottom:var(--table-border); }
-table th { background:var(--table-th); border-left:var(--table-border); font-size:var(--font20); font-weight:var(--font-w-b); color:var(--color-2); }
+table th { background:var(--table-th); border-left:var(--table-border); font-size:var(--font18); font-weight:var(--font-w-m); color:var(--color-2); }
 table td { border-left:var(--table-border); }
 table.list td,
 table.td-l td { border-left:0; }
@@ -28,7 +28,7 @@ table td:first-of-type { border-left:0; }
 table .bor-l { border-left:var(--table-border) !important; }
 table .bor-r { border-right:var(--table-border) !important; }
 table th { font-size:var(--font20); }
-table th label { font-weight:var(--font-w-b); }
+table th label { font-weight:var(--font-w-m); }
 table td.title { text-align:left; }
 
 table tbody th { border-right:var(--table-border); }
@@ -65,6 +65,11 @@ table:has(.no-results) td { margin:0; padding:0; border:0; }
 /* 공지사항 리스트 */
 .mo-list tbody tr td.title { text-align:left; }
 .mo-list tbody tr td.title span { display:inline-block; max-width:400px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+
+
+
+/**테이블**/
+table.round { border:var(--table-border); border-bottom:0; border-collapse:separate; border-radius:16px; overflow:hidden; }
 
 @media (max-width:1200px){
     .table-content:has(.mo-s) { overflow-x:auto; }

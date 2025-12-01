@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+	<meta charset='utf-8'>
+	<meta content='width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0,
+	maximum-scale=1.0' name='viewport'>
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta name="format-detection" content="telephone=no" />
+	
+	<title>이용상품 내역</title>
+	
+	<!-- Publishing CSS -->
+	<link rel="stylesheet" href="../../../../resource/css/ui_plugin.css">
+	<link rel="stylesheet" href="../../../../resource/css/ui_style.css">
+    <link rel="stylesheet" href="../../../../resource/css/ui_contents_mymg.css">
+	
+	<!-- Publishing JS -->
+	<script src="../../../../resource/js/jquery-3.2.0.min.js"></script>
+	<script src="../../../../resource/js/jquery-ui-1.12.1.min.js"></script>
+	<script src="../../../../resource/js/ui_plugin.js"></script>
+	<script src="../../../../resource/js/ui_common.js"></script>
+</head>
+<body>
+
+
+
+<!-- layout -->
+<div id="layout" class="layout">
+
+	<!-- header -->
+	<div id="header" class="header">
+		<div class="header-inner">
+			<div class="left">
+				<button type="button" class="se-btn back">
+					<span>뒤로가기</span>
+				</button>
+			</div>
+			<div class="title">
+				이용상품 내역
+			</div>
+			<div class="right">
+				<!-- <button type="button" class="se-btn close">
+					<span>닫기</span>
+				</button> -->
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="contents">
+			<!-- 여기부터 컨텐츠 -->
+
+			<!-- contents-inner -->
+			<div class="contents-inner my-mg">
+				<div class="section">
+                    <div class="conts-part">
+						<!-- 조회 -->
+						<div class="sp-formset">
+							<h6 class="se-title">조회</h6>
+							<div class="se-formtab ty-fix">
+								<div class="se-radio">
+									<input type="radio" name="ex0" id="rd0" checked="">
+									<label for="rd0">전체</label>
+								</div>
+								<div class="se-radio">
+									<input type="radio" name="ex0" id="rd1">
+									<label for="rd1">선택</label>
+								</div>
+								<div class="se-radio">
+									<input type="radio" name="ex0" id="rd2">
+									<label for="rd2">완료</label>
+								</div>
+							</div>
+                            <div class="btn-pack space-m">
+                                <button type="button" class="se-btn btn-solid-point">조회</button>
+                            </div>
+						</div> 
+					</div>
+                    <!--<hr class="section-linebar">-->
+                    <div class="conts-part">
+                        <div class="conts">
+                            <h6 class="se-title">이용상품 내역 목록</h6>
+                            <div class="sp-tbl ty-view">
+                                <div class="sub-text tar">기준일 : 2025-09-22 / 단위: 원</div>
+                                <div class="table-scroll">
+                                    <table>
+                                        <caption>이용상품 내역 목록표 (NO, 실행번호, 공급자명, 상품명, 여신금액, 잔여회차/총회차, 실행일, 최근납입일, 잔액, 진행상태, 만기일, 차기납입일 포함)</caption>
+                                        <colgroup>
+                                            <col style="width:50px">
+                                            <col style="width:120px">
+                                            <col style="width:120px">
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" rowspan="3">No.</th>
+                                                <th scope="col" rowspan="3">실행번호</th>
+                                            </tr>
+                                            <tr class="bt-1">
+                                                <th scope="col" colspan="2">공급자명</th>
+                                                <th scope="col" colspan="2">상품명</th>
+                                                <th scope="col">여신금액</th>
+                                                <th scope="col" colspan="2">잔여회차/총회차</th>
+                                            </tr>
+                                            <tr class="bt-1">
+                                                <th scope="col">실행일</th>
+                                                <th scope="col">만기일</th>
+                                                <th scope="col">최근납입일</th>
+                                                <th scope="col">차기납입일</th>
+                                                <th scope="col">잔액</th>
+                                                <th scope="col">진행상태</th>
+                                                <th scope="col">납입상태</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="bb-1">
+                                                <td rowspan="3">1</td>
+                                                <td rowspan="3">MI14002240001</td>
+                                            </tr>
+                                            <tr class="bt-1">
+                                                <td colspan="2">충면화광기고추손도</td>
+                                                <td colspan="2">내구재/헬스케어	</td>
+                                                <td>1,800,000</td>
+                                                <td colspan="2">6/18</td>
+                                            </tr>
+                                            <tr class="bt-1 bb-1">
+                                                <td>2014-02-27</th>
+                                                <td>2015-02-27</td>
+                                                <td>134,050</td>
+                                                <td>134,050</td>
+                                                <td>0</td>
+                                                <td>중도상환</td>
+                                                <td>정상</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="conts">
+                        <h6 class="se-title">합계</h6>
+                            <div class="sp-tbl ty-box">
+                                <table>
+                                    <caption>이용상품내역 합계</caption>
+                                    <colgroup>
+                                        <!-- 20220615 수정:  col넓이-->
+                                        <col style="width: 40%;">
+                                        <col style="width: 60%;">		
+                                    </colgroup>		
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">여신금액</th>
+                                            <td>1,800,000원</td>			
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">잔액</th>
+                                            <td class="clr-02"><strong>0</strong>원</td>			
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="p-info-msg">납입상태가 연체일 경우 납입상태의 “연체"를 클릭하시면 연체내역을 확인 하실 수 있습니다.</p>
+                        </div>
+                    </div>
+
+                    
+                </div>
+			</div>
+			<!-- //contents-inner -->
+
+			<!-- contents-bottom : 하단 영역 -->
+			<div class="contents-bottom">
+				<div class="bottom-btn-area">
+					<div class="btn-wrap">
+						<button type="button" class="se-btn btn-main">출력</button>
+					</div>
+				</div>
+			</div>
+			<!-- //contents-bottom -->
+
+			<!-- //여기까지 컨텐츠 -->
+		</div>
+	</div>
+	<!-- //container -->	
+	
+</div>
+<!-- //layout -->
+
+
+</body>
+</html>

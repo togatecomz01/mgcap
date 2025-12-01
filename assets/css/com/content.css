@@ -6,7 +6,7 @@ body{
     --process-step:url("../../images/com/svg/ico_step.svg");
     --process-dot:#3C85E5;
     --process-dot-border:6px solid #C4DAF7;
-    --process-bg:var(--color-f6);
+    --process-bg:var(--color-fa);
     --process-line:#E0E0E0;
     --process-step1-bg:#5296F2;
     --process-step2-bg:#4B89E5;
@@ -86,6 +86,19 @@ form:has(.noti-search) + .table-content table tr:last-child td,
 .process-content li:nth-child(3) .step p { background:var(--process-step3-bg); }
 .process-content li:nth-child(4) .step p { background:var(--process-step4-bg); }
 .process-content li:nth-child(5) .step p { background:var(--process-step5-bg); }
+
+
+.process-content .process-group .type2 { display:flex; border:1px solid var(--color-d); border-radius:16px; background:var(--process-bg); }
+.process-content .process-group .type2 li { flex:1; display:block; padding:40px 20px; text-align:center; border-left:1px solid var(--color-d); }
+.process-content .process-group .type2 li:first-of-type { border-left:0; }
+.process-content .process-group .type2 li .step { justify-content:center; display:block; margin:0 auto; padding-bottom:17px; }
+.process-content .process-group .type2 li .step::before,
+.process-content .process-group .type2 li .step::after { display:none; }
+.process-content .process-group .type2 li .step p { margin-right:0; }
+.process-content .process-group .type2 li .step + div { margin:0; padding:0; }
+.process-content .process-group .type2 li .text-content .m-dot dt { margin-bottom:12px; }
+.process-content .process-group .type2 li .text-content .m-dot dd { margin-top:6px; }
+.process-content .process-group .type2 li .text-content .m-dot dd:before { display:none; }
 
 /** style2 **/
 main.contentWrap > .step-container { margin-top:80px; }
@@ -270,9 +283,15 @@ main.contentWrap > .page-container.errorpage { padding-top:0; }
 .sub-process-content ul li > p em { color:var(--primary); font-weight:var(--font-w-m); }
 .sub-process-content ul li > p span { margin-bottom:0; max-width:200px; width:200px; font-size:var(--font16); }
 .sub-process-content ul li:last-of-type:after { display:none; }
+
+/**금융소비자보호헌장**/
+.WCU10100VQ .text-group p { font-size:var(--font20); }
+.WCU10100VQ .text-group p em { font-weight:700; }
+.WCU10100VQ .img-group { border-top:1px solid var(--color-d); padding-top:52px; }
+
 /*****금융소비자보호부***/
-.WCU10200VQ .img-box {  padding:70px; width:100%; border:1px solid var(--color-d); }
-.WCU10200VQ .img-box img { content:url("../../images/content/custportal/w/custportal_organization.png"); display:block; margin:0 auto 0 38%; }
+.WCU10200VQ .img-box {  padding:0; width:100%;; }
+.WCU10200VQ .img-box img { content:url("../../images/content/custportal/w/custportal_organization.png"); display:block; margin:0 auto; }
 
 
 /****** 고객센터-업무위탁 및 제 3자 제공현황 **/
@@ -884,7 +903,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 
 /* 서류제출 */
 .WCS40800VQ h3 { font-size:var(--font22); }
-.WCS40800VQ .text-group:has(.btn-plus) { position:relative; }
+.WCS40800VQ .text-group { position:relative; }
 .WCS40800VQ .btn-plus { position:absolute; top:4px; right:0; margin-top:0; width:33px; height:33px; border:var(--board); background:url("../../images/com/svg/ico_plus.svg")no-repeat center; }
 .WCS40800VQ .text-group > .table-group + .table-group { margin-top:52px; }
 .WCS40800VQ .table-group form { margin-top:0; }
@@ -900,7 +919,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 .WCS40800VQ .flex-row.ipt-file { justify-content:space-between; }
 .WCS40800VQ .ipt-file input[type="text"] { height:58px; border:0; cursor:auto; }
 .WCS40800VQ .ipt-file input[type="text"]:focus-visible { outline:0; }
-.WCS40800VQ .upload-label { margin-bottom:0; }
+.WCS40800VQ .upload-label { flex:1; margin-bottom:0; cursor:pointer; }
 .WCS40800VQ .upload-label input[type="file"] { display:none; }
 .WCS40800VQ .upload-label .fileLabel { padding:20px 16px; width:100%; max-width:680px; border:0; text-align:left; }
 
@@ -1069,7 +1088,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 
     /*---------------------------------------------
         #프로세스
-    ---------------------------------------------*/
+    ---------------------------------------------*/   
     .process-content li { gap:18px; background:var(--process-bg); margin-bottom:22px; padding:18px 16px; border-radius:12px; }
     .process-content li .step { width:56px; align-items:flex-start; flex:0 0 56px; padding-bottom:0; }
     .process-content li .step p { margin:0; width:54.55px; height:54.55px; -webkit-mask-size:100% 100%; mask-size:100% 100%; }
@@ -1080,6 +1099,13 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .process-content li .step + div { padding:0; margin:0; background:transparent; font-size:1rem; }
     .process-content li .step + div dt, .process-content li .step + div em { font-size:var(--font18); }
 
+    .process-content .process-group .type2 { all:initial; }
+    .process-content .process-group .type2 li { display:flex; padding:18px 16px; text-align:left; border-left:0; }
+    .process-content .process-group .type2 li .step { display:flex; justify-content:flex-start; margin:initial; padding-bottom:initial; }
+    .process-content .process-group .type2 li .text-content .m-dot dt { padding-bottom:initial; }
+    .process-content .process-group .type2 li .text-content .m-dot dd { margin-top:12px; }
+    .process-content .process-group .type2 li .text-content .m-dot dd:before { display:initial; }
+   
     /*---------------------------------------------
     #에러화면
     ---------------------------------------------*/
@@ -1590,3 +1616,12 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .pop_find_zipcord .pop-content .mo-tit { margin-bottom:32px; }
     .pop_find_zipcord .form-wrap.search-form + .mo-tit { padding-top:14px; font-size:var(--font12); }
 }
+
+
+   /*---------------------------------------------
+    #공동인증서-솔루션
+    ---------------------------------------------*/
+    #xTsign *,
+    .xwup-cert_pop * { transition: none; }
+    #xTsign img,
+    .xwup_cert_pop img { width:auto; }

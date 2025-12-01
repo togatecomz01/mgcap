@@ -1,0 +1,12 @@
+.my-mg .se-title {
+  margin-bottom: 10px;
+}
+.my-mg .sp-tbl.ty-view .table-scroll {
+  overflow-x: auto;
+}
+.my-mg .sp-tbl.ty-view .table-scroll table {
+  box-shadow: none;
+}
+.my-mg .sp-tbl.ty-view .table-scroll table thead tr:first-of-type td {
+  border-top: 1px solid #707070;
+}/*# sourceMappingURL=ui_contents_mymg.css.map */

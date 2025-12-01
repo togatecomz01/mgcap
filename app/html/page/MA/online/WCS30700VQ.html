@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+	<meta charset='utf-8'>
+	<meta content='width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0,
+	maximum-scale=1.0' name='viewport'>
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta name="format-detection" content="telephone=no" />
+	
+	<title>연체내역조회</title>
+	
+	<!-- Publishing CSS -->
+	<link rel="stylesheet" href="../../../../resource/css/ui_plugin.css">
+	<link rel="stylesheet" href="../../../../resource/css/ui_style.css">
+    <link rel="stylesheet" href="../../../../resource/css/ui_contents_mymg.css">
+	
+	<!-- Publishing JS -->
+	<script src="../../../../resource/js/jquery-3.2.0.min.js"></script>
+	<script src="../../../../resource/js/jquery-ui-1.12.1.min.js"></script>
+	<script src="../../../../resource/js/ui_plugin.js"></script>
+	<script src="../../../../resource/js/ui_common.js"></script>
+</head>
+<body>
+
+
+
+<!-- layout -->
+<div id="layout" class="layout">
+
+	<!-- header -->
+	<div id="header" class="header">
+		<div class="header-inner">
+			<div class="left">
+				<button type="button" class="se-btn back">
+					<span>뒤로가기</span>
+				</button>
+			</div>
+			<div class="title">
+				연체내역조회
+			</div>
+			<div class="right">
+				<!-- <button type="button" class="se-btn close">
+					<span>닫기</span>
+				</button> -->
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="contents">
+			<!-- 여기부터 컨텐츠 -->
+
+			<!-- contents-inner -->
+			<div class="contents-inner my-mg">
+                <div class="section-jumbotron">
+                    <h3 class="se-title">
+                        연체내역을 조회해주세요.
+                    </h3>
+                </div><!--//section-jumbotron-->
+                <div class="section">
+                    <div class="conts-part">
+                        <div class="sp-formset">
+                            <h6 class="se-title">기준일</h6>
+                            <div class="sp-formgrid">
+                                <div class="se-textfld">	
+                                    <input id="date-input" type="text" name="date" title="기준일" placeholder="예)20020101" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-pack space-m">
+                            <button type="button" class="se-btn btn-solid-point">조회</button>
+                        </div>
+                    </div><!--//conts-part-->
+                    <div class="conts-part">
+                        <div class="conts">
+                            <h6 class="se-title">이용상품 내역 목록</h6>
+                            <div class="sp-tbl ty-view">
+                                <div class="sub-text tar">기준일 : 2025-09-22 / 단위: 원</div>
+                                <table class="group-row2">
+                                    <caption>납입내역표(회차, 납입일, 원금, 이자, 기타, 연체이자, 합계 포함)</caption>
+                                    <colgroup>
+                                        <col style="width:50px">
+                                        <col style="width:20%">
+                                        <col style="width:20%">
+                                        <col style="width:20%">
+                                        <col style="width:auto">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" rowspan="2">회차</th>
+                                            <th scope="col" rowspan="2">납입일</th>
+                                            <th scope="col">원금</th>
+                                            <th scope="col">이자</th>
+                                            <th scope="col" rowspan="2">합계</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">기타</th>
+                                            <th scope="col">연체이자</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td rowspan="2">1</td>
+                                            <td rowspan="2">2014-12-31</td>
+                                            <td>100,000</td>
+                                            <td>0</td>
+                                            <td rowspan="2">100,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0</td>
+                                            <td>16,146</td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="2">2</td>
+                                            <td rowspan="2">2014-12-31</td>
+                                            <td>100,000</td>
+                                            <td>0</td>
+                                            <td rowspan="2">100,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="2">3</td>
+                                            <td rowspan="2">2014-12-31</td>
+                                            <td>100,000</td>
+                                            <td>0</td>
+                                            <td rowspan="2">100,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="2">4</td>
+                                            <td rowspan="2">2014-12-31</td>
+                                            <td>100,000</td>
+                                            <td>0</td>
+                                            <td rowspan="2">100,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="2">5</td>
+                                            <td rowspan="2">2014-12-31</td>
+                                            <td>100,000</td>
+                                            <td>0</td>
+                                            <td rowspan="2">100,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="2">6</td>
+                                            <td rowspan="2">2014-12-31</td>
+                                            <td>100,000</td>
+                                            <td>0</td>
+                                            <td rowspan="2">100,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="2">7</td>
+                                            <td rowspan="2">2014-12-31</td>
+                                            <td>100,000</td>
+                                            <td>0</td>
+                                            <td rowspan="2">100,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="2">8</td>
+                                            <td rowspan="2">2014-12-31</td>
+                                            <td>100,000</td>
+                                            <td>0</td>
+                                            <td rowspan="2">100,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="2">9</td>
+                                            <td rowspan="2">2014-12-31</td>
+                                            <td>100,000</td>
+                                            <td>0</td>
+                                            <td rowspan="2">100,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="2">10</td>
+                                            <td rowspan="2">2014-12-31</td>
+                                            <td>100,000</td>
+                                            <td>0</td>
+                                            <td rowspan="2">100,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+                                        
+                                        
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="conts">
+                        <h6 class="se-title">합계</h6>
+                            <div class="sp-tbl ty-box">
+                                <table>
+                                    <caption>납입내역 합계</caption>
+                                    <colgroup>
+                                        <!-- 20220615 수정:  col넓이-->
+                                        <col style="width: 40%;">
+                                        <col style="width: 60%;">		
+                                    </colgroup>		
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">원금</th>
+                                            <td>1,000,000원</td>			
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">이자</th>
+                                            <td>0원</td>			
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">기타</th>
+                                            <td>0원</td>			
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">연체이자</th>
+                                            <td>16,146원</td>			
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">총 합계</th>
+                                            <td class="clr-02"><strong>1,000,000</strong>원</td>			
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--//section-->
+			</div>
+			<!-- //contents-inner -->
+
+            <div class="contents-bottom">
+				<div class="bottom-btn-area">
+					<div class="btn-wrap">
+						<button type="button" class="se-btn btn-main-light size-s">목록</button>
+						<button type="button" class="se-btn btn-main">출력</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- //여기까지 컨텐츠 -->
+		</div>
+	</div>
+	<!-- //container -->	
+	
+</div>
+<!-- //layout -->
+
+
+</body>
+</html>
