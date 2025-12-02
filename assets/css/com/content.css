@@ -169,9 +169,9 @@ main.contentWrap > .page-container.errorpage { padding-top:0; }
 .contentWrap.finance .visual-container { max-width:100%; background-color:#F7F9FF; }
 .contentWrap.finance .visual-container { padding-bottom:72px; }
 .contentWrap.finance .visual-container h2 { line-height:50px; }
+.contentWrap.finance .location-container ol { max-width:1400px; }
 .contentWrap.finance .page-container + .bottom-container { display:none; }
-.m-dot .bulls-eye > li.error {display: list-item;} /* 25.11.20 bulls-eye Ãß°¡ */
-.m-dot .bulls-eye > li::before {content: "¡Ý";}
+
 .finance-content {
     --gap:28px;
     --padding:42px 0 64px;
@@ -261,6 +261,8 @@ main.contentWrap > .page-container.errorpage { padding-top:0; }
 .anchor-panel .info-content .note-group .m-dot li { font-size:var(--font18); color:var(--color-45); }
 .anchor-panel .info-content .note-group .m-dot li:first-child { margin-top:0; }
 .anchor-panel .info-content .note-group .m-dot li.point-r { font-weight:var(--font-w-m); }
+.anchor-panel .info-content .note-group .m-dot .bulls-eye > li.error {display: list-item;}
+.anchor-panel .info-content .note-group .m-dot .bulls-eye > li::before {content: "¡Ý";}
 .anchor-panel .info-content .note-group .m-dot li .bulls-eye { margin-top:8px; }
 .anchor-panel .info-content .diamond-box { gap:10px; padding:28px 36px; }
 .anchor-panel .info-content .diamond-box p > span { font-weight:var(--font-w-m); }

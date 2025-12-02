@@ -58,7 +58,7 @@ main.contentWrap > * { margin:0 auto; max-width:1400px; width:100%; padding:0;  
 .gnb h1{ display:block; width:137px; height:36px; font-size:0; }
 .gnb h1 a{ display:block; width:100%; height:100%; text-indent:-9999px; background:url("../../images/com/topLogo.png") no-repeat; background-size:100%; }
 
-.bodyWrap { padding-top:78px; }
+.bodyWrap { padding-top:88px; }
 /*---------------------------------------------
     #브레드크럼
 ---------------------------------------------*/

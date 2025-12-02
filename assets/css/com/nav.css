@@ -10,7 +10,7 @@
 .menu .menu-item { display:inline-block; font-size:0; }
 
 /* menu left */
-.header-l nav > ul > li { padding:27px 12px; }
+.header-l nav > ul > li { padding:33px 12px; }
 .header-l nav > ul li button {  font-family:"mg"; font-size:var(--font18); font-weight:700; -webkit-font-smoothing:antialiased; text-rendering:geometricPrecision; color:var(--color-2); background-color:transparent; }
 .header-l nav > ul li.on button { position:relative; }
 .header-l nav > ul li.on button::after { content:""; position:absolute; bottom:-3px; left:50%; transform:translateX(-50%); display:block; width:100%; height:8px; background-color:var(--primary-light); opacity:.2; }
