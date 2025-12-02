@@ -30,6 +30,7 @@ main.contentWrap { -webkit-box-flex:1; -ms-flex:1 1 auto; flex:1 1 auto; padding
 main.contentWrap > * { margin:0 auto; max-width:1400px; width:100%; padding:0;  }
 
 .mt-20 { margin-top:20px; }
+.mt-42 { margin-top:42px; } /* form 태그 안 써서 */
 .point-r { color:var(--point-r) !important; }
 .point-b { color:var(--point-b) !important; }
 .bo-t0 { border-top:0 !important; }
@@ -79,6 +80,7 @@ main.contentWrap > .location-container { padding:24px 0; width:100%;  }
 .visual-container { font-family:"mg"; }
 .visual-container > * { text-align:center; }
 .visual-container h2 { padding:28px 20px; font-size:var(--font45); font-weight:700;  -webkit-font-smoothing:antialiased; text-rendering:geometricPrecision; }
+.visual-container h2 + p { padding-top:0; }
 .visual-container p { padding:28px 0; font-size:var(--font20); color:var(--color-6); }
 
 /*---------------------------------------------
@@ -91,9 +93,9 @@ main.contentWrap > .page-container { padding-top:42px; margin:0 auto; max-width:
 .page-container > [class*="-content"] > [class*="-group"],
 .page-container > div + div.bo-t0  { margin-bottom:72px; }
 
-.page-container > [class*="-content"] > .group:last-child,
-.page-container > [class*="-content"] > [class*="-group"]:last-child,
-.page-container > div + div.bo-t0:last-child  { margin-bottom:0; }
+.page-container > [class*="-content"]:last-child > .group:last-child,
+.page-container > [class*="-content"]:last-child > [class*="-group"]:last-child,
+.page-container > div:last-child + div.bo-t0:last-child  { margin-bottom:0; }
 
 .page-container > [class*="-content"]:last-child > [class*="-group"]:last-child { margin-bottom:0; }
 .page-container > [class*="-content"] > .group > [class*="-group"] { margin-bottom:52px; }
@@ -101,6 +103,7 @@ main.contentWrap > .page-container { padding-top:42px; margin:0 auto; max-width:
 .page-container > [class*="-content"] >[class*="-group"]:first-child { margin-top:0; }
 .page-container > [class*="-content"] > .group > [class*="-group"]:last-child { margin-bottom:0; }
 .page-container > div + div { padding-top:56px; border-top:1px solid var(--color-d); }
+.page-container > div.tab-container + div { padding-top:0; }
 
 /**성공, 실패**/
 .success { color: var(--success) !important; }
@@ -131,7 +134,7 @@ h5, p.tit, h4.tit { color:var(--color-2); font-size:1rem; font-weight:var(--font
 
 /**텍스트**/
 /* .page-container > .text-content > .group > h3 + .text-group:first-of-type { margin-top:72px; } */
-.text-content * + p { margin-top:18px; }
+.text-content * + p { margin-top:20px; }
 .text-content p + p { margin-top:0; }
 p.hypn, .star, .rfrnc, .square { color:var(--color-6);  }
 p.hypn:before,
@@ -520,7 +523,7 @@ main.contentWrap > .bottom-container { margin-top:72px; }
     #서브이미지
     ---------------------------------------------*/
     main.contentWrap > .visual-container{ padding-top:32px; }
-    .visual-container h2 { padding:40px 0; font-size:var(--font24); }
+    .visual-container h2 { padding:32px 0 12px; font-size:var(--font24); }
     .visual-container p { padding:12px 0 18px; font-size:var(--font18); }
     .visual-container p br { display:none; }
 
