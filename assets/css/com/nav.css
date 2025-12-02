@@ -55,9 +55,9 @@
 .header-btn-wrap .menu-btn { background:url("../../images/com/svg/ico_menu_btn.svg") no-repeat center; }
 
 /** °Ë»öÃ¢ **/
-.allsearch { position:absolute; top:76px; left:0; display:none; width:100%; z-index:10; }
+.allsearch { position:absolute; top:88px; left:0; display:none; width:100%; z-index:10; }
 .search-wrap { margin:0 auto; max-width:900px; width:100%; }
-.allsearch.on::before { content:""; position:fixed; top:79px; left:0; bottom:0; width:100%; height:100%; background-color:rgba(0, 0, 0, 0.4); z-index:-1; }
+.allsearch.on::before { content:""; position:fixed; top:88px; left:0; bottom:0; width:100%; height:100%; background-color:rgba(0, 0, 0, 0.4); z-index:-1; }
 .allsearch-header { display:none; }
 .allsearch-contain { padding:48px 0; background-color:#F3F6FB; }
 
@@ -81,7 +81,7 @@
 .search-wrap .search-result .tit span { color:#2F5FBC; }
 .search-wrap .search-result .location { font-size:0; }
 .search-wrap .search-result .location li { position:relative; display:inline-block; padding-left:22px; font-size:var(--font14); font-weight:var(--font-w-r); color:var(--color-6); }
-.search-wrap .search-result .location li::before { content:""; position:absolute; top:50%; transform:translateY(-50%); left:0; display:block; margin:0 4px; width:14px; height:14px; background-color:var(--color-6); mask-image:url("../../images/com/svg/ico_next.svg"); mask-repeat:no-repeat; mask-size:auto 9px; mask-position:center; -webkit-mask-image:url("../../images/com/svg/ico_next.svg"); -webkit-mask-repeat:no-repeat; -webkit-mask-size:auto 9px; -webkit-mask-position:center; }
+.search-wrap .search-result .location li::before { content:""; position:absolute; top:50%; transform:translateY(-50%); left:0; display:block; margin:0 4px; width:14px; height:14px; background-color:var(--color-6); mask-image:url("../../images/com/svg/ico_location.svg"); mask-repeat:no-repeat; mask-size:auto 14px; mask-position:center; -webkit-mask-image:url("../../images/com/svg/ico_location.svg"); -webkit-mask-repeat:no-repeat; -webkit-mask-size:auto 14px; -webkit-mask-position:center; }
 .search-wrap .search-result .location li:last-child { font-weight:var(--font-w-m); color:var(--color-3); }
 .search-wrap .search-result .location li:first-child { padding-left:0; }
 .search-wrap .search-result .location li:first-child:before { content:none; }

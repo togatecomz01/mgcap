@@ -157,7 +157,7 @@ main.contentWrap > .step-container { margin-top:80px; }
 main.contentWrap > .page-container.errorpage { padding-top:0; }
 .errorpage .error-group { text-align:center; }
 .errorpage .error-group .tit { margin-bottom:24px; font-size:var(--font38); line-height:57px; }
-.errorpage .error-group .tit::before { content:""; display:block; margin:0 auto; width:294px; height:294px; background:url("../../images/com/img_error.png")no-repeat center / 294px; }
+.errorpage .error-group .tit::before { content:""; display:block; margin:0 auto; width:176px; height:176px; background:url("../../images/com/img_error.png")no-repeat center / 176px; }
 .errorpage .error-group .text-list li { margin-bottom:14px; }
 .errorpage .error-group + .btn-content.cta { margin-top:68px; }
 
