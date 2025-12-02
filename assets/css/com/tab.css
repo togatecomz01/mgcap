@@ -16,7 +16,7 @@
 }
 
 .tab-list { display:flex; width:100%; margin-bottom:var(--tab1-mb); }
-.page-container:has(.tab-list.depth1) { max-width:100%; padding-left:0; padding-right:0; }
+.page-container:has(.tab-list.depth1) { max-width:100%; padding-top:0; padding-left:0; padding-right:0; }
 .tab-container .tab-list.depth1{  margin:var(--tab1-mb); max-width:100%; border-bottom:var(--tab-border);  }
 .page-container:has(.tab-list.depth1) .btn-group,
 .page-container:has(.tab-list.depth1) .tab-content { max-width:1400px; margin:0 auto; }

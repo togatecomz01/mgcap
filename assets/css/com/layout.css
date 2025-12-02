@@ -102,7 +102,7 @@ main.contentWrap > .page-container { padding-top:42px; margin:0 auto; max-width:
 .page-container > [class*="-content"] > .group >[class*="-group"]:first-child,
 .page-container > [class*="-content"] >[class*="-group"]:first-child { margin-top:0; }
 .page-container > [class*="-content"] > .group > [class*="-group"]:last-child { margin-bottom:0; }
-.page-container > div + div { padding-top:56px; border-top:1px solid var(--color-d); }
+.page-container > div + div { padding-top:52px; border-top:1px solid var(--color-d); }
 .page-container > div.tab-container + div { padding-top:0; }
 
 /**성공, 실패**/
@@ -217,53 +217,6 @@ h3.rfrnc::before { content:"※ "; display:inline; position:relative; left:inheri
 .form-content > .form-wrap > .form-group .mo-column .flex-row > div { flex:1; }
 .form-content > .form-wrap > .form-group .mo-column .flex-row .se-select,
 .form-content > .form-wrap > .form-group .mo-column > .col:last-of-type { flex:0 0 152px; }
-
-/** 로그인 **/
-.page-container:has(.tab-list.depth1).login .tab-content { margin:0 auto; width:100%; max-width:900px; }
-.page-container.login .tab-content form { margin-top:0; }
-
-/* 폼 */
-.form-wrap.login-form .group { display:flex; justify-content:space-between; width:100%; }
-.form-wrap.login-form label.radio { display:inline-flex; gap:14px; padding:0 28px 0 0; }
-.form-wrap.login-form label.toggle {
-    --w:89px;
-    --h:32px;
-    --pad-x:2px;
-    --pad-y:2px;
-    --knob:28px;
-    background-color:var(--color-d);
-}
-.form-wrap.login-form label.toggle::before { width:28px; height:28px; background-color:var(--white); }
-
-.form-wrap.login-form label.toggle input + span:first-of-type,
-.form-wrap.login-form label.toggle input ~ span:last-of-type { position:absolute; font-size:var(--font16); line-height:26px; }
-
-.form-wrap.login-form label.toggle input + span:first-of-type { display:none; }
-.form-wrap.login-form label.toggle input ~ span:last-of-type { right:10px; color:var(--color-6); }
-
-.form-wrap.login-form label.toggle:has(input:checked) { padding-left:7px; background-color:var(--primary); }
-
-.form-wrap.login-form label.toggle input:checked + span:first-of-type { display:block; left:10px; color:var(--white); }
-.form-wrap.login-form label.toggle input:checked ~ span:last-of-type { display:none; }
-
-/* 로그인 유의사항 */
-.page-container.login .note-content { margin-top:52px; padding:24px; border-radius:10px; background-color:var(--color-f6); }
-.page-container.login .note-content .tit { padding:0 0 2px 36px; font-size:var(--font18); font-weight:var(--font-w-b); }
-.page-container.login .note-content .tit::before { content:""; display:block; top:50%; transform:translateY(-50%); width:20px; height:20px; background:url("../../images/content/register/w/ico_info.svg")no-repeat center; background-size:auto 20px; }
-.page-container.login .note-content li { padding-top:8px; padding-left:36px; }
-
-/* 아이핀 인증 */
-.private-group.ipin button:nth-child(1)::before { background-image:url("../../images/content/register/w/logo_ipin.png"); }
-
-/* 민간 인증서 */
-.private-group { display:flex; flex-wrap:wrap; justify-content:center; gap:36px; margin:0 auto; width:556px; font-size:0; text-align:center; }
-.private-group button { width:260px; height:240px; border:1px solid var(--color-d); border-radius:18px; background-color:#F9FCFF; font-size:var(--font22); }
-.private-group button:hover { border:3px solid var(--primary); background-color:var(--white); color:var(--primary); font-weight:var(--font-w-m); }
-.private-group button::before { content:""; display:block; margin:0 auto 41px; width:82px; height:82px; background-repeat:no-repeat; background-size:82px auto; }
-.private-group button:nth-child(1):before { background-image:url("../../images/content/register/w/logo_kakao.png"); }
-.private-group button:nth-child(2):before { background-image:url("../../images/content/register/w/logo_naver.png"); }
-.private-group button:nth-child(3):before { background-image:url("../../images/content/register/w/logo_toss.png"); }
-.private-group button:nth-child(4):before { background-image:url("../../images/content/register/w/logo_pass.png"); }
 
 /**검색 폼**/
 .form-wrap.search-form { position:relative; display:block; margin-bottom:0; font-size:var(--font16); }
@@ -724,7 +677,4 @@ main.contentWrap > .bottom-container { margin-top:72px; }
 @media (min-width: 767px) and (max-width:1400px){
     .form-content > .form-wrap { flex-direction:column; }
     .form-content > .form-wrap > .form-group > .flex-row { width:80%;}
-
-
-
 }

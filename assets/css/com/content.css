@@ -15,6 +15,8 @@ body{
     --process-step5-bg:#204BAB;
     --process-check:url("../../images/com/svg/ico_form_check.svg"); /** 프로세스 style2 체크 **/
     --ico-arrow:url("../../images/content/ico_arrow.svg");
+    --ico-move:url("../../images/com/svg/ico_move.svg");
+    --ico-move2:url("../../images/com/svg/ico_move2.svg");
     --ico-cst-01:url("../../images/content/custportal/w/custportal_document.png"); /**문서 아이콘**/
     --ico-cst-02:url("../../images/content/custportal/w/custportal_printer.png"); /**프린터 아이콘**/
     --ico-cst-03:url("../../images/content/custportal/w/custportal_magnifier.png"); /**돋보기 아이콘**/
@@ -23,11 +25,136 @@ body{
     --ico-cst-06:url("../../images/content/custportal/w/custportal_no_security.png"); /**보안 금지 아이콘**/
     --ico-cst-07:url("../../images/content/custportal/w/custportal_bank_reject.png"); /**은행 거절 아이콘**/
 
-    --ico-info:url("../../images/com/svg/ico_info_guide.svg");/** 유의사항 안내 **/
+    --ico-info:url("../../images/com/svg/ico_info2.svg");/** 유의사항 안내 **/
     --ico-info-squere:url("../../images/content/finance/WCC70102PS_notice.png");/* 팝업 유의사항 안내 */
     --ico-arrow-black:url("../../images/content/ico_arrow_black.svg");/** 절차 화살표 black **/
 
 }
+
+
+/*---------------------------------------------
+    #로그인
+---------------------------------------------*/
+.page-container:has(.tab-list.depth1).login .tab-content { margin:0 auto; width:100%; max-width:900px; }
+.page-container.login .tab-content form { margin-top:0; }
+.page-container.login .tab-content form label { margin-bottom:0; }
+
+/** 로그인 버튼 **/
+.btn-content.login { position:relative; margin-top:26px; padding-left:354px; overflow:hidden; }
+.btn-content.login::before { content:""; display:block; position:absolute; left:0; right:0; width:334px; height:100%; background:url("../../images/content/login/bg_login.png") no-repeat left center; background-size:100%; border-radius:16px; overflow:hidden;  }
+
+.btn-content.login .btn-primary { background-color:var(--primary); color:var(--white); }
+.btn-content.login .btn-primary:hover,
+.btn-content.login .button-group:first-child .bnt-link:hover:after { background-color:var(--active); }
+.btn-content.login .btn-secondary { border:1px solid var(--primary); background-color:var(--white); }
+.btn-content.login .btn-secondary:hover { border-color:var(--active); color:var(--active); }
+.btn-content.login .btn-secondary::before { background:var(--ico-register)no-repeat center; }
+.btn-content.login .button-group .bnt-link:after { 
+    content:""; margin-left:3px; display:inline-flex; justify-content:center; align-items:center; flex-direction:column; width:18px; height:18px; background:var(--color-2);
+    mask-image:var(--ico-move); mask-repeat:no-repeat; mask-size:11px auto; mask-position:center; -webkit-mask-image:var(--ico-move); -webkit-mask-repeat:no-repeat; -webkit-mask-size:11px auto; -webkit-mask-position:center; 
+}
+
+
+
+
+.btn-content.login .button-group:first-child { display:block; width:100%; text-align:center; }
+.btn-content.login .button-group:first-child a.btn-primary { margin-bottom:14px; padding:0 10px; width:100%; height:78px; border-radius:10px; font-size:var(--font20); line-height:78px; }
+.btn-content.login .button-group:first-child a.btn-primary::before { content:""; display:inline-block; margin-right:14px; width:30px; height:30px; vertical-align:text-bottom; background:var(--ico-login)no-repeat center; background-size:28px; }
+
+.btn-content.login .button-group:first-child .bnt-link { float:right; display:inline-flex; align-items:center; font-size:var(--font16); font-weight:var(--font-w-m); }
+.btn-content.login .button-group:first-child .bnt-link:after {
+    content:""; margin-left:3px; display:inline-flex; justify-content:center; align-items:center; flex-direction:column; width:30px; height:30px; background:var(--color-45);
+    mask-image:var(--ico-move2); mask-repeat:no-repeat; mask-size:100%; mask-position:center; -webkit-mask-image:var(--ico-move2); -webkit-mask-repeat:no-repeat; -webkit-mask-size:100%; -webkit-mask-position:center; 
+  }
+
+
+.btn-content.login .button-group:nth-of-type(2) {  margin-top:28px; padding-top:20px; text-align:center; }
+.btn-content.login .button-group:nth-of-type(2) a {  display:flex; align-items:center; justify-content:center; margin-top:14px; padding:12px 10px; border-radius:10px; background-color:var(--white); font-size:var(--font16); border:var(--board); }
+.btn-content.login .button-group:nth-of-type(2) a:hover { border-color:1px solid var(--primary); }
+.btn-content.login .button-group:nth-of-type(2) a:after { 
+    content:""; margin-left:3px; display:inline-flex; justify-content:center; align-items:center; flex-direction:column; width:18px; height:18px; background:var(--color-2);
+    mask-image:var(--ico-move); mask-repeat:no-repeat; mask-size:7px auto; mask-position:center; -webkit-mask-image:var(--ico-move); -webkit-mask-repeat:no-repeat; -webkit-mask-size:7px auto; -webkit-mask-position:center; 
+}
+.btn-content.login .button-group:nth-of-type(2) a:hover:after { background-color:var(--primary); }
+
+
+
+/* 폼 */
+.form-wrap.login-form .group { display:flex; justify-content:space-between; width:100%; }
+.form-wrap.login-form label { margin-bottom:0; }
+.form-wrap.login-form label.radio { display:inline-flex; gap:14px; padding:0 28px 0 0; }
+.form-wrap.login-form label.toggle {
+    --w:89px;
+    --h:32px;
+    --pad-x:2px;
+    --pad-y:2px;
+    --knob:28px;
+    background-color:var(--color-d);
+}
+.form-wrap.login-form label.toggle::before { width:28px; height:28px; background-color:var(--white); }
+
+.form-wrap.login-form label.toggle input + span:first-of-type,
+.form-wrap.login-form label.toggle input ~ span:last-of-type { position:absolute; font-size:var(--font16); line-height:26px; }
+
+.form-wrap.login-form label.toggle input + span:first-of-type { display:none; }
+.form-wrap.login-form label.toggle input ~ span:last-of-type { right:10px; color:var(--color-6); }
+
+.form-wrap.login-form label.toggle:has(input:checked) { padding-left:7px; background-color:var(--primary); }
+
+.form-wrap.login-form label.toggle input:checked + span:first-of-type { display:block; left:10px; color:var(--white); }
+.form-wrap.login-form label.toggle input:checked ~ span:last-of-type { display:none; }
+
+/* 로그인 유의사항 */
+.page-container.login .note-content { margin-top:20px; }
+.page-container.login .note-content li { display:flex; align-items:center; padding-top:8px; color:Var(--color-6); font-size:var(--font14); }
+.page-container.login .note-content li:first-of-type { padding-top:0; }
+.page-container.login .note-content li::before { 
+    content:""; display:inline-block; margin-right:3px; width:20px; height:20px; background-color:var(--color-9);
+    mask-image:var(--ico-info); mask-repeat:no-repeat; mask-size:100%; mask-position:center; -webkit-mask-image:var(--ico-info); -webkit-mask-repeat:no-repeat; -webkit-mask-size:100%; -webkit-mask-position:center; 
+
+}
+
+/* 아이핀 인증 */
+.private-group.ipin button:nth-child(1)::before { background-image:url("../../images/content/register/w/logo_ipin.png"); }
+
+/* 민간 인증서 */
+
+
+.private-group { display:flex; flex-wrap:wrap; justify-content:center; gap:36px; margin:0 auto; width:556px; font-size:0; text-align:center; }
+.private-group button { width:260px; height:240px; border:1px solid var(--color-d); border-radius:18px; background-color:#F9FCFF; font-size:var(--font22); }
+.private-group button:hover { border:3px solid var(--primary); background-color:var(--white); color:var(--primary); font-weight:var(--font-w-m); }
+.private-group button::before { content:""; display:block; margin:0 auto 41px; width:82px; height:82px; background-repeat:no-repeat; background-size:82px auto; }
+.private-group button:nth-child(1):before { background-image:url("../../images/content/register/w/logo_kakao.png"); }
+.private-group button:nth-child(2):before { background-image:url("../../images/content/register/w/logo_naver.png"); }
+.private-group button:nth-child(3):before { background-image:url("../../images/content/register/w/logo_toss.png"); }
+.private-group button:nth-child(4):before { background-image:url("../../images/content/register/w/logo_pass.png"); }
+
+
+.private-content.login { position:relative; margin-top:26px; padding-left:354px; overflow:hidden; }
+.private-content.login::before { content:""; display:block; position:absolute; left:0; right:0; width:334px; height:100%; background:url("../../images/content/login/bg_login2.png") no-repeat left center; background-size:100%; border-radius:16px; overflow:hidden;  }
+.private-content.login .private-group { display:block; width:auto; }
+.private-content.login .private-group button,
+.private-content.login .private-group a { display:flex; align-items:center; gap:12px; margin-top:14px; padding:18px 20px 18px 28px; width:100%; height:auto; min-height:74px; border:var(--board); border-radius:6px; background-color:var(--white); font-size:var(--font18); box-sizing:border-box; }
+.private-content.login .private-group button:first-of-type,
+.private-content.login .private-group a:first-of-type { margin-top:0; }
+.private-content.login .private-group button:hover,
+.private-content.login .private-group a:hover { border:2px solid var(--primary); color:var(--primary); font-weight:var(--font-w-m); }
+.private-content.login .private-group button::before,
+.private-content.login .private-group a::before { content:""; display:block; margin:0; width:38px; height:38px; background-repeat:no-repeat; background-size:100%; border-radius:100%; }
+.private-content.login .private-group button:after,
+.private-content.login .private-group a:after { 
+    content:""; position:absolute; top:50%; right:20px; transform:translate(0, -50%); margin-left:3px; display:inline-flex; justify-content:center; align-items:center; flex-direction:column; width:18px; height:18px; background:var(--color-2);
+    mask-image:var(--ico-move); mask-repeat:no-repeat; mask-size:7px auto; mask-position:center; -webkit-mask-image:var(--ico-move); -webkit-mask-repeat:no-repeat; -webkit-mask-size:7px auto; -webkit-mask-position:center; 
+}
+
+.private-content.login .private-group button:hover:after,
+.private-content.login .private-group a:hover:after { background-color:var(--primary); }
+
+
+
+
+
+
 
 /** 테이블 안 input **/
 .group form .table-group label,
@@ -101,7 +228,7 @@ form:has(.noti-search) + .table-content table tr:last-child td,
 .process-content .process-group .type2 li .text-content .m-dot dd:before { display:none; }
 
 /** style2 **/
-main.contentWrap > .step-container { margin-top:80px; }
+main.contentWrap > .step-container { margin-top:0; }
 .step-content ul.col2 li { width:calc(100% / 2); }
 .step-content ul.col3 li { width:calc(100% / 3); }
 .step-content ul.col4 li { width:calc(100% / 4); }
@@ -504,9 +631,10 @@ main.contentWrap > .page-container.errorpage { padding-top:0; }
 
 /***금융계산기**/
 .WCF90100VQ {
-    --form-pt:52px;
+    --form-pt:0;
     --form-pb:40px;
     --form-border:3px solid var(--color-2);
+    --border:1px solid var(--color-d);
     --form-label-w:228px;
     --form-label-fs:20px;
     --form-group-gap:116px;
@@ -520,11 +648,20 @@ main.contentWrap > .page-container.errorpage { padding-top:0; }
     --result-fs-b:var(--font32);
 
 }
-.WCF90100VQ form { padding:var(--form-pt) 0 0; border-top:var(--form-border); }
-.WCF90100VQ .form-wrap { gap:var(--form-group-gap); padding:0 64px; }
+.WCF90100VQ form { margin:0; padding:var(--form-pt) 0 0; border-top:var(--form-border); }
+/*.WCF90100VQ .form-wrap { gap:var(--form-group-gap); padding:0 64px; }
 .WCF90100VQ .form-wrap:last-of-type { padding-bottom:var(--form-pb); border-bottom:1px solid var(--color-d); }
 .WCF90100VQ .form-group { display:flex; align-items:center; }
-.WCF90100VQ .form-group label { width:228px; flex:0 0 var(--form-label-w); font-size:var(--form-label-fs); }
+.WCF90100VQ .form-group label { width:228px; flex:0 0 var(--form-label-w); font-size:var(--form-label-fs); }*/
+
+.WCF90100VQ .form-content > .form-wrap { display:flex; width:100%; border-bottom:var(--board); }
+.WCF90100VQ .form-content > .form-wrap > .form-group { display:flex; width:50%; flex:0 0 50%; }
+.WCF90100VQ .form-content > .form-wrap > .form-group:last-child { border-left:var(--board); }
+.WCF90100VQ .form-content > .form-wrap > .form-group > label { margin:0; padding:20px; width:262px; flex:0 0 262px; background:var(--table-th); }
+.WCF90100VQ .form-content > .form-wrap > .form-group > .flex-row { margin:0; padding:20px; flex:1; }  
+
+
+
 .WCF90100VQ .flex-row.tar { justify-content:flex-end; }
 .WCF90100VQ .flex-row.tar span { color:var(--primary); }
 .WCF90100VQ .info { margin-top:var(--info-mt); padding-left:0; }
