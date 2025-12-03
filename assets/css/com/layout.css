@@ -112,7 +112,7 @@ main.contentWrap > .page-container { padding-top:42px; margin:0 auto; max-width:
 
 /**타이틀 및 텍스트**/
 h3,
-.group > .text-group:has(h5) > h4{ display:block; font-size:var(--font26);  }
+.group > .text-group:has(h5) > h4{ display:block; font-size:var(--font26); color:var(--color-2);  }
 h3 + p,
 .tit + dl { margin-top:20px; }
 h3.rfrnc { font-size:var(--font28) !important; color:var(--color-2) !important; }
@@ -475,7 +475,6 @@ main.contentWrap > .bottom-container { margin-top:72px; }
     /*---------------------------------------------
     #서브이미지
     ---------------------------------------------*/
-    main.contentWrap > .visual-container{ padding-top:32px; }
     .visual-container h2 { padding:32px 0 0; font-size:var(--font24); }
     .visual-container h2 + p { padding-top:12px; }
     .visual-container p { padding:12px 0 18px; font-size:var(--font18); }
