@@ -149,12 +149,14 @@
 	.search-wrap { padding:0 24px; }
 }
 
-@media (max-width:1200px){
+@media (max-width:1300px){
 	/*---------------------------------------------
 		#Çì´õ
 	---------------------------------------------*/
 	.gnb .header-l ul,
 	.header-r .lnb { display:none; }
+	.header-l nav > ul > li { padding:20px 12px }
+	.header-r .menu .menu-item { padding-top:20px; }
 }
 
 @media (max-width:767px) {
