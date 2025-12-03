@@ -3,7 +3,7 @@
 ---------------------------------------------*/
 /** Çì´õ ·¹ÀÌ¾Æ¿ô **/
 .gnb .header-l,
-.gnb .header-r { display:flex; align-items:center; column-gap:42px; }
+.gnb .header-r { display:flex; align-items:center; column-gap:31px; }
 .gnb .header-l ul { display:flex; }
 .gnb .header-r .menu,
 .gnb .header-l ul > li,

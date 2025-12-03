@@ -25,7 +25,7 @@ body{
     --ico-cst-06:url("../../images/content/custportal/w/custportal_no_security.png"); /**보안 금지 아이콘**/
     --ico-cst-07:url("../../images/content/custportal/w/custportal_bank_reject.png"); /**은행 거절 아이콘**/
 
-    --ico-info:url("../../images/com/svg/ico_info2.svg");/** 유의사항 안내 **/
+    --ico-info:url("../../images/com/svg/ico_info_guide.svg");/** 유의사항 안내 **/
     --ico-info-squere:url("../../images/content/finance/WCC70102PS_notice.png");/* 팝업 유의사항 안내 */
     --ico-arrow-black:url("../../images/content/ico_arrow_black.svg");/** 절차 화살표 black **/
 
@@ -1350,6 +1350,10 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .sub-process-content ul li > p span { font-size:14px; max-width:100%; }
     .sub-process-content ul li span.sr-only.mo { color:var(--color-6); font-size:var(--font14);  }
     
+    /**금융소비자보호헌장**/
+    .WCU10100VQ .img-group img { display:none; }
+    .WCU10100VQ .img-group .sr-only { position:static; width:auto; height:auto; margin:0; overflow:visible; clip:auto; }
+
     /*****금융소비자보호부***/
     .WCU10200VQ .img-box {  padding:0; width:100%; border:0; }
     .WCU10200VQ .img-box img { content:url("../../images/content/custportal/m/custportal_organization.png"); display:block; margin:0; }
