@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+	<meta charset='utf-8'>
+	<meta content='width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0,
+	maximum-scale=1.0' name='viewport'>
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta name="format-detection" content="telephone=no" />
+	
+	<title>자동차세조회 목록</title>
+	
+	<!-- Publishing CSS -->
+	<link rel="stylesheet" href="../../../../resource/css/ui_plugin.css">
+	<link rel="stylesheet" href="../../../../resource/css/ui_style.css">
+    <link rel="stylesheet" href="../../../../resource/css/ui_contents_mymg.css">
+	
+	<!-- Publishing JS -->
+	<script src="../../../../resource/js/jquery-3.2.0.min.js"></script>
+	<script src="../../../../resource/js/jquery-ui-1.12.1.min.js"></script>
+	<script src="../../../../resource/js/ui_plugin.js"></script>
+	<script src="../../../../resource/js/ui_common.js"></script>
+    <script>
+        $(document).ready(function () {
+        
+            $('.se-radio[data-tab]').on('change', 'input[type="radio"]', function() {
+                if ($(this).is(':checked')) {
+                    var $wrapper = $(this).closest('.se-radio[data-tab]');
+                    var targetId = $wrapper.attr('data-tab');
+        
+                    $('.tab-content').hide();
+                    $('#' + targetId).show();
+                }
+            });
+        
+        });
+        </script>
+        
+
+</head>
+<body>
+
+
+
+<!-- layout -->
+<div id="layout" class="layout">
+
+	<!-- header -->
+	<div id="header" class="header">
+		<div class="header-inner">
+			<div class="left">
+				<button type="button" class="se-btn back">
+					<span>뒤로가기</span>
+				</button>
+			</div>
+			<div class="title">
+				자동차세조회
+			</div>
+			<div class="right">
+				<!-- <button type="button" class="se-btn close">
+					<span>닫기</span>
+				</button> -->
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="contents">
+			<!-- 여기부터 컨텐츠 -->
+
+			<!-- contents-inner -->
+			<div class="contents-inner my-mg">
+                <div class="section-jumbotron">
+                    <h3 class="se-title">
+                        자동차세를 조회 해주세요
+                    </h3>
+                </div><!--//section-jumbotron-->
+                <div class="section">
+                    <div class="conts-part">
+                        <div class="sp-formset">
+                            <h6 class="se-title">자동차세 구분 선택</h6>
+                            <div class="se-formtab ty-fix">
+                                <div class="se-radio" data-tab="radio-tab01">
+                                    <input id="rd0" type="radio" name="use" value="" checked="">
+                                    <label for="rd0">상품번호</label>
+                                </div>
+                                <div class="se-radio" data-tab="radio-tab02">
+                                    <input id="rd1" type="radio" name="use" value="">
+                                    <label for="rd1">차량번호</label>
+                                </div>
+                                <div class="se-radio" data-tab="radio-tab03">
+                                    <input id="rd2" type="radio" name="use" value="">
+                                    <label for="rd2">과세기간</label>
+                                </div>
+                            </div>
+                            <div class="tab-content" id="radio-tab01">
+                                <div class="sp-formset">
+                                    <h6 class="p-title">실행번호</h6>
+                                    <div class="se-select" data-stove="select" data-uicase="slide">
+                                        <div class="e-hidden-title">E-mail</div>
+                                        <select required="" title="E-mail">
+                                            <option value="0">전체</option>
+                                            <option value="1">AL09003083001</option>
+                                        </select>
+                                    </div>	
+                                </div>
+                                <div class="btn-pack space-m">
+                                    <button type="button" class="se-btn btn-solid-point">조회</button>
+                                </div>
+                            </div>
+
+                            <div class="tab-content" id="radio-tab02" style="display:none;">
+                                <div class="sp-formset">
+                                    <h6 class="p-title">차랑번호</h6>
+                                    <div class="se-select" data-stove="select" data-uicase="slide">
+                                        <div class="e-hidden-title">E-mail</div>
+                                        <select required="" title="E-mail">
+                                            <option value="0">전체</option>
+                                            <option value="1">05마6867</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="btn-pack space-m">
+                                    <button type="button" class="se-btn btn-solid-point">조회</button>
+                                </div>
+                            </div>
+                            
+                            <div class="tab-content" id="radio-tab03" style="display:none;">
+                                <div class="sp-formset">
+                                    <h6 class="p-title">시작일</h6>
+                                    <div class="sp-formgrid ty-cardnum">
+                                        <div class="p-col">
+                                            <div class="se-select" data-stove="select" data-uicase="slide">
+                                                <select required="" title="시작년">
+                                                    <option value="0">2025</option>
+                                                </select>
+                                            </div>	
+                                        </div>
+                                        <div class="p-sign">년</div>
+                                        <div class="p-col">
+                                            <div class="se-select" data-stove="select" data-uicase="slide">
+                                                <select required="" title="시작일-월">
+                                                    <option value="0">2025</option>
+                                                </select>
+                                            </div>	
+                                        </div>
+                                        <div class="p-sign">월</div>
+                                        <div class="p-col">
+                                            <div class="se-select" data-stove="select" data-uicase="slide">
+                                                <select required="" title="시작일-일">
+                                                    <option value="0">2025</option>
+                                                </select>
+                                            </div>	
+                                        </div>
+                                        <div class="p-sign">일</div>
+                                    </div>
+                                </div>
+                                <div class="sp-formset">
+                                    <h6 class="p-title">끝일</h6>
+                                    <div class="sp-formgrid ty-cardnum">
+                                        <div class="p-col">
+                                            <div class="se-select" data-stove="select" data-uicase="slide">
+                                                <select required="" title="시작년">
+                                                    <option value="0">2025</option>
+                                                </select>
+                                            </div>	
+                                        </div>
+                                        <div class="p-sign">년</div>
+                                        <div class="p-col">
+                                            <div class="se-select" data-stove="select" data-uicase="slide">
+                                                <select required="" title="시작일-월">
+                                                    <option value="0">2025</option>
+                                                </select>
+                                            </div>	
+                                        </div>
+                                        <div class="p-sign">월</div>
+                                        <div class="p-col">
+                                            <div class="se-select" data-stove="select" data-uicase="slide">
+                                                <select required="" title="시작일-일">
+                                                    <option value="0">2025</option>
+                                                </select>
+                                            </div>	
+                                        </div>
+                                        <div class="p-sign">일</div>
+                                    </div>
+                                </div>
+                                <div class="btn-pack space-m">
+                                    <button type="button" class="se-btn btn-solid-point">조회</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--//conts-part-->
+                    <div class="conts-part">
+                        <div class="conts">
+                            <h6 class="se-title">자동차세 조회 목록</h6>
+                            <div class="sp-tbl ty-view">
+                                <div class="sub-text tar">단위: 원</div>
+                                <div class="table-scroll">
+                                    <table class="group-row2 w-480">
+                                        <caption>자동차세 조회 목록표(번호, 실행번호, 차량번호, 고지서번호, 청구예정일, 발생금액, 과제시작일, 과세종료일 포함)</caption>
+                                        <colgroup>
+                                            <col style="width:50px">
+                                            <col style="width:20%">
+                                            <col style="width:20%">
+                                            <col style="width:20%">
+                                            <col style="width:auto">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" rowspan="2">번호</th>
+                                                <th scope="col">실행번호</th>
+                                                <th scope="col">차량번호</th>
+                                                <th scope="col" colspan="2">고지서번호</th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">청구예정일</th>
+                                                <th scope="col">발생금액</th>
+                                                <th scope="col">과세시작일</th>
+                                                <th scope="col">과세종료일</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!--<tr>
+                                                <td rowspan="2">-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td colspan="2">-</td>
+                                            </tr>
+                                            <tr>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                            </tr>-->
+                                            <tr>
+                                                <td class="no-date conts" colspan="5">
+                                                    <div class="noresult">
+                                                        <div class="row">
+                                                            <span class="se-ico ico-search-noresult"></span>
+                                                        </div>
+                                                        <p class="text">데이터가 존재하지 않습니다.</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                           
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="conts">
+                            <h6 class="se-title">합계</h6>
+                            <div class="sp-tbl ty-box">
+                                <table>
+                                    <caption>연체내역 합계</caption>
+                                    <colgroup>
+                                        <!-- 20220615 수정:  col넓이-->
+                                        <col style="width: 40%;">
+                                        <col style="width: 60%;">		
+                                    </colgroup>		
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">발생 금액 총 합계</th>
+                                            <td class="clr-02"><strong>-</strong>원</td>			
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>    
+                        </div>
+                    </div>
+                </div><!--//section-->
+			</div>
+			<!-- //contents-inner -->
+            <div class="contents-bottom">
+				<div class="bottom-btn-area">
+					<div class="btn-wrap">
+						<button type="button" class="se-btn btn-main">변경</button>
+					</div>
+				</div>
+			</div><!-- //contents-bottom -->
+
+			<!-- //여기까지 컨텐츠 -->
+		</div>
+	</div>
+	<!-- //container -->	
+	
+</div>
+<!-- //layout -->
+
+
+</body>
+</html>

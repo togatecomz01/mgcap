@@ -26,6 +26,7 @@ body{
     --ico-cst-07:url("../../images/content/custportal/w/custportal_bank_reject.png"); /**은행 거절 아이콘**/
 
     --ico-info:url("../../images/com/svg/ico_info_guide.svg");/** 유의사항 안내 **/
+    --ico-info2:url("../../images/com/svg/ico_info2.svg");
     --ico-info-squere:url("../../images/content/finance/WCC70102PS_notice.png");/* 팝업 유의사항 안내 */
     --ico-arrow-black:url("../../images/content/ico_arrow_black.svg");/** 절차 화살표 black **/
 
@@ -40,8 +41,8 @@ body{
 .page-container.login .tab-content form label { margin-bottom:0; }
 
 /** 로그인 버튼 **/
-.btn-content.login { position:relative; margin-top:26px; padding-left:354px; overflow:hidden; }
-.btn-content.login::before { content:""; display:block; position:absolute; left:0; right:0; width:334px; height:100%; background:url("../../images/content/login/bg_login.png") no-repeat left center; background-size:100%; border-radius:16px; overflow:hidden;  }
+.btn-content.login { position:relative; margin-top:26px; padding-left:454px; overflow:hidden; }
+.btn-content.login::before { content:""; display:block; position:absolute; left:0; right:0; width:434px; height:100%; background:url("../../images/content/login/bg_login.png") no-repeat left center; background-size:100%; border-radius:16px; overflow:hidden;  }
 
 .btn-content.login .btn-primary { background-color:var(--primary); color:var(--white); }
 .btn-content.login .btn-primary:hover,
@@ -109,13 +110,14 @@ body{
 .page-container.login .note-content li { display:flex; align-items:center; padding-top:8px; color:Var(--color-6); font-size:var(--font14); }
 .page-container.login .note-content li:first-of-type { padding-top:0; }
 .page-container.login .note-content li::before { 
-    content:""; display:inline-block; margin-right:3px; width:20px; height:20px; background-color:var(--color-9);
-    mask-image:var(--ico-info); mask-repeat:no-repeat; mask-size:100%; mask-position:center; -webkit-mask-image:var(--ico-info); -webkit-mask-repeat:no-repeat; -webkit-mask-size:100%; -webkit-mask-position:center; 
+    content:""; display:inline-block; margin-right:3px; width:24px; height:24px; background-color:var(--color-9);
+    mask-image:var(--ico-info2); mask-repeat:no-repeat; mask-size:100%; mask-position:center; -webkit-mask-image:var(--ico-info2); -webkit-mask-repeat:no-repeat; -webkit-mask-size:100%; -webkit-mask-position:center; 
 
 }
 
 /* 아이핀 인증 */
 .private-group.ipin button:nth-child(1)::before { background-image:url("../../images/content/register/w/logo_ipin.png"); }
+
 
 /* 민간 인증서 */
 
@@ -130,8 +132,8 @@ body{
 .private-group button:nth-child(4):before { background-image:url("../../images/content/register/w/logo_pass.png"); }
 
 
-.private-content.login { position:relative; margin-top:26px; padding-left:354px; overflow:hidden; }
-.private-content.login::before { content:""; display:block; position:absolute; left:0; right:0; width:334px; height:100%; background:url("../../images/content/login/bg_login2.png") no-repeat left center; background-size:100%; border-radius:16px; overflow:hidden;  }
+.private-content.login { position:relative; margin-top:26px; padding-left:454px; overflow:hidden; }
+.private-content.login::before { content:""; display:block; position:absolute; left:0; right:0; width:434px; height:100%; background:url("../../images/content/login/bg_login2.png") no-repeat left center; background-size:100%; border-radius:16px; overflow:hidden;  }
 .private-content.login .private-group { display:block; width:auto; }
 .private-content.login .private-group button,
 .private-content.login .private-group a { display:flex; align-items:center; gap:12px; margin-top:14px; padding:18px 20px 18px 28px; width:100%; height:auto; min-height:74px; border:var(--board); border-radius:6px; background-color:var(--white); font-size:var(--font18); box-sizing:border-box; }
@@ -329,7 +331,7 @@ main.contentWrap > .page-container.errorpage { padding-top:0; }
 .anchor-list { margin:0 auto; max-width:1400px; width:100%; }
 .anchor-list.fixed { position: static; }
 .anchor-list .btn-group { display:flex; width:100%; }
-.anchor-list .btn-group button { display:inline-block; padding:8px; width:100%; border:1px solid var(--color-d); font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-9); text-align:center; line-height:67px; }
+.anchor-list .btn-group button { display:inline-block; padding:8px; width:100%; border:1px solid var(--color-d); font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-9); text-align:center; line-height:45px; }
 .anchor-list .btn-group button.active { border-top:2px solid var(--primary); border-bottom:0; color:var(--primary); }
 
 .anchor-content { padding-top:20px; }
@@ -680,6 +682,8 @@ main.contentWrap > .page-container.errorpage { padding-top:0; }
 .WCF90100VQ .form-group .search input + button.btn-sch,
 .WCF90100VQ .form-group .txt-unit > span { right:36px; }
 
+.WCF90100VQ .form-group .flex-row.mo-column .txt-unit > span { right:16px; }
+
 .WCF90100VQ .flex-row.tar { justify-content:flex-end; }
 .WCF90100VQ .flex-row.tar span { color:var(--primary); }
 .WCF90100VQ .info { margin-top:var(--info-mt); padding-left:0; }
@@ -809,19 +813,22 @@ color: var(--white); font-size: var(--font26); font-weight: var(--font-w-b); bac
 /* 회사소개 - 회사연혁 (WCA30100VQ) */
 .WCA30100VQ .text-content.bo-t0 {max-width: 1200px; margin: 0 auto;}
 .WCA30100VQ.page-container > div + div {padding-top: 0;}
+.WCA30100VQ .text-content > .text-group { position:relative; }
+.WCA30100VQ .text-content > .text-group:first-of-type::after {  content:""; display:block; position:absolute; top:-60px; right:0; z-index:2; width:246px; height:246px; background:url(../../images/content/about/w/img_history.png) no-repeat right top; background-size:90% auto;  }
 .WCA30100VQ .text-content h3 { font-size: var(--font32); }
 .WCA30100VQ .text-content p { font-size: var(--font32); font-weight: var(--font-w-b); margin-top: 0;}
 .WCA30100VQ .text-content p span { color: var(--primary); }
 .WCA30100VQ .history-group { display: flex; align-items: flex-start; gap: 160px; border-top: 1px solid #000000; margin-top: 80px;}
 .WCA30100VQ .history-range { flex: 0 0 350px; text-align: center; margin-top: 72px;}
 .WCA30100VQ .history-range .sub-title { font-size: var(--font22); font-weight: var(--font-w-m); color: var(--color-45); margin-bottom: 10px; }
-.WCA30100VQ .history-range .main-title { font-size: 52px; font-weight: var(--font-w-b); }
+.WCA30100VQ .history-range .main-title { font-size:50px; font-weight:var(--font-w-b); }
+.WCA30100VQ .history-range .main-title span { color:var(--color-9); }
 .WCA30100VQ .timeline-list {margin-top:72px;}
 .WCA30100VQ .timeline-list li { position: relative; }
 .WCA30100VQ .timeline-list li:not(:last-child) { margin-bottom: 90px; }
 .WCA30100VQ .timeline-list li::before { content: ''; position: absolute; top: 15px; left: -36px; width: 10px; height: 10px; background-color: var(--color-3); border-radius: 50%; z-index: 2; }
 .WCA30100VQ .timeline-list li::after { content: ''; position: absolute; left: -33px; width: 4px; background-color: #e0e0e0; z-index: 1; top: 35px; bottom: -90px; }
-.WCA30100VQ .timeline-list li:last-child::after {bottom:0px;}
+.WCA30100VQ .timeline-list li:last-child::after {bottom:0px; display:none;}
 .WCA30100VQ .timeline-list dt { font-size: var(--font32); font-weight: var(--font-w-b); margin-bottom: 34px; padding-left: 80px; }
 .WCA30100VQ .timeline-list dd { display: flex; padding-left: 80px; font-size: var(--font22);}
 .WCA30100VQ .timeline-list dd:not(:last-of-type) { margin-bottom: 19px; }
@@ -929,7 +936,6 @@ color: var(--white); font-size: var(--font26); font-weight: var(--font-w-b); bac
 .recruitment td .date-wrap { display:flex; }
 .recruitment .group td { text-align:left; }
 .recruitment .group form .table-group { margin-bottom:52px; position:relative; }
-.recruitment .group form .table-group th label { font-weight:var(--font-w-b); }
 .recruitment .upload { display:none; }
 .recruitment .photo-content { display:flex; gap:28px; }
 .recruitment .photo-content .img-photo { width:190px; height:253px; background:var(--no-photo);  }
@@ -1523,12 +1529,20 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     }
     .WCF90100VQ .order2 { order:2; }
     .WCF90100VQ form { display:flex; flex-direction:column;  }
-    .WCF90100VQ .form-wrap { gap:var(--form-group-gap); padding:0; }
+    .WCF90100VQ .form-wrap { display:block; gap:var(--form-group-gap); padding:0; }
     .WCF90100VQ .form-wrap:last-of-type { padding-bottom:var(--form-pb); border-bottom:1px solid var(--color-d); }
-    .WCF90100VQ .form-group { display:flex; align-items:center; }
-    .WCF90100VQ .flex-row.mo-column > .flex-row { flex-direction:row !important; flex:1; width:100%; }
-    .WCF90100VQ form > .text-content { order:3; }
+    .WCF90100VQ .form-content > .form-wrap { display:block; border-bottom:0; }
+    .WCF90100VQ .form-content > .form-wrap > .form-group { display:block; width:100%; flex:1; }
+    .WCF90100VQ .form-content > .form-wrap > .form-group > label { margin:0 0 18px 0; padding:0; display:block; text-align:left; background:transparent; }
+    .WCF90100VQ .form-content > .form-wrap > .form-group:last-child { border-left:0; }
 
+    .WCF90100VQ .flex-row.mo-column > .flex-row { flex-direction:row !important; flex:1; width:100%; }
+    .WCF90100VQ .form-content > .form-wrap > .form-group > .flex-row { padding:0; }
+    .WCF90100VQ form > .text-content { order:3; }
+    .WCF90100VQ .form-content > .form-wrap > .form-group > label + input, 
+    .WCF90100VQ .form-content > .form-wrap > .form-group > label + select { margin:0; }
+
+    
     .WCF90100VQ .result_content { display:flex; flex-direction:column; margin-top:var(--result_mt); width:100%; background-size:152px auto; background-position:center 20px;}
     .WCF90100VQ .result_content p { display:block; text-align:center; }
     .WCF90100VQ .result_content .btn-content { display:flex; gap:20px; margin-top:var(--result_mt) !important; width:100%; }
@@ -1667,7 +1681,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     main.contentWrap:has(.WCA10100VQ){padding-bottom:6px;}
 
     /* 회사소개 - 회사연혁 (WCA30100VQ) */
-    .WCA30100VQ .text-content.bo-t0 {padding:0 24px;}
+    .WCA30100VQ .text-content.bo-t0 {padding:0 24px;} 
     .WCA30100VQ .history-group .history-range{display:none}
     .WCA30100VQ .history-group{margin-top: 42px; gap:0; border: none;}
     .WCA30100VQ .text-content h3,.WCA30100VQ .text-content p {font-size: var(--font22);}

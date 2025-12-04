@@ -22,12 +22,14 @@
                 <div class="tab-content">
                     <table class="td-l">
                         <caption>고등학교 입력표(학교명, 기간, 졸업구분, 전공명, 학점 포함)</caption>
+                        <!--s:2025.12.04  width 크기 조절-->
                         <colgroup>
-                            <col style="width:262px">
+                            <col style="width:180px">
                             <col style="width:auto">
-                            <col style="width:262px">
+                            <col style="width:180px">
                             <col style="width:auto">
                         </colgroup>
+                        <!--e:2025.12.04  width 크기 조절-->
                         <tbody>
                         <tr>
                             <th scope="row"><label for="hs-school">학교명</label></th>
@@ -129,12 +131,14 @@
             <h4>전문대학</h4>
             <table class="td-l">
                 <caption>전문대학 입력표(학교명, 기간, 졸업구분, 전공명, 학점 포함)</caption>
+                <!--s:2025.12.04  width 크기 조절-->
                 <colgroup>
-                    <col style="width:262px">
-                    <col style="width:auto">
-                    <col style="width:262px">
-                    <col style="width:auto">
+                <col style="width:180px">
+                <col style="width:auto">
+                <col style="width:180px">
+                <col style="width:auto">
                 </colgroup>
+                <!--e:2025.12.04  width 크기 조절-->
                 <tbody>
                     <tr>
                         <th scope="row"><label for="techSchool">학교명</label></th>
@@ -202,92 +206,94 @@
             <h4>대학교(4년제)</h4>
             <table class="td-l">
                 <caption>대학교(4년제) 입력표(학교명, 기간, 졸업구분, 전공명, 학점 포함)</caption>
+                <!--s:2025.12.04  width 크기 조절-->
                 <colgroup>
-                    <col style="width:262px">
+                    <col style="width:180px">
                     <col style="width:auto">
-                    <col style="width:262px">
+                    <col style="width:180px">
                     <col style="width:auto">
                 </colgroup>
+                <!--e:2025.12.04  width 크기 조절-->
                 <tbody>
-                <tr>
-                    <th scope="row" rowspan="2">
-                        <label for="univSchool">학교명</label>
-                    </th>
-                    <td class="tal" rowspan="2">
-                    <span class="txt-unit ipt-clear">
-                        <input id="univSchool" name="univSchool" type="text" style="padding-right:120px;">
-                        <span class="txt">대학교</span>
-                    </span>
-                    </td>
-        
-                    <th scope="row">본교/분교</th>
-                        <td class="tal">
-                        <fieldset class="form-group">
-                            <legend class="sr-only">본교/분교 선택</legend>
-                            <label class="radio" for="univCampusMain"><input type="radio" id="univCampusMain" name="univCampus" value="main"> 본교</label>
-                            <label class="radio" for="univCampusBranch"><input type="radio" id="univCampusBranch" name="univCampus" value="branch"> 분교</label>
-                        </fieldset>
+                    <tr>
+                        <th scope="row" rowspan="2">
+                            <label for="univSchool">학교명</label>
+                        </th>
+                        <td class="tal" rowspan="2">
+                        <span class="txt-unit ipt-clear">
+                            <input id="univSchool" name="univSchool" type="text" style="padding-right:120px;">
+                            <span class="txt">대학교</span>
+                        </span>
                         </td>
-                </tr>
-                <tr>
-                    <th scope="row">주간/야간</th>
-                    <td class="tal">
-                        <fieldset class="form-group">
-                            <legend class="sr-only">주간/야간 선택</legend>
-                            <label class="radio"><input type="radio" id="univTimeDay" name="univTime" value="day"> 주간</label>
-                            <label class="radio"><input type="radio" id="univTimeNight" name="univTime" value="night"> 야간</label>
-                        </fieldset>
-                    </td>
-                </tr>
-        
-                <tr>
-                    <th scope="row">기간</th>
-                    <td class="tal">
-                        <fieldset class="form-group">
-                            <legend class="sr-only">기간</legend>
-                            <div class="date-wrap">
-                                <label for="univPeriodStart" class="sr-only">입학</label>
-                                <input type="month" id="univPeriodStart" name="univPeriodStart" class="js-cal js-cal-month" placeholder="YYYY-MM">
-                            </div>
-                            <div class="date-wrap">
-                                <label for="univPeriodEnd" class="sr-only">졸업</label>
-                                <input type="month" id="univPeriodEnd" name="univPeriodEnd" class="js-cal js-cal-month" placeholder="YYYY-MM">
-                            </div>
-                        </fieldset>
-                    </td>
-                    <th scope="row"><label for="univStatus">졸업구분</label></th>
-                    <td class="tal">
-                        <select id="univStatus" name="univStatus">
-                            <option value="">선택해주세요</option>
-                            <option>졸업</option>
-                            <option>재학</option>
-                            <option>휴학</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row"><label for="univMajor">전공명</label></th>
-                    <td class="tal" colspan="3">
-                    <span class="txt-unit ipt-clear">
-                        <input id="univMajor" name="univMajor" type="text" style="padding-right:80px;">
-                        <span class="txt">계열</span>
-                    </span>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">학점</th>
-                    <td class="tal" colspan="3">
-                        <fieldset class="form-group">
-                            <legend class="sr-only">학점 입력(취득/만점)</legend>
-                            <label for="univGradeGot" class="sr-only">학점</label>
-                            <input id="univGradeGot" name="univGradeGot" type="number">
-                            /
-                            <label for="univGradeMax" class="sr-only">만점</label>
-                            <input id="univGradeMax" name="univGradeMax" type="number">
-                        </fieldset>
-                        <p class="m-dot">최종으로 졸업한 학력을 기준으로 입력하시기 바랍니다.</p>
-                    </td>
-                </tr>
+            
+                        <th scope="row">본교/분교</th>
+                            <td class="tal">
+                            <fieldset class="form-group">
+                                <legend class="sr-only">본교/분교 선택</legend>
+                                <label class="radio" for="univCampusMain"><input type="radio" id="univCampusMain" name="univCampus" value="main"> 본교</label>
+                                <label class="radio" for="univCampusBranch"><input type="radio" id="univCampusBranch" name="univCampus" value="branch"> 분교</label>
+                            </fieldset>
+                            </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">주간/야간</th>
+                        <td class="tal">
+                            <fieldset class="form-group">
+                                <legend class="sr-only">주간/야간 선택</legend>
+                                <label class="radio"><input type="radio" id="univTimeDay" name="univTime" value="day"> 주간</label>
+                                <label class="radio"><input type="radio" id="univTimeNight" name="univTime" value="night"> 야간</label>
+                            </fieldset>
+                        </td>
+                    </tr>
+            
+                    <tr>
+                        <th scope="row">기간</th>
+                        <td class="tal">
+                            <fieldset class="form-group">
+                                <legend class="sr-only">기간</legend>
+                                <div class="date-wrap">
+                                    <label for="univPeriodStart" class="sr-only">입학</label>
+                                    <input type="month" id="univPeriodStart" name="univPeriodStart" class="js-cal js-cal-month" placeholder="YYYY-MM">
+                                </div>
+                                <div class="date-wrap">
+                                    <label for="univPeriodEnd" class="sr-only">졸업</label>
+                                    <input type="month" id="univPeriodEnd" name="univPeriodEnd" class="js-cal js-cal-month" placeholder="YYYY-MM">
+                                </div>
+                            </fieldset>
+                        </td>
+                        <th scope="row"><label for="univStatus">졸업구분</label></th>
+                        <td class="tal">
+                            <select id="univStatus" name="univStatus">
+                                <option value="">선택해주세요</option>
+                                <option>졸업</option>
+                                <option>재학</option>
+                                <option>휴학</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><label for="univMajor">전공명</label></th>
+                        <td class="tal" colspan="3">
+                        <span class="txt-unit ipt-clear">
+                            <input id="univMajor" name="univMajor" type="text" style="padding-right:80px;">
+                            <span class="txt">계열</span>
+                        </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">학점</th>
+                        <td class="tal" colspan="3">
+                            <fieldset class="form-group">
+                                <legend class="sr-only">학점 입력(취득/만점)</legend>
+                                <label for="univGradeGot" class="sr-only">학점</label>
+                                <input id="univGradeGot" name="univGradeGot" type="number">
+                                /
+                                <label for="univGradeMax" class="sr-only">만점</label>
+                                <input id="univGradeMax" name="univGradeMax" type="number">
+                            </fieldset>
+                            <p class="m-dot">최종으로 졸업한 학력을 기준으로 입력하시기 바랍니다.</p>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <button type="button" class="button btn-add">추가</button>
@@ -300,12 +306,14 @@
                 <h4>대학교(석사)</h4>
                 <table class="td-l">
                     <caption>대학교(석사) 입력표(학교명, 본교/분교, 주간/야간, 기간, 졸업구분, 전공명, 세부전공 소개, 학점 포함)</caption>
+                    <!--s:2025.12.04  width 크기 조절-->
                     <colgroup>
-                        <col style="width:262px">
+                        <col style="width:180px">
                         <col style="width:auto">
-                        <col style="width:262px">
+                        <col style="width:180px">
                         <col style="width:auto">
                     </colgroup>
+                    <!--e:2025.12.04  width 크기 조절-->
                     <tbody>
                     <tr>
                         <th scope="row" rowspan="2"><label for="univSchool2">학교명</label></th>
@@ -394,12 +402,14 @@
             <h4>대학교(박사)</h4>
             <table class="td-l">
                 <caption>대학교(박사) 입력표(학교명, 본교/분교, 주간/야간, 기간, 졸업구분, 전공명, 연구실적 소개, 학점 포함)</caption>
+                <!--s:2025.12.04  width 크기 조절-->
                 <colgroup>
-                    <col style="width:262px">
+                    <col style="width:180px">
                     <col style="width:auto">
-                    <col style="width:262px">
+                    <col style="width:180px">
                     <col style="width:auto">
                 </colgroup>
+                <!--e:2025.12.04  width 크기 조절-->
                 <tbody>
                 <tr>
                     <th scope="row" rowspan="2">

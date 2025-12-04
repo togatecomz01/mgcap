@@ -3,12 +3,13 @@
 body{
   --form-label:var(--color-45);
   --form-label-font-size:var(--font20);
+  --th-form-label-font-size:1rem;
   --font-label-weight:var(--font-w-m);
   --form-bg:var(--white);
   --from-font-color:var(--color-2);
   --from-placeholder-color:var(--color-6);
   --form-board:var(--color-d);
-  --form-height:67px;
+  --form-height:50px;
   --form-padding:0 16px;
   --form-transition: all 0.2s ease;
   --form-active:var(--primary);
@@ -42,6 +43,7 @@ select:focus-visible { outline:2px solid var(--form-active); outline-offset:4px;
 
 label,
 .label-tit{ display:block; margin-bottom:16px; font-size:var(--form-label-font-size); color:var(--form-label); font-weight:var(--font-label-weight); }
+th label { font-size:var(--th-form-label-font-size); font-weight:initial; }
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -89,7 +91,7 @@ textarea:disabled { background-color:var(--form-disabled); color:var(--form-disa
 .form-group .search input[type="search"] { background:transparent; padding-left:16px; padding-right:56px;  }
 .form-group .search input + button.btn-sch {position:absolute; top:50%; right:16px; transform:translate(0, -50%); font-size:0; }
 .form-group .search input + button.btn-sch::before { content:""; display:block; width:32px; height:32px; background-color:var(--color-2);
-  mask-image:var(--ico-search); mask-position:center; mask-repeat:no-repeat; mask-size:90%; --webkit-mask-image:var(--ico-search); --webkit-mask-position:center; --webkit-mask-repeat:no-repeat; --webkit-mask-size:90%; }
+  mask-image:var(--ico-search); mask-position:center; mask-repeat:no-repeat; mask-size:80%; --webkit-mask-image:var(--ico-search); --webkit-mask-position:center; --webkit-mask-repeat:no-repeat; --webkit-mask-size:80%; }
 
 .form-group .txt-unit > input { text-align:right; padding-right:40px; }
 .form-group .txt-unit > span { z-index:2; position:absolute; top:50%; right:16px; transform:translate(0, -50%); color:var(--color-6); }
@@ -252,7 +254,7 @@ tr td .error,
 input[type="date"]::-webkit-calendar-picker-indicator,
 input[type="month"]::-webkit-calendar-picker-indicator { width:18px; height:18px; background:var(--form-date-ico) no-repeat center/18px 18px; opacity:1; cursor:pointer; filter:none; }
 input[type="date"],
-input[type="month"] { appearance:none; -webkit-appearance:none; padding-right:16px; }
+input[type="month"] { appearance:none; -webkit-appearance:none; padding-right:10px; }
 
 
 

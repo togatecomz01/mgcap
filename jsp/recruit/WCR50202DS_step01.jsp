@@ -242,12 +242,14 @@
         <h4 class="essential">병역구분</h4>
         <table class="td-l">
             <caption>병역구분 입력표(병역구분, 군별, 복무기간, 면제사유 포함)</caption>
+            <!--s:2025.12.04  width 크기 조절-->
             <colgroup>
-                <col style="width:320px">
-                <col style="width:318px">
+                <col style="width:220px">
+                <col style="width:218px">
                 <col style="width:420px">
                 <col style="width:auto">
             </colgroup>
+             <!--e:2025.12.04  width 크기 조절-->
             <thead>
                 <tr>
                     <th scope="col">병역구분</th>

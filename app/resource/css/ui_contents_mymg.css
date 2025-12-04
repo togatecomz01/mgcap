@@ -33,6 +33,10 @@
   font-size: 20px;
   margin-right: 3px;
 }
+.my-mg .section .sp-formgrid {
+  margin: 0;
+  width: 100%;
+}
 .my-mg .section .p-info-msg {
   position: relative;
   margin-top: 6px;
@@ -84,6 +88,7 @@
   display: none;
 }
 .my-mg .section .sp-tbl.ty-view .table-scroll table:has(.no-date) tbody td {
+  width: 100%;
   border: 1px solid #efefef;
 }
 .my-mg .section .sp-tbl.ty-view .table-scroll table:has(.no-date) .noresult {
@@ -105,6 +110,9 @@
 }
 .my-mg .section .sp-tbl.ty-view table thead tr.bt-1 th:first-child {
   border-left: 1px solid #efefef;
+}
+.my-mg .section .sp-tbl.ty-view table tbody th, .my-mg .section .sp-tbl.ty-view table tbody td {
+  vertical-align: middle;
 }
 .my-mg .section .sp-tbl.ty-view table tbody th:last-child {
   border-left: 1px solid #efefef;
@@ -137,6 +145,38 @@
   border-bottom: 1px solid #efefef !important;
 }
 .my-mg .section .sp-tbl.ty-view table.group-row2 tfoot td {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-weight: 900;
+  background: #E6F0FD;
+  text-align: center;
+}
+.my-mg .section .sp-tbl.ty-view table.group-row3 tbody tr td[rowspan],
+.my-mg .section .sp-tbl.ty-view table.group-row3 tbody tr td {
+  border-left: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+}
+.my-mg .section .sp-tbl.ty-view table.group-row3 tbody tr:nth-child(3n-2) td[rowspan],
+.my-mg .section .sp-tbl.ty-view table.group-row3 tbody tr:nth-child(3n) td {
+  border-bottom: 1px solid #a0a0a0;
+}
+.my-mg .section .sp-tbl.ty-view table.group-row3 tfoot td {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-weight: 900;
+  background: #E6F0FD;
+  text-align: center;
+}
+.my-mg .section .sp-tbl.ty-view table.group-row4 tbody tr td[rowspan],
+.my-mg .section .sp-tbl.ty-view table.group-row4 tbody tr td {
+  border-left: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+}
+.my-mg .section .sp-tbl.ty-view table.group-row4 tbody tr:nth-child(4n-2) td[rowspan],
+.my-mg .section .sp-tbl.ty-view table.group-row4 tbody tr:nth-child(4n) td {
+  border-bottom: 1px solid #a0a0a0;
+}
+.my-mg .section .sp-tbl.ty-view table.group-row4 tfoot td {
   padding-top: 15px;
   padding-bottom: 15px;
   font-weight: 900;

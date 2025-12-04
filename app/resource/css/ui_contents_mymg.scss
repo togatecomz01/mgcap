@@ -32,6 +32,8 @@
             color:$clr-02;
             strong { font-weight:900; font-size:20px; margin-right:3px; }
         }
+
+        .sp-formgrid { margin:0; width:100%; }
     
         .p-info-msg { 
             position:relative; margin-top:6px; padding-left:7px; box-sizing:border-box; font-size:12px; color:#909090;
@@ -54,6 +56,7 @@
             &::before { content:"*"; margin-right:3px; }
         
         }
+        
          
         .sp-tbl.ty-view
         {
@@ -71,7 +74,7 @@
                     &:has(.no-date) { 
                         min-width:100%; table-layout:auto;
                         thead { display:none; }
-                        tbody td { border:$td-bl1; }
+                        tbody td { width:100%; border:$td-bl1; }
                         .noresult { margin:40px 0; }
                     
                     }
@@ -99,6 +102,7 @@
                 }
 
                 tbody {
+                    th, td {vertical-align:middle;}
                     th:last-child { border-left:$td-bl1; }
                     tr.bb-1 td { border-bottom:$group-td-bl1;  }
                     tr.bt-1 { 
@@ -118,6 +122,30 @@
                         tr:nth-child(even) td{ border-bottom:$group-td-bl1; }
                         tr:nth-last-child(2) td[rowspan],
                         tr:nth-last-child(1) td { border-bottom:$td-bl1 !important; }
+                    }
+                    tfoot {
+                        td{ padding-top:15px; padding-bottom:15px; font-weight:900; background:#E6F0FD; text-align:center; }
+                     }
+                }
+
+                &.group-row3 {
+                    tbody {
+                        tr td[rowspan],
+                        tr td{  border-left:$td-bl1; border-bottom:$td-bl1; }
+                        tr:nth-child(3n - 2) td[rowspan],
+                        tr:nth-child(3n) td { border-bottom:$group-td-bl1; }
+                    }
+                    tfoot {
+                        td{ padding-top:15px; padding-bottom:15px; font-weight:900; background:#E6F0FD; text-align:center; }
+                     }
+                }
+
+                &.group-row4 {
+                    tbody {
+                        tr td[rowspan],
+                        tr td{  border-left:$td-bl1; border-bottom:$td-bl1; }
+                        tr:nth-child(4n - 2) td[rowspan],
+                        tr:nth-child(4n) td { border-bottom:$group-td-bl1; }
                     }
                     tfoot {
                         td{ padding-top:15px; padding-bottom:15px; font-weight:900; background:#E6F0FD; text-align:center; }

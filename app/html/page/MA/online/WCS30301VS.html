@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+	<meta charset='utf-8'>
+	<meta content='width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0,
+	maximum-scale=1.0' name='viewport'>
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta name="format-detection" content="telephone=no" />
+	
+	<title>청구정보변경 상세</title>
+	
+	<!-- Publishing CSS -->
+	<link rel="stylesheet" href="../../../../resource/css/ui_plugin.css">
+	<link rel="stylesheet" href="../../../../resource/css/ui_style.css">
+    <link rel="stylesheet" href="../../../../resource/css/ui_contents_mymg.css">
+	
+	<!-- Publishing JS -->
+	<script src="../../../../resource/js/jquery-3.2.0.min.js"></script>
+	<script src="../../../../resource/js/jquery-ui-1.12.1.min.js"></script>
+	<script src="../../../../resource/js/ui_plugin.js"></script>
+	<script src="../../../../resource/js/ui_common.js"></script>
+    <script>
+        $(document).ready(function () {
+        
+            $('.se-radio[data-tab]').on('change', 'input[type="radio"]', function() {
+                if ($(this).is(':checked')) {
+                    var $wrapper = $(this).closest('.se-radio[data-tab]');
+                    var targetId = $wrapper.attr('data-tab');
+        
+                    $('.tab-content').hide();
+                    $('#' + targetId).show();
+                }
+            });
+        
+        });
+        </script>
+        
+
+</head>
+<body>
+
+
+
+<!-- layout -->
+<div id="layout" class="layout">
+
+	<!-- header -->
+	<div id="header" class="header">
+		<div class="header-inner">
+			<div class="left">
+				<button type="button" class="se-btn back">
+					<span>뒤로가기</span>
+				</button>
+			</div>
+			<div class="title">
+				청구정보변경
+			</div>
+			<div class="right">
+				<!-- <button type="button" class="se-btn close">
+					<span>닫기</span>
+				</button> -->
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="contents">
+			<!-- 여기부터 컨텐츠 -->
+
+			<!-- contents-inner -->
+			<div class="contents-inner my-mg">
+                <div class="section-jumbotron">
+                    <h3 class="se-title">
+                        청구정보변경을 선택해주세요
+                    </h3>
+                </div><!--//section-jumbotron-->
+                <div class="section">
+                    <div class="conts-part">
+                        <div class="sp-formset">
+                            <h6 class="se-title">변경유형 선택</h6>
+                            <div class="se-formtab ty-fix">
+                                <div class="se-radio" data-tab="radio-tab01">
+                                    <input id="rd0" type="radio" name="use" value="" checked="">
+                                    <label for="rd0">주소</label>
+                                </div>
+                                <div class="se-radio" data-tab="radio-tab02">
+                                    <input id="rd1" type="radio" name="use" value="">
+                                    <label for="rd1">이메일</label>
+                                </div>
+                                <div class="se-radio" data-tab="radio-tab03">
+                                    <input id="rd2" type="radio" name="use" value="">
+                                    <label for="rd2">휴대폰</label>
+                                </div>
+                            </div>
+                            <div class="tab-content" id="radio-tab01">
+                                <div class="sp-formset">
+                                    <h6 class="p-title">우편번호</h6>
+                                    <div class="se-textfld" data-fld-clear="on">	
+                                        <input type="text" placeholder="우편번호 입력" value="" title="우편번호" style="padding-right: 57px;">
+                                        <span class="e-back" data-width="57">
+                                            <button type="button" class="se-btn btn-solid-point size-xs">검색</button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="sp-formset">
+                                    <h6 class="p-title">주소</h6>
+                                    <div class="se-textfld" data-fld-clear="on">	
+                                        <input type="text" placeholder="주소 입력" value="" title="주소">
+                                    </div>
+                                </div>
+                                <div class="sp-formset">
+                                    <h6 class="p-title">상세주소</h6>
+                                    <div class="se-textfld" data-fld-clear="on">	
+                                        <input type="text" placeholder="상세주소 입력" value="" title="상세주소">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-content" id="radio-tab02" style="display:none;">
+                                <div class="sp-formset">
+                                    <h6 class="p-title">이메일</h6>
+                                    <div class="sp-formgrid ty-mail">
+                                        <div class="p-col">
+                                            <div class="se-textfld" data-fld-clear="on">	
+                                                <input type="email" placeholder="placeholder" value="" title="" />	
+                                            </div>
+                                        </div>
+                                        <div class="p-sign va-at"></div>
+                                        <div class="p-col">
+                                            <div class="se-select" data-stove="select" data-uicase="slide">
+                                                <div class="e-hidden-title">E-mail</div>
+                                                <select required="" title="E-mail">
+                                                    <option value="" hidden="">선택하세요</option>
+                                                    <option value="0">naver.com</option>
+                                                    <option value="1">hanmail.net</option>
+                                                    <option value="2">nate.com</option>
+                                                    <option value="3">gmail.com</option>
+                                                    <option value="4">empal.com</option>
+                                                    <option value="5">freechal.com</option>
+                                                    <option value="6">hanmir.com</option>
+                                                    <option value="7">hitel.net</option>
+                                                    <option value="8">hotmail.com</option>
+                                                    <option value="9">korea.com</option>
+                                                    <option value="10">lycos.co.kr</option>
+                                                    <option value="11">netian.com</option>
+                                                    <option value="12">paran.com</option>
+                                                    <option value="13">yahoo.com</option>
+                                                    <option value="14">직접입력</option>				
+                                                </select>
+                                            </div>		
+                                        </div>
+                                    </div>
+                                    <div class="se-textfld" data-fld-clear="on">	
+                                        <input type="email" placeholder="도메인 입력" value="" title="도메인">	
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tab-content" id="radio-tab03" style="display:none;">
+                                <div class="sp-formset">
+                                    <h6 class="p-title">휴대폰</h6>
+                                    <div class="sp-formgrid ty-cardnum">
+                                        <div class="p-col">
+                                            <div class="se-select" data-stove="select" data-uicase="slide">
+                                                <div class="e-hidden-title">E-mail</div>
+                                                <select required="" title="E-mail">
+                                                    <option value="0">선택</option>
+                                                    <option value="1">010</option>
+                                                    <option value="2">011</option>
+                                                    <option value="3">016</option>
+                                                    <option value="4">017</option>
+                                                    <option value="5">018</option>
+                                                    <option value="6">019</option>
+                                                </select>
+                                            </div>	
+                                        </div>
+                                        <div class="p-sign va-hypen"></div>
+                                        <div class="p-col">
+                                            <div class="se-textfld">	
+                                                <input type="number" placeholder="" value="" title="">	
+                                            </div>
+                                        </div>
+                                        <div class="p-sign va-hypen"></div>
+                                        <div class="p-col">
+                                            <div class="se-textfld">	
+                                                <input type="number" placeholder="" value="" title="">	
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--//conts-part-->
+                </div><!--//section-->
+                <hr class="section-linebar">
+                <div class="section">
+                    <div class="conts-part">
+                        <div class="conts">
+                            <h6 class="se-title">청구정보변경 상세</h6>
+                            <div class="sp-tbl ty-view">
+                                <div class="sub-text tar">현재청구정보</div>
+                                <div class="table-scroll">
+                                    <table class="group-row3 w-480">
+                                        <caption>청구정보변경 상세표(실행번호, 상품명, E-mail, 우편물주소, SMS 포함)</caption>
+                                        <colgroup>
+                                            <col style="width:120px">
+                                            <col style="width:auto">
+                                            <col style="width:100px">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" rowspan="3">실행번호</th>
+                                                <th scope="col">상품명</th>
+                                                <th scope="col" rowspan="3">SMS</th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">E-mail</th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">우편물주소</th>
+                                               
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="3">MI14002240001</td>
+                                                <td>할부금융</td>
+                                                <td rowspan="3">-</td>
+                                            </tr>
+                                            <tr>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="3">MI14002240001</td>
+                                                <td>할부금융</td>
+                                                <td rowspan="3">-</td>
+                                            </tr>
+                                            <tr>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td>-</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p class="p-info-msg">MG캐피탈의 웹 사이트의 회원정보와는 별개입니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--//section-->
+			</div>
+			<!-- //contents-inner -->
+            <div class="contents-bottom">
+				<div class="bottom-btn-area">
+					<div class="btn-wrap">
+						<button type="button" class="se-btn btn-main">변경</button>
+					</div>
+				</div>
+			</div><!-- //contents-bottom -->
+
+			<!-- //여기까지 컨텐츠 -->
+		</div>
+	</div>
+	<!-- //container -->	
+	
+</div>
+<!-- //layout -->
+
+
+</body>
+</html>

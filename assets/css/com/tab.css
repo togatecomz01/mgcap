@@ -19,7 +19,7 @@
 .page-container:has(.tab-list.depth1) { max-width:100%; padding-top:0; padding-left:0; padding-right:0; }
 .tab-container .tab-list.depth1{  margin:var(--tab1-mb); max-width:100%; border-bottom:var(--tab-border);  }
 .page-container:has(.tab-list.depth1) .btn-group,
-.page-container:has(.tab-list.depth1) .tab-content { max-width:1400px; margin:0 auto; }
+.page-container:has(.tab-list.depth1) .tab-content { max-width:1200px; margin:0 auto; }
 .page-container:has(.tab-list.depth1) .btn-group { display:flex; gap:2px; justify-content:center;  width:100%; overflow-y:hidden; overflow-x:auto;  }
 .tab-container .tab-list.depth1 .tab-item{  flex:0 0 auto; text-align:center; line-height:51px; padding:8px 32px; width:auto; height:69px; font-size:var(--tab-font-szie); background:var(--tab-bg); color:var(--tab-font-color); border-bottom:1px solid transparent; font-weight: var(--font-w-m); }
 .tab-container .tab-list.depth1 .active{ text-align: center; color: var(--tab-active); border-bottom:4px solid var(--tab-active); background:var(--white); font-weight:var(--font-w-b); }
