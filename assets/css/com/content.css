@@ -539,7 +539,7 @@ main.contentWrap > .page-container.errorpage { padding-top:0; }
     --logo-207-02:url("../../images/content/custportal/w/ico_207_02.png"); /**민원신청서, 민원취하서**/
 }
 .WCC20700VS .btn-group .btn-download,
-.WCU40130VQ .btn-group .btn-link { padding:20px 30px 24px 104px; background-size:36px; background-position:left 37px center; }
+.WCU40130VQ .btn-group .btn-link { padding:20px 30px 20px 104px; background-size:36px; background-position:left 37px center; }
 .WCC20700VS .btn-group .btn-download::after,
 .WCU40130VQ .btn-group .btn-link::after { width:32px; height:32px; mask-size:23.111px auto; -webkit-mask-size:23.111px auto; }
 .WCC20700VS .btn-group .btn-download:hover span:not(.txt),
