@@ -270,6 +270,8 @@ main.contentWrap > .step-container { margin-top:0; }
 .WCM40100DS fieldset label.radio:first-child { padding-left:0; margin-bottom:20px; }
 .WCM40100DS .info-content { margin-top:72px; }
 
+.WCM40100DS .form-content > .form-wrap > .form-group > .flex-row > .w-406.info-phone { width:436px !important; } /* width(406px) + gap(30px) */
+
 /* ÆË¾÷ */
 .WCM40100DS .pop-content .text-group > .tit { font-weight:var(--font-w-m); color:var(--color-2); }
 .WCM40100DS .pop-content .text-group > .text-list li { margin-bottom:10px; }
