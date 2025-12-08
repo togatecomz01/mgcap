@@ -90,7 +90,7 @@ textarea:disabled { background-color:var(--form-disabled); color:var(--form-disa
 
 .form-group .search input[type="search"] { background:transparent; padding-left:16px; padding-right:56px;  }
 .form-group .search input + button.btn-sch {position:absolute; top:50%; right:16px; transform:translate(0, -50%); font-size:0; }
-.form-group .search input + button.btn-sch::before { content:""; display:block; width:32px; height:32px; background-color:var(--color-2);
+.form-group .search input + button.btn-sch::before { content:""; display:block; width:24px; height:24px; background-color:var(--color-2);
   mask-image:var(--ico-search); mask-position:center; mask-repeat:no-repeat; mask-size:80%; --webkit-mask-image:var(--ico-search); --webkit-mask-position:center; --webkit-mask-repeat:no-repeat; --webkit-mask-size:80%; }
 
 .form-group .txt-unit > input { text-align:right; padding-right:40px; }
