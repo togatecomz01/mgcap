@@ -198,11 +198,11 @@ form:has(.noti-search) + .table-content table tr:last-child td,
 
 /** 테이블 스타일 tb-style **/
 .form-content > .form-wrap.tb-style { margin-bottom:0; }
-.tb-style { border:1px solid var(--color-d); }
+.tb-style { border-bottom:1px solid var(--color-d); border-top:1px solid var(--color-2); }
 .tb-style + .tb-style { border-top:0; }
 .tb-style .form-group { display:flex; }
 .form-content > .form-wrap.tb-style > .form-group:only-of-type { flex:1; }
-.tb-style .form-group label { display:flex; align-items:center; justify-content: center; margin-bottom:0; width:212px; background-color:#F0F6FF; }
+.tb-style .form-group label { display:flex; align-items:center; justify-content: center; margin-bottom:0; width:212px; border-right:1px solid var(--color-d); background-color:#F0F6FF; }
 .tb-style .form-group input,
 .tb-style .form-group textarea{ margin:14px 16px; }
 
@@ -1307,7 +1307,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .tb-style { border:0; }
     .tb-style + .tb-style { border-top:0; }
     .tb-style .form-group { display:flex; }
-    .tb-style .form-group label { display:block; margin-bottom:10px; width:auto; background-color:transparent; }
+    .tb-style .form-group label { display:block; margin-bottom:10px; width:auto; border:0; background-color:transparent; }
     .tb-style .form-group input,
     .tb-style .form-group textarea{ margin:0; }
     /*---------------------------------------------

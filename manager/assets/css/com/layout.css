@@ -697,6 +697,8 @@ h3 {
 }
 .layerPopup.modal .pop-content.alert {
   min-width: 445px;
+  width:100%;
+  max-width:520px;
 }
 .layerPopup.modal .pop-header {
   padding: 0 40px;

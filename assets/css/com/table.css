@@ -4,7 +4,7 @@ body {
     --table-border:1px solid var(--color-d);
     --table-th:#F0F6FF;
     --total:#EDF9FF;
-    --table-pd:14px 16px;
+    --table-pd:14px 10px;
 }
 
 .table-content{
@@ -51,7 +51,7 @@ table.td-al td { text-align:left; }
 /* 테이블 푸터 */
 .table-content table tfoot tr:only-child,
 .table-content table tfoot tr:last-child { background-color:#EDF9FF; }
-.table-content table tfoot .sum { font-weight:var(--font-w-m); color:var(--white); background-color:var(--primary); }
+.table-content table tfoot .sum { font-weight:var(--font-w-m); color:var(--white); background-color:#0072BC; }
 
 /* 조회결과 없음 */
 table:has(.no-results) { border:0; }

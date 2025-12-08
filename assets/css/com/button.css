@@ -75,9 +75,9 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
 .ipt-clear { position:relative; }
 .ipt-clear input { padding-right:50px }
 .ipt-clear .btn-clear { position:absolute; right:16px; top:50%; transform:translate(0, -50%); }
-
-
-
+/** select + button **/
+.btn-box { padding:0 12px; border-radius:5px; background-color:#0072BC; color:var(--white); }
+.btn-box:hover { color:var(--white); }
 /**Form btn**/
 .btn-form { width:100%; max-width:160px; height:50px; padding:var(--btn-padding); border:var(--btn-board); color:var(--btn-font-color); box-sizing:border-box; text-align:center; }
 .btn-form:hover { border-color:var(--btn-active); color:var(--btn-active);}
