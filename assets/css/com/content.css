@@ -416,7 +416,7 @@ main.contentWrap > .page-container.errorpage { padding-top:0; }
 .anchor-panel .info-content .note-group .m-dot .bulls-eye > li.error {display: list-item;}
 .anchor-panel .info-content .note-group .m-dot .bulls-eye > li::before {content: "◎";}
 .anchor-panel .info-content .note-group .m-dot li .bulls-eye { margin-top:8px; }
-.anchor-panel .info-content .diamond-box { gap:10px; padding:28px 36px; }
+.anchor-panel .info-content .diamond-box { display:none; gap:10px; padding:28px 36px; }
 .anchor-panel .info-content .diamond-box p > span { font-weight:var(--font-w-m); }
 
 /* 준법감시심의필 */

@@ -86,6 +86,7 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
 
 /**파일선택**/
 .uploadButton { max-width:119px; height:58px; background-color:var(--color-2); color:var(--white); }
+.uploadButton:hover { background-color:var(--primary); color:var(--white); }
 
 /**Popup Btn**/
 .btn-pop-primary,
