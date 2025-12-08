@@ -5,6 +5,7 @@ body{
   --btn-font-color:var(--color-75);
   --btn-active:var(--primary);
   --ico_reset:url("../../images/com/svg/ico_reset.svg");
+  --btn-form-h:50px;
 
   --btn-content-font-size:var(--font16);
   --btn-content-font-color:var(--white);
@@ -79,9 +80,9 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
 .btn-box { padding:0 12px; border-radius:5px; background-color:#0072BC; color:var(--white); }
 .btn-box:hover { color:var(--white); }
 /**Form btn**/
-.btn-form { width:100%; max-width:160px; height:50px; padding:var(--btn-padding); border:var(--btn-board); color:var(--btn-font-color); box-sizing:border-box; text-align:center; }
+.btn-form { width:100%; max-width:160px; height:var(--btn-form-h); padding:var(--btn-padding); border:var(--btn-board); color:var(--btn-font-color); box-sizing:border-box; text-align:center; }
 .btn-form:hover { border-color:var(--btn-active); color:var(--btn-active);}
-.btn-form.reset { font-size:0; flex:0 0 67px; width:67px; height:67px; font-size:0;  }
+.btn-form.reset { font-size:0; flex:0 0 var(--btn-form-h); width:67px; height:var(--btn-form-h); font-size:0; }
 .btn-form.reset::before { content:""; display:block; width:30px; height:30px; margin:0 auto; background:var(--ico_reset) no-repeat center; background-size:100%; }
 
 /**파일선택**/
