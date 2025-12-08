@@ -1,6 +1,9 @@
 .my-mg .section .mt-0 {
   margin-top: 0;
 }
+.my-mg .section .mt-30 {
+  margin-top: 30px;
+}
 .my-mg .section .conts-part > div:first-of-type {
   margin-top: 20px;
 }
@@ -22,6 +25,11 @@
 .my-mg .section .se-title {
   margin-bottom: 10px;
 }
+.my-mg .section .se-title.sm {
+  margin-bottom: 3px !important;
+  font-size: 12px !important;
+  color: #707070 !important;
+}
 .my-mg .section .clr-01 {
   color: #E42939;
 }
@@ -36,6 +44,12 @@
 .my-mg .section .sp-formgrid {
   margin: 0;
   width: 100%;
+}
+.my-mg .section .sp-formgrid *:first-of-type {
+  margin-left: 0;
+}
+.my-mg .section .sp-formgrid *:last-of-type {
+  margin-right: 0;
 }
 .my-mg .section .p-info-msg {
   position: relative;
@@ -55,6 +69,9 @@
   border-radius: 50%;
   background: #909090;
 }
+.my-mg .section .p-info-msg:first-of-type {
+  margin-top: 14px;
+}
 .my-mg .section td.sub-text {
   text-align: left;
 }
@@ -64,6 +81,7 @@
 }
 .my-mg .section .sp-tbl.ty-view .table-scroll {
   overflow-x: auto;
+  overflow-y: hidden;
   margin-left: -15px;
   margin-right: -15px;
   padding-left: 15px;
@@ -71,6 +89,7 @@
 }
 .my-mg .section .sp-tbl.ty-view .table-scroll table {
   min-width: 100%;
+  table-layout: fixed;
 }
 .my-mg .section .sp-tbl.ty-view .table-scroll table.w-480 {
   min-width: 480px;
@@ -80,22 +99,25 @@
   min-width: 750px;
   table-layout: fixed;
 }
-.my-mg .section .sp-tbl.ty-view .table-scroll table:has(.no-date) {
-  min-width: 100%;
+.my-mg .section .sp-tbl.ty-view table {
+  box-shadow: none;
+}
+.my-mg .section .sp-tbl.ty-view table:has(.no-date) {
+  min-width: 100% !important;
   table-layout: auto;
 }
-.my-mg .section .sp-tbl.ty-view .table-scroll table:has(.no-date) thead {
+.my-mg .section .sp-tbl.ty-view table:has(.no-date) colgroup {
   display: none;
 }
-.my-mg .section .sp-tbl.ty-view .table-scroll table:has(.no-date) tbody td {
+.my-mg .section .sp-tbl.ty-view table:has(.no-date) thead {
+  display: none;
+}
+.my-mg .section .sp-tbl.ty-view table:has(.no-date) tbody td {
   width: 100%;
   border: 1px solid #efefef;
 }
-.my-mg .section .sp-tbl.ty-view .table-scroll table:has(.no-date) .noresult {
+.my-mg .section .sp-tbl.ty-view table:has(.no-date) .noresult {
   margin: 40px 0;
-}
-.my-mg .section .sp-tbl.ty-view table {
-  box-shadow: none;
 }
 .my-mg .section .sp-tbl.ty-view table thead tr:first-child th, .my-mg .section .sp-tbl.ty-view table thead tr:first-child + tr.bt-1 th {
   border-top: 1px solid #707070;
@@ -111,6 +133,9 @@
 .my-mg .section .sp-tbl.ty-view table thead tr.bt-1 th:first-child {
   border-left: 1px solid #efefef;
 }
+.my-mg .section .sp-tbl.ty-view table thead th:first-of-type {
+  border-left: 0 !important;
+}
 .my-mg .section .sp-tbl.ty-view table tbody th, .my-mg .section .sp-tbl.ty-view table tbody td {
   vertical-align: middle;
 }
@@ -118,7 +143,7 @@
   border-left: 1px solid #efefef;
 }
 .my-mg .section .sp-tbl.ty-view table tbody tr.bb-1 td {
-  border-bottom: 1px solid #a0a0a0;
+  border-bottom: 1px solid #cdcdcd;
 }
 .my-mg .section .sp-tbl.ty-view table tbody tr.bt-1 {
   border-bottom: 1px solid #efefef;
@@ -138,7 +163,7 @@
 }
 .my-mg .section .sp-tbl.ty-view table.group-row2 tbody tr:nth-child(odd) td[rowspan],
 .my-mg .section .sp-tbl.ty-view table.group-row2 tbody tr:nth-child(even) td {
-  border-bottom: 1px solid #a0a0a0;
+  border-bottom: 1px solid #cdcdcd;
 }
 .my-mg .section .sp-tbl.ty-view table.group-row2 tbody tr:nth-last-child(2) td[rowspan],
 .my-mg .section .sp-tbl.ty-view table.group-row2 tbody tr:nth-last-child(1) td {
@@ -156,9 +181,13 @@
   border-left: 1px solid #efefef;
   border-bottom: 1px solid #efefef;
 }
-.my-mg .section .sp-tbl.ty-view table.group-row3 tbody tr:nth-child(3n-2) td[rowspan],
+.my-mg .section .sp-tbl.ty-view table.group-row3 tbody tr:nth-child(3n-1) td[rowspan],
 .my-mg .section .sp-tbl.ty-view table.group-row3 tbody tr:nth-child(3n) td {
-  border-bottom: 1px solid #a0a0a0;
+  border-bottom: 1px solid #cdcdcd;
+}
+.my-mg .section .sp-tbl.ty-view table.group-row3 tbody tr:nth-last-child(3) td[rowspan],
+.my-mg .section .sp-tbl.ty-view table.group-row3 tbody tr:nth-last-child(1) td {
+  border-bottom: 1px solid #efefef !important;
 }
 .my-mg .section .sp-tbl.ty-view table.group-row3 tfoot td {
   padding-top: 15px;
@@ -174,7 +203,7 @@
 }
 .my-mg .section .sp-tbl.ty-view table.group-row4 tbody tr:nth-child(4n-2) td[rowspan],
 .my-mg .section .sp-tbl.ty-view table.group-row4 tbody tr:nth-child(4n) td {
-  border-bottom: 1px solid #a0a0a0;
+  border-bottom: 1px solid #cdcdcd;
 }
 .my-mg .section .sp-tbl.ty-view table.group-row4 tfoot td {
   padding-top: 15px;
@@ -182,4 +211,69 @@
   font-weight: 900;
   background: #E6F0FD;
   text-align: center;
+}
+.my-mg .section .sp-tbl.ty-view table td .sp-formset {
+  margin-top: 0;
+  min-height: 40px;
+  text-align: left;
+}
+.my-mg .section .sp-tbl.ty-view table td .sp-formset .se-select {
+  max-width: 200px;
+  width: 200px;
+}
+.my-mg .section .sp-tbl.ty-view table td .sp-formset .se-select .btn-fake-slt {
+  padding-left: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  height: 40px;
+}
+.my-mg .section .sp-tbl.ty-view table td .sp-formset .se-select .btn-fake-slt * {
+  font-size: 16px;
+}
+.my-mg .section .sp-tbl.ty-view table td .sp-formset .btn-box {
+  margin-left: 10px;
+  border: 0;
+  background: #1B6DFA;
+  border-radius: 4px;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+}
+.my-mg .section .sp-tbl.ty-view table td:first-of-type {
+  border-left: 0 !important;
+}
+
+.my-mg-popup .section:first-of-type {
+  margin-top: 30px;
+}
+.my-mg-popup .section .clr-01 {
+  color: #E42939;
+}
+.my-mg-popup .section .clr-02 {
+  color: #1B6DFA;
+}
+.my-mg-popup .section .popup-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 19px;
+  font-weight: 900;
+}
+.my-mg-popup .section .bb-1 {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #efefef;
+}
+.my-mg-popup .section .board-conts-detail .body {
+  margin-top: 0;
+  padding-top: 0;
+  border: 0;
+}
+.my-mg-popup .section .board-conts-detail .body p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.my-mg-popup .section .board-conts-detail .body .btn-wrap {
+  padding-top: 10px;
+  margin-bottom: 30px;
 }/*# sourceMappingURL=ui_contents_mymg.css.map */

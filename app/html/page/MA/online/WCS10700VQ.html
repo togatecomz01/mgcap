@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+	<meta charset='utf-8'>
+	<meta content='width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0,
+	maximum-scale=1.0' name='viewport'>
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta name="format-detection" content="telephone=no" />
+	
+	<title>금융거래확인서</title>
+	
+	<!-- Publishing CSS -->
+	<link rel="stylesheet" href="../../../../resource/css/ui_plugin.css">
+	<link rel="stylesheet" href="../../../../resource/css/ui_style.css">
+    <link rel="stylesheet" href="../../../../resource/css/ui_contents_mymg.css">
+	
+	<!-- Publishing JS -->
+	<script src="../../../../resource/js/jquery-3.2.0.min.js"></script>
+	<script src="../../../../resource/js/jquery-ui-1.12.1.min.js"></script>
+	<script src="../../../../resource/js/ui_plugin.js"></script>
+	<script src="../../../../resource/js/ui_common.js"></script>
+    <script>
+        $(document).ready(function () {
+        
+            $('.se-radio[data-tab]').on('change', 'input[type="radio"]', function() {
+                if ($(this).is(':checked')) {
+                    var $wrapper = $(this).closest('.se-radio[data-tab]');
+                    var targetId = $wrapper.attr('data-tab');
+        
+                    $('.tab-content').hide();
+                    $('#' + targetId).show();
+                }
+            });
+        
+        });
+        </script>
+        
+
+</head>
+<body>
+
+
+
+<!-- layout -->
+<div id="layout" class="layout">
+
+	<!-- header -->
+	<div id="header" class="header">
+		<div class="header-inner">
+			<div class="left">
+				<button type="button" class="se-btn back">
+					<span>뒤로가기</span>
+				</button>
+			</div>
+			<div class="title">
+				금융거래확인서
+			</div>
+			<div class="right">
+				<!-- <button type="button" class="se-btn close">
+					<span>닫기</span>
+				</button> -->
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="contents">
+			<!-- 여기부터 컨텐츠 -->
+
+			<!-- contents-inner -->
+			<div class="contents-inner my-mg">
+                <div class="section-jumbotron">
+                    <h3 class="se-title">
+                        금융거래확인서 발급신청을<br /> 해주세요
+                    </h3>
+                </div><!--//section-jumbotron-->
+                <div class="section">
+                    <div class="conts-part">
+                        <div class="sp-formset">
+                            <h6 class="se-title">수신방법 선택</h6>
+                            <div class="se-formtab ty-fix">
+                                <div class="se-radio" data-tab="radio-tab01">
+                                    <input id="rd0" type="radio" name="use" value="" checked="">
+                                    <label for="rd0">팩스</label>
+                                </div>
+                                <div class="se-radio" data-tab="radio-tab02">
+                                    <input id="rd1" type="radio" name="use" value="">
+                                    <label for="rd1">이메일</label>
+                                </div>
+                                <div class="se-radio" data-tab="radio-tab03">
+                                    <input id="rd2" type="radio" name="use" value="">
+                                    <label for="rd2">우편</label>
+                                </div>
+                            </div>
+                            <div class="default-content">
+                                <div class="sp-formset">
+                                    <h6 class="p-title">발급기준일</h6>
+                                    <div class="se-textfld" data-fld-clear="on">	
+                                        <input id="date-input" type="text" name="date" title="기준일" placeholder="예)20020101">
+                                    </div>
+                                </div>
+                                <div class="sp-formset">
+                                    <h6 class="p-title">제출기관</h6>
+                                    <div class="se-select" data-stove="select" data-uicase="slide">
+                                        <div class="e-hidden-title">제출기관</div>
+                                        <select required="" title="제출기관">
+                                            <option value="0">선택</option>
+                                            <option value="1"></option>
+                                        </select>
+                                    </div>	
+                                </div>
+                                <div class="sp-formset">
+                                    <h6 class="p-title">제출기관명</h6>
+                                    <div class="se-textfld" data-fld-clear="on">	
+                                        <input type="text" placeholder="제출기관명 입력" value="" title="제출기관명">
+                                    </div>
+                                </div>
+                                <div class="sp-formset">
+                                    <h6 class="p-title">제출용도</h6>
+                                    <div class="se-textfld" data-fld-clear="on">	
+                                        <input type="text" placeholder="제출용도 입력" value="" title="제출용도">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-content" id="radio-tab01">
+                                <div class="sp-formset">
+                                    <h6 class="p-title">팩스번호</h6>
+                                    <div class="sp-formgrid ty-corpnum">
+                                        <div class="p-col">
+                                            <div class="se-textfld">	
+                                                <input type="number" placeholder="" value="" title="팩스번호 앞자리">	
+                                            </div>
+                                        </div>
+                                        <div class="p-sign va-hypen"></div>
+                                        <div class="p-col">
+                                            <div class="se-textfld">	
+                                                <input type="number" placeholder="" value="" title="팩스번호 가운데 자리">	
+                                            </div>
+                                        </div>
+                                        <div class="p-sign va-hypen"></div>
+                                        <div class="p-col">
+                                            <div class="se-textfld">	
+                                                <input type="number" placeholder="" value="" title="팩스번호 뒤자리">	
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-content" id="radio-tab02" style="display:none;">
+                                <div class="sp-formset">
+                                    <h6 class="p-title">이메일</h6>
+                                    <div class="sp-formgrid ty-mail">
+                                        <div class="p-col">
+                                            <div class="se-textfld" data-fld-clear="on">	
+                                                <input type="email" placeholder="placeholder" value="" title="">	
+                                            </div>
+                                        </div>
+                                        <div class="p-sign va-at"></div>
+                                        <div class="p-col">
+                                            <div class="se-select" data-stove="select" data-uicase="slide">
+                                                <div class="e-hidden-title">E-mail</div>
+                                                <select required="" title="E-mail">
+                                                    <option value="" hidden="">선택하세요</option>
+                                                    <option value="0">naver.com</option>
+                                                    <option value="1">hanmail.net</option>
+                                                    <option value="2">nate.com</option>
+                                                    <option value="3">gmail.com</option>
+                                                    <option value="4">empal.com</option>
+                                                    <option value="5">freechal.com</option>
+                                                    <option value="6">hanmir.com</option>
+                                                    <option value="7">hitel.net</option>
+                                                    <option value="8">hotmail.com</option>
+                                                    <option value="9">korea.com</option>
+                                                    <option value="10">lycos.co.kr</option>
+                                                    <option value="11">netian.com</option>
+                                                    <option value="12">paran.com</option>
+                                                    <option value="13">yahoo.com</option>
+                                                    <option value="14">직접입력</option>				
+                                                </select>
+                                            <button type="button" class="se-btn btn-fake-slt"><span class="placeholder">선택하세요</span><span class="value"></span></button></div>		
+                                        </div>
+                                    </div>
+                                    <div class="se-textfld" data-fld-clear="on">	
+                                        <input type="email" placeholder="도메인 입력" value="" title="도메인">	
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tab-content" id="radio-tab03" style="display:none;">
+                                <div class="sp-formset">
+                                    <h6 class="p-title">우편번호</h6>
+                                    <div class="se-textfld" data-fld-clear="on">	
+                                        <input type="text" placeholder="우편번호 입력" value="" title="우편번호" style="padding-right: 57px;">
+                                        <span class="e-back" data-width="57">
+                                            <button type="button" class="se-btn btn-solid-point size-xs">검색</button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="sp-formset">
+                                    <h6 class="p-title">주소</h6>
+                                    <div class="se-textfld" data-fld-clear="on">	
+                                        <input type="text" placeholder="주소 입력" value="" title="주소">
+                                    </div>
+                                </div>
+                                <div class="sp-formset">
+                                    <h6 class="p-title">상세주소</h6>
+                                    <div class="se-textfld" data-fld-clear="on">	
+                                        <input type="text" placeholder="상세주소 입력" value="" title="상세주소">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="p-info-msg">발급 신청 후 팩스,이메일은 1시간 이내 우편은 5영업일 이내로 받아보실 수 있습니다.</p>
+                        <p class="p-info-msg">주말과 휴일은 신청하실 수 없습니다. 신청 가능시간 (영업일 기준 09:00 ~ 17:00)</p>
+                    </div><!--//conts-part-->
+                </div><!--//section-->
+			</div>
+			<!-- //contents-inner -->
+            <div class="contents-bottom">
+				<div class="bottom-btn-area">
+					<div class="btn-wrap">
+						<button type="button" class="se-btn btn-main">변경</button>
+					</div>
+				</div>
+			</div><!-- //contents-bottom -->
+
+			<!-- //여기까지 컨텐츠 -->
+		</div>
+	</div>
+	<!-- //container -->	
+	
+</div>
+<!-- //layout -->
+
+
+</body>
+</html>

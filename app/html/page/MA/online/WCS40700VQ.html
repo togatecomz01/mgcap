@@ -9,7 +9,7 @@
 	<meta http-equiv="Pragma" content="no-cache" />
 	<meta name="format-detection" content="telephone=no" />
 	
-	<title>중도상환 조회/신청</title>
+	<title>담보권해지신청</title>
 	
 	<!-- Publishing CSS -->
 	<link rel="stylesheet" href="../../../../resource/css/ui_plugin.css">
@@ -38,7 +38,7 @@
 				</button>
 			</div>
 			<div class="title">
-				중도상환 조회/신청
+				담보권해지신청
 			</div>
 			<div class="right">
 				<!-- <button type="button" class="se-btn close">
@@ -58,14 +58,15 @@
 			<div class="contents-inner my-mg">
                 <div class="section-jumbotron">
                     <h3 class="se-title">
-                        중도상환을 조회 해주세요.
+                        담보권해지를 신청 해주세요.
                     </h3>
                 </div><!--//section-jumbotron-->
                 <div class="section">
                     <div class="sp-tabset">
                         <ul class="se-tabbtn ty-main">
-                            <li class="on"><button type="button" class="se-btn" onclick="location.href='WCS10400VQ.html'">중도상환조회</button></li>
-                            <li><button type="button" class="se-btn" onclick="location.href='WCS10400VQ_ie02.html'">중도상환 신청</button></li>
+                            <li class="on"><button type="button" class="se-btn" onclick="location.href='WCS40700VQ.html'">담보권해지신청</button></li>
+                            <li><button type="button" class="se-btn" onclick="location.href='WCS40700VQ_ie02.html'">해지서류 발급신청</button></li>
+                            <li><button type="button" class="se-btn" onclick="location.href='WCS40700VQ_ie03.html'">해지대행 신청</button></li>
                         </ul>
                         <div class="tab-panel">
                             <div class="conts-part">
@@ -73,7 +74,7 @@
                                     <h6 class="se-title sm">실행번호</h6>
                                     <div class="se-select" data-stove="select" data-uicase="slide">
                                         <div class="e-hidden-title">실행번호</div>
-                                        <select required="" title="E-mail">
+                                        <select required="" title="실행번호">
                                             <option value="0">선택</option>
                                             <option value="1">상품번호</option>
                                         </select>
@@ -82,17 +83,22 @@
                                 <div class="btn-pack space-m">
                                     <button type="button" class="se-btn btn-solid-point">조회</button>
                                 </div>
+                                <p class="p-info-msg">담보권 해지신청은 채무가 완제되었을 경우 가능합니다.</p>
+                                <p class="p-info-msg">공휴일에는 신청이 불가하며, 영업일 기준 15시 이후 신청건은 익영업일에 처리됩니다.</p>
                             </div><!--//conts-part-->
                             <div class="conts-part">
                                 <div class="conts">
-                                    <h6 class="se-title">중도상환 조회 목록</h6>
+                                    <h6 class="se-title">담보권 해지신청 목록</h6>
                                     <div class="sp-tbl ty-view">
                                         <div class="sub-text tar">기준일 : 2025-09-22 / 단위: 원</div>
                                         <div class="table-scroll">
-                                            <table class="group-row2 w-480">
-                                                <caption>중도상환 조회 목록표(번호, 구분, 실행번호, 상품명, 실행일, 실행금액, 입금금액, 상환일 포함)</caption>
+                                            <table>
+                                                <caption>담보권 해지신청 목록표(No, 실행번호, 공급자명, 상품명, 여신금액, 잔여회차/총회차, 실행일, 최근납입일, 잔액, 진행상태, 만기일, 차기납입일, 납입상태 포함)</caption>
                                                 <colgroup>
                                                     <col style="width:50px">
+                                                    <col style="width:120px">
+                                                    <col style="width:120px">
+                                                    <col style="width:100px">
                                                     <col style="width:100px">
                                                     <col style="width:100px">
                                                     <col style="width:100px">
@@ -101,42 +107,45 @@
                                                 </colgroup>
                                                 <thead>
                                                     <tr>
-                                                        <th scope="col" rowspan="2">번호</th>
-                                                        <th scope="col" rowspan="2">구분</th>
-                                                        <th scope="col" colspan="2">실행번호</th>
-                                                        <th scope="col" colspan="2">상품명</th>
+                                                        <th scope="col" rowspan="3">No.</th>
+                                                        <th scope="col" rowspan="3">실행번호</th>
                                                     </tr>
-                                                    <tr>
+                                                    <tr class="bt-1">
+                                                        <th scope="col" colspan="2">공급자명</th>
+                                                        <th scope="col" colspan="2">상품명</th>
+                                                        <th scope="col">여신금액</th>
+                                                        <th scope="col" colspan="2">잔여회차/총회차</th>
+                                                    </tr>
+                                                    <tr class="bt-1">
                                                         <th scope="col">실행일</th>
-                                                        <th scope="col">실행금액</th>
-                                                        <th scope="col">입금금액</th>
-                                                        <th scope="col">상환일</th>
+                                                        <th scope="col">만기일</th>
+                                                        <th scope="col">최근납입일</th>
+                                                        <th scope="col">차기납입일</th>
+                                                        <th scope="col">잔액</th>
+                                                        <th scope="col">진행상태</th>
+                                                        <th scope="col">납입상태</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <!--<tr>
-                                                        <td rowspan="2">-</td>
-                                                        <td rowspan="2">-</td>
-                                                        <td colspan="2">-</td>
-                                                        <td colspan="2">-</td>
+                                                    <tr class="bb-1">
+                                                        <td rowspan="3">1</td>
+                                                        <td rowspan="3">MI14002240001</td>
                                                     </tr>
-                                                    <tr>
-                                                        <td>-</td>
-                                                        <td>-</td>
-                                                        <td>-</td>
-                                                        <td>-</td>
-                                                    </tr>-->
-                                                    <tr>
-                                                        <td class="no-date conts" colspan="6">
-                                                            <div class="noresult">
-                                                                <div class="row">
-                                                                    <span class="se-ico ico-search-noresult"></span>
-                                                                </div>
-                                                                <p class="text">실행번호를 선택 후 조회하여주세요.</p>
-                                                            </div>
-                                                        </td>
+                                                    <tr class="bt-1">
+                                                        <td colspan="2">충면화광기고추손도</td>
+                                                        <td colspan="2">내구재/헬스케어	</td>
+                                                        <td>1,800,000</td>
+                                                        <td colspan="2">6/18</td>
                                                     </tr>
-                                                
+                                                    <tr class="bt-1 bb-1">
+                                                        <td>2014-02-27</th>
+                                                        <td>2015-02-27</td>
+                                                        <td>134,050</td>
+                                                        <td>134,050</td>
+                                                        <td>0</td>
+                                                        <td>정상만기</td>
+                                                        <td>정상</td>
+                                                    </tr>
                                                 </tbody>
                                             </table>
                                         </div>

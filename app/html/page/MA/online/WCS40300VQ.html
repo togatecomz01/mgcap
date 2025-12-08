@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+	<meta charset='utf-8'>
+	<meta content='width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0,
+	maximum-scale=1.0' name='viewport'>
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta name="format-detection" content="telephone=no" />
+	
+	<title>중도상환완납증명서 목록</title>
+	
+	<!-- Publishing CSS -->
+	<link rel="stylesheet" href="../../../../resource/css/ui_plugin.css">
+	<link rel="stylesheet" href="../../../../resource/css/ui_style.css">
+    <link rel="stylesheet" href="../../../../resource/css/ui_contents_mymg.css">
+	
+	<!-- Publishing JS -->
+	<script src="../../../../resource/js/jquery-3.2.0.min.js"></script>
+	<script src="../../../../resource/js/jquery-ui-1.12.1.min.js"></script>
+	<script src="../../../../resource/js/ui_plugin.js"></script>
+	<script src="../../../../resource/js/ui_common.js"></script>
+    <script>
+        $(document).ready(function () {
+        
+            $('.se-radio[data-tab]').on('change', 'input[type="radio"]', function() {
+                if ($(this).is(':checked')) {
+                    var $wrapper = $(this).closest('.se-radio[data-tab]');
+                    var targetId = $wrapper.attr('data-tab');
+        
+                    $('.tab-content').hide();
+                    $('#' + targetId).show();
+                }
+            });
+        
+        });
+        </script>
+        
+
+</head>
+<body>
+
+
+
+<!-- layout -->
+<div id="layout" class="layout">
+
+	<!-- header -->
+	<div id="header" class="header">
+		<div class="header-inner">
+			<div class="left">
+				<button type="button" class="se-btn back">
+					<span>뒤로가기</span>
+				</button>
+			</div>
+			<div class="title">
+				중도상환완납증명서
+			</div>
+			<div class="right">
+				<!-- <button type="button" class="se-btn close">
+					<span>닫기</span>
+				</button> -->
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="contents">
+			<!-- 여기부터 컨텐츠 -->
+
+			<!-- contents-inner -->
+			<div class="contents-inner my-mg">
+                <div class="section-jumbotron">
+                    <h3 class="se-title">
+                        중도상환완납증명서를 조회 해주세요
+                    </h3>
+                </div><!--//section-jumbotron-->
+                <div class="section">
+                    <div class="conts-part">
+                        <div class="sp-formset">
+                            <h6 class="se-title">중도상환완납증명서 구분 선택</h6>
+                            <div class="se-formtab ty-fix2">
+                                <div class="se-radio" data-tab="radio-tab01">
+                                    <input id="rd0" type="radio" name="use" value="" checked="">
+                                    <label for="rd0">실행번호</label>
+                                </div>
+                                <div class="se-radio" data-tab="radio-tab02">
+                                    <input id="rd1" type="radio" name="use" value="">
+                                    <label for="rd1">기준일</label>
+                                </div>
+                            </div>
+                            <div class="tab-content" id="radio-tab01">
+                                <div class="sp-formset">
+                                    <h6 class="p-title">실행번호</h6>
+                                    <div class="se-select" data-stove="select" data-uicase="slide">
+                                        <div class="e-hidden-title">E-mail</div>
+                                        <select required="" title="E-mail">
+                                            <option value="0">전체</option>
+                                            <option value="1">AL09003083001</option>
+                                        </select>
+                                    </div>	
+                                </div>
+                                <div class="btn-pack space-m">
+                                    <button type="button" class="se-btn btn-solid-point">조회</button>
+                                </div>
+                            </div>
+                            
+                            <div class="tab-content" id="radio-tab02" style="display:none;">
+                                <div class="sp-formset">
+                                    <h6 class="p-title">기준일</h6>
+                                    <div class="sp-formgrid ty-cardnum">
+                                        <div class="p-col">
+                                            <div class="se-select" data-stove="select" data-uicase="slide">
+                                                <select required="" title="시작년">
+                                                    <option value="0">2025</option>
+                                                </select>
+                                            </div>	
+                                        </div>
+                                        <div class="p-sign">년</div>
+                                        <div class="p-col">
+                                            <div class="se-select" data-stove="select" data-uicase="slide">
+                                                <select required="" title="시작일-월">
+                                                    <option value="0">2025</option>
+                                                </select>
+                                            </div>	
+                                        </div>
+                                        <div class="p-sign">월</div>
+                                        <div class="p-col">
+                                            <div class="se-select" data-stove="select" data-uicase="slide">
+                                                <select required="" title="시작일-일">
+                                                    <option value="0">2025</option>
+                                                </select>
+                                            </div>	
+                                        </div>
+                                        <div class="p-sign">일</div>
+                                    </div>
+                                </div>
+                                <div class="sp-formset">
+                                    <h6 class="p-title">끝일</h6>
+                                    <div class="sp-formgrid ty-cardnum">
+                                        <div class="p-col">
+                                            <div class="se-select" data-stove="select" data-uicase="slide">
+                                                <select required="" title="시작년">
+                                                    <option value="0">2025</option>
+                                                </select>
+                                            </div>	
+                                        </div>
+                                        <div class="p-sign">년</div>
+                                        <div class="p-col">
+                                            <div class="se-select" data-stove="select" data-uicase="slide">
+                                                <select required="" title="시작일-월">
+                                                    <option value="0">2025</option>
+                                                </select>
+                                            </div>	
+                                        </div>
+                                        <div class="p-sign">월</div>
+                                        <div class="p-col">
+                                            <div class="se-select" data-stove="select" data-uicase="slide">
+                                                <select required="" title="시작일-일">
+                                                    <option value="0">2025</option>
+                                                </select>
+                                            </div>	
+                                        </div>
+                                        <div class="p-sign">일</div>
+                                    </div>
+                                </div>
+                                <div class="btn-pack space-m">
+                                    <button type="button" class="se-btn btn-solid-point">조회</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--//conts-part-->
+                    <div class="conts-part">
+                        <div class="conts">
+                            <h6 class="se-title">중도상환완납증명서 목록</h6>
+                            <div class="sp-tbl ty-view">
+                                <div class="sub-text tar">기준일 : 2025-09-22</div>
+                                <div class="table-scroll">
+                                    <table class="group-row3">
+                                        <caption>중도상환완납증명서표(번호, 실행번호, 상품명, 실행일, 중도상환일, 출력 포함)</caption>
+                                        <colgroup>
+                                            <col style="width:50px">
+                                            <col style="width:20%">
+                                            <col style="width:20%">
+                                            <col style="width:auto">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" rowspan="3">번호</th>
+                                                <th scope="col" rowspan="3">실행번호</th>
+                                                <th scope="col" rowspan="3">상품명</th>
+                                                <th scope="col">실행일</th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">만기예정일</th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">출력</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                             <!--<tr>
+                                                <td rowspan="3">-</td>
+                                                <td rowspan="3">-</td>
+                                                <td rowspan="3">-</td>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="col">-</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="col">-</td>
+                                            </tr>-->
+                                            <tr>
+                                                <td class="no-date conts" colspan="4">
+                                                    <div class="noresult">
+                                                        <div class="row">
+                                                            <span class="se-ico ico-search-noresult"></span>
+                                                        </div>
+                                                        <p class="text">데이터가 존재하지 않습니다.</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p class="p-info-msg">실행번호 또는 기준일로 조회할 수 있습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--//section-->
+			</div>
+
+			<!-- //여기까지 컨텐츠 -->
+		</div>
+	</div>
+	<!-- //container -->	
+	
+</div>
+<!-- //layout -->
+
+
+</body>
+</html>

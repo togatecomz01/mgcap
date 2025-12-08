@@ -215,7 +215,7 @@ x: »èÁ¦
 **/
 main.contentWrap.finance-type2 > .page-container { padding-top:72px; }
 .finance-type2 .location-container,
-.finance-type2 .visual-container { max-width:100%; background-color:#E4F3FF; }
+.finance-type2 .visual-container { max-width:100%; background:linear-gradient(to right, #E4F3FF 50%, #B7DEFF); }
 .finance-type2 .location-container ol { max-width:1400px; }
 .contentWrap.finance-type2 .visual-container { padding-bottom:52px; }
 .finance-type2 .visual-container p { padding-top:0; }
