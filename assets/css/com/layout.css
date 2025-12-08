@@ -62,7 +62,7 @@ main.contentWrap > * { margin:0 auto; max-width:1200px; width:100%; padding:0;  
 #headerWrap:has(.menu-item.on) { background-color:var(--white); }
 .gnb{ display:flex; justify-content:space-between; align-items:center; margin:0 auto; max-width:1400px; width:100%; background:var(--white); }
 .gnb h1{ display:block; width:137px; height:36px; font-size:0; }
-.gnb h1 a{ display:block; width:100%; height:100%; text-indent:-9999px; background:url("../../images/com/topLogo.png") no-repeat; background-size:100%; }
+.gnb h1 a{ display:block; width:100%; height:100%; text-indent:-9999px; background:url("../../images/com/svg/topLogo.svg") no-repeat; background-size:100%; }
 
 .bodyWrap { padding-top:88px; }
 /*---------------------------------------------
@@ -203,9 +203,9 @@ h3.rfrnc::before { content:"※ "; display:inline; position:relative; left:inheri
 /**유의사항 2025.10.27 수정**/
 .note-group { padding:32px 40px 42px; border:var(--board); }
 .note-content .tit,
-.note-group .tit { position:relative; padding-left:50px; padding-bottom:29px; font-size:var(--font28); font-weight:var(--font-w-m); color:var(--color-2); }
+.note-group .tit { position:relative; padding-left:46px; padding-bottom:29px; font-size:var(--font22); font-weight:var(--font-w-m); color:var(--color-2); }
 .note-content .tit::before,
-.note-group .tit::before { content:""; position:absolute; top:8px; left:5px; display:block; width:28px; height:28px; background:var(--ico-info)no-repeat center; background-size:auto 28px; }
+.note-group .tit::before { content:""; position:absolute; top:6px; left:8px; display:block; width:24px; height:24px; background:var(--ico-info)no-repeat center; background-size:auto 24px; }
 .note-group ul li + li { margin-top:16px; }
 
 
@@ -537,7 +537,7 @@ main.contentWrap > .bottom-container { margin-top:72px; }
     .page-container .note-content { padding-top:52px; }
     .note-group { padding:20px; }
     .note-content .tit,
-    .note-group .tit {padding-left:32px; padding-bottom:20px; font-size:var(--font20); }
+    .note-group .tit {padding-left:32px; padding-bottom:20px; font-size:var(--font18); }
     .note-content .tit::before,
     .note-group .tit::before { top:6px; left:3px; width:20px; height:20px; background-size:auto 20px; }
     .note-group ul li + li { margin-top:16px; }

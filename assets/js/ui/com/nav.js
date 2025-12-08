@@ -20,23 +20,25 @@ function updateScrollState() {
             menuInner.style.maxHeight = '100vh';
         } else {
             const headerHeight = document.querySelector('.allmenu-header')?.offsetHeight || 0;
-            menuInner.style.maxHeight = `calc(100vh - ${headerHeight}px)`;
+            const navTabHeight = document.querySelector('.menu-cont .menu-l .menu-tit')?.offsetHeight || 0;
+            menuInner.style.maxHeight = `calc(100vh - ${headerHeight + navTabHeight}px)`;
         }
     }
 }
 
-/*---------------------------------------------
-    전체메뉴 모바일
----------------------------------------------*/
+/*--------------------------------------------------------
+    전체메뉴 탭 (모바일: 탭 전환 / PC: 스크롤 이동) 2025.12.05 수정
+----------------------------------------------------------*/
 function mobileMenu() {
     const menuTabs = document.querySelectorAll('.menu-tit li');
     const menuContents = document.querySelectorAll('.menu-inner > li');
+    const menuInner = document.querySelector('.menu-inner');
 
     for (let i = 0; i < menuTabs.length; i++) {
         // 키보드 접근성을 위한 속성 추가
         menuTabs[i].setAttribute('tabindex', '0');
         
-        // 탭 활성화 함수
+        // 탭 활성화 함수 (모바일용)
         function activateTab(tab) {
             // 모든 탭 비활성화
             for (let j = 0; j < menuTabs.length; j++) {
@@ -55,18 +57,102 @@ function mobileMenu() {
             }
         }
 
+        // 스크롤 이동 함수 (PC용)
+        function scrollToSection(tab) {
+            const targetClass = tab.querySelector('span').getAttribute('data-focus');
+            const targetSection = document.querySelector('.menu-inner > .' + targetClass);
+            
+            if (targetSection && menuInner) {
+                // 탭 활성화
+                for (let j = 0; j < menuTabs.length; j++) {
+                    menuTabs[j].classList.remove('on');
+                }
+                tab.classList.add('on');
+
+                // 스크롤 이동 (헤더와 탭 높이를 고려한 위치 계산)
+                const header = document.querySelector('.allmenu-header');
+                const menuL = document.querySelector('.menu-l');
+                const headerHeight = header ? header.offsetHeight : 0;
+                const tabHeight = menuL ? menuL.offsetHeight : 0;
+                const offsetTop = targetSection.offsetTop - headerHeight - tabHeight;
+                
+                menuInner.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
         // 클릭 이벤트
         menuTabs[i].addEventListener('click', function() {
-            activateTab(this);
+            if (window.innerWidth < 768) {
+                // 모바일/태블릿: 탭 전환
+                activateTab(this);
+            } else {
+                // PC: 스크롤 이동
+                scrollToSection(this);
+            }
         });
         
         // 키보드 이벤트 (Enter, Space)
         menuTabs[i].addEventListener('keydown', function(e) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
-                activateTab(this);
+                if (window.innerWidth < 768) {
+                    activateTab(this);
+                } else {
+                    scrollToSection(this);
+                }
             }
         });
+    }
+
+    // PC에서 스크롤 시 탭 자동 활성화 (선택사항)
+    if (menuInner) {
+        let scrollTimeout;
+        menuInner.addEventListener('scroll', function() {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(function() {
+                if (window.innerWidth >= 786) {
+                    updateActiveTabOnScroll();
+                }
+            }, 100);
+        });
+    }
+
+    // 스크롤 위치에 따라 탭 활성화
+    function updateActiveTabOnScroll() {
+        const scrollTop = menuInner.scrollTop;
+        // const menuInnerTop = menuInner.getBoundingClientRect().top;
+        
+        let currentSection = null;
+        let minDistance = Infinity;
+
+        for (let i = 0; i < menuContents.length; i++) {
+            const section = menuContents[i];
+            const sectionTop = section.offsetTop - menuInner.offsetTop;
+            const distance = Math.abs(scrollTop - sectionTop);
+            
+            if (distance < minDistance) {
+                minDistance = distance;
+                currentSection = section;
+            }
+        }
+
+        if (currentSection) {
+            const targetClass = currentSection.classList[0];
+            
+            for (let i = 0; i < menuTabs.length; i++) {
+                const tabTarget = menuTabs[i].querySelector('span').getAttribute('data-focus');
+                if (tabTarget === targetClass) {
+                    for (let j = 0; j < menuTabs.length; j++) {
+                        menuTabs[j].classList.remove('on');
+                    }
+                    menuTabs[i].classList.add('on');
+                    break;
+                }
+            }
+        }
     }
 }
 

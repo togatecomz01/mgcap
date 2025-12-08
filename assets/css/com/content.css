@@ -185,6 +185,16 @@ form:has(.form-content .noti-search) + .table-content table td,
 form:has(.noti-search) + .table-content table tr:last-child td,
 .form-content:has(.noti-search) + .table-content table tr:last-child td { border-bottom:var(--table-border); }
 
+/** 테이블 스타일 tb-style **/
+.form-content > .form-wrap.tb-style { margin-bottom:0; }
+.tb-style { border:1px solid var(--color-d); }
+.tb-style + .tb-style { border-top:0; }
+.tb-style .form-group { display:flex; }
+.form-content > .form-wrap.tb-style > .form-group:only-of-type { flex:1; }
+.tb-style .form-group label { display:flex; align-items:center; justify-content: center; margin-bottom:0; width:212px; background-color:#F0F6FF; }
+.tb-style .form-group input,
+.tb-style .form-group textarea{ margin:14px 16px; }
+
 /*---------------------------------------------
     #프로세스
 ---------------------------------------------*/
@@ -230,7 +240,7 @@ form:has(.noti-search) + .table-content table tr:last-child td,
 .process-content .process-group .type2 li .text-content .m-dot dd:before { display:none; }
 
 /** style2 **/
-main.contentWrap > .step-container { margin-top:0; }
+main.contentWrap > .step-container { margin-top:42px; }
 .step-content ul.col2 li { width:calc(100% / 2); }
 .step-content ul.col3 li { width:calc(100% / 3); }
 .step-content ul.col4 li { width:calc(100% / 4); }
@@ -816,7 +826,7 @@ color: var(--white); font-size: var(--font26); font-weight: var(--font-w-b); bac
 .WCA30100VQ .text-content.bo-t0 {max-width: 1200px; margin: 0 auto;}
 .WCA30100VQ.page-container > div + div {padding-top: 0;}
 .WCA30100VQ .text-content > .text-group { position:relative; }
-.WCA30100VQ .text-content > .text-group:first-of-type::after {  content:""; display:block; position:absolute; top:-60px; right:0; z-index:2; width:246px; height:246px; background:url(../../images/content/about/w/img_history.png) no-repeat right top; background-size:90% auto;  }
+.WCA30100VQ .text-content > .text-group:first-of-type::after {  content:""; display:block; position:absolute; top:-60px; right:0; z-index:2; width:208px; height:208px; background:url(../../images/content/about/w/img_history.png) no-repeat right top; background-size:90% auto;  }
 .WCA30100VQ .text-content h3 { font-size: var(--font32); }
 .WCA30100VQ .text-content p { font-size: var(--font32); font-weight: var(--font-w-b); margin-top: 0;}
 .WCA30100VQ .text-content p span { color: var(--primary); }
@@ -908,7 +918,8 @@ color: var(--white); font-size: var(--font26); font-weight: var(--font-w-b); bac
 .WCA50300VQ .table-group {margin-bottom: 72px;}
 .WCA50300VQ .table-group:last-child {margin-bottom: 0;}
 
-.WCA50100VQ thead th.success { background-color:var(--primary); color: var(--white) !important; }
+.WCA50100VQ thead th.success,
+.WCA50300VQ thead th.success { background-color:var(--primary); color: var(--white) !important; }
 .WCA50100VQ .btn-group.w50 > a { padding-left:104px; background-size:62px; }
 /* 회사소개 - 채용공고(WCR50100VQ) */
 .WCR50100VQ table td { border:0; }
@@ -1238,6 +1249,8 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCC601500VQ .btn-group .btn-download + .btn-download,
     .WCC60300VQ .btn-group .btn-download + .btn-download { margin-left:0; margin-top:20px; }
 
+    .WCA30100VQ .text-content > .text-group:first-of-type::after { content:none; }
+
 
 }
 
@@ -1278,7 +1291,14 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .process-content .process-group .type2 li .text-content .m-dot dt { padding-bottom:initial; }
     .process-content .process-group .type2 li .text-content .m-dot dd { margin-top:12px; }
     .process-content .process-group .type2 li .text-content .m-dot dd:before { display:initial; }
-   
+
+    /** 테이블 스타일 tb-style **/
+    .tb-style { border:0; }
+    .tb-style + .tb-style { border-top:0; }
+    .tb-style .form-group { display:flex; }
+    .tb-style .form-group label { display:block; margin-bottom:10px; width:auto; background-color:transparent; }
+    .tb-style .form-group input,
+    .tb-style .form-group textarea{ margin:0; }
     /*---------------------------------------------
     #에러화면
     ---------------------------------------------*/
@@ -1384,6 +1404,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCU10100VQ .img-group .sr-only ul li + li { margin-top:18px; }
     .WCU10100VQ .img-group .sr-only ul li::before { content:""; position:absolute;  left:15px; display:block; width:40px; height:40px; background-repeat:no-repeat; background-position:center; background-size:40px; }
     .WCU10100VQ .img-group .sr-only ul li:nth-child(1):before { background-image:url("../../images/content/custportal/m/ico_WCU10100VQ_01.png"); }
+    .WCU10100VQ .img-group .sr-only ul li:nth-child(2):before { background-image:url("../../images/content/custportal/m/ico_WCU10100VQ_02.png"); }
     .WCU10100VQ .img-group .sr-only ul li:nth-child(3):before { background-image:url("../../images/content/custportal/m/ico_WCU10100VQ_03.png"); }
     .WCU10100VQ .img-group .sr-only ul li:nth-child(4):before { background-image:url("../../images/content/custportal/m/ico_WCU10100VQ_04.png"); }
     .WCU10100VQ .img-group .sr-only ul li:nth-child(5):before { background-image:url("../../images/content/custportal/m/ico_WCU10100VQ_05.png"); }
@@ -1684,6 +1705,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 
     /* 회사소개 - 회사연혁 (WCA30100VQ) */
     .WCA30100VQ .text-content.bo-t0 {padding:0 24px;} 
+    .WCA30100VQ .text-content > .text-group:first-of-type::after { content:none; }
     .WCA30100VQ .history-group .history-range{display:none}
     .WCA30100VQ .history-group{margin-top: 42px; gap:0; border: none;}
     .WCA30100VQ .text-content h3,.WCA30100VQ .text-content p {font-size: var(--font22);}
