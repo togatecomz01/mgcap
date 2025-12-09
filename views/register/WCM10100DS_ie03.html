@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>로그인&gt;홈</title>
+
+    <meta name="keywords" content="MG캐피탈" />
+    <meta name="copyright" content="copyrights 2025 MG캐피탈" />
+    <meta name="viewport" content="width=device-width" />
+    <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="No-Cache" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico"/>
+    <link rel="stylesheet" href="../../assets/css/com/default.css" />
+    <link rel="stylesheet" href="../../assets/css/com/common.css" />
+    <link rel="stylesheet" href="../../assets/css/com/style.css" />
+    <link rel="stylesheet" href="../../assets/css/com/fonts.css" />
+    <link rel="stylesheet" href="../../assets/css/com/layout.css" />
+    <link rel="stylesheet" href="../../assets/css/com/nav.css" />
+    <link rel="stylesheet" href="../../assets/css/com/input.css" />
+    <link rel="stylesheet" href="../../assets/css/com/button.css" />
+    <link rel="stylesheet" href="../../assets/css/com/tab.css" />
+    <link rel="stylesheet" href="../../assets/css/com/table.css" />
+    <link rel="stylesheet" href="../../assets/css/com/content.css" />
+    <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+    <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+    <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
+    <script src="../../assets/js/include.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div data-include-path="../../views/COMMON/header.html"></div>
+        <div class="bodyWrap">
+            <main class="contentWrap">
+                <nav class="location-container">
+                    <ol class="breadcrumb">
+                        <li><span class="home">홈</span></li>
+                        <li><span>로그인</span></li>
+                    </ol>
+                </nav>
+                <section class="visual-container">
+                    <h2>로그인</h2>
+                </section>
+                <section class="page-container login">
+                    <div class="tab-container">
+                        <nav class="tab-list depth1">
+                            <div class="btn-group">
+                                <a hef="" class="tab-item">공동인증서</a>
+                                <a hef="" class="tab-item active">휴대폰 인증</a>
+                                <a hef="" class="tab-item">민간(사설) 인증서</a>
+                            </div>
+                        </nav>
+                        <div class="tab-content">
+                            <div class="form-content login">
+                                <fieldset class="form-content">
+                                    <legend>휴대폰인증 입력폼</legend>
+                                    <div class="form-wrap row">
+                                        <div class="form-group">
+                                            <label for="mg-name">이름</label>
+                                            <input id="mg-name" type="text" name="text" maxlength="20"  placeholder="이름을 입력해주세요">
+                                        </div><!--//form-group-->
+                                        <div class="form-group">
+                                            <label for="mg-name">생년월일</label>
+                                            <div class="flex-row mo-column">
+                                                <span class="txt-unit">
+                                                    <input id="year" name="year" class="unit" type="number">
+                                                    <span class="txt">년</span>
+                                                </span>
+                                                <span class="txt-unit">
+                                                    <input id="month" name="month" class="unit" type="number">
+                                                    <span class="txt">월</span>
+                                                </span>
+                                                <span class="txt-unit">
+                                                    <input id="day" name="day" class="unit" type="number">
+                                                    <span class="txt">일</span>
+                                                </span>
+                                            </div>
+                                        </div><!--//form-group-->
+                                    </div>
+                                    <!--s:2025.12.09 radio 부분 button 클래스추가-->
+                                    <div class="form-wrap">
+                                        <div class="form-group">
+                                            <p class="label-tit">성별</p>
+                                            <label class="radio button">
+                                                <input type="radio" name="use" value="" checked>
+                                                <span>남자</span>
+                                            </label>
+                                            <label class="radio button">
+                                                <input type="radio" name="use" value="">
+                                                <span>여자</span>
+                                            </label>
+                                        </div>
+
+                                        
+                                        <div class="form-group">
+                                            <p class="label-tit">내외국인</p>
+                                            <label class="radio button">
+                                                <input type="radio" name="use1" value="" checked>
+                                                <span>내국인</span>
+                                            </label>
+                                            <label class="radio button">
+                                                <input type="radio" name="use1" value="">
+                                                <span>외국인</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-wrap row">
+                                        <div class="form-group">
+                                            <label for="phn-first3">휴대전화번호</label>
+                                            <div class="flex-row column">
+                                                <div>
+                                                        <select id="" title="">
+                                                        <option value="0">skt</option>
+                                                        <option value="1">kt</option>
+                                                        <option value="3">lgu+</option>
+                                                        <option value="0">알뜰 skt</option>
+                                                        <option value="1">알뜰 kt</option>
+                                                        <option value="3">알뜰 lgu+</option>
+                                                    </select>
+                                                </div>
+                                                <div>
+                                                    <select id="phn-first3" title="">
+                                                        <option value="0">010</option>
+                                                        <option value="1">017</option>
+                                                        <option value="3">019</option>
+                                                    </select>
+                                                    <input id="phn-second3" name="phn-second" type="tel" inputmode="numeric" maxlength="4">
+                                                    <input id="phn-third3" name="phn-third" type="tel" inputmode="numeric" maxlength="4"> 
+                                                    <button class="btn-form">인증번호 요청</button>
+                                                </div>
+                                            </div><!--//flex-row-->
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="mg-name">인증번호</label>
+                                            <div class="flex-row">
+                                               <span class="txt-unit w-100p">
+                                                    <input id="phn-num" name="phn-num" class="tal" type="tel" inputmode="numeric" maxlength="6">
+                                                    <span class="txt point-r">03:00</span>
+                                                </span>
+                                                <button class="btn-form">인증</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                     <!--e:2025.12.09 radio 부분 button 클래스추가-->
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="bottom-container">
+                    <div class="btn-content cta">
+                        <div class="button-group">
+                            <a href="javascript:void(0);" class="btn-primary">로그인</a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <div data-include-path="../../views/COMMON/footer.html"></div>
+    </div>
+</body>
+</html>
