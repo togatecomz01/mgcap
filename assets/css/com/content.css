@@ -90,9 +90,10 @@ body{
 .page-container.login .form-content .flex-row.column {  display:flex; flex-direction:column; }
 .page-container.login .form-content .flex-row.column div:first-of-type { width:100%; }
 .page-container.login .form-content .btn-content.cta { margin-top:0; }
+.page-container.login .form-content > .form-wrap:has(.radio.button) { gap:10px; }
 .page-container.login .form-content .form-group:has(.radio.button) { display:flex; flex-wrap:wrap; }
 .page-container.login .form-content .form-group:has(.radio.button) p.label-tit { width:100%; }
-.page-container.login .form-content .form-group:has(.radio.button) label.button { margin-left:10px; padding:0; }
+.page-container.login .form-content .form-group:has(.radio.button) label.button { margin-left:5px; padding:0; }
 .page-container.login .form-content .form-group:has(.radio.button) label.button:first-of-type { margin-left:0; }
 
 /* Æû */
