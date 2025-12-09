@@ -176,7 +176,8 @@ body{
 
 /** 테이블 안 input **/
 .group form .table-group label,
-.table-group label { margin-bottom:0; }
+.table-group label,
+.table-content label { margin-bottom:0; }
 .radio-group label:has(input),
 .recruitment label:has(input) { display:inline-flex; }
 td.address .form-group:first-of-type,
@@ -375,6 +376,16 @@ main.contentWrap > .page-container.errorpage { padding-top:0; }
 .fwm .m-dot li { font-weight:var(--font-w-r); }
 .fwm:has(.table-content) .m-dot { margin-bottom:12px; }
 .anchor-group .underline { color:var(--color-45); text-underline-offset:3px; }
+
+.summary-group + .summary-group { margin-top:32px; }
+.summary-group h3 { font-size:var(--font28);  font-weight:var(--font-w-b); color:var(--color-2); line-height:42px; }
+.summary-group h3 + p { margin-top:12px; font-size:var(--font20); color:var(--color-6); }
+.summary-group .summary-list { display:flex; gap:32px; width:100%; }
+.summary-group .summary-list ul { max-width:688px; width:100%; }
+.summary-group .summary-list ul li { padding:26px 24px; background-color:#F7F9FF; border-radius:12px; }
+.summary-group .summary-list ul li + li { margin-top:15px; }
+.summary-group .summary-list ul li span { display:inline-block; padding-right:12px; font-weight:var(--font-w-b); }
+.summary-group .summary-list .summary-img { width:480px; height:350px; }
 
 .anchor-panel .anchor-group { display:flex; gap:72px;}
 .anchor-panel .anchor-group + .anchor-group{ margin-top:52px; }
@@ -809,25 +820,38 @@ main.contentWrap > .page-container.errorpage { padding-top:0; }
 .WCA20100VQ .greeting-group .signature .signature-image {width: 111px; height: 71px; margin-left: auto; background-image: url("../../images/content/about/w/sg_WCA20100.png"); background-size: contain; background-repeat: no-repeat; background-position: right bottom;}
 
 /******회사소개-회사개요**/
-.WCA10100VQ { text-align: center; }
+.WCA10100VQ {
+    text-align: center;
+    --img01:url("../../images/content/about/w/ico_credit.png");
+    --img02:url("../../images/content/about/w/ico_stockholder.png");
+    --img03:url("../../images/content/about/w/ico_store.png");
+    --img04:url("../../images/content/about/w/ico_property.png");
+}
 .WCA10100VQ .br-mo { display: none; }
 .WCA10100VQ.page-container:has(.tab-list.depth1) .text-content, .WCA10100VQ.page-container:has(.tab-list.depth1) .button-content {margin: 0 auto; max-width: 1200px;}
 .WCA10100VQ h3 { line-height: 150%; font-size: var(--font32); }
-.WCA10100VQ h3::after { content:""; display: block; margin: 32px 0; width: 100%; height: 268px; background: url("../../images/content/about/w/main_WCA10100VQ.png") no-repeat center; background-size: cover; }
+.WCA10100VQ h3::after { content:""; display: block; margin:40px 0 52px; width: 100%; height: 268px; background: url("../../images/content/about/w/main_WCA10100VQ.png") no-repeat center; background-size: cover; }
 .WCA10100VQ .text-content { padding-top: 0; }
 
 .WCA10100VQ .text-group p { margin-top: 0; font-size: var(--font20); font-weight: var(--font-w-m); line-height: 150%; }
-/* info-cards */
-.WCA10100VQ .info-cards { display: flex; justify-content: center; align-items: stretch; gap:40px; padding: 100px 48px; margin: 0 auto; border-bottom: var(--border);}
-.WCA10100VQ .info-card { position: relative; width: calc((100% - 64px * 2) / 3); min-width: 180px; flex: 1; display: flex; flex-direction: column; justify-content: stretch;}
-.WCA10100VQ .info-card dl {flex: 1; padding: 68px 26px 58px 26px; border: var(--board); height: 100%; box-sizing: border-box;}
-/* .WCA10100VQ .info-card dl::before { content: "0"counter(item); counter-increment: item; position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center;
-width: 40px; height: 40px; background: var(--primary); color: var(--white); font-size: var(--font20); font-weight: var(--font-w-b); } */
-.WCA10100VQ .info-card h4 {position: absolute; top: 0; left: 50%;transform: translateX(-50%); width: auto; white-space: nowrap; height: 46px; padding: 0 40px; line-height: 46px; background: #0072bc; color: var(--white); font-size: var(--font22); border-radius: 4px;}
-.WCA10100VQ .info-card dt + dd { margin-top: 10px; }
-.WCA10100VQ .info-card dd + dt { margin-top: 16px; }
-.WCA10100VQ .info-card dt { font-size: var(--font20); font-weight: var(--font-w-b); }
-.WCA10100VQ .info-card dd { color: var(--color-6); font-size: var(--font18); font-weight: var(--font-w-r); }
+
+/* 개요 */
+.WCA10100VQ .overview-group .overview { display:flex; justify-content:center; padding:17px 0 79px; }
+.WCA10100VQ .overview-group .overview li { padding:16px 36px; width:calc(948px / 3); }
+.WCA10100VQ .overview-group .overview li + li { border-left:1px solid var(--color-d); }
+.WCA10100VQ .overview-group .overview li span { display:inline-block; padding:10px 26px; border-radius:100px; background-color:rgba(65, 199, 244, 0.15);  font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-2); text-align:center; }
+.WCA10100VQ .overview-group .overview li p { padding-top:18px; }
+.WCA10100VQ .overview-group .management { display:flex; gap:33px; margin:0 45px; }
+.WCA10100VQ .overview-group .management li::before { content:""; display:block; margin-bottom:32px; width:248px; height:248px; background-repeat:no-repeat; background-size:248px auto; }
+.WCA10100VQ .overview-group .management li:nth-child(1):before { background-image:var(--img01); }
+.WCA10100VQ .overview-group .management li:nth-child(2):before { background-image:var(--img02); }
+.WCA10100VQ .overview-group .management li:nth-child(3):before { background-image:var(--img03); }
+.WCA10100VQ .overview-group .management li:nth-child(4):before { background-image:var(--img04); }
+.WCA10100VQ .overview-group .management li .mo-tit { display:none; }
+.WCA10100VQ .overview-group .management li p { max-width:260px; width:100%; }
+.WCA10100VQ .overview-group .phrase { margin-top:114px; padding:45px 0 64px; background:url("../../images/content/about/w/bg_overview.png")no-repeat center; }
+.WCA10100VQ .overview-group .phrase p { font-size:var(--font34); font-weight:var(--font-w-m); color:var(--color-2); }
+
 /* button-content */
 .WCA10100VQ.page-container:has(.tab-list.depth1) .button-content {padding:72px 0 22px 0; }
 .WCA10100VQ .button-content .lnk-group { display: flex; flex-wrap: wrap; gap: 34px; }
@@ -1037,12 +1061,15 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 .WCS50300VS .pad {padding: 8px 10px;}
 .WCS50300VS .flex-row:has(> select + span), 
 .WCS50300VS .flex-row:has(> input + span),
-.WCA90107VQ .flex-row:has(> input + span){align-items: center;} /* 클린정보센터 1줄 추가 */ /* 공통으로 변경 해야할것 같음 (이메일 부분)*/
-.WCS50300VS .flex-row:has(> select + span) select {width: 162px;}
+.WCA90107VQ .flex-row:has(> input + span){align-items: center;}
+.WCS50300VS .flex-row:has(> select + span) select {width: 120px;}
 .WCS50300VS .flex-row:has(> select + span) span:last-of-type { margin-right: 0;}
 .WCS50300VS .btn-withdraw {width: 120px; height: 58px; background-color: var(--color-2); color: var(--white);}
 .WCS50300VS .form-group .info-phone {max-width: 406px;}
 .WCS50300VS .form-group .info-phone select {max-width: 137px;}
+
+.WCS50300VS .date-wrap { width:100%; }
+.WCS50300VS .form-content > .form-wrap:has(.password-change) > .form-group:only-of-type { flex:0 0 57%; }
 
 /** 공개매각 입찰내역 **/
 .WCS50200VQ .cap-form { padding-bottom:24px; }
@@ -1696,21 +1723,33 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCA20100VQ .greeting-group .signature {margin-top: 20px;}
     .WCA20100VQ .greeting-group .signature .signature-image {background-image: url("../../images/content/about/m/sg_WCA20100.png");width: 111px; height: 71px;}
 
+    /* 회사개요 */
+    .WCA10100VQ {
+        --img01:url("../../images/content/about/m/ico_credit.png");
+        --img02:url("../../images/content/about/m/ico_stockholder.png");
+        --img03:url("../../images/content/about/m/ico_store.png");
+        --img04:url("../../images/content/about/m/ico_property.png");
+    }
     .page-container.WCA10100VQ div.bo-t0 {padding-top: 0;}
     .WCA10100VQ .br-mo { display: block; }
     .WCA10100VQ h3 { margin-bottom: 220px; padding-top:32px; font-size: var(--font22); font-weight: var(--font-w-m); }
     .WCA10100VQ h3 .success { font-weight: var(--font-w-b); }
     .WCA10100VQ h3::after { position: absolute; left: 50%; transform: translateX(-50%); margin: 28px 0 20px 0; width: 100%; height: 173px; }
     .WCA10100VQ .text-group p {padding: 0 24px; font-size: var(--font18); font-weight: var(--font-w-r);}
-    .WCA10100VQ .info-card h4 {padding: 0 24px; max-width:182px; width:100%; font-size: var(--font18);}
-    .WCA10100VQ.page-container:has(.tab-list.depth1) > :not(.tab-container) { padding-left:0; padding-right:0; }
-    /* info-cards */
-    .WCA10100VQ .info-cards { flex-direction: column; padding: 52px 24px 0 24px; }
-    .WCA10100VQ .info-card { width: 100%; }
-    .WCA10100VQ .info-card dl {padding: 48px 26px 30px 26px;}
-    .WCA10100VQ .info-card dt { font-size: var(--font18); }
-    .WCA10100VQ .info-card dd { font-size: 1rem; }
-    .WCA10100VQ .info-card dt + dd { margin-top:8px; }
+
+    /* 개요 */
+    .WCA10100VQ .overview-group .overview { padding:32px 0 30px; }
+    .WCA10100VQ .overview-group .overview li { padding:14px 5px; width:calc(100% / 3); }
+    .WCA10100VQ .overview-group .overview li + li { border-left:0; }
+    .WCA10100VQ .overview-group .overview li span { padding:4px 12px 6px;  font-size:var(--font14); }
+    .WCA10100VQ .overview-group .overview li p { padding-top:2px; font-size:var(--font14); }
+    .WCA10100VQ .overview-group .management { flex-wrap:wrap;     flex-direction: column; gap:22px; margin:0; }
+    .WCA10100VQ .overview-group .management li { position:relative; padding:18px 16px 18px 89px; border-radius:12px; background-color:var(--color-f6); text-align:left; }
+    .WCA10100VQ .overview-group .management li::before { position:absolute; left:16px; margin-bottom:0; width:55px; height:55px; background-size:55px auto; }
+    .WCA10100VQ .overview-group .management li p.mo-tit { display:block; font-size:var(--font18); font-weight:var(--font-w-m); color:var(--color-2); }
+    .WCA10100VQ .overview-group .management li p { margin-top:6px; max-width:260px; width:100%; font-size:var(--font16); }
+    .WCA10100VQ .overview-group .phrase { margin-top:37px; padding:0; max-height:65px; height:100%; background-size:100%; }
+    .WCA10100VQ .overview-group .phrase p { font-size:var(--font22); }
     /* button-content */
     
     .WCA10100VQ.page-container:has(.tab-list.depth1) .button-content { margin: 0 24px 24px 24px; padding-top:32px; border-top: var(--board);}

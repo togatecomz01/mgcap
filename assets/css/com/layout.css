@@ -33,6 +33,7 @@ main.contentWrap > * { margin:0 auto; max-width:1200px; width:100%; padding:0;  
 .mt-10 { margin-top:10px; }
 .mt-15 { margin-top:15px; }
 .mt-20 { margin-top:20px; }
+.mt-38 { margin-top:38px; } /* form 태그 안 써서 */
 .mt-42 { margin-top:42px; } /* form 태그 안 써서 */
 .point-r { color:var(--point-r) !important; }
 .point-b { color:var(--point-b) !important; }
@@ -240,7 +241,7 @@ h3.rfrnc::before { content:"※ "; display:inline; position:relative; left:inheri
 .form-wrap.search-form .tab-content > .group .form-group:last-of-type,
 .form-wrap.search-form > .group .form-group:last-of-type { padding-bottom:0; margin-bottom:0; border-bottom:0; }
 .form-wrap.search-form .tab-content > .group .form-group label:not(.radio),
-.form-wrap.search-form > .group .form-group label:not(.radio) {  width:auto; max-width:110px; min-width:72px; font-weight:var(--font-w-b); color:var(--color-2); }
+.form-wrap.search-form > .group .form-group label:not(.radio) {  width:100%; max-width:110px; min-width:72px; font-weight:var(--font-w-b); color:var(--color-2); }
 .form-wrap.search-form p.mo-tit { display:none; }
 
 form:has(.form-wrap.search-form) + [class*="-group"] { margin-top:38px; }
