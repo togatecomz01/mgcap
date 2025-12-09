@@ -841,7 +841,7 @@ main.contentWrap > .page-container.errorpage { padding-top:0; }
 .WCA10100VQ .overview-group .overview li + li { border-left:1px solid var(--color-d); }
 .WCA10100VQ .overview-group .overview li span { display:inline-block; padding:10px 26px; border-radius:100px; background-color:rgba(65, 199, 244, 0.15);  font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-2); text-align:center; }
 .WCA10100VQ .overview-group .overview li p { padding-top:18px; }
-.WCA10100VQ .overview-group .management { display:flex; gap:33px; margin:0 45px; }
+.WCA10100VQ .overview-group .management { display:flex; flex-wrap:wrap; gap:33px; margin:0 45px; }
 .WCA10100VQ .overview-group .management li::before { content:""; display:block; margin-bottom:32px; width:248px; height:248px; background-repeat:no-repeat; background-size:248px auto; }
 .WCA10100VQ .overview-group .management li:nth-child(1):before { background-image:var(--img01); }
 .WCA10100VQ .overview-group .management li:nth-child(2):before { background-image:var(--img02); }
@@ -1743,12 +1743,12 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCA10100VQ .overview-group .overview li + li { border-left:0; }
     .WCA10100VQ .overview-group .overview li span { padding:4px 12px 6px;  font-size:var(--font14); }
     .WCA10100VQ .overview-group .overview li p { padding-top:2px; font-size:var(--font14); }
-    .WCA10100VQ .overview-group .management { flex-wrap:wrap;     flex-direction: column; gap:22px; margin:0; }
+    .WCA10100VQ .overview-group .management { flex-direction: column; gap:22px; margin:0; }
     .WCA10100VQ .overview-group .management li { position:relative; padding:18px 16px 18px 89px; border-radius:12px; background-color:var(--color-f6); text-align:left; }
     .WCA10100VQ .overview-group .management li::before { position:absolute; left:16px; margin-bottom:0; width:55px; height:55px; background-size:55px auto; }
     .WCA10100VQ .overview-group .management li p.mo-tit { display:block; font-size:var(--font18); font-weight:var(--font-w-m); color:var(--color-2); }
     .WCA10100VQ .overview-group .management li p { margin-top:6px; max-width:260px; width:100%; font-size:var(--font16); }
-    .WCA10100VQ .overview-group .phrase { margin-top:37px; padding:0; max-height:65px; height:100%; background-size:100%; }
+    .WCA10100VQ .overview-group .phrase { margin-top:37px; padding:17px 0; max-height:65px; height:100%; background-size:auto 100%; }
     .WCA10100VQ .overview-group .phrase p { font-size:var(--font22); }
     /* button-content */
     
