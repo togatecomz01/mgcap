@@ -58,25 +58,18 @@
                         <form>
                             <fieldset class="form-content">
                                 <legend>클린 신고센터 정보 입력</legend>
+                                <!-- S : 2025.12.10 정보 입력 항목 변경으로 인한 구조변경 -->
                                 <div class="form-wrap">
-                                    <!-- s: 2025.11.06 구조변경 -->
-                                    <fieldset class="form-group">
-                                        <legend>구분</legend>
-                                        <span class="form-label">구분</span>
-                                        <div class="flex-row">
-                                            <label class="radio">
-                                                <input type="radio" id="type-anonymous" name="use" value="anonymous" checked>
-                                                <span>익명</span>
-                                            </label>
-                                            <label class="radio">
-                                                <input type="radio" id="type-real" name="use" value="real">
-                                                <span>실명</span>
-                                            </label>
-                                        </div>
-                                    </fieldset>
-                                    <!-- e: 2025.11.06 구조변경 -->
+                                    <div class="form-group">
+                                        <label for="name">고객명</label>
+                                        <input id="name" name="name" type="text" placeholder="이름을 입력해주세요." required>
+                                    </div>    
+                                    <div class="form-group">
+                                        <label for="birth">생년월일</label>
+                                        <input id="birth" name="birth" type="number" maxlength="8" placeholder="YYYY.MM.DD" required>
+                                    </div>    
                                 </div>
-
+                                <!-- E : 2025.12.10 정보 입력 항목 변경으로 인한 구조변경 -->
                                 <div class="form-wrap">
                                     <div class="form-group">
                                         <label for="phn-first2">연락처(선택)</label>
@@ -114,6 +107,9 @@
                                     <div class="form-group">
                                         <label for="password">비밀번호</label>
                                         <input id="password" type="text" name="password" placeholder="비밀번호를 입력해주세요" />
+                                        <!-- S : 2025.12.10 비밀번호 유의사항 추가 -->
+                                        <p class="point-r">* 숫자와 영문 (대/소문자)조합 최대 12자리 이내</p>
+                                        <!-- E : 2025.12.10 비밀번호 유의사항 추가 -->
                                     </div>
                                 </div>
                                 <div class="form-wrap tb-style">

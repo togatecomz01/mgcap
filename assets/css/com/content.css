@@ -760,6 +760,9 @@ main.contentWrap > .page-container.errorpage { padding-top:0; }
 .WCC601500VQ .btn-group { font-size:0; }
 .WCC601500VQ .btn-group .btn-download + .btn-download {margin-left: 26px;}
 
+/* 고객센터 - 법적고지 */
+.WCC60800VQ .pc-only {display: block;}
+.WCC60800VQ .moblie-only {display: none;}
 /******고객센터-개인정보처리방침**/
 .WCC60300VQ .font-bold { font-weight: var(--font-w-b); }
 .WCC60300VQ .font-medium { font-weight: var(--font-w-m); }
@@ -874,14 +877,15 @@ color: var(--white); font-size: var(--font26); font-weight: var(--font-w-b); bac
 .WCA10100VQ .button-content .lnk-group a:nth-child(4) { background-image: url("../../images/content/about/w/link_4_WCA10100VQ.png") }
 
 /* 회사소개 - 회사연혁 (WCA30100VQ) */
+.page-container.WCA30100VQ > [class*="-content"] > [class*="-group"] {margin-bottom: 0;}
 .WCA30100VQ .text-content.bo-t0 {max-width: 1200px; margin: 0 auto;}
 .WCA30100VQ.page-container > div + div {padding-top: 0;}
 .WCA30100VQ .text-content > .text-group { position:relative; }
-.WCA30100VQ .text-content > .text-group:first-of-type::after {  content:""; display:block; position:absolute; top:-60px; right:0; z-index:2; width:208px; height:208px; background:url(../../images/content/about/w/img_history.png) no-repeat right top; background-size:90% auto;  }
-.WCA30100VQ .text-content h3 { font-size: var(--font32); }
+.WCA30100VQ .text-content > .text-group:first-of-type::after {  content:""; display:block; position:absolute; top:0px; right:0; z-index:2; width:180px; height:180px; background:url(../../images/content/about/w/img_history.png) no-repeat right top; background-size:90% auto;  }
+.WCA30100VQ .text-content h3 { font-size: var(--font32); padding-top: 40px; }
 .WCA30100VQ .text-content p { font-size: var(--font32); font-weight: var(--font-w-b); margin-top: 0;}
 .WCA30100VQ .text-content p span { color: var(--primary); }
-.WCA30100VQ .history-group { display: flex; align-items: flex-start; gap: 160px; border-top: 1px solid #000000; margin-top: 80px;}
+.WCA30100VQ .history-group { display: flex; align-items: flex-start; gap: 160px; border-top: 1px solid #000000; margin-top: 52px;}
 .WCA30100VQ .history-range { flex: 0 0 350px; text-align: center; margin-top: 72px;}
 .WCA30100VQ .history-range .sub-title { font-size: var(--font22); font-weight: var(--font-w-m); color: var(--color-45); margin-bottom: 10px; }
 .WCA30100VQ .history-range .main-title { font-size:50px; font-weight:var(--font-w-b); }
@@ -914,7 +918,7 @@ color: var(--white); font-size: var(--font26); font-weight: var(--font-w-b); bac
 .WCR60100VQ .img-group img { width:100%; }
 
 /******회사소개-채용안내 및 절차**/
-.WCR10400VQ .text-content, .WCR10400VQ .jsTab {max-width: 1400px; margin: 0 auto;}
+.WCR10400VQ .text-content, .WCR10400VQ .jsTab {max-width: 1200px; margin: 0 auto;}
 .WCR10400VQ .text-content {border-top: none;}
 .WCR10400VQ ul.diamond-box { display: flex; padding: 32px 24px; margin-top: 32px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; background: var(--bg-box); }
 .WCR10400VQ ul.diamond-box li::before { content:"◆"; display:inline; color:var(--primary); margin-right: 6px; }
@@ -949,11 +953,10 @@ color: var(--white); font-size: var(--font26); font-weight: var(--font-w-b); bac
 .WCR50201DS label.radio {padding-left: 0;}
 .WCR50201DS .btn-form {max-width: 100%;}
 .WCA90107VQ .text-content, .WCA90100VQ .text-content {margin-bottom: 56px;}
-
 .WCA90103VQ .tab-content + .text-group { margin-top:18px; }
 /* 회사소개 - 성희롱신고센터 (WCA90100VQ) */
 .WCA90100VQ strong+ol {margin-top: 18px;}
-.WCA90100VQ .point-r {color: #F00 !important;} 
+.WCA90100VQ .point-r,.WCA90107VQ .point-r {color: #F00 !important; margin-top: 18px;} 
 .WCA90100VQ .info-content .dot > li:last-child::before {background-color: #F00;}
 
 
@@ -1671,6 +1674,9 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCC601500VQ .sub-process-content ul dl dd span { font-size: var(--font14) }
     .WCC601500VQ .sub-process-content ul dl dd span.txt-less-2 { font-size: calc(var(--font14) - 2px); }
 
+    /* 고객센터 - 법적고지 */
+    .WCC60800VQ .pc-only {display: none;}
+    .WCC60800VQ .moblie-only {display: block;}
     /******고객센터-개인정보처리방침**/
     .WCC60300VQ .button-content .lnk-group { gap: 10px; }
     .WCC60300VQ .button-content .lnk-group a { width: 100%; text-align: center; }
@@ -1889,7 +1895,6 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCR50101DQ .view-subject .inquiry {margin-left: 0; font-size: var(--font12);}
     /* 회사소개 - 클린신고센터 + 성희롱 및 직장내 괴롭힘 신고센터 */
     .WCA90107VQ .text-content, .WCA90100VQ .text-content {margin-bottom: 32px;}
-
     /** 찾아오시는 길 **/
     .WCA70100VQ .map-content { padding-top:32px; }
     .WCA70100VQ .map-group { height:364px; }
