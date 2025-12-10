@@ -91,7 +91,7 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
 
 /**Popup Btn**/
 .btn-pop-primary,
-.btn-pop-secondary { padding:15px 60px; width:100%; max-width:212px; min-width:140px; height:60px; line-height:1; box-sizing:"border-box"; font-size:var(--btn-pop-font-size); color:var(--btn-pop-font-second-color); font-weight:var(--btn-pop-font-w); border-radius:100px; border:1px solid transparent; }
+.btn-pop-secondary { padding:15px 50px; width:100%; max-width:212px; min-width:140px; height:60px; line-height:1; box-sizing:"border-box"; font-size:var(--btn-pop-font-size); color:var(--btn-pop-font-second-color); font-weight:var(--btn-pop-font-w); border-radius:100px; border:1px solid transparent; }
 .btn-pop-primary{ background:var(--btn-pop-background); color:var(--btn-pop-font-color); }
 .btn-pop-primary:hover { background:var(--primary); color:var(--btn-pop-font-color); }
 .btn-pop-secondary{ border:var(--btn-pop-s-border); background:var(--btn-pop-s-background); }

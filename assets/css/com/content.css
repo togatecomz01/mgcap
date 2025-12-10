@@ -832,6 +832,8 @@ main.contentWrap > .page-container.errorpage { padding-top:0; }
     --img02:url("../../images/content/about/w/ico_stockholder.png");
     --img03:url("../../images/content/about/w/ico_store.png");
     --img04:url("../../images/content/about/w/ico_credit.png");
+    --phrase-txt:var(--font34);
+    --phrase-bg:url("../../images/content/about/w/bg_overview.png");
 }
 .WCA10100VQ .br-mo { display: none; }
 .WCA10100VQ.page-container:has(.tab-list.depth1) .text-content, .WCA10100VQ.page-container:has(.tab-list.depth1) .button-content {margin: 0 auto; max-width: 1200px;}
@@ -858,8 +860,8 @@ main.contentWrap > .page-container.errorpage { padding-top:0; }
 .WCA10100VQ .overview-group .management li:nth-child(4):before { background-image:var(--img04); }
 .WCA10100VQ .overview-group .management li .mo-tit { display:none; }
 .WCA10100VQ .overview-group .management li p { max-width:260px; width:100%; }
-.WCA10100VQ .overview-group .phrase { margin-top:114px; padding:45px 0 64px; background:url("../../images/content/about/w/bg_overview.png")no-repeat center; }
-.WCA10100VQ .overview-group .phrase p { font-size:var(--font34); font-weight:var(--font-w-m); color:var(--color-2); }
+.WCA10100VQ .overview-group .phrase { position:relative; padding:88px 0 38px;  font-size:var(--phrase-txt); font-weight:var(--font-w-m); color:var(--color-2); }
+.WCA10100VQ .overview-group .phrase::before { content:""; display:block; position:absolute; top:37px; left:50%; transform:translateX(-50%); z-index:-1; width:100%; height:100%; background:var(--phrase-bg)no-repeat center; background-size:100% auto; }
 
 /* button-content */
 .WCA10100VQ.page-container:has(.tab-list.depth1) .button-content {padding:72px 0 22px 0; }
@@ -901,6 +903,15 @@ color: var(--white); font-size: var(--font26); font-weight: var(--font-w-b); bac
 /** 조직도 **/
 .WCA40100VQ .img-box { padding:32px 28px; width:100%; border:1px solid var(--color-d); border-radius:16px; }
 .WCA40100VQ .img-box img { content:url("../../images/content/about/w/img_organization.png"); display:block; margin:0 auto; }
+
+/** MG캐피탈 인재상 **/
+.WCR60100VQ {
+    --h3-txt:var(--font34);
+}
+.WCR60100VQ .text-group .vision { position:relative; padding-bottom:44px; font-size:var(--h3-txt); font-weight:var(--font-w-b); color:var(--color-2); }
+.WCR60100VQ .text-group .talent { display:none; }
+
+.WCR60100VQ .img-group img { width:100%; }
 
 /******회사소개-채용안내 및 절차**/
 .WCR10400VQ .text-content, .WCR10400VQ .jsTab {max-width: 1400px; margin: 0 auto;}
@@ -1302,7 +1313,6 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCC60300VQ .btn-group .btn-download + .btn-download { margin-left:0; margin-top:20px; }
 
     .WCA30100VQ .text-content > .text-group:first-of-type::after { content:none; }
-
 
 }
 
@@ -1734,14 +1744,19 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 
     /* 회사개요 */
     .WCA10100VQ {
+        --h3-txt:var(--font22);
+        --li-mt:14px;
+        --overflow-li-font-size:var(--font16);
+        --overflow-li-font-size2:var(--font18);
         --img01:url("../../images/content/about/m/ico_credit.png");
         --img02:url("../../images/content/about/m/ico_stockholder.png");
         --img03:url("../../images/content/about/m/ico_store.png");
         --img04:url("../../images/content/about/m/ico_property.png");
+        --phrase-txt:var(--font22);
     }
     .page-container.WCA10100VQ div.bo-t0 {padding-top: 0;}
     .WCA10100VQ .br-mo { display: block; }
-    .WCA10100VQ h3 { margin-bottom: 220px; padding-top:32px; font-size: var(--font22); font-weight: var(--font-w-m); }
+    .WCA10100VQ h3 { margin-bottom: 220px; padding-top:32px; font-weight: var(--font-w-m); }
     .WCA10100VQ h3 .success { font-weight: var(--font-w-b); }
     .WCA10100VQ h3::after { position: absolute; left: 50%; transform: translateX(-50%); margin: 28px 0 20px 0; width: 100%; height: 173px; }
     .WCA10100VQ .text-group p {padding: 0 24px; font-size: var(--font18); font-weight: var(--font-w-r);}
@@ -1757,10 +1772,12 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCA10100VQ .overview-group .management li::before { position:absolute; left:16px; margin-bottom:0; width:55px; height:55px; background-size:55px auto; }
     .WCA10100VQ .overview-group .management li p.mo-tit { display:block; font-size:var(--font18); font-weight:var(--font-w-m); color:var(--color-2); }
     .WCA10100VQ .overview-group .management li p { margin-top:6px; max-width:260px; width:100%; font-size:var(--font16); }
-    .WCA10100VQ .overview-group .phrase { margin-top:37px; padding:17px 0; max-height:65px; height:100%; background-size:auto 100%; }
-    .WCA10100VQ .overview-group .phrase p { font-size:var(--font22); }
+    .WCA10100VQ .overview-group .management li:nth-child(3) p { text-align:left; width:100%; }
+    .WCA10100VQ .overview-group .phrase { padding:39px 0 0; min-height:99px; height:100%; }
+    .WCA10100VQ .overview-group .phrase::before { top:16px; }
+
     /* button-content */
-    
+
     .WCA10100VQ.page-container:has(.tab-list.depth1) .button-content { margin: 0 24px 24px 24px; padding-top:32px; border-top: var(--board);}
     .WCA10100VQ .button-content .lnk-group { display: block; }
     .WCA10100VQ .button-content .lnk-group a { height: 102px; font-size: var(--font20) }
@@ -1796,6 +1813,23 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     /** 조직도 **/
     .WCA40100VQ .img-box { padding:0; border:0; border-radius:0; }
     .WCA40100VQ .img-box img { content:url("../../images/content/about/m/img_organization.png"); }
+
+    /** MG캐피탈 인재상 **/
+    .WCR60100VQ {
+        --h3-txt:var(--font20);
+    }
+    .WCR60100VQ .text-group .vision { padding-bottom:8px; font-weight:var(--font-w-m); color:var(--color-45); }
+    .WCR60100VQ .text-group .talent { display:block; font-size:var(--font20); font-weight:var(--font-w-b); color:var(--color-2); text-align:center; }
+    .WCR60100VQ .text-group .talent::after { content:""; display:block; margin:10px auto 0; width:177px; height:177px; background-image:url("../../images/content/recruit/m/img_WCR60100VQ_top01.png"); background-repeat:no-repeat; background-size:100% auto; }
+    .WCR60100VQ .img-group img { display:none; }
+    .WCR60100VQ .img-group > .sr-only { position: static;  width: auto; height: auto; margin: 0; overflow: visible; clip: auto; border-top:1px solid var(--color-d); }
+    .WCR60100VQ .img-group .sr-only ul { padding-bottom:20px; }
+    .WCR60100VQ .img-group .sr-only ul li { position:relative; margin-top:36px; padding-left:111px; height:99px; background-repeat:no-repeat; background-position:left center; background-size:99px; white-space:initial; }
+    .WCR60100VQ .img-group .sr-only ul li:nth-child(1) { background-image:url("../../images/content/recruit/m/img_WCR60100VQ01.png"); }
+    .WCR60100VQ .img-group .sr-only ul li:nth-child(2) { background-image:url("../../images/content/recruit/m/img_WCR60100VQ02.png"); }
+    .WCR60100VQ .img-group .sr-only ul li:nth-child(3) { background-image:url("../../images/content/recruit/m/img_WCR60100VQ03.png"); }
+    .WCR60100VQ .img-group .sr-only ul li:nth-child(4) { background-image:url("../../images/content/recruit/m/img_WCR60100VQ04.png"); }
+    .WCR60100VQ .img-group .sr-only ul li strong { display:block; margin-bottom:8px; }
 
     /******회사소개-채용안내 및 절차**/
     .WCR10400VQ ul.diamond-box { padding: 12px 16px; }
