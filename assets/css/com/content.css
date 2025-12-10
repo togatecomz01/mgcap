@@ -1895,6 +1895,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCR50101DQ .view-subject .inquiry {margin-left: 0; font-size: var(--font12);}
     /* 회사소개 - 클린신고센터 + 성희롱 및 직장내 괴롭힘 신고센터 */
     .WCA90107VQ .text-content, .WCA90100VQ .text-content {margin-bottom: 32px;}
+    .WCA90100VQ .form-group select, .WCA90100VQ .form-group input[type="tel"] {flex: 1;}
     /** 찾아오시는 길 **/
     .WCA70100VQ .map-content { padding-top:32px; }
     .WCA70100VQ .map-group { height:364px; }
