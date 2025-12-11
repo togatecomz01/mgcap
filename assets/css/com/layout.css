@@ -187,7 +187,7 @@ h3.rfrnc::before { content:"※ "; display:inline; position:relative; left:inheri
     --text-color2:var(--color-75);
 }
 .text-list li,
-.text-list dd { margin-bottom:12px; }
+.text-list dd { margin-bottom:18px; }
 .text-list li:last-child { margin-bottom:0; }
 .text-list li > .rfrnc { margin-top:12px; margin-left:16px; }
 .text-list.dot li > .rfrnc { margin-left:0; }
@@ -208,15 +208,20 @@ h3.rfrnc::before { content:"※ "; display:inline; position:relative; left:inheri
 .text-group > p:first-child { margin-top:0; }
 
 .text-content .text-group.pl-20 > * { padding-left:20px; }
-.text-content .text-group.pl-20 > h3 { padding-left:0; }
+.text-content .text-group.pl-20 > h4 { padding-left:0; }
 
-.text-group > h4 ~ .text-list > li { display:flex; flex-wrap:wrap; color:var(--text-color); }
-.text-group > h4 ~ .text-list > li > span:first-of-type { width:var(--span-first-width); flex:0 0 var(--span-first-width); }
-.text-group > h4 ~ .text-list > li > span:nth-of-type(2) { flex:1; }
-.text-group > h4 ~ .text-list > li > ol, 
-.text-group > h4 ~ .text-list > li > ul,
-.text-group > h4 ~ .text-list > li > dl { width:100%; padding-left:25px; color:var(--text-color2); }
-.text-group > h4 ~ p { color:var(--text-color);  }
+.text-group > h3 ~ .text-list li, 
+.text-group > h4 ~ .text-list li { display:flex; flex-wrap:wrap; color:var(--text-color); }
+
+.text-group > h3 ~ .text-list li > span:first-of-type, 
+.text-group > h4 ~ .text-list li > span:first-of-type { width:var(--span-first-width); flex:0 0 var(--span-first-width); }
+.text-group > h3 ~ .text-list li > span:nth-of-type(2),
+.text-group > h4 ~ .text-list li > span:nth-of-type(2) { flex:1; }
+.text-group > h4 ~ .text-list li > ol, 
+.text-group > h4 ~ .text-list li > ul,
+.text-group > h4 ~ .text-list li > dl { width:100%; padding-left:25px; color:var(--text-color2); }
+.text-group > h4 ~ p,
+.text-group > h4 ~ dl { color:var(--text-color);  }
 
 /* 테이블 텍스트 */
 .table-content h3.table-tit { padding-bottom:20px; font-size:var(--font22); color:var(--color-2); }
@@ -523,7 +528,8 @@ main.contentWrap > .bottom-container { margin-top:72px; }
 
     /**타이틀 및 텍스트**/
     
-    h3, .group > .text-group > h4 { font-size:var(--font20);  }
+    h3, .group > .text-group > h4 { font-size:var(--font20); }
+    .group > .text-group > h4.tit { font-size:var(--font16);  }
     h3 + p { margin-top:18px; }
     [class*="-container"] form { margin:42px 0 32px; }
     [class*="-content"] * ~ h3 { margin-top:52px; }
