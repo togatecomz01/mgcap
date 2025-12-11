@@ -396,7 +396,7 @@ main.contentWrap.finance > .page-container { padding-top:72px; }
 .summary-group .summary-list ul li span { display:inline-block; padding-right:12px; font-weight:var(--font-w-b); }
 .summary-group .summary-list .summary-img { width:480px; height:350px; }
 
-.anchor-panel .anchor-group { display:flex; gap:72px;}
+.anchor-panel .anchor-group { display:flex; gap:2px;}
 .anchor-panel .anchor-group + .anchor-group{ margin-top:52px; }
 .anchor-group p.tit { max-width:200px; width:100%; font-size:var(--font20); font-weight:var(--font-w-b); color:var(--color-2); }
 .anchor-group p { font-size:var(--font20); }
@@ -423,7 +423,7 @@ main.contentWrap.finance > .page-container { padding-top:72px; }
 /* list */
 .anchor-group p + .list-card { margin-top:20px; }
 .list-card { display:flex; flex-wrap:wrap; gap:24px; width:100%; }
-.list-card li { margin:0; padding:40px 20px; width:301px; height:253px; border:1px solid var(--color-d); border-radius:20px; text-align:center; }
+.list-card li { margin:0; padding:40px 20px; width:293px; height:253px; border:1px solid var(--color-d); border-radius:20px; text-align:center; }
 .list-card li::before { content:""; display:block; margin:0 auto 20px; width:65px; height:65px; background-repeat:no-repeat; background-size:65px; background-position:center; }
 .list-card li span { display:inline-block; margin-bottom:6px; font-size:var(--font20); font-weight:var(--font-w-b); color:var(--color-3); }
 .list-card li p { margin:0 auto; font-size:var(--font16); color:var(--color-75); }
@@ -920,9 +920,6 @@ color: var(--white); font-size: var(--font26); font-weight: var(--font-w-b); bac
 .WCR60100VQ {
     --h3-txt:var(--font34);
 }
-.WCR60100VQ .text-group .vision { position:relative; padding-bottom:44px; font-size:var(--h3-txt); font-weight:var(--font-w-b); color:var(--color-2); }
-.WCR60100VQ .text-group .talent { display:none; }
-
 .WCR60100VQ .img-group img { width:100%; }
 
 /******회사소개-채용안내 및 절차**/
@@ -1838,18 +1835,21 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCR60100VQ {
         --h3-txt:var(--font20);
     }
-    .WCR60100VQ .text-group .vision { padding-bottom:8px; font-weight:var(--font-w-m); color:var(--color-45); }
-    .WCR60100VQ .text-group .talent { display:block; font-size:var(--font20); font-weight:var(--font-w-b); color:var(--color-2); text-align:center; }
-    .WCR60100VQ .text-group .talent::after { content:""; display:block; margin:10px auto 0; width:177px; height:177px; background-image:url("../../images/content/recruit/m/img_WCR60100VQ_top01.png"); background-repeat:no-repeat; background-size:100% auto; }
     .WCR60100VQ .img-group img { display:none; }
-    .WCR60100VQ .img-group > .sr-only { position: static;  width: auto; height: auto; margin: 0; overflow: visible; clip: auto; border-top:1px solid var(--color-d); }
-    .WCR60100VQ .img-group .sr-only ul { padding-bottom:20px; }
+    .WCR60100VQ .sr-only > .sr-only,
+    .WCR60100VQ .img-group > .sr-only { position: static;  width: auto; height: auto; margin: 0; overflow: visible; clip: auto; }
+    .WCR60100VQ .sr-only h3.vision { padding-bottom:8px; font-size:var(--font20); font-weight:var(--font-w-m); color:var(--color-45); }
+    .WCR60100VQ .sr-only h3.vision + p.talent { margin-top:0 !important; font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-2); text-align:center; }
+    .WCR60100VQ .sr-only .talent::after { content:""; display:block; margin:10px auto 0; width:177px; height:177px; background-image:url("../../images/content/recruit/m/img_WCR60100VQ_top01.png"); background-repeat:no-repeat; background-size:100% auto; }
+    .WCR60100VQ .img-group .sr-only ul { padding-bottom:20px; border-top:1px solid var(--color-d); }
     .WCR60100VQ .img-group .sr-only ul li { position:relative; margin-top:36px; padding-left:111px; height:99px; background-repeat:no-repeat; background-position:left center; background-size:99px; white-space:initial; }
     .WCR60100VQ .img-group .sr-only ul li:nth-child(1) { background-image:url("../../images/content/recruit/m/img_WCR60100VQ01.png"); }
     .WCR60100VQ .img-group .sr-only ul li:nth-child(2) { background-image:url("../../images/content/recruit/m/img_WCR60100VQ02.png"); }
     .WCR60100VQ .img-group .sr-only ul li:nth-child(3) { background-image:url("../../images/content/recruit/m/img_WCR60100VQ03.png"); }
     .WCR60100VQ .img-group .sr-only ul li:nth-child(4) { background-image:url("../../images/content/recruit/m/img_WCR60100VQ04.png"); }
     .WCR60100VQ .img-group .sr-only ul li strong { display:block; margin-bottom:8px; }
+
+    .WCR60100VQ + .bottom-container .btn-content.cta .btn-primary span { display:none; }
 
     /******회사소개-채용안내 및 절차**/
     .WCR10400VQ ul.diamond-box { padding: 12px 16px; }

@@ -124,7 +124,7 @@
 .menu-cont .menu-inner > li > span { display:inline-block; max-width:174px; width:100%; font-size:var(--font32); font-weight:var(--font-w-b); color:var(--color-2); }
 
 .menu-inner .gnb-2dep { display:flex; align-items:stretch; flex-wrap:wrap; gap:52px 46px; width:100%; }
-.menu-inner .gnb-2dep > li { display:inline-block; padding-right:15px; width:210px; }
+.menu-inner .gnb-2dep > li { display:inline-block; width:210px; }
 .menu-inner .gnb-2dep > li:hover span { font-weight:var(--font-w-b); color:var(--primary); }
 .menu-inner .gnb-2dep > li:nth-child(4),
 .menu-inner .gnb-2dep > li:nth-child(8),
