@@ -411,7 +411,7 @@ main.contentWrap > .bottom-container { margin-top:72px; }
 /* ÆË¾÷_Ç®ÆË¾÷ */
 .layerPopup .pop-area:focus-visible { outline: 2px solid var(--outline); outline-offset: -2px; }
 .layerPopup.full { display:initial; min-height:auto; }
-.layerPopup.full > .pop-area { display:flex; flex-direction:column;  position:fixed; width:80%; height:80%; max-width:800px; max-height:730px; top:50%; left:50%; transform:translate(-50%, -50%); background:var(--white); border-radius:28px; }
+.layerPopup.full > .pop-area { display:flex; flex-direction:column;  position:fixed; width:80%; height:80%; max-width:800px; max-height:688px; top:50%; left:50%; transform:translate(-50%, -50%); background:var(--white); border-radius:28px; }
 .layerPopup.full .pop-header { padding:44px 34px 12px; margin-bottom:0; }
 .layerPopup.full .pop-header h2 { font-size:var(--font24); font-weight:var(--font-w-b); color:var(--color-2); }
 .layerPopup.full .pop-body { padding:24px 34px 20px; flex:1; overflow-y:auto; }
