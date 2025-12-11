@@ -478,6 +478,8 @@ main.contentWrap.finance > .page-container { padding-top:72px; }
 .WCC60500VQ .table-group .mo-appendix tbody tr th.th-t {background: var(--white); font-size: 1rem; font-weight: var(--font-w-r);}
 .WCC60500VQ .table-group .mo-appendix tbody tr td {text-align: left;}
 
+/****** 고객권리 안내문 *****/
+.WCU10300VQ .dot.mt-20 address p { margin-top:12px; color:var(--color-6);  }
 
 /******위법계약해지 요구권**/
 .MGC-PRT-CST-008 .sub-process-content ul.process01 li:nth-of-type(1) > p::before { background-image:var(--ico-cst-01); }

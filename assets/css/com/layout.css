@@ -202,7 +202,7 @@ h3.rfrnc::before { content:"¡Ø "; display:inline; position:relative; left:inheri
 
 .text-group dt { font-weight:var(--font-w-m); }
 .text-group dt ~ dt { margin-top:20px; }
-.text-group dd { margin-top:18px; }
+.text-group dd { margin-top:12px; }
 .text-group dd + dd { margin-top:12px; }
 .text-group .button-content { margin-top:32px; }
 .text-group > p:first-child { margin-top:0; }
