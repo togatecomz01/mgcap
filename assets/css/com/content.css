@@ -770,8 +770,7 @@ main.contentWrap.finance > .page-container { padding-top:72px; }
 .WCC601500VQ .btn-group .btn-download + .btn-download {margin-left: 26px;}
 
 /* 고객센터 - 법적고지 */
-.WCC60800VQ .pc-only {display: block;}
-.WCC60800VQ .moblie-only {display: none;}
+.WCC60800VQ .text-group h3 + .diamond-box { margin-top:32px !important; }
 /******고객센터-개인정보처리방침**/
 .WCC60300VQ .font-bold { font-weight: var(--font-w-b); }
 .WCC60300VQ .font-medium { font-weight: var(--font-w-m); }
@@ -1239,7 +1238,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 .WCC70102PS .pop-content label.radio {margin-bottom: 0;}
 .WCC70102PS .pop-content tr td textarea { min-height:200px; }
 .WCC70102PS .pop-content .check { margin-top:20px; }
-.WCC70102PS .pop-content table tbody th label { margin-bottom:0; color:var(--color-2); font-size:var(--font20); font-weight:var(--font-w-b); }
+.WCC70102PS .pop-content table tbody th label { margin-bottom:0; color:var(--color-2); font-size:var(--font18); font-weight:var(--font-w-m); }
 .WCC70102PS .pop-content .note-group { padding:24px; background-color: var(--color-f6); border-radius: 10px; }
 .WCC70102PS .pop-content .note-group .m-dot { padding-left:36px; }
 .WCC70102PS .pop-content .note-group .tit {font-size: 20px; font-weight: var(--font-w-b); padding-left: 40px; padding-bottom:10px; }
@@ -1691,8 +1690,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCC601500VQ .sub-process-content ul dl dd span.txt-less-2 { font-size: calc(var(--font14) - 2px); }
 
     /* 고객센터 - 법적고지 */
-    .WCC60800VQ .pc-only {display: none;}
-    .WCC60800VQ .moblie-only {display: block;}
+    .WCC60800VQ .text-group h3 + .diamond-box { margin-top:16px !important; }
     /******고객센터-개인정보처리방침**/
     .WCC60300VQ .button-content .lnk-group { gap: 10px; }
     .WCC60300VQ .button-content .lnk-group a { width: 100%; text-align: center; }
