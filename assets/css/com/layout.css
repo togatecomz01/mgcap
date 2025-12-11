@@ -135,7 +135,8 @@ h5, p.tit, h4.tit { color:var(--color-2); font-size:1rem; font-weight:var(--font
 [class*="-group"] h4 + *,
 [class*="-group"] h5 + * { margin-top:20px; }
 [class*="-group"] h3 + * ~ *,
-[class*="-group"] h4 + * ~ * { margin-top:18px; }
+[class*="-group"] h4 + * ~ *,
+[class*="-group"] h3 + * ~ *, [class*="-group"] h4 + * ~ * { margin-top:18px; }
 [class*="-group"] h4 + * ~ .rfrnc { margin-top:12px; }
 
 /**텍스트**/
@@ -179,12 +180,20 @@ p.rfrnc:before,
 .rfrnc dd:before,
 h3.rfrnc::before { content:"※ "; display:inline; position:relative; left:inherit; top:inherit; width:auto; height:auto; background:transparent; }
 
+
+.text-group{
+    --span-first-width:25px;
+    --text-color:var(--color-6);
+    --text-color2:var(--color-75);
+}
 .text-list li,
-.text-list dd { margin-bottom:18px; }
+.text-list dd { margin-bottom:12px; }
 .text-list li:last-child { margin-bottom:0; }
 .text-list li > .rfrnc { margin-top:12px; margin-left:16px; }
 .text-list.dot li > .rfrnc { margin-left:0; }
 
+
+.text-list li { width:100%; }
 .text-list li > .text-list { padding:18px 0 0 15px; }
 
 .dot dt { display:inline-flex; align-items:center; font-weight:var(--font-w-b); }
@@ -197,6 +206,17 @@ h3.rfrnc::before { content:"※ "; display:inline; position:relative; left:inheri
 .text-group dd + dd { margin-top:12px; }
 .text-group .button-content { margin-top:32px; }
 .text-group > p:first-child { margin-top:0; }
+
+.text-content .text-group.pl-20 > * { padding-left:20px; }
+.text-content .text-group.pl-20 > h3 { padding-left:0; }
+
+.text-group > h4 ~ .text-list > li { display:flex; flex-wrap:wrap; color:var(--text-color); }
+.text-group > h4 ~ .text-list > li > span:first-of-type { width:var(--span-first-width); flex:0 0 var(--span-first-width); }
+.text-group > h4 ~ .text-list > li > span:nth-of-type(2) { flex:1; }
+.text-group > h4 ~ .text-list > li > ol, 
+.text-group > h4 ~ .text-list > li > ul,
+.text-group > h4 ~ .text-list > li > dl { width:100%; padding-left:25px; color:var(--text-color2); }
+.text-group > h4 ~ p { color:var(--text-color);  }
 
 /* 테이블 텍스트 */
 .table-content h3.table-tit { padding-bottom:20px; font-size:var(--font22); color:var(--color-2); }
