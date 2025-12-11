@@ -293,6 +293,7 @@ main.contentWrap > .step-container { margin-top:42px; }
 /*---------------------------------------------
     #회원가입
 ---------------------------------------------*/
+.WCM40100DS .private-group.ipin { margin-top:32px; }
 .WCM40100DS .private-group.ipin button:nth-child(1)::before { background-image:url("../../images/content/register/w/logo_certified.svg"); }
 .WCM40100DS .private-group.ipin button:nth-child(2)::before { background-image:url("../../images/content/register/w/logo_ipin.png"); }
 .WCM40100DS fieldset label.radio:first-child { padding-left:0; margin-bottom:20px; }
@@ -592,15 +593,20 @@ main.contentWrap.finance > .page-container { padding-top:72px; }
     --logo-207-02:url("../../images/content/custportal/w/ico_207_02.png"); /**민원신청서, 민원취하서**/
 }
 .WCC20700VS .btn-group .btn-download,
-.WCU40130VQ .btn-group .btn-link { padding:20px 30px 20px 104px; background-size:36px; background-position:left 37px center; }
+.WCU40130VQ .btn-group .btn-link,
+.WCU40140VQ .btn-group .btn-link { padding:20px 30px 20px 104px; background-size:36px; background-position:left 37px center; }
 .WCC20700VS .btn-group .btn-download::after,
-.WCU40130VQ .btn-group .btn-link::after { width:32px; height:32px; mask-size:23.111px auto; -webkit-mask-size:23.111px auto; }
+.WCU40130VQ .btn-group .btn-link::after,
+.WCU40140VQ .btn-group .btn-link::after { width:32px; height:32px; mask-size:23.111px auto; -webkit-mask-size:23.111px auto; }
 .WCC20700VS .btn-group .btn-download:hover span:not(.txt),
-.WCU40130VQ .btn-group .btn-link:hover span:not(.txt) { color:var(--primary); }
+.WCU40130VQ .btn-group .btn-link:hover span:not(.txt),
+.WCU40140VQ .btn-group .btn-link:hover span:not(.txt) { color:var(--primary); }
 .WCC20700VS .btn-group .btn-download span,
-.WCU40130VQ .btn-group .btn-link span { font-size:var(--font20); font-weight:var(--font-w-m); color:var(--color-2); }
+.WCU40130VQ .btn-group .btn-link span,
+.WCU40140VQ .btn-group .btn-link span { font-size:var(--font20); font-weight:var(--font-w-m); color:var(--color-2); }
 .WCC20700VS .btn-group .btn-download .txt,
-.WCU40130VQ .btn-group .btn-link .txt { display:block; font-size:1rem; font-weight:var(--font-w-r); color:var(--color-6); }
+.WCU40130VQ .btn-group .btn-link .txt,
+.WCU40140VQ .btn-group .btn-link .txt { display:block; font-size:1rem; font-weight:var(--font-w-r); color:var(--color-6); }
 
 .WCC20700VS .text-content .text-group .button-content { margin-top:20px; }
 .WCC20700VS .btn-group .btn-download:nth-of-type(1),
@@ -647,6 +653,20 @@ main.contentWrap.finance > .page-container { padding-top:72px; }
 .WCU40130VQ .btn-group.useful .btn-link:nth-of-type(3) { background-image:var(--logo-401-04); }
 .WCU40130VQ .btn-group.useful .btn-link:nth-of-type(5) { background-image:var(--logo-401-05); }
 .WCU40130VQ .btn-group.useful .btn-link:nth-of-type(7) { background-image:var(--logo-401-02); }
+
+/** 금융사기 신고센터 **/
+.WCU40140VQ {
+    --logo-401-01:url("../../images/content/custportal/w/logo_fss.png"); /**금융감독원**/
+    --logo-401-02:url("../../images/content/custportal/w/logo_fine.png"); /**파인(FINES)**/
+    --logo-401-06:url("../../images/content/custportal/w/logo_kisa.png"); /**국번없이118**/
+    --logo-401-07:url("../../images/content/custportal/w/logo_police.png"); /**경찰청**/
+}
+.WCU40140VQ .btn-group .btn-link { background-size:62px auto; background-position:left 24px center; }
+.WCU40140VQ .btn-group.useful .btn-link:nth-of-type(1) { background-image:var(--logo-401-01); }
+.WCU40140VQ .btn-group.useful .btn-link:nth-of-type(2) { background-image:var(--logo-401-02); }
+.WCU40140VQ .btn-group.useful .btn-link:nth-of-type(3) { background-image:var(--logo-401-06); }
+.WCU40140VQ .btn-group.useful .btn-link:nth-of-type(4) { background-image:var(--logo-401-01); }
+.WCU40140VQ .btn-group.useful .btn-link:nth-of-type(5) { background-image:var(--logo-401-07); }
 
 /*---------------------------------------------
     #고객센터
@@ -922,6 +942,7 @@ color: var(--white); font-size: var(--font26); font-weight: var(--font-w-b); bac
 .WCR60100VQ {
     --h3-txt:var(--font34);
 }
+.WCR60100VQ .img-content { margin:0 auto; max-width:1200px; border-top:0; }
 .WCR60100VQ .img-group img { width:100%; }
 
 /******회사소개-채용안내 및 절차**/
@@ -1192,6 +1213,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 .pop-content .group h3 + * { margin-top:36px; }
 .pop-content .text-group p.tit,
 .pop-content h3 { font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-2); }
+.pop-content .revise { display:block; margin-bottom:12px; font-size:1rem; color:var(--color-6); }
 .pop-content dl dt { color:var(--color-2); }
 .pop-content dl dd { color:var(--color-45); }
 .pop-content dl dd p.rfrnc { padding:10px 0 0 14px; }
@@ -1386,6 +1408,8 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     ---------------------------------------------*/
     /** 금융상품 공통 **/
     main.contentWrap.finance > .page-container { padding-top:10px; }
+    .finance.style1 .location-container, .finance.style1 .visual-container { background: linear-gradient(180deg, rgba(193, 227, 255, 0.20) 0%, #C1E3FF 100%); }
+    .finance.style2 .location-container, .finance.style2 .visual-container { background: linear-gradient(180deg, rgba(167, 197, 255, 0.20) -11.4%, #A7C5FF 100%); }
     .contentWrap.finance .visual-container { /*position:sticky; top:54px; z-index:1;*/ padding-bottom:38px; }
     .contentWrap.finance .visual-container h2 { line-height:29px; }
     .contentWrap.finance .visual-container p { padding:16px 0 36px; font-size:var(--font16); }
@@ -1585,6 +1609,18 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCU40130VQ .btn-group .btn-link { padding:14px 20px 14px 64px; background-size:32px; background-position:left 20px center; }
     .WCU40130VQ .btn-group .btn-link span { font-size:var(--font16); }
     .WCU40130VQ .btn-group .btn-link span .txt { font-size:var(--font14); }
+
+    /** 금융사기 신고센터 **/
+    .WCU40140VQ {
+        --logo-401-01:url("../../images/content/custportal/m/logo_fss.png"); /**금융감독원**/
+        --logo-401-02:url("../../images/content/custportal/m/logo_fine.png"); /**파인(FINES)**/
+        --logo-401-06:url("../../images/content/custportal/m/logo_kisa.png"); /**국번없이118**/
+        --logo-401-07:url("../../images/content/custportal/m/logo_police.png"); /**경찰청**/
+    }
+    .WCU40140VQ .btn-group { flex-direction: column; }
+    .WCU40140VQ .btn-group .btn-link { padding:14px 20px 14px 64px; background-size:32px; background-position:left 20px center; }
+    .WCU40140VQ .btn-group .btn-link span { font-size:var(--font16); }
+    .WCU40140VQ .btn-group .btn-link span .txt { font-size:var(--font14); }
     /*---------------------------------------------
         #고객센터
     ---------------------------------------------*/
@@ -1837,6 +1873,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCR60100VQ {
         --h3-txt:var(--font20);
     }
+    .WCR60100VQ .img-content { padding:0 24px; }
     .WCR60100VQ .img-group img { display:none; }
     .WCR60100VQ .sr-only > .sr-only,
     .WCR60100VQ .img-group > .sr-only { position: static;  width: auto; height: auto; margin: 0; overflow: visible; clip: auto; }

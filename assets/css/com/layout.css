@@ -154,13 +154,14 @@ p.square:before,
 .square li:before,
 .square dd:before { content:"бр"; }
 p.dot, .dot > li, .dot dt, .info-content .dot > li { position:relative; padding-left:15px; }
-.dot > li { margin-bottom:18px; }
+.dot > li { margin-bottom:12px; }
 .dot > li li { margin:12px 0 0;}
 .dot > li li:first-of-type { margin-top:0; }
 p.dot:before,
 .dot > li:before,
 .dot > dt:before,
 .info-content .dot > li:before { content:""; display:inline-block; position:absolute; left:5px; top:10px; width:5px; height:5px; border-radius:10px; background:var(--color-45); margin-right:7px; }
+.hypn li,
 p.m-dot,
 p.m-dot,
 .m-dot dd,
