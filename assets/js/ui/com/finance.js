@@ -82,7 +82,7 @@ $(document).ready(function() {
             if ($target.length) {
                 const headerHeight = $('.headerOn').outerHeight() || 0;
                 const anchorListHeight = $('.anchor-list').outerHeight() || 0;
-                const offset = headerHeight + anchorListHeight - 120;
+                const offset = headerHeight + anchorListHeight - 70;
                 
                 $('body').stop().animate({
                     scrollTop: $target.offset().top + $('body').scrollTop() - offset
