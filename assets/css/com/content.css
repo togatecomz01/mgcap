@@ -178,7 +178,7 @@ body{
 /** 테이블 안 input **/
 .group form .table-group label,
 .table-group label,
-.table-content label { margin-bottom:0; }
+.table-content label { margin-bottom:1px; }
 .radio-group label:has(input),
 .recruitment label:has(input) { display:inline-flex; }
 td.address .form-group:first-of-type,
@@ -771,6 +771,7 @@ main.contentWrap.finance > .page-container { padding-top:72px; }
 .WCC30110VQ .mo-list tbody tr td.success { font-size:var(--font18); font-weight:var(--font-w-m); }
 .WCC30110VQ .mo-list tbody tr td.error { color:var(--failure); }
 .WCC30110VQ .mo-list tbody tr td.success { color:var(--success); }
+.WCC30111DQ .view-subject .date.pos-r { position:absolute; right:0; }
 
 /** 기한이익상실 예정 공지 **/
 .WCC21101DS .table-content .table-group { overflow-x:auto; }
@@ -799,11 +800,19 @@ main.contentWrap.finance > .page-container { padding-top:72px; }
 .WCC60300VQ .font-color-6 { color: var(--color-6); }
 .WCC60300VQ .button-content .lnk-group { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
 .WCC60300VQ .button-content .lnk-group a { padding: 12px 20px; border: var(--board); }
-.WCC60300VQ em { display: inline-flex; font-weight: var(--font-w-b); }
+.WCC60300VQ em { display: inline-flex; font-weight: var(--font-w-m); }
 .WCC60300VQ .link-list li .btn-text { display: inline-flex }
-
+.WCC60300VQ .text-list > li > .dot { margin-top:16px; }
+.WCC60300VQ .text-list > li > .dot li { margin-bottom:12px; }
 .WCC60300VQ .btn-group { font-size:0; }
 .WCC60300VQ .btn-group .btn-download + .btn-download {margin-left: 26px;}
+.WCC60300VQ .text-group .text-indent2 > li { text-indent:-35px; padding-left:35px; }
+.WCC60300VQ .text-group .text-indent1 > li { text-indent:-22px; padding-left:22px; }
+.WCC60300VQ .text-group .text-indent1 > li > ol { margin-left:0; }
+
+.WCC60300VQ .text-group .text-indent3 > li { text-indent:-22px; padding-left:22px; margin-left:-22px; }
+.WCC60300VQ .text-group .text-indent3 > li > ul { margin-left:0; }
+
 
 /* 셀렉트 박스 */
 .WCC60300VQ .form-group + div {border:none}
@@ -969,6 +978,8 @@ color: var(--white); font-size: var(--font26); font-weight: var(--font-w-b); bac
 .WCA60300VQ .card-item{width:calc((100% - 100px)/3)}
 .WCA60300VQ .card-item a{display:flex;flex-direction:column}
 .WCA60300VQ .card-image{width:100%;aspect-ratio:109/60;background-color:#f0f0f0; border-radius: 8px; margin-bottom:20px}
+.WCA60300VQ .card-image img {  width: 100%; aspect-ratio: 109 / 60; }
+
 .WCA60300VQ .card-text-content h4,.WCA60300VQ .card-text-content p{margin-bottom:6px; overflow:hidden; text-overflow:ellipsis; display:-webkit-box;-webkit-line-clamp:1; -webkit-box-orient:vertical}
 .WCA60300VQ .card-text-content h4{font-size:var(--font20)}
 .WCA60300VQ .card-text-content p{font-size:1rem; color:var(--color-45)}
@@ -1697,6 +1708,8 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCC30110VQ .mo-list tbody tr td.inquiry { margin-left:auto; order:3; }
     .WCC30110VQ .mo-list tbody tr td.date:nth-child(6) { display:none; }
 
+    .WCC30111DQ .view-subject .date.pos-r { position:relative; right:inherit; left:0; }
+
 
 
 
@@ -1730,6 +1743,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCC60300VQ .button-content .lnk-group { gap: 10px; }
     .WCC60300VQ .button-content .lnk-group a { width: 100%; text-align: center; }
     .WCC60300VQ .link-list li span { display: block }
+    
     /* 셀렉트 박스 */
     .WCC60300VQ .se-select { width: 100%; }
     .WCC60300VQ .se-select select { font-size: var(--font14); }

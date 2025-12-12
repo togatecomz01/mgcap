@@ -34,41 +34,68 @@
     <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
     <script src="../../assets/js/include.js"></script>
     <style>
-        	@media print {
-                @page {
-                    size: A4;
-                    margin: 0;
-                    padding: 1cm;
-                }
-              
-                
-                * {
-                    -webkit-print-color-adjust: exact;   
-                    color-adjust: exact;             
-                    print-color-adjust: exact;
-                    font-size:16px;
-                   
-                }
-                .bodyWrap { padding-top:0; }
-                #headerWrap, .location-container, .bottom-container, #footerWrap { display:none; }
-                .visual-container h2 { font-size:18px; }
-
-                h3, .group > .text-group > h4 { font-size:16px; }
-                h4 { font-size:14px; }
-                th, td { padding:10px; font-size:12px !important; }
-
-                .page-container .tab-content { padding:0; }
-                .recruitment .photo-content .img-photo { width:3cm; height:4cm; object-fit:cover; }
-
-                colgroup.col-w2 col:first-of-type { width:20% !important; }
-                colgroup.col-w3 col { width:calc(100% / 3) !important; }
-                colgroup.col-w4 col { width:25% !important; }
-                table:has(.photo-content) colgroup.col-w4 col:nth-of-type(odd) { width:20% !important; }
-                table:has(.photo-content) colgroup.col-w4 col:nth-of-type(even) { width:30% !important; }
-                .textarea-wrap { font-size:12px; }  
+        @media print {
+            @page {
+                size: A4;
+                margin: 0;
+                padding: 1cm;
+            }
+        
+            html, body {
+                height: auto;
+                overflow: visible;
+            }
             
-	}
-    </style>
+            * {
+                -webkit-print-color-adjust: exact;   
+                color-adjust: exact;             
+                print-color-adjust: exact;
+                font-size:16px;
+            
+            }
+            .bodyWrap { padding-top:0; }
+            #headerWrap, .location-container, .bottom-container, #footerWrap { display:none; }
+            .visual-container h2 { font-size:18px; }
+
+            h3, .group > .text-group > h4 { font-size:16px; }
+            h4 { font-size:14px; }
+            th, td { padding:10px; font-size:12px !important; }
+
+            .page-container .tab-content { padding:0; }
+            .recruitment .photo-content .img-photo { width:3cm; height:4cm; object-fit:cover; }
+
+            .table-content {
+                min-width: auto !important;
+                max-width: 100% !important;
+                overflow: visible !important;
+                width: 100% !important;
+            }
+            table {
+                max-width: 100% !important;
+                width: 100% !important;
+                table-layout: auto !important;
+                page-break-inside: auto;
+            }
+            tr {
+                page-break-inside: avoid;
+                page-break-after: auto;
+            }
+            thead {
+                display: table-header-group;
+            }
+            tfoot {
+                display: table-footer-group;
+            }
+
+            colgroup.col-w2 col:first-of-type { width:20% !important; }
+            colgroup.col-w3 col { width:calc(100% / 3) !important; }
+            colgroup.col-w4 col { width:25% !important; }
+            table:has(.photo-content) colgroup.col-w4 col:nth-of-type(odd) { width:20% !important; }
+            table:has(.photo-content) colgroup.col-w4 col:nth-of-type(even) { width:30% !important; }
+            .textarea-wrap { font-size:12px; }  
+        
+}
+</style>
 </head>
 
 <body>
@@ -88,7 +115,7 @@
                     <h2>입사지원서 조회</h2>
                 </section>
                 <section class="page-container recruitment WCR50204VQ">
-                      <div class="table-content">
+                    <div class="table-content">
                             <div class="group">
                                 <div data-include-path="./WCR50204VQ_step01.html"></div>
                             </div>
@@ -101,8 +128,7 @@
                             <div class="group">
                                 <div data-include-path="./WCR50204VQ_step04.html"></div>
                             </div>
-                      </div>
-                 
+                    </div>
                 </section>
                 <section class="bottom-container">
                     <div class="btn-content cta">
