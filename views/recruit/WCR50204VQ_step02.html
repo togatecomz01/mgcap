@@ -137,12 +137,12 @@
             </table>
             </div>
         </div>
-        <!--대학교(석사)-->
-        <div class="edu-repeat" data-title="대학교(석사)" data-max="2">    
+        <!--대학원(석사)-->
+        <div class="edu-repeat" data-title="대학원(석사)" data-max="2">    
             <div class="table-group" data-index="1">
-                <h4>대학교(석사)</h4>
+                <h4>대학원(석사)</h4>
                 <table class="td-l">
-                    <caption>대학교(석사) 입력표(학교명, 본교/분교, 주간/야간, 기간, 졸업구분, 전공명, 세부정공 소개, 학점 포함)</caption>
+                    <caption>대학원(석사) 입력표(학교명, 본교/분교, 주간/야간, 기간, 졸업구분, 전공명, 세부정공 소개, 학점 포함)</caption>
                     <colgroup class="col-w4">
                         <col style="width:262px">
                         <col style="width:auto">
@@ -169,7 +169,7 @@
                     <tr>
                         <th scope="row">전공명</th>
                         <td class="tal">디자인</td>
-                        <th scope="row">세부전공 소개</th>
+                        <th scope="row">세부전공</th>
                         <td class="tal">-</td>
                     </tr>
                     <tr>
@@ -180,11 +180,11 @@
                 </table>
             </div>
         </div>
-        <!--대학교(박사)-->
+        <!--대학원(박사)-->
         <div class="table-group">
-            <h4>대학교(박사)</h4>
+            <h4>대학원(박사)</h4>
             <table class="td-l">
-                <caption>대학교(박사) 입력표(학교명, 본교/분교, 주간/야간, 기간, 졸업구분, 전공명, 연구실적 소개, 학점 포함)</caption>
+                <caption>대학원(박사) 입력표(학교명, 본교/분교, 주간/야간, 기간, 졸업구분, 전공명, 연구실적 소개, 학점 포함)</caption>
                 <colgroup class="col-w4">
                     <col style="width:262px">
                     <col style="width:auto">

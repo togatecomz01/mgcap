@@ -90,7 +90,8 @@
                     <div class="tab-container jsTab">
                         <nav class="tab-list depth2">
                             <button type="button" class="tab-item active" data-tab="tab2-1">개인회원</button>
-                            <button type="button" class="tab-item" data-tab="tab2-2">사업자회원</button>
+                            <button type="button" class="tab-item" data-tab="tab2-2">개인사업자회원</button>
+                            <button type="button" class="tab-item" data-tab="tab2-3">법인사업자회원</button>
                         </nav>
                         <div class="tab-content">
                             <div id="tab2-1" class="tab-panel active">
@@ -111,6 +112,23 @@
                                 </div>
                             </div>
                             <div id="tab2-2" class="tab-panel">
+                                <div class="text-content">
+                                    <div class="text-group">
+                                        <h3>실명확인</h3>
+                                    </div>
+                                </div>
+                                <div class="private-content">
+                                    <div class="private-group ipin">
+                                        <button type="button">휴대폰 인증</button>
+                                    </div>
+                                </div>
+                                <div class="btn-content cta">
+                                    <div class="button-group">
+                                        <a href="javascript:void(0);" class="btn-primary">본인인증</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab2-3" class="tab-panel">
                                 <div class="form-container">
                                     <div class="text-content">
                                         <div class="text-group">
@@ -120,22 +138,6 @@
                                     <form>
                                         <fieldset class="form-content">
                                             <legend>실명확인 입력폼</legend>
-                                            <div class="form-wrap">
-                                                <fieldset class="form-group">
-                                                    <legend>사업자구분</legend>
-                                                    <span class="form-label">사업자구분</span>
-                                                    <div class="flex-row">
-                                                        <label class="radio">
-                                                            <input type="radio" id="type-anonymous" name="use" value="anonymous" checked>
-                                                            <span>개인사업자</span>
-                                                        </label>
-                                                        <label class="radio">
-                                                            <input type="radio" id="type-real" name="use" value="real">
-                                                            <span>법인사업자</span>
-                                                        </label>
-                                                    </div>
-                                                </fieldset>
-                                            </div>
                                             <div class="form-wrap">
                                                 <div class="form-group">
                                                     <label for="mg-name">회사명</label>

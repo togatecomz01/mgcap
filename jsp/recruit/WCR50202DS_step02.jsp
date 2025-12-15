@@ -286,12 +286,12 @@
             <button type="button" class="btn-del">삭제</button>
             </div>
         </div>
-        <!--대학교(석사)-->
-        <div class="edu-repeat" data-title="대학교(석사)" data-max="2">    
+        <!--대학원(석사)-->
+        <div class="edu-repeat" data-title="대학원(석사)" data-max="2">    
             <div class="table-group" data-index="1">
-                <h4>대학교(석사)</h4>
+                <h4>대학원(석사)</h4>
                 <table class="td-l">
-                    <caption>대학교(석사) 입력표(학교명, 본교/분교, 주간/야간, 기간, 졸업구분, 전공명, 세부전공 소개, 학점 포함)</caption>
+                    <caption>대학원(석사) 입력표(학교명, 본교/분교, 주간/야간, 기간, 졸업구분, 전공명, 세부전공 소개, 학점 포함)</caption>
                     <colgroup>
                         <col style="width:262px">
                         <col style="width:auto">
@@ -356,7 +356,7 @@
                         <td class="tal">
                             <span class="ipt-clear"><input id="univMajor2" name="univMajor2" type="text"></span>
                         </td>
-                        <th scope="row"><label for="detailedMajor2">세부전공 소개</label></th>
+                        <th scope="row"><label for="detailedMajor2">세부전공</label></th>
                         <td class="tal">
                             <span class="ipt-clear"><input id="detailedMajor2" name="detailedMajor2" type="text"></span>
                         </td>
@@ -381,11 +381,11 @@
                 <button type="button" class="btn-del">삭제</button>
             </div>
         </div>
-        <!--대학교(박사)-->
+        <!--대학원(박사)-->
         <div class="table-group">
-            <h4>대학교(박사)</h4>
+            <h4>대학원(박사)</h4>
             <table class="td-l">
-                <caption>대학교(박사) 입력표(학교명, 본교/분교, 주간/야간, 기간, 졸업구분, 전공명, 연구실적 소개, 학점 포함)</caption>
+                <caption>대학원(박사) 입력표(학교명, 본교/분교, 주간/야간, 기간, 졸업구분, 전공명, 연구실적 소개, 학점 포함)</caption>
                 <colgroup>
                     <col style="width:262px">
                     <col style="width:auto">

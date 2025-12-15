@@ -83,7 +83,7 @@ body{
 .page-container.login .form-content.login::before { content:""; display:block; position:absolute; left:0; right:0; width:352px; height:100%; background:url("../../images/content/register/w/bg_login3.png") no-repeat left center; background-size:100%; border-radius:16px; overflow:hidden;  }
 .page-container.login .form-content fieldset.form-content { padding-right:2px; }
 .page-container.login .form-content > .form-wrap { gap:0; margin-bottom:0; }
-.page-container.login .form-content > .form-wrap .form-group { margin-bottom:36px;  }
+.page-container.login .form-content > .form-wrap > .form-group { margin-bottom:36px;  }
 .page-container.login .form-content > .form-wrap:last-of-type .form-group:last-of-type { margin-bottom:0; }
 .page-container.login .form-content .form-wrap.row { display:block; }
 .page-container.login .form-content label.radio { padding-left:0; }
@@ -631,8 +631,9 @@ main.contentWrap.finance > .page-container { padding-top:72px; }
 .WCC80100VS .table-content td { padding:16px 16px 0 16px; border-bottom:0; text-align:left; }
 .WCC80100VS .table-content tr:last-child td { padding:16px 16px 16px 16px; border-bottom:1px solid var(--color-d); }
 .WCC80100VS .table-content tr td label.check { margin-bottom:0; }
-.WCC80100VS .note-group { margin-top:52px; } /* 2025.10.27 추가 */
+.WCC80100VS .note-group { margin-top:52px; }
 .WCC80100VS .note-group p { text-align:center; font-size: var(--font20); }
+.WCC80100VS .note-group p .success { display:block; }
 .WCC80100VS .note-group p.date { margin-top:42px; font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-2); }
 
 /** 금융분쟁정보 및 유용한 사이트 정보 **/
@@ -1086,6 +1087,7 @@ color: var(--white); font-size: var(--font26); font-weight: var(--font-w-b); bac
 .recruitment .group.step2 .form-group.abs { position:absolute; top:-16px; right:0; z-index:2; }
 .recruitment .group.step4 .form-group { margin-bottom:52px; }
 .recruitment .group.step4 .form-group:last-of-type { margin-bottom:0; }
+.recruitment .group.step4 .form-group label { margin-bottom:16px; }
 .recruitment .group.step4 textarea { min-height:268px; }
 
 .recruitment .preview-cta { display:none; }
@@ -1122,6 +1124,8 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 /*---------------------------------------------
     #인증센터, MY MG, 소비자보호 공통
 ---------------------------------------------*/
+.caption-box { display:flex; justify-content:space-between; padding-bottom:20px; }
+.caption-box p { font-size:var(--font16); color:var(--color-6); }
 /* 나의 정보 변경 */
 .WCS50300VS .pad {padding: 8px 10px;}
 .WCS50300VS .flex-row:has(> select + span), 
