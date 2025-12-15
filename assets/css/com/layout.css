@@ -226,12 +226,12 @@ h3.rfrnc::before { content:"※ "; display:inline; position:relative; left:inheri
 .text-group > h4 ~ .text-list li > span:nth-of-type(2) { flex:1; }
 .text-group > h4 ~ .text-list li > ol, 
 .text-group > h4 ~ .text-list li > ul,
-.text-group > h4 ~ .text-list li > dl { width:100%; margin-left:25px; color:var(--text-color2); }
+.text-group > h4 ~ .text-list li > dl { width:100%; margin-left:0; padding-left:0;  color:var(--text-color2); }
 .text-group > h4 ~ p,
 .text-group > h4 ~ dl { color:var(--text-color);  }
 
 .text-group .text-indent { text-indent:-22px; padding-left:22px; }
-.text-group .text-indent ~ * { margin-left:22px; }
+.text-group .text-indent ~ * { margin-left:18px; }
 
 
 
@@ -572,8 +572,10 @@ main.contentWrap > .bottom-container { margin-top:72px; }
     .text-content .text-list dd { margin-bottom:16px; }
 
     .text-group{
-        --span-first-width:22px;
+         --span-first-width:22px;
     }
+
+    .text-group .text-indent ~ * { margin-left:12px; }
 
     /**유의사항 2025.10.27 추가**/
     .page-container .note-content { padding-top:52px; }

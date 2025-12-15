@@ -124,25 +124,24 @@ body {
 
     html:has(#fontSizeNormal:checked) {
         font-size:18px;
-
-        --font12: 0.667rem;  
-        --font13: 0.722rem; 
-        --font14: 0.778rem;  
-        --font16: 0.889rem; 
-        --font18: 1rem;      
-        --font20: 1.111rem;  
-        --font22: 1.222rem;  
-        --font24: 1.333rem;  
-        --font26: 1.444rem;  
-        --font28: 1.556rem;  
-        --font30: 1.667rem;  
-        --font32: 1.778rem;  
-        --font34: 1.889rem;  
-        --font36: 2rem;     
-        --font38: 2.111rem;  
-        --font40: 2.222rem; 
-        --font42: 2.333rem; 
-        --font45: 2.5rem;
+        --font12: 0.778rem;  /* 14px */
+        --font13: 0.833rem;  /* 15px */
+        --font14: 0.889rem;  /* 16px */
+        --font16: 1rem;      /* 18px */
+        --font18: 1.111rem;  /* 20px */
+        --font20: 1.222rem;  /* 22px */
+        --font22: 1.333rem;  /* 24px */
+        --font24: 1.444rem;  /* 26px */
+        --font26: 1.556rem;  /* 28px */
+        --font28: 1.667rem;  /* 30px */
+        --font30: 1.778rem;  /* 32px */
+        --font32: 1.889rem;  /* 34px */
+        --font34: 2rem;      /* 36px */
+        --font36: 2.111rem;  /* 38px */
+        --font38: 2.222rem;  /* 40px */
+        --font40: 2.333rem;  /* 42px */
+        --font42: 2.444rem;  /* 44px */
+        --font45: 2.611rem;  /* 47px */
         
     }
 }

@@ -795,9 +795,10 @@ main.contentWrap.finance > .page-container { padding-top:72px; }
 /* 고객센터 - 법적고지 */
 .WCC60800VQ .text-group h3 + .diamond-box { margin-top:32px !important; }
 /******고객센터-개인정보처리방침**/
-.WCC60300VQ .font-bold { font-weight: var(--font-w-b); }
-.WCC60300VQ .font-medium { font-weight: var(--font-w-m); }
-.WCC60300VQ .font-color-6 { color: var(--color-6); }
+.WCC60300VQ {
+    --text-indent:-20px;
+    --text-indent2-ml:0;
+}
 .WCC60300VQ .button-content .lnk-group { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
 .WCC60300VQ .button-content .lnk-group a { padding: 12px 20px; border: var(--board); }
 .WCC60300VQ em { display: inline-flex; font-weight: var(--font-w-m); }
@@ -806,10 +807,12 @@ main.contentWrap.finance > .page-container { padding-top:72px; }
 .WCC60300VQ .text-list > li > .dot li { margin-bottom:12px; }
 .WCC60300VQ .btn-group { font-size:0; }
 .WCC60300VQ .btn-group .btn-download + .btn-download {margin-left: 26px;}
-.WCC60300VQ .text-group .text-indent2 > li { text-indent:-35px; padding-left:35px; }
-.WCC60300VQ .text-group .text-indent1 > li { text-indent:-22px; padding-left:22px; }
-.WCC60300VQ .text-group .text-indent1 > li > ol { margin-left:0; }
-
+.WCC60300VQ .text-group .text-indent2 > li { text-indent:-28px; padding-left:30px; }
+.WCC60300VQ .text-group .text-indent2 > li ol { margin-left:30px; }
+.WCC60300VQ .text-group .text-indent1 > li { text-indent:-20px; padding-left:22px; }
+.WCC60300VQ .text-group .text-indent1 > li > ol { margin-left:-20px; }
+.WCC60300VQ .text-group .font-w-m > li > span { font-weight:var(--font-w-m); }
+.WCC60300VQ .text-group p + p { margin-top:12px; }
 .WCC60300VQ .text-group .text-indent3 > li { text-indent:-22px; padding-left:22px; margin-left:-22px; }
 .WCC60300VQ .text-group .text-indent3 > li > ul { margin-left:0; }
 
