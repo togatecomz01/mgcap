@@ -148,7 +148,6 @@ h5, p.tit, h4.tit { color:var(--color-2); font-size:1rem; font-weight:var(--font
 /* .page-container > .text-content > .group > h3 + .text-group:first-of-type { margin-top:72px; } */
 .text-content * { word-break:break-all; line-height:1.6; }
 .text-content * + p { margin-top:20px; }
-.text-content > p + p { margin-top:0; }
 p.hypn, .star, .rfrnc, .square { color:var(--color-6);  }
 p.hypn:before,
 .hypn li:before { content:"-"; }
@@ -196,12 +195,9 @@ h3.rfrnc::before { content:"※ "; display:inline; position:relative; left:inheri
 .text-list li,
 .text-list dd { margin-bottom:18px; }
 .text-list li:last-child { margin-bottom:0; }
-.text-list li > .rfrnc { margin-top:12px; margin-left:16px; }
+.text-list li > .rfrnc { margin-top:12px; margin-left:16px; width:100%; }
 .text-list.dot li > .rfrnc { margin-left:0; }
 
-
-.text-list li { width:100%; }
-.text-list li > .text-list { padding:18px 0 0 15px; }
 
 .dot dt { display:inline-flex; align-items:center; font-weight:var(--font-w-b); }
 .dot dd { margin-top:12px; padding-left:11px; }
@@ -231,8 +227,7 @@ h3.rfrnc::before { content:"※ "; display:inline; position:relative; left:inheri
 .text-group > h4 ~ dl { color:var(--text-color);  }
 
 .text-group .text-indent { text-indent:-22px; padding-left:22px; }
-.text-group .text-indent ~ * { margin-left:18px; }
-
+.text-group .text-indent ~ * { margin-left:22px; }
 
 
 /* 테이블 텍스트 */
@@ -556,12 +551,13 @@ main.contentWrap > .bottom-container { margin-top:72px; }
 
 
 
+
+
     /**텍스트**/
     .page-container > .text-content > .group > h3 + .text-group:first-of-type { margin-top:52px; }
     .page-container > .text-content > .group > h3 + .text-group:first-of-type .caption { margin-top:-10px; }
     .text-content * + p,
-    .text-content p + ul,
-    .text-content p + p{ margin-top:16px; }
+    .text-content p + ul{ margin-top:16px; }
 
     .text-content .rfrnc {  padding:18px; background:var(--bg-box); font-size:var(--font14); }
     .text-content .bck-t { padding:0; background:transparent; }
@@ -574,11 +570,14 @@ main.contentWrap > .bottom-container { margin-top:72px; }
     .text-content .text-list dd { margin-bottom:16px; }
 
     .text-group{
-         --span-first-width:22px;
+        --span-first-width:22px;
     }
-
-    .text-group .text-indent ~ * { margin-left:12px; }
-
+    .text-group .text-indent { text-indent:-18px; padding-left:18px; }
+    .text-group .text-indent ~ * { margin-left:18px; }
+    
+    /** 들여쓰기 **/
+    .indent .text-group .text-list > .text-list { margin-left:0; }
+    
     /**유의사항 2025.10.27 추가**/
     .page-container .note-content { padding-top:52px; }
     .note-group { padding:20px; }
@@ -587,6 +586,8 @@ main.contentWrap > .bottom-container { margin-top:72px; }
     .note-content .tit::before,
     .note-group .tit::before { top:6px; left:3px; width:20px; height:20px; background-size:auto 20px; }
     .note-group ul li + li { margin-top:16px; }
+
+
 
     /**인풋**/
     .form-content > .form-wrap { display:block; margin-bottom:0; }

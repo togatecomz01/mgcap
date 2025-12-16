@@ -817,7 +817,6 @@ main.contentWrap.finance > .page-container { padding-top:72px; }
 
 .WCC60300VQ .text-group .text-indent1 > li { padding-left:22px; }
 .WCC60300VQ .text-group .text-indent1 > li > ol { margin-left:-20px; }
-.WCC60300VQ .text-group .font-w-m > li > span { font-weight:var(--font-w-m); }
 .WCC60300VQ .text-group p + p { margin-top:12px; }
 
 
@@ -840,7 +839,7 @@ main.contentWrap.finance > .page-container { padding-top:72px; }
 /* 개인정보 조회, 동의 안내문 */
 .WCC60900VQ h5 {margin-top: 52px;}
 .WCC60900VQ .text-content .text-list li > ol li p.rfrnc2 { margin-top:12px; }
-.WCC60900VQ p.dot, .WCC60900VQ ul.dot, .WCC60900VQ span + ol {margin-top: 18px;}
+.WCC60900VQ p.dot, .WCC60900VQ ul.dot, .WCC60900VQ span + ol {margin-top: 18px; width:100%;}
 .WCC60900VQ h3 {margin-bottom: 18px;}
 /* 신용정보 활용체제 */
 .WCC601200VQ li + span, .WCC601200VQ ul.dot, .WCC601200VQ span + ol {margin-top: 18px;} 
@@ -849,6 +848,10 @@ main.contentWrap.finance > .page-container { padding-top:72px; }
 
 /** 채무조정신청 **/
 .WCC21400VQ .form-group select { max-width:120px; }
+
+/**불법채권추심 대응요령**/
+.WCC601000VQ .dot > li { color:var(--color-75); }
+.WCC601000VQ .dot > li::before { background:var(--color-75); }
 
 /*---------------------------------------------
     #회사소개
@@ -1803,22 +1806,13 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCC70102PS .pop-content .info-content li { font-size:var(--font14); }
 
     /**개인정보취급방침**/
-    .WCC60300VQ .text-group h4.text-indent1 { text-indent:-20px; padding-left:22px; }
     .WCC60300VQ .text-group .text-indent2 > li { padding-left:0; }
-    /*.WCC60300VQ .text-group .text-indent2 > li:has(ol) > span,
-    .WCC60300VQ .text-group .text-indent2 > li:has(ol) ~ li > span,
-    .WCC60300VQ .m-font-w-m li > span  { color:var(--color-45); font-weight:var(--font-w-m); }*/
-    .WCC60300VQ .text-group .text-indent3 > li span { font-weight:var(--font-w-r); }
-    .WCC60300VQ .text-group .text-indent3 > li:has(ol) ~ li > span  { font-weight:var(--font-w-m); }
-    .WCC60300VQ .text-group .text-indent2 > li span:first-of-type { text-align:right; margin-right:3px;  }
+    .WCC60300VQ .text-group .text-indent2 > li ol, .WCC60300VQ .text-group .text-indent2 > li ul { margin-left:20px; }
     .WCC60300VQ .text-group .text-indent2 > li ol { margin-left:10px; }
     .WCC60300VQ .text-group .text-indent1 > li { padding-left:22px; }
-    .WCC60300VQ .text-group .text-indent1 > li > ol { margin-left:-20px; }
-    .WCC60300VQ .text-group .font-w-m > li > span { font-weight:var(--font-w-m); }
     .WCC60300VQ .text-group p + p { margin-top:12px; }
-
-
     
+ 
 
     /*---------------------------------------------
         #회사소개
