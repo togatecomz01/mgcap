@@ -83,7 +83,7 @@ table.round { border:var(--table-border); border-bottom:0; border-collapse:separ
     .table-content:has(.table-group) .table-group { overflow-x:auto; }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 767px) {
     table th, 
     table td { font-size:1rem; }
     table th { font-weight:var(--font-w-m); }

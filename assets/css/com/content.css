@@ -1314,20 +1314,9 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCA20100VQ .greeting-group {padding: 0 24px;}
 }
 
-@media (max-width:1200px){
-    /*---------------------------------------------
-    #고객센터
-    ---------------------------------------------*/
-    .WCC30110VQ td.title { max-width:300px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-    /*---------------------------------------------
-    #회사소개
-    ---------------------------------------------*/
-    /* 회사소개 - ceo인사말 (WCA20100VQ) */
-    /* */
-    
+@media (min-width: 767px) and (max-width: 1400px) {
+    .WCC30110VQ .form-content > .form-wrap { flex-direction: row; }
 }
-
-
 
 @media (max-width: 1200px) {
       /**입사지원서 작성**/
@@ -1336,6 +1325,9 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .recruitment .form-group .email input, .email-group.form-group .email input { width:25vw; }
     .recruitment .form-group select, .email-group.form-group select { width:30vw; }
     .recruitment tr:has(> th[rowspan], > td[rowspan]) + tr th:first-of-type { border-left:var(--table-border); }
+
+    /** 입찰공고 **/
+    .WCC30110VQ td.title { max-width:300px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 }
   
 
@@ -1705,6 +1697,9 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCF90100VQ .result_content .btn-content button, .WCF90100VQ .result_content .btn-content a { margin-left:0; min-width:auto; flex:1; }
 
     /** 입찰공고 **/
+    .WCC30110VQ .form-wrap.noti-search { display:flex; flex-wrap:wrap; gap:16px 32px; }
+    .WCC30110VQ .form-content > .form-wrap > .form-group:first-child { margin-bottom:0; }
+    .WCC30110VQ .noti-search select { width:100%; min-width:120px; }
     .WCC30110VQ .mo-list tbody tr { display:flex; flex-wrap:wrap; font-size:0; }
     .WCC30110VQ .mo-list tbody tr td.error,
     .WCC30110VQ .mo-list tbody tr td.success { margin-bottom:8px; width:100%; font-size:var(--font14); text-align:left; order:1; }
@@ -1894,6 +1889,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCR60100VQ {
         --h3-txt:var(--font20);
     }
+    .WCR60100VQ .tab-container .tab-list.depth1 { padding-top:24px; margin-top:0; }
     .WCR60100VQ .img-content { padding:0 24px; }
     .WCR60100VQ .img-group img { display:none; }
     .WCR60100VQ .sr-only > .sr-only,
