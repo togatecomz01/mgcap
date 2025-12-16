@@ -80,7 +80,7 @@ body{
 
 /**휴대폰 인증**/
 .page-container.login .form-content.login { position:relative; margin-top:26px; padding-left:376px; overflow:hidden; }
-.page-container.login .form-content.login::before { content:""; display:block; position:absolute; left:0; right:0; width:352px; height:100%; background:url("../../images/content/register/w/bg_login3.png") no-repeat left center; background-size:100%; border-radius:16px; overflow:hidden;  }
+.page-container.login .form-content.login::before { content:""; display:block; position:absolute; left:0; right:0; width:352px; height:100%; background:url("../../images/content/register/w/bg_login3.png") no-repeat left center; background-size:auto 100%; border-radius:16px; overflow:hidden;  }
 .page-container.login .form-content fieldset.form-content { padding-right:2px; }
 .page-container.login .form-content > .form-wrap { gap:0; margin-bottom:0; }
 .page-container.login .form-content > .form-wrap > .form-group { margin-bottom:36px;  }
@@ -797,10 +797,6 @@ main.contentWrap.finance > .page-container { padding-top:72px; }
 /* 고객센터 - 법적고지 */
 .WCC60800VQ .text-group h3 + .diamond-box { margin-top:32px !important; }
 /******고객센터-개인정보처리방침**/
-.WCC60300VQ {
-    --text-indent:-20px;
-    --text-indent2-ml:0;
-}
 .WCC60300VQ .button-content .lnk-group { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
 .WCC60300VQ .button-content .lnk-group a { padding: 12px 20px; border: var(--board); }
 .WCC60300VQ em { display: inline-flex; font-weight: var(--font-w-m); }
@@ -809,14 +805,18 @@ main.contentWrap.finance > .page-container { padding-top:72px; }
 .WCC60300VQ .text-list > li > .dot li { margin-bottom:12px; }
 .WCC60300VQ .btn-group { font-size:0; }
 .WCC60300VQ .btn-group .btn-download + .btn-download {margin-left: 26px;}
-.WCC60300VQ .text-group .text-indent2 > li { text-indent:-28px; padding-left:30px; }
-.WCC60300VQ .text-group .text-indent2 > li ol { margin-left:30px; }
-.WCC60300VQ .text-group .text-indent1 > li { text-indent:-20px; padding-left:22px; }
+.WCC60300VQ .text-group .text-indent2 { --span-first-width:auto;}
+.WCC60300VQ .text-group .text-indent2 > li { padding-left:0; }
+.WCC60300VQ .text-group .text-indent2 > li span:first-of-type { text-align:right; margin-right:3px;  }
+.WCC60300VQ .text-group .text-indent2 > li ol,
+.WCC60300VQ .text-group .text-indent2 > li ul { margin-left:30px; }
+.WCC60300VQ .text-group .text-indent3 > li ol,
+.WCC60300VQ .text-group .text-indent3 > li ul { margin-left:20px; color:var(--color-75); }
+
+.WCC60300VQ .text-group .text-indent1 > li { padding-left:22px; }
 .WCC60300VQ .text-group .text-indent1 > li > ol { margin-left:-20px; }
 .WCC60300VQ .text-group .font-w-m > li > span { font-weight:var(--font-w-m); }
 .WCC60300VQ .text-group p + p { margin-top:12px; }
-.WCC60300VQ .text-group .text-indent3 > li { text-indent:-22px; padding-left:22px; margin-left:-22px; }
-.WCC60300VQ .text-group .text-indent3 > li > ul { margin-left:0; }
 
 
 /* 셀렉트 박스 */
@@ -1802,6 +1802,24 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCC70102PS .pop-content .note-group .tit::before { top:2px; }
     .WCC70102PS .pop-content .note-group .m-dot { padding-left:3px; }
     .WCC70102PS .pop-content .info-content li { font-size:var(--font14); }
+
+    /**개인정보취급방침**/
+    .WCC60300VQ .text-group h4.text-indent1 { text-indent:-20px; padding-left:22px; }
+    .WCC60300VQ .text-group .text-indent2 > li { padding-left:0; }
+    /*.WCC60300VQ .text-group .text-indent2 > li:has(ol) > span,
+    .WCC60300VQ .text-group .text-indent2 > li:has(ol) ~ li > span,
+    .WCC60300VQ .m-font-w-m li > span  { color:var(--color-45); font-weight:var(--font-w-m); }*/
+    .WCC60300VQ .text-group .text-indent3 > li span { font-weight:var(--font-w-r); }
+    .WCC60300VQ .text-group .text-indent3 > li:has(ol) ~ li > span  { font-weight:var(--font-w-m); }
+    .WCC60300VQ .text-group .text-indent2 > li span:first-of-type { text-align:right; margin-right:3px;  }
+    .WCC60300VQ .text-group .text-indent2 > li ol { margin-left:10px; }
+    .WCC60300VQ .text-group .text-indent1 > li { padding-left:22px; }
+    .WCC60300VQ .text-group .text-indent1 > li > ol { margin-left:-20px; }
+    .WCC60300VQ .text-group .font-w-m > li > span { font-weight:var(--font-w-m); }
+    .WCC60300VQ .text-group p + p { margin-top:12px; }
+
+
+    
 
     /*---------------------------------------------
         #회사소개

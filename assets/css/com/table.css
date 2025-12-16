@@ -51,6 +51,8 @@ table.td-al td { text-align:left; }
 .form-content:has(.caption.total) { display:flex; align-items:center; }
 
 /* 테이블 푸터 */
+.table-content { overflow:visible; }
+
 .table-content table tfoot tr:only-child,
 .table-content table tfoot tr:last-child { background-color:#EDF9FF; }
 .table-content table tfoot .sum { font-weight:var(--font-w-m); color:var(--white); background-color:#0072BC; }
