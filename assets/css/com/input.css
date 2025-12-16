@@ -349,6 +349,8 @@ input[type="month"]+ button,
     .form-wrap.search-form > .group .form-group .mail .ph select { flex:unset; }
 
     /** 공지사항 검색 **/
+    .form-wrap.noti-search .form-group { flex:0 0 100%; }
+    .noti-search .search-row { flex:0 0 60%; }
     .noti-search input[type="text"],
     .noti-search input[type="password"],
     .noti-search input[type="email"],
@@ -357,8 +359,8 @@ input[type="month"]+ button,
     .noti-search input[type="search"],
     .noti-search input[type="date"],
     .noti-search select { flex:0 0 223px; padding:10px 16px; width:223px; height:41px; font-size:var(--font14); line-height:16px; }
-    .noti-search select { flex:0 0 92px; width:92px; background-size:12px; }
-    .noti-search input[type="search"] { background-size:20px; }
+    .noti-search select { flex:0 0 92px; width:92px; min-width:20%; background-size:12px; }
+    .noti-search input[type="search"] { padding-right:50px; width:100%; background-size:20px; overflow:hidden; text-overflow:ellipsis; }
     /** 공지사항 검색 **/
 
 

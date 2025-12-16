@@ -9,6 +9,8 @@ body {
 
 .table-content{
     --mt-20:20px;
+    position:static;
+    overflow:visible;
 }
 
 
@@ -76,7 +78,7 @@ table:has(.no-results) td { margin:0; padding:0; border:0; }
 table.round { border:var(--table-border); border-bottom:0; border-collapse:separate; border-radius:16px; overflow:hidden; }
 
 @media (max-width:1200px){
-    .table-content:has(.mo-s) { overflow-x:auto; }
+    /* .table-content:has(.mo-s) { overflow-x:auto; } */
     .table-content:has(.mo-s) table { table-layout:auto; }
 
     .table-content:has(.table-group) { overflow-x:hidden; }

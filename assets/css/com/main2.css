@@ -214,7 +214,7 @@ body:has(.main) .menu .menu-item .list-item { top:75px; }
 .main-container .main-content > .notice-group .alarm .btn-swiper-toggle::after { width:18px; height:18px; display:inline-block; background-size:100%; }
 .main-container .main-content > .notice-group .alarm .swiper-wrapper { width:100%; height:100%; }
 .main-container .main-content > .notice-group .alarm .swiper-wrapper .swiper-slide { padding:0 20px; width:100%; height:100%; background-image:var(--alarm_img01); background-repeat:no-repeat; background-position:right 20px bottom 0; background-size:95px auto;  }
-.main-container .main-content > .notice-group .alarm .swiper-wrapper .swiper-slide p { width:80%; font-size:var(--font16); font-weight:var(--font-w-m); color:var(--color-w); }
+.main-container .main-content > .notice-group .alarm .swiper-wrapper .swiper-slide p { width:95%; font-size:var(--font16); font-weight:var(--font-w-m); color:var(--color-w); }
 
 
 /* 고객간편서비스 */

@@ -491,6 +491,8 @@ main.contentWrap > .bottom-container { margin-top:72px; }
 	---------------------------------------------*/
 	.gnb { padding:20px; }
 
+    .bodyWrap { padding-top:78px; }
+
     /* 조건검색 */
     .search-form .form-group:has(.address) {  }
 
