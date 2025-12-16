@@ -410,6 +410,9 @@ body:has(.main) .menu .menu-item .list-item { top:75px; }
 
     
     .wrap .main .btn-main-link { padding-right:26px; min-height:20px; font-size:var(--font12); background-size:20px; }
+    .wrap .main .btn-main-link::after { width:20px; height:20px;     mask-size: 20px auto; -webkit-mask-size: 20px auto; }
+    .wrap .main .btn-main-down { font-size:var(--font14); }
+    .wrap .main .btn-main-down::after { width:17px; height:17px;     mask-size: 17px auto; -webkit-mask-size: 17px auto; }
     .wrap .main .btn-content > div { min-height:24px; height:24px; min-width:24px; width:24px; }
     .wrap .main .btn-content > .swiper-pagination { max-width:54px; width:100%; padding:0 17px 2px; }
     .wrap .main .btn-content > .swiper-pagination > span { font-size:var(--font12); }
