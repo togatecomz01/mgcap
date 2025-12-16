@@ -144,7 +144,7 @@
 	---------------------------------------------*/
 	.header-r .menu .menu-item.on .list-item { padding:0 24px; }
 	/* 전체메뉴 */
-	.allmenu-header { padding:27px 24px 32px; }
+	.allmenu-header { padding:20px 24px; }
 	.menu-cont .menu-inner { padding:0 24px; }
 	.menu-inner .gnb-2dep { gap:50px 54px; }
 	.menu-cont .menu-inner > li { padding:60px 0; }
@@ -155,7 +155,7 @@
 	.search-wrap { padding:0 24px; }
 }
 
-@media (max-width:1300px){
+@media (max-width:1200px){
 	/*---------------------------------------------
 		#헤더
 	---------------------------------------------*/
@@ -165,7 +165,7 @@
 	.header-r .menu .menu-item { padding-top:20px; }
 }
 
-@media (min-width: 767px) and (max-width:1300px){
+@media (min-width: 767px) and (max-width:1200px){
     .menu-cont .menu-l { display:none; }
 }
 

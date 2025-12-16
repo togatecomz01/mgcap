@@ -3,6 +3,7 @@ body {
     --main-height:100%;
     --left-w:528px;
     --main-ico-link:url("../../images/content/MAIN/ico_exclude.png");
+    --main-ico-down:url("../../images/content/MAIN/ico_down.svg");
     --ico-banner-list:url("../../images/com/svg/ico_check.svg");
     --ico-prev:url("../../images/content/MAIN/ico_prev.svg");
     --ico-next:url("../../images/content/MAIN/ico_next.svg");
@@ -49,9 +50,17 @@ body:has(.main) .menu .menu-item .list-item { top:75px; }
 .btn-swiper-toggle.playing::after { background-image: var(--ico-play); }
 .swiper-notification { display:none; }
 
-.wrap .main .btn-main-link { display:inline-flex; align-items:center; gap:8px; color:var(--color-2);  }
-.wrap .main .btn-main-link::after { content:""; display:block; width:28px; height:28px; text-decoration:underline; background-color:var(--primary);
-    mask-image:var(--main-ico-link); mask-repeat:no-repeat; mask-size:28px auto; mask-position:center; -webkit-mask-image:var(--main-ico-link); -webkit-mask-repeat:no-repeat; -webkit-mask-size:28px auto; -webkit-mask-position:center;
+.wrap .main .btn-main-link,
+.wrap .main .btn-main-down { display:inline-flex; align-items:center; gap:9px; color:var(--color-2);  }
+.wrap .main .btn-main-down { font-size:var(--font16); }
+.wrap .main .btn-main-link::after,
+.wrap .main .btn-main-down::after { content:""; display:block; text-decoration:underline; background-color:var(--primary); mask-repeat:no-repeat; mask-position:center; -webkit-mask-repeat:no-repeat;  -webkit-mask-position:center;
+}
+.wrap .main .btn-main-link::after {
+    width:28px; height:28px; mask-image:var(--main-ico-link); -webkit-mask-image:var(--main-ico-link); mask-size:28px auto; -webkit-mask-size:28px auto;
+}
+.wrap .main .btn-main-down::after { width:24px; height:24px; 
+    mask-image:var(--main-ico-down); -webkit-mask-image:var(--main-ico-down); mask-size:24px auto; -webkit-mask-size:24px auto;
 }
 .wrap .main .btn-content { display:flex; justify-content:flex-end; align-items:center; gap:8px; }
 .wrap .main .btn-content > div,

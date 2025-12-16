@@ -359,6 +359,8 @@ main.contentWrap.finance > .page-container { padding-top:72px; }
 
 .contentWrap.finance .btn-content.cta a, .contentWrap.finance .btn-content.cta button { font-family: "Noto Sans CJK KR"; }
 
+.finance .btn-content.cta .btn-secondary { background-color:#0072BC; color:var(--white); }
+
 /* 앵커이동 */
 .anchor-list { margin:0 auto; max-width:1200px; width:100%; }
 .anchor-list.fixed { position: static; }
@@ -387,16 +389,16 @@ main.contentWrap.finance > .page-container { padding-top:72px; }
 .fwm:has(.table-content) .m-dot { margin-bottom:12px; }
 .anchor-group .underline { color:var(--color-45); text-underline-offset:3px; }
 
-.summary-group { position:relative; min-height:250px; }
+/* .summary-group { position:relative; min-height:250px; } */
 .summary-group + .summary-group { margin-top:32px; }
 .summary-group h3 { font-size:var(--font28); font-weight:var(--font-w-b); color:var(--color-2); line-height:42px; }
 .summary-group h3 + p { margin-top:12px; font-size:var(--font20); color:var(--color-6); }
-.summary-group .summary-list { display:flex; gap:32px; width:100%; }
-.summary-group .summary-list ul { max-width:688px; width:100%; }
-.summary-group .summary-list ul li { display:flex; padding:26px 24px; background-color:#F7F9FF; border-radius:12px; }
+.summary-group .summary-list { display:flex; gap:32px; margin-top:32px; width:100%; }
+.summary-group .summary-list ul { display:flex; flex-direction:column; max-width:688px; width:100%; height:361px; }
+.summary-group .summary-list ul li { display:flex; flex:1; align-items:center; padding:26px 24px; background-color:#F7F9FF; border-radius:12px; }
 .summary-group .summary-list ul li + li { margin-top:15px; }
 .summary-group .summary-list ul li span { display:inline-block; padding-right:12px; font-weight:var(--font-w-b); }
-.summary-group .summary-list .summary-img { position:absolute; right:0; bottom:0; width:auto; max-height:350px; height:100%; }
+.summary-group .summary-list .summary-img { width:auto; max-height:345px; height:100%; }
 
 .anchor-panel .anchor-group { display:flex; gap:2px;}
 .anchor-panel .anchor-group + .anchor-group{ margin-top:52px; }
@@ -1329,10 +1331,6 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 
     /** 입찰공고 **/
     .WCC30110VQ td.title { max-width:300px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-
-    /** 상품소개 **/
-    .summary-group { position:unset; min-height:unset; }
-    .summary-group .summary-list .summary-img { position:unset; }
 }
   
 
@@ -1468,8 +1466,9 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .summary-group h3 { line-height:unset; font-size:var(--font20); }
     .summary-group h3 + p { margin-top:10px !important; font-size:var(--font18); }
     .summary-group .summary-list { flex-direction:column-reverse; align-items: flex-end; gap:24px; }
-    .summary-group .summary-list .summary-img { width:190px; height:138px; }
+    .summary-group .summary-list .summary-img { width:190px; }
 
+    .summary-group .summary-list ul { height:293px; }
     .summary-group .summary-list ul li { padding:16px 18px 16px 24px; }
 
     .anchor-group p + .list-card { margin-top:16px; }

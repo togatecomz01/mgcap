@@ -148,7 +148,7 @@ h5, p.tit, h4.tit { color:var(--color-2); font-size:1rem; font-weight:var(--font
 /* .page-container > .text-content > .group > h3 + .text-group:first-of-type { margin-top:72px; } */
 .text-content * { word-break:break-all; line-height:1.6; }
 .text-content * + p { margin-top:20px; }
-.text-content p + p { margin-top:0; }
+.text-content > p + p { margin-top:0; }
 p.hypn, .star, .rfrnc, .square { color:var(--color-6);  }
 p.hypn:before,
 .hypn li:before { content:"-"; }
