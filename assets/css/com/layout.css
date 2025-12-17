@@ -74,7 +74,7 @@ main.contentWrap > * { margin:0 auto; max-width:1200px; width:100%; padding:0;  
     #브레드크럼
 ---------------------------------------------*/
 
-main.contentWrap > .location-container { padding:24px 0; width:100%;  }
+main.contentWrap > .location-container { padding:24px 0; width:100%; max-width:1400px; }
 .location-container ol { display:flex; align-items:center; justify-content:flex-end; gap:0; max-width:1600px; margin:0 auto; }
 .location-container ol li { display:flex; align-items:center; }
 .location-container ol li span { font-size:var(--font14); color:var(--color-6); font-weight:var(--font-w-r); }
@@ -147,7 +147,7 @@ h5, p.tit, h4.tit { color:var(--color-2); font-size:1rem; font-weight:var(--font
 /**텍스트**/
 /* .page-container > .text-content > .group > h3 + .text-group:first-of-type { margin-top:72px; } */
 .text-content * { word-break:break-all; line-height:1.6; }
-.text-content * + p { margin-top:20px; }
+.text-content * + p { margin-top:20px;}
 p.hypn, .star, .rfrnc, .square { color:var(--color-6);  }
 p.hypn:before,
 .hypn li:before { content:"-"; }
@@ -225,6 +225,7 @@ h3.rfrnc::before { content:"※ "; display:inline; position:relative; left:inheri
 .text-group > h4 ~ .text-list li > dl { width:100%; margin-left:0; padding-left:0;  color:var(--text-color2); }
 .text-group > h4 ~ p,
 .text-group > h4 ~ dl { color:var(--text-color);  }
+.text-group > li p { width:100%; }
 
 .text-group .text-indent { text-indent:-22px; padding-left:22px; }
 .text-group .text-indent ~ * { margin-left:22px; }
@@ -232,6 +233,9 @@ h3.rfrnc::before { content:"※ "; display:inline; position:relative; left:inheri
 
 /* 테이블 텍스트 */
 .table-content h3.table-tit { padding-bottom:20px; font-size:var(--font22); color:var(--color-2); }
+
+ /** 들여쓰기 **/
+ .page-container.indent .text-group .text-list > li > .text-list { margin-left:20px; margin-top:12px; }
 
 /**유의사항 2025.10.27 수정**/
 .note-group { padding:32px 40px 42px; border:var(--board); }
@@ -559,7 +563,7 @@ main.contentWrap > .bottom-container { margin-top:72px; }
     .page-container > .text-content > .group > h3 + .text-group:first-of-type { margin-top:52px; }
     .page-container > .text-content > .group > h3 + .text-group:first-of-type .caption { margin-top:-10px; }
     .text-content * + p,
-    .text-content p + ul{ margin-top:16px; }
+    .text-content p + ul{ margin-top:16px; width:100%; }
 
     .text-content .rfrnc {  padding:18px; background:var(--bg-box); font-size:var(--font14); }
     .text-content .bck-t { padding:0; background:transparent; }
@@ -577,8 +581,9 @@ main.contentWrap > .bottom-container { margin-top:72px; }
     .text-group .text-indent { text-indent:-18px; padding-left:18px; }
     .text-group .text-indent ~ * { margin-left:18px; }
     
-    /** 들여쓰기 **/
-    .indent .text-group .text-list > .text-list { margin-left:0; }
+  /** 들여쓰기 **/
+  .page-container.indent .text-group .text-list > li > .text-list { margin-left:20px; margin-top:12px; }
+  .page-container.indent .text-group .text-list > li > .text-list > li { display:block; margin-bottom:8px; }
     
     /**유의사항 2025.10.27 추가**/
     .page-container .note-content { padding-top:52px; }
