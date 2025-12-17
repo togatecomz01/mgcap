@@ -175,7 +175,7 @@ p.m-dot::before,
 p.m-dot::before,
 .m-dot dd::before,
 .m-dot li::before,
-.info-content .m-dot li::before { content:"¡¤"; margin:0 5px; }
+.info-content .m-dot li::before { content:"¡¤"; margin:0 5px; font-weight:900; }
 .dot li:last-of-type,
 .m-dot li:last-of-type,
 .dot li:last-of-type { margin-bottom:0; }
@@ -223,7 +223,9 @@ h3.rfrnc::before { content:"¡Ø "; display:inline; position:relative; left:inheri
 .text-group > h4 ~ .text-list li > ul,
 .text-group > h4 ~ .text-list li > dl { width:100%; margin-left:0; padding-left:0;  color:var(--text-color2); }
 .text-group > h4 ~ p,
-.text-group > h4 ~ dl { color:var(--text-color);  }
+.text-group > h4 ~ dl,
+.text-group > h4 ~ ol,
+.text-group > h4 ~ ul { color:var(--text-color);  }
 .text-group > li p { width:100%; }
 
 .text-group .text-indent { text-indent:-22px; padding-left:22px; }
