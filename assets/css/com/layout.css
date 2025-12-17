@@ -265,7 +265,9 @@ h3.rfrnc::before { content:"¡Ø "; display:inline; position:relative; left:inheri
 .form-wrap.search-form .tab-content > .group:has(.radio),
 .form-wrap.search-form > .group:has(.radio) { padding:32px 27px; }
 .form-wrap.search-form .tab-content > .group .form-group,
-.form-wrap.search-form > .group .form-group { display:inline-flex; flex-wrap: wrap; align-items:center; gap:24px; margin-bottom:24px; padding-bottom:24px; width:100%; border-bottom:1px solid #D6E0EB; }
+.form-wrap.search-form > .group .form-group { display:inline-flex; flex-wrap: wrap; align-items:center; gap:24px; margin-bottom:24px; padding-top:24px; width:100%; border-top:1px solid #D6E0EB; }
+.form-wrap.search-form .tab-content > .group .form-group:first-child,
+.form-wrap.search-form > .group .form-group:first-child { padding-top:0; border-top:0; }
 .form-wrap.search-form .tab-content > .group .form-group .ph,
 .form-wrap.search-form > .group .form-group .ph { display:inline-flex; flex-wrap:wrap; align-items:center; gap:12px; }
 .form-wrap.search-form .tab-content > .group .form-group:has(.radio),
