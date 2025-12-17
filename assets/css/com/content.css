@@ -1163,6 +1163,9 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 .WCU11000VQ .process-content:has(.text-group) .process-group,
 .WCC20700VS .process-content:has(.text-group) .process-group,
 .WCR10400VQ .process-content .process-group + .btn-content.cta { margin-top:32px; }
+
+/** 청약철회권 **/
+.WCU10500VQ .rfrnc { font-size:var(--font18); }
 /*---------------------------------------------
     #인증센터
 ---------------------------------------------*/

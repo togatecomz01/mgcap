@@ -232,6 +232,7 @@ body:has(.main) .menu .menu-item .list-item { top:75px; }
     --ser02:url("../../images/content/MAIN/w/ico_ser02.png");
     --ser03:url("../../images/content/MAIN/w/ico_ser03.png");
     --ser04:url("../../images/content/MAIN/w/ico_ser04.png");
+    --ser07:url("../../images/content/MAIN/w/ico_ser07.png");
 }
 .main-container .main-content > .banner-group { margin-bottom:108px; padding:34px; border-radius:20px; background-color:var(--white); /*background-image:var(--service_img01); background-repeat:no-repeat; background-size:294px auto; background-position:top right;*/ }
 .main-container .main-content > .banner-group .visual-tit { min-height:270px; }
@@ -246,6 +247,7 @@ body:has(.main) .menu .menu-item .list-item { top:75px; }
 .main-container .main-content > .banner-group .btn-service a.ser02 span::before { background-image:var(--ser02); }
 .main-container .main-content > .banner-group .btn-service a.ser03 span::before { background-image:var(--ser03); }
 .main-container .main-content > .banner-group .btn-service a.ser04 span::before { background-image:var(--ser04); }
+.main-container .main-content > .banner-group .btn-service a.ser07 span::before { background-image:var(--ser07); }
 .main-container .main-content > .banner-group .btn-service a span .mo-t { display:none; }
 
 /* 이용안내 바로가기 mobile ver. */
@@ -257,18 +259,18 @@ body:has(.main) .menu .menu-item .list-item { top:75px; }
 
 /**이벤트 팝업**/
 .layerPopup.modal .pop-content.event {
-    --max-width:667px;
+    --max-width:555px;
     --content-pd:0 0 34px 0;
     --modal-pd:28px;
-    --pos-abs:48px;
+    --pos-abs:40px;
     --brd:16px;
     --pagination-pd:8px 30px;
-    --pagination-pos-abs:58px;
-    --pagination-pos-abs2:100px;
+    --pagination-pos-abs:42px;
+    --pagination-pos-abs2:82px;
     --pagination-w:auto;
     --pagination-h:32px;
-    --swiper-button-w:42px;
-    --swiper-button-h:42px;
+    --swiper-button-w:36px;
+    --swiper-button-h:36px;
     --swiper-button-bg:#F3F3F3;
     --swiper-button-fs:20px;
 
@@ -472,7 +474,7 @@ body:has(.main) .menu .menu-item .list-item { top:75px; }
     
     .main-container .main-content > .banner-group .btn-service { flex-direction:column; gap:10px; margin-top:35px; }
     .main-container .main-content > .banner-group .btn-service a { padding:19px 12px; background-color:var(--white); text-align:unset; }
-    .main-container .main-content > .banner-group .btn-service a > span { padding-left:62px; }
+    .main-container .main-content > .banner-group .btn-service a > span { display:block; padding-left:62px; }
     .main-container .main-content > .banner-group .btn-service a > span::before { position:absolute; top:50%; transform:translateY(-50%); left:0; margin:0; width:46px; height:46px; background-size:46px auto; }
     .main-container .main-content > .banner-group .btn-service a span .mo-t { display:inline-block; }
 
