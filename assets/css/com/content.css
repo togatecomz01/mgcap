@@ -79,7 +79,7 @@ body{
 .btn-content.login .button-group:nth-of-type(2) a:hover:after { background-color:var(--primary); }
 
 /**휴대폰 인증**/
-.page-container.login .form-content.login { position:relative; margin-top:26px; padding-left:376px; overflow:hidden; }
+.page-container.login .form-content.login { position:relative; margin-top:26px; padding:0 4px 4px 376px; overflow:visible; }
 .page-container.login .form-content.login::before { content:""; display:block; position:absolute; left:0; right:0; width:352px; height:100%; background:url("../../images/content/register/w/bg_login3.png") no-repeat left center; background-size:auto 100%; border-radius:16px; overflow:hidden;  }
 .page-container.login .form-content fieldset.form-content { padding-right:2px; }
 .page-container.login .form-content > .form-wrap { gap:0; margin-bottom:0; }
@@ -1131,7 +1131,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     #인증센터, MY MG, 소비자보호 공통
 ---------------------------------------------*/
 .caption-box { display:flex; justify-content:space-between; padding-bottom:20px; }
-.caption-box p { font-size:var(--font16); color:var(--color-6); }
+.caption-box p { margin-top:0; font-size:var(--font16); color:var(--color-6); }
 /* 나의 정보 변경 */
 .WCS50300VS .pad {padding: 8px 10px;}
 .WCS50300VS .flex-row:has(> select + span), 
