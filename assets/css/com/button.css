@@ -180,6 +180,10 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
     --btm-btn-font-weight:var(--font-w-m);
     --btn-download-font-size:var(--font18);
     }
+
+    .btn-content.cta a,
+    .btn-content.cta button { min-width:unset; }
+
     .btn-form { max-width:100%; height:48px; }
     .btn-form.reset { width:auto; height:48px; font-size:inherit; }
     .btn-form.reset::before { display:none; }

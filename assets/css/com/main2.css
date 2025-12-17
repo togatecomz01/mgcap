@@ -493,7 +493,7 @@ body:has(.main) .menu .menu-item .list-item { top:75px; }
         --max-width:80%;
         --content-pd:0;
         --modal-pd:0;
-        --pos-abs:5%;
+        --pos-abs:3%;
         --brd:16px 16px 0 0;
         --pagination-pd:3px 17px;
         --pagination-pos-abs:24px;

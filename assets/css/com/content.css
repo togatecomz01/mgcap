@@ -446,7 +446,7 @@ main.contentWrap.finance > .page-container { padding-top:72px; }
 .anchor-panel .info-content .note-group .m-dot .bulls-eye > li.error {display: list-item;}
 .anchor-panel .info-content .note-group .m-dot .bulls-eye > li::before {content: "◎";}
 .anchor-panel .info-content .note-group .m-dot li .bulls-eye { margin-top:8px; }
-.anchor-panel .info-content .diamond-box { display:none; gap:10px; padding:28px 36px; }
+.anchor-panel .info-content .diamond-box { gap:10px; padding:28px 36px; }
 .anchor-panel .info-content .diamond-box p > span { font-weight:var(--font-w-m); }
 
 /* 준법감시심의필 */
@@ -1454,9 +1454,9 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .finance .anchor-list .btn-group button.active { border:0; border-bottom:2px solid var(--primary); }
 
     .finance .anchor-content { padding-top:0; }
-    .finance .anchor-panel { padding:0 0 52px; }
-    .finance .anchor-panel:first-child,
-    .finance .anchor-panel:last-child { padding:42px 0 52px; }
+    .finance .anchor-panel { padding:42px 0 52px; }
+    /* .finance .anchor-panel:first-child,
+    .finance .anchor-panel:last-child { padding:42px 0 52px; } */
     .finance .anchor-panel + .anchor-panel { border-top:0; }
     .finance .anchor-panel:has(.text-content) { padding:25px 0 52px; }
     .finance .anchor-panel .anchor-group { flex-direction:column; gap:18px; }
@@ -1494,6 +1494,9 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .anchor-group .table-content .table-group ul li:first-child { margin-top:14px; }
 
     .anchor-group .table-content .table-group td .rfrnc { font-size:var(--font14); }
+
+    .finance .anchor-panel .anchor-group,
+    .finance .anchor-panel h3 + .info-content { margin-top:0; }
 
     .anchor-panel .info-content .note-group { padding:20px 20px 20px 14px; }
     .anchor-panel .info-content .note-group .tit { padding-bottom:14px; }
