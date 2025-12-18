@@ -164,7 +164,7 @@ p.dot, .dot > li, .dot dt, .info-content .dot > li { position:relative; padding-
 p.dot:before,
 .dot > li:before,
 .dot > dt:before,
-.info-content .dot > li:before { content:""; display:inline-block; position:absolute; left:5px; top:10px; width:5px; height:5px; border-radius:10px; background:var(--color-45); margin-right:7px; }
+.info-content .dot > li:before { content:""; display:inline-block; position:absolute; left:5px; top:10px; width:5px; height:5px; border-radius:10px; background:var(--color-6); margin-right:7px; }
 .hypn li,
 p.m-dot,
 p.m-dot,
@@ -204,7 +204,7 @@ h3.rfrnc::before { content:"¡Ø "; display:inline; position:relative; left:inheri
 
 .text-group dt { font-weight:var(--font-w-m); }
 .text-group dt ~ dt { margin-top:20px; }
-.text-group dd { margin-top:12px; }
+.text-group dd { margin-top:12px; color:var(--color-75); }
 .text-group dd + dd { margin-top:12px; }
 .text-group .button-content { margin-top:32px; }
 .text-group > p:first-child { margin-top:0; }

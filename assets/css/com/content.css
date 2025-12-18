@@ -931,8 +931,8 @@ color: var(--white); font-size: var(--font26); font-weight: var(--font-w-b); bac
 .WCA30100VQ .text-content.bo-t0 {max-width: 1200px; margin: 0 auto;}
 .WCA30100VQ.page-container > div + div {padding-top: 0;}
 .WCA30100VQ .text-content > .text-group { position:relative; }
-.WCA30100VQ .text-content > .text-group:first-of-type::after {  content:""; display:block; position:absolute; top:0px; right:0; z-index:2; width:180px; height:180px; background:url(../../images/content/about/w/img_history.png) no-repeat right top; background-size:90% auto;  }
-.WCA30100VQ .text-content h3 { font-size: var(--font32); padding-top: 40px; }
+/*.WCA30100VQ .text-content > .text-group:first-of-type::after {  content:""; display:block; position:absolute; top:0px; right:0; z-index:2; width:180px; height:180px; background:url(../../images/content/about/w/img_history.png) no-repeat right top; background-size:90% auto;  }*/
+.WCA30100VQ .text-content h3 { font-size: var(--font32); }
 .WCA30100VQ .text-content p { font-size: var(--font32); font-weight: var(--font-w-b); margin-top: 0;}
 .WCA30100VQ .text-content p span { color: var(--primary); }
 .WCA30100VQ .history-group { display: flex; align-items: flex-start; gap: 160px; border-top: 1px solid #000000; margin-top: 52px;}
@@ -996,9 +996,6 @@ color: var(--white); font-size: var(--font26); font-weight: var(--font-w-b); bac
 .WCA60300VQ .card-text-content p{font-size:1rem; color:var(--color-45)}
 .WCA60300VQ .card-text-content .date{font-size:var(--font16); color:var(--primary)}
 .WCA60300VQ.page-container > div + div.bo-t0:last-child { padding-top:0; }
-
-/** 윤리경영 **/
-.WCA90108VQ .img-content { padding-top:0; }
 
 /* 회사소개 - 클린신고센터 (WCA90107VQ), 신고센터 처리현황(WCA90103VQ), 입사지원 개인정보 동의(WCR50201DS) */
 .WCA90107VQ label.radio,
@@ -1169,7 +1166,9 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 .WCR10400VQ .process-content .process-group + .btn-content.cta { margin-top:32px; }
 
 /** 청약철회권 **/
-.WCU10500VQ .rfrnc { font-size:var(--font18); }
+.WCU10500VQ col.col-w-1 { width:20%;  }
+.WCU10500VQ col.col-w-2 { width:auto;  }
+.WCU10500VQ .rfrnc { font-size:1rem; }
 /*---------------------------------------------
     #인증센터
 ---------------------------------------------*/
@@ -1543,6 +1542,10 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     /*****금융소비자보호부***/
     .WCU10200VQ .img-box {  padding:0; width:100%; border:0; }
     .WCU10200VQ .img-box img { content:url("../../images/content/custportal/m/custportal_organization.png"); display:block; margin:0; }
+
+
+    /** 청약철회권 **/
+    .WCU10500VQ col.col-w-1 { width:100px;  }
 
     /** 금리인하요구권 **/
     .WCU10600VQ .group > .text-group > h4 { font-size:var(--font16); }
@@ -1952,9 +1955,6 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     /* 주요활동 - 조회결과 없음 모바일 */
     .WCA60300VQ .no-results .icon {width: 80px; height: 67px;}
     .WCA60300VQ .no-results p { font-size: var(--font20);}
-
-    /** 윤리경영 **/
-    .WCA90108VQ .img-box img { content:url("../../images/content/about/m/img_WCA90108VQ.png"); }
 
     /* 회사소개 - 공시정보 (WCA50100VQ) + WCA50300VQ(신용평가) */ 
     .WCA50300VQ .caption,
