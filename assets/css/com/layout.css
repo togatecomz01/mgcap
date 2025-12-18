@@ -320,7 +320,7 @@ form:has(.form-wrap.search-form) + [class*="-group"] { margin-top:38px; }
 .view-navigation .link-group > a { padding:var(--view-a-p); max-width:455px; font-size:1rem; color:var(--color-6); overflow:hidden; white-space:nowrap; text-overflow:ellipsis; word-break:break-all; }
 .view-navigation .link-group > a.on { font-weight:var(--font-w-m); color:var(--color-45); }
 .view-navigation .link-group > a.non { cursor:auto; }
-.view-navigation .link-group > .date { position:absolute; right:28px; top:50%; transform:translate(0, -50%); font-size:var(--font16); }
+.view-navigation .link-group > .date { display:none; position:absolute; right:28px; top:50%; transform:translate(0, -50%); font-size:var(--font16); }
 .view-navigation .link-group > .date::before { content:"µÓ∑œ¿œ : "; color:var(--color-75);  }
 .view-navigation .meta-info{ font-size:0;}
 .view-navigation .meta-info span { font-size:var(--font16); color:var(--color-45);}
