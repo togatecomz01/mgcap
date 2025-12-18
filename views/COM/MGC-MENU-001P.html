@@ -39,38 +39,6 @@
 
 <body>
     <div class="wrap">
-        <script>
-            (function () {
-              var checkbox = document.getElementById('fontSizeNormal');
-              if (!checkbox) return;
-            
-              var KEY = 'fontSizeNormalChecked';
-              var html = document.documentElement;
-            
-              function apply() {
-                // 모바일에서만 적용
-                if (window.matchMedia('(max-width: 768px)').matches) {
-                  // 체크 해제일 때만 작은 글씨
-                  html.classList.toggle('font-small', !checkbox.checked);
-                } else {
-                  html.classList.remove('font-small');
-                }
-              }
-            
-              // 1. 복원 (기본은 체크 O)
-              checkbox.checked = localStorage.getItem(KEY) !== 'false';
-              apply();
-            
-              // 2. 변경 시 저장 + 적용
-              checkbox.addEventListener('change', function () {
-                localStorage.setItem(KEY, this.checked);
-                apply();
-              });
-            
-              // 3. 회전/리사이즈 대응 (iOS 중요)
-              window.addEventListener('resize', apply);
-            })();
-        </script>
         
         <div id="skipnavi">
             <ul>

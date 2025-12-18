@@ -1,9 +1,17 @@
-window.addEventListener('load', function() {
-    mobileMenu();
-    menuToggle();
-    headerMenu();
-    searchToggle();
-});
+(function() {
+    function init() {
+        mobileMenu();
+        menuToggle();
+        headerMenu();
+        searchToggle();
+    }
+    
+    if (document.readyState !== 'loading') {
+        init();
+    } else {
+        document.addEventListener('DOMContentLoaded', init);
+    }
+})();
 
 /*---------------------------------------------
     스크롤 제어 함수 (통합)

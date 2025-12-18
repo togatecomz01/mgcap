@@ -997,6 +997,9 @@ color: var(--white); font-size: var(--font26); font-weight: var(--font-w-b); bac
 .WCA60300VQ .card-text-content .date{font-size:var(--font16); color:var(--primary)}
 .WCA60300VQ.page-container > div + div.bo-t0:last-child { padding-top:0; }
 
+/** 윤리경영 **/
+.WCA90108VQ .img-content { padding-top:0; }
+
 /* 회사소개 - 클린신고센터 (WCA90107VQ), 신고센터 처리현황(WCA90103VQ), 입사지원 개인정보 동의(WCR50201DS) */
 .WCA90107VQ label.radio,
 .WCA90103VQ label.radio,
@@ -1949,6 +1952,9 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     /* 주요활동 - 조회결과 없음 모바일 */
     .WCA60300VQ .no-results .icon {width: 80px; height: 67px;}
     .WCA60300VQ .no-results p { font-size: var(--font20);}
+
+    /** 윤리경영 **/
+    .WCA90108VQ .img-box img { content:url("../../images/content/about/m/img_WCA90108VQ.png"); }
 
     /* 회사소개 - 공시정보 (WCA50100VQ) + WCA50300VQ(신용평가) */ 
     .WCA50300VQ .caption,
