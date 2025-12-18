@@ -33,7 +33,9 @@ main.contentWrap > * { margin:0 auto; max-width:1200px; width:100%; padding:0;  
 .mt-10 { margin-top:10px; }
 .mt-15 { margin-top:15px; }
 .mt-20 { margin-top:20px; }
-.mt-38 { margin-top:38px; } /* form 태그 안 써서 */
+.mt-38 { margin-top:38px; } 
+.mt-72 { margin-top:72px; }
+/* form 태그 안 써서 */
 .mt-42 { margin-top:42px; } /* form 태그 안 써서 */
 .point-r { color:var(--point-r) !important; }
 .point-b { color:var(--point-b) !important; }
@@ -506,6 +508,9 @@ main.contentWrap > .bottom-container { margin-top:72px; }
 @media (max-width:767px) {
     img.w-auto { width:100%; }
     .bodyWrap { padding-top:54px; }
+
+    .mt-72 { margin-top:52px; }
+
     /*---------------------------------------------
 		#헤더
 	---------------------------------------------*/

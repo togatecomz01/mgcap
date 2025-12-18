@@ -35,6 +35,7 @@ table td.title { text-align:left; }
 table tbody tr:has(td[rowspan]) + tr th:first-of-type,
 table tbody tr:has(td[rowspan]) + tr td:first-of-type { border-left:var(--table-border); }
 
+
 table tbody th { border-right:var(--table-border); }
 
 table.col-row tbody th { background:transparent; font-size:1rem; }
@@ -42,6 +43,8 @@ table.col-row tbody th { background:transparent; font-size:1rem; }
 table.td-al td { text-align:left; }
 
 .table-group + .m-dot { margin-top:-22px; }
+
+table th.div_sum { background:var(--white); font-weight:var(--font-w-m); border-right:var(--table-border); font-weight:var(--font-w-r);  }
 
 /* 테이블 위에 텍스트 */
 .total { padding-bottom:20px; font-size:var(--font16); font-weight:var(--font-w-r); color:var(--color-6); text-align:left; }
