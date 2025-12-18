@@ -51,6 +51,7 @@ fieldset span.form-label { display:inline-block; margin-bottom:16px; font-size:v
     --tab1-mb:24px auto 24px;
     --tab-font-szie: var(--font16);  
   }
+  .tab-container .tab-list.depth1 { padding-top:0; }
   .page-container:has(.tab-list.depth1) .btn-group { padding:0 24px; }  
   .tab-container .tab-list.depth1 .tab-item {  padding:8px 12px; line-height:32px; height:48px; }
   .tab-container .tab-list.depth2 { margin-bottom:32px; }

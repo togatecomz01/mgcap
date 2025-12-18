@@ -254,162 +254,205 @@ function searchToggle() {
     헤더 드롭다운 메뉴 기능
 ---------------------------------------------*/
 function headerMenu() {
-    const menu = document.querySelector('.lnb .menu');
     const menuItems = document.querySelectorAll('.lnb .menu-item');
     
-    // 모든 메뉴 닫기 함수
-    function closeAllMenus() {
-        for (let i = 0; i < menuItems.length; i++) {
-            menuItems[i].classList.remove('on');
-            const btn = menuItems[i].querySelector('.menu-tit');
-            if (btn) {
-                btn.classList.remove('on');
-            }
-        }
+    // 요소가 없으면 함수 종료
+    if (!menuItems || menuItems.length === 0) {
+        console.warn('headerMenu: .lnb .menu-item 요소를 찾을 수 없습니다.');
+        return;
     }
     
-    // 모든 메뉴의 on과 active 클래스 제거 함수
-    function removeAllActiveClasses() {
-        for (let i = 0; i < menuItems.length; i++) {
-            menuItems[i].classList.remove('on');
-            const btn = menuItems[i].querySelector('.menu-tit');
+    // 현재 페이지의 active 메뉴를 저장 (초기 로드 시 active가 있는 메뉴)
+    let currentPageActiveMenu = null;
+    menuItems.forEach(function(item) {
+        const btn = item.querySelector('.menu-tit');
+        if (btn && btn.classList.contains('active')) {
+            currentPageActiveMenu = btn;
+        }
+    });
+    
+    // 원래 페이지의 active 복원 함수
+    function restoreCurrentPageActive() {
+        // 모든 active 제거
+        menuItems.forEach(function(item) {
+            const btn = item.querySelector('.menu-tit');
             if (btn) {
                 btn.classList.remove('active');
             }
+        });
+        
+        // 현재 페이지의 active만 복원
+        if (currentPageActiveMenu) {
+            currentPageActiveMenu.classList.add('active');
         }
     }
+    
+    // 모든 메뉴 닫기 함수 (on만 제거)
+    function closeAllMenus() {
+        menuItems.forEach(function(item) {
+            item.classList.remove('on');
+            const btn = item.querySelector('.menu-tit');
+            if (btn) {
+                btn.classList.remove('on');
+            }
+        });
+    }
 
-    // 1depth
-    for (let i = 0; i < menuItems.length; i++) {
-        const menuItem = menuItems[i];
+    // 1depth - 각 메뉴 아이템 처리
+    menuItems.forEach(function(menuItem) {
         const menuButton = menuItem.querySelector('.menu-tit');
         const listItem = menuItem.querySelector('.list-item');
         const hasSubmenu = listItem !== null;
         
+        if (!menuButton) return;
+        
+        // 각 메뉴마다 독립적인 타이머
         let closeTimer = null;
         
-        // 메뉴 열기
+        // 메뉴 열기 (hover용)
         function openMenu() {
             if (closeTimer) {
                 clearTimeout(closeTimer);
                 closeTimer = null;
             }
+            
             if (hasSubmenu) {
-                for (let j = 0; j < menuItems.length; j++) {
-                    if (menuItems[j] !== menuItem) {
-                        menuItems[j].classList.remove('on');
-                        const otherBtn = menuItems[j].querySelector('.menu-tit');
+                // 다른 메뉴들의 active 제거 (hover 시)
+                menuItems.forEach(function(otherItem) {
+                    if (otherItem !== menuItem) {
+                        otherItem.classList.remove('on');
+                        const otherBtn = otherItem.querySelector('.menu-tit');
                         if (otherBtn) {
-                            otherBtn.classList.remove('on');
-                            otherBtn.classList.remove('active');
+                            otherBtn.classList.remove('on', 'active');
                         }
                     }
-                }
+                });
+                
+                // 현재 메뉴에 on 추가
                 menuItem.classList.add('on');
-                if (menuButton) {
-                    menuButton.classList.add('on');
-                }
+                menuButton.classList.add('on');
             }
         }
         
-        // 메뉴 닫기
+        // 메뉴 닫기 (hover용 - on만 제거, active는 유지)
         function scheduleClose() {
             closeTimer = setTimeout(function() {
-                // on만 제거하고 active는 유지
                 menuItem.classList.remove('on');
-                if (menuButton) {
-                    menuButton.classList.remove('on');
-                }
+                menuButton.classList.remove('on');
+                // active는 제거하지 않음!
             }, 100);
         }
         
-        // menu-tit에 마우스 진입
-        if (menuButton) {
-            // 2025.10.15 menu-item에 hover했을 때 submenu 열리게 변경
+        if (hasSubmenu) {
+            // mouseenter/mouseleave 이벤트
             menuItem.addEventListener('mouseenter', openMenu);
             menuItem.addEventListener('mouseleave', scheduleClose);
             
-            // 클릭 이벤트
+            if (listItem) {
+                listItem.addEventListener('mouseenter', openMenu);
+                listItem.addEventListener('mouseleave', scheduleClose);
+            }
+            
+            // 클릭 이벤트 - active 토글
             menuButton.addEventListener('click', function(e) {
-                if (!hasSubmenu) {
-                    const href = this.getAttribute('href');
-                    if (href) {
-                        window.location.href = href;
-                    }
+                e.preventDefault();
+                
+                const isActive = menuButton.classList.contains('active');
+                
+                if (isActive) {
+                    // active 해제
+                    menuButton.classList.remove('active');
                 } else {
-                    e.preventDefault();
-                    // 클릭 시 active 토글
-                    const isActive = menuButton.classList.contains('active');
-                    
-                    if (isActive) {
-                        // 이미 active면 제거
-                        menuItem.classList.remove('on');
-                        menuButton.classList.remove('active', 'on');
-                    } else {
-                        // 모든 메뉴의 active, on 제거 후 현재 메뉴에 추가
-                        removeAllActiveClasses();
-                        menuItem.classList.add('on');
-                        menuButton.classList.add('active', 'on');
+                    // 타이머 클리어
+                    if (closeTimer) {
+                        clearTimeout(closeTimer);
+                        closeTimer = null;
                     }
+                    
+                    // 다른 메뉴의 active 제거
+                    menuItems.forEach(function(otherItem) {
+                        if (otherItem !== menuItem) {
+                            const otherBtn = otherItem.querySelector('.menu-tit');
+                            if (otherBtn) {
+                                otherBtn.classList.remove('active');
+                            }
+                        }
+                    });
+                    
+                    // 현재 메뉴에 active 추가
+                    menuButton.classList.add('active');
+                    
+                    // on도 추가 (열린 상태 유지)
+                    menuItem.classList.add('on');
+                    menuButton.classList.add('on');
+                }
+            });
+        } else {
+            // 서브메뉴가 없는 경우 바로 이동
+            menuButton.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href && href !== '#') {
+                    window.location.href = href;
                 }
             });
         }
-
-        // list-item에 마우스 진입/이탈
-        if (listItem) {
-            listItem.addEventListener('mouseenter', openMenu);
-            listItem.addEventListener('mouseleave', scheduleClose);
-        }
-    }
+    });
     
     // 2depth - 마우스오버 이벤트
     const submenu2Items = document.querySelectorAll('.lnb .submenu2 > li');
-    for (let i = 0; i < submenu2Items.length; i++) {
-        // 키보드 이벤트
-        const submenu2Link = submenu2Items[i].querySelector('a, button');
+    submenu2Items.forEach(function(item) {
+        const submenu2Link = item.querySelector('a, button');
         
         if (submenu2Link) {
             submenu2Link.setAttribute('tabindex', '0');
         }
 
-        submenu2Items[i].addEventListener('mouseenter', function(e) {
+        item.addEventListener('mouseenter', function(e) {
             e.stopPropagation();
             
             // 같은 레벨 메뉴들 초기화
             const allSubmenu2 = document.querySelectorAll('.lnb .submenu2 > li');
             const allSubmenu3 = document.querySelectorAll('.lnb .submenu3 > li');
             
-            for (let j = 0; j < allSubmenu2.length; j++) {
-                allSubmenu2[j].classList.remove('on');
-            }
-            for (let k = 0; k < allSubmenu3.length; k++) {
-                allSubmenu3[k].classList.remove('on');
-            }
+            allSubmenu2.forEach(function(el) {
+                el.classList.remove('on');
+            });
+            allSubmenu3.forEach(function(el) {
+                el.classList.remove('on');
+            });
             
             this.classList.add('on');
         });
-    }
+    });
 
     // 키보드 이벤트
     const allMenuLinks = document.querySelectorAll('.lnb .menu-tit, .lnb .submenu a, .lnb .submenu button, .lnb .submenu2 a, .lnb .submenu2 button, .lnb .submenu3 a, .lnb .submenu3 button');
-    for (let i = 0; i < allMenuLinks.length; i++) {
-        allMenuLinks[i].addEventListener('keydown', function(e) {
+    allMenuLinks.forEach(function(link) {
+        link.addEventListener('keydown', function(e) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 this.click();
             }
         });
+    });
+
+    // 메뉴 영역 밖으로 마우스가 나갔을 때 원래 페이지의 active 복원
+    const gnbElement = document.querySelector('.gnb');
+    if (gnbElement) {
+        gnbElement.addEventListener('mouseleave', function() {
+            closeAllMenus();
+            restoreCurrentPageActive();
+        });
     }
 
-    // 포커스가 헤더 메뉴 영역을 벗어나면 메뉴 닫기
+    // 포커스가 헤더 메뉴 영역을 벗어나면 on 제거하고 active 복원
     const headerWrap = document.getElementById('headerWrap');
     if (headerWrap) {
         document.addEventListener('focusin', function(e) {
             const isInsideHeader = headerWrap.contains(e.target);
-
-            // 헤더 외부로 포커스가 이동하면 모든 메뉴 닫기
             if (!isInsideHeader) {
                 closeAllMenus();
+                restoreCurrentPageActive();
             }
         });
     }

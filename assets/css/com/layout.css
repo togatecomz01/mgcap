@@ -63,7 +63,7 @@ main.contentWrap > * { margin:0 auto; max-width:1200px; width:100%; padding:0;  
 #skipnavi a:active { top:0; outline:var(--primary); outline-offset:4px; }
 
 /** 헤더 레이아웃 **/
-#headerWrap { position:fixed; z-index:12; width:100%; background:var(--white); border-bottom:1px solid #E5E5E5; }
+#headerWrap { position:fixed; top:0; z-index:12; width:100%; background:var(--white); border-bottom:1px solid #E5E5E5; }
 #headerWrap:has(.menu-item.on) { background-color:var(--white); }
 .gnb{ display:flex; justify-content:space-between; align-items:center; margin:0 auto; max-width:1400px; width:100%; background:var(--white); }
 .gnb h1{ display:block; width:137px; height:36px; font-size:0; }
@@ -332,12 +332,14 @@ form:has(.form-wrap.search-form) + [class*="-group"] { margin-top:38px; }
 .diamond-box li { color: var(--color-2); font-weight: var(--font-w-m);}
 
 /** 첨부파일 **/
-.attach { padding:24px; margin-bottom:42px; background-color:var(--bg-box); font-size:0; }
+.attach { padding:24px; background-color:var(--bg-box); font-size:0; }
+.attach:last-of-type,
+.attach:only-of-type { margin-bottom:42px; }
+.attach + .attach { margin-top:20px; }
 [class*="-group"] h3 + .attach { margin-top:32px; }
-.attach { padding:24px; margin-bottom:42px; background-color:var(--bg-box); }
-.attach dt { display:inline-block; padding-right:25px; font-size:var(--font16); font-weight:var(--font-w-m); color:var(--color-6); vertical-align:top; }
+.attach dt { display:inline-block; padding-right:25px; max-width:115px; font-size:var(--font16); font-weight:var(--font-w-m); color:var(--color-6); vertical-align:top; }
 .attach dt .num { color:var(--primary); }
-.attach dd { display:inline-block; }
+.attach dd { display:inline-block; width:calc(100% - 140px); }
 .attach dd a { font-size:var(--font16); font-weight:var(--font-w-r); color:var(--color-2); }
 .attach dd a + a { margin-top:16px; }
 /* 다운로드 버튼 */
@@ -684,7 +686,10 @@ main.contentWrap > .bottom-container { margin-top:72px; }
     .list-download a.btn-download { display:none; }
 
     /** 첨부파일 **/
-    .attach { padding:12px; margin-bottom:36px; }
+    .attach { padding:12px; }
+    .attach:last-of-type,
+    .attach:only-of-type { margin-bottom:36px; }
+    .attach + .attach { margin-top:10px; }
     .attach dt { font-size:var(--font14); }
     .attach dd a { font-size:var(--font14); }
     .attach dd a + a { margin-top:12px; }
@@ -728,8 +733,8 @@ main.contentWrap > .bottom-container { margin-top:72px; }
     .layerPopup.modal .pop-footer { margin-top:32px; }
 
     /* 스크롤탑 */
-    #scrollTop .scrollUpBtn { width:26px; height:26px; }
-    #scrollTop .scrollUpBtn::before { width:14px; height:14px; mask-size:14px auto; -webkit-mask-size:14px auto; }
+    /* #scrollTop .scrollUpBtn { width:26px; height:26px; }
+    #scrollTop .scrollUpBtn::before { width:14px; height:14px; mask-size:14px auto; -webkit-mask-size:14px auto; } */
 }
 
 @media (min-width: 767px) and (max-width:1400px){

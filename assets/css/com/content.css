@@ -997,6 +997,9 @@ color: var(--white); font-size: var(--font26); font-weight: var(--font-w-b); bac
 .WCA60300VQ .card-text-content .date{font-size:var(--font16); color:var(--primary)}
 .WCA60300VQ.page-container > div + div.bo-t0:last-child { padding-top:0; }
 
+/** 윤리강령 **/
+.WCA90108VQ .img-group { border-top:1px solid var(--color-d); }
+
 /* 회사소개 - 클린신고센터 (WCA90107VQ), 신고센터 처리현황(WCA90103VQ), 입사지원 개인정보 동의(WCR50201DS) */
 .WCA90107VQ label.radio,
 .WCA90103VQ label.radio,
@@ -1212,7 +1215,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 .WCS40800VQ .btn-plus { position:absolute; top:4px; right:0; margin-top:0; width:33px; height:33px; border:var(--board); background:url("../../images/com/svg/ico_plus.svg")no-repeat center; }
 .WCS40800VQ .text-group > .table-group + .table-group { margin-top:52px; }
 .WCS40800VQ .table-group form { margin-top:0; }
-.WCS40800VQ th label { margin-bottom:0; font-weight:var(--font-w-b); color:var(--color-2); }
+.WCS40800VQ th label { margin-bottom:0; color:var(--color-2); }
 .WCS40800VQ td > input[type="text"],
 .WCS40800VQ td > input[type="password"],
 .WCS40800VQ td > input[type="email"],
@@ -1663,8 +1666,8 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
         --ico-q-position:0;
     }
     .WCC10100VQ .qna-list { border-top:1px solid var(--color-3);  }
-    .WCC10100VQ .qna-list dt button,
-    .WCC10100VQ .qna-list dd.cont { align-items:flex-start; }
+    .WCC10100VQ .qna-list dt button { align-items:flex-start; }
+    .WCC10100VQ .qna-list dd.cont { gap:0; padding:24px; }
     .WCC10100VQ .qna-list dt button span::before,
     .WCC10100VQ .qna-list dd.cont span::before { width:24px; height:24px; }
     .WCC10100VQ .qna-list dt button span,
@@ -1673,8 +1676,8 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCC10100VQ .qna-list dt button { padding-right:36px; color:var(--color-45); }
     .WCC10100VQ .qna-list dt button::after {  width:24px; height:24px;  mask-size:9px auto; -webkit-mask-size:16px auto; }
 
-    .WCC10100VQ .qna-list dt button span::before,
-    .WCC10100VQ .qna-list dd.cont span::before { mask-size:16px auto; -webkit-mask-size:16px auto; }
+    .WCC10100VQ .qna-list dt button span::before { mask-size:16px auto; -webkit-mask-size:16px auto; }
+    .WCC10100VQ .qna-list dd.cont span::before { content:none; }
     .WCC10100VQ .qna-list dt button::after { top:24px; transform:translate(0, 0);  }
     .WCC10100VQ .accordion-item.on dt button::after { top:24px; transform:translate(0, 0) rotate(180deg);  }
 
@@ -1706,6 +1709,8 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 
     .WCF90100VQ .flex-row.mo-column > .flex-row { flex-direction:row !important; flex:1; width:100%; }
     .WCF90100VQ .form-content > .form-wrap > .form-group > .flex-row { padding:0; }
+    .WCF90100VQ .form-group .search input + button.btn-sch,
+    .WCF90100VQ .form-group .txt-unit > span { right:16px; }
     .WCF90100VQ form > .text-content { order:3; }
     .WCF90100VQ .form-content > .form-wrap > .form-group > label + input, 
     .WCF90100VQ .form-content > .form-wrap > .form-group > label + select { margin:0; }
@@ -1880,7 +1885,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 
     /* button-content */
 
-    .WCA10100VQ.page-container:has(.tab-list.depth1) .button-content { margin: 0 24px 24px 24px; padding-top:32px; border-top: var(--board);}
+    .WCA10100VQ.page-container:has(.tab-list.depth1) .button-content { margin: 0 24px 24px 24px; padding:32px 0 0; border-top: var(--board);}
     .WCA10100VQ .button-content .lnk-group { display: block; }
     .WCA10100VQ .button-content .lnk-group a { height: 102px; font-size: var(--font20) }
     .WCA10100VQ .button-content .lnk-group a+a { margin-top: 20px; }
@@ -1995,6 +2000,8 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCR50101DQ .error {color:var(--color-75) !important;}
     .WCR50101DQ .view-subject { flex-direction:column; }
     .WCR50101DQ .view-subject .inquiry { position:relative; top:0;  margin-left: 0; font-size: var(--font12);}
+    /** 윤리강령 **/
+    .WCA90108VQ .img-box img { content:url("../../images/content/about/m/img_WCA90108VQ.png"); }
     /* 회사소개 - 클린신고센터 + 성희롱 및 직장내 괴롭힘 신고센터 */
     .WCA90107VQ .text-content, .WCA90100VQ .text-content {margin-bottom: 32px;}
     .WCA90100VQ .form-group select, .WCA90100VQ .form-group input[type="tel"] {flex: 1;}
@@ -2010,16 +2017,16 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     ---------------------------------------------*/
     /** 청구내역조회, 신고센터 처리현황 조회 **/
     .WCS30101DQ .mo colgroup,
-    .WCA90105VQ .mo colgroup { display:none; }
+    .WCA90106DQ .mo colgroup { display:none; }
     .WCS30101DQ .mo tbody,
-    .WCA90105VQ .mo tbody { display:block; width:100%; }
+    .WCA90106DQ .mo tbody { display:block; width:100%; }
     .WCS30101DQ .mo tbody tr,
-    .WCA90105VQ .mo tbody tr { display:flex; flex-wrap:wrap; align-items:stretch; width:100%; font-size:0; }
+    .WCA90106DQ .mo tbody tr { display:flex; flex-wrap:wrap; align-items:stretch; width:100%; font-size:0; }
     .WCS30101DQ .mo tbody th,
-    .WCA90105VQ .mo tbody th { display:inline-flex; justify-content: center; align-items:center; padding:10px; width:30%; min-height:24px; border-left:0; }
+    .WCA90106DQ .mo tbody th { display:inline-flex; justify-content: center; align-items:center; padding:10px; width:30%; min-height:24px; border-left:0; }
     .WCS30101DQ .mo tbody td,
-    .WCA90105VQ .mo tbody td { display:inline-flex; flex-direction:column; justify-content:center; padding:10px; width:calc(70% - 4px); min-height:24px; border-left:0; }
-    .WCA90105VQ .text-content .text-group { margin-bottom:42px; }
+    .WCA90106DQ .mo tbody td { display:inline-flex; flex-direction:column; justify-content:center; padding:10px; width:calc(70% - 4px); min-height:24px; border-left:0; }
+    .WCA90106DQ .text-content .text-group { margin-bottom:42px; }
 
     .WCS30101DQ ~ .bottom-container .btn-content.cta a { flex:0 0 auto; height:54px; line-height:54px; }
 

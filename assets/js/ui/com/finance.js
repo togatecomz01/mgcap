@@ -60,7 +60,7 @@ $(document).ready(function() {
             const $visualContainer = $('.visual-container');
             const headerHeight = $header.outerHeight() || 0;
             const visualHeight = $visualContainer.outerHeight() || 0;
-            const minScrollForFixed = headerHeight + visualHeight - 50;
+            const minScrollForFixed = headerHeight + visualHeight;
             
             // 이미 fixed 상태인 경우에만 스크롤 이동
             if (currentScroll >= minScrollForFixed) {
