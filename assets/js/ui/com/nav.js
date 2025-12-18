@@ -268,6 +268,17 @@ function headerMenu() {
         }
     }
     
+    // 모든 메뉴의 on과 active 클래스 제거 함수
+    function removeAllActiveClasses() {
+        for (let i = 0; i < menuItems.length; i++) {
+            menuItems[i].classList.remove('on');
+            const btn = menuItems[i].querySelector('.menu-tit');
+            if (btn) {
+                btn.classList.remove('on', 'active');
+            }
+        }
+    }
+
     // 1depth
     for (let i = 0; i < menuItems.length; i++) {
         const menuItem = menuItems[i];
@@ -284,7 +295,8 @@ function headerMenu() {
                 closeTimer = null;
             }
             if (hasSubmenu) {
-                closeAllMenus();
+                // 다른 메뉴들의 on, active 모두 제거
+                removeAllActiveClasses();
                 menuItem.classList.add('on');
                 if (menuButton) {
                     menuButton.classList.add('on');
@@ -295,6 +307,7 @@ function headerMenu() {
         // 메뉴 닫기
         function scheduleClose() {
             closeTimer = setTimeout(function() {
+                // on만 제거하고 active는 유지
                 menuItem.classList.remove('on');
                 if (menuButton) {
                     menuButton.classList.remove('on');
@@ -317,15 +330,18 @@ function headerMenu() {
                     }
                 } else {
                     e.preventDefault();
-                    // 키보드 사용자를 위한 토글 기능
-                    const isOpen = menuItem.classList.contains('on');
-                    if (isOpen) {
+                    // 클릭 시 active 토글
+                    const isActive = menuButton.classList.contains('active');
+                    
+                    if (isActive) {
+                        // 이미 active면 제거
                         menuItem.classList.remove('on');
-                        menuButton.classList.remove('on');
+                        menuButton.classList.remove('active', 'on');
                     } else {
-                        closeAllMenus();
+                        // 모든 메뉴의 active, on 제거 후 현재 메뉴에 추가
+                        removeAllActiveClasses();
                         menuItem.classList.add('on');
-                        menuButton.classList.add('on');
+                        menuButton.classList.add('active', 'on');
                     }
                 }
             });
