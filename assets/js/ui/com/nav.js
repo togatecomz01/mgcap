@@ -1,17 +1,9 @@
-(function() {
-    function init() {
-        mobileMenu();
-        menuToggle();
-        headerMenu();
-        searchToggle();
-    }
-    
-    if (document.readyState !== 'loading') {
-        init();
-    } else {
-        document.addEventListener('DOMContentLoaded', init);
-    }
-})();
+window.addEventListener('load', function() {
+    mobileMenu();
+    menuToggle();
+    headerMenu();
+    searchToggle();
+});
 
 /*---------------------------------------------
     스크롤 제어 함수 (통합)
@@ -282,7 +274,7 @@ function headerMenu() {
             menuItems[i].classList.remove('on');
             const btn = menuItems[i].querySelector('.menu-tit');
             if (btn) {
-                btn.classList.remove('on', 'active');
+                btn.classList.remove('active');
             }
         }
     }
@@ -303,8 +295,16 @@ function headerMenu() {
                 closeTimer = null;
             }
             if (hasSubmenu) {
-                // 다른 메뉴들의 on, active 모두 제거
-                removeAllActiveClasses();
+                for (let j = 0; j < menuItems.length; j++) {
+                    if (menuItems[j] !== menuItem) {
+                        menuItems[j].classList.remove('on');
+                        const otherBtn = menuItems[j].querySelector('.menu-tit');
+                        if (otherBtn) {
+                            otherBtn.classList.remove('on');
+                            otherBtn.classList.remove('active');
+                        }
+                    }
+                }
                 menuItem.classList.add('on');
                 if (menuButton) {
                     menuButton.classList.add('on');
