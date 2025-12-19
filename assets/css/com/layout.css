@@ -333,6 +333,8 @@ form:has(.form-wrap.search-form) + [class*="-group"] { margin-top:38px; }
 .diamond-box li::before { content:"◆"; display:inline; color:var(--primary); margin-right: 6px; }
 .diamond-box li { color: var(--color-2); font-weight: var(--font-w-m);}
 
+ul.diamond-box li { padding-left:22px; text-indent:-22px; }
+
 /** 첨부파일 **/
 .attach { padding:24px; background-color:var(--bg-box); font-size:0; }
 .attach:last-of-type,
@@ -689,6 +691,9 @@ main.contentWrap > .bottom-container { margin-top:72px; }
 
     /* 다운로드 버튼 */
     .list-download a.btn-download { display:none; }
+
+    /* 다이아몬드박스 */
+    ul.diamond-box li { padding-left:18px; text-indent:-18px; }
 
     /** 첨부파일 **/
     .attach { padding:12px; }

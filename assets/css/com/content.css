@@ -394,7 +394,7 @@ main.contentWrap.finance > .page-container { padding-top:72px; }
 .summary-group h3 { font-size:var(--font28); font-weight:var(--font-w-b); color:var(--color-2); line-height:42px; }
 .summary-group h3 + p { margin-top:12px; font-size:var(--font20); color:var(--color-6); }
 .summary-group .summary-list { display:flex; gap:32px; margin-top:32px; width:100%; }
-.summary-group .summary-list ul { display:flex; flex-direction:column; max-width:688px; width:100%; height:361px; }
+.summary-group .summary-list ul { display:flex; flex-direction:column; max-width:688px; width:100%; height:auto; }
 .summary-group .summary-list ul li { display:flex; flex:1; align-items:center; padding:26px 24px; background-color:#F7F9FF; border-radius:12px; }
 .summary-group .summary-list ul li + li { margin-top:15px; }
 .summary-group .summary-list ul li span { display:inline-block; padding-right:12px; font-weight:var(--font-w-b); }
@@ -1172,6 +1172,10 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 .WCU10500VQ col.col-w-1 { width:20%;  }
 .WCU10500VQ col.col-w-2 { width:auto;  }
 .WCU10500VQ .rfrnc { font-size:1rem; }
+
+/** 금리인하요구권 **/
+.WCU10600VQ .table-group > p { padding-bottom:12px; font-weight:var(--font-w-m); color:var(--color-6); }
+.WCU10600VQ .text-group > p { font-weight:var(--font-w-m); color:var(--color-6); }
 /*---------------------------------------------
     #인증센터
 ---------------------------------------------*/
@@ -1456,6 +1460,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 
     /* 엥커이동 */
     .finance .anchor-list.fixed { position:fixed; top:54px; left:0; right:0; z-index:90; padding-top:10px; background:var(--white); box-shadow:0 2px 4px rgba(0,0,0,0.1); }
+    .finance .anchor-list.fixed + .anchor-content { padding-top:75px; }
     .finance .anchor-list .btn-group button { padding:18px 0; border:0; border-bottom:1px solid var(--color-e); border-radius:0; font-size:var(--font18); line-height:normal; background-color:transparent; }
     .finance .anchor-list .btn-group button.active { border:0; border-bottom:2px solid var(--primary); }
 
@@ -1480,7 +1485,6 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .summary-group .summary-list { flex-direction:column-reverse; align-items: flex-end; gap:24px; }
     .summary-group .summary-list .summary-img { width:190px; }
 
-    .summary-group .summary-list ul { height:293px; }
     .summary-group .summary-list ul li { padding:16px 18px 16px 24px; }
 
     .anchor-group p + .list-card { margin-top:16px; }
@@ -1515,7 +1519,8 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     /* 준법감시심의필 */
     .page-container > .anchor-container + .text-content:has(.compliance-box) { padding-top:32px;  border-top:1px solid var(--color-d); }
     .compliance-box { flex-direction:column; align-items:flex-start; gap:12px; }
-    .compliance-box li { font-size:var(--font14); white-space: pre-line; }
+    .compliance-box li { font-size:var(--font14); }
+    .compliance-box li span { display:block; word-break:keep-all; }
     /*---------------------------------------------
         #소비자보호
     ---------------------------------------------*/
@@ -1549,9 +1554,6 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 
     /** 청약철회권 **/
     .WCU10500VQ col.col-w-1 { width:100px;  }
-
-    /** 금리인하요구권 **/
-    .WCU10600VQ .group > .text-group > h4 { font-size:var(--font16); }
 
     /******모잡인조회**/
     .MGC-PRT-CST-012 .btn-group { flex-direction:column; }

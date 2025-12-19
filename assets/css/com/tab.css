@@ -52,8 +52,8 @@ fieldset span.form-label { display:inline-block; margin-bottom:16px; font-size:v
     --tab-font-szie: var(--font16);  
   }
   .tab-container .tab-list.depth1 { padding-top:0; }
-  .page-container:has(.tab-list.depth1) .btn-group { padding:0 24px; }  
-  .tab-container .tab-list.depth1 .tab-item {  padding:8px 12px; line-height:32px; height:48px; }
+  .page-container:has(.tab-list.depth1) .btn-group { display:block; padding:0 24px; text-align:center; white-space:nowrap; }  
+  .tab-container .tab-list.depth1 .tab-item { display:inline-block; padding:8px 12px; line-height:32px; height:48px; }
   .tab-container .tab-list.depth2 { margin-bottom:32px; }
   .tab-container .tab-list.depth2 .tab-item {  padding:0 20px; line-height:45px; height:45px; }
 
