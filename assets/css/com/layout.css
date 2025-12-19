@@ -130,7 +130,8 @@ h3.rfrnc { font-size:var(--font28) !important; color:var(--color-2) !important; 
 h4.tit-diamond::before { content:"◆"; display:inline; margin-right:5px; color:var(--primary); }
 h5, p.tit, h4.tit { color:var(--color-2); font-size:1rem; font-weight:var(--font-w-b); }
 
-[class*="-container"] form { margin:52px 0 32px; }
+[class*="-container"] form,
+[class*="-container"] div.form { margin:52px 0 32px; }
 [class*="-container"] [class*="-content"] > form:first-child { margin-top:0; }
 [class*="-container"] form:last-of-type { margin-bottom:0; }
 [class*="-content"] * ~ h3 { margin-top:72px; }
@@ -239,6 +240,9 @@ h3.rfrnc::before { content:"※ "; display:inline; position:relative; left:inheri
 
  /** 들여쓰기 **/
  .page-container.indent .text-group .text-list > li > .text-list { margin-left:20px; margin-top:12px; }
+ .text-group .text-list > li span + p { width:100%; }
+
+
 
 /**유의사항 2025.10.27 수정**/
 .note-group { padding:32px 40px 42px; border:var(--board); }
