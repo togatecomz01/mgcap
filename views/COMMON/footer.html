@@ -39,3 +39,26 @@
         <button type="button" class="scrollUpBtn">탑버튼</button>
     </div>
 </footer>
+
+<script>
+    (function () {
+      var ua = navigator.userAgent;
+    
+      // IE11
+      var isIE11 = document.documentMode === 11;
+    
+      // Edge Chromium 80 ~ 90
+      var isOldEdge =
+        ua.indexOf('Edg/') > -1 &&               // Edge만
+        !/Edg\/9[1-9]\./.test(ua);                // 91 이상 제외
+    
+      if (isIE11 || isOldEdge) {
+        var head = document.head || document.getElementsByTagName('head')[0];
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = '../../assets/css/com/ie.css';
+        link.id = 'iecss-test';
+        head.appendChild(link);
+      }
+    })();
+    </script>
