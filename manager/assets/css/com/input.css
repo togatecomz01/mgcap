@@ -163,9 +163,12 @@ tr.error td input { border:1px solid var(--error);}
 .pop-body .ipt-file { margin:8px 0; }
 
 /**list**/
-.list-content th.check-all-area label { cursor:pointer; }
-.list-content th.check-all-area label span { text-decoration-line:underline; text-underline-offset:3px; }
-.list-content td label.check:only-of-type { justify-content:center; }
+.list-content th.check-all-area label,
+.write-content th.check-all-area label { cursor:pointer; }
+.list-content th.check-all-area label span,
+.write-content th.check-all-area label span { text-decoration-line:underline; text-underline-offset:3px; }
+.list-content td label.check:only-of-type,
+.write-content td label.check:only-of-type { justify-content:center; }
 
 
 /**write**/
