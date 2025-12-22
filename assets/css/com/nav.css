@@ -230,9 +230,9 @@
 	.menu-inner .gnb-2dep > li:last-child { width:100%; }
 	.menu-inner .gnb-3dep li + li { margin-top:12px; }
 	.menu-inner .gnb-2dep > li > a,
-	.menu-inner .gnb-2dep > li > span { font-size:var(--font14); color:var(--color-2); }
+	.menu-inner .gnb-2dep > li > span { font-size:var(--font16); color:var(--color-2); }
 	.menu-inner .gnb-2dep > li > a { margin-bottom:0; }
-	.menu-inner .gnb-2dep > li > span { display:inline-block; margin-bottom:16px; font-size:var(--font14); font-weight:700; }
+	.menu-inner .gnb-2dep > li > span { display:inline-block; margin-bottom:16px; font-weight:700; }
 
 	.menu-inner .gnb-3dep li a,
 	.menu-inner .gnb-4dep li a { position:relative; padding-right:20px; font-size:var(--font14); }
