@@ -29,7 +29,8 @@ $(document).ready(function() {
         const headerHeight = $header.outerHeight() || 0;
         const visualHeight = $visualContainer.outerHeight() || 0;
         
-        $body.off('scroll').on('scroll', function() {
+        // 네임스페이스를 사용하여 layout.js의 스크롤 이벤트와 충돌 방지
+        $body.off('scroll.finance').on('scroll.finance', function() {
             const scrollTop = $body.scrollTop();
             $visualContainer.toggleClass('sticky', scrollTop >= headerHeight);
             $anchorList.toggleClass('fixed', scrollTop >= headerHeight + visualHeight);
@@ -101,7 +102,7 @@ $(document).ready(function() {
             } else {
                 $('.visual-container').removeClass('sticky');
                 $('.anchor-list').removeClass('fixed');
-                $('body').off('scroll');
+                $('body').off('scroll.finance');
             }
             initPanels();
         }, 150);
