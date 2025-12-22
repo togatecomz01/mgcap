@@ -199,6 +199,9 @@ h3.rfrnc::before { content:"※ "; display:inline; position:relative; left:inheri
 .text-list li:last-child { margin-bottom:0; }
 .text-list li > .rfrnc { margin-top:12px; margin-left:16px; width:100%; }
 .text-list.dot li > .rfrnc { margin-left:0; }
+.text-list li > p { width:100%; }
+.text-list li > * + p { margin-bottom:10px; }
+.text-list li > * + p:last-child { margin-bottom:0; }
 
 
 .dot dt { display:inline-flex; align-items:center; font-weight:var(--font-w-b); }
@@ -240,7 +243,6 @@ h3.rfrnc::before { content:"※ "; display:inline; position:relative; left:inheri
 
  /** 들여쓰기 **/
  .page-container.indent .text-group .text-list > li > .text-list { margin-left:20px; margin-top:12px; }
- .text-group .text-list > li span + p { width:100%; }
 
 
 
@@ -335,7 +337,7 @@ form:has(.form-wrap.search-form) + [class*="-group"] { margin-top:38px; }
 /**다이아몬드박스**/
 .diamond-box { display: flex; padding: 32px 24px; margin-top: 32px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; background: var(--bg-box); }
 .diamond-box li::before { content:"◆"; display:inline; color:var(--primary); margin-right: 6px; }
-.diamond-box li { color: var(--color-2); font-weight: var(--font-w-m);}
+.diamond-box li { color: var(--color-2); font-weight: var(--font-w-m); word-break:keep-all; }
 
 ul.diamond-box li { padding-left:22px; text-indent:-22px; }
 
