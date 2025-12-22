@@ -45,7 +45,8 @@
 .submenu .submenu2 li { display:inline-block; }
 .submenu .submenu2 li a { font-size:var(--font14); font-weight:var(--font-w-r); }
 .submenu .submenu2 li.on a,
-.list-item  .submenu > li:hover > a { font-weight:700; color:var(--primary); }
+.list-item  .submenu > li:hover > a,
+.menu-inner .gnb-2dep > li:hover > a { font-weight:700; color:var(--primary); }
 
 /* 검색, 검색창 닫기, 전체메뉴 */
 .header-btn-wrap { display:flex; column-gap:12px; }
