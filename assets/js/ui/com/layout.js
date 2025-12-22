@@ -314,6 +314,9 @@ $(document).ready(function () {
     /**
      * 스크롤 업 버튼 on 클래스 제어
      **/
+    // main2.html에서만 .contentWrap 스크롤 사용 (bodyWrap과 contentWrap이 함께 있는 경우)
+    var $scrollContainer = $(".bodyWrap.contentWrap").length ? $(".bodyWrap.contentWrap") : $("body");
+    
     var scrollTopBtnL = (function () {
         var scrollY = 0;
     
@@ -326,12 +329,12 @@ $(document).ready(function () {
                 }
             },
             scrolling: function () {
-                scrollY = $("body").scrollTop();
+                scrollY = $scrollContainer.scrollTop();
                 this.btnAni();
             },
             btnClick: function () {
                 $(".scrollUpBtn").on("click", function () {
-                    $("body").animate({ scrollTop: 0 }, 200);
+                    $scrollContainer.animate({ scrollTop: 0 }, 200);
                 });
             },
             init: function () {
@@ -340,8 +343,8 @@ $(document).ready(function () {
         };
     })();
     
-    // event - body의 스크롤 이벤트 감지
-    $("body").on("scroll", function () {
+    // event - 스크롤 컨테이너의 스크롤 이벤트 감지
+    $scrollContainer.on("scroll", function () {
         scrollTopBtnL.scrolling();
     });
     

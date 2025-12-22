@@ -275,6 +275,9 @@ body:has(.main) .menu .menu-item .list-item { top:75px; }
 .main-container .main-content > .banner-group .btn-service a.ser09-1 span::before { background-image:var(--ser09-1); }
 .main-container .main-content > .banner-group .btn-service a span .mo-t { display:none; }
 
+
+.main-container .main-content .footer-wrap { padding-bottom:30px; }
+
 /* 이용안내 바로가기 mobile ver. */
 .main-container .main-content > .shortcut-group { display:none; }
 
@@ -367,6 +370,7 @@ body:has(.main) .menu .menu-item .list-item { top:75px; }
     .main-container { max-width:100%; padding-left:0; }
 
     .main-container .main-content { max-width:100%; padding:48px 24px 50px; }
+    
 
     /* 공지사항&입찰공고&알림존 */
     .main-container .main-content > .notice-group{
@@ -505,9 +509,8 @@ body:has(.main) .menu .menu-item .list-item { top:75px; }
     .main-container .main-content > .shortcut-group .mo-shortcut > p { padding-bottom:23px; font-size:var(--font14); font-weight:var(--font-w-b); color:var(--white); line-height:21px; white-space:pre-line; }
     .main-container .main-content > .shortcut-group .mo-shortcut > a { font-size:var(--font12); font-weight:var(--font-w-m); color:var(--white); text-decoration:underline; }
 
-    .main-container .main-content > .copyright .footer-wrap { padding-bottom:0; }
-    .main-container .main-content > .copyright { margin-bottom:0; }
-    .main-container .main-content > .copyright .footer-top .family-site { position:unset; }
+    .main-container .main-content > .footer-wrap { padding-bottom:0; }
+
 
 
     /**이벤트 팝업**/
