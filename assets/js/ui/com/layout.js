@@ -339,6 +339,8 @@ $(document).ready(function () {
             },
             init: function () {
                 this.btnClick();
+                // 초기 스크롤 위치 확인 (새로고침 시 스크롤 위치 복원 대응)
+                this.scrolling();
             }
         };
     })();
