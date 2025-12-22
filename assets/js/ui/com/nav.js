@@ -11,7 +11,7 @@ window.addEventListener('load', function() {
 function updateScrollState() {
     const allMenu = document.getElementById('allMenu');
     const menuInner = document.querySelector('.menu-inner');
-    const shouldLockScroll = allMenu?.classList.contains('on');
+    const shouldLockScroll = allMenu && allMenu.classList.contains('on');
 
     document.body.classList.toggle('no-scroll', shouldLockScroll);
 
@@ -19,8 +19,8 @@ function updateScrollState() {
         if (window.innerWidth < 768) {
             menuInner.style.maxHeight = '100vh';
         } else {
-            const headerHeight = document.querySelector('.allmenu-header')?.offsetHeight || 0;
-            const navTabHeight = document.querySelector('.menu-cont .menu-l .menu-tit')?.offsetHeight || 0;
+            const headerHeight = document.querySelector('.allmenu-header') ? document.querySelector('.allmenu-header').offsetHeight : 0;
+            const navTabHeight = document.querySelector('.menu-cont .menu-l .menu-tit') ? document.querySelector('.menu-cont .menu-l .menu-tit').offsetHeight : 0;
             menuInner.style.maxHeight = `calc(100vh - ${headerHeight + navTabHeight}px)`;
         }
     }
@@ -35,7 +35,7 @@ function mobileMenu() {
     const menuInner = document.querySelector('.menu-inner');
 
     for (let i = 0; i < menuTabs.length; i++) {
-        // 키보드 접근성을 위한 속성 추가
+        // 키보드 접근성
         menuTabs[i].setAttribute('tabindex', '0');
         
         // 탭 활성화 함수 (모바일용)
@@ -123,8 +123,6 @@ function mobileMenu() {
     // 스크롤 위치에 따라 탭 활성화
     function updateActiveTabOnScroll() {
         const scrollTop = menuInner.scrollTop;
-        // const menuInnerTop = menuInner.getBoundingClientRect().top;
-        
         let currentSection = null;
         let minDistance = Infinity;
 
@@ -180,10 +178,10 @@ function menuToggle() {
     }
     // resize 시 높이 재계산
     let resizeTimer;
-    window.addEventListener('resize', () => {
+    window.addEventListener('resize', function() {
         clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(() => {
-            if (allMenu?.classList.contains('on')) {
+        resizeTimer = setTimeout(function() {
+            if (allMenu && allMenu.classList.contains('on')) {
                 updateScrollState();
             }
         }, 100);
@@ -196,45 +194,146 @@ function searchToggle() {
     const allSearch = document.getElementById('allSearch');
     const searchCloseBtn = document.querySelector('.header-btn-wrap .close-btn');
     const allMenuSearchBtn = document.querySelector('.allmenu-header-inner .search-btn');
-    const allSearchCloseBtn = document.querySelector('.allsearch-header-inner .close-btn')
+    const allSearchCloseBtn = document.querySelector('.allsearch-header-inner .close-btn');
     
     if (searchBtn && allSearch) {
-        searchBtn.addEventListener('click', function() {
+        // 검색창 열기 함수
+        function openSearch(triggerButton, closeButton) {
+            const menuItems = document.querySelectorAll('.lnb .menu-item');
+            menuItems.forEach(function(item) {
+                item.classList.remove('on');
+                const btn = item.querySelector('.menu-tit');
+                if (btn) {
+                    btn.classList.remove('on');
+                }
+            });
+            
             allSearch.classList.add('on');
-            searchBtn.style.display = 'none';
-            if (searchCloseBtn) {
-                searchCloseBtn.classList.add('on');
+            
+            // 트리거 버튼 숨김 처리
+            if (triggerButton) {
+                triggerButton.style.display = 'none';
             }
+            
+            // 닫기 버튼 표시
+            if (closeButton) {
+                closeButton.classList.add('on');
+            }
+            
+            // 포커스 이동 (입력 필드로 먼저 이동)
+            setTimeout(function() {
+                // 검색창 내부의 첫 번째 입력 필드 찾기
+                const searchInput = allSearch.querySelector('input[type="text"], input[type="search"], input:not([type])');
+                
+                if (searchInput) {
+                    searchInput.focus();
+                } else {
+                    // 입력 필드가 없으면 첫 번째 포커스 가능 요소
+                    const focusableElements = allSearch.querySelectorAll(
+                        'input:not([disabled]), button:not([disabled]), a[href], textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
+                    );
+                    if (focusableElements.length > 0) {
+                        focusableElements[0].focus();
+                    }
+                }
+            }, 100);
+        }
+        
+        // 검색창 닫기 함수
+        function closeSearch(triggerButton, closeButton) {
+            allSearch.classList.remove('on');
+            
+            // 트리거 버튼 다시 표시
+            if (triggerButton) {
+                triggerButton.style.display = 'inline-block';
+                // 원래 버튼으로 포커스 복귀
+                setTimeout(function() {
+                    triggerButton.focus();
+                }, 100);
+            }
+            
+            // 닫기 버튼 숨김
+            if (closeButton) {
+                closeButton.classList.remove('on');
+            }
+        }
+        
+        // PC 검색 버튼
+        searchBtn.addEventListener('click', function() {
+            openSearch(searchBtn, searchCloseBtn);
         });
         
         if (searchCloseBtn) {
             searchCloseBtn.addEventListener('click', function() {
-                allSearch.classList.remove('on');
-                searchBtn.style.display = 'inline-block';
-                this.classList.remove('on');
+                closeSearch(searchBtn, searchCloseBtn);
             });
         }
 
-        // 모바일 검색
+        // 모바일 검색 버튼
         if (allMenuSearchBtn && allSearchCloseBtn) {
-            allMenuSearchBtn.addEventListener('click', function () {
-                console.log('click');
-                allSearch.classList.add('on');
-                allMenuSearchBtn.style.display = 'none';
+            allMenuSearchBtn.addEventListener('click', function() {
+                openSearch(allMenuSearchBtn, allSearchCloseBtn);
             });
             
-            allSearchCloseBtn.addEventListener('click', function () {
-                allSearch.classList.remove('on');
-                allMenuSearchBtn.style.display = 'inline-block';
+            allSearchCloseBtn.addEventListener('click', function() {
+                closeSearch(allMenuSearchBtn, allSearchCloseBtn);
             });
         }
+        
+        // 포커스 트랩 (검색창 내부 → 닫기 버튼 순환)
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Tab' && allSearch.classList.contains('on')) {
+                // 활성화된 닫기 버튼 찾기
+                let activeCloseBtn = null;
+                if (searchCloseBtn && searchCloseBtn.classList.contains('on')) {
+                    activeCloseBtn = searchCloseBtn;
+                } else if (allSearchCloseBtn) {
+                    activeCloseBtn = allSearchCloseBtn;
+                }
+                
+                if (!activeCloseBtn) return;
+                
+                // 검색창 내부 포커스 가능 요소만 (닫기 버튼 제외)
+                const searchFocusable = Array.from(allSearch.querySelectorAll(
+                    'input:not([disabled]), button:not([disabled]), a[href], textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
+                ));
 
+                if (searchFocusable.length === 0) return;
+
+                const firstSearchElement = searchFocusable[0];
+                const lastSearchElement = searchFocusable[searchFocusable.length - 1];
+
+                // 검색창 마지막 요소 → 닫기 버튼
+                if (!e.shiftKey && document.activeElement === lastSearchElement) {
+                    e.preventDefault();
+                    activeCloseBtn.focus();
+                }
+                // 닫기 버튼 → 검색창 첫 요소
+                else if (!e.shiftKey && document.activeElement === activeCloseBtn) {
+                    e.preventDefault();
+                    firstSearchElement.focus();
+                }
+                // 검색창 첫 요소 → 닫기 버튼
+                else if (e.shiftKey && document.activeElement === firstSearchElement) {
+                    e.preventDefault();
+                    activeCloseBtn.focus();
+                }
+                // 닫기 버튼 → 검색창 마지막 요소
+                else if (e.shiftKey && document.activeElement === activeCloseBtn) {
+                    e.preventDefault();
+                    lastSearchElement.focus();
+                }
+            }
+        });
+
+        // 반응형 처리
         function handleResize() {
             if (window.innerWidth < 767) {
-                console.log('이하');
                 searchBtn.style.display = 'none';
             } else {
-                searchBtn.style.display = 'inline-block';
+                if (!allSearch.classList.contains('on')) {
+                    searchBtn.style.display = 'inline-block';
+                }
             }
         }
 
@@ -339,7 +438,6 @@ function headerMenu() {
             closeTimer = setTimeout(function() {
                 menuItem.classList.remove('on');
                 menuButton.classList.remove('on');
-                // active는 제거하지 않음!
             }, 100);
         }
         
@@ -362,6 +460,8 @@ function headerMenu() {
                 if (isActive) {
                     // active 해제
                     menuButton.classList.remove('active');
+                    menuItem.classList.remove('on');
+                    menuButton.classList.remove('on');
                 } else {
                     // 타이머 클리어
                     if (closeTimer) {
@@ -372,9 +472,10 @@ function headerMenu() {
                     // 다른 메뉴의 active 제거
                     menuItems.forEach(function(otherItem) {
                         if (otherItem !== menuItem) {
+                            otherItem.classList.remove('on');
                             const otherBtn = otherItem.querySelector('.menu-tit');
                             if (otherBtn) {
-                                otherBtn.classList.remove('active');
+                                otherBtn.classList.remove('active', 'on');
                             }
                         }
                     });
@@ -412,12 +513,8 @@ function headerMenu() {
             
             // 같은 레벨 메뉴들 초기화
             const allSubmenu2 = document.querySelectorAll('.lnb .submenu2 > li');
-            const allSubmenu3 = document.querySelectorAll('.lnb .submenu3 > li');
             
             allSubmenu2.forEach(function(el) {
-                el.classList.remove('on');
-            });
-            allSubmenu3.forEach(function(el) {
                 el.classList.remove('on');
             });
             
@@ -426,7 +523,7 @@ function headerMenu() {
     });
 
     // 키보드 이벤트
-    const allMenuLinks = document.querySelectorAll('.lnb .menu-tit, .lnb .submenu a, .lnb .submenu button, .lnb .submenu2 a, .lnb .submenu2 button, .lnb .submenu3 a, .lnb .submenu3 button');
+    const allMenuLinks = document.querySelectorAll('.lnb .menu-tit, .lnb .submenu a, .lnb .submenu button, .lnb .submenu2 a, .lnb .submenu2 button');
     allMenuLinks.forEach(function(link) {
         link.addEventListener('keydown', function(e) {
             if (e.key === 'Enter' || e.key === ' ') {
