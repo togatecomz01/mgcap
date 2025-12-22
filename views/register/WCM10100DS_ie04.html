@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>로그인&gt;홈</title>
+
+    <meta name="keywords" content="MG캐피탈" />
+    <meta name="copyright" content="copyrights 2025 MG캐피탈" />
+    <meta name="viewport" content="width=device-width" />
+    <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="No-Cache" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico"/>
+    <link rel="stylesheet" href="../../assets/css/com/default.css" />
+    <link rel="stylesheet" href="../../assets/css/com/common.css" />
+    <link rel="stylesheet" href="../../assets/css/com/style.css" />
+    <link rel="stylesheet" href="../../assets/css/com/fonts.css" />
+    <link rel="stylesheet" href="../../assets/css/com/layout.css" />
+    <link rel="stylesheet" href="../../assets/css/com/nav.css" />
+    <link rel="stylesheet" href="../../assets/css/com/input.css" />
+    <link rel="stylesheet" href="../../assets/css/com/button.css" />
+    <link rel="stylesheet" href="../../assets/css/com/tab.css" />
+    <link rel="stylesheet" href="../../assets/css/com/table.css" />
+    <link rel="stylesheet" href="../../assets/css/com/content.css" />
+    <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+    <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+    <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
+    <script src="../../assets/js/include.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div data-include-path="../../views/COMMON/header.html"></div>
+        <div class="bodyWrap">
+            <main class="contentWrap">
+                <nav class="location-container">
+                    <ol class="breadcrumb">
+                        <li><span class="home">홈</span></li>
+                        <li><span>로그인</span></li>
+                    </ol>
+                </nav>
+                <section class="visual-container">
+                    <h2>로그인</h2>
+                </section>
+                <section class="page-container login ie04">
+                    <div class="tab-container">
+                        <nav class="tab-list depth1">
+                            <div class="btn-group">
+                                <a hef="" class="tab-item">공동인증서</a>
+                                <a hef="" class="tab-item">휴대폰 인증</a>
+                                <a hef="" class="tab-item active">민간(사설) 인증서</a>
+                            </div>
+                        </nav>
+                        <div class="tab-content">
+                            <div class="form-content">
+                                <fieldset class="form-content">
+                                    <legend>정보입력 입력폼</legend>
+                                    <div class="form-wrap">
+                                        <div class="form-group">
+                                            <label for="CUST_NM">이름</label>
+                                            <input id="CUST_NM" type="text" name="CUST_NM" maxlength="12" placeholder="이름을 입력해주세요">
+                                        </div><!--//form-group-->
+                                        <div class="form-group">
+                                            <label>생년월일</label>
+                                            <div class="flex-row gap10">
+                                                <input style="flex:4;" maxlength="4" id="year" name="year" type="number" inputmode="numeric" oninput="maxLengthCheck(this)" required="" placeholder="생년">
+                                                <input style="flex:2;" maxlength="2" id="month" name="month" type="number" inputmode="numeric" oninput="maxLengthCheck(this)" required="" placeholder="월">
+                                                <input style="flex:2;" maxlength="2" id="day" name="day" type="number" inputmode="numeric" oninput="maxLengthCheck(this)" required="" placeholder="일">
+                                            </div><!--//flex-row-->
+                                        </div><!--//form-group-->
+                                    </div><!--//form-wrap-->
+                                    <div class="form-wrap">
+                                        <div class="form-group">
+                                            <p class="label-tit">성별</p>
+                                            <label class="radio button">
+                                                <input type="radio" name="gend" id="gend" value="1" checked="">
+                                                <span>남자</span>
+                                            </label>
+                                            <label class="radio button">
+                                                <input type="radio" name="gend" id="gend" value="2">
+                                                <span>여자</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-group">
+                                            <p class="label-tit">내외국인</p>
+                                            <label class="radio button">
+                                                <input type="radio" name="ntv_frnr" id="ntv_frnr" value="L" checked="">
+                                                <span>내국인</span>
+                                            </label>
+                                            <label class="radio button">
+                                                <input type="radio" name="ntv_frnr" id="ntv_frnr" value="F">
+                                                <span>외국인</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-wrap">
+                                        <div class="form-group">
+                                            <label for="TEL_CMM_CD">휴대전화번호</label>
+                                            <div class="flex-row column">
+                                                <div>
+                                                    <select id="TEL_CMM_CD" name="TEL_CMM_CD" required="" title="이동통신사 선택">
+                                                        <option value="01">SKT</option>
+                                                        <option value="02">KT</option>
+                                                        <option value="03">LGU+</option>
+                                                        <option value="04">알뜰폰SKT</option>
+                                                        <option value="05">알뜰폰KT</option>
+                                                        <option value="06">알뜰폰LGU+</option>
+                                                    </select>
+                                                    <select id="CELL_NO1" name="CELL_NO1" required="" title="휴대폰 앞자리">
+                                                        <option value="010">010</option>
+                                                        <option value="011">011</option>
+                                                        <option value="016">016</option>
+                                                        <option value="017">017</option>
+                                                        <option value="018">018</option>
+                                                        <option value="019">019</option>
+                                                    </select>
+                                                    <input type="number" pattern="\d*" placeholder="" name="CELL_NO2" class="inputText" id="CELL_NO2" value="" maxlength="4" oninput="maxLengthCheck(this)">
+                                                    <input type="text" name="CELL_NO3" class="inputText" id="CELL_NO3" value="" maxlength="4" readonly="true" onclick="viewKeypad(this, 0, 4);">
+                                                    <input type="hidden" name="xksessionid2" id="xksessionid2">
+                                                    <input type="hidden" name="xksectoken2" id="xksectoken2">
+                                                    <input type="hidden" name="xkindexed2" id="xkindexed2">
+                                                </div>
+                                            </div><!--//flex-row-->
+                                        </div><!--//form-group-->
+                                    </div><!--//form-wrap-->
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="bottom-container">
+                    <div class="btn-content cta" id="nextBtnWrap">
+                        <div class="button-group">
+                            <a href="javascript:void(0);" class="btn-secondary setShowInfo">취소</a>
+                            <a href="javascript:void(0);" onclick="handleAuthSelection(this);" data-value="" id="nextBtn" class="btn-primary">다음</a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <div data-include-path="../../views/COMMON/footer.html"></div>
+    </div>
+</body>
+</html>

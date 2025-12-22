@@ -170,7 +170,9 @@ body{
 .private-content.login .private-group a:hover:after { background-color:var(--primary); }
 
 
-
+/** ¹Î°£ÀÎÁõ **/
+.page-container.login.ie04 .form-content > .form-wrap { gap:10px; }
+.page-container.login.ie04 .form-content > .form-wrap > .form-group:only-of-type { flex:0 0 50%; }
 
 
 
