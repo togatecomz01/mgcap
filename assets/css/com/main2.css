@@ -228,11 +228,23 @@ body:has(.main) .menu .menu-item .list-item { top:75px; }
 
 /* 고객간편서비스 */
 .main-container .main-content > .banner-group {
-    --ser01:url("../../images/content/MAIN/w/ico_ser01.png");
-    --ser02:url("../../images/content/MAIN/w/ico_ser02.png");
-    --ser03:url("../../images/content/MAIN/w/ico_ser03.png");
-    --ser04:url("../../images/content/MAIN/w/ico_ser04.png");
-    --ser07:url("../../images/content/MAIN/w/ico_ser07.png");
+    --ser01:url("../../images/content/MAIN/ico_ser01.png");
+    --ser01-1:url("../../images/content/MAIN/ico_ser01-1.png");
+    --ser02:url("../../images/content/MAIN/ico_ser02.png");
+    --ser02-1:url("../../images/content/MAIN/ico_ser02-1.png");
+    --ser03:url("../../images/content/MAIN/ico_ser03.png");
+    --ser03-1:url("../../images/content/MAIN/ico_ser03-1.png");
+    --ser04:url("../../images/content/MAIN/ico_ser04.png");
+    --ser04-1:url("../../images/content/MAIN/ico_ser04-1.png");
+    --ser05:url("../../images/content/MAIN/ico_ser05.png");
+    --ser06:url("../../images/content/MAIN/ico_ser06.png");
+    --ser06-1:url("../../images/content/MAIN/ico_ser06-1.png");
+    --ser07:url("../../images/content/MAIN/ico_ser07.png");
+    --ser07-1:url("../../images/content/MAIN/ico_ser07-1.png");
+    --ser08:url("../../images/content/MAIN/ico_ser08.png");
+    --ser08-1:url("../../images/content/MAIN/ico_ser08-1.png");
+    --ser09:url("../../images/content/MAIN/ico_ser09.png");
+    --ser09-1:url("../../images/content/MAIN/ico_ser09-1.png");
 }
 .main-container .main-content > .banner-group { margin-bottom:108px; padding:34px; border-radius:20px; background-color:var(--white); /*background-image:var(--service_img01); background-repeat:no-repeat; background-size:294px auto; background-position:top right;*/ }
 .main-container .main-content > .banner-group .visual-tit { min-height:270px; }
@@ -244,10 +256,23 @@ body:has(.main) .menu .menu-item .list-item { top:75px; }
 .main-container .main-content > .banner-group .btn-service a:hover { border:2px solid var(--primary); box-shadow:0 0 15px 0 rgba(1, 43, 110, 0.20); }
 .main-container .main-content > .banner-group .btn-service a > span::before { content:""; display:block; margin:0 auto 5px; width:72px; height:72px; border-radius:125px; background-repeat:no-repeat; background-size:73px 72px; background-position:center; }
 .main-container .main-content > .banner-group .btn-service a.ser01 span::before { background-image:var(--ser01); }
+.main-container .main-content > .banner-group .btn-service a.ser01-1 span::before { background-image:var(--ser01-1); }
 .main-container .main-content > .banner-group .btn-service a.ser02 span::before { background-image:var(--ser02); }
+.main-container .main-content > .banner-group .btn-service a.ser02-1 span::before { background-image:var(--ser02-1); }
 .main-container .main-content > .banner-group .btn-service a.ser03 span::before { background-image:var(--ser03); }
+.main-container .main-content > .banner-group .btn-service a.ser03-1 span::before { background-image:var(--ser03-1); }
 .main-container .main-content > .banner-group .btn-service a.ser04 span::before { background-image:var(--ser04); }
+.main-container .main-content > .banner-group .btn-service a.ser04-1 span::before { background-image:var(--ser04-1); }
+.main-container .main-content > .banner-group .btn-service a.ser05 span::before { background-image:var(--ser05); }
+.main-container .main-content > .banner-group .btn-service a.ser05-1 span::before { background-image:var(--ser05-1); }
+.main-container .main-content > .banner-group .btn-service a.ser06 span::before { background-image:var(--ser06); }
+.main-container .main-content > .banner-group .btn-service a.ser06-1 span::before { background-image:var(--ser06-1); }
 .main-container .main-content > .banner-group .btn-service a.ser07 span::before { background-image:var(--ser07); }
+.main-container .main-content > .banner-group .btn-service a.ser07-1 span::before { background-image:var(--ser07-1); }
+.main-container .main-content > .banner-group .btn-service a.ser08 span::before { background-image:var(--ser08); }
+.main-container .main-content > .banner-group .btn-service a.ser08-1 span::before { background-image:var(--ser08-1); }
+.main-container .main-content > .banner-group .btn-service a.ser09 span::before { background-image:var(--ser09); }
+.main-container .main-content > .banner-group .btn-service a.ser09-1 span::before { background-image:var(--ser09-1); }
 .main-container .main-content > .banner-group .btn-service a span .mo-t { display:none; }
 
 /* 이용안내 바로가기 mobile ver. */
@@ -294,7 +319,9 @@ body:has(.main) .menu .menu-item .list-item { top:75px; }
 
 @media (max-width:1400px){
 
+    .main .visual-container::after { display:none; }
     .main-container .main-content.main-container .main-content { padding:46px 0 0 40px; }
+    
     .main-container .main-content { padding-right:20px; }
     .main-container .main-content > .quick-group .quick-tit { padding-right:20px; }
 
@@ -458,12 +485,7 @@ body:has(.main) .menu .menu-item .list-item { top:75px; }
     .main-container .main-content > .notice-group .alarm { display:none; }
     .main-container .main-content > .notice-group .btn-more { top:unset; bottom:0; padding:16px 10px; width:100%; border-radius:6px; background-image:none; background-color:var(--color-f6); font-size:var(--font16); text-align:center; }
 
-    .main-container .main-content > .banner-group {
-        --ser01:url("../../images/content/MAIN/m/ico_ser01.png");
-        --ser02:url("../../images/content/MAIN/m/ico_ser02.png");
-        --ser03:url("../../images/content/MAIN/m/ico_ser03.png");
-        --ser04:url("../../images/content/MAIN/m/ico_ser04.png");
-    }
+   
     .main-container .main-content > .banner-group { padding:20px 24px 34px; margin-bottom:0; border-radius:0; background-color:var(--body-color); background-size:104px auto; background-position:top 40px right 24px; }
     .main-container .main-content > .banner-group .visual-tit { min-height:160px; }
     .main-container .main-content > .banner-group  .img-seasonal { position:absolute; top:initial; bottom:-50px; right:-20px; width:160px;  }
