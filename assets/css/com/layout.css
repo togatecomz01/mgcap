@@ -505,9 +505,6 @@ main.contentWrap > .bottom-container { margin-top:72px; }
 
     .bodyWrap { padding-top:78px; }
 
-    /* 조건검색 */
-    .search-form .form-group:has(.address) {  }
-
 	/*---------------------------------------------
 		#푸터
 	---------------------------------------------*/
@@ -518,6 +515,7 @@ main.contentWrap > .bottom-container { margin-top:72px; }
     .bodyWrap { padding-top:54px; }
 
     .mt-72 { margin-top:52px; }
+    .mo-dp-none { display:none; }
 
     /*---------------------------------------------
 		#헤더
