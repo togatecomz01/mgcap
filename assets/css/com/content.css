@@ -172,7 +172,7 @@ body{
 
 /** ¹Î°£ÀÎÁõ **/
 .page-container.login.ie04 .form-content > .form-wrap { gap:10px; }
-.page-container.login.ie04 .form-content > .form-wrap > .form-group:only-of-type { flex:0 0 50%; }
+.page-container.login.ie04 .form-content > .form-wrap > .form-group:only-of-type { flex:0 0 calc(50% - 5px); }
 
 
 

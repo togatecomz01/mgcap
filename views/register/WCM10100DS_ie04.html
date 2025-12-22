@@ -69,10 +69,19 @@
                                         </div><!--//form-group-->
                                         <div class="form-group">
                                             <label>생년월일</label>
-                                            <div class="flex-row gap10">
-                                                <input style="flex:4;" maxlength="4" id="year" name="year" type="number" inputmode="numeric" oninput="maxLengthCheck(this)" required="" placeholder="생년">
-                                                <input style="flex:2;" maxlength="2" id="month" name="month" type="number" inputmode="numeric" oninput="maxLengthCheck(this)" required="" placeholder="월">
-                                                <input style="flex:2;" maxlength="2" id="day" name="day" type="number" inputmode="numeric" oninput="maxLengthCheck(this)" required="" placeholder="일">
+                                            <div class="flex-row">
+                                                <span class="txt-unit">
+                                                    <input maxlength="4" id="year" name="year" type="number" inputmode="numeric" oninput="maxLengthCheck(this)" required="">
+                                                    <span class="txt">년</span>
+                                                </span>
+                                                <span class="txt-unit">
+                                                    <input maxlength="2" id="month" name="month" type="number" inputmode="numeric" oninput="maxLengthCheck(this)" required="">
+                                                    <span class="txt">월</span>
+                                                </span>
+                                                <span class="txt-unit">
+                                                    <input maxlength="2" id="day" name="day" type="number" inputmode="numeric" oninput="maxLengthCheck(this)" required="">
+                                                    <span class="txt">일</span>
+                                                </span>
                                             </div><!--//flex-row-->
                                         </div><!--//form-group-->
                                     </div><!--//form-wrap-->
