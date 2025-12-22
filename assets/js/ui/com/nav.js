@@ -113,7 +113,7 @@ function mobileMenu() {
         menuInner.addEventListener('scroll', function() {
             clearTimeout(scrollTimeout);
             scrollTimeout = setTimeout(function() {
-                if (window.innerWidth >= 786) {
+                if (window.innerWidth >= 768) {
                     updateActiveTabOnScroll();
                 }
             }, 100);
