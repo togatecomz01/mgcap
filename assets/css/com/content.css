@@ -1545,6 +1545,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .sub-process-content ul li span.sr-only.mo { color:var(--color-6); font-size:var(--font14);  }
     
     /**±›¿∂º“∫Ò¿⁄∫∏»£«Â¿Â**/
+    .WCU10100VQ .text-group p { font-size:var(--font18); }
     .WCU10100VQ .img-group { padding-top:42px; }
     .WCU10100VQ .img-group img { display:none; }
     .WCU10100VQ .img-group .sr-only { position:static; width:auto; height:auto; margin:0; overflow:visible; clip:auto; }
