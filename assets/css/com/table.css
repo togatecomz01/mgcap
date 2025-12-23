@@ -17,11 +17,12 @@ body {
 table{  border-spacing:0; border-collapse: collapse; table-layout:fixed; max-width:1200px; }
 
 table thead tr:first-child,
-table tbody:first-child tr:first-child { border-top:1px solid var(--color-2); }
+table tbody tr:first-child { border-top:1px solid var(--color-2); }
+table thead + tbody tr:first-child { border-top:0; }
 
 
-table tr:first-of-type th { border-top:1px solid var(--color-2); }
-table tr:first-of-type td { border-top:1px solid var(--color-45); }
+table tr:first-of-type th { border-top:var(--color-2); }
+table tr:first-of-type td { border-top:var(--color-45); }
 table th,
 table td { padding:var(--table-pd); text-align:center; color:var(--default-color); font-size:var(--font18); font-weight:var(--font-w-r); border-bottom:var(--table-border); word-break:keep-all !important; }
 table th { background:var(--table-th); border-left:var(--table-border); font-weight:var(--font-w-m); color:var(--color-2); }
@@ -126,7 +127,7 @@ table.round { border:var(--table-border); border-bottom:0; border-collapse:separ
     .mo-appendix { border-top:0; }
     .mo-appendix colgroup{ display:none; }
     .mo-appendix thead, .mo-appendix thead tr { display:flex; gap:16px; justify-content:flex-end; }
-    .mo-appendix thead tr { border-top:0; margin-bottom:10px; }
+    .mo-appendix thead tr { border-top:0 !important; margin-bottom:10px; }
     .mo-appendix thead th { display:inline-flex; align-items:center; gap:4px; padding:0; background:transparent; border:0; font-weight:var(--font-w-m); color:var(--color-45); font-size:var(--font12); }
     .mo-appendix thead th::before { content:""; display:block; width:10px; height:10px; box-sizing:border-box; }
     .mo-appendix thead th:first-of-type::before { background:var(--table-th); }
