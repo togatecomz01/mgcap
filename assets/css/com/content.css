@@ -86,6 +86,7 @@ body{
 /**ÈÞ´ëÆù ÀÎÁõ**/
 .page-container.login .form-content.login { position:relative; margin-top:26px; padding:0 4px 4px 376px; overflow:visible; }
 .page-container.login .form-content.login::before { content:""; display:block; position:absolute; left:0; right:0; width:352px; height:100%; background:url("../../images/content/register/w/bg_login3.png") no-repeat left center; background-size:auto 100%; border-radius:16px; overflow:hidden;  }
+.page-container.login .private-content.form-content.login::before { background-size:100%;  }
 .page-container.login .form-content fieldset.form-content { padding-right:2px; }
 .page-container.login .form-content > .form-wrap { gap:0; margin-bottom:0; }
 .page-container.login .form-content > .form-wrap > .form-group { margin-bottom:36px;  }
