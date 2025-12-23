@@ -1589,6 +1589,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .MGC-PRT-CST-010 .text-group:not(.text-group:first-child) div { margin-top:18px; padding:0; width:auto; }
     .WCC20700VS .text-group:not(.text-group:first-child) > p { margin-top:16px !important; padding:0; width:auto; }
     .MGC-PRT-CST-010 .text-group:not(.text-group:first-child) div > p { margin-top:16px; }
+    .WCC20700VS .btn-group .btn-download span, .WCU40130VQ .btn-group .btn-link span, .WCU40140VQ .btn-group .btn-link span { font-size:var(--font18); }
 
     /** 장애인 상담 안내 **/
     .WCU11000VQ .text-list .rfrnc { padding:18px; font-size:var(--font14); color:var(--color-6); background-color:var(--bg-box); }
