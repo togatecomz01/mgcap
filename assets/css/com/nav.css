@@ -27,7 +27,7 @@
 .header-r .header-btn-wrap label.toggle input:checked + span { left:6px; color:var(--primary); }
 
 .header-r .menu .menu-item { padding:25px 12px 27px; }
-.header-r .menu .menu-item .menu-tit { font-size:var(--font14); font-weight:var(--font-w-m); color:var(--color-6); background-color:transparent; }
+.header-r .menu .menu-item .menu-tit { min-width:44px; height:44px; font-size:var(--font14); font-weight:var(--font-w-m); color:var(--color-6); background-color:transparent; }
 .header-r .menu .menu-item.on .menu-tit,
 .header-r .menu .menu-item .menu-tit.active { color:var(--primary); }
 
