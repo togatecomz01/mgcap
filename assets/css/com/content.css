@@ -8,11 +8,11 @@ body{
     --process-dot-border:6px solid #C4DAF7;
     --process-bg:var(--color-fa);
     --process-line:#E0E0E0;
-    --process-step1-bg:#5296F2;
-    --process-step2-bg:#4B89E5;
-    --process-step3-bg:#4277D4;
-    --process-step4-bg:#3763C1;
-    --process-step5-bg:#204BAB;
+    --process-step1-bg:#0871F3;
+    --process-step2-bg:#2776D6;
+    --process-step3-bg:#0D50B6;
+    --process-step4-bg:#003483;
+    --process-step5-bg:#002459;
     --process-check:url("../../images/com/svg/ico_form_check.svg"); /** 프로세스 style2 체크 **/
     --ico-arrow:url("../../images/content/ico_arrow.svg");
     --ico-move:url("../../images/com/svg/ico_move.svg");
