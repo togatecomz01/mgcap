@@ -563,8 +563,8 @@ main.contentWrap > .bottom-container { margin-top:72px; }
 
     /**타이틀 및 텍스트**/
     
-    h3, .group > .text-group > h4 { font-size:var(--font20); }
-    .group > .text-group > h4.tit { font-size:var(--font16);  }
+    h3 { font-size:var(--font20); }
+    .group > .text-group > h4 { font-size:var(--font16);  }
     h3 + p { margin-top:18px; }
     [class*="-container"] form { margin:42px 0 32px; }
     [class*="-content"] * ~ h3 { margin-top:52px; }
