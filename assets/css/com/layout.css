@@ -242,7 +242,8 @@ h3.rfrnc::before { content:"※ "; display:inline; position:relative; left:inheri
 .table-content h3.table-tit { padding-bottom:20px; font-size:var(--font22); color:var(--color-2); }
 
  /** 들여쓰기 **/
- .page-container.indent .text-group .text-list > li > .text-list { margin-left:20px; margin-top:12px; }
+ .page-container.indent .text-group .text-list > li > .text-list,
+ .pop-body.indent .text-group .text-list > li > ol { margin-left:20px; margin-top:12px; }
 
 
 
@@ -344,15 +345,20 @@ form:has(.form-wrap.search-form) + [class*="-group"] { margin-top:38px; }
 ul.diamond-box li { padding-left:22px; text-indent:-22px; }
 
 /** 첨부파일 **/
-.attach { padding:24px; background-color:var(--bg-box); font-size:0; }
+.attach {
+    padding:24px;
+    background-color:var(--bg-box);
+    font-size:0;
+    --font-s:var(--font16);
+}
 .attach:last-of-type,
 .attach:only-of-type { margin-bottom:42px; }
 .attach + .attach { margin-top:20px; }
 [class*="-group"] h3 + .attach { margin-top:32px; }
-.attach dt { display:inline-block; padding-right:25px; max-width:115px; font-size:var(--font16); font-weight:var(--font-w-m); color:var(--color-6); vertical-align:top; }
+.attach dt { display:inline-block; padding-right:25px; width:125px; font-size:var(--font-s); font-weight:var(--font-w-b); color:var(--color-6); vertical-align:top; }
 .attach dt .num { color:var(--primary); }
 .attach dd { display:inline-block; width:calc(100% - 140px); }
-.attach dd a { font-size:var(--font16); font-weight:var(--font-w-r); color:var(--color-2); }
+.attach dd a { font-size:var(--font-s); font-weight:var(--font-w-r); color:var(--color-2); }
 .attach dd a + a { margin-top:16px; }
 /* 다운로드 버튼 */
 .list-download a.btn-download { padding:0; margin-left:10px; min-height:25px; border:0; }
@@ -568,6 +574,8 @@ main.contentWrap > .bottom-container { margin-top:72px; }
     [class*="-group"] h4 + * ~ * { margin-top:18px; }
     [class*="-group"] h4 + * ~ .rfrnc { margin-top:18px; }
     h3.rfrnc { font-size:var(--font20) !important; background:transparent !important; }
+    .group > .text-group > h4.tit-diamond,
+    h4.tit-diamond { padding-left: 22px; text-indent: -22px; font-size:var(--font16); }
 
 
 
@@ -596,7 +604,8 @@ main.contentWrap > .bottom-container { margin-top:72px; }
     .text-group .text-indent ~ * { margin-left:18px; }
     
   /** 들여쓰기 **/
-  .page-container.indent .text-group .text-list > li > .text-list { margin-left:20px; margin-top:12px; }
+  .page-container.indent .text-group .text-list > li > .text-list,
+  .pop-body.indent .text-group .text-list > li > ol { margin-left:20px; margin-top:12px; }
   .page-container.indent .text-group .text-list > li > .text-list > li { display:block; margin-bottom:8px; }
     
     /**유의사항 2025.10.27 추가**/
@@ -703,13 +712,12 @@ main.contentWrap > .bottom-container { margin-top:72px; }
     ul.diamond-box li { padding-left:18px; text-indent:-18px; }
 
     /** 첨부파일 **/
-    .attach { padding:12px; }
+    .attach { padding:12px; --font-s:var(--font14) }
     .attach:last-of-type,
     .attach:only-of-type { margin-bottom:36px; }
     .attach + .attach { margin-top:10px; }
-    .attach dt { font-size:var(--font14); }
-    .attach dd a { font-size:var(--font14); }
-    .attach dd a + a { margin-top:12px; }
+    .attach dd { margin-top:12px; width:100%; }
+    .attach dd a + a { margin-top:8px; }
 
 
     /*---------------------------------------------

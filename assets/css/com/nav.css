@@ -204,7 +204,7 @@
 	.allmenu-header-inner .close-btn::before { width:30px; height:30px; mask-size:auto 16px; -webkit-mask-size:auto 16px; }
 	.headerOn:has(.allsearch.on) .allmenu-header-inner .menu-btn { display:none; }
 
-	.no-scroll .allmenu-header { position:fixed; top:0; left:0; right:0; width:100%; }
+	.no-scroll .allmenu-header { position:fixed; top:0; left:0; right:0; width:100%; z-index:10; }
 	.no-scroll .menu-cont { margin-top:51px; }
 
 	/* ÀüÃ¼¸Þ´º ÄÁÅÙÃ÷ */
