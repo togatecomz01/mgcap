@@ -1,17 +1,75 @@
-window.addEventListener('load', function() {
-    mobileMenu();
-    menuToggle();
-    headerMenu();
-    searchToggle();
+/* =========================================================
+   MG캐피탈 nav.js 안정화 완성본 (새로고침/FTP DOM 지연 대응)
+   - 요소가 늦게 생성되어도 초기화가 붙도록 waitForEl 적용
+   - 중복 바인딩 방지 가드 적용
+========================================================= */
+
+/* ---------------------------------------------
+   공용: 요소 생성 대기 유틸
+--------------------------------------------- */
+function waitForEl(selector, cb, opt) {
+    opt = opt || {};
+    var interval = opt.interval || 100;   // ms
+    var maxTry = opt.maxTry || 80;        // 80 * 100ms = 8초
+    var count = 0;
+
+    var timer = setInterval(function () {
+        var el = document.querySelector(selector);
+        if (el) {
+            clearInterval(timer);
+            cb(el);
+            return;
+        }
+        count++;
+        if (count >= maxTry) {
+            clearInterval(timer);
+            if (opt.warn !== false) {
+                console.warn('waitForEl: timeout (' + selector + ')');
+            }
+        }
+    }, interval);
+}
+
+/* ---------------------------------------------
+   초기화: load 이후, 필요한 DOM이 생길 때마다 순차 초기화
+--------------------------------------------- */
+window.addEventListener('load', function () {
+
+    // 전체메뉴(올메뉴) 탭 영역이 생기면 mobileMenu 초기화
+    waitForEl('.menu-tit li', function () {
+        mobileMenu();
+    });
+
+    // 전체메뉴 버튼/레이어가 생기면 menuToggle 초기화
+    waitForEl('.menu-btn', function () {
+        waitForEl('#allMenu', function () {
+            menuToggle();
+        });
+    });
+
+    // 헤더 메뉴(#menuWrap)이 생기면 headerMenu 초기화
+    waitForEl('#menuWrap .menu-item', function () {
+        headerMenu();
+    });
+
+    // 검색 버튼/레이어가 생기면 searchToggle 초기화
+    waitForEl('.search-btn', function () {
+        waitForEl('#allSearch', function () {
+            searchToggle();
+        });
+    });
+
+    // 폰트 크기 초기화(체크박스가 있으면 바로)
+    initFontSize();
 });
 
-/*---------------------------------------------
+/* ---------------------------------------------
     스크롤 제어 함수 (통합)
----------------------------------------------*/
+--------------------------------------------- */
 function updateScrollState() {
-    const allMenu = document.getElementById('allMenu');
-    const menuInner = document.querySelector('.menu-inner');
-    const shouldLockScroll = allMenu && allMenu.classList.contains('on');
+    var allMenu = document.getElementById('allMenu');
+    var menuInner = document.querySelector('.menu-inner');
+    var shouldLockScroll = allMenu && allMenu.classList.contains('on');
 
     document.body.classList.toggle('no-scroll', shouldLockScroll);
 
@@ -19,9 +77,14 @@ function updateScrollState() {
         if (window.innerWidth < 768) {
             menuInner.style.maxHeight = '100vh';
         } else {
-            const headerHeight = document.querySelector('.allmenu-header') ? document.querySelector('.allmenu-header').offsetHeight : 0;
-            const navTabHeight = document.querySelector('.menu-cont .menu-l .menu-tit') ? document.querySelector('.menu-cont .menu-l .menu-tit').offsetHeight : 0;
-            menuInner.style.maxHeight = `calc(100vh - ${headerHeight + navTabHeight}px)`;
+            var headerEl = document.querySelector('.allmenu-header');
+            var navTabEl = document.querySelector('.menu-cont .menu-l .menu-tit');
+
+            var headerHeight = headerEl ? headerEl.offsetHeight : 0;
+            var navTabHeight = navTabEl ? navTabEl.offsetHeight : 0;
+
+            // 템플릿리터럴 대신 문자열 결합(환경 이슈 방지)
+            menuInner.style.maxHeight = 'calc(100vh - ' + (headerHeight + navTabHeight) + 'px)';
         }
     }
 }
@@ -30,52 +93,58 @@ function updateScrollState() {
     전체메뉴 탭 (모바일: 탭 전환 / PC: 스크롤 이동) 2025.12.05 수정
 ----------------------------------------------------------*/
 function mobileMenu() {
-    const menuTabs = document.querySelectorAll('.menu-tit li');
-    const menuContents = document.querySelectorAll('.menu-inner > li');
-    const menuInner = document.querySelector('.menu-inner');
+    // 중복 바인딩 방지
+    if (window.__mobileMenuInited) return;
+    window.__mobileMenuInited = true;
 
-    for (let i = 0; i < menuTabs.length; i++) {
+    var menuTabs = document.querySelectorAll('.menu-tit li');
+    var menuContents = document.querySelectorAll('.menu-inner > li');
+    var menuInner = document.querySelector('.menu-inner');
+
+    for (var i = 0; i < menuTabs.length; i++) {
+
         // 키보드 접근성
         menuTabs[i].setAttribute('tabindex', '0');
-        
+
         // 탭 활성화 함수 (모바일용)
         function activateTab(tab) {
-            // 모든 탭 비활성화
-            for (let j = 0; j < menuTabs.length; j++) {
+            for (var j = 0; j < menuTabs.length; j++) {
                 menuTabs[j].classList.remove('on');
             }
-            for (let k = 0; k < menuContents.length; k++) {
+            for (var k = 0; k < menuContents.length; k++) {
                 menuContents[k].classList.remove('on');
             }
 
-            // 클릭한 탭 활성화
             tab.classList.add('on');
 
-            const targetClass = tab.querySelector('span').getAttribute('data-focus');
+            var span = tab.querySelector('span');
+            var targetClass = span ? span.getAttribute('data-focus') : null;
             if (targetClass) {
-                document.querySelector('.menu-inner .' + targetClass).classList.add('on');
+                var target = document.querySelector('.menu-inner .' + targetClass);
+                if (target) target.classList.add('on');
             }
         }
 
         // 스크롤 이동 함수 (PC용)
         function scrollToSection(tab) {
-            const targetClass = tab.querySelector('span').getAttribute('data-focus');
-            const targetSection = document.querySelector('.menu-inner > .' + targetClass);
-            
+            var span = tab.querySelector('span');
+            var targetClass = span ? span.getAttribute('data-focus') : null;
+            var targetSection = targetClass ? document.querySelector('.menu-inner > .' + targetClass) : null;
+
             if (targetSection && menuInner) {
-                // 탭 활성화
-                for (let j = 0; j < menuTabs.length; j++) {
+
+                for (var j = 0; j < menuTabs.length; j++) {
                     menuTabs[j].classList.remove('on');
                 }
                 tab.classList.add('on');
 
-                // 스크롤 이동 (헤더와 탭 높이를 고려한 위치 계산)
-                const header = document.querySelector('.allmenu-header');
-                const menuL = document.querySelector('.menu-l');
-                const headerHeight = header ? header.offsetHeight : 0;
-                const tabHeight = menuL ? menuL.offsetHeight : 0;
-                const offsetTop = targetSection.offsetTop - headerHeight - tabHeight;
-                
+                var header = document.querySelector('.allmenu-header');
+                var menuL = document.querySelector('.menu-l');
+                var headerHeight = header ? header.offsetHeight : 0;
+                var tabHeight = menuL ? menuL.offsetHeight : 0;
+
+                var offsetTop = targetSection.offsetTop - headerHeight - tabHeight;
+
                 menuInner.scrollTo({
                     top: offsetTop,
                     behavior: 'smooth'
@@ -84,18 +153,16 @@ function mobileMenu() {
         }
 
         // 클릭 이벤트
-        menuTabs[i].addEventListener('click', function() {
+        menuTabs[i].addEventListener('click', function () {
             if (window.innerWidth < 768) {
-                // 모바일/태블릿: 탭 전환
                 activateTab(this);
             } else {
-                // PC: 스크롤 이동
                 scrollToSection(this);
             }
         });
-        
+
         // 키보드 이벤트 (Enter, Space)
-        menuTabs[i].addEventListener('keydown', function(e) {
+        menuTabs[i].addEventListener('keydown', function (e) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 if (window.innerWidth < 768) {
@@ -109,10 +176,10 @@ function mobileMenu() {
 
     // PC에서 스크롤 시 탭 자동 활성화 (선택사항)
     if (menuInner) {
-        let scrollTimeout;
-        menuInner.addEventListener('scroll', function() {
+        var scrollTimeout;
+        menuInner.addEventListener('scroll', function () {
             clearTimeout(scrollTimeout);
-            scrollTimeout = setTimeout(function() {
+            scrollTimeout = setTimeout(function () {
                 if (window.innerWidth >= 768) {
                     updateActiveTabOnScroll();
                 }
@@ -120,17 +187,18 @@ function mobileMenu() {
         });
     }
 
-    // 스크롤 위치에 따라 탭 활성화
     function updateActiveTabOnScroll() {
-        const scrollTop = menuInner.scrollTop;
-        let currentSection = null;
-        let minDistance = Infinity;
+        if (!menuInner) return;
 
-        for (let i = 0; i < menuContents.length; i++) {
-            const section = menuContents[i];
-            const sectionTop = section.offsetTop - menuInner.offsetTop;
-            const distance = Math.abs(scrollTop - sectionTop);
-            
+        var scrollTop = menuInner.scrollTop;
+        var currentSection = null;
+        var minDistance = Infinity;
+
+        for (var i = 0; i < menuContents.length; i++) {
+            var section = menuContents[i];
+            var sectionTop = section.offsetTop - menuInner.offsetTop;
+            var distance = Math.abs(scrollTop - sectionTop);
+
             if (distance < minDistance) {
                 minDistance = distance;
                 currentSection = section;
@@ -138,15 +206,17 @@ function mobileMenu() {
         }
 
         if (currentSection) {
-            const targetClass = currentSection.classList[0];
-            
-            for (let i = 0; i < menuTabs.length; i++) {
-                const tabTarget = menuTabs[i].querySelector('span').getAttribute('data-focus');
+            var targetClass = currentSection.classList[0];
+
+            for (var t = 0; t < menuTabs.length; t++) {
+                var span = menuTabs[t].querySelector('span');
+                var tabTarget = span ? span.getAttribute('data-focus') : null;
+
                 if (tabTarget === targetClass) {
-                    for (let j = 0; j < menuTabs.length; j++) {
+                    for (var j = 0; j < menuTabs.length; j++) {
                         menuTabs[j].classList.remove('on');
                     }
-                    menuTabs[i].classList.add('on');
+                    menuTabs[t].classList.add('on');
                     break;
                 }
             }
@@ -158,29 +228,33 @@ function mobileMenu() {
     메뉴/검색 토글 통합 함수
 ---------------------------------------------*/
 function menuToggle() {
-    // 전체메뉴 토글
-    const menuBtn = document.querySelector('.menu-btn');
-    const allMenu = document.getElementById('allMenu');
-    const menuCloseBtn = document.querySelector('.allmenu-header-inner .close-btn');
-    
+    // 중복 바인딩 방지
+    if (window.__menuToggleInited) return;
+    window.__menuToggleInited = true;
+
+    var menuBtn = document.querySelector('.menu-btn');
+    var allMenu = document.getElementById('allMenu');
+    var menuCloseBtn = document.querySelector('.allmenu-header-inner .close-btn');
+
     if (menuBtn && allMenu) {
-        menuBtn.addEventListener('click', function() {
+        menuBtn.addEventListener('click', function () {
             allMenu.classList.add('on');
             updateScrollState();
         });
-        
+
         if (menuCloseBtn) {
-            menuCloseBtn.addEventListener('click', function() {
+            menuCloseBtn.addEventListener('click', function () {
                 allMenu.classList.remove('on');
                 updateScrollState();
             });
         }
     }
+
     // resize 시 높이 재계산
-    let resizeTimer;
-    window.addEventListener('resize', function() {
+    var resizeTimer;
+    window.addEventListener('resize', function () {
         clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(function() {
+        resizeTimer = setTimeout(function () {
             if (allMenu && allMenu.classList.contains('on')) {
                 updateScrollState();
             }
@@ -190,135 +264,113 @@ function menuToggle() {
 
 // 검색 토글
 function searchToggle() {
-    const searchBtn = document.querySelector('.search-btn');
-    const allSearch = document.getElementById('allSearch');
-    const searchCloseBtn = document.querySelector('.header-btn-wrap .close-btn');
-    const allMenuSearchBtn = document.querySelector('.allmenu-header-inner .search-btn');
-    const allSearchCloseBtn = document.querySelector('.allsearch-header-inner .close-btn');
-    
+    // 중복 바인딩 방지
+    if (window.__searchToggleInited) return;
+    window.__searchToggleInited = true;
+
+    var searchBtn = document.querySelector('.search-btn');
+    var allSearch = document.getElementById('allSearch');
+    var searchCloseBtn = document.querySelector('.header-btn-wrap .close-btn');
+    var allMenuSearchBtn = document.querySelector('.allmenu-header-inner .search-btn');
+    var allSearchCloseBtn = document.querySelector('.allsearch-header-inner .close-btn');
+
     if (searchBtn && allSearch) {
-        // 검색창 열기 함수
+
         function openSearch(triggerButton, closeButton) {
-            const menuItems = document.querySelectorAll('.lnb .menu-item');
-            menuItems.forEach(function(item) {
+            var menuItems = document.querySelectorAll('.lnb .menu-item');
+            for (var i = 0; i < menuItems.length; i++) {
+                var item = menuItems[i];
                 item.classList.remove('on');
-                const btn = item.querySelector('.menu-tit');
-                if (btn) {
-                    btn.classList.remove('on');
-                }
-            });
-            
+                var btn = item.querySelector('.menu-tit');
+                if (btn) btn.classList.remove('on');
+            }
+
             allSearch.classList.add('on');
-            
-            // 트리거 버튼 숨김 처리
-            if (triggerButton) {
-                triggerButton.style.display = 'none';
-            }
-            
-            // 닫기 버튼 표시
-            if (closeButton) {
-                closeButton.classList.add('on');
-            }
-            
-            // 포커스 이동 (입력 필드로 먼저 이동)
-            setTimeout(function() {
-                // 검색창 내부의 첫 번째 입력 필드 찾기
-                const searchInput = allSearch.querySelector('input[type="text"], input[type="search"], input:not([type])');
-                
+
+            if (triggerButton) triggerButton.style.display = 'none';
+            if (closeButton) closeButton.classList.add('on');
+
+            setTimeout(function () {
+                var searchInput = allSearch.querySelector('input[type="text"], input[type="search"], input:not([type])');
                 if (searchInput) {
                     searchInput.focus();
                 } else {
-                    // 입력 필드가 없으면 첫 번째 포커스 가능 요소
-                    const focusableElements = allSearch.querySelectorAll(
+                    var focusableElements = allSearch.querySelectorAll(
                         'input:not([disabled]), button:not([disabled]), a[href], textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
                     );
-                    if (focusableElements.length > 0) {
-                        focusableElements[0].focus();
-                    }
+                    if (focusableElements.length > 0) focusableElements[0].focus();
                 }
             }, 100);
         }
-        
-        // 검색창 닫기 함수
+
         function closeSearch(triggerButton, closeButton) {
             allSearch.classList.remove('on');
-            
-            // 트리거 버튼 다시 표시
+
             if (triggerButton) {
                 triggerButton.style.display = 'inline-block';
-                // 원래 버튼으로 포커스 복귀
-                setTimeout(function() {
-                    triggerButton.focus();
-                }, 100);
+                setTimeout(function () { triggerButton.focus(); }, 100);
             }
-            
-            // 닫기 버튼 숨김
-            if (closeButton) {
-                closeButton.classList.remove('on');
-            }
+            if (closeButton) closeButton.classList.remove('on');
         }
-        
+
         // PC 검색 버튼
-        searchBtn.addEventListener('click', function() {
+        searchBtn.addEventListener('click', function () {
             openSearch(searchBtn, searchCloseBtn);
         });
-        
+
         if (searchCloseBtn) {
-            searchCloseBtn.addEventListener('click', function() {
+            searchCloseBtn.addEventListener('click', function () {
                 closeSearch(searchBtn, searchCloseBtn);
             });
         }
 
         // 모바일 검색 버튼
         if (allMenuSearchBtn && allSearchCloseBtn) {
-            allMenuSearchBtn.addEventListener('click', function() {
+            allMenuSearchBtn.addEventListener('click', function () {
                 openSearch(allMenuSearchBtn, allSearchCloseBtn);
             });
-            
-            allSearchCloseBtn.addEventListener('click', function() {
+
+            allSearchCloseBtn.addEventListener('click', function () {
                 closeSearch(allMenuSearchBtn, allSearchCloseBtn);
             });
         }
-        
-        // 포커스 트랩 (검색창 내부 → 닫기 버튼 순환)
-        document.addEventListener('keydown', function(e) {
+
+        // 포커스 트랩
+        document.addEventListener('keydown', function (e) {
             if (e.key === 'Tab' && allSearch.classList.contains('on')) {
-                // 활성화된 닫기 버튼 찾기
-                let activeCloseBtn = null;
+
+                var activeCloseBtn = null;
                 if (searchCloseBtn && searchCloseBtn.classList.contains('on')) {
                     activeCloseBtn = searchCloseBtn;
                 } else if (allSearchCloseBtn) {
                     activeCloseBtn = allSearchCloseBtn;
                 }
-                
                 if (!activeCloseBtn) return;
-                
-                // 검색창 내부 포커스 가능 요소만 (닫기 버튼 제외)
-                const searchFocusable = Array.from(allSearch.querySelectorAll(
+
+                var nodeList = allSearch.querySelectorAll(
                     'input:not([disabled]), button:not([disabled]), a[href], textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
-                ));
+                );
+
+                var searchFocusable = [];
+                for (var i = 0; i < nodeList.length; i++) searchFocusable.push(nodeList[i]);
 
                 if (searchFocusable.length === 0) return;
 
-                const firstSearchElement = searchFocusable[0];
-                const lastSearchElement = searchFocusable[searchFocusable.length - 1];
+                var firstSearchElement = searchFocusable[0];
+                var lastSearchElement = searchFocusable[searchFocusable.length - 1];
 
-                // 검색창 마지막 요소 → 닫기 버튼
                 if (!e.shiftKey && document.activeElement === lastSearchElement) {
                     e.preventDefault();
                     activeCloseBtn.focus();
                 }
-                // 닫기 버튼 → 검색창 첫 요소
                 else if (!e.shiftKey && document.activeElement === activeCloseBtn) {
                     e.preventDefault();
                     firstSearchElement.focus();
                 }
-                // 검색창 첫 요소 → 닫기 버튼
                 else if (e.shiftKey && document.activeElement === firstSearchElement) {
                     e.preventDefault();
                     activeCloseBtn.focus();
                 }
-                // 닫기 버튼 → 검색창 마지막 요소
                 else if (e.shiftKey && document.activeElement === activeCloseBtn) {
                     e.preventDefault();
                     lastSearchElement.focus();
@@ -326,23 +378,20 @@ function searchToggle() {
             }
         });
 
-        // 반응형 처리
         function handleResize() {
             if (window.innerWidth < 767) {
-                searchBtn.style.display = 'none';
+                if (searchBtn) searchBtn.style.display = 'none';
             } else {
-                if (!allSearch.classList.contains('on')) {
+                if (searchBtn && !allSearch.classList.contains('on')) {
                     searchBtn.style.display = 'inline-block';
                 }
             }
         }
 
-        // 초기 실행
         handleResize();
 
-        // resize
-        let resizeTimer;
-        window.addEventListener('resize', () => {
+        var resizeTimer;
+        window.addEventListener('resize', function () {
             clearTimeout(resizeTimer);
             resizeTimer = setTimeout(handleResize, 10);
         });
@@ -353,204 +402,201 @@ function searchToggle() {
     헤더 드롭다운 메뉴 기능
 ---------------------------------------------*/
 function headerMenu() {
-    const menuItems = document.querySelectorAll('.lnb .menu-item');
-    
-    // 요소가 없으면 함수 종료
+    // 중복 바인딩 방지
+    if (window.__headerMenuInited) return;
+    window.__headerMenuInited = true;
+
+    // #menuWrap 기준
+    var menuItems = document.querySelectorAll('#menuWrap .menu-item');
+
     if (!menuItems || menuItems.length === 0) {
-        console.warn('headerMenu: .lnb .menu-item 요소를 찾을 수 없습니다.');
+        // 필요하면 경고 유지, 싫으면 지워도 됨
+        console.warn('headerMenu: #menuWrap .menu-item 요소를 찾을 수 없습니다.');
         return;
     }
-    
-    // 현재 페이지의 active 메뉴를 저장 (초기 로드 시 active가 있는 메뉴)
-    let currentPageActiveMenu = null;
-    menuItems.forEach(function(item) {
-        const btn = item.querySelector('.menu-tit');
-        if (btn && btn.classList.contains('active')) {
-            currentPageActiveMenu = btn;
-        }
-    });
-    
-    // 원래 페이지의 active 복원 함수
-    function restoreCurrentPageActive() {
-        // 모든 active 제거
-        menuItems.forEach(function(item) {
-            const btn = item.querySelector('.menu-tit');
-            if (btn) {
-                btn.classList.remove('active');
-            }
-        });
-        
-        // 현재 페이지의 active만 복원
-        if (currentPageActiveMenu) {
-            currentPageActiveMenu.classList.add('active');
-        }
-    }
-    
-    // 모든 메뉴 닫기 함수 (on만 제거)
-    function closeAllMenus() {
-        menuItems.forEach(function(item) {
-            item.classList.remove('on');
-            const btn = item.querySelector('.menu-tit');
-            if (btn) {
-                btn.classList.remove('on');
-            }
-        });
+
+    var currentPageActiveMenu = null;
+    for (var i = 0; i < menuItems.length; i++) {
+        var btn = menuItems[i].querySelector('.menu-tit');
+        if (btn && btn.classList.contains('active')) currentPageActiveMenu = btn;
     }
 
-    // 1depth - 각 메뉴 아이템 처리
-    menuItems.forEach(function(menuItem) {
-        const menuButton = menuItem.querySelector('.menu-tit');
-        const listItem = menuItem.querySelector('.list-item');
-        const hasSubmenu = listItem !== null;
-        
+    function restoreCurrentPageActive() {
+        for (var i = 0; i < menuItems.length; i++) {
+            var btn = menuItems[i].querySelector('.menu-tit');
+            if (btn) btn.classList.remove('active');
+        }
+        if (currentPageActiveMenu) currentPageActiveMenu.classList.add('active');
+    }
+
+    function closeAllMenus() {
+        for (var i = 0; i < menuItems.length; i++) {
+            var item = menuItems[i];
+            item.classList.remove('on');
+            var btn = item.querySelector('.menu-tit');
+            if (btn) btn.classList.remove('on');
+        }
+    }
+
+    for (var idx = 0; idx < menuItems.length; idx++) (function (menuItem) {
+
+        var menuButton = menuItem.querySelector('.menu-tit');
+        var listItem = menuItem.querySelector('.list-item');
+        var hasSubmenu = listItem !== null;
+
         if (!menuButton) return;
-        
-        // 각 메뉴마다 독립적인 타이머
-        let closeTimer = null;
-        
-        // 메뉴 열기 (hover용)
+
+        var closeTimer = null;
+
         function openMenu() {
             if (closeTimer) {
                 clearTimeout(closeTimer);
                 closeTimer = null;
             }
-            
+
             if (hasSubmenu) {
-                // 다른 메뉴들의 active 제거 (hover 시)
-                menuItems.forEach(function(otherItem) {
+                for (var i = 0; i < menuItems.length; i++) {
+                    var otherItem = menuItems[i];
                     if (otherItem !== menuItem) {
                         otherItem.classList.remove('on');
-                        const otherBtn = otherItem.querySelector('.menu-tit');
-                        if (otherBtn) {
-                            otherBtn.classList.remove('on', 'active');
-                        }
+                        var otherBtn = otherItem.querySelector('.menu-tit');
+                        if (otherBtn) otherBtn.classList.remove('on', 'active');
                     }
-                });
-                
-                // 현재 메뉴에 on 추가
+                }
                 menuItem.classList.add('on');
                 menuButton.classList.add('on');
             }
         }
-        
-        // 메뉴 닫기 (hover용 - on만 제거, active는 유지)
+
         function scheduleClose() {
-            closeTimer = setTimeout(function() {
+            closeTimer = setTimeout(function () {
                 menuItem.classList.remove('on');
                 menuButton.classList.remove('on');
             }, 100);
         }
-        
+
         if (hasSubmenu) {
-            // mouseenter/mouseleave 이벤트
             menuItem.addEventListener('mouseenter', openMenu);
             menuItem.addEventListener('mouseleave', scheduleClose);
-            
+
             if (listItem) {
                 listItem.addEventListener('mouseenter', openMenu);
                 listItem.addEventListener('mouseleave', scheduleClose);
             }
-            
-            // 클릭 이벤트 - active 토글
-            menuButton.addEventListener('click', function(e) {
+
+            menuButton.addEventListener('click', function (e) {
                 e.preventDefault();
-                
-                const isActive = menuButton.classList.contains('active');
-                
+
+                var isActive = menuButton.classList.contains('active');
+
                 if (isActive) {
-                    // active 해제
                     menuButton.classList.remove('active');
                     menuItem.classList.remove('on');
                     menuButton.classList.remove('on');
                 } else {
-                    // 타이머 클리어
                     if (closeTimer) {
                         clearTimeout(closeTimer);
                         closeTimer = null;
                     }
-                    
-                    // 다른 메뉴의 active 제거
-                    menuItems.forEach(function(otherItem) {
+
+                    for (var i = 0; i < menuItems.length; i++) {
+                        var otherItem = menuItems[i];
                         if (otherItem !== menuItem) {
                             otherItem.classList.remove('on');
-                            const otherBtn = otherItem.querySelector('.menu-tit');
-                            if (otherBtn) {
-                                otherBtn.classList.remove('active', 'on');
-                            }
+                            var otherBtn = otherItem.querySelector('.menu-tit');
+                            if (otherBtn) otherBtn.classList.remove('active', 'on');
                         }
-                    });
-                    
-                    // 현재 메뉴에 active 추가
+                    }
+
                     menuButton.classList.add('active');
-                    
-                    // on도 추가 (열린 상태 유지)
                     menuItem.classList.add('on');
                     menuButton.classList.add('on');
                 }
             });
+
         } else {
-            // 서브메뉴가 없는 경우 바로 이동
-            menuButton.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                if (href && href !== '#') {
-                    window.location.href = href;
-                }
+            menuButton.addEventListener('click', function () {
+                var href = this.getAttribute('href');
+                if (href && href !== '#') window.location.href = href;
             });
         }
-    });
-    
-    // 2depth - 마우스오버 이벤트
-    const submenu2Items = document.querySelectorAll('.lnb .submenu2 > li');
-    submenu2Items.forEach(function(item) {
-        const submenu2Link = item.querySelector('a, button');
-        
-        if (submenu2Link) {
-            submenu2Link.setAttribute('tabindex', '0');
-        }
 
-        item.addEventListener('mouseenter', function(e) {
-            e.stopPropagation();
-            
-            // 같은 레벨 메뉴들 초기화
-            const allSubmenu2 = document.querySelectorAll('.lnb .submenu2 > li');
-            
-            allSubmenu2.forEach(function(el) {
-                el.classList.remove('on');
+    })(menuItems[idx]);
+
+    // 2depth hover
+    var submenu2Items = document.querySelectorAll('.lnb .submenu2 > li');
+    for (var i = 0; i < submenu2Items.length; i++) {
+        (function (item) {
+            var submenu2Link = item.querySelector('a, button');
+            if (submenu2Link) submenu2Link.setAttribute('tabindex', '0');
+
+            item.addEventListener('mouseenter', function (e) {
+                e.stopPropagation();
+                var allSubmenu2 = document.querySelectorAll('.lnb .submenu2 > li');
+                for (var j = 0; j < allSubmenu2.length; j++) allSubmenu2[j].classList.remove('on');
+                this.classList.add('on');
             });
-            
-            this.classList.add('on');
-        });
-    });
+        })(submenu2Items[i]);
+    }
 
-    // 키보드 이벤트
-    const allMenuLinks = document.querySelectorAll('.lnb .menu-tit, .lnb .submenu a, .lnb .submenu button, .lnb .submenu2 a, .lnb .submenu2 button');
-    allMenuLinks.forEach(function(link) {
-        link.addEventListener('keydown', function(e) {
+    // 키보드 Enter/Space
+    var allMenuLinks = document.querySelectorAll('.lnb .menu-tit, .lnb .submenu a, .lnb .submenu button, .lnb .submenu2 a, .lnb .submenu2 button');
+    for (var i = 0; i < allMenuLinks.length; i++) {
+        allMenuLinks[i].addEventListener('keydown', function (e) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 this.click();
             }
         });
-    });
+    }
 
-    // 메뉴 영역 밖으로 마우스가 나갔을 때 원래 페이지의 active 복원
-    const gnbElement = document.querySelector('.gnb');
+    // 메뉴 영역 밖 마우스 나가면 복원
+    var gnbElement = document.querySelector('.gnb');
     if (gnbElement) {
-        gnbElement.addEventListener('mouseleave', function() {
+        gnbElement.addEventListener('mouseleave', function () {
             closeAllMenus();
             restoreCurrentPageActive();
         });
     }
 
-    // 포커스가 헤더 메뉴 영역을 벗어나면 on 제거하고 active 복원
-    const headerWrap = document.getElementById('headerWrap');
+    // 포커스가 헤더 밖으로 나가면 복원
+    var headerWrap = document.getElementById('headerWrap');
     if (headerWrap) {
-        document.addEventListener('focusin', function(e) {
-            const isInsideHeader = headerWrap.contains(e.target);
+        document.addEventListener('focusin', function (e) {
+            var isInsideHeader = headerWrap.contains(e.target);
             if (!isInsideHeader) {
                 closeAllMenus();
                 restoreCurrentPageActive();
             }
         });
     }
+}
+
+/* ---------------------------------------------
+   폰트 크기 초기화 (기존 유지, load에서 1회)
+--------------------------------------------- */
+function initFontSize() {
+    if (window.__fontSizeInited) return;
+    window.__fontSizeInited = true;
+
+    var checkbox = document.getElementById("fontSizeNormal");
+    if (!checkbox) return;
+
+    var KEY = "fontSizeNormalChecked";
+    var root = document.documentElement;
+
+    function apply(checked) {
+        root.classList.toggle("font-big", !!checked);
+    }
+
+    var saved = localStorage.getItem(KEY);
+    var checked = saved === null ? false : saved === "true";
+
+    checkbox.checked = checked;
+    apply(checked);
+
+    checkbox.addEventListener("change", function () {
+        localStorage.setItem(KEY, this.checked ? "true" : "false");
+        apply(this.checked);
+    });
 }
