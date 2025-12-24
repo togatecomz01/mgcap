@@ -1296,6 +1296,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 .WCC21400VQ .pop-content .text-group .square:before { content:"□"; }
 
 .WCC21400VQ .pop-content .table-group p { padding:18px 0; font-weight:var(--font-w-b); }
+.WCC21400VQ .pop-content .table-group p.rfrnc { padding:18px; }
 
 .WCC21401DS .btn-group { font-size:0; }
 .WCC21401DS .btn-group .btn-download + .btn-download { margin-left: 26px; }
@@ -1450,14 +1451,14 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     main.contentWrap.finance > .page-container { padding-top:10px; }
     .finance.style1 .location-container, .finance.style1 .visual-container { background: linear-gradient(180deg, rgba(193, 227, 255, 0.20) 0%, #C1E3FF 100%); }
     .finance.style2 .location-container, .finance.style2 .visual-container { background: linear-gradient(180deg, rgba(167, 197, 255, 0.20) -11.4%, #A7C5FF 100%); }
-    .contentWrap.finance .visual-container { /*position:sticky; top:54px; z-index:1;*/ padding-bottom:38px; }
+    .contentWrap.finance .visual-container { padding-bottom:38px; }
     .contentWrap.finance .visual-container h2 { line-height:29px; }
     .contentWrap.finance .visual-container p { padding:16px 0 36px; font-size:var(--font16); }
     .contentWrap.finance .page-container,
     .contentWrap.finance .bottom-container { position:relative; top:54px; z-index:11; background:var(--white); }
     .contentWrap.finance .visual-container.sticky { position:sticky; top:54px; z-index:10; }
     .contentWrap.finance .page-container + .bottom-container { display:block; margin-top:0; padding-top:52px; }
-    .finance-content {
+    .finance .finance-content {
         --gap:18px;
         --padding:32px 0 32px;
         --size36:24px;
@@ -1953,12 +1954,12 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCR60100VQ .sr-only h3.vision + p.talent { margin-top:0 !important; font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-2); text-align:center; }
     .WCR60100VQ .sr-only .talent::after { content:""; display:block; margin:10px auto 0; width:177px; height:177px; background-image:url("../../images/content/recruit/m/img_WCR60100VQ_top01.png"); background-repeat:no-repeat; background-size:100% auto; }
     .WCR60100VQ .img-group .sr-only ul { padding-bottom:20px; border-top:1px solid var(--color-d); }
-    .WCR60100VQ .img-group .sr-only ul li { position:relative; margin-top:36px; padding-left:111px; height:99px; background-repeat:no-repeat; background-position:left center; background-size:99px; white-space:initial; }
+    .WCR60100VQ .img-group .sr-only ul li { position:relative; margin-top:36px; padding-left:111px; min-height:99px; background-repeat:no-repeat; background-position:left center; background-size:99px; white-space:initial; font-size:var(--font14); }
     .WCR60100VQ .img-group .sr-only ul li:nth-child(1) { background-image:url("../../images/content/recruit/m/img_WCR60100VQ01.png"); }
     .WCR60100VQ .img-group .sr-only ul li:nth-child(2) { background-image:url("../../images/content/recruit/m/img_WCR60100VQ02.png"); }
     .WCR60100VQ .img-group .sr-only ul li:nth-child(3) { background-image:url("../../images/content/recruit/m/img_WCR60100VQ03.png"); }
     .WCR60100VQ .img-group .sr-only ul li:nth-child(4) { background-image:url("../../images/content/recruit/m/img_WCR60100VQ04.png"); }
-    .WCR60100VQ .img-group .sr-only ul li strong { display:block; margin-bottom:8px; }
+    .WCR60100VQ .img-group .sr-only ul li strong { display:block; margin-bottom:8px; font-size:var(--font16); }
 
     .WCR60100VQ + .bottom-container .btn-content.cta .btn-primary span { display:none; }
 
@@ -2024,7 +2025,6 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCA90108VQ .img-box img { content:url("../../images/content/about/m/img_WCA90108VQ.png"); }
     /* 회사소개 - 클린신고센터 + 성희롱 및 직장내 괴롭힘 신고센터 */
     .WCA90107VQ .text-content, .WCA90100VQ .text-content {margin-bottom: 32px;}
-    .WCA90100VQ .form-group select, .WCA90100VQ .form-group input[type="tel"] {flex: 1;}
     .WCA90100VQ .form-content label { padding-left:0; }
     /** 찾아오시는 길 **/
     .WCA70100VQ .map-content { padding-top:32px; }
@@ -2115,3 +2115,17 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .xwup-cert_pop * { transition: none; }
     #xTsign img,
     .xwup_cert_pop img { width:auto; }
+
+@media (max-height:568px) {
+    .contentWrap.finance .visual-container { max-height:calc(100vh - 54px); }
+    .visual-container h2 { padding:4% 0 0; font-size:var(--font22); }
+    .contentWrap.finance .visual-container p { padding:2% 0 3%; font-size:var(--font14); }
+    .finance .finance-content { --padding:3% 0 9%; }
+    .finance-content .finance-group dl { display:block; text-align:left; }
+    .finance-content .finance-group dt,
+    .finance-content .finance-group dd { display:inline; font-size:var(--font14); font-weight:var(--font-w-r); }
+    .finance-content .finance-group dt::before { display:none; }
+    .finance-content .finance-group dt { padding-left:0; }
+    .finance-content .finance-group dd::before { content:':'; display:inline-block; margin-right:5px; }
+    .contentWrap.finance .btn-content.cta a { height:55px; line-height:55px; font-size:var(--font18); }
+}

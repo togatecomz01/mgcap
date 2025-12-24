@@ -159,7 +159,7 @@
 	.menu-cont .menu-inner { padding:0 24px; }
 	.menu-inner .gnb-2dep { gap:50px 54px; }
 	.menu-cont .menu-inner > li { padding:60px 0; }
-	.allmenu.on .menu-cont { overflow-y:unset; }
+	.allmenu.on .menu-cont { overflow-y:hidden; }
 	.allmenu.on .menu-inner { overflow-y:auto; }
 
 	/* °Ë»öÃ¢ */
@@ -273,3 +273,6 @@
 	.search-wrap .search-result { padding:26px 0 38px; border-bottom:1px solid #F0F0F0; border-radius:0; }
 }
 
+@media (max-height:568px) {
+	.menu-cont .menu-l { overflow-y:auto; }
+}
