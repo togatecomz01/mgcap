@@ -1570,10 +1570,11 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 
     /******모잡인조회**/
     .MGC-PRT-CST-012 .btn-group { flex-direction:column; }
-    .MGC-PRT-CST-012 .btn-link { width:100%; }
+    .MGC-PRT-CST-012 .btn-link { padding:14px 32px 14px 73px; width:100%; font-size:var(--font16); }
     .MGC-PRT-CST-012 .btn-link:nth-child(odd),
     .MGC-PRT-CST-012 .btn-link:nth-child(even) { margin:0 0 20px; }
     .MGC-PRT-CST-012 .btn-link:last-of-type { margin-bottom:0; }
+    .MGC-PRT-CST-012 .btn-link span:first-child { display:block; font-size:var(--font14); color:var(--color-6); line-height:normal; }
 
     /** 위법계약해지 요구권 **/
     .MGC-PRT-CST-008 .group h3 { font-size:var(--font20); }
