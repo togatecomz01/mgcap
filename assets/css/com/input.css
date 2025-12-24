@@ -109,8 +109,8 @@ label input[type="checkbox"]:checked,
 .terms input[type="checkbox"]:checked { background:var(--form-checked); } 
 label input[type="checkbox"]:disabled,
 .terms input[type="checkbox"]:disabled { background:var(--form-check-dissbled); } 
-label input:not(:checked) + span { font-weight:var(--font-w-m); color:var(--color-45); }
-label input:checked + span { color:var(--form-font-color); font-weight:500; }
+label input:not(:checked) + span { flex:1; width:100%; font-weight:var(--font-w-m); color:var(--color-45); }
+label input:checked + span { flex:1; width:100%; color:var(--form-font-color); font-weight:500; }
 label input:not(:checked) + span { font-weight:400; }
 label input[type="radio"]:not(:checked) { border:7px solid var(--form-board);  }
 label input[type="radio"]:checked { border:7px solid var(--form-checked);  }
