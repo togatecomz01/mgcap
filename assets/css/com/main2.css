@@ -204,7 +204,7 @@ body:has(.main) .menu .menu-item .list-item { top:75px; }
 .main-container .main-content > .notice-group .notice .noti-list { display:flex; align-items:center; margin-bottom:20px; font-size:var(--font16); }
 .main-container .main-content > .notice-group .noti-group { display:flex; margin-bottom:18px; cursor:pointer; }
 .main-container .main-content > .notice-group .noti-group:last-of-type { margin-bottom:0; }
-.main-container .main-content > .notice-group .noti-group .label { flex:0 0 66px; margin-right:12px; border: 1.5px solid #44C4A1; color:#44C4A1; background:#fff; border-radius:100px; width:66px; padding:5px 6px; text-align:center; font-size:var(--font12); font-weight:var(--font-w-b); }
+.main-container .main-content > .notice-group .noti-group .label { flex:0 0 66px; margin-right:12px; border: 1.5px solid #008760; color:#008760; background:#fff; border-radius:100px; width:66px; padding:5px 6px; text-align:center; font-size:var(--font12); font-weight:var(--font-w-b); }
 .main-container .main-content > .notice-group .noti-group .sbject { flex:0 0 335px; width:335px; font-size:var(--font16); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 .main-container .main-content > .notice-group .noti-group .date { flex:0 0 100px; margin-left:12px; font-size:var(--font16); color:var(--color-6); text-align:right; }
 .main-container .main-content > .notice-group #tab2-2 .noti-group .label { border: 1.5px solid #8844C4; color:#8844C4; }
