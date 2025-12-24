@@ -1945,7 +1945,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
         --h3-txt:var(--font20);
     }
     .WCR60100VQ .tab-container .tab-list.depth1 { padding-top:24px; margin-top:0; }
-    .WCR60100VQ .img-content { padding:0 24px; }
+    .WCR60100VQ.page-container > div.tab-container + .img-content { padding:32px 24px 0; }
     .WCR60100VQ .img-group img { display:none; }
     .WCR60100VQ .sr-only > .sr-only,
     .WCR60100VQ .img-group > .sr-only { position: static;  width: auto; height: auto; margin: 0; overflow: visible; clip: auto; }
@@ -1963,6 +1963,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCR60100VQ + .bottom-container .btn-content.cta .btn-primary span { display:none; }
 
     /******회사소개-채용안내 및 절차**/
+    .WCR10400VQ .text-content .text-group h3 { padding-top:32px; }
     .WCR10400VQ ul.diamond-box { padding: 12px 16px; }
     .WCR10400VQ .note-content .text-content { padding: 20px }
     .WCR10400VQ.page-container .tab-content {padding:0}
