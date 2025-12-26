@@ -120,7 +120,6 @@ main.contentWrap > .page-container { padding-top:42px; margin:0 auto; max-width:
 .success { color: var(--success) !important; }
 .error { color:var(--failure) !important; }
 
-
 /**타이틀 및 텍스트**/
 h3,
 .group > .text-group:has(h5) > h4{ display:block; font-size:var(--font26); color:var(--color-2);  }
@@ -183,6 +182,7 @@ p.m-dot::before,
 .m-dot li:last-of-type,
 .dot li:last-of-type { margin-bottom:0; }
 .rfrnc { font-size:var(--font16); }
+.rfrnc li { display:block; }
 p.rfrnc:before,
 .rfrnc li:before,
 .rfrnc dd:before,
@@ -197,12 +197,12 @@ h3.rfrnc::before { content:"※ "; display:inline; position:relative; left:inheri
 .text-list li,
 .text-list dd { margin-bottom:18px; }
 .text-list li:last-child { margin-bottom:0; }
-.text-list li > .rfrnc { margin-top:12px; margin-left:16px; width:100%; }
+.text-list li > .rfrnc { display:block; margin-top:12px; margin-left:16px; }
 .text-list.dot li > .rfrnc { margin-left:0; }
 .text-list li > p { width:100%; }
 .text-list li > * + p { margin-bottom:10px; }
 .text-list li > * + p:last-child { margin-bottom:0; }
-
+.text-list .rfrnc li { display:block !important; }
 
 .dot dt { display:inline-flex; align-items:center; font-weight:var(--font-w-b); }
 .dot dd { margin-top:12px; padding-left:11px; }
@@ -590,8 +590,8 @@ main.contentWrap > .bottom-container { margin-top:72px; }
     .text-content .rfrnc {  padding:18px; background:var(--bg-box); font-size:var(--font14); }
     .text-content .bck-t { padding:0; background:transparent; }
 
-    .text-content .text-list li > .rfrnc { margin-top:18px; margin-left:0; }
-    .text-content .text-list.dot li > .rfrnc { margin-left:-15px; }
+    .text-content .text-list li > .rfrnc {  display:block; margin-top:18px; margin-left:0; }
+    .text-content .text-list.dot li > .rfrnc { margin-left:-15px; display:block; width:calc(100% + 15px); }
 
     .text-content .dot li,
     .text-content .text-list li,

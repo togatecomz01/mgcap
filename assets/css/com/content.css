@@ -761,7 +761,8 @@ main.contentWrap.finance > .page-container { padding-top:72px; }
 .WCF90100VQ .form-content > .form-wrap { display:flex; gap:0; margin-bottom:0; width:100%; border-bottom:var(--board); }
 .WCF90100VQ .form-content > .form-wrap > .form-group { display:flex; width:50%; flex:0 0 50%; }
 .WCF90100VQ .form-content > .form-wrap > .form-group:last-child { border-left:var(--board); }
-.WCF90100VQ .form-content > .form-wrap > .form-group > label { display:inline-flex; align-items:center; justify-content:center; margin:0; padding:20px; width:262px; flex:0 0 262px; background:var(--table-th); }
+.WCF90100VQ .form-content > .form-wrap > .form-group > label,
+.WCF90100VQ .form-content > .form-wrap > .form-group > p.label-tit{ display:inline-flex; align-items:center; justify-content:center; margin:0; padding:20px; width:262px; flex:0 0 262px; background:var(--table-th); }
 .WCF90100VQ .form-content > .form-wrap > .form-group > label + input,
 .WCF90100VQ .form-content > .form-wrap > .form-group > label + select { margin:20px; }
 .WCF90100VQ .form-content > .form-wrap > .form-group > .flex-row { margin:0; padding:20px; flex:1; }  
@@ -1769,6 +1770,10 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCC60900VQ .group > .text-group:has(h5) > h4 {font-size: 20px;}
     .WCC60900VQ h5 { margin-top:42px; }
     .WCC60900VQ ul.dot, .WCC60900VQ p.dot, .WCC60900VQ span + ol {margin-top: 20px;}
+    .WCC60900VQ .rfrnc li { display:block; padding-left:0; }
+    .WCC60900VQ .dot + .rfrnc { padding-left:18px; }
+    .WCC60900VQ .dot + .rfrnc li:last-child { margin-bottom:0; }
+    .WCC60900VQ .text-content .text-list li > .rfrnc { padding-left:18px; }
     /* 신용정보 활용체제 */
     .WCC601200VQ p + .rfrnc { margin-left:0; }
 
