@@ -177,7 +177,8 @@ body{
 
 
 /** ¹Î°£ÀÎÁõ **/
-.page-container.login.ie04 .form-content > .form-wrap { gap:10px; }
+.page-container.login.ie04 .form-content > .form-wrap:has(.radio.button),
+.page-container.login.ie04 .form-content > .form-wrap { gap:42px; }
 .page-container.login.ie04 .form-content > .form-wrap > .form-group:only-of-type { flex:0 0 calc(50% - 5px); }
 
 
@@ -1457,7 +1458,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .contentWrap.finance .page-container,
     .contentWrap.finance .bottom-container { position:relative; top:54px; z-index:11; background:var(--white); }
     .contentWrap.finance .visual-container.sticky { position:sticky; top:54px; z-index:10; }
-    .contentWrap.finance .page-container + .bottom-container { display:block; margin-top:0; padding-top:52px; }
+    .contentWrap.finance .page-container + .bottom-container { display:block; margin-top:0; padding-top:52px; z-index:10; }
     .finance .finance-content {
         --gap:18px;
         --padding:32px 0 32px;
@@ -1686,10 +1687,10 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCC10100VQ .qna-list { border-top:1px solid var(--color-3);  }
     .WCC10100VQ .qna-list dt button { align-items:flex-start; }
     .WCC10100VQ .qna-list dd.cont { gap:0; padding:24px; }
+    .WCC10100VQ .accordion-item.on dd.cont { display:block; }
     .WCC10100VQ .qna-list dt button span::before,
     .WCC10100VQ .qna-list dd.cont span::before { width:24px; height:24px; }
-    .WCC10100VQ .qna-list dt button span,
-    .WCC10100VQ .qna-list dd.cont span { padding-top:5px; }
+    .WCC10100VQ .qna-list dt button span { padding-top:5px; }
     .WCC10100VQ .qna-list dt button span::before { mask-size:17px auto;  -webkit-mask-size:17px auto; }
     .WCC10100VQ .qna-list dt button { padding-right:36px; color:var(--color-45); }
     .WCC10100VQ .qna-list dt button::after {  width:24px; height:24px;  mask-size:9px auto; -webkit-mask-size:16px auto; }
@@ -1950,7 +1951,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCR60100VQ .img-group img { display:none; }
     .WCR60100VQ .sr-only > .sr-only,
     .WCR60100VQ .img-group > .sr-only { position: static;  width: auto; height: auto; margin: 0; overflow: visible; clip: auto; }
-    .WCR60100VQ .sr-only h3.vision { padding-bottom:8px; font-size:var(--font20); font-weight:var(--font-w-m); color:var(--color-45); }
+    .WCR60100VQ .sr-only h3.vision { padding-bottom:8px; font-size:var(--font20); font-weight:var(--font-w-m); color:var(--color-45); white-space:normal; }
     .WCR60100VQ .sr-only h3.vision + p.talent { margin-top:0 !important; font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-2); text-align:center; }
     .WCR60100VQ .sr-only .talent::after { content:""; display:block; margin:10px auto 0; width:177px; height:177px; background-image:url("../../images/content/recruit/m/img_WCR60100VQ_top01.png"); background-repeat:no-repeat; background-size:100% auto; }
     .WCR60100VQ .img-group .sr-only ul { padding-bottom:20px; border-top:1px solid var(--color-d); }

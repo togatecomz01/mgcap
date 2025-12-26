@@ -148,7 +148,7 @@ h5, p.tit, h4.tit { color:var(--color-2); font-size:1rem; font-weight:var(--font
 
 /**텍스트**/
 /* .page-container > .text-content > .group > h3 + .text-group:first-of-type { margin-top:72px; } */
-.text-content * { word-break:break-all; line-height:1.6; }
+.text-content * { word-break:keep-all; line-height:1.6; }
 .text-content * + p { margin-top:20px;}
 p.hypn, .star, .rfrnc, .square { color:var(--color-6);  }
 p.hypn:before,
@@ -601,7 +601,7 @@ main.contentWrap > .bottom-container { margin-top:72px; }
         --span-first-width:22px;
     }
     .text-group .text-indent { text-indent:-18px; padding-left:18px; }
-    .text-group .text-indent ~ * { margin-left:18px; }
+    .text-group .text-indent ~ * { margin-left:18px; width: calc(100% - 18px); }
     
   /** 들여쓰기 **/
   .page-container.indent .text-group .text-list > li > .text-list,
@@ -703,7 +703,8 @@ main.contentWrap > .bottom-container { margin-top:72px; }
     .view-navigation .link-group > a { padding-left:16px; max-width:calc(100% - 80px); font-size:var(--font14); line-height:14px; }
     .view-navigation .date {display: none;}
 
-    .view-content .btn-content.cta a, .btn-content.cta button { flex:0 0 auto; height:54px; line-height:54px; }
+    .btn-content.cta button,
+    .btn-content.cta a { flex:0 0 auto; height:54px; line-height:54px; }
 
     /* 다운로드 버튼 */
     .list-download a.btn-download { display:none; }
