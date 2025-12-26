@@ -54,7 +54,8 @@
                         <nav class="tab-list depth1">
                             <div class="btn-group">
                                 <button type="button" class="tab-item active" data-tab="tab2-1" aria-selected="true">공동인증서</button>
-                                <button type="button" class="tab-item" data-tab="tab2-2" aria-selected="false">민간(사설) 인증서</button>
+                                <button type="button" class="tab-item" data-tab="tab2-2" aria-selected="true">휴대폰 인증</button>
+                                <button type="button" class="tab-item" data-tab="tab2-3" aria-selected="false">민간(사설) 인증서</button>
                             </div>
                         </nav>
                         <div class="tab-content">
@@ -106,8 +107,27 @@
                                     <!--E : 2025-12-02 -> 공동인증서 안내 및 위치 바꾸기-->
                                 </form>
                             </div>
-                            <!-- 민간 인증서 -->
+                            <!-- 휴대폰 인증 -->
                             <div id="tab2-2" class="tab-panel" aria-hidden="false">
+                                <div class="form">
+                                    <div class="btn-content login phone">
+                                        <div class="button-group">
+                                            <a href="javascript:void(0);" class="btn-primary">휴대폰 인증 로그인</a>
+                                        </div>
+                                        <div class="button-group">
+                                            <a href="javascript:void(0);">휴대폰 정보변경 바로가기</a>
+                                            <a href="javascript:void(0);">회원가입 바로가기</a>
+                                        </div>
+                                        <div class="note-content">
+                                            <ul>
+                                                <li>휴대폰 번호가 변경되었다면, 휴대폰 정보변경 바로가기를 클릭해 주세요.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 민간 인증서 -->
+                            <div id="tab2-3" class="tab-panel" aria-hidden="false">
                                 <!--S : 2025-12-02 -> login클래스 추가-->
                                 <div class="private-content login">
                                     <div class="private-group">

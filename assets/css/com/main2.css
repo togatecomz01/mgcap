@@ -512,7 +512,7 @@ body:has(.main) .menu .menu-item .list-item { top:75px; }
     .main-container .main-content > .shortcut-group .mo-shortcut > p { padding-bottom:23px; font-size:var(--font14); font-weight:var(--font-w-b); color:var(--white); line-height:21px; white-space:pre-line; }
     .main-container .main-content > .shortcut-group .mo-shortcut > a { font-size:var(--font12); font-weight:var(--font-w-m); color:var(--white); text-decoration:underline; }
 
-    .main-container .main-content > .footer-wrap { padding-bottom:0; }
+    .main-container .main-content > .footer-wrap { padding-top:72px; padding-bottom:0; }
 
 
 

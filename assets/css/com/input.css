@@ -117,7 +117,7 @@ label input[type="radio"]:checked { border:7px solid var(--form-checked);  }
 label input[type="radio"]:disabled { border:7px solid var(--form-check-dissbled);  }
 
 
-label.radio.button { display:inline-flex; align-items:center; justify-content:center; flex:1;  margin-bottom:0; height:var(--form-height); background:var(--color-f8); border:2px solid var(--color-f8); border-radius:0; }
+label.radio.button { display:inline-flex; align-items:center; justify-content:center; flex:1;  margin-bottom:0; height:var(--form-height); background:var(--color-f8); border:2px solid var(--color-f8); border-radius:0; text-align:center; }
 label.radio.button input{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow: hidden;  border:0; clip:rect(0, 0, 0, 0); white-space: nowrap; }
 label.radio.button:has(input:checked) { background:var(--white); border-color:var(--primary); color:var(--primary); font-weight:var(--font-w-b) }
 

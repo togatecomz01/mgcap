@@ -43,6 +43,7 @@ body{
 /** 로그인 버튼 **/
 .btn-content.login { position:relative; margin-top:26px; padding-left:454px; overflow:hidden; }
 .btn-content.login::before { content:""; display:block; position:absolute; left:0; right:0; width:434px; height:100%; background:url("../../images/content/login/bg_login.png") no-repeat left center; background-size:100%; border-radius:16px; overflow:hidden;  }
+.btn-content.login.phone::before { content:""; display:block; position:absolute; left:0; right:0; width:434px; height:100%; background:url("../../images/content/login/bg_login3.png") no-repeat left center; background-size:100%; border-radius:16px; overflow:hidden;  }
 
 .btn-content.login .btn-primary { background-color:var(--primary); color:var(--white); }
 .btn-content.login .btn-primary:hover,
@@ -61,6 +62,7 @@ body{
 .btn-content.login .button-group:first-child { display:block; width:100%; text-align:center; }
 .btn-content.login .button-group:first-child a.btn-primary { margin-bottom:14px; padding:0 10px; width:100%; height:78px; border-radius:10px; font-size:var(--font20); line-height:78px; }
 .btn-content.login .button-group:first-child a.btn-primary::before { content:""; display:inline-block; margin-right:14px; width:30px; height:30px; vertical-align:text-bottom; background:var(--ico-login)no-repeat center; background-size:28px; }
+.btn-content.login.phone .button-group:first-child a.btn-primary::before { content:""; display:inline-block; margin-right:14px; width:30px; height:30px; vertical-align:text-bottom; background:var(--ico-login2)no-repeat center; background-size:28px; }
 
 .btn-content.login .button-group:first-child .bnt-link { float:right; display:inline-flex; align-items:center; font-size:var(--font16); font-weight:var(--font-w-m); }
 .btn-content.login .button-group:first-child .bnt-link:after {
@@ -179,7 +181,7 @@ body{
 /** 민간인증 **/
 .page-container.login.ie04 .form-content > .form-wrap:has(.radio.button),
 .page-container.login.ie04 .form-content > .form-wrap { gap:42px; }
-.page-container.login.ie04 .form-content > .form-wrap > .form-group:only-of-type { flex:0 0 calc(50% - 5px); }
+.page-container.login.ie04 .form-content > .form-wrap > .form-group:only-of-type { flex:0 0 calc(50% - 21px); }
 
 
 
@@ -1459,7 +1461,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .contentWrap.finance .page-container,
     .contentWrap.finance .bottom-container { position:relative; top:54px; z-index:11; background:var(--white); }
     .contentWrap.finance .visual-container.sticky { position:sticky; top:54px; z-index:10; }
-    .contentWrap.finance .page-container + .bottom-container { display:block; margin-top:0; padding-top:52px; z-index:10; }
+    .contentWrap.finance .page-container + .bottom-container { display:block; margin-top:0; padding-top:52px; padding-bottom:50px; z-index:10; }
     .finance .finance-content {
         --gap:18px;
         --padding:32px 0 32px;

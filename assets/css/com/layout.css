@@ -35,6 +35,7 @@ main.contentWrap > * { margin:0 auto; max-width:1200px; width:100%; padding:0;  
 .mt-20 { margin-top:20px; }
 .mt-38 { margin-top:38px; } 
 .mt-72 { margin-top:72px; }
+.pt-52 { padding-top:52px; }
 /* form 태그 안 써서 */
 .mt-42 { margin-top:42px; } /* form 태그 안 써서 */
 .point-r { color:var(--point-r) !important; }
@@ -724,7 +725,7 @@ main.contentWrap > .bottom-container { margin-top:72px; }
     /*---------------------------------------------
 		#푸터
 	---------------------------------------------*/
-	.footer-wrap { padding-bottom:65px; border:0; }
+	.footer-wrap { padding:22px 0 65px; border:0; }
 	.footer-wrap .footer-container { padding:0; }
 	.footer-top { flex-direction:column-reverse; align-items:flex-start; padding:0; }
 	.footer-top > ul { flex-wrap:wrap; gap:10px 32px; padding:12px 24px; }
