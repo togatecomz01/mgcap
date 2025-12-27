@@ -48,6 +48,7 @@ main.contentWrap > * { margin:0 auto; max-width:1200px; width:100%; padding:0;  
 .mw-100p { max-width:100% !important; }
 .fs-2 th,
 .fs-2 td { font-size: calc(1rem - 2px); }
+.flw-100 { width:100px; flex:0 0 100px; }
 
 .font-w-m { font-weight:var(--font-w-m); }
 .font-w-b { font-weight:var(--font-w-b); }
