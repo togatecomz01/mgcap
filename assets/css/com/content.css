@@ -378,8 +378,8 @@ main.contentWrap.finance > .page-container { padding-top:72px; }
 .anchor-list { margin:0 auto; max-width:1200px; width:100%; }
 .anchor-list.fixed { position: static; }
 .anchor-list .btn-group { display:flex; width:100%; }
-.anchor-list .btn-group button { display:inline-block; padding:8px; width:100%; border:2px solid #DFE1E8;  border-radius:3px; background-color:var(--color-f8); font-size:var(--font22); font-weight:var(--font-w-b); color:var(--color-9); text-align:center; line-height:45px; }
-.anchor-list .btn-group button.active { border:2px solid var(--primary); background-color:var(--white); color:var(--primary); }
+.anchor-list .btn-group button { display:inline-block; padding:8px; width:100%; border:2px solid #DFE1E8;  border-radius:3px; background-color:var(--color-f8); font-size:var(--font22); font-weight:var(--font-w-m); color:var(--color-6); text-align:center; line-height:45px; }
+.anchor-list .btn-group button.active { border:2px solid var(--primary); background-color:var(--white); font-weight:var(--font-w-b); color:var(--primary); }
 
 .anchor-panel { padding:52px 0 72px; }
 .anchor-panel + .anchor-panel { padding-top:28px; }
@@ -1412,6 +1412,8 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .cap-form:has(.noti-search) + .table-content table tr:last-child td,
     form:has(.noti-search) + .table-content table tr:last-child td,
     .form-content:has(.noti-search) + .table-content table tr:last-child td { border-bottom:0; }
+    .table-content:has(.mo-s) table thead + tbody tr:first-child,
+    .table-content:has(.mo-s) table tr:first-child { border-top:1px solid var(--color-2); }
 
     /*---------------------------------------------
         #프로세스
@@ -1822,6 +1824,9 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .WCC21400VQ .form-group input[type="text"], .WCC21400VQ .form-group input[type="password"], .WCC21400VQ .form-group input[type="email"], .WCC21400VQ .form-group input[type="number"], .WCC21400VQ .form-group input[type="tel"], .WCC21400VQ .form-group input[type="search"], .WCC21400VQ .form-group select { flex:auto; }
     .WCC21400VQ .form-group input.mo-phn { display:block; width:214px; }
     .WCC21401DS .btn-group .btn-download + .btn-download {margin-left:0;}
+    .layerPopup.full .pop-body.WCC21400VQ table tbody tr:first-child,
+    .layerPopup.full .pop-body.WCC21400VQ table thead tr:first-child { border-top:1px solid var(--color-2); }
+    .layerPopup.full .pop-body.WCC21400VQ table thead + tbody tr:first-child { border-top:0; }
 
     /* 법인계약 약정 + 상담신청 팝업 모바일용*/
     .WCC21200VQ table, .WCC70102PS .pop-content table,

@@ -117,7 +117,7 @@ label input[type="radio"]:checked { border:7px solid var(--form-checked);  }
 label input[type="radio"]:disabled { border:7px solid var(--form-check-dissbled);  }
 
 
-label.radio.button { display:inline-flex; align-items:center; justify-content:center; flex:1;  margin-bottom:0; height:var(--form-height); background:var(--color-f8); border:2px solid var(--color-f8); border-radius:0; text-align:centerb∫; }
+label.radio.button { display:inline-flex; align-items:center; justify-content:center; flex:1;  margin-bottom:0; height:var(--form-height); background:var(--color-f8); border:2px solid var(--color-f8); border-radius:0; text-align:center; }
 label.radio.button input{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow: hidden;  border:0; clip:rect(0, 0, 0, 0); white-space: nowrap; }
 label.radio.button:has(input:checked) { background:var(--white); border-color:var(--primary); color:var(--primary); font-weight:var(--font-w-b) }
 
@@ -131,6 +131,7 @@ label.radio.button:has(input:checked) { background:var(--white); border-color:va
 /** 약관동의 **/
 [class*="-container"] form:has(.terms) { margin:32px 0 72px; }
 .terms li { position: relative; display:flex; align-items:center; gap:14px; padding:23px 20px; border-bottom:1px solid var(--color-d); font-size:0; }
+.terms:not(:has(.check-all-area)) li:first-child { border-top:1px solid var(--color-2); }
 .terms input[type="checkbox"] { display:inline-block; }
 .terms input[type="checkbox"] + label { display:inline-block; position:relative; margin:0; min-height:30px; line-height:30px; color:var(--color-45); font-weight:var(--font-w-m); font-size:1rem; }
 .terms input[type="checkbox"]:checked  + label span { font-weight:var(--font-w-m); color:var(--from-font-color); }
