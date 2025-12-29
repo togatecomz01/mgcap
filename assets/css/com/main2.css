@@ -322,6 +322,10 @@ body:has(.main) .menu .menu-item .list-item { top:75px; }
 .layerPopup.modal .pop-content.event .pop-footer .button-content { justify-content:space-between; }
 .layerPopup.modal .pop-content.event .pop-footer .button-content button:last-of-type { font-weight:var(--font-w-b); }
 
+.eventSwiper .swiper-button-prev[aria-disabled="true"],
+.eventSwiper .swiper-button-next[aria-disabled="true"] { opacity: 0; pointer-events: none; }
+
+
 @media (max-width:1400px){
 
     .main .visual-container::after { display:none; }
