@@ -326,7 +326,7 @@ form:has(.form-wrap.search-form) + [class*="-group"] { margin-top:38px; }
 .view-cont .view-image{ max-width:800px; aspect-ratio:16/9; background-color:#f0f0f0;margin-bottom:24px; }
 .view-cont p{ margin-bottom:24px; }
 .view-cont p:last-child{ margin-bottom:0; }
-.view-cont > * { all:revert; }
+.view-cont * { all:revert; }
 
 .view-navigation{border-top:var(--view-link-board); }
 .view-navigation li{ position:relative; border-bottom:var(--view-link-board); }
