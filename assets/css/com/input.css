@@ -38,7 +38,8 @@ body{
 /* 포커스 링 */
 input:focus-visible,
 textarea:focus-visible,
-select:focus-visible { outline:2px solid var(--form-active); outline-offset:4px; z-index:2;  }
+select:focus-visible,
+label.button:has(:focus-visible) { outline:2px solid var(--form-active); outline-offset:4px; z-index:2;  }
 
 
 label,
