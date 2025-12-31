@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>휴대폰 정보변경&gt;홈</title>
+
+    <meta name="keywords" content="MG캐피탈" />
+    <meta name="copyright" content="copyrights 2025 MG캐피탈" />
+    <meta name="viewport" content="width=device-width" />
+    <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="No-Cache" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico"/>
+    <link rel="stylesheet" href="../../assets/css/com/default.css" />
+    <link rel="stylesheet" href="../../assets/css/com/common.css" />
+    <link rel="stylesheet" href="../../assets/css/com/style.css" />
+    <link rel="stylesheet" href="../../assets/css/com/fonts.css" />
+    <link rel="stylesheet" href="../../assets/css/com/layout.css" />
+    <link rel="stylesheet" href="../../assets/css/com/nav.css" />
+    <link rel="stylesheet" href="../../assets/css/com/input.css" />
+    <link rel="stylesheet" href="../../assets/css/com/button.css" />
+    <link rel="stylesheet" href="../../assets/css/com/tab.css" />
+    <link rel="stylesheet" href="../../assets/css/com/table.css" />
+    <link rel="stylesheet" href="../../assets/css/com/content.css" />
+    <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+    <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+    <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
+    <script src="../../assets/js/include.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div data-include-path="../../views/COMMON/header.html"></div>
+        <div class="bodyWrap">
+            <main class="contentWrap">
+                <nav class="location-container">
+                    <ol class="breadcrumb">
+                        <li><span class="home">홈</span></li>
+                        <li><span>휴대폰 정보변경</span></li>
+                    </ol>
+                </nav>
+                <section class="visual-container">
+                    <h2>휴대폰 정보변경</h2>
+                </section>
+                <section class="page-container WCS40201VS">
+                    <div class="form-content">
+                        <div class="form-group">
+                            <h3 class="table-tit">약관동의</h3>
+                            <ul class="check-box terms">
+                                <li>
+                                    <input type="checkbox" id="check-required-1" class="chkReq">
+                                    <label for="check-required-1" class="check-button" data-open-bak="inc_term_09">
+                                        <span>제3자 정보제공동의</span>
+                                    </label>
+                                    <button title="제3자 정보제공동의" type="button" class="modal" data-popup-open="inc_term_09">내용보기</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="table-group">
+                            <h3 class="table-tit">기본정보</h3>
+                            <table> 
+                                <caption>휴대폰 본인인증 입력 표(이름, 기존 휴대폰번호 안내, 휴대폰 본인인증)</caption>
+                                <colgroup>
+                                    <col style="width:262px;">
+                                    <col style="width:auto">
+                                </colgroup>
+                                <tbody>
+                                    <tr id="newPassWord" class="pass-change-hide-leave">
+                                        <th scope="row">휴대폰 변경 </th>
+                                        <td class="tal">
+                                            <button type="button" onclick="hpRegiFun();" class="btn-form pad">본인인증</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="rfrnc"> 본인인증을 하셔야, 변경된 휴대폰정보를 등록할 수 있습니다.</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <div data-include-path="../../views/COMMON/footer.html"></div>
+    </div>
+    <!-- s: 제3자 정보제공동의 -->
+    <div id="inc_term_09" class="layerPopup full fullPopupOn">
+        <!--[D] fullPopupOn 클래스 :: 헤더 스크립트 적용중-->
+        <div class="pop-area" tabindex="0">
+            <div class="pop-header">
+                <h2 class="pop-tit">제3자 정보제공동의</h2>
+            </div>
+            <div class="pop-body WCC20710VS">
+                <div class="pop-content">
+                    <div class="text-group">
+                        <h3 class="tit">엠지캐피탈주식회사(이하 “회사”)는 정보주체의 동의, 법률의 특별한 규정 등 개인정보 보호법 제17조 및 제18조에 해당하는 경우에만 개인정보를 제3자에게 제공합니다.<p></p>
+                    </h3></div>
+                    <div class="text-group">
+                        <h4 class="tit">가. 용어정의</h4>
+                        <ol class="text-list">
+                            <li> <span>1.</span> <span>CI(연계정보) : 특정 개인의 식별을 위한 고유한 범용값</span></li>
+                            <li> <span>2.</span> <span>인증사업자 : 카카오, 네이버, PASS, PAYCO, 토스 등 본인인증 서비스를 제공하는 사업자</span></li>
+                        </ol>
+                    </div>
+                    <div class="text-group">
+                        <h4 class="tit">나. 제 3자 제공에 관한 사항</h4>
+                        <ol class="text-list">
+                            <li><span>1.</span> <span>개인정보를 제공받는자 : 인증사업자</span></li>
+                            <li><span>2.</span> <span>제공받는 자의 개인정보 이용목적 : 본인인증</span></li>
+                            <li><span>3.</span> <span>제공하는 개인정보 항목 : 성명, 생년월일, 성별, 내/외국인, 휴대폰번호, 주민등록번호</span></li>
+                            <li><span>4.</span> <span>제공받는자의 보유/이용기간 : 본인인증 후 즉시 파기</span></li>
+                        </ol>
+                    </div> 
+                    <div class="text-group">
+                        <p>위 개인정보의 제3자 제공 동의를 거부할 수 있습니다. 다만, 관련 당사 홈페이지 이용 목적에 따른 서비스의 제한이 있을 수 있습니다.</p>
+                    </div>
+            </div>
+            </div>
+            <div class="pop-footer">
+                <div class="button-content">
+                    <button type="button" class="btn-pop-primary" data-popup-close="inc_term_09">확인했어요</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e: 제3자 정보제공동의 -->
+</body>
+</html>
+ 
