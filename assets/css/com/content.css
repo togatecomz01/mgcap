@@ -357,7 +357,7 @@ main.contentWrap.finance > .page-container { padding-top:72px; }
     padding: var(--padding);
     width: 100%;
     max-width: 965px;
-    font-family: "Noto Sans CJK KR";
+    font-family:'Noto Sans KR'; 
 }
 .finance .finance-group { padding: 30px 26px 26px; width: calc((100% - var(--gap) * 2) / 3); border-radius: 16px; background-color: var(--white); text-align: center; box-shadow:0 0 15px 0 rgba(0, 0, 0, 0.04); }
 .finance .finance-group dt { padding-bottom:10px; font-size:var(--font18); }
