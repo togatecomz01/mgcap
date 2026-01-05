@@ -19,21 +19,32 @@ $(document).ready(function () {
       if (!$target || !$target.length) return;
 
       function pick() {
-        // 1) pop-area
+
+        /* ===========================
+           [수정] Tab 이동이 되려면
+           "실제 포커스 가능한 요소"를 1순위로 잡아야 함
+        =========================== */
+        var $firstFocusable = $target
+          .find(FOCUSABLE)
+          .filter(":visible")
+          .first();
+
+        if ($firstFocusable.length) {
+          return $firstFocusable;
+        }
+
+        // 2) pop-area
         var $el = $target.find(".pop-area").first();
 
-        // 2) pop-content
+        // 3) pop-content
         if (!$el.length) $el = $target.find(".pop-content").first();
-
-        // 3) 내부 첫 포커스 요소
-        if (!$el.length) $el = $target.find(FOCUSABLE).first();
 
         // 4) 최후: 팝업 컨테이너
         if (!$el.length) $el = $target;
 
-        // programmatic focus용(tab순서에 끼지 않게 -1)
-        if (!$el.is("button,a,input,select,textarea")) {
-          if (!$el.is("[tabindex]")) $el.attr("tabindex", "-1");
+        // [수정] programmatic focus 전용(tab 순서에 끼지 않게 -1)
+        if (!$el.is("[tabindex]")) {
+          $el.attr("tabindex", "-1");
         }
 
         return $el;
@@ -51,7 +62,7 @@ $(document).ready(function () {
     }
 
     var popupL = {
-       /** 팝업 초기화**/
+      /** 팝업 초기화 **/
       initPopup: function (id) {
         var $target = $("#" + id);
         if (!$target.length) return;
@@ -64,30 +75,25 @@ $(document).ready(function () {
 
         focusIntoPopup($target);
       },
-      /**
-         * 팝업 열기
-         */
+
+      /** 팝업 열기 **/
       openPopup: function (id) {
         this.initPopup(id);
       },
-      /**
-         * 모달 열기
-         */
+
+      /** 모달 열기 **/
       openModal: function (id) {
         this.initPopup(id);
         log("openModal:", id);
       },
-      /**
-         * 메뉴 팝업 열기
-         */
+
+      /** 메뉴 팝업 열기 **/
       openMenu: function (id) {
         this.initPopup(id);
         log("openMenu:", id);
       },
 
-      /**
-         * 팝업 닫기
-         */
+      /** 팝업 닫기 **/
       closePopup: function (id) {
         var _target = document.getElementById(id);
         if (_target) _target.classList.remove("on");
@@ -102,7 +108,7 @@ $(document).ready(function () {
 
         this.fkSelAndPopupResetOverflow();
 
-        // [추가] 닫히면 트리거로 포커스 복귀
+        // 닫히면 트리거로 포커스 복귀
         setTimeout(function () {
           if (lastTriggerEl && document.contains(lastTriggerEl)) {
             try { lastTriggerEl.focus(); } catch (e) {}
@@ -124,7 +130,7 @@ $(document).ready(function () {
             $(".layerPopup.toggleUp").removeClass("active");
           }, 10);
         }
-      },
+      }
     };
 
     var btmShtTL = {
@@ -147,10 +153,10 @@ $(document).ready(function () {
         } else {
           $contentWrap.removeAttr("tabindex");
         }
-      },
+      }
     };
 
-    // [추가] 라벨 + change 로 팝업 여는 케이스
+    // 라벨 + change 로 팝업 여는 케이스
     $(document).on("change", "input, select, textarea", function () {
       var $label = $('label[for="' + this.id + '"]');
       var popupId = $label.data("popup-open");
