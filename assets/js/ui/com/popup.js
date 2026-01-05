@@ -1,198 +1,207 @@
 $(document).ready(function () {
-    /**
-     *  ** fkSelAndPopupResetOverflow 함수 전역 정의
-     *  - 팝업과 셀렉트가 모두 닫혔을 때만 `overflow: ''` 적용
-     **/
+  (function () {
+    var DEBUG = false;
 
-    /**
-     *  팝업
-     *  data-popup-open :: full 팝업, btmSheet 팝업
-     *  data-modal-open :: modal
-     *  data-menu-open :: 전체 메뉴
-     **/
-    (function () {
-        /**
-         *  팝업 관리 모듈
-         **/
-        // var popupContainer = $('.layerPopup');
-        // popupContainer.css('visibility', 'hidden');
+    // 마지막으로 팝업을 연 트리거(버튼/인풋/라벨)
+    var lastTriggerEl = null;
 
-        var popupL = {
-            /**
-             * 팝업 초기화
-             */
-            initPopup: function (id) {
-                var $target = $("#" + id);
-                if (!$target.length) return;
+    // 포커스 가능한 요소 후보 셀렉터
+    var FOCUSABLE =
+      'button, [href], input, select, textarea, [role="button"], [tabindex]:not([tabindex="-1"])';
 
-                $target.addClass("on");
-                $target.find(".pop-content").scrollTop(0);
-                $("body, .contentWrap").css("overflow", "hidden");
+    function log() {
+      if (!DEBUG) return;
+      try { console.log.apply(console, arguments); } catch (e) {}
+    }
 
-                console.log("initPopup: " + "공통 실행");
+    // 팝업 내부로 포커스 이동 (렌더/transition 타이밍 재시도)
+    function focusIntoPopup($target) {
+      if (!$target || !$target.length) return;
 
-                //full 팝업 header fixed 처리
-                // setTimeout(function () {
-                //     if ($target.hasClass('full')) {
-                //         var $header = $target.find('.pop-header');
-                //         if ($header.length) {
-                //             $header.css('position', 'fixed');
+      function pick() {
+        // 1) pop-area
+        var $el = $target.find(".pop-area").first();
 
-                //             console.log('initPopup: ' + 'fixed 적용');
-                //         }
-                //     }
-                // }, 100);
+        // 2) pop-content
+        if (!$el.length) $el = $target.find(".pop-content").first();
 
-                // 접근성: 포커스 처리
-                var $focusEl = $target.find(".pop-area");
-                if ($focusEl.length) {
-                    $focusEl.attr("tabindex", "0").focus();
+        // 3) 내부 첫 포커스 요소
+        if (!$el.length) $el = $target.find(FOCUSABLE).first();
 
-                    console.log("focusEl: " + "포커스 실행");
-                } else {
-                    $target.removeAttr("tabindex");
-                }
-            },
+        // 4) 최후: 팝업 컨테이너
+        if (!$el.length) $el = $target;
 
-            /**
-             * 팝업 열기
-             */
-            openPopup: function (id) {
-                this.initPopup(id);
-            },
+        // programmatic focus용(tab순서에 끼지 않게 -1)
+        if (!$el.is("button,a,input,select,textarea")) {
+          if (!$el.is("[tabindex]")) $el.attr("tabindex", "-1");
+        }
 
-            /**
-             * 모달 열기
-             */
-            openModal: function (id) {
-                this.initPopup(id);
+        return $el;
+      }
 
-                console.log("openModal: " + "모달 실행");
-            },
+      var tries = 0;
+      (function attempt() {
+        tries++;
+        var $el = pick();
+        try { $el.get(0).focus(); } catch (e) {}
 
-            /**
-             * 메뉴 팝업 열기
-             */
-            openMenu: function (id) {
-                this.initPopup(id);
+        if (document.activeElement === $el.get(0)) return;
+        if (tries < 4) setTimeout(attempt, 60);
+      })();
+    }
 
-                console.log("openMenu: " + "메뉴 팝업 실행");
-            },
+    var popupL = {
+       /** 팝업 초기화**/
+      initPopup: function (id) {
+        var $target = $("#" + id);
+        if (!$target.length) return;
 
-            /**
-             * 팝업 닫기
-             */
-            closePopup: function (id) {
-                var _target = document.getElementById(id);
-                if (_target) _target.classList.remove("on");
-                this.fkSelAndPopupResetOverflow();
+        $target.addClass("on");
+        $target.find(".pop-content").scrollTop(0);
+        $("body, .contentWrap").css("overflow", "hidden");
 
-                // 초기화
-                if (_target.classList.contains("full")) {
-                    var header = _target.querySelector(".pop-header");
-                    if (header) {
-                        header.style.position = "";
+        log("initPopup:", id);
 
-                        console.log("closePopup: " + "공통 초기화");
-                    }
-                }
-                this.fkSelAndPopupResetOverflow();
-            },
-
-            /**
-             * 팝업 및 셀렉트 닫힐 때 `overflow` 초기화
-             */
-            fkSelAndPopupResetOverflow: function () {
-                var isPopupOpen = $(".layerPopup.on").length > 0;
-                var isSelectOpen = $(".stove-option-layer.on").length > 0;
-
-                if (!$(".layerPopup.on").length && !$(".stove-option-layer.on").length) {
-                    $("body, .contentWrap").css("overflow", "");
-                    $(".pop-area").removeAttr("tabindex");
-
-                    console.log("fkSelAndPopupResetOverflow: " + "마지막 팝업 닫힘");
-
-                    setTimeout(function () {
-                        $(".layerPopup.toggleUp").removeClass("active");
-
-                        console.log("toggleUp: " + "초기화");
-                    }, 10);
-                }
-            },
-        };
-
-        /**
-         * 바텀시트 관리 모듈
-         **/
-        var btmShtTL = {
-            /**
-             * 바텀시트토글
-             */
-            btmAti: function (id) {
-                var $target = $("#" + id);
-                if (!$target.length) return;
-
-                var $contentWrap = $target.find(".pop-content");
-                $target.toggleClass("active");
-
-                console.log("btmAti: " + "바텀시트토글 실행");
-
-                if ($target.hasClass("active")) {
-                    $contentWrap.scrollTop(0).attr("tabindex", "-1").focus();
-
-                    console.log("btmAti: " + "포커스 실행");
-                } else {
-                    $contentWrap.removeAttr("tabindex");
-                }
-            },
-        };
-
-        /**
-         * 이벤트 위임을 이용한 팝업 제어
+        focusIntoPopup($target);
+      },
+      /**
+         * 팝업 열기
          */
-        $(document).on("click", function (e) {
-            var $target = $(e.target);
+      openPopup: function (id) {
+        this.initPopup(id);
+      },
+      /**
+         * 모달 열기
+         */
+      openModal: function (id) {
+        this.initPopup(id);
+        log("openModal:", id);
+      },
+      /**
+         * 메뉴 팝업 열기
+         */
+      openMenu: function (id) {
+        this.initPopup(id);
+        log("openMenu:", id);
+      },
 
-            // 팝업 열기
-            var $openBtn = $target.closest("[data-popup-open]");
-            if ($openBtn.length) return popupL.openPopup($openBtn.data("popup-open"));
-            // 라벨 클릭 시 팝업 열기
-            $(document).on("change", function () {
-                var popupId = $('label[for="' + this.id + '"]').data("popup-open");
-                if (popupId && window.popupL) {
-                    window.popupL.openPopup(popupId);
-                }
-            });
+      /**
+         * 팝업 닫기
+         */
+      closePopup: function (id) {
+        var _target = document.getElementById(id);
+        if (_target) _target.classList.remove("on");
 
-            // 모달 열기
-            var $modalBtn = $target.closest("[data-modal-open]");
-            if ($modalBtn.length) return popupL.openModal($modalBtn.data("modal-open"));
+        this.fkSelAndPopupResetOverflow();
 
-            // 메뉴 열기
-            var $menuBtn = $target.closest("[data-menu-open]");
-            if ($menuBtn.length) return popupL.openMenu($menuBtn.data("menu-open"));
+        // full 팝업 header fixed 초기화
+        if (_target && _target.classList.contains("full")) {
+          var header = _target.querySelector(".pop-header");
+          if (header) header.style.position = "";
+        }
 
-            // 팝업 닫기
-            var $closeBtn = $target.closest("[data-popup-close]");
-            if ($closeBtn.length) return popupL.closePopup($closeBtn.data("popup-close"));
+        this.fkSelAndPopupResetOverflow();
 
-            // 바텀시트 토글
-            var $btmToggleBtn = $target.closest("[data-btm-toggle]");
-            if ($btmToggleBtn.length) return btmShtTL.btmAti($btmToggleBtn.data("btm-toggle"));
+        // [추가] 닫히면 트리거로 포커스 복귀
+        setTimeout(function () {
+          if (lastTriggerEl && document.contains(lastTriggerEl)) {
+            try { lastTriggerEl.focus(); } catch (e) {}
+          }
+        }, 50);
+      },
 
-            // 바텀시트 dim 클릭 시 닫기
-            var $dimLayer = $target.closest(".layerPopup.btmSheet");
-            if ($dimLayer.length && $target.is($dimLayer)) {
-                $dimLayer.removeClass("active").find(".pop-content").removeAttr("tabindex");
-                popupL.closePopup($dimLayer.attr("id"));
-                return;
-            }
-        });
+      fkSelAndPopupResetOverflow: function () {
+        var isPopupOpen = $(".layerPopup.on").length > 0;
+        var isSelectOpen = $(".stove-option-layer.on").length > 0;
 
-        // 전역 오염 방지 - 필요할 때만 가져다 사용할 수 있도록 노출
-        window.popupL = popupL;
-        window.btmShtTL = btmShtTL;
-        // 전역에서 접근 가능하도록 별도 함수로 노출
-        window.fkSelAndPopupResetOverflow = popupL.fkSelAndPopupResetOverflow;
-    })();
+        if (!isPopupOpen && !isSelectOpen) {
+          $("body, .contentWrap").css("overflow", "");
+
+          // tabindex 제거(열릴 때 -1 부여한 것들 정리)
+          $(".pop-area, .pop-content").removeAttr("tabindex");
+
+          setTimeout(function () {
+            $(".layerPopup.toggleUp").removeClass("active");
+          }, 10);
+        }
+      },
+    };
+
+    var btmShtTL = {
+      btmAti: function (id) {
+        var $target = $("#" + id);
+        if (!$target.length) return;
+
+        var $contentWrap = $target.find(".pop-content");
+        $target.toggleClass("active");
+
+        log("btmAti:", id);
+
+        if ($target.hasClass("active")) {
+          $contentWrap.scrollTop(0);
+          $contentWrap.attr("tabindex", "-1");
+
+          // 타이밍 대응 2회만
+          setTimeout(function () { try { $contentWrap.get(0).focus(); } catch (e) {} }, 0);
+          setTimeout(function () { try { $contentWrap.get(0).focus(); } catch (e) {} }, 60);
+        } else {
+          $contentWrap.removeAttr("tabindex");
+        }
+      },
+    };
+
+    // [추가] 라벨 + change 로 팝업 여는 케이스
+    $(document).on("change", "input, select, textarea", function () {
+      var $label = $('label[for="' + this.id + '"]');
+      var popupId = $label.data("popup-open");
+      if (!popupId) return;
+
+      lastTriggerEl = $label.get(0) || this;
+      popupL.openPopup(popupId);
+    });
+
+    // 클릭으로 여닫는 케이스
+    $(document).on("click", function (e) {
+      var $t = $(e.target);
+
+      var $openBtn = $t.closest("[data-popup-open]");
+      if ($openBtn.length) {
+        lastTriggerEl = $openBtn.get(0);
+        return popupL.openPopup($openBtn.data("popup-open"));
+      }
+
+      var $modalBtn = $t.closest("[data-modal-open]");
+      if ($modalBtn.length) {
+        lastTriggerEl = $modalBtn.get(0);
+        return popupL.openModal($modalBtn.data("modal-open"));
+      }
+
+      var $menuBtn = $t.closest("[data-menu-open]");
+      if ($menuBtn.length) {
+        lastTriggerEl = $menuBtn.get(0);
+        return popupL.openMenu($menuBtn.data("menu-open"));
+      }
+
+      var $closeBtn = $t.closest("[data-popup-close]");
+      if ($closeBtn.length) return popupL.closePopup($closeBtn.data("popup-close"));
+
+      var $btmToggleBtn = $t.closest("[data-btm-toggle]");
+      if ($btmToggleBtn.length) {
+        lastTriggerEl = $btmToggleBtn.get(0);
+        return btmShtTL.btmAti($btmToggleBtn.data("btm-toggle"));
+      }
+
+      // 바텀시트 dim 클릭 시 닫기
+      var $dimLayer = $t.closest(".layerPopup.btmSheet");
+      if ($dimLayer.length && $t.is($dimLayer)) {
+        $dimLayer.removeClass("active").find(".pop-content").removeAttr("tabindex");
+        popupL.closePopup($dimLayer.attr("id"));
+      }
+    });
+
+    // 전역 노출
+    window.popupL = popupL;
+    window.btmShtTL = btmShtTL;
+    window.fkSelAndPopupResetOverflow = popupL.fkSelAndPopupResetOverflow;
+  })();
 });
