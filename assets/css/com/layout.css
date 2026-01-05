@@ -483,7 +483,7 @@ main.contentWrap > .bottom-container { margin-top:72px; }
 .footer-top > .ft-link li:not(li:first-child) a { font-weight:var(--font-w-m); }
 
 .footer-top .family-site { width:112px; }
-.footer-top .family-site select {padding:0 20px 0 0; height:auto; border:0; background-image:url("../../images/com/svg/ico_footer_select.svg"); background-position:right; font-size:var(--font14); font-weight:var(--font-w-m); color:#9D9D9D; line-height:21px; }
+.footer-top .family-site select {padding:0 20px 0 0; height:auto; border:0; background-image:url("../../images/com/svg/ico_footer_select.svg"); background-position:right; font-size:var(--font14); font-weight:var(--font-w-m); color:var(--color-6); line-height:21px; }
 
 .footer-main { display:flex; justify-content:space-between; align-items:center; margin-top:38px; }
 .footer-main .ft-cts p { padding-bottom:8px; font-size:var(--font14); font-weight:var(--font-w-r); color:var(--color-6); }
