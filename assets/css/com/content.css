@@ -457,7 +457,7 @@ main.contentWrap.finance > .page-container { padding-top:72px; }
 .anchor-panel .info-content .note-group .detail-tit + ul { margin-top:0; }
 .anchor-panel .info-content .note-group .m-dot li { font-size:var(--font18); color:var(--color-45); }
 .anchor-panel .info-content .note-group .m-dot li:first-child { margin-top:0; }
-.anchor-panel .info-content .note-group .m-dot li.point-r { color: #d82800 !important; font-weight:var(--font-w-m); }
+.anchor-panel .info-content .note-group .m-dot li.point-r { font-weight:var(--font-w-m); }
 .anchor-panel .info-content .note-group .m-dot .bulls-eye > li.error {display: list-item;}
 .anchor-panel .info-content .note-group .m-dot .bulls-eye > li::before {content: "◎";}
 .anchor-panel .info-content .note-group .m-dot li .bulls-eye { margin-top:8px; }
@@ -1025,8 +1025,8 @@ color: var(--white); font-size: var(--font26); font-weight: var(--font-w-b); bac
 .WCA90103VQ .tab-content + .text-group { margin-top:18px; }
 /* 회사소개 - 성희롱신고센터 (WCA90100VQ) */
 .WCA90100VQ strong+ol {margin-top: 18px;}
-.WCA90100VQ .point-r,.WCA90107VQ .point-r {color: #F00 !important; margin-top: 18px;} 
-.WCA90100VQ .info-content .dot > li:last-child::before {background-color: #F00;}
+.WCA90100VQ .point-r,.WCA90107VQ .point-r { margin-top: 18px;} 
+.WCA90100VQ .info-content .dot > li:last-child::before {background-color:var(--point-r);}
 
 
 /* 회사소개 - 공시정보 (WCA50100VQ) + 신용평가(WCA50300VQ) */

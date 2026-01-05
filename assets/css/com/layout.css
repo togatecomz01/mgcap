@@ -10,7 +10,7 @@ body {
     --error: var(--red);
     --success:var(--primary);
     --failure:var(--red);
-    --point-r:var(--red);
+    --point-r:#d82800;
     --point-b:var(--primary);
     --ico-location:url("../../images/com/svg/ico_location.svg");
     --search-bg:#EEF2F7;
@@ -334,7 +334,7 @@ form:has(.form-wrap.search-form) + [class*="-group"] { margin-top:38px; }
 .view-navigation li a { display:inline-block; font-size:var(--font16); font-weight:var(--font-w-r); line-height:1.5; }
 .view-navigation .label{ padding:var(--view-lable-p); vertical-align:top; width:131px; color:var(--color-75); }
 .view-navigation .link-group { font-size:0; }
-.view-navigation .link-group > a { padding:var(--view-a-p); max-width:455px; font-size:1rem; color:var(--color-6); overflow:hidden; white-space:nowrap; text-overflow:ellipsis; word-break:break-all; }
+.view-navigation .link-group > a { padding:var(--view-a-p); width:calc(100% - 200px); font-size:1rem; color:var(--color-6); overflow:hidden; white-space:nowrap; text-overflow:ellipsis; word-break:break-all; }
 .view-navigation .link-group > a.on { font-weight:var(--font-w-m); color:var(--color-45); }
 .view-navigation .link-group > a.non { cursor:auto; }
 .view-navigation .link-group > .date { display:none; position:absolute; right:28px; top:50%; transform:translate(0, -50%); font-size:var(--font16); }
@@ -706,7 +706,7 @@ main.contentWrap > .bottom-container { margin-top:72px; }
     .view-subject { display:flex; flex-direction:column; align-items:flex-start; padding:16px 16px 0 0; }
     .view-subject .date {padding:0; margin-left:0; margin-top:8px; }
     .view-navigation li .label { padding-right:0; width:80px; font-size:var(--font14); line-height:14px; }
-    .view-navigation .link-group > a { padding-left:16px; max-width:calc(100% - 80px); font-size:var(--font14); line-height:14px; }
+    .view-navigation .link-group > a { padding-left:16px; width:calc(100% - 80px); font-size:var(--font14); line-height:14px; }
     .view-navigation .date {display: none;}
 
     .btn-content.cta button,
