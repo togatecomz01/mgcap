@@ -195,7 +195,6 @@ label.toggle input + span { font-size:0; }
 /**조건검색**/
 
 /** 공지사항 검색 **/
-.noti-search label { display:none; font-size:0; }
 .noti-search input[type="text"],
 .noti-search input[type="password"],
 .noti-search input[type="email"],
