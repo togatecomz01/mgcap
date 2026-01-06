@@ -1,0 +1,1672 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="euc-kr" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>상세&gt;접수 이력서 관리&gt;관리자페이지&gt;mg캐피탈</title>
+
+        <meta name="keywords" content="MG캐피탈" />
+        <meta name="copyright" content="copyrights 2025 MG캐피탈" />
+        <meta name="description" content="MG캐피탈 리스금융, 할부금융, 스탁론, 기업대출, 장기렌트카, PF대출 등 금융 서비스 제공." />
+        <meta name="viewport" content="width=device-width" />
+
+        <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta http-equiv="Expires" content="-1" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Cache-Control" content="No-Cache" />
+
+        <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico" />
+
+        <link rel="stylesheet" href="../../assets/css/com/style.css" />
+        <link rel="stylesheet" href="../../assets/css/com/default.css" />
+        <link rel="stylesheet" href="../../assets/css/com/fonts.css" />
+        <link rel="stylesheet" href="../../assets/css/com/layout.css" />
+        <link rel="stylesheet" href="../../assets/css/com/input.css" />
+        <link rel="stylesheet" href="../../assets/css/com/button.css" />
+        <link rel="stylesheet" href="../../assets/css/com/tab.css" />
+        <link rel="stylesheet" href="../../assets/css/com/table.css" />
+
+        <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+        <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../../assets/js/ui/com/input.js"></script>
+        <script type="text/javascript" src="../../assets/js/ui/com/nav.js"></script>
+        <script type="text/javascript" src="../../assets/js/ui/com/popup.js"></script>
+
+        <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
+        <script src="../../assets/js/include.js"></script>
+        <style>
+        @media print {
+            @page { size: A4; margin: 1cm; }
+            html, body {  width:100%; max-width:100%; min-width:100%; height:auto !important; overflow:visible !important; }
+            *{
+                word-wrap:normal !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+            #menuWrap, .title_container, .button-container, .button-ccontainer { display:none !important; }
+            .bodyWrap, .contentWrap { margin:0 !important; padding:0 !important; background:transparent !important; }
+            .write-container { padding:10px 0 0 0; }
+            .contentWrap { width:100% !important; min-width:100% !important; height:auto !important; max-height:none !important; overflow:visible !important; }
+            .printWrap { display:block !important; width:100% !important; position:static !important; }
+            .printWrap .group { display:block !important; padding:0; break-inside:auto !important; page-break-inside:auto !important; }
+            .printWrap .group + .group { break-before:page; page-break-before:always; }
+            .printWrap .write-container h4 { padding:20px 0 10px; }
+            .printWrap label.radio { padding:0; border-radius:0; background:transparent; }
+            .printWrap table{ width:100% !important; min-width:100% !important; max-width:100% !important; table-layout:fixed !important; border-collapse:collapse !important; }
+            .printWrap th, td{ max-width:0; height:auto !important; white-space:normal;  word-break:keep-all;  }
+            .printWrap col[style="width: 230px"]{ width:17% !important; }
+            .printWrap col.auto { min-width:auto !important; }
+            .printWrap thead { display:table-header-group; }
+            .printWrap tfoot { display:table-footer-group; }
+            .printWrap tr{  break-inside: avoid; page-break-inside: avoid; }
+            .printWrap .textarea-wrap { font-size:12px; }
+            .printWrap .list-content { max-height:initial !important; }
+
+            
+        }
+        </style>
+    </head>
+
+    <body>
+        <div class="wrap">
+            <div class="bodyWrap">
+                <div data-include-path="../COMMON/lnb.html"></div>
+               
+                    <main class="contentWrap">
+                        <section class="title_container">
+                            <h2>입사지원서</h2>
+                            <ul class="location_content">
+                                <li><a href="javascript:void(0);" class="home">홈</a></li>
+                                <li><a href="javascript:void(0);">채용관리</a></li>
+                                <li><a href="javascript:void(0);">접수 이력서 관리</a></li>
+                                <li><a href="javascript:void(0);">접수 이력서 관리</a></li>
+                            </ul>
+                        </section>
+                        <div class="printWrap">
+                            <div class="group">
+                                <!-- [D]: 기본정보 -->
+                                <section class="write-container">
+                                    <h3>기본정보(홍길동)</h3>
+                                    <!-- [D]: 기본정보-지원분야 -->
+                                    <h4><span class="essential">지원분야</span></h4>
+                                    <table class="write-content">
+                                        <caption>
+                                            지원구분으로 구성된 표
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 230px" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th id="th-apply-type" scope="row"><span>지원구분</span></th>
+                                                <td>
+                                                    <div class="form-wrap">
+                                                        <fieldset>
+                                                            <legend>기본 라디오박스</legend>
+                                                            <label class="radio">
+                                                                <input type="radio" name="row2-active" value="" checked="" />
+                                                                <span>신입</span>
+                                                            </label>
+                                                            <label class="radio">
+                                                                <input type="radio" name="row2-active" value="" />
+                                                                <span>경력</span>
+                                                            </label>
+                                                        </fieldset>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- [D]: 기본정보-1지망 -->
+                                    <h4><span class="essential">1지망</span></h4>
+                                    <table class="list-content">
+                                        <caption>
+                                            희망근무지, 지원업무, 상세지원업무로 구성된 1지망 목록
+                                        </caption>
+                                        <colgroup>
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th id="th-workplace" scope="col">희망근무지</th>
+                                                <th id="th-work" scope="col">지원업무</th>
+                                                <th id="th-work-detail" scope="col">상세지원업무</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span>희망근무지 노출</span></td>
+                                                <td><span>지원업무 노출</span></td>
+                                                <td><span>상세지원업무 노출</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- [D]: 기본정보-2지망 -->
+                                    <h4><span class="essential">2지망</span></h4>
+                                    <table class="list-content">
+                                        <caption>
+                                            희망근무지, 지원업무, 상세지원업무로 구성된 2지망 목록
+                                        </caption>
+                                        <colgroup>
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th id="th-workplace" scope="col">희망근무지</th>
+                                                <th id="th-work" scope="col">지원업무</th>
+                                                <th id="th-work-detail" scope="col">상세지원업무</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span>희망근무지 노출</span></td>
+                                                <td><span>지원업무 노출</span></td>
+                                                <td><span>상세지원업무 노출</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </section>
+            
+                                <!-- [D]: 개인정보 -->
+                                <section class="write-container">
+                                    <h3>개인정보</h3>
+                                    <!-- [D]: 개인정보-개인정보 -->
+                                    <h4><span>개인정보</span></h4>
+                                    <table class="write-content">
+                                        <caption>
+                                            사진등록, 성명, 생년월일, 휴대폰번호, 국적, 현주소, 이메일, 전화번호, 취미, 특기, 보훈여부로 구성된 개인정보 표
+                                        </caption>
+                                        <colgroup>
+                                            <col class="col-w2" style="width: 230px" />
+                                            <col class="auto" />
+                                            <col class="col-w2" style="width: 230px" />
+                                            <col class="col-w2" style="width: 230px" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th id="th-pic" scope="row" rowspan="3">사진등록</th>
+                                                <td rowspan="3" class="bo-l bo-r"><img /></td>
+                                                <th id="th-name" scope="row">성명</th>
+                                                <td class="bo-l"><span>성명노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-birth" scope="row">생년월일</th>
+                                                <td class="bo-l"><span>생년월일 노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-phone" scope="row">휴대폰번호</th>
+                                                <td class="bo-l"><span>휴대폰번호 노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-nation" scope="row">국적</th>
+                                                <td colspan="3" class="bo-l"><span>국적노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-address" scope="row">현주소</th>
+                                                <td colspan="3" class="bo-l"><span>주소노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-email" scope="row" rowspan="1">이메일</th>
+                                                <td class="bo-l bo-r"><span>이메일 노출</span></td>
+                                                <th id="th-call" scope="row">전화번호</th>
+                                                <td class="bo-l"><span>전화번호 노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-hobby" scope="row" rowspan="1">취미</th>
+                                                <td class="bo-l bo-r"><span>취미 노출</span></td>
+                                                <th id="th-skill" scope="row">특기</th>
+                                                <td class="bo-l"><span>특기 노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-veteran" scope="row">보훈여부</th>
+                                                <td colspan="3" class="bo-l"><span>보훈여부 노출</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- [D]: 개인정보-병역구분 -->
+                                    <h4><span>병역구분</span></h4>
+                                    <table class="list-content">
+                                        <caption>
+                                            병역구분, 군별, 복무기간, 면제사유로 구성된 표
+                                        </caption>
+                                        <colgroup>
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th id="th-military-type" scope="col">병역구분</th>
+                                                <th id="th-military" scope="col">군별</th>
+                                                <th id="th-military-period" scope="col">복무기간</th>
+                                                <th id="th-military-reason" scope="col">면제사유</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span>병역구분 노출</span></td>
+                                                <td><span>군별 노출</span></td>
+                                                <td><span>복무기간 노출</span></td>
+                                                <td><span>면제사유 노출</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </section>
+            
+                                <!-- [D]: 학력사항 -->
+                                <section class="write-container">
+                                    <h3>학력사항</h3>
+                                    <!-- [D]: 학력사항-고등학교 -->
+                                    <h4><span>고등학교</span></h4>
+                                    <table class="write-content">
+                                        <caption>
+                                            학교명, 기간, 졸업구분, 전공명, 학점으로 구성된 고등학교 표
+                                        </caption>
+                                        <colgroup>
+                                            <col class="col-w2" style="width: 230px" />
+                                            <col class="auto" />
+                                            <col class="col-w2" style="width: 230px" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th id="th-highschool-name" scope="row">학교명</th>
+                                                <td colspan="3" class="bo-l"><span>학교명 노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-highschool-period" scope="row" rowspan="1">기간</th>
+                                                <td class="bo-l bo-r"><span>재학기간 노출</span></td>
+                                                <th id="th-highschool-graduation" scope="row">졸업구분</th>
+                                                <td class="bo-l"><span>졸업여부 노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-highschool-major" scope="row">전공명</th>
+                                                <td colspan="3" class="bo-l"><span>전공명 노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-highschool-score" scope="row">학점</th>
+                                                <td colspan="3" class="bo-l"><span>00/00</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- [D]: 학력사항-전문대학 -->
+                                    <h4><span>전문대학</span></h4>
+                                    <table class="write-content">
+                                        <caption>
+                                            학교명, 기간, 졸업구분, 전공명, 학점으로 구성된 전문대학 표
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 230px" />
+                                            <col class="auto" />
+                                            <col style="width: 230px" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th id="th-college-name" scope="row">학교명</th>
+                                                <td colspan="3" class="bo-l"><span>학교명 노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-college-period" scope="row" rowspan="1">기간</th>
+                                                <td class="bo-l bo-r"><span>재학기간 노출</span></td>
+                                                <th id="th-college-graduation" scope="row">졸업구분</th>
+                                                <td class="bo-l"><span>졸업여부 노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-college-major" scope="row">전공명</th>
+                                                <td colspan="3" class="bo-l"><span>전공명 노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-college-score" scope="row">학점</th>
+                                                <td colspan="3" class="bo-l"><span>00/00</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- [D]: 학력사항-대학교 -->
+                                    <h4><span>대학교(4년제)</span></h4>
+                                    <table class="write-content">
+                                        <caption>
+                                            학교명, 본교/분교, 주간/야간, 기간, 졸업구분, 전공명, 학점으로 구성된 대학교(4년제) 표
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 230px" />
+                                            <col class="auto" />
+                                            <col style="width: 230px" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th id="th-univ-name" scope="row" rowspan="2">학교명</th>
+                                                <td rowspan="2" class="bo-l bo-r"><span>학교명 노출</span></td>
+                                                <th id="th-univ-campus" scope="row">본교/분교</th>
+                                                <td class="bo-l">
+                                                    <div class="form-wrap">
+                                                        <fieldset>
+                                                            <legend>기본 라디오박스</legend>
+                                                            <label class="radio">
+                                                                <input type="radio" name="row2-active" value="" checked="" />
+                                                                <span>본교</span>
+                                                            </label>
+                                                            <label class="radio">
+                                                                <input type="radio" name="row2-active" value="" />
+                                                                <span>분교</span>
+                                                            </label>
+                                                        </fieldset>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-univ-time" scope="row">주간/야간</th>
+                                                <td class="bo-l">
+                                                    <div class="form-wrap">
+                                                        <fieldset>
+                                                            <legend>기본 라디오박스</legend>
+                                                            <label class="radio">
+                                                                <input type="radio" name="row2-active" value="" checked="" />
+                                                                <span>주간</span>
+                                                            </label>
+                                                            <label class="radio">
+                                                                <input type="radio" name="row2-active" value="" />
+                                                                <span>야간</span>
+                                                            </label>
+                                                        </fieldset>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-univ-period" scope="row" rowspan="1">기간</th>
+                                                <td class="bo-l bo-r"><span>재학기간 노출</span></td>
+                                                <th id="th-univ-graduation" scope="row">졸업구분</th>
+                                                <td class="bo-l"><span>졸업여부 노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-univ-major" scope="row">전공명</th>
+                                                <td colspan="3" class="bo-l"><span>전공명 노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-univ-score" scope="row">학점</th>
+                                                <td colspan="3" class="bo-l"><span>00/00</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- [D]: 학력사항-석사 -->
+                                    <h4><span>대학교(석사)</span></h4>
+                                    <table class="write-content">
+                                        <caption>
+                                            학교명, 본교/분교, 주간/야간, 기간, 졸업구분, 전공명, 세부전공 소개, 학점으로 구성된 대학교(석사) 표
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 230px" />
+                                            <col class="auto" />
+                                            <col style="width: 230px" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th id="th-master-name" scope="row" rowspan="2">학교명</th>
+                                                <td rowspan="2" class="bo-l bo-r"><span>학교명 노출</span></td>
+                                                <th id="th-master-campus" scope="row">본교/분교</th>
+                                                <td class="bo-l">
+                                                    <div class="form-wrap">
+                                                        <fieldset>
+                                                            <legend>기본 라디오박스</legend>
+                                                            <label class="radio">
+                                                                <input type="radio" name="row2-active" value="" checked="" />
+                                                                <span>본교</span>
+                                                            </label>
+                                                            <label class="radio">
+                                                                <input type="radio" name="row2-active" value="" />
+                                                                <span>분교</span>
+                                                            </label>
+                                                        </fieldset>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-master-time" scope="row">주간/야간</th>
+                                                <td class="bo-l">
+                                                    <div class="form-wrap">
+                                                        <fieldset>
+                                                            <legend>기본 라디오박스</legend>
+                                                            <label class="radio">
+                                                                <input type="radio" name="row2-active" value="" checked="" />
+                                                                <span>주간</span>
+                                                            </label>
+                                                            <label class="radio">
+                                                                <input type="radio" name="row2-active" value="" />
+                                                                <span>야간</span>
+                                                            </label>
+                                                        </fieldset>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-master-period" scope="row" rowspan="1">기간</th>
+                                                <td class="bo-l bo-r"><span>재학기간 노출</span></td>
+                                                <th id="th-master-graduation" scope="row">졸업구분</th>
+                                                <td class="bo-l"><span>졸업여부 노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-master-major" scope="row" rowspan="1">전공명</th>
+                                                <td class="bo-l bo-r"><span>전공명 노출</span></td>
+                                                <th id="th-master-major-detail" scope="row">세부전공 소개</th>
+                                                <td class="bo-l"><span>세부전공 소개</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-master-score" scope="row">학점</th>
+                                                <td colspan="3" class="bo-l"><span>00/00</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- [D]: 학력사항-박사 -->
+                                    <h4><span>대학교(박사)</span></h4>
+                                    <table class="write-content">
+                                        <caption>
+                                            학교명, 본교/분교, 주간/야간, 기간, 졸업구분, 전공명, 연구실적 소개, 학점으로 구성된 대학교(박사) 표
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 230px" />
+                                            <col class="auto" />
+                                            <col style="width: 230px" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th id="th-doctor-name" scope="row" rowspan="2">학교명</th>
+                                                <td rowspan="2" class="bo-l bo-r"><span>학교명 노출</span></td>
+                                                <th id="th-doctor-campus" scope="row">본교/분교</th>
+                                                <td class="bo-l">
+                                                    <div class="form-wrap">
+                                                        <fieldset>
+                                                            <legend>기본 라디오박스</legend>
+                                                            <label class="radio">
+                                                                <input type="radio" name="row2-active" value="" checked="" />
+                                                                <span>본교</span>
+                                                            </label>
+                                                            <label class="radio">
+                                                                <input type="radio" name="row2-active" value="" />
+                                                                <span>분교</span>
+                                                            </label>
+                                                        </fieldset>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-doctor-time" scope="row">주간/야간</th>
+                                                <td class="bo-l">
+                                                    <div class="form-wrap">
+                                                        <fieldset>
+                                                            <legend>기본 라디오박스</legend>
+                                                            <label class="radio">
+                                                                <input type="radio" name="row2-active" value="" checked="" />
+                                                                <span>주간</span>
+                                                            </label>
+                                                            <label class="radio">
+                                                                <input type="radio" name="row2-active" value="" />
+                                                                <span>야간</span>
+                                                            </label>
+                                                        </fieldset>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-doctor-period" scope="row" rowspan="1">기간</th>
+                                                <td class="bo-l bo-r"><span>재학기간 노출</span></td>
+                                                <th id="th-doctor-graduation" scope="row">졸업구분</th>
+                                                <td class="bo-l"><span>졸업여부 노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-doctor-major" scope="row" rowspan="1">전공명</th>
+                                                <td class="bo-l bo-r"><span>전공명 노출</span></td>
+                                                <th id="th-doctor-major-research" scope="row">연구실적 소개</th>
+                                                <td class="bo-l"><span>연구실적 소개</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-doctor-score" scope="row">학점</th>
+                                                <td colspan="3" class="bo-l"><span>00/00</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </section>
+            
+                                <!-- [D]: 자격면허 -->
+                                <section class="write-container">
+                                    <h3>자격 · 면허</h3>
+                                    <!-- [D]: 자격면허-영어능력 -->
+                                    <h4><span>영어능력</span></h4>
+                                    <table class="list-content">
+                                        <caption>
+                                            시험종류, 점수/등급, 취득일로 구성된 영어능력 표
+                                        </caption>
+                                        <colgroup>
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th id="th-test-type" scope="col">시험종류</th>
+                                                <th id="th-test-score" scope="col">점수/등급</th>
+                                                <th id="th-test-date" scope="col">취득일</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- [D]: 자격면허-제2외국어 -->
+                                    <h4><span>제2외국어</span></h4>
+                                    <table class="list-content">
+                                        <caption>
+                                            시험종류, 점수/등급, 취득일로 구성된 제2외국어 표
+                                        </caption>
+                                        <colgroup>
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th id="th-test-type" scope="col">시험종류</th>
+                                                <th id="th-test-score" scope="col">점수/등급</th>
+                                                <th id="th-test-date" scope="col">취득일</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- [D]: 자격면허-자격면허 -->
+                                    <h4><span>자격·면허사항</span></h4>
+                                    <table class="list-content">
+                                        <caption>
+                                            자격증, 자격등급, 취득일, 발행기관으로 구성된 자격·면허사항 표
+                                        </caption>
+                                        <colgroup>
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th id="th-license" scope="col">자격증</th>
+                                                <th id="th-license-level" scope="col">자격등급</th>
+                                                <th id="th-license-date" scope="col">취득일</th>
+                                                <th id="th-license-issuer" scope="col">발행기관</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- [D]: 자격면허-해외체류경험 -->
+                                    <h4><span>해외체류경험</span></h4>
+                                    <table class="list-content">
+                                        <caption>
+                                            체류국가, 체류목적, 체류기간, 사용 외국어로 구성된 해외체류경험 표
+                                        </caption>
+                                        <colgroup>
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th id="th-country" scope="col">체류국가</th>
+                                                <th id="th-purpose" scope="col">체류목적</th>
+                                                <th id="th-period" scope="col">체류기간</th>
+                                                <th id="th-language" scope="col">사용 외국어</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- [D]: 자격면허-수상경력 -->
+                                    <h4><span>수상경력</span></h4>
+                                    <table class="list-content">
+                                        <caption>
+                                            상명, 수상일, 수상내용, 시상기관으로 구성된 수상경력 표
+                                        </caption>
+                                        <colgroup>
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th id="th-award" scope="col">상명</th>
+                                                <th id="th-date" scope="col">수상일</th>
+                                                <th id="th-content" scope="col">수상내용</th>
+                                                <th id="th-issuer" scope="col">시상기관</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </section>
+            
+                                <!-- [D]: 교내활동 -->
+                                <section class="write-container">
+                                    <h3>교내 활동사항</h3>
+                                    <!-- [D]: 교내활동-동아리 활동 -->
+                                    <h4><span>동아리 활동</span></h4>
+                                    <table class="list-content">
+                                        <caption>
+                                            활동기간, 활동단체명, 활동내용으로 구성된 동아리 활동 표
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 390px" />
+                                            <col style="width: 390px" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th id="th-period" scope="col">활동기간</th>
+                                                <th id="th-club" scope="col">활동단체명</th>
+                                                <th id="th-content" scope="col">활동내용</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- [D]: 교내활동-사회봉사 활동 -->
+                                    <h4><span>사회봉사 활동</span></h4>
+                                    <table class="list-content">
+                                        <caption>
+                                            활동기간, 활동단체명, 활동내용으로 구성된 사회봉사 활동 표
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 390px" />
+                                            <col style="width: 390px" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th id="th-period" scope="col">활동기간</th>
+                                                <th id="th-club" scope="col">활동단체명</th>
+                                                <th id="th-content" scope="col">활동내용</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </section>
+            
+                                <!-- [D]: 경력사항 -->
+                                <section class="write-container">
+                                    <h3>경력사항</h3>
+                                    <!-- [D]: 경력사항-병역특례 경력사항 -->
+                                    <h4><span>병역특례 경력사항</span></h4>
+                                    <table class="list-content">
+                                        <caption>
+                                            근무처, 근무기간, 담당업무로 구성된 병역특례 경력사항 표
+                                        </caption>
+                                        <colgroup>
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th id="th-place" scope="col">근무처</th>
+                                                <th id="th-period" scope="col">근무기간</th>
+                                                <th id="th-work" scope="col">담당업무</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- [D]: 경력사항-경력사항 -->
+                                    <h4><span>경력사항</span></h4>
+                                    <table class="list-content">
+                                        <caption>
+                                            근무처, 직위, 근무기간, 담당업무, 연봉, 퇴직사유로 구성된 경력사항 표
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 20%" />
+                                            <col style="width: 12%" />
+                                            <col style="width: 17%" />
+                                            <col style="width: 12%" />
+                                            <col style="width: 13%" />
+                                            <col style="width: 23%" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th id="th-place" scope="col">근무처</th>
+                                                <th id="th-position" scope="col">직위</th>
+                                                <th id="th-period" scope="col">근무기간</th>
+                                                <th id="th-work" scope="col">담당업무</th>
+                                                <th id="th-salary" scope="col">연봉</th>
+                                                <th id="th-why" scope="col">퇴직사유</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- 세부 경력사항 -->
+                                    <h4><span>세부 경력사항</span></h4>
+                                    <table class="write-content">
+                                        <caption>
+                                            근무처, 근무기간, 세부 경력소개로 구성된 세부 경력사항 표
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 230px" />
+                                            <col class="auto" />
+                                            <col style="width: 230px" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th id="th-detail-place" scope="row" rowspan="1">근무처</th>
+                                                <td class="bo-l bo-r"><span>MG캐피탈</span></td>
+                                                <th id="th-detail-period" scope="row">근무기간</th>
+                                                <td class="bo-l"><span>2021.01.01 ~ 2025.08.31</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-detail-detail" scope="row">세부 경력소개</th>
+                                                <td colspan="3" class="bo-l"><span>-</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </section>
+            
+                                <!-- [D]: 자기소개 -->
+                                <section class="write-container">
+                                    <h3>자기소개</h3>
+                                    <!-- [D]: 자기소개-자기소개 -->
+                                    <h4><span>자기소개</span></h4>
+                                    <table class="write-content">
+                                        <caption>
+                                            성장과정 학창시절, 성격 및 지식과 재능, 성공 및 실패 경험, 지원동기 입사포부로 구성된 자기소개 표
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 230px" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th id="th-growth" scope="row">성장과정 학창시절</th>
+                                                <td><span>-</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-personality" scope="row">성격 및 지식과 재능</th>
+                                                <td><span>-</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-experience" scope="row">성공 및 실패 경험</th>
+                                                <td><span>-</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-motivation" scope="row">지원동기 입사포부</th>
+                                                <td><span>-</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </section>
+                            </div>
+
+                            <div class="group">
+                                <!-- [D]: 기본정보 -->
+                                <section class="write-container">
+                                    <h3>기본정보(김길동)</h3>
+                                    <!-- [D]: 기본정보-지원분야 -->
+                                    <h4><span class="essential">지원분야</span></h4>
+                                    <table class="write-content">
+                                        <caption>
+                                            지원구분으로 구성된 표
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 230px" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th id="th-apply-type" scope="row"><span>지원구분</span></th>
+                                                <td>
+                                                    <div class="form-wrap">
+                                                        <fieldset>
+                                                            <legend>기본 라디오박스</legend>
+                                                            <label class="radio">
+                                                                <input type="radio" name="row2-active" value="" checked="" />
+                                                                <span>신입</span>
+                                                            </label>
+                                                            <label class="radio">
+                                                                <input type="radio" name="row2-active" value="" />
+                                                                <span>경력</span>
+                                                            </label>
+                                                        </fieldset>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- [D]: 기본정보-1지망 -->
+                                    <h4><span class="essential">1지망</span></h4>
+                                    <table class="list-content">
+                                        <caption>
+                                            희망근무지, 지원업무, 상세지원업무로 구성된 1지망 목록
+                                        </caption>
+                                        <colgroup>
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th id="th-workplace" scope="col">희망근무지</th>
+                                                <th id="th-work" scope="col">지원업무</th>
+                                                <th id="th-work-detail" scope="col">상세지원업무</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span>희망근무지 노출</span></td>
+                                                <td><span>지원업무 노출</span></td>
+                                                <td><span>상세지원업무 노출</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- [D]: 기본정보-2지망 -->
+                                    <h4><span class="essential">2지망</span></h4>
+                                    <table class="list-content">
+                                        <caption>
+                                            희망근무지, 지원업무, 상세지원업무로 구성된 2지망 목록
+                                        </caption>
+                                        <colgroup>
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th id="th-workplace" scope="col">희망근무지</th>
+                                                <th id="th-work" scope="col">지원업무</th>
+                                                <th id="th-work-detail" scope="col">상세지원업무</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span>희망근무지 노출</span></td>
+                                                <td><span>지원업무 노출</span></td>
+                                                <td><span>상세지원업무 노출</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </section>
+            
+                                <!-- [D]: 개인정보 -->
+                                <section class="write-container">
+                                    <h3>개인정보</h3>
+                                    <!-- [D]: 개인정보-개인정보 -->
+                                    <h4><span>개인정보</span></h4>
+                                    <table class="write-content">
+                                        <caption>
+                                            사진등록, 성명, 생년월일, 휴대폰번호, 국적, 현주소, 이메일, 전화번호, 취미, 특기, 보훈여부로 구성된 개인정보 표
+                                        </caption>
+                                        <colgroup>
+                                            <col class="col-w2" style="width: 230px" />
+                                            <col class="auto" />
+                                            <col class="col-w2" style="width: 230px" />
+                                            <col class="col-w2" style="width: 230px" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th id="th-pic" scope="row" rowspan="3">사진등록</th>
+                                                <td rowspan="3" class="bo-l bo-r"><img /></td>
+                                                <th id="th-name" scope="row">성명</th>
+                                                <td class="bo-l"><span>성명노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-birth" scope="row">생년월일</th>
+                                                <td class="bo-l"><span>생년월일 노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-phone" scope="row">휴대폰번호</th>
+                                                <td class="bo-l"><span>휴대폰번호 노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-nation" scope="row">국적</th>
+                                                <td colspan="3" class="bo-l"><span>국적노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-address" scope="row">현주소</th>
+                                                <td colspan="3" class="bo-l"><span>주소노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-email" scope="row" rowspan="1">이메일</th>
+                                                <td class="bo-l bo-r"><span>이메일 노출</span></td>
+                                                <th id="th-call" scope="row">전화번호</th>
+                                                <td class="bo-l"><span>전화번호 노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-hobby" scope="row" rowspan="1">취미</th>
+                                                <td class="bo-l bo-r"><span>취미 노출</span></td>
+                                                <th id="th-skill" scope="row">특기</th>
+                                                <td class="bo-l"><span>특기 노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-veteran" scope="row">보훈여부</th>
+                                                <td colspan="3" class="bo-l"><span>보훈여부 노출</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- [D]: 개인정보-병역구분 -->
+                                    <h4><span>병역구분</span></h4>
+                                    <table class="list-content">
+                                        <caption>
+                                            병역구분, 군별, 복무기간, 면제사유로 구성된 표
+                                        </caption>
+                                        <colgroup>
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th id="th-military-type" scope="col">병역구분</th>
+                                                <th id="th-military" scope="col">군별</th>
+                                                <th id="th-military-period" scope="col">복무기간</th>
+                                                <th id="th-military-reason" scope="col">면제사유</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span>병역구분 노출</span></td>
+                                                <td><span>군별 노출</span></td>
+                                                <td><span>복무기간 노출</span></td>
+                                                <td><span>면제사유 노출</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </section>
+            
+                                <!-- [D]: 학력사항 -->
+                                <section class="write-container">
+                                    <h3>학력사항</h3>
+                                    <!-- [D]: 학력사항-고등학교 -->
+                                    <h4><span>고등학교</span></h4>
+                                    <table class="write-content">
+                                        <caption>
+                                            학교명, 기간, 졸업구분, 전공명, 학점으로 구성된 고등학교 표
+                                        </caption>
+                                        <colgroup>
+                                            <col class="col-w2" style="width: 230px" />
+                                            <col class="auto" />
+                                            <col class="col-w2" style="width: 230px" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th id="th-highschool-name" scope="row">학교명</th>
+                                                <td colspan="3" class="bo-l"><span>학교명 노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-highschool-period" scope="row" rowspan="1">기간</th>
+                                                <td class="bo-l bo-r"><span>재학기간 노출</span></td>
+                                                <th id="th-highschool-graduation" scope="row">졸업구분</th>
+                                                <td class="bo-l"><span>졸업여부 노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-highschool-major" scope="row">전공명</th>
+                                                <td colspan="3" class="bo-l"><span>전공명 노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-highschool-score" scope="row">학점</th>
+                                                <td colspan="3" class="bo-l"><span>00/00</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- [D]: 학력사항-전문대학 -->
+                                    <h4><span>전문대학</span></h4>
+                                    <table class="write-content">
+                                        <caption>
+                                            학교명, 기간, 졸업구분, 전공명, 학점으로 구성된 전문대학 표
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 230px" />
+                                            <col class="auto" />
+                                            <col style="width: 230px" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th id="th-college-name" scope="row">학교명</th>
+                                                <td colspan="3" class="bo-l"><span>학교명 노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-college-period" scope="row" rowspan="1">기간</th>
+                                                <td class="bo-l bo-r"><span>재학기간 노출</span></td>
+                                                <th id="th-college-graduation" scope="row">졸업구분</th>
+                                                <td class="bo-l"><span>졸업여부 노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-college-major" scope="row">전공명</th>
+                                                <td colspan="3" class="bo-l"><span>전공명 노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-college-score" scope="row">학점</th>
+                                                <td colspan="3" class="bo-l"><span>00/00</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- [D]: 학력사항-대학교 -->
+                                    <h4><span>대학교(4년제)</span></h4>
+                                    <table class="write-content">
+                                        <caption>
+                                            학교명, 본교/분교, 주간/야간, 기간, 졸업구분, 전공명, 학점으로 구성된 대학교(4년제) 표
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 230px" />
+                                            <col class="auto" />
+                                            <col style="width: 230px" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th id="th-univ-name" scope="row" rowspan="2">학교명</th>
+                                                <td rowspan="2" class="bo-l bo-r"><span>학교명 노출</span></td>
+                                                <th id="th-univ-campus" scope="row">본교/분교</th>
+                                                <td class="bo-l">
+                                                    <div class="form-wrap">
+                                                        <fieldset>
+                                                            <legend>기본 라디오박스</legend>
+                                                            <label class="radio">
+                                                                <input type="radio" name="row2-active" value="" checked="" />
+                                                                <span>본교</span>
+                                                            </label>
+                                                            <label class="radio">
+                                                                <input type="radio" name="row2-active" value="" />
+                                                                <span>분교</span>
+                                                            </label>
+                                                        </fieldset>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-univ-time" scope="row">주간/야간</th>
+                                                <td class="bo-l">
+                                                    <div class="form-wrap">
+                                                        <fieldset>
+                                                            <legend>기본 라디오박스</legend>
+                                                            <label class="radio">
+                                                                <input type="radio" name="row2-active" value="" checked="" />
+                                                                <span>주간</span>
+                                                            </label>
+                                                            <label class="radio">
+                                                                <input type="radio" name="row2-active" value="" />
+                                                                <span>야간</span>
+                                                            </label>
+                                                        </fieldset>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-univ-period" scope="row" rowspan="1">기간</th>
+                                                <td class="bo-l bo-r"><span>재학기간 노출</span></td>
+                                                <th id="th-univ-graduation" scope="row">졸업구분</th>
+                                                <td class="bo-l"><span>졸업여부 노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-univ-major" scope="row">전공명</th>
+                                                <td colspan="3" class="bo-l"><span>전공명 노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-univ-score" scope="row">학점</th>
+                                                <td colspan="3" class="bo-l"><span>00/00</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- [D]: 학력사항-석사 -->
+                                    <h4><span>대학교(석사)</span></h4>
+                                    <table class="write-content">
+                                        <caption>
+                                            학교명, 본교/분교, 주간/야간, 기간, 졸업구분, 전공명, 세부전공 소개, 학점으로 구성된 대학교(석사) 표
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 230px" />
+                                            <col class="auto" />
+                                            <col style="width: 230px" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th id="th-master-name" scope="row" rowspan="2">학교명</th>
+                                                <td rowspan="2" class="bo-l bo-r"><span>학교명 노출</span></td>
+                                                <th id="th-master-campus" scope="row">본교/분교</th>
+                                                <td class="bo-l">
+                                                    <div class="form-wrap">
+                                                        <fieldset>
+                                                            <legend>기본 라디오박스</legend>
+                                                            <label class="radio">
+                                                                <input type="radio" name="row2-active" value="" checked="" />
+                                                                <span>본교</span>
+                                                            </label>
+                                                            <label class="radio">
+                                                                <input type="radio" name="row2-active" value="" />
+                                                                <span>분교</span>
+                                                            </label>
+                                                        </fieldset>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-master-time" scope="row">주간/야간</th>
+                                                <td class="bo-l">
+                                                    <div class="form-wrap">
+                                                        <fieldset>
+                                                            <legend>기본 라디오박스</legend>
+                                                            <label class="radio">
+                                                                <input type="radio" name="row2-active" value="" checked="" />
+                                                                <span>주간</span>
+                                                            </label>
+                                                            <label class="radio">
+                                                                <input type="radio" name="row2-active" value="" />
+                                                                <span>야간</span>
+                                                            </label>
+                                                        </fieldset>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-master-period" scope="row" rowspan="1">기간</th>
+                                                <td class="bo-l bo-r"><span>재학기간 노출</span></td>
+                                                <th id="th-master-graduation" scope="row">졸업구분</th>
+                                                <td class="bo-l"><span>졸업여부 노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-master-major" scope="row" rowspan="1">전공명</th>
+                                                <td class="bo-l bo-r"><span>전공명 노출</span></td>
+                                                <th id="th-master-major-detail" scope="row">세부전공 소개</th>
+                                                <td class="bo-l"><span>세부전공 소개</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-master-score" scope="row">학점</th>
+                                                <td colspan="3" class="bo-l"><span>00/00</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- [D]: 학력사항-박사 -->
+                                    <h4><span>대학교(박사)</span></h4>
+                                    <table class="write-content">
+                                        <caption>
+                                            학교명, 본교/분교, 주간/야간, 기간, 졸업구분, 전공명, 연구실적 소개, 학점으로 구성된 대학교(박사) 표
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 230px" />
+                                            <col class="auto" />
+                                            <col style="width: 230px" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th id="th-doctor-name" scope="row" rowspan="2">학교명</th>
+                                                <td rowspan="2" class="bo-l bo-r"><span>학교명 노출</span></td>
+                                                <th id="th-doctor-campus" scope="row">본교/분교</th>
+                                                <td class="bo-l">
+                                                    <div class="form-wrap">
+                                                        <fieldset>
+                                                            <legend>기본 라디오박스</legend>
+                                                            <label class="radio">
+                                                                <input type="radio" name="row2-active" value="" checked="" />
+                                                                <span>본교</span>
+                                                            </label>
+                                                            <label class="radio">
+                                                                <input type="radio" name="row2-active" value="" />
+                                                                <span>분교</span>
+                                                            </label>
+                                                        </fieldset>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-doctor-time" scope="row">주간/야간</th>
+                                                <td class="bo-l">
+                                                    <div class="form-wrap">
+                                                        <fieldset>
+                                                            <legend>기본 라디오박스</legend>
+                                                            <label class="radio">
+                                                                <input type="radio" name="row2-active" value="" checked="" />
+                                                                <span>주간</span>
+                                                            </label>
+                                                            <label class="radio">
+                                                                <input type="radio" name="row2-active" value="" />
+                                                                <span>야간</span>
+                                                            </label>
+                                                        </fieldset>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-doctor-period" scope="row" rowspan="1">기간</th>
+                                                <td class="bo-l bo-r"><span>재학기간 노출</span></td>
+                                                <th id="th-doctor-graduation" scope="row">졸업구분</th>
+                                                <td class="bo-l"><span>졸업여부 노출</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-doctor-major" scope="row" rowspan="1">전공명</th>
+                                                <td class="bo-l bo-r"><span>전공명 노출</span></td>
+                                                <th id="th-doctor-major-research" scope="row">연구실적 소개</th>
+                                                <td class="bo-l"><span>연구실적 소개</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-doctor-score" scope="row">학점</th>
+                                                <td colspan="3" class="bo-l"><span>00/00</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </section>
+            
+                                <!-- [D]: 자격면허 -->
+                                <section class="write-container">
+                                    <h3>자격 · 면허</h3>
+                                    <!-- [D]: 자격면허-영어능력 -->
+                                    <h4><span>영어능력</span></h4>
+                                    <table class="list-content">
+                                        <caption>
+                                            시험종류, 점수/등급, 취득일로 구성된 영어능력 표
+                                        </caption>
+                                        <colgroup>
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th id="th-test-type" scope="col">시험종류</th>
+                                                <th id="th-test-score" scope="col">점수/등급</th>
+                                                <th id="th-test-date" scope="col">취득일</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- [D]: 자격면허-제2외국어 -->
+                                    <h4><span>제2외국어</span></h4>
+                                    <table class="list-content">
+                                        <caption>
+                                            시험종류, 점수/등급, 취득일로 구성된 제2외국어 표
+                                        </caption>
+                                        <colgroup>
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th id="th-test-type" scope="col">시험종류</th>
+                                                <th id="th-test-score" scope="col">점수/등급</th>
+                                                <th id="th-test-date" scope="col">취득일</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- [D]: 자격면허-자격면허 -->
+                                    <h4><span>자격·면허사항</span></h4>
+                                    <table class="list-content">
+                                        <caption>
+                                            자격증, 자격등급, 취득일, 발행기관으로 구성된 자격·면허사항 표
+                                        </caption>
+                                        <colgroup>
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th id="th-license" scope="col">자격증</th>
+                                                <th id="th-license-level" scope="col">자격등급</th>
+                                                <th id="th-license-date" scope="col">취득일</th>
+                                                <th id="th-license-issuer" scope="col">발행기관</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- [D]: 자격면허-해외체류경험 -->
+                                    <h4><span>해외체류경험</span></h4>
+                                    <table class="list-content">
+                                        <caption>
+                                            체류국가, 체류목적, 체류기간, 사용 외국어로 구성된 해외체류경험 표
+                                        </caption>
+                                        <colgroup>
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th id="th-country" scope="col">체류국가</th>
+                                                <th id="th-purpose" scope="col">체류목적</th>
+                                                <th id="th-period" scope="col">체류기간</th>
+                                                <th id="th-language" scope="col">사용 외국어</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- [D]: 자격면허-수상경력 -->
+                                    <h4><span>수상경력</span></h4>
+                                    <table class="list-content">
+                                        <caption>
+                                            상명, 수상일, 수상내용, 시상기관으로 구성된 수상경력 표
+                                        </caption>
+                                        <colgroup>
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th id="th-award" scope="col">상명</th>
+                                                <th id="th-date" scope="col">수상일</th>
+                                                <th id="th-content" scope="col">수상내용</th>
+                                                <th id="th-issuer" scope="col">시상기관</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </section>
+            
+                                <!-- [D]: 교내활동 -->
+                                <section class="write-container">
+                                    <h3>교내 활동사항</h3>
+                                    <!-- [D]: 교내활동-동아리 활동 -->
+                                    <h4><span>동아리 활동</span></h4>
+                                    <table class="list-content">
+                                        <caption>
+                                            활동기간, 활동단체명, 활동내용으로 구성된 동아리 활동 표
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 390px" />
+                                            <col style="width: 390px" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th id="th-period" scope="col">활동기간</th>
+                                                <th id="th-club" scope="col">활동단체명</th>
+                                                <th id="th-content" scope="col">활동내용</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- [D]: 교내활동-사회봉사 활동 -->
+                                    <h4><span>사회봉사 활동</span></h4>
+                                    <table class="list-content">
+                                        <caption>
+                                            활동기간, 활동단체명, 활동내용으로 구성된 사회봉사 활동 표
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 390px" />
+                                            <col style="width: 390px" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th id="th-period" scope="col">활동기간</th>
+                                                <th id="th-club" scope="col">활동단체명</th>
+                                                <th id="th-content" scope="col">활동내용</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </section>
+            
+                                <!-- [D]: 경력사항 -->
+                                <section class="write-container">
+                                    <h3>경력사항</h3>
+                                    <!-- [D]: 경력사항-병역특례 경력사항 -->
+                                    <h4><span>병역특례 경력사항</span></h4>
+                                    <table class="list-content">
+                                        <caption>
+                                            근무처, 근무기간, 담당업무로 구성된 병역특례 경력사항 표
+                                        </caption>
+                                        <colgroup>
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th id="th-place" scope="col">근무처</th>
+                                                <th id="th-period" scope="col">근무기간</th>
+                                                <th id="th-work" scope="col">담당업무</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- [D]: 경력사항-경력사항 -->
+                                    <h4><span>경력사항</span></h4>
+                                    <table class="list-content">
+                                        <caption>
+                                            근무처, 직위, 근무기간, 담당업무, 연봉, 퇴직사유로 구성된 경력사항 표
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 20%" />
+                                            <col style="width: 12%" />
+                                            <col style="width: 17%" />
+                                            <col style="width: 12%" />
+                                            <col style="width: 13%" />
+                                            <col style="width: 23%" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th id="th-place" scope="col">근무처</th>
+                                                <th id="th-position" scope="col">직위</th>
+                                                <th id="th-period" scope="col">근무기간</th>
+                                                <th id="th-work" scope="col">담당업무</th>
+                                                <th id="th-salary" scope="col">연봉</th>
+                                                <th id="th-why" scope="col">퇴직사유</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>-</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- 세부 경력사항 -->
+                                    <h4><span>세부 경력사항</span></h4>
+                                    <table class="write-content">
+                                        <caption>
+                                            근무처, 근무기간, 세부 경력소개로 구성된 세부 경력사항 표
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 230px" />
+                                            <col class="auto" />
+                                            <col style="width: 230px" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th id="th-detail-place" scope="row" rowspan="1">근무처</th>
+                                                <td class="bo-l bo-r"><span>MG캐피탈</span></td>
+                                                <th id="th-detail-period" scope="row">근무기간</th>
+                                                <td class="bo-l"><span>2021.01.01 ~ 2025.08.31</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-detail-detail" scope="row">세부 경력소개</th>
+                                                <td colspan="3" class="bo-l"><span>-</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </section>
+            
+                                <!-- [D]: 자기소개 -->
+                                <section class="write-container">
+                                    <h3>자기소개</h3>
+                                    <!-- [D]: 자기소개-자기소개 -->
+                                    <h4><span>자기소개</span></h4>
+                                    <table class="write-content">
+                                        <caption>
+                                            성장과정 학창시절, 성격 및 지식과 재능, 성공 및 실패 경험, 지원동기 입사포부로 구성된 자기소개 표
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 230px" />
+                                            <col class="auto" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th id="th-growth" scope="row">성장과정 학창시절</th>
+                                                <td><span>-</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-personality" scope="row">성격 및 지식과 재능</th>
+                                                <td><span>-</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-experience" scope="row">성공 및 실패 경험</th>
+                                                <td><span>-</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th id="th-motivation" scope="row">지원동기 입사포부</th>
+                                                <td><span>-</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </section>
+                            </div>
+
+                          
+                        </div><!--//printWrap-->
+                        <section class="button-ccontainer">
+                            <div class="button-content cta">
+                                <div class="button-wrap">
+                                    <div class="left-btn-group">
+                                        <a href="javascript:void(0);" class="btn-secondary">이전글</a>
+                                        <a href="javascript:void(0);" class="btn-secondary">다음글</a>
+                                    </div>
+                                    <a href="javascript:void(0);" class="btn-secondary">목록</a>
+                                    <a href="javascript:void(0);" onclick="window.print()" class="btn-primary">인쇄</a>
+                                    <a href="javascript:void(0);" class="btn-secondary">파일저장</a>
+                                </div>
+                            </div>
+                        </section>
+    
+    
+                    </main>
+          
+            </div>
+        </div>
+    </body>
+</html>

@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     // 포커스 가능한 요소 후보 셀렉터
     var FOCUSABLE =
-      'button, [href], input, select, textarea, [role="button"], [tabindex]:not([tabindex="-1"])';
+      '[href], input, select, textarea, [role="button"], [tabindex]:not([tabindex="-1"])';
 
     function log() {
       if (!DEBUG) return;
