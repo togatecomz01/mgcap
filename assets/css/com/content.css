@@ -840,7 +840,6 @@ main.contentWrap.finance > .page-container { padding-top:72px; }
 /* ¼¿·ºÆ® ¹Ú½º */
 .WCC60300VQ .form-group + div {border:none}
 .WCC60300VQ .form-group { display: flex; justify-content: flex-end; }
-.WCC60300VQ .se-select label { display: none; }
 .WCC60300VQ .se-select { width: auto; }
 .WCC60300VQ .se-select select { padding: 12px 50px 12px 20px; height: auto; border-radius: 100px; border: var(--board); background: var(--ico-select) no-repeat right 20px center; }
 
