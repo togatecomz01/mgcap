@@ -487,7 +487,7 @@ main.contentWrap > .bottom-container { margin-top:72px; }
 
 .footer-main { display:flex; justify-content:space-between; align-items:center; margin-top:38px; }
 .footer-main .ft-cts p { padding-bottom:8px; font-size:var(--font14); font-weight:var(--font-w-r); color:var(--color-6); }
-.footer-main .ft-cts p.copyright { padding:12px 0 0; font-weight:var(--font-w-m); color:#7A7E87; }
+.footer-main .ft-cts p.copyright { padding:12px 0 0; font-weight:var(--font-w-m); color:var(--color-6); }
 .footer-main .ft-logo a { max-width:95px; width:100%; }
 .footer-main .ft-logo a .img-wa { width:100%; }
 
