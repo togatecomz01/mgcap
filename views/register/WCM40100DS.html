@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
+  <head>
     <meta charset="euc-kr" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>약관동의 및 실명확인&gt;회원가입&gt;홈</title>
@@ -8,14 +8,21 @@
     <meta name="keywords" content="MG캐피탈" />
     <meta name="copyright" content="copyrights 2025 MG캐피탈" />
     <meta name="viewport" content="width=device-width" />
-    <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img"/>
+    <meta
+      property="og:image"
+      content="http://gallery2gate.kr/resources/images/common/ui-maeta-img"
+    />
     <meta name="apple-mobile-web-app-status-bar-style" content="white" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta http-equiv="Expires" content="-1" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Cache-Control" content="No-Cache" />
-    <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico"/>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://www.mgcap.co.kr/favicon.ico"
+    />
     <link rel="stylesheet" href="../../assets/css/com/default.css" />
     <link rel="stylesheet" href="../../assets/css/com/common.css" />
     <link rel="stylesheet" href="../../assets/css/com/style.css" />
@@ -27,773 +34,1214 @@
     <link rel="stylesheet" href="../../assets/css/com/tab.css" />
     <link rel="stylesheet" href="../../assets/css/com/table.css" />
     <link rel="stylesheet" href="../../assets/css/com/content.css" />
-    <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
-    <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+    <script
+      type="text/javascript"
+      src="../../assets/js/lib/jquery-1.12.4.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../../assets/js/lib/jquery-ui.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../../assets/js/lib/ui_plugin.js"
+    ></script>
     <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
     <!--[D]퍼블용 인크루드 스크립트, 개발에서는 사용안함-->
     <script src="../../assets/js/include.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="wrap">
-        <div data-include-path="../../views/COMMON/header.html"></div>
-        <div class="bodyWrap">
-            <main class="contentWrap">
-                <nav class="location-container">
-                    <ol class="breadcrumb">
-                        <li><span class="home">홈</span></li>
-                        <li><span>회원가입</span></li>
-                    </ol>
-                </nav>
-                <section class="visual-container">
-                    <h2>회원가입</h2>
-                </section>
-                <section class="step-container">
-                    <div class="step-content">
-                        <ul class="col2">
-                            <li class="on">
-                                <span>약관동의 및 실명확인</span>
-                            </li>
-                            <li class="next">
-                                <span>기본정보 입력</span>
-                            </li>
-                            <li class="next">
-                                <span>가입완료</span>
-                            </li>
-                        </ul>
+      <div data-include-path="../../views/COMMON/header.html"></div>
+      <div class="bodyWrap">
+        <main class="contentWrap">
+          <nav class="location-container">
+            <ol class="breadcrumb">
+              <li><span class="home">홈</span></li>
+              <li><span>회원가입</span></li>
+            </ol>
+          </nav>
+          <section class="visual-container">
+            <h2>회원가입</h2>
+          </section>
+          <section class="step-container">
+            <div class="step-content">
+              <ul class="col2">
+                <li class="on">
+                  <span>약관동의 및 실명확인</span>
+                </li>
+                <li class="next">
+                  <span>기본정보 입력</span>
+                </li>
+                <li class="next">
+                  <span>가입완료</span>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section class="page-container WCM40100DS">
+            <div class="form-content">
+              <h3>약관동의</h3>
+              <form>
+                <div class="form-group">
+                  <ul class="check-box terms">
+                    <li class="check-all-area">
+                      <input type="checkbox" id="chkAll" />
+                      <label for="chkAll" class="check-button">
+                        <span>전체 약관에 동의합니다.</span>
+                      </label>
+                    </li>
+                    <li>
+                      <input
+                        type="checkbox"
+                        id="check-required-1"
+                        class="chkReq"
+                      />
+                      <label
+                        for="check-required-1"
+                        class="check-button"
+                        data-popup-open="WCM40100DSPOP01"
+                      >
+                        <span>인터넷 서비스 이용약관 동의 여부</span>
+                      </label>
+                      <button
+                        title="인터넷 서비스 이용약관 동의 여부 내용보기"
+                        type="button"
+                        class="modal"
+                        data-popup-open="WCM40100DSPOP01"
+                      >
+                        약관 보기
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </form>
+            </div>
+            <div class="tab-container jsTab">
+              <nav class="tab-list depth2" role="tablist">
+                <button type="button" role="tab" class="tab-item active" data-tab="tab2-1" aria-labelledby="tab2-1">
+                  개인회원
+                </button>
+                <button type="button" role="tab" class="tab-item" data-tab="tab2-2" aria-labelledby="tab2-2">
+                  개인사업자회원
+                </button>
+                <button type="button" role="tab" class="tab-item" data-tab="tab2-3" aria-labelledby="tab2-3">
+                  법인사업자회원
+                </button>
+              </nav>
+              <div class="tab-content">
+                <div id="tab2-1" class="tab-panel active">
+                  <div class="text-content">
+                    <div class="text-group">
+                      <h3>실명확인</h3>
                     </div>
-                </section>
-                <section class="page-container WCM40100DS">
-                    <div class="form-content">
-                        <h3>약관동의</h3>
-                        <form>
-                            <div class="form-group">
-                                <ul class="check-box terms">
-                                    <li class="check-all-area">
-                                        <input type="checkbox" id="chkAll" />
-                                        <label for="chkAll" class="check-button">
-                                            <span>전체 약관에 동의합니다.</span>
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="check-required-1" class="chkReq" />
-                                        <label for="check-required-1" class="check-button" data-popup-open="WCM40100DSPOP01">
-                                            <span>인터넷 서비스 이용약관 동의 여부</span>
-                                        </label>
-                                        <button title="인터넷 서비스 이용약관 동의 여부 내용보기" type="button" class="modal" data-popup-open="WCM40100DSPOP01">약관 보기</button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </form>
+                  </div>
+                  <div class="private-content">
+                    <div class="private-group ipin">
+                      <button type="button">휴대폰 인증</button>
                     </div>
-                    <div class="tab-container jsTab">
-                        <nav class="tab-list depth2">
-                            <button type="button" class="tab-item active" data-tab="tab2-1">개인회원</button>
-                            <button type="button" class="tab-item" data-tab="tab2-2">개인사업자회원</button>
-                            <button type="button" class="tab-item" data-tab="tab2-3">법인사업자회원</button>
-                        </nav>
-                        <div class="tab-content">
-                            <div id="tab2-1" class="tab-panel active">
-                                <div class="text-content">
-                                    <div class="text-group">
-                                        <h3>실명확인</h3>
-                                    </div>
-                                </div>
-                                <div class="private-content">
-                                    <div class="private-group ipin">
-                                        <button type="button">휴대폰 인증</button>
-                                    </div>
-                                </div>
-                                <div class="btn-content cta">
-                                    <div class="button-group">
-                                        <a href="javascript:void(0);" class="btn-primary">본인인증</a>
-                                    </div>
-                                </div>
+                  </div>
+                  <div class="btn-content cta">
+                    <div class="button-group">
+                      <a href="javascript:void(0);" class="btn-primary"
+                        >본인인증</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div id="tab2-2" class="tab-panel">
+                  <div class="text-content">
+                    <div class="text-group">
+                      <h3>실명확인</h3>
+                    </div>
+                  </div>
+                  <div class="private-content">
+                    <div class="private-group ipin">
+                      <button type="button">휴대폰 인증</button>
+                    </div>
+                  </div>
+                  <div class="btn-content cta">
+                    <div class="button-group">
+                      <a href="javascript:void(0);" class="btn-primary"
+                        >본인인증</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div id="tab2-3" class="tab-panel">
+                  <div class="form-container">
+                    <div class="text-content">
+                      <div class="text-group">
+                        <h3>실명확인</h3>
+                      </div>
+                    </div>
+                    <form>
+                      <fieldset class="form-content">
+                        <legend>실명확인 입력폼</legend>
+                        <div class="form-wrap">
+                          <div class="form-group">
+                            <label for="mg-name">회사명</label>
+                            <input
+                              id="mg-name"
+                              type="text"
+                              name="text"
+                              maxlength="20"
+                              placeholder="이름을 입력해주세요"
+                            />
+                          </div>
+                          <!--//form-group-->
+                          <div class="form-group">
+                            <label for="business">사업자번호</label>
+                            <div class="flex-row gap10">
+                              <input
+                                id="business1"
+                                type="text"
+                                name="business1"
+                                inputmode="numeric"
+                                pattern="[0-9]*"
+                                maxlength="3"
+                                aria-label="사업자등록번호 앞자리"
+                              />
+                              <input
+                                id="business2"
+                                type="text"
+                                inputmode="numeric"
+                                pattern="[0-9]*"
+                                name="business2"
+                                maxlength="2"
+                                aria-label="사업자등록번호 중간자리"
+                              />
+                              <input
+                                id="business3"
+                                type="text"
+                                inputmode="numeric"
+                                pattern="[0-9]*"
+                                name="business3"
+                                maxlength="5"
+                                aria-label="사업자등록번호 뒷자리"
+                              />
                             </div>
-                            <div id="tab2-2" class="tab-panel">
-                                <div class="text-content">
-                                    <div class="text-group">
-                                        <h3>실명확인</h3>
-                                    </div>
-                                </div>
-                                <div class="private-content">
-                                    <div class="private-group ipin">
-                                        <button type="button">휴대폰 인증</button>
-                                    </div>
-                                </div>
-                                <div class="btn-content cta">
-                                    <div class="button-group">
-                                        <a href="javascript:void(0);" class="btn-primary">본인인증</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="tab2-3" class="tab-panel">
-                                <div class="form-container">
-                                    <div class="text-content">
-                                        <div class="text-group">
-                                            <h3>실명확인</h3>
-                                        </div>
-                                    </div>
-                                    <form>
-                                        <fieldset class="form-content">
-                                            <legend>실명확인 입력폼</legend>
-                                            <div class="form-wrap">
-                                                <div class="form-group">
-                                                    <label for="mg-name">회사명</label>
-                                                    <input id="mg-name" type="text" name="text" maxlength="20"  placeholder="이름을 입력해주세요">
-                                                </div><!--//form-group-->
-                                                <div class="form-group">
-                                                    <label for="business">사업자번호</label>
-                                                    <div class="flex-row gap10">
-                                                        <input id="business1" type="text" name="business1" inputmode="numeric"
-                                                        pattern="[0-9]*"  maxlength="3" aria-label="사업자등록번호 앞자리">
-                                                        <input id="business2" type="text" inputmode="numeric"
-                                                        pattern="[0-9]*" name="business2" maxlength="2"  aria-label="사업자등록번호 중간자리">
-                                                        <input id="business3" type="text" inputmode="numeric"
-                                                        pattern="[0-9]*" name="business3" maxlength="5"   aria-label="사업자등록번호 뒷자리">
-                                                    </div>
-                                                </div><!--//form-group-->
-                                            </div><!--//form-wrap-->
-                                        </fieldset>
-                                    </form>
-                                    <div class="btn-content cta">
-                                        <div class="button-group">
-                                            <button class="btn-primary">본인인증</button>
-                                        </div>
-                                    </div>
-                                    <div class="info-content">
-                                        <div class="note-group">
-                                            <p class="tit">유의사항 안내</p>
-                                            <ul class="dot">
-                                                <li>개인사업자의 경우 반드시 개인사업자명과 사업자 등록번호로 회원가입을 하셔야 정상적인 서비스를 제공 받으실 수 있사오니 이점 유의하여 주시기 바랍니다.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                          </div>
+                          <!--//form-group-->
                         </div>
+                        <!--//form-wrap-->
+                      </fieldset>
+                    </form>
+                    <div class="btn-content cta">
+                      <div class="button-group">
+                        <button class="btn-primary">본인인증</button>
+                      </div>
                     </div>
-                </section>
-            </main>
-        </div>
-        <div data-include-path="../../views/COMMON/footer.html"></div>
+                    <div class="info-content">
+                      <div class="note-group">
+                        <p class="tit">유의사항 안내</p>
+                        <ul class="dot">
+                          <li>
+                            개인사업자의 경우 반드시 개인사업자명과 사업자
+                            등록번호로 회원가입을 하셔야 정상적인 서비스를 제공
+                            받으실 수 있사오니 이점 유의하여 주시기 바랍니다.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+      <div data-include-path="../../views/COMMON/footer.html"></div>
     </div>
     <!-- s: 인터넷 서비스 이용약관 동의 여부(WCM40100DSPOP01) -->
     <div id="WCM40100DSPOP01" class="layerPopup full fullPopupOn">
-        <!--[D] fullPopupOn 클래스 :: 헤더 스크립트 적용중-->
-        <div class="pop-area">
-            <div class="pop-header">
-                <h2 class="pop-tit">인터넷 서비스 이용약관 동의 여부</h2>
-            </div>
-            <div class="pop-body WCM40100DS">
-                <div class="pop-content">
-                    <div class="group">
-                        <h3>이용약관</h3>
-                        <div class="text-group">
-                            <h4 class="tit">제1조 (목적 및 약관의 적용범위)</h4>
-                            <p>이 약관은 MG캐피탈 주식회사(이하"회사"라 한다)가 운영하는 모든 인터넷사이트(이하 "사이트
-                                "라 한다)에서 제공하는 모든 웹 서비스(이하"서비스"라 한다)를 이용함에 있어 이용자의 권리·
-                                의무 및 책임사항과 서비스이용에 대한 기타 필요한 사항을 규정함을 목적으로 합니다.</p>
-                        </div>
-                        <div class="text-group">
-                            <h4 class="tit">제2조 (정의)</h4>
-                            <ol class="text-list">
-                                <li>
-                                    <span>①</span>
-                                    <span>"서비스"라 함은 회사의 홈페이지 및 회사가 운영하는 인터넷사이트 등에서 제공되는 인터넷상의 모든 웹서비스(무선인터넷 서비스 포함)를 의미합니다.</span>
-                                </li>
-                                <li>
-                                    <span>②</span>
-                                    <span>"이용자"란 "사이트"에서 이 약관에 따라 제공하는 서비스를 받는 회원 및 비회원을 말합니다.</span>
-                                </li>
-                                <li>
-                                    <span>③</span>
-                                    <span>"회원"이라 함은 "사이트"에 개인정보를 제공하여 회원등록을 한 자를 말합니다.</span>
-                                </li>
-                                <li>
-                                    <span>④</span>
-                                    <span>"비회원"이라 함은 회원에 가입하지 않고, "사이트"가 제공하는 서비스를 이용하는 자를 말합니다.</span>
-                                </li>
-                                <li>
-                                    <span>⑤</span>
-                                    <span>"회원ID"라 함은 회원식별과 회원의 서비스 이용을 위하여 회원 본인이 설정하여 회사가 정하는 일정한 기준에 의해 표기된 인식문자를 말합니다.</span>
-                                </li>
-                                <li>
-                                    <span>⑥</span>
-                                    <span>"비밀번호"라 함은 회원의 비밀 보호 및 회원 본인임을 확인하고 서비스에 제공되는 각종 정보의 보안을 위해 회원 자신이 설정하며 회사가 정하는 일정한 기준에 의해 표기한 암호문자를 말합니다.</span>
-                                </li>
-                            </ol>
-                        </div>
-                        <div class="text-group">
-                            <h4 class="tit">제3조 (약관의 적용)</h4>
-                            <ol class="text-list">
-                                <li>
-                                    <span>①</span>
-                                    <span>이 약관의 내용은 회사가 사이트에서 제공하는 모든 서비스의 이용조건 및 기타 필요한 사항에 적용됩니다. 
-                                        다만, 회사가 별도의 사이트를 운영하고 별도의 약관이 있을 경우에는 해당사이트의 약관이 우선 적용됩니다.</span>
-                                </li>
-                                <li>
-                                    <span>②</span>
-                                    <span>회사가 제공하는 각종 금융상품/서비스는 각 금융상품/서비스별 약관 및 여신전문금융업법, 할부거래법 등 관계 법령의 적용을 받습니다.</span>
-                                </li>
-                            </ol>
-                        </div>
-                        <div class="text-group">
-                            <h4 class="tit">제4조 (약관의 효력 및 변경)</h4>
-                            <ol class="text-list">
-                                <li>
-                                    <span>①</span>
-                                    <span>이 약관의 내용은 특별한 규정이 없는 한 사이트 화면에 게시하거나 기타의 방법으로 회원에게 공지함으로써 효력을 발생합니다.</span>
-                                </li>
-                                <li>
-                                    <span>②</span>
-                                    <span>회사는 필요하다고 인정되는 사유가 발생할 경우에는 관계 법령을 위반하지 않는 범위에서 이 약관의 전부 또는 일부를 변경할 수 있으며, 개정된 약관은 제1항과 같은 방법으로 공지함 으로써 효력을 발생합니다.</span>
-                                </li>
-                                <li>
-                                    <span>③</span>
-                                    <span>전항의 방법으로 변경 고지된 약관은 변경 고지일 이전에 가입한 회원에게도 유효하게 효력이 발생합니다.</span>
-                                </li>
-                                <li>
-                                    <span>④</span>
-                                    <span>본 약관의 내용에 이의가 있는 회원은 회원탈퇴(해지)를 요청할 수 있습니다.
-                                        단, 이의가 있음에도 불구하고 제1항 내지 제2항에 정해진 바에 따른 회사의 고지가 있은 후 30일 이내에 회원탈퇴를 하지 않는 회원은 개정된 약관에 동의한 것으로 봅니다.</span>
-                                </li>
-                            </ol>
-                        </div>
-                        <div class="text-group">
-                            <h4 class="tit">제5조 (서비스의 제공)</h4>
-                            <p>회사는 이용자에게 회사가 자체 개발하는 서비스, 타 업체와 협력 개발한 서비스, 타 업체가 개발한 서비스 및 회사에서 별도로 정하는 각종 서비스 등을 제공합니다.
-                                단, 회사의 사정에 따라 각 서비스 별로 제공일정 및 제공방법이 변경 또는 지연되거나 미제공될 수도 있습니다.</p>
-                        </div>
-                        <div class="text-group">
-                            <h4 class="tit">제6조 (서비스의 이용 및 중단)</h4>
-                            <ol class="text-list">
-                                <li>
-                                    <span>①</span>
-                                    <span>서비스의 이용은 회사의 업무상 또는 기술상 특별한 지장이 없는 한 연중무휴 1일 24시간을 원칙으로 합니다.
-                                        다만, 서비스의 종류 및 내용에 따라 별도의 이용시간을 정하여 운영할 수 있으며, 이 경우 그 내용을 해당서비스 이용화면에 공지함으써 회원에게 통지합니다.</span>
-                                </li>
-                                <li>
-                                    <span>②</span>
-                                    <span>전항의 이용시간에도 불구하고 회사는 다음 각 호에 해당하는 경우 서비스 제공을 중지할 수 있습니다.</span>
-                                    <ol class="text-list">
-                                        <li>
-                                            <span>1.</span>
-                                            <span>서비스용 설비의 보수 등 공사로 인한 부득이한 경우</span>
-                                        </li>
-                                        <li>
-                                            <span>2.</span>
-                                            <span>전기통신사업법에 규정된 기간통신사업자가 전기통신 서비스를 중지했을 경우</span>
-                                        </li>
-                                        <li>
-                                            <span>3.</span>
-                                            <span>기타 불가항력적 사유가 있는 경우</span>
-                                        </li>
-                                    </ol>
-                                </li>
-                                <li>
-                                    <span>③</span>
-                                    <span>회사는 국가비상사태, 정전, 서비스 장애 또는 서비스 이용의 폭주 등으로 정상적인 서비
-                                        스 이용에 지장이 있는 때에는 서비스의 전부 또는 일부를 제한하거나 정지할 수 있습니다.</span>
-                                </li>
-                                <li>
-                                    <span>④</span>
-                                    <span>회사는 새로운 서비스로 교체 또는 기타 회사가 서비스를 제공할 수 없는 사유 발생시 제공되는 서비스를 중단할 수 있습니다.</span>
-                                </li>
-                                <li>
-                                    <span>⑤</span>
-                                    <span>회사는 서비스 이용에 제한을 하고자 하는 경우에는 그 사유 및 기간을 정하여 공지사항에 게시하는 등의 방법으로 이용자에게 통지합니다. 
-                                        다만, 회사가 긴급하게 이용을 정지할 필요가 있는 경우에는 그러하지 아니합니다.</span>
-                                </li>
-                            </ol>
-                        </div>
-                        <div class="text-group">
-                            <h4 class="tit">제7조 (회원가입 및 등록)</h4>
-                            <ol class="text-list">
-                                <li>
-                                    <span>①</span>
-                                    <span>이용자는 회사가 정한 가입 양식에 따라 회원정보를 기입한 후 이 약관에 동의한다는 의사 표시를 함으로서 회원가입을 신청합니다.</span>
-                                </li>
-                                <li>
-                                    <span>②</span>
-                                    <span>제1항에 따른 신청에 있어 회사는 전문기관을 통해 회원의 실명확인 및 본인인증을 요청할 수 있습니다.</span>
-                                </li>
-                                <li>
-                                    <span>③</span>
-                                    <span>회사는 제1항과 같이 회원으로 가입할 것을 신청한 이용자 중 다음 각호에 해당하지 않는한 회원으로 등록합니다.</span>
-                                    <ol class="text-list">
-                                        <li>
-                                            <span>1.</span>
-                                            <span>등록 내용에 허위, 기재누락, 오기가 있는 경우</span>
-                                        </li>
-                                        <li>
-                                            <span>2.</span>
-                                            <span>기타 회원으로 등록하는 것이 사이트의 기술상 또는 보안상 현저히 지장이 있다고 판단되는 경우</span>
-                                        </li>
-                                    </ol>
-                                </li>
-                                <li>
-                                    <span>④</span>
-                                    <span>회원에 가입하는 자는 회사가 요구하는 개인신상정보를 정확하게 제공하여야 하며, 실명이나 실제 정보를 입력하지 않은 회원은 법적인 보호를 받을 수 없으며, 서비스 사용의 제한을 받을 수 있습니다.</span>
-                                </li>
-                                <li>
-                                    <span>⑤</span>
-                                    <span>회사는 회원ID와 비밀번호를 관리하고 서비스 이용 시에 이를 요구할 수 있습니다.</span>
-                                </li>
-                                <li>
-                                    <span>⑥</span>
-                                    <span>회사는 회사가 제공하는 특정 서비스에 있어서 이용자에게 회원ID 및 비밀번호 이외의 개인정보를 요구할 수 있습니다. 
-                                        이 경우 이용자가 이를 따르지 않음으로 인하여 발생하게 될 제반 손해에 대하여 회사는 책임을 지지 않습니다.</span>
-                                </li>
-                            </ol>
-                        </div>
-                        <div class="text-group">
-                            <h4 class="tit">제8조 (회원 탈퇴 및 자격 상실)</h4>
-                            <ol class="text-list">
-                                <li>
-                                    <span>①</span>
-                                    <span>회원은 회사에 언제든지 탈퇴를 요청할 수 있으며 회사는 해당 회원의 탈퇴를 위한 절차를 밟아 회원정보를 삭제합니다.
-                                        단, 정보주체로부터 사전에 동의를 받은 경우 또는 관계 법령에 의하여 보존할 필요성이 있는 경우에는 개인정보를 일정기간 동안 보유합니다.</span>
-                                </li>
-                                <li>
-                                    <span>②</span>
-                                    <span>회원이 다음 각 호의 사유에 해당하는 경우 회사는 회원자격을 상실 시킬 수 있습니다.</span>
-                                    <ol class="text-list">
-                                        <li>
-                                            <span>1.</span>
-                                            <span>이 약관 및 서비스 이용에 관련된 관계법령을 위반한 사실이 밝혀진 경우</span>
-                                        </li>
-                                        <li>
-                                            <span>2.</span>
-                                            <span>범죄와 관련이 되었다고 추정되는 일체의 행위를 한 경우</span>
-                                        </li>
-                                        <li>
-                                            <span>3.</span>
-                                            <span>공공의 이익을 해할 목적으로 서비스를 이용하는 경우</span>
-                                        </li>
-                                        <li>
-                                            <span>4.</span>
-                                            <span>서비스의 운영을 고의로 방해하는 경우</span>
-                                        </li>
-                                        <li>
-                                            <span>5.</span>
-                                            <span>ID와 비밀번호 등 회원의 비밀사항을 타인에게 누설하거나 타인의 ID와 비밀번호 등을 도용하는 경우</span>
-                                        </li>
-                                        <li>
-                                            <span>6.</span>
-                                            <span>회원이 게시판 등에 음란물을 게재하거나 음란사이트를 링크 하는 경우</span>
-                                        </li>
-                                        <li>
-                                            <span>7.</span>
-                                            <span>회사 또는 사이트의 지적재산권을 침해하는 경우</span>
-                                        </li>
-                                        <li>
-                                            <span>8.</span>
-                                            <span>기타 관계법령이나 회사가 정한 이용규칙에 위반하여 더 이상의 서비스 제공이 곤란하다고
-                                                회사가 판단하는 경우</span>
-                                        </li>
-                                    </ol>
-                                </li>
-                                <li>
-                                    <span>③</span>
-                                    <span>제2항 에 해당하는 행위를 한 회원은 이로 인해 다른 회원에게 발생한 손해를 배상할 책임이 있습니다.</span>
-                                </li>
-                                <li>
-                                    <span>④</span>
-                                    <span>회사가 회원자격을 상실시키는 경우에는 회원등록을 말소합니다.</span>
-                                </li>
-                                <li>
-                                    <span>⑤</span>
-                                    <span>제2항 및 제4항의 회사조치에 대하여 회원은 회사가 정한 절차에 따라 이의신청을 할 수 있습니다.</span>
-                                </li>
-                                <li>
-                                    <span>⑥</span>
-                                    <span>제4항의 이의가 정당하다고 인정되는 경우, 회사는 즉시 서비스의 이용을 재개해야 합니다.</span>
-                                </li>
-                            </ol>
-                        </div>
-                        <div class="text-group">
-                            <h4 class="tit">제9조 (이용자에 대한 통지)</h4>
-                            <ol class="text-list">
-                                <li>
-                                    <span>①</span>
-                                    <span>회사가 이용자에 대한 통지를 하는 경우, 이용자가 회사에 제출한 전자우편 주소로 할 수 있습니다.</span>
-                                </li>
-                                <li>
-                                    <span>②</span>
-                                    <span>회사는 이용자에 대한 통지의 경우, 1주일 이상 사이트 게시판에 게시함으로써 개별 통지에 갈음할 수 있습니다.</span>
-                                </li>
-                            </ol>
-                        </div>
-                        <div class="text-group">
-                            <h4 class="tit">제10조 (회사의 정보제공)</h4>
-                            <ol class="text-list">
-                                <li>
-                                    <span>①</span>
-                                    <span>회사 및 회사의 제휴업체는 관계 법령의 사전동의를 받은 경우, 회원에게 서비스의 이용 및 각종행사, 생활 편의 정보 추천, 상품홍보 서비스 및 마케팅 활동을 서신우편물, 전자우편,
-                                        무선단문메시지(SMS), 전화(TM) 기타의 방법으로 제공할 수 있습니다.</span>
-                                </li>
-                                <li>
-                                    <span>②</span>
-                                    <span>회원의 개인정보는 관계 법령이 정하는 바에 따라 엄격히 관리되며, 회원은 원하지 않는 경우 회사가 제공하는 정보 또는 광고성 수신을 사이트나 콜센터를 통하여 거부할 수 있습니다.</span>
-                                </li>
-                            </ol>
-                        </div>
-                        <div class="text-group">
-                            <h4 class="tit">제11조 (게시물)</h4>
-                            <ol class="text-list">
-                                <li>
-                                    <span>①</span>
-                                    <span>서비스 내에 게시한 게시물(회원간 전달 포함)의 저작권은 회원이 소유하며, 회사는 회사는 게시되는 내용의 추가·수정·삭제에 관한 모든 권한을 가지고 있으며 
-                                        회원에게 별도의 통지없이 URL(Uniform Resource Locator)의 변경 및 내용의 추가·수정·삭제를 할 수 있습니다.</span>
-                                </li>
-                                <li>
-                                    <span>②</span>
-                                    <span>회사는 게시한 회원의 동의 없이 게시물을 다른 목적으로 사용할 수 없습니다.</span>
-                                </li>
-                                <li>
-                                    <span>③</span>
-                                    <span>회사는 제1항에서 회원이 게시하거나 전달하는 서비스 내의 모든 내용물(회원간 전달 포함)이 다음의 경우에 해당한다고 판단되는 경우 사전 통지없이 삭제할 수 있습니다. 
-                                        이 경우 회원은 회사에 게시물의 재게시를 요구할 수 없습니다.</span>
-                                    <ol class="text-list">
-                                        <li>
-                                            <span>1.</span>
-                                            <span>다른 회원 또는 제3자를 비방하거나 명예를 손상시키는 내용인 경우</span>
-                                        </li>
-                                        <li>
-                                            <span>2.</span>
-                                            <span>공공질서 및 미풍양속에 위반되는 내용인 경우</span>
-                                        </li>
-                                        <li>
-                                            <span>3.</span>
-                                            <span>범죄적 행위에 결부된다고 인정되는 내용인 경우</span>
-                                        </li>
-                                        <li>
-                                            <span>4.</span>
-                                            <span>회사의 저작권, 제3자의 저작권 등 기타 권리를 침해하는 내용인 경우</span>
-                                        </li>
-                                        <li>
-                                            <span>5.</span>
-                                            <span>기타 관계법령 및 회사의 세부지침 등에 위반된다고 판단되는 경우</span>
-                                        </li>
-                                    </ol>
-                                </li>
-                                <li>
-                                    <span>④</span>
-                                    <span>회원은 개인적인 이익을 위해 회사에 게시물의 게재 등의 요구를 할 수 없습니다.</span>
-                                </li>
-                            </ol>
-                        </div>
-                        <div class="text-group">
-                            <h4 class="tit">제12조 (링크 및 연결)</h4>
-                            <ol class="text-list">
-                                <li>
-                                    <span>①</span>
-                                    <span>회사는 이용자에게 다른 회사의 웹사이트 또는 자료에 대한 링크 또는 API(Application Programming Interface) 연결을 제공할 수 있습니다.
-                                        회사는 그러한 사이트 및 자료에 대한 아무런 통제권이 없으므로, 이용자는 회사가 그와 같은 외부 사이트나 자료의 유용성에 대해 책임이 없으며, 그러한 사이트나 자료에 대한, 또는 그로부터 이용 가능한 내용, 광고, 
-                                        제품이나 재료에 대해 회사가 아무런 보증도 하지 않고, 그에 대해 책임이 없음을 인정하고 이에 동의합니다.</span>
-                                </li>
-                                <li>
-                                    <span>②</span>
-                                    <span>이용자는 링크 또는 연결된 사이트 자료에 대한, 또는 이와 관련하여 야기되거나 야기되었다고 주장되는 어떠한 손해나 손실에 대하여 회사가 직접적 또는 간접적으로 책임을 지지 않음을 인정하고 이에 동의합니다.</span>
-                                </li>
-                                <li>
-                                    <span>③</span>
-                                    <span>회사의 사이트 이외의 링크 또는 연결된 사이트에서는 회사의 개인정보처리방침이 적용되지 않습니다.</span>
-                                </li>
-                            </ol>
-                        </div>
-                        <div class="text-group">
-                            <h4 class="tit">제13조 쿠키(Cookie)의 운용 및 활용</h4>
-                            <ol class="text-list">
-                                <li>
-                                    <span>①</span>
-                                    <span>회사는 이용자에게 적합하고 유용한 서비스를 제공하기 위해서 이용자의 사이트 이용 정보를 저장하고 수시로 불러오는 쿠키(Cookie)를 사용합니다.</span>
-                                </li>
-                                <li>
-                                    <span>②</span>
-                                    <span>쿠키(Cookie)는 이용자들이 회사의 사이트와 서비스들에 대한 방문 및 이용형태, 이용자의 규모 등을 파악하여
-                                        이용자에게 최적화된 정보 제공을 목적으로 사용되며 수집되는 정보는 최소한에 한합니다.</span>
-                                </li>
-                                <li>
-                                    <span>③</span>
-                                    <span>이용자는 쿠키 설치에 대한 선택이 있으며 쿠키의 수신을 거부하거나 쿠키의 수신에 대하여 경고하도록 사용하는 컴퓨터 브라우저의 설정을 변경할 수 있습니다.</span>
-                                </li>
-                            </ol>
-                        </div>
-                        <div class="text-group">
-                            <h4 class="tit">제14조 (개인정보보호)</h4>
-                            <ol class="text-list">
-                                <li>
-                                    <span>①</span>
-                                    <span>회사는 이용자의 정보수집 시 이용자 관리에 필요한 최소한의 정보를 수집합니다. 다음 각호의 사항을 필수사항으로 하며, 그 외 사항은 선택사항으로 합니다.</span>
-                                    <ol class="text-list">
-                                        <li>
-                                            <span>1.</span>
-                                            <span>성명</span>
-                                        </li>
-                                        <li>
-                                            <span>2.</span>
-                                            <span>회원ID</span>
-                                        </li>
-                                        <li>
-                                            <span>3.</span>
-                                            <span>비밀번호(비밀번호 확인)</span>
-                                        </li>
-                                        <li>
-                                            <span>4.</span>
-                                            <span>생년월일</span>
-                                        </li>
-                                        <li>
-                                            <span>5.</span>
-                                            <span>휴대전화</span>
-                                        </li>
-                                        <li>
-                                            <span>6.</span>
-                                            <span>E-mail 주소</span>
-                                        </li>
-                                        <li>
-                                            <span>7.</span>
-                                            <span>아이핀번호(아이핀 회원 가입시)</span>
-                                        </li>
-                                        <li>
-                                            <span>8.</span>
-                                            <span>공동인증서 서명값</span>
-                                        </li>
-                                        <li>
-                                            <span>9.</span>
-                                            <span>휴대폰/아이핀 본인 인증시 생성되는 CI, DI값</span>
-                                        </li>
-                                    </ol>
-                                </li>
-                                <li>
-                                    <span>②</span>
-                                    <span>회사가 이용자의 개인식별이 가능한 개인정보를 수집하는 때에는 반드시 당해 이용자의 동
-                                        의를 받습니다.</span>
-                                </li>
-                                <li>
-                                    <span>③</span>
-                                    <span>제공된 개인정보는 당해 이용자의 동의 없이 목적 외의 용도로 이용이나 제3자에게 제공할 수 없으며,
-                                        이에 대한 모든 책임은 회사가 집니다. 다만, 다음 각호의 경우에는 예외로 합니다.</span>
-                                    <ol class="text-list">
-                                        <li>
-                                            <span>1.</span>
-                                            <span>통계작성, 학술연구 또는 시장조사를 위하여 필요한 경우로서 특정 개인을 식별할 수 없는
-                                                형태로 제공하는 경우</span>
-                                        </li>
-                                        <li>
-                                            <span>2.</span>
-                                            <span>기타 법령에 의해 제공된 경우</span>
-                                        </li>
-                                    </ol>
-                                </li>
-                                <li>
-                                    <span>④</span>
-                                    <span>회사는 이용자가 협력업체를 통해 제공되는 서비스를 사용할 수 있도록 하기 위해, 이용자의 동의를 받아 이름이나 
-                                        휴대전화와 같은 서비스 이용에 필요한 제한된 범위의 개인정보를 서비스 협력업체에 제공할 수 있습니다.</span>
-                                </li>
-                                <li>
-                                    <span>⑤ </span>
-                                    <span>이용자는 언제든지 회사가 가지고 있는 자신의 개인정보에 대해 열람 및 오류정정을 요구할 수 있으며 회사는 이에 대해 지체없이 필요한 조치를 취할 의무를 집니다.</span>
-                                </li>
-                                <li>
-                                    <span>⑥</span>
-                                    <span>회사는 개인정보보호를 위해 관리자를 지정하여 운영하고 보안시스템을 구축하여 개인정보 보호정책을 공시하고 이를 준수합니다.</span>
-                                </li>
-                                <li>
-                                    <span>⑦</span>
-                                    <span>이용자의 귀책사유로 인한 개인정보의 분실, 도난, 유출, 변조 등으로 인한 손해에 대해서는 이용자가 모든 책임을 부담합니다.</span>
-                                </li>
-                                <li>
-                                    <span>⑧</span>
-                                    <span>회원이 탈퇴하거나 개인정보의 수집·이용 목적을 달성한 때에는 회사는 당해 개인정보를 지체 없이 파기합니다. 
-                                        단, 정보주체로부터 사전에 동의를 받은 경우 또는 관계 법령에 의하여 보존할 필요성이 있는 경우에는 개인정보를 일정기간 동안 보유합니다.</span>
-                                </li>
-                            </ol>
-                        </div>
-                        <div class="text-group">
-                            <h4 class="tit">제15조 (회사의 의무)</h4>
-                            <ol class="text-list">
-                                <li>
-                                    <span>①</span>
-                                    <span>회사는 특별한 사정이 없는 한 이용자가 신청한 서비스를 서비스제공 개시일에 이용할 수 있도록 합니다.</span>
-                                </li>
-                                <li>
-                                    <span>②</span>
-                                    <span>회사는 법령과 이 약관이 금지하거나 공서양속에 반하는 행위를 하지 않으며 특별한 사정이 없는 한 
-                                        이 약관이 정하는 바에 따라 이용자에게 계속적이고 안정적인 서비스를 제공하는데 최선을 다하여야 합니다.</span>
-                                </li>
-                                <li>
-                                    <span>③</span>
-                                    <span>회사는 이용자가 안전하게 서비스를 이용할 수 있도록 개인정보보호를 위해 보안시스템을 갖추어야 하며 개인정보처리방침을 공시하고 준수합니다</span>
-                                </li>
-                                <li>
-                                    <span>④</span>
-                                    <span>회사는 이용자의 개인신상정보를 본인의 동의 없이 타인에게 누설, 제공하지 않습니다. 
-                                        단, 관계법령에 의하여 허용되는 경우에는 그러하지 아니합니다.</span>
-                                </li>
-                            </ol>
-                        </div>
-                        <div class="text-group">
-                            <h4 class="tit">제16조 (이용자의 의무)</h4>
-                            <ol class="text-list">
-                                <li>
-                                    <span>①</span>
-                                    <span>이용자는 이 약관 및 관계법령에서 규정한 사항을 준수하여야 합니다.</span>
-                                </li>
-                                <li>
-                                    <span>②</span>
-                                    <span>이용자는 서비스를 이용할 때 각호의 행위를 하지 않아야 합니다.</span>
-                                    <ol class="text-list">
-                                        <li>
-                                            <span>1.</span>
-                                            <span>다른 이용자의 개인정보 및 비밀번호를 부정하게 사용하는 행위</span>
-                                        </li>
-                                        <li>
-                                            <span>2.</span>
-                                            <span>회사의 저작권, 제 3자의 저작권 등 기타 권리를 침해하는 행위</span>
-                                        </li>
-                                        <li>
-                                            <span>3.</span>
-                                            <span>서비스를 이용하여 얻은 정보를 이용자의 개인적인 이용 외에 복사, 가공, 번역, 2차적 저작 등을 통하여 복제, 송연, 방송, 전시, 배포, 출판 등에 사용하거나 제 3자에게 제공하는 행위</span>
-                                        </li>
-                                        <li>
-                                            <span>4.</span>
-                                            <span>범죄와 결부된다고 객관적으로 인정되는 행위</span>
-                                        </li>
-                                        <li>
-                                            <span>5.</span>
-                                            <span>타인의 명예를 손상시키거나 불이익을 주는 행위</span>
-                                        </li>
-                                        <li>
-                                            <span>6.</span>
-                                            <span>공공질서 및 미풍양속에 위반되는 내용의 정보, 문장, 도형, 음성 등을 타인에게 유포하는 행위</span>
-                                        </li>
-                                        <li>
-                                            <span>7.</span>
-                                            <span>서비스와 관련된 설비의 오작동이나 정보 등의 파괴 및 혼란을 유발시키는 컴퓨터 바이러스 감염 자료를 등록 또는 유포하는 행위</span>
-                                        </li>
-                                        <li>
-                                            <span>8.</span>
-                                            <span>서비스의 안정적인 운영을 방해할 수 있는 정보를 전송하거나 수신자의 의사에 반하여 광고성 정보를 전송하는 행위 등 기타 일체의 행위</span>
-                                        </li>
-                                        <li>
-                                            <span>9.</span>
-                                            <span>기타 관계 법령에 위반되는 행위</span>
-                                        </li>
-                                    </ol>
-                                </li>
-                                <li>
-                                    <span>③</span>
-                                    <span>개인정보의 관리에 관한 일체의 책임은 이용자 본인에게 있습니다. 회원에게 부여된 회원 ID와 비밀번호를 제3자에게 대여 또는 양도하거나 이와 유사한 행위를 하여서는 아니되며, 
-                                        이용자 본인의 개인정보의 관리소홀, 부정사용에 의하여 발생하는 모든 결과에 대한 책임은 이용자 본인에게 있습니다.</span>
-                                </li>
-                                <li>
-                                    <span>④</span>
-                                    <span>이용자는 본인의 개인정보가 부정하게 사용되는 경우를 인지한 때에는 즉시 자신의 비밀번호를 변경하고 그 사실을 회사에 통보하여야 합니다.</span>
-                                </li>
-                                <li>
-                                    <span>⑤</span>
-                                    <span>이용자는 회사의 사전동의 없이 서비스를 이용하여 영업활동을 할 수 없으며, 그 영업 활동으로 인한 결과에 대하여 회사는 책임을 지지 않습니다.</span>
-                                </li>
-                                <li>
-                                    <span>⑥</span>
-                                    <span>이용자는 내용별로 회사가 서비스 공지사항에 게시하거나 별도로 공지한 이용 제한 사항을 준수하여야 합니다.</span>
-                                </li>
-                                <li>
-                                    <span>⑦</span>
-                                    <span>이용자는 회사의 사전동의 없이 서비스의 이용권한, 기타 지위를 타인에게 양도, 증여할수 없으며, 이를 담보로 제공할 수 없습니다.</span>
-                                </li>
-                            </ol>
-                        </div>
-                        <div class="text-group">
-                            <h4 class="tit">제17조 (면책)</h4>
-                            <ol class="text-list">
-                                <li>
-                                    <span>①</span>
-                                    <span>회사는 다음 각호의 사유로 인하여 이용자에게 발생한 손해에 대해서는 책임지지 아니합니다. 
-                                        다만, 회사가 책임 있다고 판단되는 상당한 인과관계가 있는 경우에는 그러하지 아니합니다.</span>
-                                    <ol class="text-list">
-                                        <li>
-                                            <span>1.</span>
-                                            <span>통신기기, 회선 및 컴퓨터의 장애나 거래의 폭주 등 부득이한 사정으로 서비스를 제공하지 못하거나 서비스제공이 지연된 경우</span>
-                                        </li>
-                                        <li>
-                                            <span>2.</span>
-                                            <span>회원이 회원ID, 비밀번호 등 개인정보의 관리소홀로 인해 제3자에게 누출한 경우</span>
-                                        </li>
-                                        <li>
-                                            <span>3.</span>
-                                            <span>이용자의 전산조작이나 업무처리의 오류 등으로 인한 경우</span>
-                                        </li>
-                                        <li>
-                                            <span>4.</span>
-                                            <span>전산기기 관리회사의 사유에 따른 서비스제공이 지연되는 경우</span>
-                                        </li>
-                                        <li>
-                                            <span>5.</span>
-                                            <span>기타 천재지변 등의 불가피한 사유로 인한 경우</span>
-                                        </li>
-                                    </ol>
-                                </li>
-                                <li>
-                                    <span>②</span>
-                                    <span>회사는 이용자가 서비스를 이용하여 기대하는 수익을 상실한 것에 대하여 책임을 지지 않으며 그 밖에 서비스를 통하여 얻은 자료로 인한 손해 등에 대하여도 책임을 지지 않습니다.
-                                        회사는 이용자가 제11조에 의하여 서비스에 게재한 정보, 자료, 사실의 신뢰도, 정확성 등 내용에 대하여는 책임을 지지 않습니다.</span>
-                                </li>
-                            </ol>
-                        </div>
-                        <div class="text-group">
-                            <h4 class="tit">제18조 (약관위반 시 책임)</h4>
-                            <p>회사와 이용자는 이 약관을 위반함으로써 발생하는 모든 책임을 각자 부담하며, 이로 인하여 상대방에게 손해를 입힌 경우에는 지체 없이 배상하여야 합니다.</p>
-                        </div>
-                        <div class="text-group">
-                            <h4 class="tit">제19조 (저작권의 귀속 및 이용제한)</h4>
-                            <ol class="text-list">
-                                <li>
-                                    <span>①</span>
-                                    <span>회사가 제작한 사이트의 저작물에 대한 저작권 기타 지적재산권은 회사에 귀속합니다.</span>
-                                    
-                                </li>
-                                <li>
-                                    <span>②</span>
-                                    <span>이용자는 사이트를 이용함으로써 얻은 정보를 회사의 사전 승낙 없이 복제, 송신, 출판, 배포, 방송 기타 방법에 의하여 영리목적으로 이용하거나 제3자에게 이용하게 하여서는 안됩니다.</span>
-                                </li>
-                                <li>
-                                    <span>③</span>
-                                    <span>회사 또는 이용자가 게시한 게시물이 제3자의 지식재산권을 침해한 경우 귀책사유 있는 당사자가 상대방에게 발생한 모든 손해를 배상한다.</span>
-                                </li>
-                            </ol>
-                        </div>
-                        <div class="text-group">
-                            <h4 class="tit">제20조 (손해배상)</h4>
-                            <p>회사와 이용자간 발생한 분쟁에 관해서 이 약관이 규정하지 않은 사항은 관계법령에 따르며 서비스 이용과 관련하여 회사와 이용자 사이에 분쟁이 발생한 경우, 우선 쌍방간에 분쟁의 해결을 위하여 성실히 협의하여야 합니다.</p>
-                        </div>
-                        <div class="text-group">
-                            <h4 class="tit">제21조 (관할법원)</h4>
-                            <p>제20조의 협의에서도 분쟁이 해결되지 않을 경우 관할법원은 민사소송법에서 정한 바에 따른다.</p>
-                        </div>
-                        <div class="text-group">
-                            <h4 class="tit">제22조 (기타사항)</h4>
-                            <p>이 약관에 명시되지 않은 사항은 관계법령과 상관습에 따릅니다.</p>
-                        </div>
-                        <div class="text-group">
-                            <h4 class="tit">부칙</h4>
-                            <p>1. 이 약관은 2025년 12월 31일부터 시행합니다.</p>
-                        </div>
-            
-                    </div>
-                </div>
-            </div>
-            <div class="pop-footer">
-                <div class="button-content">
-                    <button type="button" class="btn-pop-primary"  data-popup-close="WCM40100DSPOP01">확인했어요</button>
-                </div>
-            </div>
+      <!--[D] fullPopupOn 클래스 :: 헤더 스크립트 적용중-->
+      <div class="pop-area" tabindex="0">
+        <div class="pop-header">
+          <h2 class="pop-tit">인터넷 서비스 이용약관 동의 여부</h2>
         </div>
+        <div class="pop-body WCM40100DS">
+          <div class="pop-content">
+            <div class="group">
+              <h3>이용약관</h3>
+              <div class="text-group">
+                <h4 class="tit">제1조 (목적 및 약관의 적용범위)</h4>
+                <p>
+                  이 약관은 MG캐피탈 주식회사(이하"회사"라 한다)가 운영하는 모든
+                  인터넷사이트(이하 "사이트 "라 한다)에서 제공하는 모든 웹
+                  서비스(이하"서비스"라 한다)를 이용함에 있어 이용자의 권리·
+                  의무 및 책임사항과 서비스이용에 대한 기타 필요한 사항을
+                  규정함을 목적으로 합니다.
+                </p>
+              </div>
+              <div class="text-group">
+                <h4 class="tit">제2조 (정의)</h4>
+                <ol class="text-list">
+                  <li>
+                    <span>①</span>
+                    <span
+                      >"서비스"라 함은 회사의 홈페이지 및 회사가 운영하는
+                      인터넷사이트 등에서 제공되는 인터넷상의 모든
+                      웹서비스(무선인터넷 서비스 포함)를 의미합니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>②</span>
+                    <span
+                      >"이용자"란 "사이트"에서 이 약관에 따라 제공하는 서비스를
+                      받는 회원 및 비회원을 말합니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>③</span>
+                    <span
+                      >"회원"이라 함은 "사이트"에 개인정보를 제공하여 회원등록을
+                      한 자를 말합니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>④</span>
+                    <span
+                      >"비회원"이라 함은 회원에 가입하지 않고, "사이트"가
+                      제공하는 서비스를 이용하는 자를 말합니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>⑤</span>
+                    <span
+                      >"회원ID"라 함은 회원식별과 회원의 서비스 이용을 위하여
+                      회원 본인이 설정하여 회사가 정하는 일정한 기준에 의해
+                      표기된 인식문자를 말합니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>⑥</span>
+                    <span
+                      >"비밀번호"라 함은 회원의 비밀 보호 및 회원 본인임을
+                      확인하고 서비스에 제공되는 각종 정보의 보안을 위해 회원
+                      자신이 설정하며 회사가 정하는 일정한 기준에 의해 표기한
+                      암호문자를 말합니다.</span
+                    >
+                  </li>
+                </ol>
+              </div>
+              <div class="text-group">
+                <h4 class="tit">제3조 (약관의 적용)</h4>
+                <ol class="text-list">
+                  <li>
+                    <span>①</span>
+                    <span
+                      >이 약관의 내용은 회사가 사이트에서 제공하는 모든 서비스의
+                      이용조건 및 기타 필요한 사항에 적용됩니다. 다만, 회사가
+                      별도의 사이트를 운영하고 별도의 약관이 있을 경우에는
+                      해당사이트의 약관이 우선 적용됩니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>②</span>
+                    <span
+                      >회사가 제공하는 각종 금융상품/서비스는 각
+                      금융상품/서비스별 약관 및 여신전문금융업법, 할부거래법 등
+                      관계 법령의 적용을 받습니다.</span
+                    >
+                  </li>
+                </ol>
+              </div>
+              <div class="text-group">
+                <h4 class="tit">제4조 (약관의 효력 및 변경)</h4>
+                <ol class="text-list">
+                  <li>
+                    <span>①</span>
+                    <span
+                      >이 약관의 내용은 특별한 규정이 없는 한 사이트 화면에
+                      게시하거나 기타의 방법으로 회원에게 공지함으로써 효력을
+                      발생합니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>②</span>
+                    <span
+                      >회사는 필요하다고 인정되는 사유가 발생할 경우에는 관계
+                      법령을 위반하지 않는 범위에서 이 약관의 전부 또는 일부를
+                      변경할 수 있으며, 개정된 약관은 제1항과 같은 방법으로
+                      공지함 으로써 효력을 발생합니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>③</span>
+                    <span
+                      >전항의 방법으로 변경 고지된 약관은 변경 고지일 이전에
+                      가입한 회원에게도 유효하게 효력이 발생합니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>④</span>
+                    <span
+                      >본 약관의 내용에 이의가 있는 회원은 회원탈퇴(해지)를
+                      요청할 수 있습니다. 단, 이의가 있음에도 불구하고 제1항
+                      내지 제2항에 정해진 바에 따른 회사의 고지가 있은 후 30일
+                      이내에 회원탈퇴를 하지 않는 회원은 개정된 약관에 동의한
+                      것으로 봅니다.</span
+                    >
+                  </li>
+                </ol>
+              </div>
+              <div class="text-group">
+                <h4 class="tit">제5조 (서비스의 제공)</h4>
+                <p>
+                  회사는 이용자에게 회사가 자체 개발하는 서비스, 타 업체와 협력
+                  개발한 서비스, 타 업체가 개발한 서비스 및 회사에서 별도로
+                  정하는 각종 서비스 등을 제공합니다. 단, 회사의 사정에 따라 각
+                  서비스 별로 제공일정 및 제공방법이 변경 또는 지연되거나
+                  미제공될 수도 있습니다.
+                </p>
+              </div>
+              <div class="text-group">
+                <h4 class="tit">제6조 (서비스의 이용 및 중단)</h4>
+                <ol class="text-list">
+                  <li>
+                    <span>①</span>
+                    <span
+                      >서비스의 이용은 회사의 업무상 또는 기술상 특별한 지장이
+                      없는 한 연중무휴 1일 24시간을 원칙으로 합니다. 다만,
+                      서비스의 종류 및 내용에 따라 별도의 이용시간을 정하여
+                      운영할 수 있으며, 이 경우 그 내용을 해당서비스 이용화면에
+                      공지함으써 회원에게 통지합니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>②</span>
+                    <span
+                      >전항의 이용시간에도 불구하고 회사는 다음 각 호에 해당하는
+                      경우 서비스 제공을 중지할 수 있습니다.</span
+                    >
+                    <ol class="text-list">
+                      <li>
+                        <span>1.</span>
+                        <span
+                          >서비스용 설비의 보수 등 공사로 인한 부득이한
+                          경우</span
+                        >
+                      </li>
+                      <li>
+                        <span>2.</span>
+                        <span
+                          >전기통신사업법에 규정된 기간통신사업자가 전기통신
+                          서비스를 중지했을 경우</span
+                        >
+                      </li>
+                      <li>
+                        <span>3.</span>
+                        <span>기타 불가항력적 사유가 있는 경우</span>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <span>③</span>
+                    <span
+                      >회사는 국가비상사태, 정전, 서비스 장애 또는 서비스 이용의
+                      폭주 등으로 정상적인 서비 스 이용에 지장이 있는 때에는
+                      서비스의 전부 또는 일부를 제한하거나 정지할 수
+                      있습니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>④</span>
+                    <span
+                      >회사는 새로운 서비스로 교체 또는 기타 회사가 서비스를
+                      제공할 수 없는 사유 발생시 제공되는 서비스를 중단할 수
+                      있습니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>⑤</span>
+                    <span
+                      >회사는 서비스 이용에 제한을 하고자 하는 경우에는 그 사유
+                      및 기간을 정하여 공지사항에 게시하는 등의 방법으로
+                      이용자에게 통지합니다. 다만, 회사가 긴급하게 이용을 정지할
+                      필요가 있는 경우에는 그러하지 아니합니다.</span
+                    >
+                  </li>
+                </ol>
+              </div>
+              <div class="text-group">
+                <h4 class="tit">제7조 (회원가입 및 등록)</h4>
+                <ol class="text-list">
+                  <li>
+                    <span>①</span>
+                    <span
+                      >이용자는 회사가 정한 가입 양식에 따라 회원정보를 기입한
+                      후 이 약관에 동의한다는 의사 표시를 함으로서 회원가입을
+                      신청합니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>②</span>
+                    <span
+                      >제1항에 따른 신청에 있어 회사는 전문기관을 통해 회원의
+                      실명확인 및 본인인증을 요청할 수 있습니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>③</span>
+                    <span
+                      >회사는 제1항과 같이 회원으로 가입할 것을 신청한 이용자 중
+                      다음 각호에 해당하지 않는한 회원으로 등록합니다.</span
+                    >
+                    <ol class="text-list">
+                      <li>
+                        <span>1.</span>
+                        <span
+                          >등록 내용에 허위, 기재누락, 오기가 있는 경우</span
+                        >
+                      </li>
+                      <li>
+                        <span>2.</span>
+                        <span
+                          >기타 회원으로 등록하는 것이 사이트의 기술상 또는
+                          보안상 현저히 지장이 있다고 판단되는 경우</span
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <span>④</span>
+                    <span
+                      >회원에 가입하는 자는 회사가 요구하는 개인신상정보를
+                      정확하게 제공하여야 하며, 실명이나 실제 정보를 입력하지
+                      않은 회원은 법적인 보호를 받을 수 없으며, 서비스 사용의
+                      제한을 받을 수 있습니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>⑤</span>
+                    <span
+                      >회사는 회원ID와 비밀번호를 관리하고 서비스 이용 시에 이를
+                      요구할 수 있습니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>⑥</span>
+                    <span
+                      >회사는 회사가 제공하는 특정 서비스에 있어서 이용자에게
+                      회원ID 및 비밀번호 이외의 개인정보를 요구할 수 있습니다.
+                      이 경우 이용자가 이를 따르지 않음으로 인하여 발생하게 될
+                      제반 손해에 대하여 회사는 책임을 지지 않습니다.</span
+                    >
+                  </li>
+                </ol>
+              </div>
+              <div class="text-group">
+                <h4 class="tit">제8조 (회원 탈퇴 및 자격 상실)</h4>
+                <ol class="text-list">
+                  <li>
+                    <span>①</span>
+                    <span
+                      >회원은 회사에 언제든지 탈퇴를 요청할 수 있으며 회사는
+                      해당 회원의 탈퇴를 위한 절차를 밟아 회원정보를 삭제합니다.
+                      단, 정보주체로부터 사전에 동의를 받은 경우 또는 관계
+                      법령에 의하여 보존할 필요성이 있는 경우에는 개인정보를
+                      일정기간 동안 보유합니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>②</span>
+                    <span
+                      >회원이 다음 각 호의 사유에 해당하는 경우 회사는
+                      회원자격을 상실 시킬 수 있습니다.</span
+                    >
+                    <ol class="text-list">
+                      <li>
+                        <span>1.</span>
+                        <span
+                          >이 약관 및 서비스 이용에 관련된 관계법령을 위반한
+                          사실이 밝혀진 경우</span
+                        >
+                      </li>
+                      <li>
+                        <span>2.</span>
+                        <span
+                          >범죄와 관련이 되었다고 추정되는 일체의 행위를 한
+                          경우</span
+                        >
+                      </li>
+                      <li>
+                        <span>3.</span>
+                        <span
+                          >공공의 이익을 해할 목적으로 서비스를 이용하는
+                          경우</span
+                        >
+                      </li>
+                      <li>
+                        <span>4.</span>
+                        <span>서비스의 운영을 고의로 방해하는 경우</span>
+                      </li>
+                      <li>
+                        <span>5.</span>
+                        <span
+                          >ID와 비밀번호 등 회원의 비밀사항을 타인에게
+                          누설하거나 타인의 ID와 비밀번호 등을 도용하는
+                          경우</span
+                        >
+                      </li>
+                      <li>
+                        <span>6.</span>
+                        <span
+                          >회원이 게시판 등에 음란물을 게재하거나 음란사이트를
+                          링크 하는 경우</span
+                        >
+                      </li>
+                      <li>
+                        <span>7.</span>
+                        <span
+                          >회사 또는 사이트의 지적재산권을 침해하는 경우</span
+                        >
+                      </li>
+                      <li>
+                        <span>8.</span>
+                        <span
+                          >기타 관계법령이나 회사가 정한 이용규칙에 위반하여 더
+                          이상의 서비스 제공이 곤란하다고 회사가 판단하는
+                          경우</span
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <span>③</span>
+                    <span
+                      >제2항 에 해당하는 행위를 한 회원은 이로 인해 다른
+                      회원에게 발생한 손해를 배상할 책임이 있습니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>④</span>
+                    <span
+                      >회사가 회원자격을 상실시키는 경우에는 회원등록을
+                      말소합니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>⑤</span>
+                    <span
+                      >제2항 및 제4항의 회사조치에 대하여 회원은 회사가 정한
+                      절차에 따라 이의신청을 할 수 있습니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>⑥</span>
+                    <span
+                      >제4항의 이의가 정당하다고 인정되는 경우, 회사는 즉시
+                      서비스의 이용을 재개해야 합니다.</span
+                    >
+                  </li>
+                </ol>
+              </div>
+              <div class="text-group">
+                <h4 class="tit">제9조 (이용자에 대한 통지)</h4>
+                <ol class="text-list">
+                  <li>
+                    <span>①</span>
+                    <span
+                      >회사가 이용자에 대한 통지를 하는 경우, 이용자가 회사에
+                      제출한 전자우편 주소로 할 수 있습니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>②</span>
+                    <span
+                      >회사는 이용자에 대한 통지의 경우, 1주일 이상 사이트
+                      게시판에 게시함으로써 개별 통지에 갈음할 수
+                      있습니다.</span
+                    >
+                  </li>
+                </ol>
+              </div>
+              <div class="text-group">
+                <h4 class="tit">제10조 (회사의 정보제공)</h4>
+                <ol class="text-list">
+                  <li>
+                    <span>①</span>
+                    <span
+                      >회사 및 회사의 제휴업체는 관계 법령의 사전동의를 받은
+                      경우, 회원에게 서비스의 이용 및 각종행사, 생활 편의 정보
+                      추천, 상품홍보 서비스 및 마케팅 활동을 서신우편물,
+                      전자우편, 무선단문메시지(SMS), 전화(TM) 기타의 방법으로
+                      제공할 수 있습니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>②</span>
+                    <span
+                      >회원의 개인정보는 관계 법령이 정하는 바에 따라 엄격히
+                      관리되며, 회원은 원하지 않는 경우 회사가 제공하는 정보
+                      또는 광고성 수신을 사이트나 콜센터를 통하여 거부할 수
+                      있습니다.</span
+                    >
+                  </li>
+                </ol>
+              </div>
+              <div class="text-group">
+                <h4 class="tit">제11조 (게시물)</h4>
+                <ol class="text-list">
+                  <li>
+                    <span>①</span>
+                    <span
+                      >서비스 내에 게시한 게시물(회원간 전달 포함)의 저작권은
+                      회원이 소유하며, 회사는 회사는 게시되는 내용의
+                      추가·수정·삭제에 관한 모든 권한을 가지고 있으며 회원에게
+                      별도의 통지없이 URL(Uniform Resource Locator)의 변경 및
+                      내용의 추가·수정·삭제를 할 수 있습니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>②</span>
+                    <span
+                      >회사는 게시한 회원의 동의 없이 게시물을 다른 목적으로
+                      사용할 수 없습니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>③</span>
+                    <span
+                      >회사는 제1항에서 회원이 게시하거나 전달하는 서비스 내의
+                      모든 내용물(회원간 전달 포함)이 다음의 경우에 해당한다고
+                      판단되는 경우 사전 통지없이 삭제할 수 있습니다. 이 경우
+                      회원은 회사에 게시물의 재게시를 요구할 수 없습니다.</span
+                    >
+                    <ol class="text-list">
+                      <li>
+                        <span>1.</span>
+                        <span
+                          >다른 회원 또는 제3자를 비방하거나 명예를 손상시키는
+                          내용인 경우</span
+                        >
+                      </li>
+                      <li>
+                        <span>2.</span>
+                        <span>공공질서 및 미풍양속에 위반되는 내용인 경우</span>
+                      </li>
+                      <li>
+                        <span>3.</span>
+                        <span
+                          >범죄적 행위에 결부된다고 인정되는 내용인 경우</span
+                        >
+                      </li>
+                      <li>
+                        <span>4.</span>
+                        <span
+                          >회사의 저작권, 제3자의 저작권 등 기타 권리를 침해하는
+                          내용인 경우</span
+                        >
+                      </li>
+                      <li>
+                        <span>5.</span>
+                        <span
+                          >기타 관계법령 및 회사의 세부지침 등에 위반된다고
+                          판단되는 경우</span
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <span>④</span>
+                    <span
+                      >회원은 개인적인 이익을 위해 회사에 게시물의 게재 등의
+                      요구를 할 수 없습니다.</span
+                    >
+                  </li>
+                </ol>
+              </div>
+              <div class="text-group">
+                <h4 class="tit">제12조 (링크 및 연결)</h4>
+                <ol class="text-list">
+                  <li>
+                    <span>①</span>
+                    <span
+                      >회사는 이용자에게 다른 회사의 웹사이트 또는 자료에 대한
+                      링크 또는 API(Application Programming Interface) 연결을
+                      제공할 수 있습니다. 회사는 그러한 사이트 및 자료에 대한
+                      아무런 통제권이 없으므로, 이용자는 회사가 그와 같은 외부
+                      사이트나 자료의 유용성에 대해 책임이 없으며, 그러한
+                      사이트나 자료에 대한, 또는 그로부터 이용 가능한 내용,
+                      광고, 제품이나 재료에 대해 회사가 아무런 보증도 하지 않고,
+                      그에 대해 책임이 없음을 인정하고 이에 동의합니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>②</span>
+                    <span
+                      >이용자는 링크 또는 연결된 사이트 자료에 대한, 또는 이와
+                      관련하여 야기되거나 야기되었다고 주장되는 어떠한 손해나
+                      손실에 대하여 회사가 직접적 또는 간접적으로 책임을 지지
+                      않음을 인정하고 이에 동의합니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>③</span>
+                    <span
+                      >회사의 사이트 이외의 링크 또는 연결된 사이트에서는 회사의
+                      개인정보처리방침이 적용되지 않습니다.</span
+                    >
+                  </li>
+                </ol>
+              </div>
+              <div class="text-group">
+                <h4 class="tit">제13조 쿠키(Cookie)의 운용 및 활용</h4>
+                <ol class="text-list">
+                  <li>
+                    <span>①</span>
+                    <span
+                      >회사는 이용자에게 적합하고 유용한 서비스를 제공하기
+                      위해서 이용자의 사이트 이용 정보를 저장하고 수시로
+                      불러오는 쿠키(Cookie)를 사용합니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>②</span>
+                    <span
+                      >쿠키(Cookie)는 이용자들이 회사의 사이트와 서비스들에 대한
+                      방문 및 이용형태, 이용자의 규모 등을 파악하여 이용자에게
+                      최적화된 정보 제공을 목적으로 사용되며 수집되는 정보는
+                      최소한에 한합니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>③</span>
+                    <span
+                      >이용자는 쿠키 설치에 대한 선택이 있으며 쿠키의 수신을
+                      거부하거나 쿠키의 수신에 대하여 경고하도록 사용하는 컴퓨터
+                      브라우저의 설정을 변경할 수 있습니다.</span
+                    >
+                  </li>
+                </ol>
+              </div>
+              <div class="text-group">
+                <h4 class="tit">제14조 (개인정보보호)</h4>
+                <ol class="text-list">
+                  <li>
+                    <span>①</span>
+                    <span
+                      >회사는 이용자의 정보수집 시 이용자 관리에 필요한 최소한의
+                      정보를 수집합니다. 다음 각호의 사항을 필수사항으로 하며,
+                      그 외 사항은 선택사항으로 합니다.</span
+                    >
+                    <ol class="text-list">
+                      <li>
+                        <span>1.</span>
+                        <span>성명</span>
+                      </li>
+                      <li>
+                        <span>2.</span>
+                        <span>회원ID</span>
+                      </li>
+                      <li>
+                        <span>3.</span>
+                        <span>비밀번호(비밀번호 확인)</span>
+                      </li>
+                      <li>
+                        <span>4.</span>
+                        <span>생년월일</span>
+                      </li>
+                      <li>
+                        <span>5.</span>
+                        <span>휴대전화</span>
+                      </li>
+                      <li>
+                        <span>6.</span>
+                        <span>E-mail 주소</span>
+                      </li>
+                      <li>
+                        <span>7.</span>
+                        <span>아이핀번호(아이핀 회원 가입시)</span>
+                      </li>
+                      <li>
+                        <span>8.</span>
+                        <span>공동인증서 서명값</span>
+                      </li>
+                      <li>
+                        <span>9.</span>
+                        <span>휴대폰/아이핀 본인 인증시 생성되는 CI, DI값</span>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <span>②</span>
+                    <span
+                      >회사가 이용자의 개인식별이 가능한 개인정보를 수집하는
+                      때에는 반드시 당해 이용자의 동 의를 받습니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>③</span>
+                    <span
+                      >제공된 개인정보는 당해 이용자의 동의 없이 목적 외의
+                      용도로 이용이나 제3자에게 제공할 수 없으며, 이에 대한 모든
+                      책임은 회사가 집니다. 다만, 다음 각호의 경우에는 예외로
+                      합니다.</span
+                    >
+                    <ol class="text-list">
+                      <li>
+                        <span>1.</span>
+                        <span
+                          >통계작성, 학술연구 또는 시장조사를 위하여 필요한
+                          경우로서 특정 개인을 식별할 수 없는 형태로 제공하는
+                          경우</span
+                        >
+                      </li>
+                      <li>
+                        <span>2.</span>
+                        <span>기타 법령에 의해 제공된 경우</span>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <span>④</span>
+                    <span
+                      >회사는 이용자가 협력업체를 통해 제공되는 서비스를 사용할
+                      수 있도록 하기 위해, 이용자의 동의를 받아 이름이나
+                      휴대전화와 같은 서비스 이용에 필요한 제한된 범위의
+                      개인정보를 서비스 협력업체에 제공할 수 있습니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>⑤ </span>
+                    <span
+                      >이용자는 언제든지 회사가 가지고 있는 자신의 개인정보에
+                      대해 열람 및 오류정정을 요구할 수 있으며 회사는 이에 대해
+                      지체없이 필요한 조치를 취할 의무를 집니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>⑥</span>
+                    <span
+                      >회사는 개인정보보호를 위해 관리자를 지정하여 운영하고
+                      보안시스템을 구축하여 개인정보 보호정책을 공시하고 이를
+                      준수합니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>⑦</span>
+                    <span
+                      >이용자의 귀책사유로 인한 개인정보의 분실, 도난, 유출,
+                      변조 등으로 인한 손해에 대해서는 이용자가 모든 책임을
+                      부담합니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>⑧</span>
+                    <span
+                      >회원이 탈퇴하거나 개인정보의 수집·이용 목적을 달성한
+                      때에는 회사는 당해 개인정보를 지체 없이 파기합니다. 단,
+                      정보주체로부터 사전에 동의를 받은 경우 또는 관계 법령에
+                      의하여 보존할 필요성이 있는 경우에는 개인정보를 일정기간
+                      동안 보유합니다.</span
+                    >
+                  </li>
+                </ol>
+              </div>
+              <div class="text-group">
+                <h4 class="tit">제15조 (회사의 의무)</h4>
+                <ol class="text-list">
+                  <li>
+                    <span>①</span>
+                    <span
+                      >회사는 특별한 사정이 없는 한 이용자가 신청한 서비스를
+                      서비스제공 개시일에 이용할 수 있도록 합니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>②</span>
+                    <span
+                      >회사는 법령과 이 약관이 금지하거나 공서양속에 반하는
+                      행위를 하지 않으며 특별한 사정이 없는 한 이 약관이 정하는
+                      바에 따라 이용자에게 계속적이고 안정적인 서비스를
+                      제공하는데 최선을 다하여야 합니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>③</span>
+                    <span
+                      >회사는 이용자가 안전하게 서비스를 이용할 수 있도록
+                      개인정보보호를 위해 보안시스템을 갖추어야 하며
+                      개인정보처리방침을 공시하고 준수합니다</span
+                    >
+                  </li>
+                  <li>
+                    <span>④</span>
+                    <span
+                      >회사는 이용자의 개인신상정보를 본인의 동의 없이 타인에게
+                      누설, 제공하지 않습니다. 단, 관계법령에 의하여 허용되는
+                      경우에는 그러하지 아니합니다.</span
+                    >
+                  </li>
+                </ol>
+              </div>
+              <div class="text-group">
+                <h4 class="tit">제16조 (이용자의 의무)</h4>
+                <ol class="text-list">
+                  <li>
+                    <span>①</span>
+                    <span
+                      >이용자는 이 약관 및 관계법령에서 규정한 사항을 준수하여야
+                      합니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>②</span>
+                    <span
+                      >이용자는 서비스를 이용할 때 각호의 행위를 하지 않아야
+                      합니다.</span
+                    >
+                    <ol class="text-list">
+                      <li>
+                        <span>1.</span>
+                        <span
+                          >다른 이용자의 개인정보 및 비밀번호를 부정하게
+                          사용하는 행위</span
+                        >
+                      </li>
+                      <li>
+                        <span>2.</span>
+                        <span
+                          >회사의 저작권, 제 3자의 저작권 등 기타 권리를
+                          침해하는 행위</span
+                        >
+                      </li>
+                      <li>
+                        <span>3.</span>
+                        <span
+                          >서비스를 이용하여 얻은 정보를 이용자의 개인적인 이용
+                          외에 복사, 가공, 번역, 2차적 저작 등을 통하여 복제,
+                          송연, 방송, 전시, 배포, 출판 등에 사용하거나 제
+                          3자에게 제공하는 행위</span
+                        >
+                      </li>
+                      <li>
+                        <span>4.</span>
+                        <span>범죄와 결부된다고 객관적으로 인정되는 행위</span>
+                      </li>
+                      <li>
+                        <span>5.</span>
+                        <span
+                          >타인의 명예를 손상시키거나 불이익을 주는 행위</span
+                        >
+                      </li>
+                      <li>
+                        <span>6.</span>
+                        <span
+                          >공공질서 및 미풍양속에 위반되는 내용의 정보, 문장,
+                          도형, 음성 등을 타인에게 유포하는 행위</span
+                        >
+                      </li>
+                      <li>
+                        <span>7.</span>
+                        <span
+                          >서비스와 관련된 설비의 오작동이나 정보 등의 파괴 및
+                          혼란을 유발시키는 컴퓨터 바이러스 감염 자료를 등록
+                          또는 유포하는 행위</span
+                        >
+                      </li>
+                      <li>
+                        <span>8.</span>
+                        <span
+                          >서비스의 안정적인 운영을 방해할 수 있는 정보를
+                          전송하거나 수신자의 의사에 반하여 광고성 정보를
+                          전송하는 행위 등 기타 일체의 행위</span
+                        >
+                      </li>
+                      <li>
+                        <span>9.</span>
+                        <span>기타 관계 법령에 위반되는 행위</span>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <span>③</span>
+                    <span
+                      >개인정보의 관리에 관한 일체의 책임은 이용자 본인에게
+                      있습니다. 회원에게 부여된 회원 ID와 비밀번호를 제3자에게
+                      대여 또는 양도하거나 이와 유사한 행위를 하여서는 아니되며,
+                      이용자 본인의 개인정보의 관리소홀, 부정사용에 의하여
+                      발생하는 모든 결과에 대한 책임은 이용자 본인에게
+                      있습니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>④</span>
+                    <span
+                      >이용자는 본인의 개인정보가 부정하게 사용되는 경우를
+                      인지한 때에는 즉시 자신의 비밀번호를 변경하고 그 사실을
+                      회사에 통보하여야 합니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>⑤</span>
+                    <span
+                      >이용자는 회사의 사전동의 없이 서비스를 이용하여
+                      영업활동을 할 수 없으며, 그 영업 활동으로 인한 결과에
+                      대하여 회사는 책임을 지지 않습니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>⑥</span>
+                    <span
+                      >이용자는 내용별로 회사가 서비스 공지사항에 게시하거나
+                      별도로 공지한 이용 제한 사항을 준수하여야 합니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>⑦</span>
+                    <span
+                      >이용자는 회사의 사전동의 없이 서비스의 이용권한, 기타
+                      지위를 타인에게 양도, 증여할수 없으며, 이를 담보로 제공할
+                      수 없습니다.</span
+                    >
+                  </li>
+                </ol>
+              </div>
+              <div class="text-group">
+                <h4 class="tit">제17조 (면책)</h4>
+                <ol class="text-list">
+                  <li>
+                    <span>①</span>
+                    <span
+                      >회사는 다음 각호의 사유로 인하여 이용자에게 발생한 손해에
+                      대해서는 책임지지 아니합니다. 다만, 회사가 책임 있다고
+                      판단되는 상당한 인과관계가 있는 경우에는 그러하지
+                      아니합니다.</span
+                    >
+                    <ol class="text-list">
+                      <li>
+                        <span>1.</span>
+                        <span
+                          >통신기기, 회선 및 컴퓨터의 장애나 거래의 폭주 등
+                          부득이한 사정으로 서비스를 제공하지 못하거나
+                          서비스제공이 지연된 경우</span
+                        >
+                      </li>
+                      <li>
+                        <span>2.</span>
+                        <span
+                          >회원이 회원ID, 비밀번호 등 개인정보의 관리소홀로 인해
+                          제3자에게 누출한 경우</span
+                        >
+                      </li>
+                      <li>
+                        <span>3.</span>
+                        <span
+                          >이용자의 전산조작이나 업무처리의 오류 등으로 인한
+                          경우</span
+                        >
+                      </li>
+                      <li>
+                        <span>4.</span>
+                        <span
+                          >전산기기 관리회사의 사유에 따른 서비스제공이 지연되는
+                          경우</span
+                        >
+                      </li>
+                      <li>
+                        <span>5.</span>
+                        <span
+                          >기타 천재지변 등의 불가피한 사유로 인한 경우</span
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <span>②</span>
+                    <span
+                      >회사는 이용자가 서비스를 이용하여 기대하는 수익을 상실한
+                      것에 대하여 책임을 지지 않으며 그 밖에 서비스를 통하여
+                      얻은 자료로 인한 손해 등에 대하여도 책임을 지지 않습니다.
+                      회사는 이용자가 제11조에 의하여 서비스에 게재한 정보,
+                      자료, 사실의 신뢰도, 정확성 등 내용에 대하여는 책임을 지지
+                      않습니다.</span
+                    >
+                  </li>
+                </ol>
+              </div>
+              <div class="text-group">
+                <h4 class="tit">제18조 (약관위반 시 책임)</h4>
+                <p>
+                  회사와 이용자는 이 약관을 위반함으로써 발생하는 모든 책임을
+                  각자 부담하며, 이로 인하여 상대방에게 손해를 입힌 경우에는
+                  지체 없이 배상하여야 합니다.
+                </p>
+              </div>
+              <div class="text-group">
+                <h4 class="tit">제19조 (저작권의 귀속 및 이용제한)</h4>
+                <ol class="text-list">
+                  <li>
+                    <span>①</span>
+                    <span
+                      >회사가 제작한 사이트의 저작물에 대한 저작권 기타
+                      지적재산권은 회사에 귀속합니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>②</span>
+                    <span
+                      >이용자는 사이트를 이용함으로써 얻은 정보를 회사의 사전
+                      승낙 없이 복제, 송신, 출판, 배포, 방송 기타 방법에 의하여
+                      영리목적으로 이용하거나 제3자에게 이용하게 하여서는
+                      안됩니다.</span
+                    >
+                  </li>
+                  <li>
+                    <span>③</span>
+                    <span
+                      >회사 또는 이용자가 게시한 게시물이 제3자의 지식재산권을
+                      침해한 경우 귀책사유 있는 당사자가 상대방에게 발생한 모든
+                      손해를 배상한다.</span
+                    >
+                  </li>
+                </ol>
+              </div>
+              <div class="text-group">
+                <h4 class="tit">제20조 (손해배상)</h4>
+                <p>
+                  회사와 이용자간 발생한 분쟁에 관해서 이 약관이 규정하지 않은
+                  사항은 관계법령에 따르며 서비스 이용과 관련하여 회사와 이용자
+                  사이에 분쟁이 발생한 경우, 우선 쌍방간에 분쟁의 해결을 위하여
+                  성실히 협의하여야 합니다.
+                </p>
+              </div>
+              <div class="text-group">
+                <h4 class="tit">제21조 (관할법원)</h4>
+                <p>
+                  제20조의 협의에서도 분쟁이 해결되지 않을 경우 관할법원은
+                  민사소송법에서 정한 바에 따른다.
+                </p>
+              </div>
+              <div class="text-group">
+                <h4 class="tit">제22조 (기타사항)</h4>
+                <p>
+                  이 약관에 명시되지 않은 사항은 관계법령과 상관습에 따릅니다.
+                </p>
+              </div>
+              <div class="text-group">
+                <h4 class="tit">부칙</h4>
+                <p>1. 이 약관은 2025년 12월 31일부터 시행합니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pop-footer">
+          <div class="button-content">
+            <button
+              type="button"
+              class="btn-pop-primary"
+              data-popup-close="WCM40100DSPOP01"
+            >
+              확인했어요
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- e: 개인정보 수집이용 팝업(WCM40100DSPOP01) -->
-</body>
+  </body>
 </html>
- 
