@@ -63,8 +63,10 @@ label.radio { gap:6px; padding:6px 13px 8px; background:var(--form-radio-bg); bo
 label input[type="radio"] { position:relative; width:24px; height:24px; border-radius:50%; background:var(--white); overflow:hidden; }
 label input[type="checkbox"] { position:relative; width:24px; height:24px; border:1px solid transparent; background:var(--form-board); overflow:hidden; border-radius:4px; }
 label input[type="checkbox"]::before { content:""; display:block; width:100%; height:100%; background:var(--white); mask-image:var(--form-checkbox); mask-position:center; mask-repeat:no-repeat; mask-size:12px auto; --webkit-mask-image:var(--form-checkbox); --webkit-mask-position:center; --webkit-mask-repeat:no-repeat; --webkit-mask-size:12px auto; }
-label input[type="checkbox"]:checked { background:var(--form-checked); } 
-label input[type="checkbox"]:disabled { background:var(--form-check-dissbled); } 
+label input[type="checkbox"]:checked { background:var(--form-checked); }
+label input[type="checkbox"]:checked:disabled { background:var(--form-check-dissbled); }
+label input[type="checkbox"]:not(:checked):disabled { background:var(--color-d); }
+label input[type="checkbox"]:not(:checked):disabled::before { mask-image:none; }
 label input:not(:checked) + span { font-weight:var(--font-w-m); }
 label input:checked + span { font-weight:500; }
 label input:checked + span { color:var(--form-font-color); font-weight:500; }
