@@ -936,10 +936,10 @@ main.contentWrap.finance > .page-container { padding-top:72px; }
 .WCA10100VQ .button-content .lnk-group { display: flex; flex-wrap: wrap; gap: 34px; }
 .WCA10100VQ .button-content .lnk-group a { box-sizing: border-box; height: 202px; display: flex; align-items: center; justify-content: center; flex: 1 1 calc(50% - 34px); border-radius: 16px;
 color: var(--white); font-size: var(--font26); font-weight: var(--font-w-b); background-size: cover; background-repeat: no-repeat; background-position: center; }
-.WCA10100VQ .button-content .lnk-group a:nth-child(1) { background-image: url("../../images/content/about/w/link_1_WCA10100VQ.png") }
-.WCA10100VQ .button-content .lnk-group a:nth-child(2) { background-image: url("../../images/content/about/w/link_2_WCA10100VQ.png") }
-.WCA10100VQ .button-content .lnk-group a:nth-child(3) { background-image: url("../../images/content/about/w/link_3_WCA10100VQ.png") }
-.WCA10100VQ .button-content .lnk-group a:nth-child(4) { background-image: url("../../images/content/about/w/link_4_WCA10100VQ.png") }
+.WCA10100VQ .button-content .lnk-group a:nth-child(1) { background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../images/content/about/w/link_1_WCA10100VQ.png") }
+.WCA10100VQ .button-content .lnk-group a:nth-child(2) { background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../images/content/about/w/link_2_WCA10100VQ.png") }
+.WCA10100VQ .button-content .lnk-group a:nth-child(3) { background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../images/content/about/w/link_3_WCA10100VQ.png") }
+.WCA10100VQ .button-content .lnk-group a:nth-child(4) { background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../images/content/about/w/link_4_WCA10100VQ.png") }
 
 /* 회사소개 - 회사연혁 (WCA30100VQ) */
 .page-container.WCA30100VQ > [class*="-content"] > [class*="-group"] {margin-bottom: 0;}
