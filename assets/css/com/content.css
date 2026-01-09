@@ -466,7 +466,7 @@ main.contentWrap.finance > .page-container { padding-top:72px; }
 
 /* 준법감시심의필 */
 .page-container > .anchor-container + .text-content:has(.compliance-box) { padding-top:24px; margin-bottom:0; border-top:0; }
-.compliance-box { display:flex; justify-content:space-between; align-items:center; }
+.compliance-box { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; }
 .compliance-box li { font-size:var(--font16); color:var(--color-75); }
 
 /*---------------------------------------------
