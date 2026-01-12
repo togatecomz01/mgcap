@@ -294,7 +294,9 @@ h3.rfrnc::before { content:"¡Ø "; display:inline; position:relative; left:inheri
 .form-wrap.search-form .tab-content > .group .form-group:last-of-type,
 .form-wrap.search-form > .group .form-group:last-of-type { padding-bottom:0; margin-bottom:0; border-bottom:0; }
 .form-wrap.search-form .tab-content > .group .form-group label:not(.radio),
-.form-wrap.search-form > .group .form-group label:not(.radio) {  width:100%; max-width:110px; min-width:72px; font-weight:var(--font-w-b); color:var(--color-2); }
+.form-wrap.search-form > .group .form-group label:not(.radio),
+.form-wrap.search-form > .tab-content .group .form-group .label-tit,
+.form-wrap.search-form > .tab-content .group .form-group .label-tit2 {  width:100%; max-width:110px; min-width:72px; font-weight:var(--font-w-b); color:var(--color-2); }
 .form-wrap.search-form p.mo-tit { display:none; }
 
 form:has(.form-wrap.search-form) + [class*="-group"] { margin-top:38px; }
