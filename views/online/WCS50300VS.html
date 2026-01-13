@@ -81,8 +81,8 @@
                                                 <div class="form-wrap">
                                                     <div class="form-group">
                                                         <div class="flex-row">
-                                                            <label for="password-change" class="sr-only">현재 비밀번호</label>
-                                                            <input id="password-input" type="text" name="text" class="password-change"  />
+                                                            <label for="password-input" class="sr-only">현재 비밀번호</label>
+                                                            <input id="password-input" type="text" name="password-input" class="password-change"  />
                                                             <button type="button" class="btn-form">비밀번호 변경</button>
                                                             <!-- s: 2025.11.14 추가 -->
                                                             <button type="button" class="btn-form pad">비밀번호 재설정</button>
@@ -101,16 +101,31 @@
                                                 <div class="form-wrap">
                                                     <div class="form-group">
                                                         <div class="flex-row">
-                                                            <div class="w-406 info-phone">
-                                                                <select id="phn-first" required="" title="" required>
-                                                                    <option value="0">010</option>
-                                                                    <option value="1">017</option>
-                                                                    <option value="2">019</option>
-                                                                </select>
-                                                                <input id="phn-second" name="phn-second" type="tel" value="83**" inputmode="numeric" autocomplete="tel-local-prefix" pattern="[0-9]{3,4}" maxlength="4"  required>
-                                                                <input id="phn-third" name="phn-third" type="tel" value="67**" inputmode="numeric" autocomplete="tel-local-suffix" pattern="[0-9]{4}" maxlength="4" >
-                                                            </div>
-                                                            <button type="button" class="btn-form pad">SMS인증후 변경</button>
+                                                            <label for="tlno1" class="sr-only">자택전화번호 첫번째</label>
+                                                            <select id="tlno1" name="tlno1" title="자택전화번호 첫번째 자리" required="">
+                                                                <option value="">선택</option>
+                                                                <option value="02">02 </option>
+                                                                <option value="031">031</option>
+                                                                <option value="032">032</option>
+                                                                <option value="033">033</option>
+                                                                <option value="041">041</option>
+                                                                <option value="042">042</option>
+                                                                <option value="043">043</option>
+                                                                <option value="051">051</option>
+                                                                <option value="052">052</option>
+                                                                <option value="053">053</option>
+                                                                <option value="054">054</option>
+                                                                <option value="055">055</option>
+                                                                <option value="061">061</option>
+                                                                <option value="062">062</option>
+                                                                <option value="063">063</option>
+                                                                <option value="064">064</option>
+                                                                <option value="070">070</option>
+                                                            </select>
+                                                            <label for="tlno2" class="sr-only">자택전화번호 두번째</label>
+                                                            <input id="tlno2" name="tlno2" type="tel" value="" inputmode="numeric" autocomplete="tel-local-prefix" pattern="[0-9]{3,4}" maxlength="4" required="">
+                                                            <label for="tlno3" class="sr-only">자택전화번호 세번째</label>
+                                                            <input id="tlno3" name="tlno3" type="tel" value="" inputmode="numeric" autocomplete="tel-local-suffix" pattern="[0-9]{4}" maxlength="4" required="">
                                                         </div>
                                                     </div>
                                                 </div>
