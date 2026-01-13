@@ -2116,6 +2116,9 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .pop-content .table-group .mo-list.result { border-top:0; }
     .pop-content .table-group .mo-list.result tbody tr:first-child { padding-top:10px; }
 
+    .WCC70101PQ .pop-content .table-group .mo-list.result tbody tr td a,
+    .pop_find_zipcord .pop-content .table-group .mo-list.result tbody tr td a { padding-right:20px; }
+
     /* 우편 번호 */
     .pop_find_zipcord .pop-content .mo-tit { margin-bottom:32px; }
     .pop_find_zipcord .form-wrap.search-form + .mo-tit { padding-top:14px; font-size:var(--font12); }

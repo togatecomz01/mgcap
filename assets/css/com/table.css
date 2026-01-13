@@ -91,6 +91,7 @@ table.round { border:var(--table-border); border-bottom:0; border-collapse:separ
 @media (max-width:1200px){
     /* .table-content:has(.mo-s) { overflow-x:auto; } */
     .table-content:has(.mo-s) table { table-layout:auto; }
+    .table-content:has(.mo-s.mo-list) table { table-layout:fixed; }
 
     .table-content:has(.table-group) { overflow-x:hidden; }
     .table-content:has(.table-group) .table-group { overflow-x:auto; }
