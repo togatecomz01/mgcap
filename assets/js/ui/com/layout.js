@@ -148,16 +148,25 @@ $(document).ready(function () {
 
         // 공통으로 타겟(main 영역) 찾는 함수
         function getTarget($link) {
-            // 1) data-target 우선
-            var targetSelector = $link.data("target");
             var $target = null;
 
+            // finance 클래스가 있으면 무조건 visual-container 우선
+            if ($("main").hasClass("finance")) {
+                var $visualContainer = $(".visual-container");
+                if ($visualContainer.length > 0) {
+                    return $visualContainer.first();
+                }
+            }
+
+            // 1) data-target 확인
+            var targetSelector = $link.data("target");
             if (targetSelector) {
                 $target = $(targetSelector);
             }
 
             // 2) data-target이 없거나 잘못된 경우: fallback
             if (!$target || $target.length === 0) {
+
                 var fallbackSelectors = [
                     ".page-container",
                     ".contentWrap",
