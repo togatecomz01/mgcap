@@ -266,47 +266,43 @@ ready, load, init
 })();*/
 
 
-//폰트사이즈 추가
+/* =========================================================
+   한컴 가상키보드 “입력 완료” → “인증번호 요청” 버튼 포커스 이동 (안전버전)
+   - jQuery 1.12 대응(:visible 셀렉터 사용 안 함)
+   - 중복 바인딩 방지
+========================================================= */
 (function () {
-  const checkbox = document.getElementById('fontSizeToggle');
-  const html = document.documentElement;
-  const baseSize = parseFloat(window.getComputedStyle(html).fontSize);
+  // 중복 바인딩 방지
+  if (window.__xkEnterFocusBound) return;
+  window.__xkEnterFocusBound = true;
 
-  function applyFontSize() {
-    const isMobile = window.innerWidth <= 768;
+  // 포커스 이동 대상(인증번호 요청 버튼)
+  function focusToCertBtn() {
+    var $btn = $(".reCertReqNum").first();
+    if (!$btn.length) return;
 
-    if (isMobile) {
+    // 혹시 disabled면 포커스 못 잡으니 방어
+    if ($btn.prop("disabled")) return;
 
-      // 모바일에서는 기본 체크 ON 유지 (사용자 조작 전까지)
-      if (!checkbox.dataset.userChanged) {
-        checkbox.checked = true;
-      }
+    // 혹시 display:none인 상태면 포커스 시도 의미 없으니 방어(셀렉터가 아닌 함수로 체크)
+    if (!$btn.is(":visible")) return;
 
-      // 체크 해제 → baseSize - 2px
-      // 체크 O → baseSize + 2px
-      html.style.fontSize = checkbox.checked
-        ? (baseSize) + 'px'
-        : (baseSize - 2) + 'px';
-
-    } else {
-      // PC에서는 기본 사이즈 + 체크 해제
-      html.style.fontSize = baseSize + 'px';
-
-      if (!checkbox.dataset.userChanged) {
-        checkbox.checked = false;
-      }
-    }
+    $btn.focus();
   }
 
-  // 체크박스 조작 시 사용자 변경표시
-  checkbox.addEventListener('change', function () {
-    checkbox.dataset.userChanged = "true";
-    applyFontSize();
-  });
+  // “입력 완료” 클릭 감지 (캡처 단계)
+  document.addEventListener(
+    "click",
+    function (e) {
+      // 입력완료 버튼(.xkp_enter) 클릭인지 확인
+      var enter = e.target && e.target.closest ? e.target.closest("#xk-pad0 .xkp_enter") : null;
+      if (!enter) return;
 
-  // 리사이즈 대응
-  window.addEventListener('resize', applyFontSize);
-
-  // 초기 적용
-  applyFontSize();
+      // 키패드 닫힘/포커스 뺏김 타이밍 때문에 재시도
+      setTimeout(focusToCertBtn, 0);
+      setTimeout(focusToCertBtn, 80);
+      setTimeout(focusToCertBtn, 250);
+    },
+    true
+  );
 })();
