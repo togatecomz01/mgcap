@@ -364,7 +364,7 @@ ul.diamond-box li { padding-left:22px; text-indent:-22px; }
 .attach + .attach { margin-top:20px; }
 [class*="-group"] h3 + .attach { margin-top:32px; }
 .attach dt { display:inline-block; padding-right:25px; width:125px; font-size:var(--font-s); font-weight:var(--font-w-b); color:var(--color-6); vertical-align:top; }
-.attach dt .num { color:var(--primary); }
+.attach dt .num { color:#0D52AC; }
 .attach dd { display:inline-block; width:calc(100% - 140px); }
 .attach dd a { font-size:var(--font-s); font-weight:var(--font-w-r); color:var(--color-2); }
 .attach dd a + a { margin-top:16px; }
