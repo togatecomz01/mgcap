@@ -762,7 +762,7 @@ main.contentWrap.finance > .page-container { padding-top:72px; }
 .WCF90100VQ .form-group { display:flex; align-items:center; }
 .WCF90100VQ .form-group label { width:228px; flex:0 0 var(--form-label-w); font-size:var(--form-label-fs); }*/
 
-.WCF90100VQ .form-content > .form-wrap { display:flex; gap:0; margin-bottom:0; width:100%; border-bottom:var(--board); }
+.WCF90100VQ .form-content > .form-wrap { display:flex; flex-direction:row; gap:0; margin-bottom:0; width:100%; border-bottom:var(--board); }
 .WCF90100VQ .form-content > .form-wrap > .form-group { display:flex; width:50%; flex:0 0 50%; }
 .WCF90100VQ .form-content > .form-wrap > .form-group:last-child { border-left:var(--board); }
 .WCF90100VQ .form-content > .form-wrap > .form-group > label,
@@ -1352,6 +1352,8 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
 
 @media (min-width: 767px) and (max-width: 1400px) {
     .WCC30110VQ .form-content > .form-wrap { flex-direction: row; justify-content: space-between; }
+    .WCF90100VQ .form-content > .form-wrap > .form-group > label,
+    .WCF90100VQ .form-content > .form-wrap > .form-group > p.label-tit { width:170px; flex:0 0 170px; }
 }
 
 @media (max-width: 1200px) {
