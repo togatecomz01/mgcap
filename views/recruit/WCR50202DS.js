@@ -62,6 +62,7 @@
       const $checks   = $page.find('input[type="checkbox"]');
 
       if (lock) {
+        fillTodayStartEndDate(); 
         // 텍스트/textarea는 읽기전용
         $textLike.attr('readonly', true).attr('aria-readonly', 'true');
 
@@ -83,10 +84,38 @@
       } else {
         // 원복
         $textLike.removeAttr('readonly').removeAttr('aria-readonly');
-        $selects.prop('disabled', false).removeAttr('aria-disabled');
+        $selects.prop('disabled', false).removeAttr('aria-disabled');      
         $buttons.prop('disabled', false).removeAttr('aria-disabled');
         $radios.prop('disabled', false).removeAttr('aria-disabled').off('click._lock');
         $checks.prop('disabled', false).removeAttr('aria-disabled').off('click._lock');
+
+      
+       // 원복
+      $textLike.removeAttr('readonly').removeAttr('aria-readonly');
+      $selects.prop('disabled', false).removeAttr('aria-disabled');
+      $buttons.prop('disabled', false).removeAttr('aria-disabled');
+      $radios.prop('disabled', false).removeAttr('aria-disabled').off('click._lock');
+      $checks.prop('disabled', false).removeAttr('aria-disabled').off('click._lock');
+      /**s : 26.01.20 */  
+      function keepMilSelectDisabled() {
+        var v = ($('#milType').val() || '').toString(); // 'F','E','N'
+        // 비대상(N)이면: 군별+기간+면제사유 모두 disabled 유지
+        if (v === 'N') {
+          $('#milBranch, #serviceStart, #serviceEnd, #exemptReason')
+            .prop('disabled', true)
+            .attr('aria-disabled', 'true');
+        }
+        // 면제(E)이면: 군별만 disabled 유지(원하면)
+        if (v === 'E') {
+          $('#milBranch')
+            .prop('disabled', true)
+            .attr('aria-disabled', 'true');
+        }
+      }
+        keepMilSelectDisabled();
+        setTimeout(keepMilSelectDisabled, 0);
+
+          /**e :26.01.20 */  
       }
     }
 
