@@ -1,0 +1,319 @@
+<!--[D] : 스크립트 삭제 -->
+<script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+<script defer="" src="https://www.krds.go.kr/resources/js/site/ui-guide-script.js"></script>
+
+<h3 class="essential">기본정보</h3>
+<form class="form-content">
+    <!-- 지원분야 -->
+    <div class="table-group">
+        <h4 class="essential">지원분야</h4>
+        <table class="td-l">
+            <caption>지원구분 선택표(신입, 경력 포함)</caption>
+             <!--s:2025.12.04  width 크기 조절-->
+             <colgroup>
+                <col style="width:180px">
+                <col style="width:auto">
+            </colgroup>
+            <!--e:2025.12.04  width 크기 조절-->
+            <tbody>
+                <tr>
+                    <th scope="row">지원구분</th>
+                    <td class="tal">
+                        <fieldset class="radio-group">
+                            <legend class="sr-only">지원구분 선택</legend>
+                            <label class="radio">
+                                <input type="radio" name="classification" id="newApplicant" value="신입" checked>
+                                <span>신입</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="classification" id="careerApplicant" value="경력">
+                                <span>경력</span>
+                            </label>
+                        </fieldset>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div><!--//table-group-->
+
+    <!-- 1지망 -->
+    <div class="table-group">
+        <h4 class="essential">1지망</h4>
+        <table class="td-l">
+            <caption>1지망 입력표(희망근무지, 지원업무, 상세지원업무 포함)</caption>
+                <colgroup>
+                <col style="width:33.3%">
+                <col style="width:33.3%">
+                <col style="width:auto">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th scope="col">희망근무지</th>
+                    <th scope="col">지원업무</th>
+                    <th scope="col">상세지원업무</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <label for="prefPlace1" class="sr-only">희망근무지</label>
+                        <select id="prefPlace1" name="prefPlace1">
+                            <option value="">선택해주세요</option>
+                            <!-- 실제 옵션들 -->
+                            <option value="서울" selected>서울</option>
+                            <option value="부산">부산</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label for="applyTask1" class="sr-only">지원업무</label>
+                        <span class="ipt-clear"><input id="applyTask1" name="applyTask1" type="text" value="인턴"></span>
+                    </td>
+                    <td>
+                        <label for="applyDetail1" class="sr-only">상세지원업무</label>
+                        <span class="ipt-clear"><input id="applyDetail1" name="applyDetail1" type="text"  value="상세지원업무 내용"></span>
+                    </td>
+                </tr>
+                </tbody>
+        </table>
+    </div><!--//table-group-->
+
+    <!-- 2지망 -->
+    <div class="table-group">
+        <!--s : 2025-11-20 : essential 클래스 삭제-->
+        <h4>2지망</h4>
+        <!--e : 2025-11-20 : essential 클래스 삭제-->
+        <table class="td-l">
+            <caption>2지망 입력표(희망근무지, 지원업무, 상세지원업무 포함)</caption>
+                <colgroup>
+                    <col style="width:33.3%">
+                    <col style="width:33.3%">
+                    <col style="width:auto">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">희망근무지</th>
+                        <th scope="col">지원업무</th>
+                        <th scope="col">상세지원업무</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="prefPlace2" class="sr-only">희망근무지</label>
+                            <select id="prefPlace2" name="prefPlace2">
+                                <option value="">선택해주세요</option>
+                                <option value="서울">서울</option>
+                                <option value="부산">부산</option>
+                            </select>
+                        </td>
+                        <td>
+                            <label for="applyTask2" class="sr-only">지원업무</label>
+                            <span class="ipt-clear"><input id="applyTask2" name="applyTask2" type="text" vallue=""></span>
+                        </td>
+                        <td>
+                            <label for="applyDetail2" class="sr-only">상세지원업무</label>
+                            <span class="ipt-clear"><input id="applyDetail2" name="applyDetail2" type="text"></span>
+                        </td>
+                    </tr>
+                </tbody>
+        </table>
+    </div><!--//table-group-->
+
+    <!-- 개인정보 -->
+    <div class="table-group">
+        <!--s : 2025-11-20 : h4 essential 클래스 삭제 th에서는 취미, 특기, 보훈여부(추가) 제외하고 essential 추가-->
+        <h4>개인정보</h4>
+        <table class="td-l">
+            <caption>개인정보 입력표(사진등록, 성명, 국적, 생년월일, 현주소, 전화번호, 휴대폰, 이메일, 취미, 특기 포함)</caption>
+             <!--s:2025.12.04  width 크기 조절-->
+             <colgroup>
+                <col style="width:180px">
+                <col style="width:auto">
+                <col style="width:180px">
+                <col style="width:auto">
+            </colgroup>
+            <!--e:2025.12.04  width 크기 조절-->
+            <tbody>
+                <tr>
+                    <th class="essential" scope="row">사진등록</th>
+                    <td colspan="3">
+                        <div class="photo-content">
+                            <p class="img-photo">
+                                <span class="sr-only">등록된 사진이 없습니다.</span>
+                            </p>
+                            <dl>
+                                <dt class="rfrnc">사진등록</dt>
+                                <dd> - 사진이미지의 권장사이즈는 103px*132px 입니다.</dd>
+                                <dd>  - 다른 사이즈의 이미지를 업로드 할 경우 이미지가 비정상적으로 출력될 수 있습니다.</dd>
+                                <dd>
+                                    <span class="ipt-file">
+                                        <button type="button" class="btn-form uploadButton">파일 선택</button>
+                                        <label class="upload-label">
+                                            <input id="files" class="upload" name="files" type="file" />
+                                        </label>
+                                        <span class="fileLabel"></span>
+                                    </span>
+                                </dd>
+                            </dl>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><label class="essential" for="name">성명</label></th>
+                    <td colspan="3">
+                        <input id="name" name="name" class="w-406" type="text" value="홍길동"  disabled>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><label class="essential" for="nationality">국적</label></th>
+                    <td colspan="3">
+                        <input id="nationality" name="nationality" class="w-406" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><label class="essential" for="birthday">생년월일</label></th>
+                    <td colspan="3">
+                        <input id="birthday" name="birthday" class="w-406" type="date" value="2025-10-17" disabled>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="essential" scope="row">현주소</th>
+                    <td colspan="3" class="address">
+                        <fieldset>
+                            <legend class="sr-only">현주소 입력</legend>
+                            <div class="form-group">
+                                <label for="address1" class="sr-only">우편번호</label>
+                                <input type="text" id="address1" name="address1" placeholder="우편번호" disabled>
+                                <button type="button" class="btn-form">우편번호 검색</button>
+                            </div>
+                            <div class="form-group">
+                                <label for="address2" class="sr-only">도로명 주소</label>
+                                <input type="text" id="address2" name="address2" placeholder="도로명 주소" disabled>
+                                <label for="address3" class="sr-only">상세주소</label>
+                                <span class="ipt-clear">
+                                    <input type="text" id="address3" name="address3" placeholder="상세주소">
+                                </span>
+                            </div>
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr class="row-mobile-2col">
+                    <th scope="row"><label class="essential" for="mobileNumber">휴대폰</label></th>
+                    <td>
+                        <input id="mobileNumber" name="mobileNumber" type="tel">
+                    </td>
+                    <th scope="row"><labe class="essential" for="phoneNumber">비상연락망</labe></th>
+                    <td>
+                        <input id="phoneNumber" name="phoneNumber" type="tel">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="essential" scope="row">이메일</th>
+                    <td colspan="3">
+                        <fieldset class="form-group email-group">
+                            <legend class="sr-only">이메일 입력</legend>
+                            <div class="email">
+                                <label for="emailId1" class="sr-only">이메일 아이디</label>
+                                <input id="emailId1" name="emailId1" type="text" class="email-id">
+                                <span>@</span>
+                                <label for="emailDomain1" class="sr-only">도메인</label>
+                                <input id="emailDomain1" name="emailDomain1" type="text" class="email-domain">
+                            </div>
+                            <label for="emailSelect1" class="sr-only">도메인 선택</label>
+                            <select id="emailSelect1" name="emailSelect1" class="email-select">
+                                <option value="">직접 입력</option>
+                                <option value="naver.com">naver.com</option>
+                                <option value="gmail.com">gmail.com</option>
+                                <option value="hanmail.net">hanmail.net</option>
+                            </select>
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="hobby">취미</label></th>
+                    <td>
+                        <span class="ipt-clear"><input id="hobby" name="hobby"  type="text"></span>
+                    </td>
+                        <th scope="row"><label for="specialAbility">특기</label></th>
+                    <td>
+                        <span class="ipt-clear"><input type="text" id="specialAbility" name="specialAbility"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th scpop="row"><label for="veteran">보훈여부</label></th>
+                    <td colspan="3">
+                        <span class="ipt-clear"><input id="veteran" class="w-406" name="veteran" type="text"></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!--e : 2025-11-20 : h4 essential 클래스 삭제 th에서는 취미, 특기, 보훈여부(추가) 제외하고 essential 추가-->
+        <p class="m-dot">본인인증 시 사용한 핸드폰 번호와 입력하신 이메일은 채용결과 및 진행사항 안내 등에 활용됩니다. 이메일을 정확하게 입력하시기 바랍니다.</p>
+    </div><!--//table-group-->
+
+    <!-- 병역구분 -->
+    <div class="table-group">
+        <h4 class="essential">병역구분</h4>
+        <table class="td-l">
+            <caption>병역구분 입력표(병역구분, 군별, 복무기간, 면제사유 포함)</caption>
+            <!--s:2025.12.04  width 크기 조절-->
+            <colgroup>
+                <col style="width:220px">
+                <col style="width:218px">
+                <col style="width:420px">
+                <col style="width:auto">
+            </colgroup>
+             <!--e:2025.12.04  width 크기 조절-->
+            <thead>
+                <tr>
+                    <th scope="col">병역구분</th>
+                    <th scope="col">군별</th>
+                    <th scope="col">복무기간</th>
+                    <th scope="col">면제사유</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="milType" class="sr-only">병역구분</label>
+                        <select id="milType" name="milType">
+                            <option value="">선택해주세요</option>
+                            <option value="served">현역/대체복무</option>
+                            <option value="exempt">면제</option>
+                            <option value="na">비대상</option>
+                        </select>
+                    </td>
+                <td>
+                    <label for="milBranch" class="sr-only">군별</label>
+                    <select id="milBranch" name="milBranch" disabled>
+                        <option value="">선택해주세요</option>
+                        <option value="army">육군</option>
+                        <option value="navy">해군</option>
+                        <option value="airforce">공군</option>
+                        <option value="others">기타</option>
+                    </select>
+                </td>
+                <td>
+                    <fieldset class="form-group">
+                        <legend>복무기간 입력</legend>
+                        <div class="date-wrap">
+                            <label for="serviceStart" class="sr-only">복무 시작일</label>
+                            <input type="date" id="serviceStart" name="serviceStart" class="js-cal js-cal-date" placeholder="YYYY-MM-DD" />
+                        </div>
+                        <div class="date-wrap">
+                            <label for="serviceEnd" class="sr-only">복무 종료(연·월)</label>
+                            <input type="date" id="serviceEnd" name="serviceEnd" class="js-cal js-cal-date" placeholder="YYYY-MM-DD" />
+                        </div>
+                    </fieldset>
+                
+                </td>
+                <td>
+                    <label for="exemptReason" class="sr-only">면제사유</label>
+                    <span class="ipt-clear"><input id="exemptReason" name="exemptReason" type="text"></span>
+                </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="m-dot">면제사유는 해당자만 기입해주시기 바랍니다.</p>
+    </div><!--//table-group-->
+</form>
