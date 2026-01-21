@@ -1082,7 +1082,8 @@ color: var(--white); font-size: var(--font26); font-weight: var(--font-w-b); bac
 .recruitment .group form .table-group { margin-bottom:52px; position:relative; }
 .recruitment .upload { display:none; }
 .recruitment .photo-content { display:flex; gap:28px; }
-.recruitment .photo-content .img-photo { width:190px; height:253px; background:var(--no-photo);  }
+.recruitment .photo-content .img-photo { width:190px; height:253px; background:var(--no-photo); overflow:hidden;  }
+.recruitment .photo-content .img-photo img { max-height:253px; }
 .recruitment .photo-content .img-photo:has(img) { background:transparent; }
 .recruitment .photo-content dl { flex:1; }
 .recruitment .photo-content dt { margin-bottom:18px; font-weight:var(--font-w-b); text-align:left;  }
