@@ -291,7 +291,8 @@ body:has(.main) .menu .menu-item .list-item { top:75px; }
 .layerPopup.modal .pop-content.event {
     --max-width:555px;
     --content-pd:0 0 34px 0;
-    --modal-pd:28px;
+    --modal-pd:20px; /**26.01.22**/
+    --pd:8px; /**26.01.22**/
     --pos-abs:40px;
     --brd:16px;
     --pagination-pd:8px 30px;
@@ -308,6 +309,8 @@ body:has(.main) .menu .menu-item .list-item { top:75px; }
 .layerPopup.modal .pop-content.event { max-width:var(--max-width); padding:var(--content-pd); }
 .layerPopup.modal .pop-content.event .pop-body { margin-bottom:0; max-height:100%; overflow-y:hidden; padding:var(--modal-pd); position:relative; }
 .layerPopup.modal .pop-content.event .pop-body .swipe { overflow:hidden; border-radius:var(--brd); }
+.layerPopup.modal .pop-content.event .pop-body .swipe .swiper-slide a:focus { display:block; width:calc(100% - 4px); padding:var(--pd8); border-radius:var(--brd); outline-offset:-2px; outline:2px solid var(--primary); overflow:hidden; }/**26.01.22**/
+.layerPopup.modal .pop-content.event .pop-body .swipe .swiper-slide a:focus img { padding:10px; border-radius:var(--brd);  }/**26.01.22**/
 .layerPopup.modal .pop-content.event .pop-body .swiper-pagination { display:inline-flex; align-items:center; justify-content:center; position:absolute; top:var(--pagination-pos-abs); left:inherit; bottom:inherit; right:var(--pagination-pos-abs2); padding:var(--pagination-pd); width:var(--pagination-w); height:var(--pagination-h); background:rgba(117, 117, 117, 0.80); color:#d6d6d6; border-radius:100px;  }
 .layerPopup.modal .pop-content.event .pop-body .btn-swiper-toggle { z-index:2; display:inline-flex; align-items:center; justify-content:center; position:absolute; top:var(--pagination-pos-abs); left:inherit; bottom:inherit; right:var(--pagination-pos-abs); padding:0; width:32px; height:var(--pagination-h); background:rgba(117, 117, 117, 0.80); color:#d6d6d6; border-radius:100px;  }
 .layerPopup.modal .pop-content.event .pop-body .btn-swiper-toggle::after { content:""; display:block; width:24px; height:24px; background-size:22px; }
