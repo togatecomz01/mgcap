@@ -63,13 +63,21 @@ $(document).ready(function () {
       if (!$target || !$target.length) return;
 
       function pick() {
-         // s: 26.1.22 웹접근성: pop-body가 있으면 우선적으로 포커스
+        // s: 26.1.22 웹접근성
+        var $tabItem = $target.find(".tab-item.active").first();
+        if (!$tabItem.length) {
+          $tabItem = $target.find(".tab-item").first();
+        }
+        if ($tabItem.length) {
+          return $tabItem;
+        }
+
         var $popBody = $target.find(".pop-body").first();
         if ($popBody.length) {
           if (!$popBody.is("[tabindex]")) $popBody.attr("tabindex", "-1");
           return $popBody;
         }
-        // e: 26.1.22 웹접근성: pop-body가 있으면 우선적으로 포커스
+        // e: 26.1.22 웹접근성
         
         var $firstFocusable = $target
           .find(FOCUSABLE)
