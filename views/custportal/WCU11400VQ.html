@@ -97,15 +97,18 @@
                                         <legend>연락금지 요구 접수 결과조회 입력</legend>
                                         <div class="form-wrap">
                                             <div class="form-group">
-                                                <label for="phn-first">휴대전화번호</label>
+                                                <p class="label-tit">휴대전화번호</p>
                                                 <div class="flex-row mo-column">
                                                     <div>
-                                                        <select id="phn-first" required="" title="" required>
+                                                        <label for="phn-first" class="sr-only">전화번호 선택</label>
+                                                        <select id="phn-first" required>
                                                             <option value="0">010</option>
                                                             <option value="1">017</option>
                                                             <option value="3">019</option>
                                                         </select>
+                                                        <label for="phn-second" class="sr-only">전화번호 두번째자리</label>
                                                         <input id="phn-second" name="phn-second" type="tel" inputmode="numeric" autocomplete="tel-local-prefix" pattern="[0-9]{3,4}" maxlength="4"  required>
+                                                        <label for="phn-third" class="sr-only">전화번호 세번째자리</label>
                                                         <input id="phn-third" name="phn-third" type="tel" inputmode="numeric" autocomplete="tel-local-suffix" pattern="[0-9]{4}" maxlength="4"  required>
                                                     </div>
                                                     <!--[D]:공통 - 알럿참고 -->
@@ -128,14 +131,17 @@
                                         <legend>연락금지 요구 신청접수 입력</legend>
                                         <div class="form-wrap">
                                             <div class="form-group">
-                                                <label for="phn-first2">휴대전화번호</label>
+                                                <p class="label-tit">휴대전화번호</p>
                                                 <div class="flex-row">
-                                                    <select id="phn-first2" required="" title="" required>
+                                                    <label for="phn-first2" class="sr-only">전화번호 선택</label>
+                                                    <select id="phn-first2" required>
                                                         <option value="0">010</option>
                                                         <option value="1">017</option>
                                                         <option value="3">019</option>
                                                     </select>
+                                                    <label for="phn-second2" class="sr-only">전화번호 두번째자리</label>
                                                     <input id="phn-second2" name="phn-second" type="tel" inputmode="numeric" autocomplete="tel-local-prefix" pattern="[0-9]{3,4}" maxlength="4"  required>
+                                                    <label for="phn-third2" class="sr-only">전화번호 세번째자리</label>
                                                     <input id="phn-third2" name="phn-third" type="tel" inputmode="numeric" autocomplete="tel-local-suffix" pattern="[0-9]{4}" maxlength="4"  required>  
                                                 </div><!--//flex-row-->
                                             </div><!--//form-group-->
@@ -144,9 +150,10 @@
                                                 <div class="flex-row mo-column">
                                                     <div class="captcha">
                                                         <p class="img-captcha">캡챠이미지 영역</p>
+                                                        <button type="button"  class="btn-form speaker">음성듣기</button>
                                                         <button type="button"  class="btn-form reset">새로고침</button>
                                                     </div>
-                                                    <input id="captcha-input2" name="captcha" type="text" inputmode="latin" pattern="[A-Za-z0-9]{6}" maxlength="6" placeholder="보안문자 6자리" aria-describedby="captcha-help" required>
+                                                    <input id="captcha-input2" name="captcha-input2" type="text" inputmode="latin" pattern="[A-Za-z0-9]{6}" maxlength="6" placeholder="보안문자 6자리" required>
                                                     <button class="btn-form">인증번호 발송</button>
                                                 </div><!--//flex-row-->
                                             </div><!--//form-group-->
@@ -155,7 +162,7 @@
                                             <div class="form-group">
                                                 <label for="auth-code2">인증번호</label>
                                                 <div class="flex-row mo-column">
-                                                    <input id="auth-code2" type="number" name="auth-code" placeholder="" min="0" step="1" oninput="this.value = this.value.slice(0, 8)" aria-labelledby="phn-second" />
+                                                    <input id="auth-code2" type="number" name="auth-code2" placeholder="" min="0" step="1" oninput="this.value = this.value.slice(0, 8)" />
                                                     <button class="btn-form">확인</button>
                                                 </div>
                                             </div>
@@ -175,25 +182,29 @@
                                         <legend>연락금지 요구 해제 입력</legend>
                                         <div class="form-wrap">
                                             <div class="form-group">
-                                                <label for="phn-first3">휴대전화번호</label>
+                                                <p class="label-tit">휴대전화번호</p>
                                                 <div class="flex-row">
-                                                    <select id="phn-first3" required="" title="" required>
+                                                    <label for="phn-first3" class="sr-only">전화번호 선택</label>
+                                                    <select id="phn-first3" required>
                                                         <option value="0">010</option>
                                                         <option value="1">017</option>
                                                         <option value="3">019</option>
                                                     </select>
+                                                    <label for="phn-second3" class="sr-only">전화번호 두번째자리</label>
                                                     <input id="phn-second3" name="phn-second" type="tel" inputmode="numeric" autocomplete="tel-local-prefix" pattern="[0-9]{3,4}" maxlength="4"  required>
+                                                    <label for="phn-third3" class="sr-only">전화번호 세번째자리</label>
                                                     <input id="phn-third3" name="phn-third" type="tel" inputmode="numeric" autocomplete="tel-local-suffix" pattern="[0-9]{4}" maxlength="4"  required data-modal-open="modal"> 
                                                 </div><!--//flex-row-->
                                             </div><!--//form-group-->
                                             <div class="form-group">
-                                                <label for="captcha-input2">보안문자</label>
+                                                <label for="captcha-input3">보안문자</label>
                                                 <div class="flex-row mo-column">
                                                     <div class="captcha">
                                                         <p class="img-captcha">캡챠이미지 영역</p>
+                                                        <button type="button"  class="btn-form speaker">음성듣기</button>
                                                         <button type="button"  class="btn-form reset">새로고침</button>
                                                     </div>
-                                                    <input id="captcha-input3" name="captcha" type="text" inputmode="latin" pattern="[A-Za-z0-9]{6}" maxlength="6" placeholder="보안문자 6자리" aria-describedby="captcha-help" required>
+                                                    <input id="captcha-input3" name="captcha-input3" type="text" inputmode="latin" pattern="[A-Za-z0-9]{6}" maxlength="6" placeholder="보안문자 6자리" required>
                                                     <button class="btn-form" >인증번호 발송</button>
                                                 </div><!--//flex-row-->
                                             </div><!--//form-group-->
@@ -202,7 +213,7 @@
                                             <div class="form-group">
                                                 <label for="auth-code3">인증번호</label>
                                                 <div class="flex-row mo-column">
-                                                    <input id="auth-code3" type="number" name="auth-code" placeholder="" min="0" step="1" oninput="this.value = this.value.slice(0, 8)" aria-labelledby="phn-second" />
+                                                    <input id="auth-code3" type="number" name="auth-code3" placeholder="" min="0" step="1" oninput="this.value = this.value.slice(0, 8)" />
                                                     <button class="btn-form">확인</button>
                                                 </div>
                                             </div>

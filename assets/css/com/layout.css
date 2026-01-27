@@ -375,7 +375,7 @@ ul.diamond-box li { padding-left:22px; text-indent:-22px; }
 
 /**Ä¸Ã­ÀÌ¹ÌÁö**/
 .form-content > .form-wrap > .form-group .captcha { display:flex; flex:0 0 268px; }
-.form-content > .form-wrap > .form-group p.img-captcha { flex:1; margin-right:10px; height:var(--form-height); background:#222; color:#fff; text-align:center;  }
+.form-content > .form-wrap > .form-group p.img-captcha { flex:1; height:var(--form-height); background:#222; color:#fff; text-align:center;  } /* 2026.01.26 */
 
 
 
