@@ -77,6 +77,9 @@ input:disabled,
 textarea:disabled { background-color:var(--form-disabled); color:var(--form-disabled-font-color); }
 
 
+select option:hover { background-color:var(--color-f6); color:var(--color-45); }/*21.1.28 웹접근성*/
+
+
 .form-group input[type="text"],
 .form-group input[type="password"],
 .form-group input[type="email"],

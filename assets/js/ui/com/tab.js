@@ -20,12 +20,14 @@ $(document).ready(function(){
 
                     if ($tab.hasClass('active')) {
                         $tab.attr('aria-selected', 'true');
+                        $tab.attr('title', '선택됨'); //21.1.28 웹접근성
                         $panel.show().attr('aria-hidden', 'false');
-                        $tab.find('button').attr('aria-label', $tab.find('button').text() + ', 현재 선택됨');
+                        //$tab.find('button').attr('aria-label', $tab.find('button').text() + ', 현재 선택됨');
                     } else {
                         $tab.attr('aria-selected', 'false');
+                        $tab.attr('title'); //21.1.28 웹접근성
                         $panel.hide().attr('aria-hidden', 'true');
-                        $tab.find('button').attr('aria-label', $tab.find('button').text());
+                        //$tab.find('button').attr('aria-label', $tab.find('button').text());
                     }
                 });
 
@@ -58,17 +60,17 @@ $(document).ready(function(){
                 var $allPanels = isNested ? $tabContainer.find('.nested-tab-panel') : $tabContainer.find('.tab-panel');
 
                 // 기존 탭 초기화
-                $allTabs.removeClass('active').attr('aria-selected', 'false');
+                $allTabs.removeClass('active').attr('aria-selected', 'false').removeAttr('title'); // 21.1.28 웹접근성
                 $allPanels.hide().attr('aria-hidden', 'true');
-                $allTabs.find('button').each(function() {
+                /*$allTabs.find('button').each(function() {
                     var $btn = $(this);
                     $btn.attr('aria-label', $btn.text());
-                });
+                });*/
 
                 // 새 탭 활성화
-                $clickedTab.addClass('active').attr('aria-selected', 'true');
+                $clickedTab.addClass('active').attr('aria-selected', 'true').attr('title', '선택됨'); // // 21.1.28 웹접근성
                 $targetPanel.show().attr('aria-hidden', 'false');
-                $clickedTab.find('button').attr('aria-label', $clickedTab.find('button').text() + ', 현재 선택됨');
+                //$clickedTab.find('button').attr('aria-label', $clickedTab.find('button').text() + ', 현재 선택됨');
                 
                 // 모바일 select 동기화
                 var $mobileSelect = $tabContainer.find('.tab-select-mobile select');
