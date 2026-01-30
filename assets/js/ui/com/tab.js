@@ -340,3 +340,45 @@ $(document).ready(function(){
     });
 
 });
+
+
+
+
+/* =========================================================
+   [공통 추가] include 탭(.btn-group > a.tab-item) 선택됨 title 처리
+   - 회사소개 상단 탭처럼 data-tab 없는 a 탭 대응
+   - active에만 title="선택됨" + aria-selected="true"
+   ========================================================= */
+   (function () {
+    function applyIncludeTabTitle($scope) {
+      var $root = $scope && $scope.length ? $scope : $(document);
+  
+      // 회사소개 탭 구조: .btn-group 안의 a.tab-item
+      var $tabs = $root.find('.btn-group > a.tab-item');
+      if (!$tabs.length) return;
+  
+      // 기존 선택됨 title 제거 + aria-selected 정리
+      $tabs.removeAttr('title').attr('aria-selected', 'false');
+  
+      // active에만 부여
+      $tabs.filter('.active').attr('title', '선택됨').attr('aria-selected', 'true');
+    }
+  
+    // 1) 최초 1회 (include/렌더 타이밍 보강)
+    $(function () {
+      applyIncludeTabTitle();
+      setTimeout(function () { applyIncludeTabTitle(); }, 0);
+    });
+  
+    // 2) 클릭 시 active가 바뀌는 경우 대비
+    // (goMenuFnc로 페이지 이동이면 사실 필요 없지만, 혹시 클래스만 바뀌는 화면도 대비)
+    $(document).on('click', '.btn-group > a.tab-item', function () {
+      var $tabs = $(this).closest('.btn-group').find('> a.tab-item');
+      $tabs.removeAttr('title').attr('aria-selected', 'false');
+      $(this).attr('title', '선택됨').attr('aria-selected', 'true');
+    });
+  
+    // 필요하면 외부에서 호출할 수 있게 노출
+    window.applyIncludeTabTitle = applyIncludeTabTitle;
+  })();
+  
