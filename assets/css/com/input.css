@@ -104,7 +104,7 @@ label.check{ gap:14px; }
 label.radio { gap:6px; padding:6px 13px 8px; background:var(--form-radio-bg); border-radius:100px;}
 label input[type="radio"] { position:relative; width:28px; height:28px; border-radius:50%; background:var(--white); overflow:hidden; }
 label input[type="checkbox"],
-.terms input[type="checkbox"] { position:relative; width:30px; height:30px; background:red; border:1px solid var(--form-checkbox-border); overflow:hidden; border-radius:50%;  }/*26.2.2 웹접근성*/
+.terms input[type="checkbox"] { position:relative; width:30px; height:30px; border:1px solid var(--form-checkbox-border); overflow:hidden; border-radius:50%;  }/*26.2.2 웹접근성*/
 .terms input[type="checkbox"]:checked { background:var(--form-board); }/*26.2.2 웹접근성*/
 
 label input[type="checkbox"]::before,
@@ -118,7 +118,7 @@ label input[type="checkbox"]:checked,
 label input[type="checkbox"]:disabled,
 .terms input[type="checkbox"]:disabled { background:var(--form-check-dissbled); } 
 label input:not(:checked) + span { flex:1; width:100%; font-weight:var(--font-w-m); color:var(--color-45); }
-label input:checked + span { flex:1; width:100%; color:var(--form-font-color); font-weight:500; }
+label input:checked + span { flex:1; width:100%; color:var(--form-font-color); font-weight:500; } /*여기까지*/
 label input:not(:checked) + span { font-weight:400; }
 label input[type="radio"]:not(:checked) { border:2px solid #8d8d8d;  }/*26.2.2 웹접근성*/
 label input[type="radio"]:checked { border:7px solid var(--form-checked);  }
