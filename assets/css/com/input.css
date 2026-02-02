@@ -19,9 +19,10 @@ body{
   --form-focus-font-color:var(--color-2);
   --form-check-font-color:var(--color-75);
   --form-checkbox:url("../../images/com/svg/ico_form_check.svg");
-  --form-checked:var(--primary-light);
+  --form-checked:#0098CB;/*26.2.2 立辟己*/
   --form-check-dissbled:#9CB1C4;
   --fonm-file-button:#F6F7FB;
+  --form-checkbox-border:#8D8D8D;/*26.2.2 立辟己*/
   --form-radio-bg:var(--color-f7);
   --form-date-ico:url("../../images/com/svg/ico_date.svg");
   /* --ico-search:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16.625' height='16.624'%3E%3Cpath fill='%23999' d='M11.093 11.942a6.731 6.731 0 0 1-4.335 1.573A6.757 6.757 0 0 1 0 6.758 6.758 6.758 0 0 1 6.758 0a6.758 6.758 0 0 1 6.758 6.758 6.729 6.729 0 0 1-1.574 4.335l4.683 4.683-.849.848ZM1.199 6.758a5.558 5.558 0 0 0 5.558 5.557 5.558 5.558 0 0 0 5.557-5.557A5.558 5.558 0 0 0 6.757 1.2 5.558 5.558 0 0 0 1.2 6.758Z'/%3E%3C/svg%3E");*/
@@ -77,9 +78,6 @@ input:disabled,
 textarea:disabled { background-color:var(--form-disabled); color:var(--form-disabled-font-color); }
 
 
-select option:hover { background-color:var(--color-f6); color:var(--color-45); }/*21.1.28 昆立辟己*/
-
-
 .form-group input[type="text"],
 .form-group input[type="password"],
 .form-group input[type="email"],
@@ -106,9 +104,15 @@ label.check{ gap:14px; }
 label.radio { gap:6px; padding:6px 13px 8px; background:var(--form-radio-bg); border-radius:100px;}
 label input[type="radio"] { position:relative; width:28px; height:28px; border-radius:50%; background:var(--white); overflow:hidden; }
 label input[type="checkbox"],
-.terms input[type="checkbox"] { position:relative; width:30px; height:30px; border:1px solid transparent; background:var(--form-board); overflow:hidden; border-radius:50%; }
+.terms input[type="checkbox"] { position:relative; width:30px; height:30px; background:red; border:1px solid var(--form-checkbox-border); overflow:hidden; border-radius:50%;  }/*26.2.2 昆立辟己*/
+.terms input[type="checkbox"]:checked { background:var(--form-board); }/*26.2.2 昆立辟己*/
+
 label input[type="checkbox"]::before,
 .terms input[type="checkbox"]::before { content:""; display:block; width:100%; height:100%; background:var(--white); mask-image:var(--form-checkbox); mask-position:center; mask-repeat:no-repeat; mask-size:15px auto; --webkit-mask-image:var(--form-checkbox); --webkit-mask-position:center; --webkit-mask-repeat:no-repeat; --webkit-mask-size:15px auto; }
+label input[type="checkbox"]:not(:checked),
+.terms input[type="checkbox"]:not(:checked) { background:var(--f9); }
+label input[type="checkbox"]:not(:checked)::before,
+.terms input[type="checkbox"]:not(:checked)::before { mask-image:none; }/*26.2.2 昆立辟己*/
 label input[type="checkbox"]:checked,
 .terms input[type="checkbox"]:checked { background:var(--form-checked); } 
 label input[type="checkbox"]:disabled,
@@ -116,7 +120,7 @@ label input[type="checkbox"]:disabled,
 label input:not(:checked) + span { flex:1; width:100%; font-weight:var(--font-w-m); color:var(--color-45); }
 label input:checked + span { flex:1; width:100%; color:var(--form-font-color); font-weight:500; }
 label input:not(:checked) + span { font-weight:400; }
-label input[type="radio"]:not(:checked) { border:7px solid var(--form-board);  }
+label input[type="radio"]:not(:checked) { border:2px solid #8d8d8d;  }/*26.2.2 昆立辟己*/
 label input[type="radio"]:checked { border:7px solid var(--form-checked);  }
 label input[type="radio"]:disabled { border:7px solid var(--form-check-dissbled);  }
 
