@@ -74,9 +74,10 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
 .btn-add:before { mask-image:var(--ico-add); -webkit-mask-image:var(--ico-add); }
 .btn-del:before { mask-image:var(--ico-del); -webkit-mask-image:var(--ico-del); }
 
+
 .ipt-clear { position:relative; }
 .ipt-clear input { padding-right:50px }
-.ipt-clear .btn-clear { position:absolute; right:16px; top:50%; transform:translate(0, -50%); }
+.ipt-clear .btn-clear { position:absolute; width:27px; height:27px; right:16px; top:50%; transform:translate(0, -50%); font-size:0; background:url("../../images/com/svg/ico_close.svg") no-repeat center; background-size:16px;  } /**26.1.29 웹접근성**/
 /** select + button **/
 .btn-box { padding:0 12px; border-radius:5px; background-color:#0072BC; color:var(--white); word-break:keep-all; }
 .btn-box:hover { color:var(--white); }

@@ -1127,8 +1127,26 @@ color: var(--white); font-size: var(--font26); font-weight: var(--font-w-b); bac
 .recruitment .preview-cta .text-content p:first-of-type span { display:block; margin-top:18px; font-size:var(--font22); font-weight:var(--font-w-m); }
 .recruitment .preview-cta .text-content p:last-of-type { text-align:right; }
 .recruitment .preview-cta .text-content p:last-of-type span:first-of-type { margin-right:16px; font-weight:var(--font-w-m); }
+
+/*s: 26.2.2 입사지원 변동 추가사항*/
+.recruitment td .btn-group { text-align:center; }
+.recruitment td .btn-group .btn-add,
+.recruitment td .btn-group .btn-del { display:inline-block; width:50px; height:50px; position:relative; background:var(--white); border:1px solid var(--form-board); }
+.recruitment td .btn-group .btn-add:hover,
+.recruitment td .btn-group .btn-del:hover { border:1px solid var(--primary); } 
+.recruitment td .btn-group .btn-add::before,
+.recruitment td .btn-group .btn-del::before { background-color:var(--color-2); }
+.recruitment td .btn-group .btn-add:hover:before,
+.recruitment td .btn-group .btn-del:hover::before,
+.recruitment td .btn-group .btn-add:focus::before,
+.recruitment td .btn-group .btn-del:focus::before { background-color:var(--primary); }
+.recruitment td .btn-group .btn-add { margin-right:10px; }
+/*e: 26.2.2 입사지원 변동 추가사항*/
+
 .WCR50202DS.recruitment.is-preview  .preview-cta { display:block; }
 .WCR50202DS.recruitment.is-preview .group.step3 .diamond-box { display:none; }
+
+
 
 
 /* 입사지원서 조회 */
