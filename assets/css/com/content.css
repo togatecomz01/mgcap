@@ -380,7 +380,7 @@ main.contentWrap.finance > .page-container { padding-top:72px; }
 
 /* ¾ÞÄ¿ÀÌµ¿ */
 .anchor-list { margin:0 auto; max-width:1200px; width:100%; }
-.anchor-list.fixed { position: static; }
+.finance .anchor-list.fixed { position:fixed; top:97px; z-index:11; padding:30px 0; background-color:var(--white); }
 .anchor-list .btn-group { display:flex; width:100%; }
 .anchor-list .btn-group button { display:inline-block; padding:8px; width:100%; border:2px solid #DFE1E8;  border-radius:3px; background-color:var(--color-f8); font-size:var(--font22); font-weight:var(--font-w-m); color:var(--color-6); text-align:center; line-height:45px; }
 .anchor-list .btn-group button.active { border:2px solid var(--primary); background-color:var(--white); font-weight:var(--font-w-b); color:var(--primary); }
@@ -415,7 +415,7 @@ main.contentWrap.finance > .page-container { padding-top:72px; }
 .summary-group .summary-list ul { display:flex; flex-direction:column; max-width:688px; width:100%; height:auto; }
 .summary-group .summary-list ul li { display:flex; flex:1; padding:35px 24px; background-color:#F7F9FF; border-radius:12px; }
 .summary-group .summary-list ul li + li { margin-top:15px; }
-.summary-group .summary-list ul li span { display:inline-block; padding-right:12px; font-weight:var(--font-w-b); }
+.summary-group .summary-list ul li span { display:inline-block; padding-right:12px; font-weight:var(--font-w-b); color:#0D50B6 !important; }
 .summary-group .summary-list .summary-img { width:auto; max-height:345px; height:100%; }
 
 .anchor-panel .anchor-group { display:flex; gap:2px;}
@@ -1504,7 +1504,7 @@ main:has(.WCR50204VQ_0) .visual-container table td { border-left:0; }
     .finance-content .finance-group p { display:none; font-size:0; }
 
     /* ¿¨Ä¿ÀÌµ¿ */
-    .finance .anchor-list.fixed { position:fixed; top:54px; left:0; right:0; z-index:90; padding-top:10px; background:var(--white); box-shadow:0 2px 4px rgba(0,0,0,0.1); }
+    .finance .anchor-list.fixed { position:fixed; top:54px; left:0; right:0; z-index:90; padding:10px 0 0; background:var(--white); box-shadow:0 2px 4px rgba(0,0,0,0.1); }
     .finance .anchor-list.fixed + .anchor-content { padding-top:75px; }
     .finance .anchor-list .btn-group button { padding:18px 0; border:0; border-bottom:1px solid var(--color-e); border-radius:0; font-size:var(--font18); line-height:normal; background-color:transparent; }
     .finance .anchor-list .btn-group button.active { border:0; border-bottom:2px solid var(--primary); }

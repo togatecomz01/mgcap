@@ -83,26 +83,29 @@
                                 <div class="form-wrap">
                                     <div class="form-group">
                                         <label for="phn-first">소속</label>
-                                        <select id="phn-first" required="" title="" required>
+                                        <select id="phn-first" required>
                                             <option value="0">MG캐피탈 임직원</option>
                                         </select>
                                     </div><!--//form-group-->
                                     <div class="form-group">
                                         <label for="mg-name">이름</label>
-                                        <input id="mg-name" type="text" name="text" placeholder="이름을 입력해주세요">
+                                        <input id="mg-name" type="text" name="mg-name" placeholder="이름을 입력해주세요">
                                     </div><!--//form-group-->
                                 </div><!--//form-wrap-->
                                 <div class="form-wrap">
                                     <div class="form-group">
-                                        <label for="phn-first">전화번호</label>
+                                        <p class="label-tit">전화번호</p>
                                         <div class="flex-row mo-column">
                                             <div>
-                                                <select id="phn-first" required="" title="" required>
+                                                <label for="phn-first" class="sr-only">전화번호 선택</label>
+                                                <select id="phn-first" required>
                                                     <option value="0">010</option>
                                                     <option value="1">017</option>
                                                     <option value="3">019</option>
                                                 </select>
+                                                <label for="phn-second" class="sr-only">전화번호 두번째자리</label>
                                                 <input id="phn-second" name="phn-second" type="tel" inputmode="numeric" autocomplete="tel-local-prefix" pattern="[0-9]{3,4}" maxlength="4"  required>
+                                                <label for="phn-third" class="sr-only">전화번호 세번째자리</label>
                                                 <input id="phn-third" name="phn-third" type="tel" inputmode="numeric" autocomplete="tel-local-suffix" pattern="[0-9]{4}" maxlength="4"  required>
                                             </div>
                                         </div><!--//flex-row-->

@@ -65,7 +65,7 @@
                                         <label for="check-required-1" class="check-button" data-popup-open="fullPopup1">
                                             <span>개인정보 수집&#183;이용 동의</span>
                                         </label>
-                                        <button title="개인정보 수집&#183;이용 동의 내용보기" type="button" class="modal" data-popup-open="fullPopup1">내용보기</button>
+                                        <button type="button" class="modal" data-popup-open="fullPopup1">내용보기</button>
                                     </li>
                                 </ul>
                             </div>
@@ -97,10 +97,11 @@
                                 </div><!--//form-wrap-->
                                 <div class="form-wrap">
                                     <div class="form-group">
-                                        <label for="phn-first">연락처</label>
+                                        <p class="label-tit">연락처</p>
                                         <div class="flex-row mo-column">
                                             <div>
-                                                <select id="phn-first" required="" title="">
+                                                <label for="phn-first" class="sr-only">연락처</label>
+                                                <select id="phn-first" required>
                                                     <option value="0">010</option>
                                                     <option value="1">011</option>
                                                     <option value="2">016</option>
@@ -108,20 +109,25 @@
                                                     <option value="4">018</option>
                                                     <option value="5">019</option>
                                                 </select>
+                                                <label for="phn-second" class="sr-only">연락처 첫번째자리</label>
                                                 <input id="phn-second" name="phn-second" type="tel" inputmode="numeric" class="pc-phn" autocomplete="tel-local-prefix" pattern="[0-9]{3,4}" maxlength="4"  value="1234">
+                                                <label for="phn-third" class="sr-only">연락처 두번째자리</label>
                                                 <input id="phn-third" name="phn-third" type="tel" inputmode="numeric" class="pc-phn" autocomplete="tel-local-suffix" pattern="[0-9]{4}" maxlength="4"  value="5678">
                                                 <!-- 2025.11.12 input 1개 삭제 -->
                                             </div>
                                         </div><!--//flex-row-->
                                     </div><!--//form-group-->
                                     <div class="form-group">
-                                        <label for="phn-first">이메일</label>
+                                        <p class="label-tit">이메일</p>
                                         <div class="flex-row mo-column mail">
                                             <div>
+                                                <label for="mail-first" class="sr-only">이메일 첫번째자리</label>
                                                 <input id="mail-first" name="mail-first" type="text" value="abc">
                                                 <span class="ipt-hyphen">@</span>
+                                                <label for="mail-second" class="sr-only">이메일 두번째자리</label>
                                                 <input id="mail-second" name="mail-second" type="text" value="gmail.com">
-                                                <select id="mail-third" required="" title="">
+                                                <label for="mail-third" class="sr-only">이메일 주소</label>
+                                                <select id="mail-third" required>
                                                     <option value="0">gmail.com</option>
                                                     <option value="1">naver.com</option>
                                                     <option value="3">hanmail.net</option>

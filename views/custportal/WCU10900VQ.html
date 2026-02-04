@@ -61,15 +61,16 @@
                                     <legend>검색</legend>
                                     <div class="form-wrap noti-search">
                                         <div class="form-group">
-                                            <label for="">검색</label>
                                             <div class="flex-end">
-                                                <select id="search-first" required="" title="" required>
+                                                <label for="search-first" class="sr-only">선택</label>
+                                                <select id="search-first" required>
                                                     <option value="0">전체</option>
                                                     <option value="1">제목</option>
                                                     <option value="3">내용</option>
                                                 </select>
                                                 <div class="search-row">
-                                                    <input id="search" type="search" name="search" placeholder="검색어를 입력해주세요" />
+                                                    <label for="search-second" class="sr-only">검색어 입력</label>
+                                                    <input id="search-second" type="search" name="search" placeholder="검색어를 입력해주세요" />
                                                     <button type="submit" class="btn-search">검색버튼</button>
                                                 </div>
                                                 <button type="submit" class="btn-body">새로고침</button>

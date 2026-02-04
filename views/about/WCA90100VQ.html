@@ -95,27 +95,32 @@
                                     <div class="form-content" id="radio-tab01">
                                         <div class="form-wrap">
                                             <div class="form-group">
-                                                <label for="phn-first2">연락처(선택)</label>
+                                                <p class="label-tit">연락처(선택)</p>
                                                 <div class="flex-row">
                                                     <div>
-                                                        <select id="phn-first2" required="" title="" required>
+                                                        <label for="phn-first2" class="sr-only">연락처(선택)</label>
+                                                        <select id="phn-first2" required>
                                                             <option value="0">010</option>
                                                             <option value="1">017</option>
                                                             <option value="3">019</option>
                                                         </select>
-                                                        <input id="phn-second2" name="phn-second" type="tel" inputmode="numeric" autocomplete="tel-local-prefix" pattern="[0-9]{3,4}" maxlength="4"  required>
-                                                        <input id="phn-third2" name="phn-third" type="tel" inputmode="numeric" autocomplete="tel-local-suffix" pattern="[0-9]{4}" maxlength="4"  required>
+                                                        <label for="phn-second2" class="sr-only">전화번호 두번째자리</label>
+                                                        <input id="phn-second2" name="phn-second2" type="tel" inputmode="numeric" autocomplete="tel-local-prefix" pattern="[0-9]{3,4}" maxlength="4"  required>
+                                                        <label for="phn-third2" class="sr-only">전화번호 세번째자리</label>
+                                                        <input id="phn-third2" name="phn-third2" type="tel" inputmode="numeric" autocomplete="tel-local-suffix" pattern="[0-9]{4}" maxlength="4"  required>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div class="form-group">
-                                                <label for="email-input">이메일(선택)</label>
+                                                <p class="label-tit">이메일(선택)</p>
                                                 <div class="flex-row mail"><!--2025.11.13 mail 추가-->
-                                                    <input id="email" name="email" type="email" inputmode="latin" pattern="[A-Za-z0-9]{6}" required>
+                                                    <label for="email-first" class="sr-only">이메일 첫째자리</label>
+                                                    <input id="email-first" name="email-first" type="email" inputmode="latin" pattern="[A-Za-z0-9]{6}" required>
                                                     <span>@</span>
-                                                    <input id="email" name="email" type="email" inputmode="latin" pattern="[A-Za-z0-9]{6}" required>
-                                                    <select id="email" required="" title="" required>
+                                                    <label for="email-second" class="sr-only">이메일 첫째자리</label>
+                                                    <input id="email-second" name="email-second" type="email" inputmode="latin" pattern="[A-Za-z0-9]{6}" required>
+                                                    <select id="email" required>
                                                         <option value="0">naver.com</option>
                                                         <option value="1">gmail.com</option>
                                                         <option value="3">hanmail.net</option>
@@ -146,26 +151,31 @@
 
                                         <div class="form-wrap">
                                             <div class="form-group">
-                                                <label for="phn-first2">연락처(선택)</label>
+                                                <p class="label-tit">연락처(선택)</p>
                                                 
                                                 <div class="flex-row">
-                                                    <select id="phn-first2" required="" title="" required>
+                                                    <label for="phn-first2" class="sr-only">연락처(선택)</label>
+                                                    <select id="phn-first2" required>
                                                         <option value="0">010</option>
                                                         <option value="1">017</option>
                                                         <option value="3">019</option>
                                                     </select>
-                                                    <input id="phn-second2" name="phn-second" type="tel" inputmode="numeric" autocomplete="tel-local-prefix" pattern="[0-9]{3,4}" maxlength="4"  required>
-                                                    <input id="phn-third2" name="phn-third" type="tel" inputmode="numeric" autocomplete="tel-local-suffix" pattern="[0-9]{4}" maxlength="4"  required>
+                                                    <label for="phn-second2" class="sr-only">연락처 두번째자리</label>
+                                                    <input id="phn-second2" name="phn-second2" type="tel" inputmode="numeric" autocomplete="tel-local-prefix" pattern="[0-9]{3,4}" maxlength="4"  required>
+                                                    <label for="phn-third2" class="sr-only">연락처 세번째자리</label>
+                                                    <input id="phn-third2" name="phn-third2" type="tel" inputmode="numeric" autocomplete="tel-local-suffix" pattern="[0-9]{4}" maxlength="4"  required>
                                                 </div>
                                             </div>
 
                                             <div class="form-group">
-                                                <label for="email-input">이메일(선택)</label>
+                                                <p class="label-tit">이메일(선택)</p>
                                                 <div class="flex-row mail"><!--2025.11.13 mail 추가-->
-                                                    <input id="email" name="email" type="email" inputmode="latin" pattern="[A-Za-z0-9]{6}" required>
+                                                    <label for="email-first" class="sr-only">이메일 두번째자리</label>
+                                                    <input id="email-first" name="email-first" type="email" inputmode="latin" pattern="[A-Za-z0-9]{6}" required>
                                                     <span>@</span>
-                                                    <input id="email" name="email" type="email" inputmode="latin" pattern="[A-Za-z0-9]{6}" required>
-                                                    <select id="email" required="" title="" required>
+                                                    <label for="email-second" class="sr-only">이메일 두번째자리</label>
+                                                    <input id="email-second" name="email-second" type="email" inputmode="latin" pattern="[A-Za-z0-9]{6}" required>
+                                                    <select id="email" required>
                                                         <option value="0">naver.com</option>
                                                         <option value="1">gmail.com</option>
                                                         <option value="3">hanmail.net</option>

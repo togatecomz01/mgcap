@@ -63,32 +63,32 @@
                                         </label>
                                     </li>
                                     <li>
-                                        <input type="checkbox" id="check-required-1" class="chkReq" />
+                                        <input type="checkbox" name="check-required-1" id="check-required-1" class="chkReq" />
                                         <label for="check-required-1" class="check-button" data-popup-open="provisionHs1">
                                             <span>개인정보 수집&#183;이용&#183;취급위탁 동의</span>
                                         </label>
-                                        <button title="개인정보 수집&#183;이용&#183;취급위탁 동의 내용보기" type="button" class="modal" data-popup-open="provisionHs1">내용보기</button>
+                                        <button type="button" class="modal" data-popup-open="provisionHs1">내용보기</button>
                                     </li>
                                     <li>
-                                        <input type="checkbox" id="check-required-2" class="chkReq" />
+                                        <input type="checkbox" name="check-required-2" id="check-required-2" class="chkReq" />
                                         <label for="check-required-2" class="check-button" data-popup-open="provisionHs2">
                                             <span>본인확인서비스 이용약관</span>
                                         </label>
-                                        <button title="본인확인서비스 이용약관 내용보기" class="modal" type="button" data-popup-open="provisionHs2">내용보기</button>
+                                        <button class="modal" type="button" data-popup-open="provisionHs2">내용보기</button>
                                     </li>
                                     <li>
-                                        <input type="checkbox" id="check-required-3" class="chkReq" />
+                                        <input type="checkbox" name="check-required-3" id="check-required-3" class="chkReq" />
                                         <label for="check-required-3" class="check-button" data-popup-open="provisionHs3">
                                             <span>고유식별정보처리 동의</span>
                                         </label>
-                                        <button title="고유식별정보처리 동의 내용보기" class="modal" type="button" data-popup-open="provisionHs3">내용보기</button>
+                                        <button class="modal" type="button" data-popup-open="provisionHs3">내용보기</button>
                                     </li>
                                     <li>
-                                        <input type="checkbox" id="check-required-4" class="chkReq" />
+                                        <input type="checkbox" name="check-required-4" id="check-required-4" class="chkReq" />
                                         <label for="check-required-4" class="check-button" data-popup-open="provisionHs4">
                                             <span>통신사 이용약관</span>
                                         </label>
-                                        <button title="통신사 이용약관 내용보기" class="modal" type="button" data-popup-open="provisionHs4">내용보기</button>
+                                        <button class="modal" type="button" data-popup-open="provisionHs4">내용보기</button>
                                     </li>
                                 </ul>
                             </div>
@@ -106,23 +106,26 @@
                                 <div class="form-wrap">
                                     <div class="form-group">
                                         <label for="mg-name">이름</label>
-                                        <input id="mg-name" type="text" name="text" placeholder="이름을 입력해주세요">
+                                        <input id="mg-name" type="text" name="mg-name" placeholder="이름을 입력해주세요">
                                     </div><!--//form-group-->
                                     <div class="form-group">
-                                        <label for="resident-1">주민등록번호</label>
+                                        <p class="label-tit">주민등록번호</p>
                                         <div class="flex-row gap10">
+                                            <label for="resident-1" class="sr-only">주민등록번호 첫번째자리</label>
                                             <input id="resident-1" name="resident-1" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" required placeholder="생년월일 입력">
                                             <span class="ipt-hyphen">-</span>
-                                            <input id="resident-2" name="resident-1" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" required>
+                                            <label for="resident-2" class="sr-only">주민등록번호 두번째자리</label>
+                                            <input id="resident-2" name="resident-2" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" required>
                                         </div><!--//flex-row-->
                                     </div><!--//form-group-->
                                 </div><!--//form-wrap-->
                                 <div class="form-wrap">
                                     <div class="form-group">
-                                        <label for="phn-first">휴대전화번호</label>
+                                        <p class="label-tit">휴대전화번호</p>
                                         <!-- s: 2025.11.12 구조수정 -->
                                         <div class="flex-row mo-column">
-                                            <select id="phn-first" required="" title="">
+                                            <label for="phn-first" class="sr-only">통신사 선택</label>
+                                            <select id="phn-first" required>
                                                 <option value="0">SKT</option>
                                                 <option value="1">KT</option>
                                                 <option value="3">LG U+</option>
@@ -131,7 +134,8 @@
                                                 <option value="6">LG U+ 알뜰폰</option>
                                             </select>
                                             <div>
-                                                <select id="phn-second" required="" title="">
+                                                <label for="phn-second" class="sr-only">전화번호 앞자리 선택</label>
+                                                <select id="phn-second" required>
                                                     <option value="0">선택</option>
                                                     <option value="1">010</option>
                                                     <option value="2">011</option>
@@ -140,7 +144,9 @@
                                                     <option value="5">018</option>
                                                     <option value="6">019</option>
                                                 </select>
+                                                <label for="phn-third" class="sr-only">전화번호 두번째자리</label>
                                                 <input id="phn-third" name="phn-third" type="tel" inputmode="numeric" class="pc-phn" autocomplete="tel-local-prefix" pattern="[0-9]{3,4}" maxlength="4"  value="1234">
+                                                <label for="phn-fourth" class="sr-only">전화번호 세번째자리</label>
                                                 <input id="phn-fourth" name="phn-fourth" type="tel" inputmode="numeric" class="pc-phn" autocomplete="tel-local-suffix" pattern="[0-9]{4}" maxlength="4"  value="5678">
                                             </div>
                                             <!--[D]:공통 - 알럿참고 -->

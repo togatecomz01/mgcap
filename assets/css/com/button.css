@@ -90,11 +90,11 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
 /** 2026.01.26 captcha **/
 .captcha { padding-right:34px; }
 .captcha .btn-form.reset,
-.captcha .btn-form.speaker { position:absolute; right:0; padding:5px; font-size:0; flex:0 0 24px; width:24px; height:24px; font-size:0; background-color:var(--color-f8); border-color:var(--color-45); border-radius:4px; }
+.captcha .btn-form.captcha-audio { position:absolute; right:0; padding:5px; flex:0 0 24px; width:24px; height:24px; background-color:var(--color-f8); border-color:var(--color-45); border-radius:4px; }
 .captcha .btn-form.reset { bottom:0; }
-.captcha .btn-form.speaker { top:0; }
+.captcha .btn-form.captcha-audio { top:0; }
 .captcha .btn-form.reset::before { content:""; display:block; width:14px; height:14px; margin:0 auto; background:var(--ico_reset) no-repeat center; background-size:100%; }
-.captcha .btn-form.speaker::before { content:""; display:block; width:14px; height:14px; margin:0 auto; background:url("../../images/com/svg/ico_captcha.svg") no-repeat center; background-size:100%; }
+.captcha .btn-form.captcha-audio::before { content:""; display:block; width:14px; height:14px; margin:0 auto; background:url("../../images/com/svg/ico_captcha.svg") no-repeat center; background-size:100%; }
 
 /**파일선택**/
 .uploadButton { max-width:119px; height:58px; background-color:var(--color-2); color:var(--white); }
@@ -204,10 +204,10 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
     /** 2026.01.26 captcha **/
     .form-content > .form-wrap > .form-group > .flex-row > div.captcha { gap:0; padding-right:0; }
     .captcha .btn-form.reset,
-    .captcha .btn-form.speaker { position:unset; height:48px; border-radius:0; background-color:var(--white);  }
+    .captcha .btn-form.captcha-audio { position:unset; height:48px; border-radius:0; background-color:var(--white);  }
     .captcha .btn-form.reset { padding:0 45px; margin-left:10px; width:auto; border-color:var(--color-9); font-size:inherit; }
-    .captcha .btn-form.speaker { flex:0 0 48px; width:48px; }
-    .captcha .btn-form.speaker::before { width:24px; height:24px; }
+    .captcha .btn-form.captcha-audio { flex:0 0 48px; width:48px; }
+    .captcha .btn-form.captcha-audio::before { width:24px; height:24px; }
     .captcha .btn-form.reset::before { display:none; }
 
     .btn-download { width:100%; min-height:67px; gap:30px; line-height:1.5; flex-direction:row-reverse; justify-content:flex-end; padding:0 20px 0 80px; background:linear-gradient(to right, var(--primary) 0 60px, var(--white) 60px 100%); }
