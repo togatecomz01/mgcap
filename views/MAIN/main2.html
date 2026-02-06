@@ -178,6 +178,53 @@
             </div>
         </section>
         <!--e:이벤트배너 팝업-->
+        <script>
+            // 오늘 하루 열지 않음 체크 (2025-01-27 수정) - 모달 렌더링 전 실행
+            (function() {
+                const getTodayStr = () => {
+                    const d = new Date();
+                    return (
+                        d.getFullYear() +
+                        "-" +
+                        ("0" + (d.getMonth() + 1)).slice(-2) +
+                        "-" +
+                        ("0" + d.getDate()).slice(-2)
+                    );
+                };
+                
+                function checkModal() {
+                    const modal = document.getElementById("modal");
+                    const btnToday = document.getElementById("btnTodayClose");
+                    if (!modal) {
+                        // 모달이 아직 없으면 잠시 후 다시 시도
+                        setTimeout(checkModal, 10);
+                        return;
+                    }
+                    
+                    const key = `hideForToday_${btnToday?.dataset.popupClose || "modal"}`;
+                    const today = getTodayStr();
+                    
+                    // 오늘 이미 닫았으면 → 모달 표시 안함
+                    if (localStorage.getItem(key) === today) {
+                        modal.classList.remove("on");
+                    } else {
+                        // 표시해야 하면 on 클래스 추가
+                        modal.classList.add("on");
+                    }
+                    
+                    // 버튼 클릭 이벤트 등록
+                    if (btnToday) {
+                        btnToday.addEventListener("click", () => {
+                            localStorage.setItem(key, today);
+                            modal.classList.remove("on");
+                        });
+                    }
+                }
+                
+                // 즉시 실행
+                checkModal();
+            })();
+        </script>
         <div data-include-path="../COMMON/header.html"></div>
         <div class="bodyWrap contentWrap">
             <main class="main page-container">
@@ -549,40 +596,6 @@
                 });
             });
             
-            // ==========================
-            // 오늘 하루 열지 않음
-            // ==========================
-            const getTodayStr = () => {
-                const d = new Date();
-                return (
-                d.getFullYear() +
-                "-" +
-                ("0" + (d.getMonth() + 1)).slice(-2) +
-                "-" +
-                ("0" + d.getDate()).slice(-2)
-                );
-            };
-            
-            document.addEventListener("DOMContentLoaded", () => {
-                const modal = document.getElementById("modal");
-                const btnToday = document.getElementById("btnTodayClose");
-                if (!modal || !btnToday) return;
-            
-                const key = `hideForToday_${btnToday.dataset.popupClose || "modal"}`;
-                const today = getTodayStr();
-            
-                // 오늘 이미 닫았으면 → 모달 표시 안함
-                if (localStorage.getItem(key) === today) {
-                modal.classList.remove("on");
-                return;
-                }
-            
-                // 오늘 하루 열지 않음 클릭 시 저장 + 닫기
-                btnToday.addEventListener("click", () => {
-                localStorage.setItem(key, today);
-                modal.classList.remove("on");
-                });
-            });
     </script>
 </body>
 </html>
