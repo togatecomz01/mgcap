@@ -584,12 +584,18 @@
                     // 현재 정지 상태 → 다시 재생
                     btn.classList.remove("playing");
                     swiper.autoplay.start();
+                    swiper.allowTouchMove = true; // ? 추가
+                    swiper.allowSlideNext = true; // ? 추가
+                    swiper.allowSlidePrev = true; // ? 추가
                     btn.setAttribute("aria-label", "자동재생 정지");
                     btn.setAttribute("aria-pressed", "false");
                 } else {
                     // 현재 재생 중 → 정지
                     btn.classList.add("playing");
                     swiper.autoplay.stop();
+                    swiper.allowTouchMove = false; // ? 추가
+                    swiper.allowSlideNext = false; // ? 추가
+                    swiper.allowSlidePrev = false; // ? 추가
                     btn.setAttribute("aria-label", "자동재생 시작");
                     btn.setAttribute("aria-pressed", "true");
                 }

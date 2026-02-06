@@ -115,8 +115,8 @@ body:has(.main) .menu .menu-item .list-item { top:75px; }
 
 
 
-    --swipe-padding:48px 36px 50px 0;
-    --swiper-slide-bps:left bottom 42px;
+    --swipe-padding:40px 36px 90px 0;
+    --swiper-slide-bps:left bottom 0;
     --swiper-slide-bs:276px auto;
     --main_banner01:url("../../images/content/MAIN/w/main_banner1.png");
     --main_banner02:url("../../images/content/MAIN/w/main_banner2.png");
@@ -160,6 +160,9 @@ body:has(.main) .menu .menu-item .list-item { top:75px; }
 
 
 .main .visual-container .banner-content .btn-content { position:absolute; bottom:57px; right:36px; width:100%; }
+.mySwiper .swiper-pagination {
+    pointer-events: none !important;
+}
 
 .main-container { width:100%; flex:1; height:100%; padding-left:var(--left-w); }
 .main-container .main-content { max-width:867px; width:100%; margin:0; padding:46px 0 0 50px; }
