@@ -43,13 +43,28 @@
     function updateIndicator(step){
       $stepLis.each((i, li)=>{
         const idx = i + 1;
-        $(li)
+        const $li = $(li);
+        const isOn = idx === step;
+
+        $li
           .toggleClass('prev', idx < step)
-          .toggleClass('on',   idx === step)
+          .toggleClass('on',   isOn)
           .toggleClass('next', idx > step)
-          .attr('aria-selected', idx === step ? 'true' : 'false');
+          .attr('aria-selected', isOn ? 'true' : 'false');
+
+        // ===== 현재단계 sr-only 처리 =====
+        const $sr = $li.children('.sr-only');
+
+        if (isOn) {
+          if (!$sr.length) {
+            $('<span class="sr-only">(현재단계)</span>').appendTo($li);
+          }
+        } else {
+          $sr.remove();
+        }
       });
     }
+
 
     // select는 readonly가 없어 disabled, 라디오/체크박스는 '미선택만 disabled'
     function toggleReadonlyAll(lock){

@@ -178,53 +178,6 @@
             </div>
         </section>
         <!--e:이벤트배너 팝업-->
-        <script>
-            // 오늘 하루 열지 않음 체크 (2025-01-27 수정) - 모달 렌더링 전 실행
-            (function() {
-                const getTodayStr = () => {
-                    const d = new Date();
-                    return (
-                        d.getFullYear() +
-                        "-" +
-                        ("0" + (d.getMonth() + 1)).slice(-2) +
-                        "-" +
-                        ("0" + d.getDate()).slice(-2)
-                    );
-                };
-                
-                function checkModal() {
-                    const modal = document.getElementById("modal");
-                    const btnToday = document.getElementById("btnTodayClose");
-                    if (!modal) {
-                        // 모달이 아직 없으면 잠시 후 다시 시도
-                        setTimeout(checkModal, 10);
-                        return;
-                    }
-                    
-                    const key = `hideForToday_${btnToday?.dataset.popupClose || "modal"}`;
-                    const today = getTodayStr();
-                    
-                    // 오늘 이미 닫았으면 → 모달 표시 안함
-                    if (localStorage.getItem(key) === today) {
-                        modal.classList.remove("on");
-                    } else {
-                        // 표시해야 하면 on 클래스 추가
-                        modal.classList.add("on");
-                    }
-                    
-                    // 버튼 클릭 이벤트 등록
-                    if (btnToday) {
-                        btnToday.addEventListener("click", () => {
-                            localStorage.setItem(key, today);
-                            modal.classList.remove("on");
-                        });
-                    }
-                }
-                
-                // 즉시 실행
-                checkModal();
-            })();
-        </script>
         <div data-include-path="../COMMON/header.html"></div>
         <div class="bodyWrap contentWrap">
             <main class="main page-container">
@@ -233,7 +186,7 @@
                         <div class="swipe mySwiper">
                             <!--s 25.12.18 ->  배너 텍스트 수정-->
                             <div class="swiper-wrapper">
-                                <button type="button" class="swiper-slide">
+                                <div class="swiper-slide">
                                     <div class="text-content">
                                         <h2>
                                             나의 자동차 금융
@@ -244,10 +197,10 @@
                                             <li>모바일 약정 등 간편한 이용 절차</li>
                                             <li>투명한 송금 프로세스 운영</li>
                                         </ul>
-                                        <span class="btn-main-link">상품 바로가기</span>
+                                        <a href="javascript:void(0);" class="btn-main-link">상품 바로가기</a>
                                     </div>
-                                </button><!--//swiper-slide-->
-                                <button type="button" class="swiper-slide">
+                                </div><!--//swiper-slide-->
+                                <div class="swiper-slide">
                                     <div class="text-content">
                                         <h2>
                                             나의 설비/의료 금융
@@ -258,10 +211,10 @@
                                             <li>자금부담 최소화 및 효과적인 자금관리</li>
                                             <li>간편하고 신속한 구매절차 </li>
                                         </ul>
-                                        <span class="btn-main-link">상품 바로가기</span>
+                                        <a href="javascript:void(0);" class="btn-main-link">상품 바로가기</a>
                                     </div>
-                                </button><!--//swiper-slide-->
-                                <button type="button" class="swiper-slide">
+                                </div><!--//swiper-slide-->
+                                <div class="swiper-slide">
                                     <div class="text-content">
                                         <h2>
                                             나의 주택금융
@@ -272,10 +225,10 @@
                                             <li>제3자가  제공하는 담보로 대출 가능</li>
                                             <li>기존 채무를 통합하여 대환 또는 추가 대출 가능</li>
                                         </ul>
-                                        <span class="btn-main-link">상품 바로가기</span>
+                                        <a href="javascript:void(0);" class="btn-main-link">상품 바로가기</a>
                                     </div>
-                                </button><!--//swiper-slide-->
-                                <button type="button" class="swiper-slide">
+                                </div><!--//swiper-slide-->
+                                <div class="swiper-slide">
                                     <!--s:2025.12.09 텍스트 변경-->
                                     <div class="text-content">
                                         <h2>
@@ -287,10 +240,10 @@
                                             <li>전문성 기반 맞춤 서비스</li>
                                             <li>기존 채무를 통합하여 대환 또는 추가 대출 가능 </li>
                                         </ul>
-                                        <span class="btn-main-link">상품 바로가기</span>
+                                        <a href="javascript:void(0);" class="btn-main-link">상품 바로가기</a>
                                     </div>
                                      <!--e:2025.12.09 텍스트 변경-->
-                                </button><!--//swiper-slide-->
+                                </div><!--//swiper-slide-->
                             </div><!--//swiper-wrapper-->
                             <!--e 25.12.18 ->  배너 텍스트 수정-->
                             <div class="btn-content">
@@ -339,48 +292,48 @@
                         <div class="notice-group">
                             <div class="tab-container jsTab">
                                 <nav class="tab-list notice">
-                                    <div class="btn-group" role="tablist">
-                                        <button type="button" role="tab" class="tab-item active" data-tab="tab2-1" aria-selected="true">공지사항</button>
-                                        <button type="button" role="tab" class="tab-item" data-tab="tab2-2" aria-selected="false">입찰공고</button>
+                                    <div class="btn-group">
+                                        <button type="button" class="tab-item active" data-tab="tab2-1" aria-selected="true">공지사항</button>
+                                        <button type="button" class="tab-item" data-tab="tab2-2" aria-selected="false">입찰공고</button>
                                     </div>
                                 </nav>
                                 <div class="tab-content">
                                     <div id="tab2-1" class="tab-panel active">
                                         <div class="noti-list">
-                                            <a href="#javascript:void(0);" class="noti-group">
+                                            <div class="noti-group">
                                                 <span class="label">공지사항</span>
                                                 <span class="sbject">SK텔레콤 이용 회원을 위한 패해예방 수칙입니다.</span>
                                                 <span class="date">2025.04.29</span>
-                                            </a>
-                                            <a href="#javascript:void(0);" class="noti-group">
+                                            </div>
+                                            <div class="noti-group">
                                                 <span class="label">공지사항</span>
                                                 <span class="sbject">SK텔레콤 이용 회원을 위한 패해예방 수칙입니다.</span>
                                                 <span class="date">2025.04.29</span>
-                                            </a>
-                                            <a href="#javascript:void(0);" class="noti-group">
+                                            </div>
+                                            <div class="noti-group">
                                                 <span class="label">공지사항</span>
                                                 <span class="sbject">SK텔레콤 이용 회원을 위한 패해예방 수칙입니다.</span>
                                                 <span class="date">2025.04.29</span>
-                                            </a>
+                                            </div>
                                         </div>
                                     </div>
                                     <div id="tab2-2" class="tab-panel">
                                         <div class="noti-list">
-                                            <a href="#javascript:void(0);" class="noti-group">
+                                            <div class="noti-group">
                                                 <span class="label">입찰공고</span>
                                                 <span class="sbject">입찰공고 제목이 들어갑니다.</span>
                                                 <span class="date">2025.08.24</span>
-                                            </a>
-                                            <a href="#javascript:void(0);" class="noti-group">
+                                            </div>
+                                            <div class="noti-group">
                                                 <span class="label">입찰공고</span>
                                                 <span class="sbject">입찰공고 제목이 들어갑니다.</span>
                                                 <span class="date">2025.04.29</span>
-                                            </a>
-                                            <a href="#javascript:void(0);" class="noti-group">
+                                            </div>
+                                            <div class="noti-group">
                                                 <span class="label">입찰공고</span>
                                                 <span class="sbject">입찰공고 제목이 들어갑니다.</span>
                                                 <span class="date">2025.04.29</span>
-                                            </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -601,6 +554,55 @@
                 }
                 });
             });
+            
+            // ==========================
+            // 오늘 하루 열지 않음
+            // ==========================
+            (function() {
+            const getTodayStr = () => {
+                const d = new Date();
+                return (
+                    d.getFullYear() +
+                    "-" +
+                    ("0" + (d.getMonth() + 1)).slice(-2) +
+                    "-" +
+                    ("0" + d.getDate()).slice(-2)
+                );
+            };
+
+            function checkModal() {
+                // 'modal' 요소와 'btnToday' 요소 가져오기
+                const modal = document.getElementById("modal");
+                const btnToday = document.getElementById("btnTodayClose");
+
+                // modal이 없으면 잠시 후 다시 시도
+                if (!modal) {
+                    setTimeout(checkModal, 100); // 100ms 후에 다시 시도
+                    return;
+                }
+
+                const key = `hideForToday_${btnToday?.dataset.popupClose || "modal"}`;
+                const today = getTodayStr();
+
+                // 반대로 처리: 오늘 날짜가 로컬 스토리지에 있으면 모달을 표시하지 않음
+                if (localStorage.getItem(key) === today) {
+                    modal.classList.remove("on"); // "on" 클래스를 제거해서 모달 숨기기
+                } else {
+                    modal.classList.add("on"); // "on" 클래스를 추가해서 모달 표시
+                }
+
+                // 버튼 클릭 시 로컬 스토리지에 오늘 날짜 저장하고 모달 숨기기
+                btnToday.addEventListener("click", () => {
+                    localStorage.setItem(key, today);
+                    modal.classList.remove("on");
+                });
+            }
+
+            // 즉시 실행
+            checkModal();
+        })();
+
+        
             
     </script>
 </body>
