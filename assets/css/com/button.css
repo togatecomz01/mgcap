@@ -86,6 +86,10 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
 .btn-form:hover { border-color:var(--btn-active); color:var(--btn-active);}
 .btn-form.reset { font-size:0; flex:0 0 var(--btn-form-h); width:67px; height:var(--btn-form-h); font-size:0; }
 .btn-form.reset::before { content:""; display:block; width:30px; height:30px; margin:0 auto; background:var(--ico_reset) no-repeat center; background-size:100%; }
+/** 가상키패드 **/
+.form-content > .form-wrap > .form-group > .flex-row.keypad-box { flex-wrap: wrap; }
+.form-content > .form-wrap > .form-group .keypad-box > select { max-width:100%; width:100%; flex:0 0 100%; }
+.keypad { position:absolute; top:50%; transform:translateY(-50%); right:15px; width:24px; height:24px; background-size:24px; font-size:0; border:1px solid red; }
 
 /** 2026.01.26 captcha **/
 .captcha { padding-right:34px; }
