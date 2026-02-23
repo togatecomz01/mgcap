@@ -31,6 +31,73 @@
     <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
     <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+    <!--퍼블용 스크립트 활용만-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        
+            // 모든 탭 묶음 처리 (.tab-list + .btn-group.brand 공통)
+            document.querySelectorAll('.tab-list[role="tablist"], .btn-group.brand')
+                .forEach(function (tabList) {
+        
+                // 해당 탭 묶음 안의 탭 버튼들 가져오기
+                const tabs = tabList.querySelectorAll('[role="tab"]');
+        
+                tabs.forEach(function (tab) {
+        
+                    tab.addEventListener('click', function () {
+        
+                        // 클릭한 탭이 연결할 패널 ID 가져오기 (data-tab 값)
+                        const targetId = tab.dataset.tab;
+        
+                        // 탭 패널이 들어있는 컨테이너 판단
+                        // (예: .tab-container 구조이면 .tab-content 안,
+                        //      그 외 구조이면 부모 요소 안에서 찾음)
+                        var panelContainer = tabList.parentElement.classList.contains('tab-container')
+                            ? tabList.nextElementSibling
+                            : tabList.parentElement;
+        
+                        // 현재 탭 묶음에 해당하는 패널 목록 가져오기
+                        var panels = panelContainer && panelContainer.querySelectorAll
+                            ? [].slice.call(
+                                panelContainer.querySelectorAll(':scope > .tab-panel')
+                              )
+                            : [];
+        
+                        // ----- 모든 탭 비활성화 -----
+                        // (클래스 제거 + aria-selected="false")
+                        tabs.forEach(function (t) {
+                            t.classList.remove('on');
+                            t.setAttribute('aria-selected', 'false');
+                        });
+        
+                        // ----- 모든 패널 숨김 -----
+                        // (display none + aria-hidden="false")
+                        panels.forEach(function (p) {
+                            p.style.display = 'none';
+                            p.setAttribute('aria-hidden', 'false');
+                        });
+        
+                        // ----- 클릭한 탭 활성화 -----
+                        // (클래스 추가 + aria-selected="true")
+                        tab.classList.add('on');
+                        tab.setAttribute('aria-selected', 'true');
+        
+                        // ----- 연결된 패널 표시 -----
+                        var panel = document.getElementById(targetId);
+                        if (panel) {
+                            panel.style.display = 'block';
+                            panel.setAttribute('aria-hidden', 'true');
+                        }
+        
+                    });
+        
+                });
+        
+            });
+        
+        });
+        </script>
+    <!--퍼블용 스크립트 활용만-->
     <style>
         .layerPopup.full.vehicle-search > .pop-area { max-width:800px; height:90%; max-height:90%; }
         .layerPopup.full.vehicle-search {
@@ -113,9 +180,9 @@
 
         .layerPopup.full.vehicle-search .brand { display:flex; gap:10px; height:52px; margin-bottom:var(--tab-depth2-mb); padding:var(--tab-brand-pd); border-bottom:1px solid var(--color-ab); overflow-y:hidden; overflow-x:auto; }
         .layerPopup.full.vehicle-search .brand button {  display:inline-flex; gap:3px; align-items:center; padding:5px 10px; background:transparent; font-size:1rem; cursor:pointer; color:var(--color-45); }
-        .layerPopup.full.vehicle-search .brand .on::after { content:""; position:absolute; left:0; bottom:-11px; display:block; width:100%; height:4px; background:var(--color-2); border-radius:8px; }
+        .layerPopup.full.vehicle-search .brand button[aria-selected="true"]::after { content:""; position:absolute; left:0; bottom:-11px; display:block; width:100%; height:4px; background:var(--color-2); border-radius:8px; }
         .layerPopup.full.vehicle-search .brand [class]::before { filter: grayscale(100%); opacity:.8; }
-        .layerPopup.full.vehicle-search .brand .on::before { filter:none; opacity:1;  }
+        .layerPopup.full.vehicle-search .brand button[aria-selected="true"]::before { filter:none; opacity:1;  }
         .layerPopup.full.vehicle-search .brand button::before { content:""; display:inline-block; width:32px; height:32px; background-repeat:no-repeat; background-repeat:no-repeat; background-size:100%;  }
         .layerPopup.full.vehicle-search .brand .hyu::before { background-image:var(--ico-hyu); }
         .layerPopup.full.vehicle-search .brand .gen::before { background-image:var(--ico-gen); }
@@ -157,10 +224,9 @@
         .layerPopup.full.vehicle-search .brand .byd::before { background-image:var(--ico-byd); }
         .layerPopup.full.vehicle-search .brand .vin::before { background-image:var(--ico-vin); }
         .layerPopup.full.vehicle-search .brand .luc::before { background-image:var(--ico-luc); }
-
         .layerPopup.full.vehicle-search .tab-container .tab-content .tab-panel .tree-group { display:flex; width:100%; height:calc(100% - 82px);  }
-        .layerPopup.full.vehicle-search .tab-container .tab-content .tab-panel .tree-group[aria-hidden="true"] { display:none; }
-        
+        .layerPopup.full.vehicle-search .tab-container .tab-content .tab-panel .tree-group[aria-hidden="true"] { display:flex !important; }
+        .layerPopup.full.vehicle-search .tab-container .tab-content .tab-panel .tree-group[aria-hidden="false"] { display:none; }
         .layerPopup.full.vehicle-search .tree-group .tree-content{ flex:1; padding:0 20px 20px 20px; height:calc(100% - 20px); overflow-y:auto; border-left:1px solid var(--color-ab); }
         .layerPopup.full.vehicle-search .tree-group .tree-content:first-of-type { padding-left:var(--tab-depth2-pd); width:316px; flex:0 0 330px; border-left:0; }
         .layerPopup.full.vehicle-search .tree-group .tree-content:last-of-type { padding-right:var(--tab-depth2-pd); }
@@ -168,7 +234,7 @@
         .layerPopup.full.vehicle-search .tree-group .tree-content .btn-group button,
         .layerPopup.full.vehicle-search .tree-group .tree-content .form-group .radio { display:flex; align-items:center; gap:10px; margin-top:10px; padding:10px 40px 10px 10px; width:100%; min-height:50px; text-align:left; font-size:var(--font16); border:1px solid var(--color-d); border-radius:6px;   }
         .layerPopup.full.vehicle-search .tree-group .tree-content .btn-group button::before {  content:""; width:20px; height:20px; position:absolute; right:10px; display:block; background:url("../../assets/images/com/svg/ico_arr.svg")no-repeat right center; background-size:18px;  }
-        .layerPopup.full.vehicle-search .tree-group .tree-content .btn-group button.active,
+        .layerPopup.full.vehicle-search .tree-group .tree-content .btn-group button.on,
         .layerPopup.full.vehicle-search .tree-group .tree-content .form-group .radio:has(:checked) { font-weight:var(--font-w-m); border:1px solid var(--primary); box-shadow:0px 1px 8px #ddd; }
         .layerPopup.full.vehicle-search .tree-group .tree-content .modal button > span:first-of-type { width:80px; height:40px; }
         .layerPopup.full.vehicle-search .tree-group .tree-content .modal button > span:first-of-type img { width:100%; max-width:80px; max-height:40px; }
@@ -238,15 +304,15 @@
                         <div class="tab-content">
                             <div id="tab1-1" class="tab-panel" role="tabpanel" style="display:block;">
                                 <div id="brandTabs-domestic" class="btn-group brand" role="tablist" aria-label="국산차 브랜드">
-                                    <button type="button" class="nested- che on" data-tab="brand-che" role="tab" title="선택됨">한국 GM</button>
-                                    <button type="button" class="nested- hyu" data-tab="brand-hyu" role="tab">현대</button>
-                                    <button type="button" class="nested- kia" data-tab="brand-kia" role="tab">기아</button>
-                                    <!--<button type="button" class=" nested- gen" data-tab="brand-gen" role="tab">제네시스</button>-->
-                                    <button type="button" class="nested- ren" data-tab="brand-ren" role="tab">르노코리아</button>
-                                    <button type="button" class="nested- kgm" data-tab="brand-kgm" role="tab">KG모빌리티</button>
+                                    <button type="button" class="nested-tab-item che" data-tab="brand-che" role="tab" aria-selected="true">한국 GM</button>
+                                    <button type="button" class="nested-tab-item hyu" data-tab="brand-hyu" role="tab" aria-selected="false">현대</button>
+                                    <button type="button" class="nested-tab-item kia" data-tab="brand-kia" role="tab" aria-selected="false">기아</button>
+                                    <!--<button type="button" class="nested-tab-item gen" data-tab="brand-gen" role="tab">제네시스</button>-->
+                                    <button type="button" class="nested-tab-item ren" data-tab="brand-ren" role="tab" aria-selected="false">르노코리아</button>
+                                    <button type="button" class="nested-tab-item kgm" data-tab="brand-kgm" role="tab" aria-selected="false">KG모빌리티</button>
                                 </div>
 
-                                <div id="brand-che" class="tab-panel nested-tab-panel tree-group" role="tabpanel" aria-hidden="false">
+                                <div id="brand-che" class="tab-panel nested-tab-panel tree-group" role="tabpanel" aria-hidden="true">
                                     <div class="loader-container">
                                         <div class="bouncing-dots">
                                             <p class="l-dot"></p>
@@ -256,12 +322,12 @@
                                         데이터를 불러오는 중 입니다.
                                     </div>
                                 </div>
-                                <div id="brand-hyu" class="tab-panel nested-tab-panel tree-group" role="tabpanel" aria-hidden="true">
+                                <div id="brand-hyu" class="tab-panel nested-tab-panel tree-group" role="tabpanel" aria-hidden="false">
                                     <h3 class="sr-only">현대</h3>
                                     <div class="tree-content">
                                         <h4>모델 선택</h4>
                                         <div class="btn-group modal">
-                                            <button type="button" class="active">
+                                            <button type="button" class="on" title="선택됨">
                                                 <span><img src="../../assets/images/content/brand_logo/car/img01.png" alt=""></span>
                                                 <span>캐스퍼</span>
                                             </button>
@@ -322,7 +388,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div id="brand-kia" class="tab-panel nested-tab-panel tree-group" role="tabpanel" aria-hidden="true">
+                                <div id="brand-kia" class="tab-panel nested-tab-panel tree-group" role="tabpanel" aria-hidden="false">
                                     <h3 class="sr-only">기아</h3>
                                     <div class="tree-content">
                                         <h4>모델선택</h4>
@@ -333,7 +399,7 @@
                                         <div class="form-group no-data">데이터 없음</div>
                                     </div>
                                 </div>
-                                <div id="brand-ren" class="tab-panel nested-tab-panel tree-group" role="tabpanel" aria-hidden="true">
+                                <div id="brand-ren" class="tab-panel nested-tab-panel tree-group" role="tabpanel" aria-hidden="false">
                                     <h3 class="sr-only">르노코리아</h3>
                                     <div class="tree-content">
                                         <h4>모델선택</h4>
@@ -344,7 +410,7 @@
                                         <div class="form-group no-data">데이터 없음</div>
                                     </div>
                                 </div>
-                                <div id="brand-kgm" class="tab-panel nested-tab-panel tree-group" role="tabpanel" aria-hidden="true">
+                                <div id="brand-kgm" class="tab-panel nested-tab-panel tree-group" role="tabpanel" aria-hidden="false">
                                     <h3 class="sr-only">KG모빌리티</h3>
                                     <div class="tree-content">
                                         <h4>모델선택</h4>
@@ -358,18 +424,18 @@
                             </div>
                             <div id="tab1-2" class="tab-panel" style="display:none;">
                                 <div id="brandTabs-import" class="btn-group brand">
-                                    <button type="button" class=" nested- bmw active" data-tab="brand-bmw" role="tab" title="선택됨">BMW</button>
-                                    <button type="button" class=" nested- benz" data-tab="brand-benz" role="tab">벤츠</button>
-                                    <button type="button" class=" nested- aud" data-tab="brand-aud" role="tab">아우디</button>
-                                    <button type="button" class=" nested- volv" data-tab="brand-volv" role="tab">볼보</button>
-                                    <button type="button" class=" nested- lex" data-tab="brand-lex" role="tab">렉서스</button>
+                                    <button type="button" class="nested-tab-item bmw" data-tab="brand-bmw" role="tab" aria-selected="true">BMW</button>
+                                    <button type="button" class="nested-tab-item benz" data-tab="brand-benz" role="tab" aria-selected="false">벤츠</button>
+                                    <button type="button" class="nested-tab-item aud" data-tab="brand-aud" role="tab" aria-selected="false">아우디</button>
+                                    <button type="button" class="nested-tab-item volv" data-tab="brand-volv" role="tab" aria-selected="false">볼보</button>
+                                    <button type="button" class="nested-tab-item lex" data-tab="brand-lex" role="tab" aria-selected="false">렉서스</button>
                                 </div>
-                                <div id="brand-bmw" class="tab-panel nested-tab-panel tree-group" role="tabpanel" aria-hidden="false" style="display:block;">
+                                <div id="brand-bmw" class="tab-panel nested-tab-panel tree-group" role="tabpanel" aria-hidden="true">
                                     <h3 class="sr-only">BMW</h3>
                                     <div class="tree-content">
                                         <h4>모델선택</h4>
                                         <div class="btn-group modal">
-                                            <button type="button" class="acitve">
+                                            <button type="button" class="on" title="선택됨">
                                                 <span><img src="../../assets/images/content/brand_logo/car/img01.png" alt=""></span>
                                                 <span>캐스퍼</span>
                                             </button>
@@ -412,12 +478,12 @@
                                         <div class="form-group no-data">데이터 없음</div>
                                     </div>
                                 </div>
-                                <div id="brand-benz" class="tab-panel nested-tab-panel tree-group" role="tabpanel" aria-hidden="true">
+                                <div id="brand-benz" class="tab-panel nested-tab-panel tree-group" role="tabpanel" aria-hidden="false">
                                     <h3 class="sr-only">벤츠</h3>
                                     <div class="tree-content">
                                         <h4>모델선택</h4>
                                         <div class="btn-group modal">
-                                            <button type="button" class="acitve">
+                                            <button type="button">
                                                 <span><img src="../../assets/images/content/brand_logo/car/img01.png" alt=""></span>
                                                 <span>캐스퍼</span>
                                             </button>
@@ -460,12 +526,12 @@
                                         <div class="form-group no-data">데이터 없음</div>
                                     </div>
                                 </div>
-                                <div id="brand-aud" class="tab-panel nested-tab-panel tree-group" role="tabpanel" aria-hidden="true">
+                                <div id="brand-aud" class="tab-panel nested-tab-panel tree-group" role="tabpanel" aria-hidden="false">
                                     <h3 class="sr-only">아우디</h3>
                                     <div class="tree-content">
                                         <h4>모델선택</h4>
                                         <div class="btn-group modal">
-                                            <button type="button" class="acitve">
+                                            <button type="button" class="on">
                                                 <span><img src="../../assets/images/content/brand_logo/car/img01.png" alt=""></span>
                                                 <span>캐스퍼</span>
                                             </button>
@@ -508,12 +574,12 @@
                                         <div class="form-group no-data">데이터 없음</div>
                                     </div>
                                 </div>
-                                <div id="brand-volv" class="tab-panel nested-tab-panel tree-group" role="tabpanel" aria-hidden="true">
+                                <div id="brand-volv" class="tab-panel nested-tab-panel tree-group" role="tabpanel" aria-hidden="false">
                                     <h3 class="sr-only">볼보</h3>
                                     <div class="tree-content">
                                         <h4>모델선택</h4>
                                         <div class="btn-group modal">
-                                            <button type="button" class="acitve">
+                                            <button type="button">
                                                 <span><img src="../../assets/images/content/brand_logo/car/img01.png" alt=""></span>
                                                 <span>캐스퍼</span>
                                             </button>
@@ -556,12 +622,12 @@
                                         <div class="form-group no-data">데이터 없음</div>
                                     </div>
                                 </div>
-                                <div id="brand-lex" class="tab-panel nested-tab-panel tree-group" role="tabpanel" aria-hidden="true">
+                                <div id="brand-lex" class="tab-panel nested-tab-panel tree-group" role="tabpanel" aria-hidden="false">
                                     <h3 class="sr-only">렉서스</h3>
                                     <div class="tree-content">
                                         <h4>모델선택</h4>
                                         <div class="btn-group modal">
-                                            <button type="button" class="acitve">
+                                            <button type="button">
                                                 <span><img src="../../assets/images/content/brand_logo/car/img01.png" alt=""></span>
                                                 <span>캐스퍼</span>
                                             </button>
