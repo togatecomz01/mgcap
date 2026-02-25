@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>차량검색 팝업</title>
+
+    <meta name="keywords" content="MG캐피탈" />
+    <meta name="copyright" content="copyrights 2025 MG캐피탈" />
+    <meta name="viewport" content="width=device-width" />
+    <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="No-Cache" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.mgcap.co.kr/favicon.ico"/>
+    <link rel="stylesheet" href="../../assets/css/com/default.css" />
+    <link rel="stylesheet" href="../../assets/css/com/common.css" />
+    <link rel="stylesheet" href="../../assets/css/com/style.css" />
+    <link rel="stylesheet" href="../../assets/css/com/fonts.css" />
+    <link rel="stylesheet" href="../../assets/css/com/layout.css" />
+    <link rel="stylesheet" href="../../assets/css/com/nav.css" />
+    <link rel="stylesheet" href="../../assets/css/com/input.css" />
+    <link rel="stylesheet" href="../../assets/css/com/button.css" />
+    <link rel="stylesheet" href="../../assets/css/com/tab.css" />
+    <link rel="stylesheet" href="../../assets/css/com/table.css" />
+    <link rel="stylesheet" href="../../assets/css/com/content.css" />
+    <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+    <script type="text/javascript" src="../../assets/js/ui/ui-util.js"></script>
+    <style>
+        .layerPopup.full.vehicle-search > .pop-area { max-width:800px; height:90%; max-height:90%; }
+        .layerPopup.full.vehicle-search {
+            --ico-hyu:url(../../assets/images/content/brand_logo/Hyundai.png);
+            --ico-gen:url(../../assets/images/content/brand_logo/Genesis.png);
+            --ico-kia:url(../../assets/images/content/brand_logo/Kia.png);
+            --ico-che:url(../../assets/images/content/brand_logo/Chevrolet.png);
+            --ico-ren:url(../../assets/images/content/brand_logo/Renault_Korea.png);
+            --ico-gmc:url(../../assets/images/content/brand_logo/GMC.png);
+            --ico-kgm:url(../../assets/images/content/brand_logo/KGM.png);
+            --ico-dea:url(../../assets/images/content/brand_logo/Deachamg.png);
+            --ico-toy:url(../../assets/images/content/brand_logo/Toyota.png);
+            --ico-lex:url(../../assets/images/content/brand_logo/Lexus.png);
+            --ico-hon:url(../../assets/images/content/brand_logo/Honda.png);
+            --ico-benz:url(../../assets/images/content/brand_logo/Benz.png);
+            --ico-bmw:url(../../assets/images/content/brand_logo/BMW.png);
+            --ico-aud:url(../../assets/images/content/brand_logo/Audi.png);
+            --ico-vol:url(../../assets/images/content/brand_logo/Volkswagen.png);
+            --ico-min:url(../../assets/images/content/brand_logo/Mini.png);
+            --ico-volv:url(../../assets/images/content/brand_logo/Volvo.png);
+            --ico-pol:url(../../assets/images/content/brand_logo/Polestar.png);
+            --ico-por:url(../../assets/images/content/brand_logo/Porsche.png);
+            --ico-fer:url(../../assets/images/content/brand_logo/Ferrari.png);
+            --ico-lam:url(../../assets/images/content/brand_logo/Lamborghini.png);
+            --ico-mas:url(../../assets/images/content/brand_logo/Maserati.png);
+            --ico-mcl:url(../../assets/images/content/brand_logo/Mclaren.png);
+            --ico-ast:url(../../assets/images/content/brand_logo/Aston_martin.png);
+            --ico-peu:url(../../assets/images/content/brand_logo/Peugeot.png);
+            --ico-ds:url(../../assets/images/content/brand_logo/DS.png);
+            --ico-ben:url(../../assets/images/content/brand_logo/Bentley.png);
+            --ico-rol:url(../../assets/images/content/brand_logo/Rollsroyce.png);
+            --ico-ine:url(../../assets/images/content/brand_logo/Ineos.png);
+            --ico-cor:url(../../assets/images/content/brand_logo/Coric_Seg.png);
+            --ico-lin:url(../../assets/images/content/brand_logo/Lincoln.png);
+            --ico-jee:url(../../assets/images/content/brand_logo/Jeep.png);
+            --ico-cad:url(../../assets/images/content/brand_logo/Cadillac.png);
+            --ico-for:url(../../assets/images/content/brand_logo/Fored.png);
+            --ico-tes:url(../../assets/images/content/brand_logo/Tesla.png);
+            --ico-Rivian:url(../../assets/images/content/brand_logo/Rivian.png);
+            --ico-riv:url(../../assets/images/content/brand_logo/Rivian.png);
+            --ico-fis:url(../../assets/images/content/brand_logo/Fisker.png);
+            --ico-byd:url(../../assets/images/content/brand_logo/BYD.png);
+            --ico-vin:url(../../assets/images/content/brand_logo/Vinfast.png);
+            --ico-luc:url(../../assets/images/content/brand_logo/Lucid.png);
+            --tab-depth2-mb:0;
+            --tab-depth2-pd:34px;/*m 24*/
+            --tab-brand-pd:0 34px 10px;
+        }
+
+        .layerPopup.full.vehicle-search .pop-body { padding:0; max-height:100%; overflow-y:hidden; }
+        .layerPopup.full.vehicle-search .pop-body .pop-content { width:100%; height:100%; }
+        .layerPopup.full.vehicle-search .tab-container { width:100%; height:100%;  }
+
+        /**로딩추가**/
+        .layerPopup.full.vehicle-search .loader-container { display:flex; justify-content:center; align-items:center; flex-direction:column; gap:20px; width:100%; height:100%; }
+        .layerPopup.full.vehicle-search .bouncing-dots { display:flex; justify-content:space-between; width:60px; }
+        .layerPopup.full.vehicle-search .l-dot { width:15px; height:15px; background-color:var(--color-75); border-radius:50%; animation:bounce 1.5s infinite; }
+        .layerPopup.full.vehicle-search .l-dot:nth-child(1) { animation-delay:0s; }
+        .layerPopup.full.vehicle-search .l-dot:nth-child(2) { animation-delay:0.3s; }
+        .layerPopup.full.vehicle-search .l-dot:nth-child(3) { animation-delay: 0.6s; }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .layerPopup.full.vehicle-search .tab-list.depth2 {  margin:10px 0 20px; height:52px; padding:0 var(--tab-depth2-pd); }
+        .layerPopup.full.vehicle-search .tab-list.depth2 button { flex:0 0 auto; padding:0 26px; width:auto; min-height:51px; line-height:51px; border-radius:30px; background:var(--tab2-background); font-weight:var(--font-w-m); transition:all 0.3s ease; }
+        .layerPopup.full.vehicle-search .tab-list.depth2 .on { background:var(--tab-active); color:var(--white); font-weight:var(--font-w-b); }
+
+        .tab-container .tab-list.depth2 .tab-item:focus-visible { border-bottom:0; outline:2px solid var(--tab-active); outline-offset:2px; z-index:2;  }
+
+
+
+        .layerPopup.full.vehicle-search .tab-content { height:calc(100% - 52px); }
+        .layerPopup.full.vehicle-search .tab-content .tab-panel { display:block; width:100%; height:100%; }
+
+        .layerPopup.full.vehicle-search .brand { display:flex; gap:10px; height:52px; margin-bottom:var(--tab-depth2-mb); padding:var(--tab-brand-pd); border-bottom:1px solid var(--color-ab); overflow-y:hidden; overflow-x:auto; }
+        .layerPopup.full.vehicle-search .brand button {  display:inline-flex; gap:3px; align-items:center; padding:5px 10px; background:transparent; font-size:1rem; cursor:pointer; color:var(--color-45); }
+        .layerPopup.full.vehicle-search .brand .on::after { content:""; position:absolute; left:0; bottom:-11px; display:block; width:100%; height:4px; background:var(--color-2); border-radius:8px; }
+        .layerPopup.full.vehicle-search .brand [class]::before { filter: grayscale(100%); opacity:.8; }
+        .layerPopup.full.vehicle-search .brand .on::before { filter:none; opacity:1;  }
+        .layerPopup.full.vehicle-search .brand button::before { content:""; display:inline-block; width:32px; height:32px; background-repeat:no-repeat; background-repeat:no-repeat; background-size:100%;  }
+        .layerPopup.full.vehicle-search .brand .hyu::before { background-image:var(--ico-hyu); }
+        .layerPopup.full.vehicle-search .brand .gen::before { background-image:var(--ico-gen); }
+        .layerPopup.full.vehicle-search .brand .kia::before { background-image:var(--ico-kia); }
+        .layerPopup.full.vehicle-search .brand .che::before { background-image:var(--ico-che); }
+        .layerPopup.full.vehicle-search .brand .ren::before { background-image:var(--ico-ren); }
+        .layerPopup.full.vehicle-search .brand .gmc::before { background-image:var(--ico-gmc); }
+        .layerPopup.full.vehicle-search .brand .kgm::before { background-image:var(--ico-kgm); }
+        .layerPopup.full.vehicle-search .brand .dea::before { background-image:var(--ico-dea); }
+        .layerPopup.full.vehicle-search .brand .toy::before { background-image:var(--ico-toy); }
+        .layerPopup.full.vehicle-search .brand .lex::before { background-image:var(--ico-lex); }
+        .layerPopup.full.vehicle-search .brand .hon::before { background-image:var(--ico-hon); }
+        .layerPopup.full.vehicle-search .brand .benz::before { background-image:var(--ico-benz); }
+        .layerPopup.full.vehicle-search .brand .bmw::before { background-image:var(--ico-bmw); }
+        .layerPopup.full.vehicle-search .brand .aud::before { background-image:var(--ico-aud); }
+        .layerPopup.full.vehicle-search .brand .vol::before { background-image:var(--ico-vol); }
+        .layerPopup.full.vehicle-search .brand .min::before { background-image:var(--ico-min); }
+        .layerPopup.full.vehicle-search .brand .volv::before { background-image:var(--ico-volv); }
+        .layerPopup.full.vehicle-search .brand .pol::before { background-image:var(--ico-pol); }
+        .layerPopup.full.vehicle-search .brand .por::before { background-image:var(--ico-por); }
+        .layerPopup.full.vehicle-search .brand .fer::before { background-image:var(--ico-fer); }
+        .layerPopup.full.vehicle-search .brand .lam::before { background-image:var(--ico-lam); }
+        .layerPopup.full.vehicle-search .brand .mas::before { background-image:var(--ico-mas); }
+        .layerPopup.full.vehicle-search .brand .mcl::before { background-image:var(--ico-mcl); }
+        .layerPopup.full.vehicle-search .brand .ast::before { background-image:var(--ico-ast); }
+        .layerPopup.full.vehicle-search .brand .peu::before { background-image:var(--ico-peu); }
+        .layerPopup.full.vehicle-search .brand .ds::before  { background-image:var(--ico-ds); }
+        .layerPopup.full.vehicle-search .brand .ben::before { background-image:var(--ico-ben); }
+        .layerPopup.full.vehicle-search .brand .rol::before { background-image:var(--ico-rol); }
+        .layerPopup.full.vehicle-search .brand .ine::before { background-image:var(--ico-ine); }
+        .layerPopup.full.vehicle-search .brand .cor::before { background-image:var(--ico-cor); }
+        .layerPopup.full.vehicle-search .brand .lin::before { background-image:var(--ico-lin); }
+        .layerPopup.full.vehicle-search .brand .jee::before { background-image:var(--ico-jee); }
+        .layerPopup.full.vehicle-search .brand .cad::before { background-image:var(--ico-cad); }
+        .layerPopup.full.vehicle-search .brand .for::before { background-image:var(--ico-for); }
+        .layerPopup.full.vehicle-search .brand .tes::before { background-image:var(--ico-tes); }
+        .layerPopup.full.vehicle-search .brand .riv::before { background-image:var(--ico-riv); }
+        .layerPopup.full.vehicle-search .brand .fis::before { background-image:var(--ico-fis); }
+        .layerPopup.full.vehicle-search .brand .byd::before { background-image:var(--ico-byd); }
+        .layerPopup.full.vehicle-search .brand .vin::before { background-image:var(--ico-vin); }
+        .layerPopup.full.vehicle-search .brand .luc::before { background-image:var(--ico-luc); }
+
+        .layerPopup.full.vehicle-search .tab-container .tab-content .tab-panel .tree-group { display:flex; width:100%; height:calc(100% - 82px);  }
+        .layerPopup.full.vehicle-search .tab-container .tab-content .tab-panel .tree-group[aria-hidden="true"] { display:none; }
+        
+        .layerPopup.full.vehicle-search .tree-group .tree-content{ flex:1; padding:0 20px 20px 20px; height:calc(100% - 20px); overflow-y:auto; border-left:1px solid var(--color-ab); }
+        .layerPopup.full.vehicle-search .tree-group .tree-content:first-of-type { padding-left:var(--tab-depth2-pd); width:316px; flex:0 0 330px; border-left:0; }
+        .layerPopup.full.vehicle-search .tree-group .tree-content:last-of-type { padding-right:var(--tab-depth2-pd); }
+        .layerPopup.full.vehicle-search .tree-group .tree-content h4 { margin-top:0; height:38px; line-height:38px; border-bottom:2px solid var(--color-2); }
+        .layerPopup.full.vehicle-search .tree-group .tree-content .btn-group button,
+        .layerPopup.full.vehicle-search .tree-group .tree-content .form-group .radio { display:flex; align-items:center; gap:10px; margin-top:10px; padding:10px 40px 10px 10px; width:100%; min-height:50px; text-align:left; font-size:var(--font16); border:1px solid var(--color-d); border-radius:6px;   }
+        .layerPopup.full.vehicle-search .tree-group .tree-content .btn-group button::before {  content:""; width:20px; height:20px; position:absolute; right:10px; display:block; background:url("../../assets/images/com/svg/ico_arr.svg")no-repeat right center; background-size:18px;  }
+        .layerPopup.full.vehicle-search .tree-group .tree-content .btn-group button.on,
+        .layerPopup.full.vehicle-search .tree-group .tree-content .form-group .radio:has(:checked) { font-weight:var(--font-w-m); border:1px solid var(--primary); box-shadow:0px 1px 8px #ddd; }
+        .layerPopup.full.vehicle-search .tree-group .tree-content .modal button > span:first-of-type { width:80px; height:40px; }
+        .layerPopup.full.vehicle-search .tree-group .tree-content .modal button > span:first-of-type img { width:100%; max-width:80px; max-height:40px; }
+
+        .layerPopup.full.vehicle-search .tree-group .tree-content .form-group .radio { align-items:flex-start;  }
+        .layerPopup.full.vehicle-search .tree-group .tree-content .form-group .radio input { top:5px; width:24px; height:24px; }
+        .layerPopup.full.vehicle-search .tree-group .tree-content .btn-group button p span,
+        .layerPopup.full.vehicle-search .tree-group .tree-content .form-group .radio p span { font-size:var(--font16); }
+        .layerPopup.full.vehicle-search .tree-group .tree-content .sm { display:block; color:var(--color-75); }
+
+        .layerPopup.full.vehicle-search .tree-group .tree-content .no-data { display:flex; align-items:center; justify-content:center; margin-top:0 !important; width:100%; height:calc(100% - 38px); font-size:1rem; color:var(--color-75); }
+
+        @media (max-width:1024px) { 
+            .layerPopup.full.vehicle-search > .pop-area { max-width:100%; height:100%; max-height:100%; }
+
+         }
+
+        @media (max-width:765px) {
+
+      
+        .layerPopup.full.vehicle-search { 
+            --tab-depth2-mb:0;
+            --tab-depth2-pd:24px;/*m 24*/
+            --tab-brand-pd:0 24px 10px;
+         }
+        .layerPopup.full.vehicle-search .pop-body { margin:0; padding:0; overflow-y:auto; }
+
+        .layerPopup.full.vehicle-search .loader-container { height:90%; }
+
+        .layerPopup.full.vehicle-search .tab-container .tab-list.depth2 { margin:10px 0; width:100%; }
+        .layerPopup.full.vehicle-search > .pop-area {  height:100%; max-height:100%; }
+        .layerPopup.full.vehicle-search .brand { height:auto; margin-bottom:0; }
+        .layerPopup.full.vehicle-search .brand button { flex:none; }
+        .layerPopup.full.vehicle-search .tree-group { flex-direction:column; height:100%; }
+        .layerPopup.full.vehicle-search .tree-group .tree-content{ padding:0 24px; height:calc(100% - 82px); overflow:visible; border-left:0; }
+        .layerPopup.full.vehicle-search .tree-group .tree-content:first-of-type { height:auto; }
+        .layerPopup.full.vehicle-search .tree-group .tree-content h4 { border-bottom:0; }
+        .layerPopup.full.vehicle-search .tree-group .tree-content .form-group { margin-top:0 !important;  }
+        .layerPopup.full.vehicle-search .tree-group .tree-content:first-of-type .btn-group.modal { display:flex; gap:10px; margin-top:0 !important; padding:30px 24px; width:100%; min-height:216px; overflow-y:hidden; overflow-x:auto; background:#EEF2F7; }
+        .layerPopup.full.vehicle-search .tree-group .tree-content:first-of-type { width:100%; flex:0 0 auto; margin-top:0 !important; padding:0 0;  }
+        .layerPopup.full.vehicle-search .tree-group .tree-content:first-of-type h4 { display:none; }
+        .layerPopup.full.vehicle-search .tree-group .tree-content:first-of-type .btn-group.modal button { display:flex; margin-top:0; padding:10px; width:60%; flex:0 0 60%; flex-direction:column; }
+        .layerPopup.full.vehicle-search .tree-group .tree-content:first-of-type .btn-group.modal button > span {  width:100%; text-align:center;  }
+        .layerPopup.full.vehicle-search .tree-group .tree-content .modal button > span:first-of-type { width:171px; height:85px; }
+        .layerPopup.full.vehicle-search .tree-group .tree-content .modal button > span:first-of-type img { max-width:171px; max-height:85px; }
+        .layerPopup.full.vehicle-search .tree-group .tree-content:first-of-type .btn-group.modal button::before { display:none; }
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="fullPopup1" class="layerPopup full on vehicle-search">
+        <div class="pop-area">
+            <div class="pop-header">
+                <h2 class="pop-tit">차량 검색</h2>
+            </div>
+
+            <div class="pop-body">
+                <div class="pop-content">
+                    <div class="tab-container">
+                        <nav class="tab-list depth2" role="tablist" aria-label="차량구분">
+                            <button type="button" class="on" data-tab="tab1-1" role="tab">국산차</button>
+                            <button type="button" class="" data-tab="tab1-2" role="tab">수입차</button>
+                        </nav>
+                        <div class="tab-content">
+                            <div id="tab1-1" class="tab-panel" role="tabpanel" style="display:block;">
+                                <div id="brandTabs-domestic" class="btn-group brand" role="tablist" aria-label="국산차 브랜드">
+                                    <button type="button" class="nested- che on" data-tab="brand-che" role="tab" title="선택됨">한국 GM</button>
+                                    <button type="button" class="nested- hyu" data-tab="brand-hyu" role="tab">현대</button>
+                                    <button type="button" class="nested- kia" data-tab="brand-kia" role="tab">기아</button>
+                                    <!--<button type="button" class=" nested- gen" data-tab="brand-gen" role="tab">제네시스</button>-->
+                                    <button type="button" class="nested- ren" data-tab="brand-ren" role="tab">르노코리아</button>
+                                    <button type="button" class="nested- kgm" data-tab="brand-kgm" role="tab">KG모빌리티</button>
+                                </div>
+
+                                <div id="brand-che" class="tab-panel nested-tab-panel tree-group" role="tabpanel" aria-hidden="false">
+                                    <div class="loader-container">
+                                        <div class="bouncing-dots">
+                                            <p class="l-dot"></p>
+                                            <p class="l-dot"></p>
+                                            <p class="l-dot"></p>
+                                        </div>
+                                        데이터를 불러오는 중 입니다.
+                                    </div>
+                                </div>
+                                <div id="brand-hyu" class="tab-panel nested-tab-panel tree-group" role="tabpanel" aria-hidden="true">
+                                    <h3 class="sr-only">현대</h3>
+                                    <div class="tree-content">
+                                        <h4>모델 선택</h4>
+                                        <div class="btn-group modal">
+                                            <button type="button" class="on" title="선택됨">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img01.png" alt=""></span>
+                                                <span>캐스퍼</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img02.png" alt=""></span>
+                                                <span>캐스퍼 일렉트릭</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img03.png" alt=""></span>
+                                                <span>아반떼</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img04.png" alt=""></span>
+                                                <span>아반떼 N</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img05.png" alt=""></span>
+                                                <span>G70</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img06.png" alt=""></span>
+                                                <span>쏘나타 디 엣지</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img07.png" alt=""></span>
+                                                <span>더 뉴 아이오닉 6</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img08.png" alt=""></span>
+                                                <span>아이오닉 6 N</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img08.png" alt=""></span>
+                                                <span>그랜저</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="tree-content">
+                                        <h4>세부차종 선택</h4>
+                                        <div class="form-group">
+                                        <fieldset>
+                                            <legend>세부차종 선택</legend>
+                                            <label class="radio">
+                                            <input type="radio" name="row2-active" value="" checked>
+                                            <p>
+                                                <span>인스퍼레이션 (캐스퍼액티브Ⅱ)</span>
+                                                <span class="sm">20,700,000원</span>
+                                            </p>
+                                            </label>
+                                            <label class="radio">
+                                            <input id="treem2" type="radio" name="row2-active" value="">
+                                            <p>
+                                                <span>스마트 (캐스퍼액티브Ⅰ)</span>
+                                                <span class="sm">15,550,000원</span>
+                                            </p>
+                                            </label>
+                                        </fieldset>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="brand-kia" class="tab-panel nested-tab-panel tree-group" role="tabpanel" aria-hidden="true">
+                                    <h3 class="sr-only">기아</h3>
+                                    <div class="tree-content">
+                                        <h4>모델선택</h4>
+                                        <div class="btn-group modal no-data">데이터 없음</div>
+                                    </div>
+                                    <div class="tree-content">
+                                        <h4>세부차종 선택</h4>
+                                        <div class="form-group no-data">데이터 없음</div>
+                                    </div>
+                                </div>
+                                <div id="brand-ren" class="tab-panel nested-tab-panel tree-group" role="tabpanel" aria-hidden="true">
+                                    <h3 class="sr-only">르노코리아</h3>
+                                    <div class="tree-content">
+                                        <h4>모델선택</h4>
+                                        <div class="btn-group modal no-data">데이터 없음</div>
+                                    </div>
+                                    <div class="tree-content">
+                                        <h4>세부차종 선택</h4>
+                                        <div class="form-group no-data">데이터 없음</div>
+                                    </div>
+                                </div>
+                                <div id="brand-kgm" class="tab-panel nested-tab-panel tree-group" role="tabpanel" aria-hidden="true">
+                                    <h3 class="sr-only">KG모빌리티</h3>
+                                    <div class="tree-content">
+                                        <h4>모델선택</h4>
+                                        <div class="btn-group modal no-data">데이터 없음</div>
+                                    </div>
+                                    <div class="tree-content">
+                                        <h4>세부차종 선택</h4>
+                                        <div class="from-group no-data">데이터 없음</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab1-2" class="tab-panel" style="display:none;">
+                                <div id="brandTabs-import" class="btn-group brand">
+                                    <button type="button" class=" nested- bmw on" data-tab="brand-bmw" role="tab" title="선택됨">BMW</button>
+                                    <button type="button" class=" nested- benz" data-tab="brand-benz" role="tab">벤츠</button>
+                                    <button type="button" class=" nested- aud" data-tab="brand-aud" role="tab">아우디</button>
+                                    <button type="button" class=" nested- volv" data-tab="brand-volv" role="tab">볼보</button>
+                                    <button type="button" class=" nested- lex" data-tab="brand-lex" role="tab">렉서스</button>
+                                </div>
+                                <div id="brand-bmw" class="tab-panel nested-tab-panel tree-group" role="tabpanel" aria-hidden="false" style="display:block;">
+                                    <h3 class="sr-only">BMW</h3>
+                                    <div class="tree-content">
+                                        <h4>모델선택</h4>
+                                        <div class="btn-group modal">
+                                            <button type="button" class="on" title="선택됨">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img01.png" alt=""></span>
+                                                <span>캐스퍼</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img02.png" alt=""></span>
+                                                <span>캐스퍼 일렉트릭</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img03.png" alt=""></span>
+                                                <span>아반떼</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img04.png" alt=""></span>
+                                                <span>아반떼 N</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img05.png" alt=""></span>
+                                                <span>G70</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img06.png" alt=""></span>
+                                                <span>쏘나타 디 엣지</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img07.png" alt=""></span>
+                                                <span>더 뉴 아이오닉 6</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img08.png" alt=""></span>
+                                                <span>아이오닉 6 N</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img09.png" alt=""></span>
+                                                <span>그렌저</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="tree-content">
+                                        <h4>세부차종선택</h4>
+                                        <div class="form-group no-data">데이터 없음</div>
+                                    </div>
+                                </div>
+                                <div id="brand-benz" class="tab-panel nested-tab-panel tree-group" role="tabpanel" aria-hidden="true">
+                                    <h3 class="sr-only">벤츠</h3>
+                                    <div class="tree-content">
+                                        <h4>모델선택</h4>
+                                        <div class="btn-group modal">
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img01.png" alt=""></span>
+                                                <span>캐스퍼</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img02.png" alt=""></span>
+                                                <span>캐스퍼 일렉트릭</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img03.png" alt=""></span>
+                                                <span>아반떼</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img04.png" alt=""></span>
+                                                <span>아반떼 N</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img05.png" alt=""></span>
+                                                <span>G70</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img06.png" alt=""></span>
+                                                <span>쏘나타 디 엣지</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img07.png" alt=""></span>
+                                                <span>더 뉴 아이오닉 6</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img08.png" alt=""></span>
+                                                <span>아이오닉 6 N</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img09.png" alt=""></span>
+                                                <span>그렌저</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="tree-content">
+                                        <h4>세부차종선택</h4>
+                                        <div class="form-group no-data">데이터 없음</div>
+                                    </div>
+                                </div>
+                                <div id="brand-aud" class="tab-panel nested-tab-panel tree-group" role="tabpanel" aria-hidden="true">
+                                    <h3 class="sr-only">아우디</h3>
+                                    <div class="tree-content">
+                                        <h4>모델선택</h4>
+                                        <div class="btn-group modal">
+                                            <button type="button" class="on">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img01.png" alt=""></span>
+                                                <span>캐스퍼</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img02.png" alt=""></span>
+                                                <span>캐스퍼 일렉트릭</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img03.png" alt=""></span>
+                                                <span>아반떼</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img04.png" alt=""></span>
+                                                <span>아반떼 N</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img05.png" alt=""></span>
+                                                <span>G70</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img06.png" alt=""></span>
+                                                <span>쏘나타 디 엣지</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img07.png" alt=""></span>
+                                                <span>더 뉴 아이오닉 6</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img08.png" alt=""></span>
+                                                <span>아이오닉 6 N</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img09.png" alt=""></span>
+                                                <span>그렌저</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="tree-content">
+                                        <h4>세부차종선택</h4>
+                                        <div class="form-group no-data">데이터 없음</div>
+                                    </div>
+                                </div>
+                                <div id="brand-volv" class="tab-panel nested-tab-panel tree-group" role="tabpanel" aria-hidden="true">
+                                    <h3 class="sr-only">볼보</h3>
+                                    <div class="tree-content">
+                                        <h4>모델선택</h4>
+                                        <div class="btn-group modal">
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img01.png" alt=""></span>
+                                                <span>캐스퍼</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img02.png" alt=""></span>
+                                                <span>캐스퍼 일렉트릭</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img03.png" alt=""></span>
+                                                <span>아반떼</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img04.png" alt=""></span>
+                                                <span>아반떼 N</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img05.png" alt=""></span>
+                                                <span>G70</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img06.png" alt=""></span>
+                                                <span>쏘나타 디 엣지</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img07.png" alt=""></span>
+                                                <span>더 뉴 아이오닉 6</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img08.png" alt=""></span>
+                                                <span>아이오닉 6 N</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img09.png" alt=""></span>
+                                                <span>그렌저</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="tree-content">
+                                        <h4>세부차종선택</h4>
+                                        <div class="form-group no-data">데이터 없음</div>
+                                    </div>
+                                </div>
+                                <div id="brand-lex" class="tab-panel nested-tab-panel tree-group" role="tabpanel" aria-hidden="true">
+                                    <h3 class="sr-only">렉서스</h3>
+                                    <div class="tree-content">
+                                        <h4>모델선택</h4>
+                                        <div class="btn-group modal">
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img01.png" alt=""></span>
+                                                <span>캐스퍼</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img02.png" alt=""></span>
+                                                <span>캐스퍼 일렉트릭</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img03.png" alt=""></span>
+                                                <span>아반떼</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img04.png" alt=""></span>
+                                                <span>아반떼 N</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img05.png" alt=""></span>
+                                                <span>G70</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img06.png" alt=""></span>
+                                                <span>쏘나타 디 엣지</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img07.png" alt=""></span>
+                                                <span>더 뉴 아이오닉 6</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img08.png" alt=""></span>
+                                                <span>아이오닉 6 N</span>
+                                            </button>
+                                            <button type="button">
+                                                <span><img src="../../assets/images/content/brand_logo/car/img09.png" alt=""></span>
+                                                <span>그렌저</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="tree-content">
+                                        <h4>세부차종선택</h4>
+                                        <div class="form-group no-data">데이터 없음</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pop-footer">
+                <div class="button-content">
+                    <button type="button" class="btn-pop-primary"  data-popup-close="fullPopup1">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

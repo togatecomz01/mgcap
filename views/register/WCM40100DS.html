@@ -58,7 +58,7 @@
         <main class="contentWrap">
           <nav class="location-container">
             <ol class="breadcrumb">
-              <li><span class="home">홈</span></li>
+              <li><a href="/" id="contentArea"><span class="home">홈</span></a></li>
               <li><span>회원가입</span></li>
             </ol>
           </nav>
@@ -70,6 +70,7 @@
               <ul class="col2">
                 <li class="on">
                   <span>약관동의 및 실명확인</span>
+                  <span class="sr-only">(현재단계)</span>
                 </li>
                 <li class="next">
                   <span>기본정보 입력</span>
@@ -80,176 +81,102 @@
               </ul>
             </div>
           </section>
-          <section class="page-container WCM40100DS">
+          <section class="page-container WCM40100DS" id="contentArea" role="main">
             <div class="form-content">
-              <h3>약관동의</h3>
-              <form>
+                <h3>약관동의</h3>
                 <div class="form-group">
-                  <ul class="check-box terms">
-                    <li class="check-all-area">
-                      <input type="checkbox" id="chkAll" />
-                      <label for="chkAll" class="check-button">
-                        <span>전체 약관에 동의합니다.</span>
-                      </label>
-                    </li>
-                    <li>
-                      <input
-                        type="checkbox"
-                        id="check-required-1"
-                        class="chkReq"
-                      />
-                      <label
-                        for="check-required-1"
-                        class="check-button"
-                        data-popup-open="WCM40100DSPOP01"
-                      >
-                        <span>인터넷 서비스 이용약관 동의 여부</span>
-                      </label>
-                      <button
-                        title="인터넷 서비스 이용약관 동의 여부 내용보기"
-                        type="button"
-                        class="modal"
-                        data-popup-open="WCM40100DSPOP01"
-                      >
-                        약관 보기
-                      </button>
-                    </li>
-                  </ul>
+                    <ul class="check-box terms">
+                        <li class="check-all-area">
+                            <input type="checkbox" id="chkAll">
+                            <label for="chkAll" class="check-button">
+                                <span>전체 약관에 동의합니다.</span>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="check-required-1" class="chkReq">
+                            <label for="check-required-1" class="check-button" data-open-bak="WCM40100DSPOP01">
+                                <span>인터넷 서비스 이용약관 동의 </span>
+                            </label>
+                            <button title="인터넷 서비스 이용약관 동의 여부 내용보기" type="button" class="modal" data-popup-open="WCM40100DSPOP01">약관 보기</button>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="check-required-2" class="chkReq">
+                            <label for="check-required-2" class="check-button" data-open-bak="inc_term_08">
+                                <span>개인정보보호를 위한 이용자 동의 사항 </span>
+                            </label>
+                            <button title="개인정보보호를 위한 이용자 동의 사항" type="button" class="modal" data-popup-open="inc_term_08">약관 보기</button>
+                        </li>
+                    </ul>
                 </div>
-              </form>
+                 
             </div>
             <div class="tab-container jsTab">
-              <nav class="tab-list depth2" role="tablist">
-                <button type="button" role="tab" class="tab-item active" data-tab="tab2-1" aria-labelledby="tab2-1">
-                  개인회원
-                </button>
-                <button type="button" role="tab" class="tab-item" data-tab="tab2-2" aria-labelledby="tab2-2">
-                  개인사업자회원
-                </button>
-                <button type="button" role="tab" class="tab-item" data-tab="tab2-3" aria-labelledby="tab2-3">
-                  법인사업자회원
-                </button>
-              </nav>
-              <div class="tab-content">
-                <div id="tab2-1" class="tab-panel active">
-                  <div class="text-content">
-                    <div class="text-group">
-                      <h3>실명확인</h3>
-                    </div>
-                  </div>
-                  <div class="private-content">
-                    <div class="private-group ipin">
-                      <button type="button">휴대폰 인증</button>
-                    </div>
-                  </div>
-                  <div class="btn-content cta">
-                    <div class="button-group">
-                      <a href="javascript:void(0);" class="btn-primary"
-                        >본인인증</a
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div id="tab2-2" class="tab-panel">
-                  <div class="text-content">
-                    <div class="text-group">
-                      <h3>실명확인</h3>
-                    </div>
-                  </div>
-                  <div class="private-content">
-                    <div class="private-group ipin">
-                      <button type="button">휴대폰 인증</button>
-                    </div>
-                  </div>
-                  <div class="btn-content cta">
-                    <div class="button-group">
-                      <a href="javascript:void(0);" class="btn-primary"
-                        >본인인증</a
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div id="tab2-3" class="tab-panel">
-                  <div class="form-container">
-                    <div class="text-content">
-                      <div class="text-group">
-                        <h3>실명확인</h3>
-                      </div>
-                    </div>
-                    <form>
-                      <fieldset class="form-content">
-                        <legend>실명확인 입력폼</legend>
-                        <div class="form-wrap">
-                          <div class="form-group">
-                            <label for="mg-name">회사명</label>
-                            <input
-                              id="mg-name"
-                              type="text"
-                              name="text"
-                              maxlength="20"
-                              placeholder="이름을 입력해주세요"
-                            />
-                          </div>
-                          <!--//form-group-->
-                          <div class="form-group">
-                            <label for="business">사업자번호</label>
-                            <div class="flex-row gap10">
-                              <input
-                                id="business1"
-                                type="text"
-                                name="business1"
-                                inputmode="numeric"
-                                pattern="[0-9]*"
-                                maxlength="3"
-                                aria-label="사업자등록번호 앞자리"
-                              />
-                              <input
-                                id="business2"
-                                type="text"
-                                inputmode="numeric"
-                                pattern="[0-9]*"
-                                name="business2"
-                                maxlength="2"
-                                aria-label="사업자등록번호 중간자리"
-                              />
-                              <input
-                                id="business3"
-                                type="text"
-                                inputmode="numeric"
-                                pattern="[0-9]*"
-                                name="business3"
-                                maxlength="5"
-                                aria-label="사업자등록번호 뒷자리"
-                              />
+                <nav class="tab-list depth2">
+                    <button type="button" onclick="setForeign(0,'A005301');" class="tab-item active" data-tab="tab2-1" aria-selected="true">개인회원</button>
+                    <button type="button" onclick="setForeign(1,'A005302');" class="tab-item" data-tab="tab2-2" aria-selected="false">개인사업자회원</button>
+                    <button type="button" onclick="setForeign(1,'A005303');" class="tab-item" data-tab="tab2-3" aria-selected="false">법인사업자회원</button>
+                </nav>
+                <div class="tab-content" style="display:block">
+                    <div id="tab2-1" class="tab-panel active" aria-hidden="false" style="display: block;">
+                        <div class="private-content">
+                            <div class="private-group ipin">
+                                <button onclick="goIdntVerifyFun();" type="button">휴대폰 인증</button> 
                             </div>
-                          </div>
-                          <!--//form-group-->
+                        </div> 
+                    </div>
+                    <div id="tab2-2" class="tab-panel active" aria-hidden="true" style="display: none;">
+                        <div class="private-content">
+                            <div class="private-group ipin">
+                                <button onclick="goIdntVerifyFun();" type="button">휴대폰 인증</button> 
+                            </div>
+                        </div> 
+                    </div>
+                    <div id="tab2-3" class="tab-panel" aria-hidden="true" style="display: none;">
+                        <div class="form-container">
+                            <div class="text-content">
+                                <div class="text-group ">
+                                    <h3>사업자확인</h3>
+                                </div>
+                            </div> 
+                            <fieldset class="form-content mt-42">
+                                <legend>실명확인 입력폼</legend> 
+                                <div class="form-wrap">
+                                    <div class="form-group">
+                                        <label for="office_nm">회사명</label>
+                                        <input id="office_nm" type="text" name="office_nm" maxlength="20" placeholder="이름을 입력해주세요">
+                                    </div><!--//form-group-->
+                                    <div class="form-group">
+                                        <p class="label-tit">사업자번호</p>
+                                        <div class="flex-row gap10">
+                                          <label for="office_ctno1" class="sr-only">사업자등록번호 앞자리</label>
+                                            <input id="office_ctno1" onkeyup="inputNUMFormat(this,3);" type="text" name="office_ctno1" inputmode="numeric" pattern="[0-9]*" maxlength="3" aria-label="사업자등록번호 앞자리">
+                                            <label for="office_ctno2" class="sr-only">사업자등록번호 중간자리</label>
+                                            <input id="office_ctno2" onkeyup="inputNUMFormat(this,2);" type="text" name="office_ctno2" inputmode="numeric" pattern="[0-9]*" maxlength="2" aria-label="사업자등록번호 중간자리">
+                                            <label for="office_ctno3" class="sr-only">사업자등록번호 뒷자리</label>
+                                            <input id="office_ctno3" onkeyup="inputNUMFormat(this,5);" type="text" name="office_ctno3" inputmode="numeric" pattern="[0-9]*" maxlength="5" aria-label="사업자등록번호 뒷자리">
+                                        </div>
+                                    </div><!--//form-group-->
+                                </div><!--//form-wrap-->
+                            </fieldset>
+                            
+                            <div class="btn-content cta">
+                                <div class="button-group">
+                                    <button type="button" onclick="officchkForm();" class="btn-primary">본인인증</button>
+                                </div>
+                            </div>
+                            <div class="info-content">
+                                <div class="note-group">
+                                    <p class="tit">유의사항 안내</p>
+                                    <ul class="dot">
+                                        <li>법인사업자는 법인 공동인증서 로그인을 통해 서비스를 제공 받으실 수 있사오니 이점 유의하여 주시기 바랍니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <!--//form-wrap-->
-                      </fieldset>
-                    </form>
-                    <div class="btn-content cta">
-                      <div class="button-group">
-                        <button class="btn-primary">본인인증</button>
-                      </div>
                     </div>
-                    <div class="info-content">
-                      <div class="note-group">
-                        <p class="tit">유의사항 안내</p>
-                        <ul class="dot">
-                          <li>
-                            개인사업자의 경우 반드시 개인사업자명과 사업자
-                            등록번호로 회원가입을 하셔야 정상적인 서비스를 제공
-                            받으실 수 있사오니 이점 유의하여 주시기 바랍니다.
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </section>
+        </section>
         </main>
       </div>
       <div data-include-path="../../views/COMMON/footer.html"></div>

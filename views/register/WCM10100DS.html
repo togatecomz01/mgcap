@@ -42,7 +42,7 @@
             <main class="contentWrap">
                 <nav class="location-container">
                     <ol class="breadcrumb">
-                        <li><span class="home">홈</span></li>
+                        <li><a href="/" id="contentArea"><span class="home">홈</span></a></li>
                         <li><span>로그인</span></li>
                     </ol>
                 </nav>
@@ -53,62 +53,14 @@
                     <div class="tab-container jsTab">
                         <nav class="tab-list depth1">
                             <div class="btn-group">
-                                <button type="button" class="tab-item active" data-tab="tab2-1" aria-selected="true">법인공동인증서</button>
-                                <button type="button" class="tab-item" data-tab="tab2-2" aria-selected="true">휴대폰 인증</button>
-                                <button type="button" class="tab-item" data-tab="tab2-3" aria-selected="false">민간(사설) 인증서</button>
+                                <button type="button" class="tab-item active" data-tab="tab2-1" aria-selected="true">휴대폰인증</button>
+                                <button type="button" class="tab-item" data-tab="tab2-2" aria-selected="false">민간(간편)인증서</button>
+                                <button type="button" class="tab-item" data-tab="tab2-3" aria-selected="false">법인공동인증서</button>
                             </div>
                         </nav>
                         <div class="tab-content">
-                            <!-- 공동인증서 -->
-                            <div id="tab2-1" class="tab-panel" aria-hidden="false">
-                                <form>
-                                    <fieldset class="form-content">
-                                        <legend>공동인증서 로그인</legend>
-                                        <div class="form-wrap login-form">
-                                            <div class="group">
-                                                <div class="form-group">
-                                                    <label class="toggle">
-                                                        <input type="checkbox" name="row3-active" title="체크" value="" checked="">
-                                                        <span>개인</span>
-                                                        <span>사업자</span>
-                                                    </label>
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <label class="radio">
-                                                        <input type="radio" name="row1-active" value="" checked>
-                                                        <span>일반금융상품</span>
-                                                    </label>
-                                                    <label class="radio">
-                                                        <input type="radio" name="row1-active" value="">
-                                                        <span>장기렌터카</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div><!--//form-wrap-->
-                                    </fieldset>
-                                    <!--S : 2025-12-02 -> 버튼위치 변경 및 명칭변경-->
-                                    <div class="btn-content login">
-                                        <div class="button-group">
-                                            <a href="javascript:void(0);" class="btn-primary">공동인증서 로그인</a>
-                                            <a href="javascript:void(0);" class="bnt-link">공동인증서 안내</a>
-                                        </div>
-                                        <div class="button-group">
-                                            <a href="javascript:void(0);">공동인증서 등록 바로가기</a>
-                                            <a href="javascript:void(0);">회원가입 바로가기</a>
-                                        </div>
-                                        <div class="note-content">
-                                            <ul>
-                                                <li>공동인증서 등록은 최초 1회만 등록하면 됩니다.</li>
-                                                <li>기존에 회원가입한 고객만 이용 가능합니다.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!--E : 2025-12-02 -> 공동인증서 안내 및 위치 바꾸기-->
-                                </form>
-                            </div>
                             <!-- 휴대폰 인증 -->
-                            <div id="tab2-2" class="tab-panel" aria-hidden="false">
+                            <div id="tab2-1" class="tab-panel" aria-hidden="false">
                                 <div class="form">
                                     <div class="btn-content login phone">
                                         <div class="button-group">
@@ -120,35 +72,49 @@
                                         </div>
                                         <div class="note-content">
                                             <ul>
-                                                <li>휴대폰 번호가 변경되었다면, 휴대폰 정보변경 바로가기를 클릭해 주세요.</li>
+                                                <li>휴대폰 번호가 변경되었다면, 휴대폰 정보변경 바로가기 클릭!</li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <!-- 민간 인증서 -->
-                            <div id="tab2-3" class="tab-panel" aria-hidden="false">
-                                <!--S : 2025-12-02 -> login클래스 추가-->
-                                <div class="private-content login">
+                            <div id="tab2-2" class="tab-panel" aria-hidden="false">
+                                <div class="private-content form-content login">
                                     <div class="private-group">
-                                        <button style="display:none;" type="button">카카오 인증</button>
-                                        <button style="display:none;" type="button">네이버 인증</button>
                                         <button type="button">토스 인증</button>
                                         <button type="button">패스 인증</button>
                                     </div>
-                                    <!--S : 2025-12-02 -> note-content 추가-->
+                                    <div class="button-group flex-row gap10 mt-20">
+                                        <a href="javascript:goMenuFnc('휴대폰정보변경','','','Y','/mgcap/register/WCM40201VS.jsp');">휴대폰정보변경 바로가기</a>
+                                        <a href="javascript:goMenuFnc('회원가입','','','N','/mgcap/register/WCM40100DS.jsp');">회원가입</a>
+                                    </div>
                                     <div class="note-content">
                                         <ul>
-                                            <li>민간 전자서명(토스, 패스)로 인증하실 수 있습니다.</li>
+                                            <li>민간 전자서명(토스,패스)로 인증하실 수 있습니다.</li>
                                         </ul>
                                     </div>
-                                    <!--e : 2025-12-02 -> note-content 추가-->
                                 </div>
-                                <!--<div class="btn-content cta">
+                            </div>
+                            <!-- 법인공동인증서 -->
+                            <div id="tab2-3" class="tab-panel" aria-hidden="false">
+                                <div class="btn-content login">
                                     <div class="button-group">
-                                        <a href="javascript:void(0);" class="btn-primary">로그인</a>
+                                        <a href="javascript:void(0);" class="btn-primary">공동인증서 로그인</a>
+                                        <a href="javascript:void(0);" class="bnt-link">공동인증서 안내</a>
                                     </div>
-                                </div>-->
+                                    <div class="button-group">
+                                        <a href="javascript:void(0);">공동인증서 등록 바로가기</a>
+                                        <a href="javascript:void(0);">회원가입 바로가기</a>
+                                    </div>
+                                    <div class="note-content">
+                                        <ul>
+                                            <li>공동인증서 등록은 최초 1회만 등록하면 됩니다.</li>
+                                            <li>기존에 회원가입한 고객만 이용 가능합니다.</li>
+                                            <li>등록하신 공동인증서를 재발급 받으신 경우에는 재등록이 필요합니다.</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

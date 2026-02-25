@@ -42,7 +42,7 @@
             <main class="contentWrap">
                 <nav class="location-container">
                     <ol class="breadcrumb">
-                        <li><span class="home">홈</span></li>
+                        <li><a href="/" id="contentArea"><span class="home">홈</span></a></li>
                         <li><span>MY MG</span></li>
                         <li><span>나의 정보변경</span></li>
                     </ol>
@@ -101,8 +101,7 @@
                                                 <div class="form-wrap">
                                                     <div class="form-group">
                                                         <div class="flex-row">
-                                                            <label for="tlno1" class="sr-only">자택전화번호 첫번째</label>
-                                                            <select id="tlno1" name="tlno1" title="자택전화번호 첫번째 자리" required="">
+                                                            <select id="tlno1" name="tlno1" title="핸드폰 번호 첫번째 자리" required="">
                                                                 <option value="">선택</option>
                                                                 <option value="02">02 </option>
                                                                 <option value="031">031</option>
@@ -122,9 +121,9 @@
                                                                 <option value="064">064</option>
                                                                 <option value="070">070</option>
                                                             </select>
-                                                            <label for="tlno2" class="sr-only">자택전화번호 두번째</label>
+                                                            <label for="tlno2" class="sr-only">핸드폰 번호 두번째</label>
                                                             <input id="tlno2" name="tlno2" type="tel" value="" inputmode="numeric" autocomplete="tel-local-prefix" pattern="[0-9]{3,4}" maxlength="4" required="">
-                                                            <label for="tlno3" class="sr-only">자택전화번호 세번째</label>
+                                                            <label for="tlno3" class="sr-only">핸드폰 번호 세번째</label>
                                                             <input id="tlno3" name="tlno3" type="tel" value="" inputmode="numeric" autocomplete="tel-local-suffix" pattern="[0-9]{4}" maxlength="4" required="">
                                                         </div>
                                                     </div>
@@ -196,7 +195,7 @@
                         <div class="table-group">
                             <h3 class="table-tit">선택정보</h3>
                             <table>
-                                <caption>선택정보 입력 표 (분류, 결혼여부, 결혼기념일, 직장명, 재직기간, 직장주소, E-mail, E-mail 수신동의, 회원탈퇴 포함)</caption>
+                                <caption>선택정보 입력 표 (생년월일, 결혼여부, 직장명, 직장주소, E-mail, E-mail 수신동의, 회원탈퇴 포함)</caption>
                                 <colgroup>
                                     <col style="width:262px;">
                                     <col style="width:auto">

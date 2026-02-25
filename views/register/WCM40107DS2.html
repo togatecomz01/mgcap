@@ -42,7 +42,7 @@
             <main class="contentWrap">
                 <nav class="location-container">
                     <ol class="breadcrumb">
-                        <li><span class="home">홈</span></li>
+                        <li><a href="/" id="contentArea"><span class="home">홈</span></a></li>
                         <li><span>회원가입</span></li>
                     </ol>
                 </nav>
@@ -57,6 +57,7 @@
                             </li>
                             <li class="on">
                                 <span>기본정보 입력</span>
+                                <span class="sr-only">(현재단계)</span>
                             </li>
                             <li class="next">
                                 <span>가입완료</span>
@@ -64,104 +65,164 @@
                         </ul>
                     </div>
                 </section>
-                <section class="page-container WCM40100DS">
-                    <div class="text-content">
-                        <div class="table-group">
-                            <h3 class="table-tit">기본정보</h3>
-                            <table>
-                                <caption>기본정보 입력표 (이름, 주민번호, 아이디, 현재 비밀번호, 휴대폰, 휴대폰(SMS)수신동의, 자택전화번호, 자택주소 포함)</caption>
-                                <colgroup>
-                                    <col style="width:262px;">
-                                    <col style="width:auto">
-                                </colgroup>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">이름</th>
-                                        <td class="tal">홍길동</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">주민번호</th>
-                                        <td class="tal">
-                                            <fieldset class="form-content">
-                                                <legend class="sr-only">비밀번호 변경</legend>
-                                                <div class="form-wrap">
-                                                    <div class="form-group">
-                                                        <div class="flex-row w-406">
-                                                            <label for="resident-1" class="sr-only">주민번호 앞자리</label>
-                                                            <input id="resident-1" name="resident-1" type="text" inputmode="numeric" maxlength="6" value="990143" readonly>
-                                                            <span class="ipt-hyphen">-</span>
-                                                            <label for="resident-2" class="sr-only">주민번호 뒷자리</label>
-                                                            <input id="resident-2" name="resident-2" type="text" inputmode="numeric" maxlength="7" readonly>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </fieldset>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">신규 비밀번호</th>
-                                        <td class="tal">
-                                            <label for="jumin" class="sr-only">주민번호 앞자리</label>
-                                            <input class="w-406" id="jumin" type="text" name="text" value="990143" readonly/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">신규 비밀번호 확인</th>
-                                        <td class="tal">
-                                            <label for="password" class="sr-only">새 비밀번호 확인</label>
-                                            <input class="w-406" id="password" type="text" name="password" placeholder="" />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">휴대폰</th>
-                                        <td class="tal">
-                                            <fieldset class="form-content">
-                                                <legend>핸드폰 번호 입력</legend>
-                                                <div class="form-wrap">
-                                                    <div class="form-group">
-                                                        <div class="flex-row">
-                                                            <div class="w-406 info-phone">
-                                                                <label for="phn-first" class="sr-only">휴대폰 번호 입력</label>
-                                                                <select id="phn-first" required="" title="" required>
-                                                                    <option value="0">010</option>
-                                                                    <option value="1">017</option>
-                                                                    <option value="2">019</option>
-                                                                </select>
-                                                                <label for="phn-second" class="sr-only">휴대폰 번호 입력</label>
-                                                                <input id="phn-second" name="phn-second" type="tel" value="83**" inputmode="numeric" autocomplete="tel-local-prefix" pattern="[0-9]{3,4}" maxlength="4"  required>
-                                                                <label for="phn-third" class="sr-only">휴대폰 번호 입력</label>
-                                                                <input id="phn-third" name="phn-third" type="tel" value="67**" inputmode="numeric" autocomplete="tel-local-suffix" pattern="[0-9]{4}" maxlength="4">
-                                                            </div>
-                                                            <button type="button" class="btn-form pad">SMS인증후 변경</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                        </fieldset>                                          
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">휴대폰 (SMS)<br>수신동의</th>
-                                        <td class="tal">
-                                            <fieldset class="radio-group">
-                                                <legend class="sr-only">휴대폰(SMS)수신동의 선택</legend>
-                                                <label class="radio" for="yes1">
-                                                    <input type="radio" name="yes1" id="yes1" value="예" checked>
-                                                    <span>예</span>
-                                                </label>
-                                                <label class="radio" for="no1">
-                                                    <input type="radio" name="no1" id="no1" value="아니오">
-                                                    <span>아니오</span>
-                                                </label>
-                                            </fieldset>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <!--s 2025.12.18 : 텍스트 수정 -->
-                            <p class="rfrnc">비밀번호는 영문+숫자, 8자리 조합으로 설정</p>
-                            <!--e 2025.12.18 : 텍스트 수정 -->
+                <section class="page-container WCC21400VQ login ie04 showInputInfo">
+                    <div class="form-content">
+                        <h3>약관동의</h3>
+                         
+                        <div class="form-group">
+                            <ul class="check-box terms">
+                                <li class="check-all-area">
+                                    <input type="checkbox" id="chkAll">
+                                    <label for="chkAll" class="check-button">
+                                        <span>전체 약관에 동의합니다.</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="hpChk1" name="hpChk1" class="chkReq">
+                                    <label for="hpChk1" class="check-button" data-open-bak="fullPopup1">
+                                        <span>개인정보 수집·이용·취급위탁 동의</span>
+                                    </label>
+                                    <button title="개인정보 수집·이용·취급위탁 동의 내용보기" type="button" class="modal" data-popup-open="fullPopup1">내용보기</button>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="hpChk2" name="hpChk2" class="chkReq">
+                                    <label for="hpChk2" class="check-button" data-open-bak="fullPopup2">
+                                        <span>본인확인서비스 이용약관 동의</span>
+                                    </label>
+                                    <button title="본인확인서비스 이용약관 내용보기" class="modal" type="button" data-popup-open="fullPopup2">내용보기</button>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="hpChk3" name="hpChk3" class="chkReq">
+                                    <label for="hpChk3" class="check-button" data-open-bak="fullPopup3">
+                                        <span>고유식별정보처리 동의</span>
+                                    </label>
+                                    <button title="고유식별정보처리 동의 내용보기" class="modal" type="button" data-popup-open="fullPopup3">내용보기</button>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="hpChk4" name="hpChk4" class="chkReq">
+                                    <label for="hpChk4" class="check-button" data-open-bak="fullPopup4">
+                                        <span>통신사 이용약관 동의</span>
+                                    </label>
+                                    <button title="통신사 이용약관 동의 내용보기" class="modal" type="button" data-popup-open="fullPopup4">내용보기</button>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="hpChk5" name="hpChk5" class="chkReq">
+                                    <label for="hpChk5" class="check-button" data-open-bak="inc_term_09">
+                                        <span>제3자 정보제공동의</span>
+                                    </label>
+                                    <button title="통신사 이용약관 동의 내용보기" class="modal" type="button" data-popup-open="inc_term_09">내용보기</button>
+                                </li>
+                            </ul>
                         </div>
+                         
                     </div>
+                    <form name="frm_MAIN" method="post">
+                        <div class="form-container">
+                            <div class="text-content">
+                                <div class="text-group">
+                                    <h3>정보입력</h3>
+                                </div>
+                            </div>
+                            
+                            <fieldset class="form-content mt-42">
+                                <legend>정보입력 입력폼</legend>
+                                <div class="form-wrap">
+                                    <div class="form-group">
+                                        <label for="CUST_NM">이름</label>
+                                        <input id="CUST_NM" type="text" name="CUST_NM" maxlength="12" placeholder="이름을 입력해주세요">
+                                    </div><!--//form-group-->
+                                    <div class="form-group">
+                                        <p class="label-tit">생년월일</p>
+                                        <div class="flex-row">
+                                            <span class="txt-unit">
+                                                <label for="year" class="sr-only">생년월일 년도</label>
+                                                <input maxlength="4" id="year" name="year" type="number" inputmode="numeric" oninput="formattedYear(this)" required="">
+                                                <span class="txt">년</span>
+                                            </span>
+                                            <span class="txt-unit">
+                                                <label for="month" class="sr-only">생년월일 월</label>
+                                                <input maxlength="2" id="month" name="month" type="number" inputmode="numeric" oninput="formattedMonth(this)" required="">
+                                                <span class="txt">월</span>
+                                            </span>
+                                            <span class="txt-unit">
+                                                <label for="day" class="sr-only">생년월일 일</label>
+                                                <input maxlength="2" id="day" name="day" type="number" inputmode="numeric" oninput="formattedDay(this)" required="">
+                                                <span class="txt">일</span>
+                                            </span>
+                                        </div><!--//flex-row-->
+                                    </div><!--//form-group-->
+                                </div><!--//form-wrap-->
+                                <div class="form-wrap">
+                                    <div class="form-group">
+                                        <p class="label-tit">성별</p>
+                                        <label class="radio button">
+                                            <input type="radio" name="gend" id="gend" value="1" checked="">
+                                            <span>남자</span>
+                                        </label>
+                                        <label class="radio button">
+                                            <input type="radio" name="gend" id="gend" value="0">
+                                            <span>여자</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <p class="label-tit">내외국인</p>
+                                        <label class="radio button">
+                                            <input type="radio" name="ntv_frnr" id="ntv_frnr" value="L" checked="">
+                                            <span>내국인</span>
+                                        </label>
+                                        <label class="radio button">
+                                            <input type="radio" name="ntv_frnr" id="ntv_frnr" value="F">
+                                            <span>외국인</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-wrap">
+                                    <div class="form-group">
+                                        <p class="label-tit">휴대전화번호</p>
+                                        <div class="flex-row mo-column">
+                                            <div>
+                                                <label for="TEL_CMM_CD" class="sr-only">휴대전화번호 통신사</label>
+                                                <select id="TEL_CMM_CD" name="TEL_CMM_CD" required="">
+                                                    <option value="01">SKT</option>
+                                                    <option value="02">KT</option>
+                                                    <option value="03">LGU+</option>
+                                                    <option value="04">알뜰폰SKT</option>
+                                                    <option value="05">알뜰폰KT</option>
+                                                    <option value="06">알뜰폰LGU+</option>
+                                                </select>
+                                                <label for="CELL_NO1" class="sr-only">휴대폰 앞자리</label>
+                                                <select id="CELL_NO1" name="CELL_NO1" required="">
+                                                    <option value="010">010</option>
+                                                    <option value="011">011</option>
+                                                    <option value="016">016</option>
+                                                    <option value="017">017</option>
+                                                    <option value="018">018</option>
+                                                    <option value="019">019</option>
+                                                </select>
+                                                <label for="CELL_NO2" class="sr-only">휴대전화번호 중간자리</label>
+                                                <input id="CELL_NO2" name="CELL_NO2" onkeyup="inputNUMFormat(this,4);" type="tel" inputmode="numeric" class="pc-phn" autocomplete="tel-local-prefix" pattern="[0-9]{3,4}" maxlength="4" aria-describedby="desc-phone" value="">
+                                                <label for="CELL_NO3" class="sr-only">휴대전화번호 뒷자리</label>
+                                                <input id="CELL_NO3" name="CELL_NO3" type="tel" inputmode="numeric" class="pc-phn" autocomplete="tel-local-suffix" pattern="[0-9]{4}" maxlength="4" aria-describedby="desc-phone" value="" readonly="true" onfocus="viewKeypad(this, 0, 4);">
+                                                <input type="hidden" name="xksessionid2" id="xksessionid2">
+                                                <input type="hidden" name="xksectoken2" id="xksectoken2">
+                                                <input type="hidden" name="xkindexed2" id="xkindexed2">
+                                            </div>
+                                            <!--[D]:공통 - 알럿참고 -->
+                                            <button type="button" class="btn-form reCertReqNum" onclick="javascript:goConfirmCellNo();">인증번호 요청</button>
+                                        </div><!--//flex-row-->
+                                        <span id="smsDtimer" class="mt-10 point-r" style="display:inline-block"></span>
+                                    </div><!--//form-group-->
+                                    <div class="form-group">
+                                        <label for="SMS_CERT_NO">인증번호</label>
+                                        <div class="flex-row mo-column">
+                                            <input id="SMS_CERT_NO" name="SMS_CERT_NO" onkeyup="inputNUMFormat(this,6);" type="text" placeholder="인증번호를 입력해주세요" readonly="readonly">
+                                            <button type="button" class="btn-form" onclick="javascript:goConfirmAuthNo();">확인</button>
+                                        </div>
+                                    </div><!--//form-group-->
+                                </div><!--//form-wrap-->
+                            </fieldset>
+                        </div>
+                    </form>
                 </section>
                 <section class="bottom-container">
                     <div class="btn-content cta">

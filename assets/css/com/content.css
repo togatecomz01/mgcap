@@ -85,6 +85,7 @@ body{
 
 .form-content.login .button-group a { flex:1; height:var(--form-height); margin-top:0; }
 
+
 /**휴대폰 인증**/
 .page-container.login .form-content.login { position:relative; margin-top:26px; padding:0 4px 4px 376px; overflow:visible; }
 .page-container.login .form-content.login::before { content:""; display:block; position:absolute; left:0; right:0; width:352px; height:100%; background:url("../../images/content/register/w/bg_login3.png") no-repeat left center; background-size:auto 100%; border-radius:16px; overflow:hidden;  }
@@ -821,6 +822,7 @@ main.contentWrap.finance > .page-container { padding-top:72px; }
 /* 고객센터 - 법적고지 */
 .WCC60800VQ .text-group h3 + .diamond-box { margin-top:32px !important; }
 /******고객센터-개인정보처리방침**/
+.WCC60300VQ .e-hidden-title { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow: hidden;  border:0; clip:rect(0, 0, 0, 0); white-space: nowrap; }
 .WCC60300VQ .button-content .lnk-group { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
 .WCC60300VQ .button-content .lnk-group a { padding: 12px 20px; border: var(--board); }
 .WCC60300VQ em { display: inline-flex; font-weight: var(--font-w-m); }

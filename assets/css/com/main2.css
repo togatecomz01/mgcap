@@ -70,7 +70,7 @@ body:has(.main) .menu .menu-item .list-item { top:75px; }
 .swiper-pagination-fraction { bottom:0; }
 .swiper-button-next, .swiper-button-prev { margin:0; }
 
-.wrap .main .btn-content > .swiper-pagination { max-width:106px; padding:0 32px 2px; }
+.wrap .main .btn-content > .swiper-pagination { max-width:106px; padding:0 32px 2px; pointer-events: none !important; }
 .wrap .main .btn-content > .swiper-pagination > span { margin:0 3px; color:#D6D6D6; }
 .wrap .main .btn-content > .swiper-pagination > .swiper-pagination-current { color:var(--white); }
 .wrap .main .btn-content > .swiper-button-prev::after,
@@ -160,9 +160,6 @@ body:has(.main) .menu .menu-item .list-item { top:75px; }
 
 
 .main .visual-container .banner-content .btn-content { position:absolute; bottom:57px; right:36px; width:100%; }
-.mySwiper .swiper-pagination {
-    pointer-events: none !important;
-}
 
 .main-container { width:100%; flex:1; height:100%; padding-left:var(--left-w); }
 .main-container .main-content { max-width:867px; width:100%; margin:0; padding:46px 0 0 50px; }
